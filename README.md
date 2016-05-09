@@ -32,6 +32,16 @@ After the client libarary is installed/deployed, you can use it in your Maven pr
 
 ```
 
+In your code that uses the API, be sure to configure the `ApiClient` with a base URL path and API Key specific to your account:
+
+```
+ApiClient apiClient = new ApiClient();
+apiClient.setBasePath("https://<YOUR INFOPLUS DOMAIN>/infoplus-wms/api/v1.0");
+apiClient.setApiKey("<YOUR API KEY>");
+
+Configuration.setDefaultApiClient(apiClient);
+```
+
 ## Recommendation
 
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issue.
