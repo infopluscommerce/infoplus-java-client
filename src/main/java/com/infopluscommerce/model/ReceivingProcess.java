@@ -1,0 +1,168 @@
+package com.infopluscommerce.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.Date;
+
+
+
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+public class ReceivingProcess   {
+  
+  private Integer id = null;
+  private Integer warehouseId = null;
+  private String status = null;
+  private Integer workBatchId = null;
+  private Integer receivingWorksheetId = null;
+  private Date createDate = null;
+  private Date modifyDate = null;
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("id")
+  public Integer getId() {
+    return id;
+  }
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(required = true, value = "")
+  @JsonProperty("warehouseId")
+  public Integer getWarehouseId() {
+    return warehouseId;
+  }
+  public void setWarehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(required = true, value = "")
+  @JsonProperty("status")
+  public String getStatus() {
+    return status;
+  }
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("workBatchId")
+  public Integer getWorkBatchId() {
+    return workBatchId;
+  }
+  public void setWorkBatchId(Integer workBatchId) {
+    this.workBatchId = workBatchId;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("receivingWorksheetId")
+  public Integer getReceivingWorksheetId() {
+    return receivingWorksheetId;
+  }
+  public void setReceivingWorksheetId(Integer receivingWorksheetId) {
+    this.receivingWorksheetId = receivingWorksheetId;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("createDate")
+  public Date getCreateDate() {
+    return createDate;
+  }
+  public void setCreateDate(Date createDate) {
+    this.createDate = createDate;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("modifyDate")
+  public Date getModifyDate() {
+    return modifyDate;
+  }
+  public void setModifyDate(Date modifyDate) {
+    this.modifyDate = modifyDate;
+  }
+
+  
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    ReceivingProcess receivingProcess = (ReceivingProcess) o;
+    return Objects.equals(id, receivingProcess.id) &&
+        Objects.equals(warehouseId, receivingProcess.warehouseId) &&
+        Objects.equals(status, receivingProcess.status) &&
+        Objects.equals(workBatchId, receivingProcess.workBatchId) &&
+        Objects.equals(receivingWorksheetId, receivingProcess.receivingWorksheetId) &&
+        Objects.equals(createDate, receivingProcess.createDate) &&
+        Objects.equals(modifyDate, receivingProcess.modifyDate);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, warehouseId, status, workBatchId, receivingWorksheetId, createDate, modifyDate);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class ReceivingProcess {\n");
+    
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    workBatchId: ").append(toIndentedString(workBatchId)).append("\n");
+    sb.append("    receivingWorksheetId: ").append(toIndentedString(receivingWorksheetId)).append("\n");
+    sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
+    sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+
