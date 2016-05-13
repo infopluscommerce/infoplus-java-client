@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Vendor   {
   
   private Integer id = null;
@@ -58,23 +57,21 @@ public class Vendor   {
   private String inactive = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public Vendor vendorNo(Integer vendorNo) {
+    this.vendorNo = vendorNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("vendorNo")
   public Integer getVendorNo() {
     return vendorNo;
@@ -86,8 +83,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -99,8 +100,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -112,8 +117,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor street(String street) {
+    this.street = street;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("street")
   public String getStreet() {
     return street;
@@ -125,8 +134,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor street2(String street2) {
+    this.street2 = street2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("street2")
   public String getStreet2() {
     return street2;
@@ -138,8 +151,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor city(String city) {
+    this.city = city;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("city")
   public String getCity() {
     return city;
@@ -151,8 +168,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor state(String state) {
+    this.state = state;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -164,8 +185,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor country(String country) {
+    this.country = country;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("country")
   public String getCountry() {
     return country;
@@ -177,8 +202,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor zipCode(String zipCode) {
+    this.zipCode = zipCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("zipCode")
   public String getZipCode() {
     return zipCode;
@@ -190,8 +219,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor contact(String contact) {
+    this.contact = contact;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("contact")
   public String getContact() {
     return contact;
@@ -203,8 +236,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor phone(String phone) {
+    this.phone = phone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -216,8 +253,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor fax(String fax) {
+    this.fax = fax;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fax")
   public String getFax() {
     return fax;
@@ -229,8 +270,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor externalId(String externalId) {
+    this.externalId = externalId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("externalId")
   public String getExternalId() {
     return externalId;
@@ -242,8 +287,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor terms(String terms) {
+    this.terms = terms;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("terms")
   public String getTerms() {
     return terms;
@@ -255,8 +304,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor fob(String fob) {
+    this.fob = fob;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fob")
   public String getFob() {
     return fob;
@@ -268,8 +321,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor shipVia(Integer shipVia) {
+    this.shipVia = shipVia;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipVia")
   public Integer getShipVia() {
     return shipVia;
@@ -281,8 +338,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor requestDays(Integer requestDays) {
+    this.requestDays = requestDays;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("requestDays")
   public Integer getRequestDays() {
     return requestDays;
@@ -294,8 +355,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor actualDays(Integer actualDays) {
+    this.actualDays = actualDays;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("actualDays")
   public Integer getActualDays() {
     return actualDays;
@@ -307,8 +372,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor salesTaxCode(String salesTaxCode) {
+    this.salesTaxCode = salesTaxCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("salesTaxCode")
   public String getSalesTaxCode() {
     return salesTaxCode;
@@ -320,8 +389,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product1(Integer product1) {
+    this.product1 = product1;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product1")
   public Integer getProduct1() {
     return product1;
@@ -333,8 +406,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product2(Integer product2) {
+    this.product2 = product2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product2")
   public Integer getProduct2() {
     return product2;
@@ -346,8 +423,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product3(Integer product3) {
+    this.product3 = product3;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product3")
   public Integer getProduct3() {
     return product3;
@@ -359,8 +440,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product4(Integer product4) {
+    this.product4 = product4;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product4")
   public Integer getProduct4() {
     return product4;
@@ -372,8 +457,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product5(Integer product5) {
+    this.product5 = product5;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product5")
   public Integer getProduct5() {
     return product5;
@@ -385,8 +474,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product6(Integer product6) {
+    this.product6 = product6;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product6")
   public Integer getProduct6() {
     return product6;
@@ -398,8 +491,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product7(Integer product7) {
+    this.product7 = product7;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product7")
   public Integer getProduct7() {
     return product7;
@@ -411,8 +508,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product8(Integer product8) {
+    this.product8 = product8;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product8")
   public Integer getProduct8() {
     return product8;
@@ -424,8 +525,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor product9(Integer product9) {
+    this.product9 = product9;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("product9")
   public Integer getProduct9() {
     return product9;
@@ -437,8 +542,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor podDays(Integer podDays) {
+    this.podDays = podDays;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("podDays")
   public Integer getPodDays() {
     return podDays;
@@ -450,8 +559,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor chargeOut(String chargeOut) {
+    this.chargeOut = chargeOut;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("chargeOut")
   public String getChargeOut() {
     return chargeOut;
@@ -463,8 +576,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor arEmail(String arEmail) {
+    this.arEmail = arEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("arEmail")
   public String getArEmail() {
     return arEmail;
@@ -476,8 +593,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor orderEmail(String orderEmail) {
+    this.orderEmail = orderEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderEmail")
   public String getOrderEmail() {
     return orderEmail;
@@ -489,8 +610,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor orderAttach(String orderAttach) {
+    this.orderAttach = orderAttach;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderAttach")
   public String getOrderAttach() {
     return orderAttach;
@@ -502,8 +627,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor sendQuantityType(String sendQuantityType) {
+    this.sendQuantityType = sendQuantityType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sendQuantityType")
   public String getSendQuantityType() {
     return sendQuantityType;
@@ -515,8 +644,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor minority(String minority) {
+    this.minority = minority;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("minority")
   public String getMinority() {
     return minority;
@@ -528,8 +661,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor sendOutside(String sendOutside) {
+    this.sendOutside = sendOutside;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sendOutside")
   public String getSendOutside() {
     return sendOutside;
@@ -541,8 +678,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor podOrderSuffix(Integer podOrderSuffix) {
+    this.podOrderSuffix = podOrderSuffix;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("podOrderSuffix")
   public Integer getPodOrderSuffix() {
     return podOrderSuffix;
@@ -554,8 +695,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor podEmail(String podEmail) {
+    this.podEmail = podEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("podEmail")
   public String getPodEmail() {
     return podEmail;
@@ -567,8 +712,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor createDate(Date createDate) {
+    this.createDate = createDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
@@ -580,8 +729,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor modifyDate(Date modifyDate) {
+    this.modifyDate = modifyDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
@@ -593,8 +746,12 @@ public class Vendor   {
   
   /**
    **/
+  public Vendor inactive(String inactive) {
+    this.inactive = inactive;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("inactive")
   public String getInactive() {
     return inactive;
@@ -606,7 +763,7 @@ public class Vendor   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -614,48 +771,48 @@ public class Vendor   {
       return false;
     }
     Vendor vendor = (Vendor) o;
-    return Objects.equals(id, vendor.id) &&
-        Objects.equals(vendorNo, vendor.vendorNo) &&
-        Objects.equals(lobId, vendor.lobId) &&
-        Objects.equals(name, vendor.name) &&
-        Objects.equals(street, vendor.street) &&
-        Objects.equals(street2, vendor.street2) &&
-        Objects.equals(city, vendor.city) &&
-        Objects.equals(state, vendor.state) &&
-        Objects.equals(country, vendor.country) &&
-        Objects.equals(zipCode, vendor.zipCode) &&
-        Objects.equals(contact, vendor.contact) &&
-        Objects.equals(phone, vendor.phone) &&
-        Objects.equals(fax, vendor.fax) &&
-        Objects.equals(externalId, vendor.externalId) &&
-        Objects.equals(terms, vendor.terms) &&
-        Objects.equals(fob, vendor.fob) &&
-        Objects.equals(shipVia, vendor.shipVia) &&
-        Objects.equals(requestDays, vendor.requestDays) &&
-        Objects.equals(actualDays, vendor.actualDays) &&
-        Objects.equals(salesTaxCode, vendor.salesTaxCode) &&
-        Objects.equals(product1, vendor.product1) &&
-        Objects.equals(product2, vendor.product2) &&
-        Objects.equals(product3, vendor.product3) &&
-        Objects.equals(product4, vendor.product4) &&
-        Objects.equals(product5, vendor.product5) &&
-        Objects.equals(product6, vendor.product6) &&
-        Objects.equals(product7, vendor.product7) &&
-        Objects.equals(product8, vendor.product8) &&
-        Objects.equals(product9, vendor.product9) &&
-        Objects.equals(podDays, vendor.podDays) &&
-        Objects.equals(chargeOut, vendor.chargeOut) &&
-        Objects.equals(arEmail, vendor.arEmail) &&
-        Objects.equals(orderEmail, vendor.orderEmail) &&
-        Objects.equals(orderAttach, vendor.orderAttach) &&
-        Objects.equals(sendQuantityType, vendor.sendQuantityType) &&
-        Objects.equals(minority, vendor.minority) &&
-        Objects.equals(sendOutside, vendor.sendOutside) &&
-        Objects.equals(podOrderSuffix, vendor.podOrderSuffix) &&
-        Objects.equals(podEmail, vendor.podEmail) &&
-        Objects.equals(createDate, vendor.createDate) &&
-        Objects.equals(modifyDate, vendor.modifyDate) &&
-        Objects.equals(inactive, vendor.inactive);
+    return Objects.equals(this.id, vendor.id) &&
+        Objects.equals(this.vendorNo, vendor.vendorNo) &&
+        Objects.equals(this.lobId, vendor.lobId) &&
+        Objects.equals(this.name, vendor.name) &&
+        Objects.equals(this.street, vendor.street) &&
+        Objects.equals(this.street2, vendor.street2) &&
+        Objects.equals(this.city, vendor.city) &&
+        Objects.equals(this.state, vendor.state) &&
+        Objects.equals(this.country, vendor.country) &&
+        Objects.equals(this.zipCode, vendor.zipCode) &&
+        Objects.equals(this.contact, vendor.contact) &&
+        Objects.equals(this.phone, vendor.phone) &&
+        Objects.equals(this.fax, vendor.fax) &&
+        Objects.equals(this.externalId, vendor.externalId) &&
+        Objects.equals(this.terms, vendor.terms) &&
+        Objects.equals(this.fob, vendor.fob) &&
+        Objects.equals(this.shipVia, vendor.shipVia) &&
+        Objects.equals(this.requestDays, vendor.requestDays) &&
+        Objects.equals(this.actualDays, vendor.actualDays) &&
+        Objects.equals(this.salesTaxCode, vendor.salesTaxCode) &&
+        Objects.equals(this.product1, vendor.product1) &&
+        Objects.equals(this.product2, vendor.product2) &&
+        Objects.equals(this.product3, vendor.product3) &&
+        Objects.equals(this.product4, vendor.product4) &&
+        Objects.equals(this.product5, vendor.product5) &&
+        Objects.equals(this.product6, vendor.product6) &&
+        Objects.equals(this.product7, vendor.product7) &&
+        Objects.equals(this.product8, vendor.product8) &&
+        Objects.equals(this.product9, vendor.product9) &&
+        Objects.equals(this.podDays, vendor.podDays) &&
+        Objects.equals(this.chargeOut, vendor.chargeOut) &&
+        Objects.equals(this.arEmail, vendor.arEmail) &&
+        Objects.equals(this.orderEmail, vendor.orderEmail) &&
+        Objects.equals(this.orderAttach, vendor.orderAttach) &&
+        Objects.equals(this.sendQuantityType, vendor.sendQuantityType) &&
+        Objects.equals(this.minority, vendor.minority) &&
+        Objects.equals(this.sendOutside, vendor.sendOutside) &&
+        Objects.equals(this.podOrderSuffix, vendor.podOrderSuffix) &&
+        Objects.equals(this.podEmail, vendor.podEmail) &&
+        Objects.equals(this.createDate, vendor.createDate) &&
+        Objects.equals(this.modifyDate, vendor.modifyDate) &&
+        Objects.equals(this.inactive, vendor.inactive);
   }
 
   @Override
@@ -718,7 +875,7 @@ public class Vendor   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

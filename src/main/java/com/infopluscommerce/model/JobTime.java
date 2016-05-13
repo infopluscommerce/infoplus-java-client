@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class JobTime   {
   
   private Integer id = null;
@@ -21,53 +20,39 @@ public class JobTime   {
   private Date date = null;
   private Integer userId = null;
   private Integer lobId = null;
-  private String jobType = null;
+  private Integer jobTypeId = null;
   private String note = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public JobTime secondDuration(Integer secondDuration) {
+    this.secondDuration = secondDuration;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("secondDuration")
   public Integer getSecondDuration() {
     return secondDuration;
@@ -77,23 +62,21 @@ public class JobTime   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("date")
   public Date getDate() {
     return date;
-  }
-  public void setDate(Date date) {
-    this.date = date;
   }
 
   
   /**
    **/
+  public JobTime userId(Integer userId) {
+    this.userId = userId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("userId")
   public Integer getUserId() {
     return userId;
@@ -105,8 +88,12 @@ public class JobTime   {
   
   /**
    **/
+  public JobTime lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -118,21 +105,29 @@ public class JobTime   {
   
   /**
    **/
-  
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty("jobType")
-  public String getJobType() {
-    return jobType;
+  public JobTime jobTypeId(Integer jobTypeId) {
+    this.jobTypeId = jobTypeId;
+    return this;
   }
-  public void setJobType(String jobType) {
-    this.jobType = jobType;
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("jobTypeId")
+  public Integer getJobTypeId() {
+    return jobTypeId;
+  }
+  public void setJobTypeId(Integer jobTypeId) {
+    this.jobTypeId = jobTypeId;
   }
 
   
   /**
    **/
+  public JobTime note(String note) {
+    this.note = note;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("note")
   public String getNote() {
     return note;
@@ -144,7 +139,7 @@ public class JobTime   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -152,20 +147,20 @@ public class JobTime   {
       return false;
     }
     JobTime jobTime = (JobTime) o;
-    return Objects.equals(id, jobTime.id) &&
-        Objects.equals(createDate, jobTime.createDate) &&
-        Objects.equals(modifyDate, jobTime.modifyDate) &&
-        Objects.equals(secondDuration, jobTime.secondDuration) &&
-        Objects.equals(date, jobTime.date) &&
-        Objects.equals(userId, jobTime.userId) &&
-        Objects.equals(lobId, jobTime.lobId) &&
-        Objects.equals(jobType, jobTime.jobType) &&
-        Objects.equals(note, jobTime.note);
+    return Objects.equals(this.id, jobTime.id) &&
+        Objects.equals(this.createDate, jobTime.createDate) &&
+        Objects.equals(this.modifyDate, jobTime.modifyDate) &&
+        Objects.equals(this.secondDuration, jobTime.secondDuration) &&
+        Objects.equals(this.date, jobTime.date) &&
+        Objects.equals(this.userId, jobTime.userId) &&
+        Objects.equals(this.lobId, jobTime.lobId) &&
+        Objects.equals(this.jobTypeId, jobTime.jobTypeId) &&
+        Objects.equals(this.note, jobTime.note);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, secondDuration, date, userId, lobId, jobType, note);
+    return Objects.hash(id, createDate, modifyDate, secondDuration, date, userId, lobId, jobTypeId, note);
   }
 
   @Override
@@ -180,7 +175,7 @@ public class JobTime   {
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
-    sb.append("    jobType: ").append(toIndentedString(jobType)).append("\n");
+    sb.append("    jobTypeId: ").append(toIndentedString(jobTypeId)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -190,7 +185,7 @@ public class JobTime   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

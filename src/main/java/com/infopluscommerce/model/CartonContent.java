@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class CartonContent   {
   
   private Integer id = null;
@@ -28,23 +27,21 @@ public class CartonContent   {
   private String status = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public CartonContent groupOrderId(Double groupOrderId) {
+    this.groupOrderId = groupOrderId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("groupOrderId")
   public Double getGroupOrderId() {
     return groupOrderId;
@@ -56,8 +53,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent orderNo(Double orderNo) {
+    this.orderNo = orderNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderNo")
   public Double getOrderNo() {
     return orderNo;
@@ -69,8 +70,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent cartonNoId(Integer cartonNoId) {
+    this.cartonNoId = cartonNoId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("cartonNoId")
   public Integer getCartonNoId() {
     return cartonNoId;
@@ -82,8 +87,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent lineItemId(Integer lineItemId) {
+    this.lineItemId = lineItemId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lineItemId")
   public Integer getLineItemId() {
     return lineItemId;
@@ -95,8 +104,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent location(String location) {
+    this.location = location;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("location")
   public String getLocation() {
     return location;
@@ -108,8 +121,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent quantity(Integer quantity) {
+    this.quantity = quantity;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("quantity")
   public Integer getQuantity() {
     return quantity;
@@ -121,8 +138,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent quantityScanned(Integer quantityScanned) {
+    this.quantityScanned = quantityScanned;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("quantityScanned")
   public Integer getQuantityScanned() {
     return quantityScanned;
@@ -134,8 +155,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent completed(Date completed) {
+    this.completed = completed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("completed")
   public Date getCompleted() {
     return completed;
@@ -147,8 +172,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent toteId(String toteId) {
+    this.toteId = toteId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("toteId")
   public String getToteId() {
     return toteId;
@@ -160,8 +189,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent pickerId(String pickerId) {
+    this.pickerId = pickerId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickerId")
   public String getPickerId() {
     return pickerId;
@@ -173,8 +206,12 @@ public class CartonContent   {
   
   /**
    **/
+  public CartonContent status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -186,7 +223,7 @@ public class CartonContent   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -194,18 +231,18 @@ public class CartonContent   {
       return false;
     }
     CartonContent cartonContent = (CartonContent) o;
-    return Objects.equals(id, cartonContent.id) &&
-        Objects.equals(groupOrderId, cartonContent.groupOrderId) &&
-        Objects.equals(orderNo, cartonContent.orderNo) &&
-        Objects.equals(cartonNoId, cartonContent.cartonNoId) &&
-        Objects.equals(lineItemId, cartonContent.lineItemId) &&
-        Objects.equals(location, cartonContent.location) &&
-        Objects.equals(quantity, cartonContent.quantity) &&
-        Objects.equals(quantityScanned, cartonContent.quantityScanned) &&
-        Objects.equals(completed, cartonContent.completed) &&
-        Objects.equals(toteId, cartonContent.toteId) &&
-        Objects.equals(pickerId, cartonContent.pickerId) &&
-        Objects.equals(status, cartonContent.status);
+    return Objects.equals(this.id, cartonContent.id) &&
+        Objects.equals(this.groupOrderId, cartonContent.groupOrderId) &&
+        Objects.equals(this.orderNo, cartonContent.orderNo) &&
+        Objects.equals(this.cartonNoId, cartonContent.cartonNoId) &&
+        Objects.equals(this.lineItemId, cartonContent.lineItemId) &&
+        Objects.equals(this.location, cartonContent.location) &&
+        Objects.equals(this.quantity, cartonContent.quantity) &&
+        Objects.equals(this.quantityScanned, cartonContent.quantityScanned) &&
+        Objects.equals(this.completed, cartonContent.completed) &&
+        Objects.equals(this.toteId, cartonContent.toteId) &&
+        Objects.equals(this.pickerId, cartonContent.pickerId) &&
+        Objects.equals(this.status, cartonContent.status);
   }
 
   @Override
@@ -238,7 +275,7 @@ public class CartonContent   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

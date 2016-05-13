@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ShoppingCartConnection   {
   
   private Integer id = null;
@@ -36,75 +35,49 @@ public class ShoppingCartConnection   {
   private Date syncInventoryLevelsLastRunTime = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("clientId")
   public Integer getClientId() {
     return clientId;
   }
-  public void setClientId(Integer clientId) {
-    this.clientId = clientId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("nonce")
   public String getNonce() {
     return nonce;
   }
-  public void setNonce(String nonce) {
-    this.nonce = nonce;
-  }
 
   
   /**
    **/
+  public ShoppingCartConnection lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -116,8 +89,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection orderSourceId(Integer orderSourceId) {
+    this.orderSourceId = orderSourceId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderSourceId")
   public Integer getOrderSourceId() {
     return orderSourceId;
@@ -129,8 +106,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection integrationPartnerId(Integer integrationPartnerId) {
+    this.integrationPartnerId = integrationPartnerId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("integrationPartnerId")
   public Integer getIntegrationPartnerId() {
     return integrationPartnerId;
@@ -142,8 +123,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection connectionType(String connectionType) {
+    this.connectionType = connectionType;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("connectionType")
   public String getConnectionType() {
     return connectionType;
@@ -155,8 +140,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection itemFilterId(Integer itemFilterId) {
+    this.itemFilterId = itemFilterId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("itemFilterId")
   public Integer getItemFilterId() {
     return itemFilterId;
@@ -168,8 +157,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection infoplusSKUFieldToMap(String infoplusSKUFieldToMap) {
+    this.infoplusSKUFieldToMap = infoplusSKUFieldToMap;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("infoplusSKUFieldToMap")
   public String getInfoplusSKUFieldToMap() {
     return infoplusSKUFieldToMap;
@@ -181,8 +174,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection shoppingCartSKUFieldToMap(String shoppingCartSKUFieldToMap) {
+    this.shoppingCartSKUFieldToMap = shoppingCartSKUFieldToMap;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("shoppingCartSKUFieldToMap")
   public String getShoppingCartSKUFieldToMap() {
     return shoppingCartSKUFieldToMap;
@@ -194,8 +191,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -207,8 +208,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection shoppingCartStoreURL(String shoppingCartStoreURL) {
+    this.shoppingCartStoreURL = shoppingCartStoreURL;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("shoppingCartStoreURL")
   public String getShoppingCartStoreURL() {
     return shoppingCartStoreURL;
@@ -220,8 +225,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection accessCode(String accessCode) {
+    this.accessCode = accessCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("accessCode")
   public String getAccessCode() {
     return accessCode;
@@ -233,8 +242,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection accessToken(String accessToken) {
+    this.accessToken = accessToken;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("accessToken")
   public String getAccessToken() {
     return accessToken;
@@ -246,8 +259,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection syncOrders(Boolean syncOrders) {
+    this.syncOrders = syncOrders;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("syncOrders")
   public Boolean getSyncOrders() {
     return syncOrders;
@@ -259,8 +276,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection syncInventory(Boolean syncInventory) {
+    this.syncInventory = syncInventory;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("syncInventory")
   public Boolean getSyncInventory() {
     return syncInventory;
@@ -272,8 +293,12 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection syncTrackingData(Boolean syncTrackingData) {
+    this.syncTrackingData = syncTrackingData;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("syncTrackingData")
   public Boolean getSyncTrackingData() {
     return syncTrackingData;
@@ -283,22 +308,16 @@ public class ShoppingCartConnection   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("syncInventoryLevelsLastRunTime")
   public Date getSyncInventoryLevelsLastRunTime() {
     return syncInventoryLevelsLastRunTime;
-  }
-  public void setSyncInventoryLevelsLastRunTime(Date syncInventoryLevelsLastRunTime) {
-    this.syncInventoryLevelsLastRunTime = syncInventoryLevelsLastRunTime;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -306,26 +325,26 @@ public class ShoppingCartConnection   {
       return false;
     }
     ShoppingCartConnection shoppingCartConnection = (ShoppingCartConnection) o;
-    return Objects.equals(id, shoppingCartConnection.id) &&
-        Objects.equals(createDate, shoppingCartConnection.createDate) &&
-        Objects.equals(modifyDate, shoppingCartConnection.modifyDate) &&
-        Objects.equals(clientId, shoppingCartConnection.clientId) &&
-        Objects.equals(nonce, shoppingCartConnection.nonce) &&
-        Objects.equals(lobId, shoppingCartConnection.lobId) &&
-        Objects.equals(orderSourceId, shoppingCartConnection.orderSourceId) &&
-        Objects.equals(integrationPartnerId, shoppingCartConnection.integrationPartnerId) &&
-        Objects.equals(connectionType, shoppingCartConnection.connectionType) &&
-        Objects.equals(itemFilterId, shoppingCartConnection.itemFilterId) &&
-        Objects.equals(infoplusSKUFieldToMap, shoppingCartConnection.infoplusSKUFieldToMap) &&
-        Objects.equals(shoppingCartSKUFieldToMap, shoppingCartConnection.shoppingCartSKUFieldToMap) &&
-        Objects.equals(name, shoppingCartConnection.name) &&
-        Objects.equals(shoppingCartStoreURL, shoppingCartConnection.shoppingCartStoreURL) &&
-        Objects.equals(accessCode, shoppingCartConnection.accessCode) &&
-        Objects.equals(accessToken, shoppingCartConnection.accessToken) &&
-        Objects.equals(syncOrders, shoppingCartConnection.syncOrders) &&
-        Objects.equals(syncInventory, shoppingCartConnection.syncInventory) &&
-        Objects.equals(syncTrackingData, shoppingCartConnection.syncTrackingData) &&
-        Objects.equals(syncInventoryLevelsLastRunTime, shoppingCartConnection.syncInventoryLevelsLastRunTime);
+    return Objects.equals(this.id, shoppingCartConnection.id) &&
+        Objects.equals(this.createDate, shoppingCartConnection.createDate) &&
+        Objects.equals(this.modifyDate, shoppingCartConnection.modifyDate) &&
+        Objects.equals(this.clientId, shoppingCartConnection.clientId) &&
+        Objects.equals(this.nonce, shoppingCartConnection.nonce) &&
+        Objects.equals(this.lobId, shoppingCartConnection.lobId) &&
+        Objects.equals(this.orderSourceId, shoppingCartConnection.orderSourceId) &&
+        Objects.equals(this.integrationPartnerId, shoppingCartConnection.integrationPartnerId) &&
+        Objects.equals(this.connectionType, shoppingCartConnection.connectionType) &&
+        Objects.equals(this.itemFilterId, shoppingCartConnection.itemFilterId) &&
+        Objects.equals(this.infoplusSKUFieldToMap, shoppingCartConnection.infoplusSKUFieldToMap) &&
+        Objects.equals(this.shoppingCartSKUFieldToMap, shoppingCartConnection.shoppingCartSKUFieldToMap) &&
+        Objects.equals(this.name, shoppingCartConnection.name) &&
+        Objects.equals(this.shoppingCartStoreURL, shoppingCartConnection.shoppingCartStoreURL) &&
+        Objects.equals(this.accessCode, shoppingCartConnection.accessCode) &&
+        Objects.equals(this.accessToken, shoppingCartConnection.accessToken) &&
+        Objects.equals(this.syncOrders, shoppingCartConnection.syncOrders) &&
+        Objects.equals(this.syncInventory, shoppingCartConnection.syncInventory) &&
+        Objects.equals(this.syncTrackingData, shoppingCartConnection.syncTrackingData) &&
+        Objects.equals(this.syncInventoryLevelsLastRunTime, shoppingCartConnection.syncInventoryLevelsLastRunTime);
   }
 
   @Override
@@ -366,7 +385,7 @@ public class ShoppingCartConnection   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

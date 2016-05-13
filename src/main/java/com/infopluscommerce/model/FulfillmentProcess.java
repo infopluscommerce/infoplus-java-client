@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class FulfillmentProcess   {
   
   private Integer id = null;
@@ -59,75 +58,49 @@ public class FulfillmentProcess   {
   private Boolean createOrderAssemblyGuide = false;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("processNo")
   public Integer getProcessNo() {
     return processNo;
   }
-  public void setProcessNo(Integer processNo) {
-    this.processNo = processNo;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("workBatchId")
   public Integer getWorkBatchId() {
     return workBatchId;
   }
-  public void setWorkBatchId(Integer workBatchId) {
-    this.workBatchId = workBatchId;
-  }
 
   
   /**
    **/
+  public FulfillmentProcess warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -139,8 +112,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess allocationPlanId(Integer allocationPlanId) {
+    this.allocationPlanId = allocationPlanId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("allocationPlanId")
   public Integer getAllocationPlanId() {
     return allocationPlanId;
@@ -152,8 +129,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -165,8 +146,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess orderSmartFilterId(Integer orderSmartFilterId) {
+    this.orderSmartFilterId = orderSmartFilterId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderSmartFilterId")
   public Integer getOrderSmartFilterId() {
     return orderSmartFilterId;
@@ -178,8 +163,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess locationSmartFilterId(Integer locationSmartFilterId) {
+    this.locationSmartFilterId = locationSmartFilterId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("locationSmartFilterId")
   public Integer getLocationSmartFilterId() {
     return locationSmartFilterId;
@@ -189,62 +178,42 @@ public class FulfillmentProcess   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderLimit")
   public Integer getOrderLimit() {
     return orderLimit;
   }
-  public void setOrderLimit(Integer orderLimit) {
-    this.orderLimit = orderLimit;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numberOfOrders")
   public Integer getNumberOfOrders() {
     return numberOfOrders;
   }
-  public void setNumberOfOrders(Integer numberOfOrders) {
-    this.numberOfOrders = numberOfOrders;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numberOfLines")
   public Integer getNumberOfLines() {
     return numberOfLines;
   }
-  public void setNumberOfLines(Integer numberOfLines) {
-    this.numberOfLines = numberOfLines;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numberOfSKUs")
   public Integer getNumberOfSKUs() {
     return numberOfSKUs;
   }
-  public void setNumberOfSKUs(Integer numberOfSKUs) {
-    this.numberOfSKUs = numberOfSKUs;
-  }
 
   
   /**
    **/
+  public FulfillmentProcess completedPicks(Integer completedPicks) {
+    this.completedPicks = completedPicks;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("completedPicks")
   public Integer getCompletedPicks() {
     return completedPicks;
@@ -256,8 +225,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess totalPicks(Integer totalPicks) {
+    this.totalPicks = totalPicks;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalPicks")
   public Integer getTotalPicks() {
     return totalPicks;
@@ -269,8 +242,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess shippedCasebreaks(Integer shippedCasebreaks) {
+    this.shippedCasebreaks = shippedCasebreaks;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shippedCasebreaks")
   public Integer getShippedCasebreaks() {
     return shippedCasebreaks;
@@ -282,8 +259,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess totalCasebreaksToShip(Integer totalCasebreaksToShip) {
+    this.totalCasebreaksToShip = totalCasebreaksToShip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalCasebreaksToShip")
   public Integer getTotalCasebreaksToShip() {
     return totalCasebreaksToShip;
@@ -295,8 +276,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess shippedOrders(Integer shippedOrders) {
+    this.shippedOrders = shippedOrders;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shippedOrders")
   public Integer getShippedOrders() {
     return shippedOrders;
@@ -308,8 +293,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess totalOrdersToShip(Integer totalOrdersToShip) {
+    this.totalOrdersToShip = totalOrdersToShip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalOrdersToShip")
   public Integer getTotalOrdersToShip() {
     return totalOrdersToShip;
@@ -321,8 +310,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess completedToDo(Integer completedToDo) {
+    this.completedToDo = completedToDo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("completedToDo")
   public Integer getCompletedToDo() {
     return completedToDo;
@@ -334,8 +327,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess totalToDo(Integer totalToDo) {
+    this.totalToDo = totalToDo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalToDo")
   public Integer getTotalToDo() {
     return totalToDo;
@@ -347,8 +344,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess createPickWork(Boolean createPickWork) {
+    this.createPickWork = createPickWork;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createPickWork")
   public Boolean getCreatePickWork() {
     return createPickWork;
@@ -360,8 +361,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickingRule(String pickingRule) {
+    this.pickingRule = pickingRule;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickingRule")
   public String getPickingRule() {
     return pickingRule;
@@ -373,8 +378,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess layoutRule(String layoutRule) {
+    this.layoutRule = layoutRule;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("layoutRule")
   public String getLayoutRule() {
     return layoutRule;
@@ -386,8 +395,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickSortRule(String pickSortRule) {
+    this.pickSortRule = pickSortRule;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSortRule")
   public String getPickSortRule() {
     return pickSortRule;
@@ -399,8 +412,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess firstPickPosition(Integer firstPickPosition) {
+    this.firstPickPosition = firstPickPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("firstPickPosition")
   public Integer getFirstPickPosition() {
     return firstPickPosition;
@@ -412,8 +429,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickListFormat(String pickListFormat) {
+    this.pickListFormat = pickListFormat;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListFormat")
   public String getPickListFormat() {
     return pickListFormat;
@@ -425,8 +446,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickListLayout(String pickListLayout) {
+    this.pickListLayout = pickListLayout;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListLayout")
   public String getPickListLayout() {
     return pickListLayout;
@@ -438,8 +463,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickListGroup(String pickListGroup) {
+    this.pickListGroup = pickListGroup;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListGroup")
   public String getPickListGroup() {
     return pickListGroup;
@@ -451,8 +480,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickListSort(String pickListSort) {
+    this.pickListSort = pickListSort;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListSort")
   public String getPickListSort() {
     return pickListSort;
@@ -464,8 +497,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickSummaryFormat(String pickSummaryFormat) {
+    this.pickSummaryFormat = pickSummaryFormat;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSummaryFormat")
   public String getPickSummaryFormat() {
     return pickSummaryFormat;
@@ -477,8 +514,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickSummaryLayout(String pickSummaryLayout) {
+    this.pickSummaryLayout = pickSummaryLayout;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSummaryLayout")
   public String getPickSummaryLayout() {
     return pickSummaryLayout;
@@ -490,8 +531,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess pickSummarySort(String pickSummarySort) {
+    this.pickSummarySort = pickSummarySort;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSummarySort")
   public String getPickSummarySort() {
     return pickSummarySort;
@@ -503,8 +548,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess createPickSummary(Boolean createPickSummary) {
+    this.createPickSummary = createPickSummary;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createPickSummary")
   public Boolean getCreatePickSummary() {
     return createPickSummary;
@@ -516,8 +565,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess createPickList(Boolean createPickList) {
+    this.createPickList = createPickList;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createPickList")
   public Boolean getCreatePickList() {
     return createPickList;
@@ -529,8 +582,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess preGenerateParcelLabels(Boolean preGenerateParcelLabels) {
+    this.preGenerateParcelLabels = preGenerateParcelLabels;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("preGenerateParcelLabels")
   public Boolean getPreGenerateParcelLabels() {
     return preGenerateParcelLabels;
@@ -542,8 +599,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess shipDate(Date shipDate) {
+    this.shipDate = shipDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipDate")
   public Date getShipDate() {
     return shipDate;
@@ -555,8 +616,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess autoShipCasebreakCartons(Boolean autoShipCasebreakCartons) {
+    this.autoShipCasebreakCartons = autoShipCasebreakCartons;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("autoShipCasebreakCartons")
   public Boolean getAutoShipCasebreakCartons() {
     return autoShipCasebreakCartons;
@@ -568,8 +633,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess cartonizeOrders(Boolean cartonizeOrders) {
+    this.cartonizeOrders = cartonizeOrders;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonizeOrders")
   public Boolean getCartonizeOrders() {
     return cartonizeOrders;
@@ -581,8 +650,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess createPackingSlip(Boolean createPackingSlip) {
+    this.createPackingSlip = createPackingSlip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createPackingSlip")
   public Boolean getCreatePackingSlip() {
     return createPackingSlip;
@@ -594,8 +667,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess overridePackingSlipTemplateId(Integer overridePackingSlipTemplateId) {
+    this.overridePackingSlipTemplateId = overridePackingSlipTemplateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("overridePackingSlipTemplateId")
   public Integer getOverridePackingSlipTemplateId() {
     return overridePackingSlipTemplateId;
@@ -607,8 +684,12 @@ public class FulfillmentProcess   {
   
   /**
    **/
+  public FulfillmentProcess createOrderAssemblyGuide(Boolean createOrderAssemblyGuide) {
+    this.createOrderAssemblyGuide = createOrderAssemblyGuide;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createOrderAssemblyGuide")
   public Boolean getCreateOrderAssemblyGuide() {
     return createOrderAssemblyGuide;
@@ -620,7 +701,7 @@ public class FulfillmentProcess   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -628,49 +709,49 @@ public class FulfillmentProcess   {
       return false;
     }
     FulfillmentProcess fulfillmentProcess = (FulfillmentProcess) o;
-    return Objects.equals(id, fulfillmentProcess.id) &&
-        Objects.equals(createDate, fulfillmentProcess.createDate) &&
-        Objects.equals(modifyDate, fulfillmentProcess.modifyDate) &&
-        Objects.equals(processNo, fulfillmentProcess.processNo) &&
-        Objects.equals(workBatchId, fulfillmentProcess.workBatchId) &&
-        Objects.equals(warehouseId, fulfillmentProcess.warehouseId) &&
-        Objects.equals(allocationPlanId, fulfillmentProcess.allocationPlanId) &&
-        Objects.equals(status, fulfillmentProcess.status) &&
-        Objects.equals(orderSmartFilterId, fulfillmentProcess.orderSmartFilterId) &&
-        Objects.equals(locationSmartFilterId, fulfillmentProcess.locationSmartFilterId) &&
-        Objects.equals(orderLimit, fulfillmentProcess.orderLimit) &&
-        Objects.equals(numberOfOrders, fulfillmentProcess.numberOfOrders) &&
-        Objects.equals(numberOfLines, fulfillmentProcess.numberOfLines) &&
-        Objects.equals(numberOfSKUs, fulfillmentProcess.numberOfSKUs) &&
-        Objects.equals(completedPicks, fulfillmentProcess.completedPicks) &&
-        Objects.equals(totalPicks, fulfillmentProcess.totalPicks) &&
-        Objects.equals(shippedCasebreaks, fulfillmentProcess.shippedCasebreaks) &&
-        Objects.equals(totalCasebreaksToShip, fulfillmentProcess.totalCasebreaksToShip) &&
-        Objects.equals(shippedOrders, fulfillmentProcess.shippedOrders) &&
-        Objects.equals(totalOrdersToShip, fulfillmentProcess.totalOrdersToShip) &&
-        Objects.equals(completedToDo, fulfillmentProcess.completedToDo) &&
-        Objects.equals(totalToDo, fulfillmentProcess.totalToDo) &&
-        Objects.equals(createPickWork, fulfillmentProcess.createPickWork) &&
-        Objects.equals(pickingRule, fulfillmentProcess.pickingRule) &&
-        Objects.equals(layoutRule, fulfillmentProcess.layoutRule) &&
-        Objects.equals(pickSortRule, fulfillmentProcess.pickSortRule) &&
-        Objects.equals(firstPickPosition, fulfillmentProcess.firstPickPosition) &&
-        Objects.equals(pickListFormat, fulfillmentProcess.pickListFormat) &&
-        Objects.equals(pickListLayout, fulfillmentProcess.pickListLayout) &&
-        Objects.equals(pickListGroup, fulfillmentProcess.pickListGroup) &&
-        Objects.equals(pickListSort, fulfillmentProcess.pickListSort) &&
-        Objects.equals(pickSummaryFormat, fulfillmentProcess.pickSummaryFormat) &&
-        Objects.equals(pickSummaryLayout, fulfillmentProcess.pickSummaryLayout) &&
-        Objects.equals(pickSummarySort, fulfillmentProcess.pickSummarySort) &&
-        Objects.equals(createPickSummary, fulfillmentProcess.createPickSummary) &&
-        Objects.equals(createPickList, fulfillmentProcess.createPickList) &&
-        Objects.equals(preGenerateParcelLabels, fulfillmentProcess.preGenerateParcelLabels) &&
-        Objects.equals(shipDate, fulfillmentProcess.shipDate) &&
-        Objects.equals(autoShipCasebreakCartons, fulfillmentProcess.autoShipCasebreakCartons) &&
-        Objects.equals(cartonizeOrders, fulfillmentProcess.cartonizeOrders) &&
-        Objects.equals(createPackingSlip, fulfillmentProcess.createPackingSlip) &&
-        Objects.equals(overridePackingSlipTemplateId, fulfillmentProcess.overridePackingSlipTemplateId) &&
-        Objects.equals(createOrderAssemblyGuide, fulfillmentProcess.createOrderAssemblyGuide);
+    return Objects.equals(this.id, fulfillmentProcess.id) &&
+        Objects.equals(this.createDate, fulfillmentProcess.createDate) &&
+        Objects.equals(this.modifyDate, fulfillmentProcess.modifyDate) &&
+        Objects.equals(this.processNo, fulfillmentProcess.processNo) &&
+        Objects.equals(this.workBatchId, fulfillmentProcess.workBatchId) &&
+        Objects.equals(this.warehouseId, fulfillmentProcess.warehouseId) &&
+        Objects.equals(this.allocationPlanId, fulfillmentProcess.allocationPlanId) &&
+        Objects.equals(this.status, fulfillmentProcess.status) &&
+        Objects.equals(this.orderSmartFilterId, fulfillmentProcess.orderSmartFilterId) &&
+        Objects.equals(this.locationSmartFilterId, fulfillmentProcess.locationSmartFilterId) &&
+        Objects.equals(this.orderLimit, fulfillmentProcess.orderLimit) &&
+        Objects.equals(this.numberOfOrders, fulfillmentProcess.numberOfOrders) &&
+        Objects.equals(this.numberOfLines, fulfillmentProcess.numberOfLines) &&
+        Objects.equals(this.numberOfSKUs, fulfillmentProcess.numberOfSKUs) &&
+        Objects.equals(this.completedPicks, fulfillmentProcess.completedPicks) &&
+        Objects.equals(this.totalPicks, fulfillmentProcess.totalPicks) &&
+        Objects.equals(this.shippedCasebreaks, fulfillmentProcess.shippedCasebreaks) &&
+        Objects.equals(this.totalCasebreaksToShip, fulfillmentProcess.totalCasebreaksToShip) &&
+        Objects.equals(this.shippedOrders, fulfillmentProcess.shippedOrders) &&
+        Objects.equals(this.totalOrdersToShip, fulfillmentProcess.totalOrdersToShip) &&
+        Objects.equals(this.completedToDo, fulfillmentProcess.completedToDo) &&
+        Objects.equals(this.totalToDo, fulfillmentProcess.totalToDo) &&
+        Objects.equals(this.createPickWork, fulfillmentProcess.createPickWork) &&
+        Objects.equals(this.pickingRule, fulfillmentProcess.pickingRule) &&
+        Objects.equals(this.layoutRule, fulfillmentProcess.layoutRule) &&
+        Objects.equals(this.pickSortRule, fulfillmentProcess.pickSortRule) &&
+        Objects.equals(this.firstPickPosition, fulfillmentProcess.firstPickPosition) &&
+        Objects.equals(this.pickListFormat, fulfillmentProcess.pickListFormat) &&
+        Objects.equals(this.pickListLayout, fulfillmentProcess.pickListLayout) &&
+        Objects.equals(this.pickListGroup, fulfillmentProcess.pickListGroup) &&
+        Objects.equals(this.pickListSort, fulfillmentProcess.pickListSort) &&
+        Objects.equals(this.pickSummaryFormat, fulfillmentProcess.pickSummaryFormat) &&
+        Objects.equals(this.pickSummaryLayout, fulfillmentProcess.pickSummaryLayout) &&
+        Objects.equals(this.pickSummarySort, fulfillmentProcess.pickSummarySort) &&
+        Objects.equals(this.createPickSummary, fulfillmentProcess.createPickSummary) &&
+        Objects.equals(this.createPickList, fulfillmentProcess.createPickList) &&
+        Objects.equals(this.preGenerateParcelLabels, fulfillmentProcess.preGenerateParcelLabels) &&
+        Objects.equals(this.shipDate, fulfillmentProcess.shipDate) &&
+        Objects.equals(this.autoShipCasebreakCartons, fulfillmentProcess.autoShipCasebreakCartons) &&
+        Objects.equals(this.cartonizeOrders, fulfillmentProcess.cartonizeOrders) &&
+        Objects.equals(this.createPackingSlip, fulfillmentProcess.createPackingSlip) &&
+        Objects.equals(this.overridePackingSlipTemplateId, fulfillmentProcess.overridePackingSlipTemplateId) &&
+        Objects.equals(this.createOrderAssemblyGuide, fulfillmentProcess.createOrderAssemblyGuide);
   }
 
   @Override
@@ -734,7 +815,7 @@ public class FulfillmentProcess   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class BusinessTransaction   {
   
   private Integer id = null;
@@ -24,113 +23,65 @@ public class BusinessTransaction   {
   private String status = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("serverName")
   public String getServerName() {
     return serverName;
   }
-  public void setServerName(String serverName) {
-    this.serverName = serverName;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("queueName")
   public String getQueueName() {
     return queueName;
   }
-  public void setQueueName(String queueName) {
-    this.queueName = queueName;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
   }
-  public void setLobId(Integer lobId) {
-    this.lobId = lobId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("messageBody")
   public String getMessageBody() {
     return messageBody;
   }
-  public void setMessageBody(String messageBody) {
-    this.messageBody = messageBody;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -138,14 +89,14 @@ public class BusinessTransaction   {
       return false;
     }
     BusinessTransaction businessTransaction = (BusinessTransaction) o;
-    return Objects.equals(id, businessTransaction.id) &&
-        Objects.equals(createDate, businessTransaction.createDate) &&
-        Objects.equals(modifyDate, businessTransaction.modifyDate) &&
-        Objects.equals(serverName, businessTransaction.serverName) &&
-        Objects.equals(queueName, businessTransaction.queueName) &&
-        Objects.equals(lobId, businessTransaction.lobId) &&
-        Objects.equals(messageBody, businessTransaction.messageBody) &&
-        Objects.equals(status, businessTransaction.status);
+    return Objects.equals(this.id, businessTransaction.id) &&
+        Objects.equals(this.createDate, businessTransaction.createDate) &&
+        Objects.equals(this.modifyDate, businessTransaction.modifyDate) &&
+        Objects.equals(this.serverName, businessTransaction.serverName) &&
+        Objects.equals(this.queueName, businessTransaction.queueName) &&
+        Objects.equals(this.lobId, businessTransaction.lobId) &&
+        Objects.equals(this.messageBody, businessTransaction.messageBody) &&
+        Objects.equals(this.status, businessTransaction.status);
   }
 
   @Override
@@ -174,7 +125,7 @@ public class BusinessTransaction   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

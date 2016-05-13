@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class QuickAdjustment   {
   
   private Integer id = null;
@@ -26,49 +25,35 @@ public class QuickAdjustment   {
   private String sku = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public QuickAdjustment warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -80,8 +65,12 @@ public class QuickAdjustment   {
   
   /**
    **/
+  public QuickAdjustment locationId(Integer locationId) {
+    this.locationId = locationId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("locationId")
   public Integer getLocationId() {
     return locationId;
@@ -93,8 +82,12 @@ public class QuickAdjustment   {
   
   /**
    **/
+  public QuickAdjustment adjustmentCode(String adjustmentCode) {
+    this.adjustmentCode = adjustmentCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("adjustmentCode")
   public String getAdjustmentCode() {
     return adjustmentCode;
@@ -106,8 +99,12 @@ public class QuickAdjustment   {
   
   /**
    **/
+  public QuickAdjustment totalQuantity(Integer totalQuantity) {
+    this.totalQuantity = totalQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("totalQuantity")
   public Integer getTotalQuantity() {
     return totalQuantity;
@@ -119,8 +116,12 @@ public class QuickAdjustment   {
   
   /**
    **/
+  public QuickAdjustment message(String message) {
+    this.message = message;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("message")
   public String getMessage() {
     return message;
@@ -130,23 +131,21 @@ public class QuickAdjustment   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
   }
 
   
   /**
    **/
+  public QuickAdjustment sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
@@ -158,7 +157,7 @@ public class QuickAdjustment   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -166,16 +165,16 @@ public class QuickAdjustment   {
       return false;
     }
     QuickAdjustment quickAdjustment = (QuickAdjustment) o;
-    return Objects.equals(id, quickAdjustment.id) &&
-        Objects.equals(createDate, quickAdjustment.createDate) &&
-        Objects.equals(modifyDate, quickAdjustment.modifyDate) &&
-        Objects.equals(warehouseId, quickAdjustment.warehouseId) &&
-        Objects.equals(locationId, quickAdjustment.locationId) &&
-        Objects.equals(adjustmentCode, quickAdjustment.adjustmentCode) &&
-        Objects.equals(totalQuantity, quickAdjustment.totalQuantity) &&
-        Objects.equals(message, quickAdjustment.message) &&
-        Objects.equals(status, quickAdjustment.status) &&
-        Objects.equals(sku, quickAdjustment.sku);
+    return Objects.equals(this.id, quickAdjustment.id) &&
+        Objects.equals(this.createDate, quickAdjustment.createDate) &&
+        Objects.equals(this.modifyDate, quickAdjustment.modifyDate) &&
+        Objects.equals(this.warehouseId, quickAdjustment.warehouseId) &&
+        Objects.equals(this.locationId, quickAdjustment.locationId) &&
+        Objects.equals(this.adjustmentCode, quickAdjustment.adjustmentCode) &&
+        Objects.equals(this.totalQuantity, quickAdjustment.totalQuantity) &&
+        Objects.equals(this.message, quickAdjustment.message) &&
+        Objects.equals(this.status, quickAdjustment.status) &&
+        Objects.equals(this.sku, quickAdjustment.sku);
   }
 
   @Override
@@ -206,7 +205,7 @@ public class QuickAdjustment   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

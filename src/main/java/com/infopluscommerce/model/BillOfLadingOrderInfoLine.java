@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class BillOfLadingOrderInfoLine   {
   
   private String customerOrderNo = null;
@@ -22,8 +21,12 @@ public class BillOfLadingOrderInfoLine   {
   
   /**
    **/
+  public BillOfLadingOrderInfoLine customerOrderNo(String customerOrderNo) {
+    this.customerOrderNo = customerOrderNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("customerOrderNo")
   public String getCustomerOrderNo() {
     return customerOrderNo;
@@ -35,8 +38,12 @@ public class BillOfLadingOrderInfoLine   {
   
   /**
    **/
+  public BillOfLadingOrderInfoLine noPackages(Integer noPackages) {
+    this.noPackages = noPackages;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("noPackages")
   public Integer getNoPackages() {
     return noPackages;
@@ -48,8 +55,12 @@ public class BillOfLadingOrderInfoLine   {
   
   /**
    **/
+  public BillOfLadingOrderInfoLine weight(Integer weight) {
+    this.weight = weight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weight")
   public Integer getWeight() {
     return weight;
@@ -61,8 +72,12 @@ public class BillOfLadingOrderInfoLine   {
   
   /**
    **/
+  public BillOfLadingOrderInfoLine palletslip(Boolean palletslip) {
+    this.palletslip = palletslip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("palletslip")
   public Boolean getPalletslip() {
     return palletslip;
@@ -74,8 +89,12 @@ public class BillOfLadingOrderInfoLine   {
   
   /**
    **/
+  public BillOfLadingOrderInfoLine additionalShipperInfo(String additionalShipperInfo) {
+    this.additionalShipperInfo = additionalShipperInfo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("additionalShipperInfo")
   public String getAdditionalShipperInfo() {
     return additionalShipperInfo;
@@ -87,7 +106,7 @@ public class BillOfLadingOrderInfoLine   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -95,11 +114,11 @@ public class BillOfLadingOrderInfoLine   {
       return false;
     }
     BillOfLadingOrderInfoLine billOfLadingOrderInfoLine = (BillOfLadingOrderInfoLine) o;
-    return Objects.equals(customerOrderNo, billOfLadingOrderInfoLine.customerOrderNo) &&
-        Objects.equals(noPackages, billOfLadingOrderInfoLine.noPackages) &&
-        Objects.equals(weight, billOfLadingOrderInfoLine.weight) &&
-        Objects.equals(palletslip, billOfLadingOrderInfoLine.palletslip) &&
-        Objects.equals(additionalShipperInfo, billOfLadingOrderInfoLine.additionalShipperInfo);
+    return Objects.equals(this.customerOrderNo, billOfLadingOrderInfoLine.customerOrderNo) &&
+        Objects.equals(this.noPackages, billOfLadingOrderInfoLine.noPackages) &&
+        Objects.equals(this.weight, billOfLadingOrderInfoLine.weight) &&
+        Objects.equals(this.palletslip, billOfLadingOrderInfoLine.palletslip) &&
+        Objects.equals(this.additionalShipperInfo, billOfLadingOrderInfoLine.additionalShipperInfo);
   }
 
   @Override
@@ -125,7 +144,7 @@ public class BillOfLadingOrderInfoLine   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

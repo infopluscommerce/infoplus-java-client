@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class CartonType   {
   
   private Integer id = null;
@@ -27,23 +26,21 @@ public class CartonType   {
   private Boolean isActive = false;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public CartonType abbreviation(String abbreviation) {
+    this.abbreviation = abbreviation;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("abbreviation")
   public String getAbbreviation() {
     return abbreviation;
@@ -55,8 +52,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -68,8 +69,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType lengthIn(Double lengthIn) {
+    this.lengthIn = lengthIn;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lengthIn")
   public Double getLengthIn() {
     return lengthIn;
@@ -81,8 +86,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType widthIn(Double widthIn) {
+    this.widthIn = widthIn;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("widthIn")
   public Double getWidthIn() {
     return widthIn;
@@ -94,8 +103,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType heightIn(Double heightIn) {
+    this.heightIn = heightIn;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("heightIn")
   public Double getHeightIn() {
     return heightIn;
@@ -107,8 +120,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType innerLengthIn(Double innerLengthIn) {
+    this.innerLengthIn = innerLengthIn;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("innerLengthIn")
   public Double getInnerLengthIn() {
     return innerLengthIn;
@@ -120,8 +137,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType innerWidthIn(Double innerWidthIn) {
+    this.innerWidthIn = innerWidthIn;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("innerWidthIn")
   public Double getInnerWidthIn() {
     return innerWidthIn;
@@ -133,8 +154,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType innerHeightIn(Double innerHeightIn) {
+    this.innerHeightIn = innerHeightIn;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("innerHeightIn")
   public Double getInnerHeightIn() {
     return innerHeightIn;
@@ -146,8 +171,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType weightLbs(Double weightLbs) {
+    this.weightLbs = weightLbs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
   public Double getWeightLbs() {
     return weightLbs;
@@ -159,8 +188,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -172,8 +205,12 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType isActive(Boolean isActive) {
+    this.isActive = isActive;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("isActive")
   public Boolean getIsActive() {
     return isActive;
@@ -185,7 +222,7 @@ public class CartonType   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -193,18 +230,18 @@ public class CartonType   {
       return false;
     }
     CartonType cartonType = (CartonType) o;
-    return Objects.equals(id, cartonType.id) &&
-        Objects.equals(abbreviation, cartonType.abbreviation) &&
-        Objects.equals(name, cartonType.name) &&
-        Objects.equals(lengthIn, cartonType.lengthIn) &&
-        Objects.equals(widthIn, cartonType.widthIn) &&
-        Objects.equals(heightIn, cartonType.heightIn) &&
-        Objects.equals(innerLengthIn, cartonType.innerLengthIn) &&
-        Objects.equals(innerWidthIn, cartonType.innerWidthIn) &&
-        Objects.equals(innerHeightIn, cartonType.innerHeightIn) &&
-        Objects.equals(weightLbs, cartonType.weightLbs) &&
-        Objects.equals(lobId, cartonType.lobId) &&
-        Objects.equals(isActive, cartonType.isActive);
+    return Objects.equals(this.id, cartonType.id) &&
+        Objects.equals(this.abbreviation, cartonType.abbreviation) &&
+        Objects.equals(this.name, cartonType.name) &&
+        Objects.equals(this.lengthIn, cartonType.lengthIn) &&
+        Objects.equals(this.widthIn, cartonType.widthIn) &&
+        Objects.equals(this.heightIn, cartonType.heightIn) &&
+        Objects.equals(this.innerLengthIn, cartonType.innerLengthIn) &&
+        Objects.equals(this.innerWidthIn, cartonType.innerWidthIn) &&
+        Objects.equals(this.innerHeightIn, cartonType.innerHeightIn) &&
+        Objects.equals(this.weightLbs, cartonType.weightLbs) &&
+        Objects.equals(this.lobId, cartonType.lobId) &&
+        Objects.equals(this.isActive, cartonType.isActive);
   }
 
   @Override
@@ -237,7 +274,7 @@ public class CartonType   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

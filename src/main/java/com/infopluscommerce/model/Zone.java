@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Zone   {
   
   private Integer id = null;
@@ -27,23 +26,21 @@ public class Zone   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public Zone warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -55,8 +52,12 @@ public class Zone   {
   
   /**
    **/
+  public Zone name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -68,8 +69,12 @@ public class Zone   {
   
   /**
    **/
+  public Zone address(String address) {
+    this.address = address;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("address")
   public String getAddress() {
     return address;
@@ -81,8 +86,12 @@ public class Zone   {
   
   /**
    **/
+  public Zone isClimateControlled(Boolean isClimateControlled) {
+    this.isClimateControlled = isClimateControlled;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isClimateControlled")
   public Boolean getIsClimateControlled() {
     return isClimateControlled;
@@ -94,8 +103,12 @@ public class Zone   {
   
   /**
    **/
+  public Zone isFoodGrade(Boolean isFoodGrade) {
+    this.isFoodGrade = isFoodGrade;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isFoodGrade")
   public Boolean getIsFoodGrade() {
     return isFoodGrade;
@@ -107,8 +120,12 @@ public class Zone   {
   
   /**
    **/
+  public Zone isSecure(Boolean isSecure) {
+    this.isSecure = isSecure;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isSecure")
   public Boolean getIsSecure() {
     return isSecure;
@@ -120,8 +137,12 @@ public class Zone   {
   
   /**
    **/
+  public Zone isFrozen(Boolean isFrozen) {
+    this.isFrozen = isFrozen;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isFrozen")
   public Boolean getIsFrozen() {
     return isFrozen;
@@ -133,8 +154,12 @@ public class Zone   {
   
   /**
    **/
+  public Zone isRefrigerated(Boolean isRefrigerated) {
+    this.isRefrigerated = isRefrigerated;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isRefrigerated")
   public Boolean getIsRefrigerated() {
     return isRefrigerated;
@@ -144,35 +169,23 @@ public class Zone   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -180,17 +193,17 @@ public class Zone   {
       return false;
     }
     Zone zone = (Zone) o;
-    return Objects.equals(id, zone.id) &&
-        Objects.equals(warehouseId, zone.warehouseId) &&
-        Objects.equals(name, zone.name) &&
-        Objects.equals(address, zone.address) &&
-        Objects.equals(isClimateControlled, zone.isClimateControlled) &&
-        Objects.equals(isFoodGrade, zone.isFoodGrade) &&
-        Objects.equals(isSecure, zone.isSecure) &&
-        Objects.equals(isFrozen, zone.isFrozen) &&
-        Objects.equals(isRefrigerated, zone.isRefrigerated) &&
-        Objects.equals(createDate, zone.createDate) &&
-        Objects.equals(modifyDate, zone.modifyDate);
+    return Objects.equals(this.id, zone.id) &&
+        Objects.equals(this.warehouseId, zone.warehouseId) &&
+        Objects.equals(this.name, zone.name) &&
+        Objects.equals(this.address, zone.address) &&
+        Objects.equals(this.isClimateControlled, zone.isClimateControlled) &&
+        Objects.equals(this.isFoodGrade, zone.isFoodGrade) &&
+        Objects.equals(this.isSecure, zone.isSecure) &&
+        Objects.equals(this.isFrozen, zone.isFrozen) &&
+        Objects.equals(this.isRefrigerated, zone.isRefrigerated) &&
+        Objects.equals(this.createDate, zone.createDate) &&
+        Objects.equals(this.modifyDate, zone.modifyDate);
   }
 
   @Override
@@ -222,7 +235,7 @@ public class Zone   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

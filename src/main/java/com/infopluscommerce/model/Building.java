@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Building   {
   
   private Integer id = null;
@@ -22,23 +21,21 @@ public class Building   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public Building warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -50,8 +47,12 @@ public class Building   {
   
   /**
    **/
+  public Building name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -63,8 +64,12 @@ public class Building   {
   
   /**
    **/
+  public Building address(String address) {
+    this.address = address;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("address")
   public String getAddress() {
     return address;
@@ -74,35 +79,23 @@ public class Building   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -110,12 +103,12 @@ public class Building   {
       return false;
     }
     Building building = (Building) o;
-    return Objects.equals(id, building.id) &&
-        Objects.equals(warehouseId, building.warehouseId) &&
-        Objects.equals(name, building.name) &&
-        Objects.equals(address, building.address) &&
-        Objects.equals(createDate, building.createDate) &&
-        Objects.equals(modifyDate, building.modifyDate);
+    return Objects.equals(this.id, building.id) &&
+        Objects.equals(this.warehouseId, building.warehouseId) &&
+        Objects.equals(this.name, building.name) &&
+        Objects.equals(this.address, building.address) &&
+        Objects.equals(this.createDate, building.createDate) &&
+        Objects.equals(this.modifyDate, building.modifyDate);
   }
 
   @Override
@@ -142,7 +135,7 @@ public class Building   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class OverrideReturnAddress   {
   
   private Integer id = null;
@@ -31,49 +30,35 @@ public class OverrideReturnAddress   {
   private String phone = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public OverrideReturnAddress lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -85,8 +70,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -98,8 +87,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress orderSourceId(Integer orderSourceId) {
+    this.orderSourceId = orderSourceId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderSourceId")
   public Integer getOrderSourceId() {
     return orderSourceId;
@@ -111,8 +104,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -124,8 +121,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress attention(String attention) {
+    this.attention = attention;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("attention")
   public String getAttention() {
     return attention;
@@ -137,8 +138,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress street(String street) {
+    this.street = street;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("street")
   public String getStreet() {
     return street;
@@ -150,8 +155,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress street2(String street2) {
+    this.street2 = street2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("street2")
   public String getStreet2() {
     return street2;
@@ -163,8 +172,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress city(String city) {
+    this.city = city;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("city")
   public String getCity() {
     return city;
@@ -176,8 +189,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress state(String state) {
+    this.state = state;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -189,8 +206,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress zip(String zip) {
+    this.zip = zip;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("zip")
   public String getZip() {
     return zip;
@@ -202,8 +223,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress country(String country) {
+    this.country = country;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("country")
   public String getCountry() {
     return country;
@@ -215,8 +240,12 @@ public class OverrideReturnAddress   {
   
   /**
    **/
+  public OverrideReturnAddress phone(String phone) {
+    this.phone = phone;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -228,7 +257,7 @@ public class OverrideReturnAddress   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -236,21 +265,21 @@ public class OverrideReturnAddress   {
       return false;
     }
     OverrideReturnAddress overrideReturnAddress = (OverrideReturnAddress) o;
-    return Objects.equals(id, overrideReturnAddress.id) &&
-        Objects.equals(createDate, overrideReturnAddress.createDate) &&
-        Objects.equals(modifyDate, overrideReturnAddress.modifyDate) &&
-        Objects.equals(lobId, overrideReturnAddress.lobId) &&
-        Objects.equals(warehouseId, overrideReturnAddress.warehouseId) &&
-        Objects.equals(orderSourceId, overrideReturnAddress.orderSourceId) &&
-        Objects.equals(name, overrideReturnAddress.name) &&
-        Objects.equals(attention, overrideReturnAddress.attention) &&
-        Objects.equals(street, overrideReturnAddress.street) &&
-        Objects.equals(street2, overrideReturnAddress.street2) &&
-        Objects.equals(city, overrideReturnAddress.city) &&
-        Objects.equals(state, overrideReturnAddress.state) &&
-        Objects.equals(zip, overrideReturnAddress.zip) &&
-        Objects.equals(country, overrideReturnAddress.country) &&
-        Objects.equals(phone, overrideReturnAddress.phone);
+    return Objects.equals(this.id, overrideReturnAddress.id) &&
+        Objects.equals(this.createDate, overrideReturnAddress.createDate) &&
+        Objects.equals(this.modifyDate, overrideReturnAddress.modifyDate) &&
+        Objects.equals(this.lobId, overrideReturnAddress.lobId) &&
+        Objects.equals(this.warehouseId, overrideReturnAddress.warehouseId) &&
+        Objects.equals(this.orderSourceId, overrideReturnAddress.orderSourceId) &&
+        Objects.equals(this.name, overrideReturnAddress.name) &&
+        Objects.equals(this.attention, overrideReturnAddress.attention) &&
+        Objects.equals(this.street, overrideReturnAddress.street) &&
+        Objects.equals(this.street2, overrideReturnAddress.street2) &&
+        Objects.equals(this.city, overrideReturnAddress.city) &&
+        Objects.equals(this.state, overrideReturnAddress.state) &&
+        Objects.equals(this.zip, overrideReturnAddress.zip) &&
+        Objects.equals(this.country, overrideReturnAddress.country) &&
+        Objects.equals(this.phone, overrideReturnAddress.phone);
   }
 
   @Override
@@ -286,7 +315,7 @@ public class OverrideReturnAddress   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

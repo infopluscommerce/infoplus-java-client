@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class WarehouseDocumentType   {
   
   private Integer id = null;
@@ -20,23 +19,21 @@ public class WarehouseDocumentType   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public WarehouseDocumentType name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -46,35 +43,23 @@ public class WarehouseDocumentType   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -82,10 +67,10 @@ public class WarehouseDocumentType   {
       return false;
     }
     WarehouseDocumentType warehouseDocumentType = (WarehouseDocumentType) o;
-    return Objects.equals(id, warehouseDocumentType.id) &&
-        Objects.equals(name, warehouseDocumentType.name) &&
-        Objects.equals(createDate, warehouseDocumentType.createDate) &&
-        Objects.equals(modifyDate, warehouseDocumentType.modifyDate);
+    return Objects.equals(this.id, warehouseDocumentType.id) &&
+        Objects.equals(this.name, warehouseDocumentType.name) &&
+        Objects.equals(this.createDate, warehouseDocumentType.createDate) &&
+        Objects.equals(this.modifyDate, warehouseDocumentType.modifyDate);
   }
 
   @Override
@@ -110,7 +95,7 @@ public class WarehouseDocumentType   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

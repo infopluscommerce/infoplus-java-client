@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class JobType   {
   
   private Integer id = null;
@@ -24,62 +23,42 @@ public class JobType   {
   private Boolean isActive = false;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("clientId")
   public Integer getClientId() {
     return clientId;
   }
-  public void setClientId(Integer clientId) {
-    this.clientId = clientId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public JobType name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -91,8 +70,12 @@ public class JobType   {
   
   /**
    **/
+  public JobType description(String description) {
+    this.description = description;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -104,8 +87,12 @@ public class JobType   {
   
   /**
    **/
+  public JobType jobCode(String jobCode) {
+    this.jobCode = jobCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("jobCode")
   public String getJobCode() {
     return jobCode;
@@ -117,8 +104,12 @@ public class JobType   {
   
   /**
    **/
+  public JobType isActive(Boolean isActive) {
+    this.isActive = isActive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isActive")
   public Boolean getIsActive() {
     return isActive;
@@ -130,7 +121,7 @@ public class JobType   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -138,14 +129,14 @@ public class JobType   {
       return false;
     }
     JobType jobType = (JobType) o;
-    return Objects.equals(id, jobType.id) &&
-        Objects.equals(clientId, jobType.clientId) &&
-        Objects.equals(createDate, jobType.createDate) &&
-        Objects.equals(modifyDate, jobType.modifyDate) &&
-        Objects.equals(name, jobType.name) &&
-        Objects.equals(description, jobType.description) &&
-        Objects.equals(jobCode, jobType.jobCode) &&
-        Objects.equals(isActive, jobType.isActive);
+    return Objects.equals(this.id, jobType.id) &&
+        Objects.equals(this.clientId, jobType.clientId) &&
+        Objects.equals(this.createDate, jobType.createDate) &&
+        Objects.equals(this.modifyDate, jobType.modifyDate) &&
+        Objects.equals(this.name, jobType.name) &&
+        Objects.equals(this.description, jobType.description) &&
+        Objects.equals(this.jobCode, jobType.jobCode) &&
+        Objects.equals(this.isActive, jobType.isActive);
   }
 
   @Override
@@ -174,7 +165,7 @@ public class JobType   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

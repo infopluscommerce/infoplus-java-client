@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class LowStock   {
   
   private Integer id = null;
@@ -25,23 +24,21 @@ public class LowStock   {
   private String sku = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public LowStock warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -51,88 +48,56 @@ public class LowStock   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lowLevelDate")
   public Date getLowLevelDate() {
     return lowLevelDate;
   }
-  public void setLowLevelDate(Date lowLevelDate) {
-    this.lowLevelDate = lowLevelDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lowStockMessage")
   public String getLowStockMessage() {
     return lowStockMessage;
   }
-  public void setLowStockMessage(String lowStockMessage) {
-    this.lowStockMessage = lowStockMessage;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("printFlag")
   public String getPrintFlag() {
     return printFlag;
   }
-  public void setPrintFlag(String printFlag) {
-    this.printFlag = printFlag;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isDelayed")
   public Boolean getIsDelayed() {
     return isDelayed;
   }
-  public void setIsDelayed(Boolean isDelayed) {
-    this.isDelayed = isDelayed;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public LowStock sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
@@ -144,7 +109,7 @@ public class LowStock   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -152,15 +117,15 @@ public class LowStock   {
       return false;
     }
     LowStock lowStock = (LowStock) o;
-    return Objects.equals(id, lowStock.id) &&
-        Objects.equals(warehouseId, lowStock.warehouseId) &&
-        Objects.equals(lowLevelDate, lowStock.lowLevelDate) &&
-        Objects.equals(lowStockMessage, lowStock.lowStockMessage) &&
-        Objects.equals(printFlag, lowStock.printFlag) &&
-        Objects.equals(isDelayed, lowStock.isDelayed) &&
-        Objects.equals(createDate, lowStock.createDate) &&
-        Objects.equals(modifyDate, lowStock.modifyDate) &&
-        Objects.equals(sku, lowStock.sku);
+    return Objects.equals(this.id, lowStock.id) &&
+        Objects.equals(this.warehouseId, lowStock.warehouseId) &&
+        Objects.equals(this.lowLevelDate, lowStock.lowLevelDate) &&
+        Objects.equals(this.lowStockMessage, lowStock.lowStockMessage) &&
+        Objects.equals(this.printFlag, lowStock.printFlag) &&
+        Objects.equals(this.isDelayed, lowStock.isDelayed) &&
+        Objects.equals(this.createDate, lowStock.createDate) &&
+        Objects.equals(this.modifyDate, lowStock.modifyDate) &&
+        Objects.equals(this.sku, lowStock.sku);
   }
 
   @Override
@@ -190,7 +155,7 @@ public class LowStock   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

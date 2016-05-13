@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class InventoryAdjustment   {
   
   private Integer id = null;
@@ -31,8 +30,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment id(Integer id) {
+    this.id = id;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
@@ -44,8 +47,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment lob(Integer lob) {
+    this.lob = lob;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lob")
   public Integer getLob() {
     return lob;
@@ -57,8 +64,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment skuId(Integer skuId) {
+    this.skuId = skuId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("skuId")
   public Integer getSkuId() {
     return skuId;
@@ -70,8 +81,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment poNoId(Integer poNoId) {
+    this.poNoId = poNoId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("poNoId")
   public Integer getPoNoId() {
     return poNoId;
@@ -83,8 +98,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment adjustmentDate(Date adjustmentDate) {
+    this.adjustmentDate = adjustmentDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("adjustmentDate")
   public Date getAdjustmentDate() {
     return adjustmentDate;
@@ -96,8 +115,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment adjustmentTime(String adjustmentTime) {
+    this.adjustmentTime = adjustmentTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("adjustmentTime")
   public String getAdjustmentTime() {
     return adjustmentTime;
@@ -109,8 +132,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment location(String location) {
+    this.location = location;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("location")
   public String getLocation() {
     return location;
@@ -122,8 +149,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment qty(Integer qty) {
+    this.qty = qty;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("qty")
   public Integer getQty() {
     return qty;
@@ -135,8 +166,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment note(String note) {
+    this.note = note;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("note")
   public String getNote() {
     return note;
@@ -148,8 +183,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment authorizedBy(String authorizedBy) {
+    this.authorizedBy = authorizedBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("authorizedBy")
   public String getAuthorizedBy() {
     return authorizedBy;
@@ -161,8 +200,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment printed(String printed) {
+    this.printed = printed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("printed")
   public String getPrinted() {
     return printed;
@@ -174,8 +217,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment orderNo(Double orderNo) {
+    this.orderNo = orderNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderNo")
   public Double getOrderNo() {
     return orderNo;
@@ -187,8 +234,12 @@ public class InventoryAdjustment   {
   
   /**
    **/
+  public InventoryAdjustment adjustmentCode(String adjustmentCode) {
+    this.adjustmentCode = adjustmentCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("adjustmentCode")
   public String getAdjustmentCode() {
     return adjustmentCode;
@@ -200,7 +251,7 @@ public class InventoryAdjustment   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -208,19 +259,19 @@ public class InventoryAdjustment   {
       return false;
     }
     InventoryAdjustment inventoryAdjustment = (InventoryAdjustment) o;
-    return Objects.equals(id, inventoryAdjustment.id) &&
-        Objects.equals(lob, inventoryAdjustment.lob) &&
-        Objects.equals(skuId, inventoryAdjustment.skuId) &&
-        Objects.equals(poNoId, inventoryAdjustment.poNoId) &&
-        Objects.equals(adjustmentDate, inventoryAdjustment.adjustmentDate) &&
-        Objects.equals(adjustmentTime, inventoryAdjustment.adjustmentTime) &&
-        Objects.equals(location, inventoryAdjustment.location) &&
-        Objects.equals(qty, inventoryAdjustment.qty) &&
-        Objects.equals(note, inventoryAdjustment.note) &&
-        Objects.equals(authorizedBy, inventoryAdjustment.authorizedBy) &&
-        Objects.equals(printed, inventoryAdjustment.printed) &&
-        Objects.equals(orderNo, inventoryAdjustment.orderNo) &&
-        Objects.equals(adjustmentCode, inventoryAdjustment.adjustmentCode);
+    return Objects.equals(this.id, inventoryAdjustment.id) &&
+        Objects.equals(this.lob, inventoryAdjustment.lob) &&
+        Objects.equals(this.skuId, inventoryAdjustment.skuId) &&
+        Objects.equals(this.poNoId, inventoryAdjustment.poNoId) &&
+        Objects.equals(this.adjustmentDate, inventoryAdjustment.adjustmentDate) &&
+        Objects.equals(this.adjustmentTime, inventoryAdjustment.adjustmentTime) &&
+        Objects.equals(this.location, inventoryAdjustment.location) &&
+        Objects.equals(this.qty, inventoryAdjustment.qty) &&
+        Objects.equals(this.note, inventoryAdjustment.note) &&
+        Objects.equals(this.authorizedBy, inventoryAdjustment.authorizedBy) &&
+        Objects.equals(this.printed, inventoryAdjustment.printed) &&
+        Objects.equals(this.orderNo, inventoryAdjustment.orderNo) &&
+        Objects.equals(this.adjustmentCode, inventoryAdjustment.adjustmentCode);
   }
 
   @Override
@@ -254,7 +305,7 @@ public class InventoryAdjustment   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

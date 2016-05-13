@@ -9,9 +9,12 @@ import com.infopluscommerce.Pair;
 
 import com.infopluscommerce.model.ReceivingProcess;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ReceivingProcessApi {
   private ApiClient apiClient;
 
@@ -33,79 +36,127 @@ public class ReceivingProcessApi {
 
   
   /**
-   * Search receivingProcesses by filter
-   * Returns the list of receivingProcesses that match the given filter.
-   * @param filter Query string, used to filter results.
-   * @param page Result page number.  Defaults to 1.
-   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250.
-   * @param sort Sort results by specified field.
-   * @return List<ReceivingProcess>
+   * Delete a receivingProcess
+   * Deletes the receivingProcess identified by the specified id.
+   * @param receivingProcessId Id of the receivingProcess to be deleted. (required)
+   * @throws ApiException if fails to make API call
    */
-  public List<ReceivingProcess> getReceivingProcessByFilter(String filter, Integer page, Integer limit, String sort) throws ApiException {
-    Object postBody = null;
+  public void deleteReceivingProcess(Integer receivingProcessId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'receivingProcessId' is set
+    if (receivingProcessId == null) {
+      throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling deleteReceivingProcess");
+    }
     
     // create path and map variables
-    String path = "/v1.0/receivingProcess/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v1.0/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()));
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
     
 
     
 
     
 
-    final String[] accepts = {
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<List<ReceivingProcess>> returnType = new GenericType<List<ReceivingProcess>>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Search receivingProcesses by filter
+   * Returns the list of receivingProcesses that match the given filter.
+   * @param filter Query string, used to filter results. (optional)
+   * @param page Result page number.  Defaults to 1. (optional)
+   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250. (optional)
+   * @param sort Sort results by specified field. (optional)
+   * @return List<ReceivingProcess>
+   * @throws ApiException if fails to make API call
+   */
+  public List<ReceivingProcess> getReceivingProcessByFilter(String filter, Integer page, Integer limit, String sort) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // create path and map variables
+    String localVarPath = "/v1.0/receivingProcess/search".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
+    
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<List<ReceivingProcess>> localVarReturnType = new GenericType<List<ReceivingProcess>>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
   /**
    * Get a receivingProcess by id
    * Returns the receivingProcess identified by the specified id.
-   * @param receivingProcessId Id of the receivingProcess to be returned.
+   * @param receivingProcessId Id of the receivingProcess to be returned. (required)
    * @return ReceivingProcess
+   * @throws ApiException if fails to make API call
    */
   public ReceivingProcess getReceivingProcessById(Integer receivingProcessId) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'receivingProcessId' is set
-     if (receivingProcessId == null) {
-        throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling getReceivingProcessById");
-     }
-     
+    // verify the required parameter 'receivingProcessId' is set
+    if (receivingProcessId == null) {
+      throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling getReceivingProcessById");
+    }
+    
     // create path and map variables
-    String path = "/v1.0/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v1.0/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()));
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
 
@@ -113,67 +164,21 @@ public class ReceivingProcessApi {
 
     
 
-    final String[] accepts = {
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
-
-    
-    GenericType<ReceivingProcess> returnType = new GenericType<ReceivingProcess>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Delete a receivingProcess
-   * Deletes the receivingProcess identified by the specified id.
-   * @param receivingProcessId Id of the receivingProcess to be deleted.
-   * @return void
-   */
-  public void deleteReceivingProcess(Integer receivingProcessId) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'receivingProcessId' is set
-     if (receivingProcessId == null) {
-        throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling deleteReceivingProcess");
-     }
-     
-    // create path and map variables
-    String path = "/v1.0/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
+    GenericType<ReceivingProcess> localVarReturnType = new GenericType<ReceivingProcess>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   

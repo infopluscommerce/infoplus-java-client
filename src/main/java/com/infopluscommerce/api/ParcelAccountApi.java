@@ -9,9 +9,12 @@ import com.infopluscommerce.Pair;
 
 import com.infopluscommerce.model.ParcelAccount;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ParcelAccountApi {
   private ApiClient apiClient;
 
@@ -35,77 +38,79 @@ public class ParcelAccountApi {
   /**
    * Search parcelAccounts by filter
    * Returns the list of parcelAccounts that match the given filter.
-   * @param filter Query string, used to filter results.
-   * @param page Result page number.  Defaults to 1.
-   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250.
-   * @param sort Sort results by specified field.
+   * @param filter Query string, used to filter results. (optional)
+   * @param page Result page number.  Defaults to 1. (optional)
+   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250. (optional)
+   * @param sort Sort results by specified field. (optional)
    * @return List<ParcelAccount>
+   * @throws ApiException if fails to make API call
    */
   public List<ParcelAccount> getParcelAccountByFilter(String filter, Integer page, Integer limit, String sort) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
     // create path and map variables
-    String path = "/v1.0/parcelAccount/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v1.0/parcelAccount/search".replaceAll("\\{format\\}","json");
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
-    
-
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
     
 
     
 
-    final String[] accepts = {
+    
+
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<List<ParcelAccount>> returnType = new GenericType<List<ParcelAccount>>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<List<ParcelAccount>> localVarReturnType = new GenericType<List<ParcelAccount>>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
   /**
    * Get a parcelAccount by id
    * Returns the parcelAccount identified by the specified id.
-   * @param parcelAccountId Id of the parcelAccount to be returned.
+   * @param parcelAccountId Id of the parcelAccount to be returned. (required)
    * @return ParcelAccount
+   * @throws ApiException if fails to make API call
    */
   public ParcelAccount getParcelAccountById(Integer parcelAccountId) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'parcelAccountId' is set
-     if (parcelAccountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'parcelAccountId' when calling getParcelAccountById");
-     }
-     
+    // verify the required parameter 'parcelAccountId' is set
+    if (parcelAccountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'parcelAccountId' when calling getParcelAccountById");
+    }
+    
     // create path and map variables
-    String path = "/v1.0/parcelAccount/{parcelAccountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v1.0/parcelAccount/{parcelAccountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()));
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
 
@@ -113,21 +118,21 @@ public class ParcelAccountApi {
 
     
 
-    final String[] accepts = {
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<ParcelAccount> returnType = new GenericType<ParcelAccount>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<ParcelAccount> localVarReturnType = new GenericType<ParcelAccount>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   

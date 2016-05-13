@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class VendorComplianceSurvey   {
   
   private Integer id = null;
@@ -21,23 +20,21 @@ public class VendorComplianceSurvey   {
   private String surveyQuestions = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public VendorComplianceSurvey worksheetId(Integer worksheetId) {
+    this.worksheetId = worksheetId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("worksheetId")
   public Integer getWorksheetId() {
     return worksheetId;
@@ -47,36 +44,28 @@ public class VendorComplianceSurvey   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public VendorComplianceSurvey surveyQuestions(String surveyQuestions) {
+    this.surveyQuestions = surveyQuestions;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("surveyQuestions")
   public String getSurveyQuestions() {
     return surveyQuestions;
@@ -88,7 +77,7 @@ public class VendorComplianceSurvey   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -96,11 +85,11 @@ public class VendorComplianceSurvey   {
       return false;
     }
     VendorComplianceSurvey vendorComplianceSurvey = (VendorComplianceSurvey) o;
-    return Objects.equals(id, vendorComplianceSurvey.id) &&
-        Objects.equals(worksheetId, vendorComplianceSurvey.worksheetId) &&
-        Objects.equals(createDate, vendorComplianceSurvey.createDate) &&
-        Objects.equals(modifyDate, vendorComplianceSurvey.modifyDate) &&
-        Objects.equals(surveyQuestions, vendorComplianceSurvey.surveyQuestions);
+    return Objects.equals(this.id, vendorComplianceSurvey.id) &&
+        Objects.equals(this.worksheetId, vendorComplianceSurvey.worksheetId) &&
+        Objects.equals(this.createDate, vendorComplianceSurvey.createDate) &&
+        Objects.equals(this.modifyDate, vendorComplianceSurvey.modifyDate) &&
+        Objects.equals(this.surveyQuestions, vendorComplianceSurvey.surveyQuestions);
   }
 
   @Override
@@ -126,7 +115,7 @@ public class VendorComplianceSurvey   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

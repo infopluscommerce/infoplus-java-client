@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Carton   {
   
   private Integer id = null;
@@ -21,23 +20,21 @@ public class Carton   {
   private Double weightLbs = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public Carton orderNo(Double orderNo) {
+    this.orderNo = orderNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderNo")
   public Double getOrderNo() {
     return orderNo;
@@ -49,8 +46,12 @@ public class Carton   {
   
   /**
    **/
+  public Carton cartonNo(Integer cartonNo) {
+    this.cartonNo = cartonNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonNo")
   public Integer getCartonNo() {
     return cartonNo;
@@ -62,8 +63,12 @@ public class Carton   {
   
   /**
    **/
+  public Carton cartonTypeId(Integer cartonTypeId) {
+    this.cartonTypeId = cartonTypeId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("cartonTypeId")
   public Integer getCartonTypeId() {
     return cartonTypeId;
@@ -75,8 +80,12 @@ public class Carton   {
   
   /**
    **/
+  public Carton cartonLPN(String cartonLPN) {
+    this.cartonLPN = cartonLPN;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonLPN")
   public String getCartonLPN() {
     return cartonLPN;
@@ -88,8 +97,12 @@ public class Carton   {
   
   /**
    **/
+  public Carton weightLbs(Double weightLbs) {
+    this.weightLbs = weightLbs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
   public Double getWeightLbs() {
     return weightLbs;
@@ -101,7 +114,7 @@ public class Carton   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -109,12 +122,12 @@ public class Carton   {
       return false;
     }
     Carton carton = (Carton) o;
-    return Objects.equals(id, carton.id) &&
-        Objects.equals(orderNo, carton.orderNo) &&
-        Objects.equals(cartonNo, carton.cartonNo) &&
-        Objects.equals(cartonTypeId, carton.cartonTypeId) &&
-        Objects.equals(cartonLPN, carton.cartonLPN) &&
-        Objects.equals(weightLbs, carton.weightLbs);
+    return Objects.equals(this.id, carton.id) &&
+        Objects.equals(this.orderNo, carton.orderNo) &&
+        Objects.equals(this.cartonNo, carton.cartonNo) &&
+        Objects.equals(this.cartonTypeId, carton.cartonTypeId) &&
+        Objects.equals(this.cartonLPN, carton.cartonLPN) &&
+        Objects.equals(this.weightLbs, carton.weightLbs);
   }
 
   @Override
@@ -141,7 +154,7 @@ public class Carton   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

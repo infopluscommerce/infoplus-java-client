@@ -9,9 +9,12 @@ import com.infopluscommerce.Pair;
 
 import com.infopluscommerce.model.BusinessTransaction;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class BusinessTransactionApi {
   private ApiClient apiClient;
 
@@ -35,77 +38,79 @@ public class BusinessTransactionApi {
   /**
    * Search businessTransactions by filter
    * Returns the list of businessTransactions that match the given filter.
-   * @param filter Query string, used to filter results.
-   * @param page Result page number.  Defaults to 1.
-   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250.
-   * @param sort Sort results by specified field.
+   * @param filter Query string, used to filter results. (optional)
+   * @param page Result page number.  Defaults to 1. (optional)
+   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250. (optional)
+   * @param sort Sort results by specified field. (optional)
    * @return List<BusinessTransaction>
+   * @throws ApiException if fails to make API call
    */
   public List<BusinessTransaction> getBusinessTransactionByFilter(String filter, Integer page, Integer limit, String sort) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
     // create path and map variables
-    String path = "/v1.0/businessTransaction/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v1.0/businessTransaction/search".replaceAll("\\{format\\}","json");
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
-    
-
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
     
 
     
 
-    final String[] accepts = {
+    
+
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<List<BusinessTransaction>> returnType = new GenericType<List<BusinessTransaction>>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<List<BusinessTransaction>> localVarReturnType = new GenericType<List<BusinessTransaction>>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
   /**
    * Get a businessTransaction by id
    * Returns the businessTransaction identified by the specified id.
-   * @param businessTransactionId Id of the businessTransaction to be returned.
+   * @param businessTransactionId Id of the businessTransaction to be returned. (required)
    * @return BusinessTransaction
+   * @throws ApiException if fails to make API call
    */
   public BusinessTransaction getBusinessTransactionById(Integer businessTransactionId) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'businessTransactionId' is set
-     if (businessTransactionId == null) {
-        throw new ApiException(400, "Missing the required parameter 'businessTransactionId' when calling getBusinessTransactionById");
-     }
-     
+    // verify the required parameter 'businessTransactionId' is set
+    if (businessTransactionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'businessTransactionId' when calling getBusinessTransactionById");
+    }
+    
     // create path and map variables
-    String path = "/v1.0/businessTransaction/{businessTransactionId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v1.0/businessTransaction/{businessTransactionId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "businessTransactionId" + "\\}", apiClient.escapeString(businessTransactionId.toString()));
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
 
@@ -113,21 +118,21 @@ public class BusinessTransactionApi {
 
     
 
-    final String[] accepts = {
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<BusinessTransaction> returnType = new GenericType<BusinessTransaction>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<BusinessTransaction> localVarReturnType = new GenericType<BusinessTransaction>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   

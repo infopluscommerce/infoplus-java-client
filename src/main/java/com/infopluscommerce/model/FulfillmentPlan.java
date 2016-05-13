@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class FulfillmentPlan   {
   
   private Integer id = null;
@@ -44,49 +43,35 @@ public class FulfillmentPlan   {
   private Boolean createOrderAssemblyGuide = false;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public FulfillmentPlan name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -98,8 +83,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan description(String description) {
+    this.description = description;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -111,8 +100,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -124,8 +117,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan orderSmartFilterId(Integer orderSmartFilterId) {
+    this.orderSmartFilterId = orderSmartFilterId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderSmartFilterId")
   public Integer getOrderSmartFilterId() {
     return orderSmartFilterId;
@@ -137,8 +134,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan locationSmartFilterId(Integer locationSmartFilterId) {
+    this.locationSmartFilterId = locationSmartFilterId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("locationSmartFilterId")
   public Integer getLocationSmartFilterId() {
     return locationSmartFilterId;
@@ -150,8 +151,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan maximumNumberOfOrders(Integer maximumNumberOfOrders) {
+    this.maximumNumberOfOrders = maximumNumberOfOrders;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("maximumNumberOfOrders")
   public Integer getMaximumNumberOfOrders() {
     return maximumNumberOfOrders;
@@ -163,8 +168,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan createPickWork(Boolean createPickWork) {
+    this.createPickWork = createPickWork;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("createPickWork")
   public Boolean getCreatePickWork() {
     return createPickWork;
@@ -176,8 +185,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickingRule(String pickingRule) {
+    this.pickingRule = pickingRule;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickingRule")
   public String getPickingRule() {
     return pickingRule;
@@ -189,8 +202,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan layoutRule(String layoutRule) {
+    this.layoutRule = layoutRule;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("layoutRule")
   public String getLayoutRule() {
     return layoutRule;
@@ -202,8 +219,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickSortRule(String pickSortRule) {
+    this.pickSortRule = pickSortRule;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSortRule")
   public String getPickSortRule() {
     return pickSortRule;
@@ -215,8 +236,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan createPickList(Boolean createPickList) {
+    this.createPickList = createPickList;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createPickList")
   public Boolean getCreatePickList() {
     return createPickList;
@@ -228,8 +253,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickListFormat(String pickListFormat) {
+    this.pickListFormat = pickListFormat;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListFormat")
   public String getPickListFormat() {
     return pickListFormat;
@@ -241,8 +270,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickListLayout(String pickListLayout) {
+    this.pickListLayout = pickListLayout;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListLayout")
   public String getPickListLayout() {
     return pickListLayout;
@@ -254,8 +287,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickListGroup(String pickListGroup) {
+    this.pickListGroup = pickListGroup;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListGroup")
   public String getPickListGroup() {
     return pickListGroup;
@@ -267,8 +304,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickListSort(String pickListSort) {
+    this.pickListSort = pickListSort;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickListSort")
   public String getPickListSort() {
     return pickListSort;
@@ -280,8 +321,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan createPickSummary(Boolean createPickSummary) {
+    this.createPickSummary = createPickSummary;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createPickSummary")
   public Boolean getCreatePickSummary() {
     return createPickSummary;
@@ -293,8 +338,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickSummaryFormat(String pickSummaryFormat) {
+    this.pickSummaryFormat = pickSummaryFormat;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSummaryFormat")
   public String getPickSummaryFormat() {
     return pickSummaryFormat;
@@ -306,8 +355,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickSummaryLayout(String pickSummaryLayout) {
+    this.pickSummaryLayout = pickSummaryLayout;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSummaryLayout")
   public String getPickSummaryLayout() {
     return pickSummaryLayout;
@@ -319,8 +372,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickSummarySort(String pickSummarySort) {
+    this.pickSummarySort = pickSummarySort;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pickSummarySort")
   public String getPickSummarySort() {
     return pickSummarySort;
@@ -332,8 +389,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan cartonizeOrders(Boolean cartonizeOrders) {
+    this.cartonizeOrders = cartonizeOrders;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("cartonizeOrders")
   public Boolean getCartonizeOrders() {
     return cartonizeOrders;
@@ -345,8 +406,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan autoShipCasebreakCartons(Boolean autoShipCasebreakCartons) {
+    this.autoShipCasebreakCartons = autoShipCasebreakCartons;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("autoShipCasebreakCartons")
   public Boolean getAutoShipCasebreakCartons() {
     return autoShipCasebreakCartons;
@@ -358,8 +423,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan preGenerateParcelLabels(Boolean preGenerateParcelLabels) {
+    this.preGenerateParcelLabels = preGenerateParcelLabels;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("preGenerateParcelLabels")
   public Boolean getPreGenerateParcelLabels() {
     return preGenerateParcelLabels;
@@ -371,8 +440,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan overridePackingSlipTemplateId(Integer overridePackingSlipTemplateId) {
+    this.overridePackingSlipTemplateId = overridePackingSlipTemplateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("overridePackingSlipTemplateId")
   public Integer getOverridePackingSlipTemplateId() {
     return overridePackingSlipTemplateId;
@@ -384,8 +457,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan createPackingSlip(Boolean createPackingSlip) {
+    this.createPackingSlip = createPackingSlip;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("createPackingSlip")
   public Boolean getCreatePackingSlip() {
     return createPackingSlip;
@@ -397,8 +474,12 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan createOrderAssemblyGuide(Boolean createOrderAssemblyGuide) {
+    this.createOrderAssemblyGuide = createOrderAssemblyGuide;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createOrderAssemblyGuide")
   public Boolean getCreateOrderAssemblyGuide() {
     return createOrderAssemblyGuide;
@@ -410,7 +491,7 @@ public class FulfillmentPlan   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -418,34 +499,34 @@ public class FulfillmentPlan   {
       return false;
     }
     FulfillmentPlan fulfillmentPlan = (FulfillmentPlan) o;
-    return Objects.equals(id, fulfillmentPlan.id) &&
-        Objects.equals(createDate, fulfillmentPlan.createDate) &&
-        Objects.equals(modifyDate, fulfillmentPlan.modifyDate) &&
-        Objects.equals(name, fulfillmentPlan.name) &&
-        Objects.equals(description, fulfillmentPlan.description) &&
-        Objects.equals(warehouseId, fulfillmentPlan.warehouseId) &&
-        Objects.equals(orderSmartFilterId, fulfillmentPlan.orderSmartFilterId) &&
-        Objects.equals(locationSmartFilterId, fulfillmentPlan.locationSmartFilterId) &&
-        Objects.equals(maximumNumberOfOrders, fulfillmentPlan.maximumNumberOfOrders) &&
-        Objects.equals(createPickWork, fulfillmentPlan.createPickWork) &&
-        Objects.equals(pickingRule, fulfillmentPlan.pickingRule) &&
-        Objects.equals(layoutRule, fulfillmentPlan.layoutRule) &&
-        Objects.equals(pickSortRule, fulfillmentPlan.pickSortRule) &&
-        Objects.equals(createPickList, fulfillmentPlan.createPickList) &&
-        Objects.equals(pickListFormat, fulfillmentPlan.pickListFormat) &&
-        Objects.equals(pickListLayout, fulfillmentPlan.pickListLayout) &&
-        Objects.equals(pickListGroup, fulfillmentPlan.pickListGroup) &&
-        Objects.equals(pickListSort, fulfillmentPlan.pickListSort) &&
-        Objects.equals(createPickSummary, fulfillmentPlan.createPickSummary) &&
-        Objects.equals(pickSummaryFormat, fulfillmentPlan.pickSummaryFormat) &&
-        Objects.equals(pickSummaryLayout, fulfillmentPlan.pickSummaryLayout) &&
-        Objects.equals(pickSummarySort, fulfillmentPlan.pickSummarySort) &&
-        Objects.equals(cartonizeOrders, fulfillmentPlan.cartonizeOrders) &&
-        Objects.equals(autoShipCasebreakCartons, fulfillmentPlan.autoShipCasebreakCartons) &&
-        Objects.equals(preGenerateParcelLabels, fulfillmentPlan.preGenerateParcelLabels) &&
-        Objects.equals(overridePackingSlipTemplateId, fulfillmentPlan.overridePackingSlipTemplateId) &&
-        Objects.equals(createPackingSlip, fulfillmentPlan.createPackingSlip) &&
-        Objects.equals(createOrderAssemblyGuide, fulfillmentPlan.createOrderAssemblyGuide);
+    return Objects.equals(this.id, fulfillmentPlan.id) &&
+        Objects.equals(this.createDate, fulfillmentPlan.createDate) &&
+        Objects.equals(this.modifyDate, fulfillmentPlan.modifyDate) &&
+        Objects.equals(this.name, fulfillmentPlan.name) &&
+        Objects.equals(this.description, fulfillmentPlan.description) &&
+        Objects.equals(this.warehouseId, fulfillmentPlan.warehouseId) &&
+        Objects.equals(this.orderSmartFilterId, fulfillmentPlan.orderSmartFilterId) &&
+        Objects.equals(this.locationSmartFilterId, fulfillmentPlan.locationSmartFilterId) &&
+        Objects.equals(this.maximumNumberOfOrders, fulfillmentPlan.maximumNumberOfOrders) &&
+        Objects.equals(this.createPickWork, fulfillmentPlan.createPickWork) &&
+        Objects.equals(this.pickingRule, fulfillmentPlan.pickingRule) &&
+        Objects.equals(this.layoutRule, fulfillmentPlan.layoutRule) &&
+        Objects.equals(this.pickSortRule, fulfillmentPlan.pickSortRule) &&
+        Objects.equals(this.createPickList, fulfillmentPlan.createPickList) &&
+        Objects.equals(this.pickListFormat, fulfillmentPlan.pickListFormat) &&
+        Objects.equals(this.pickListLayout, fulfillmentPlan.pickListLayout) &&
+        Objects.equals(this.pickListGroup, fulfillmentPlan.pickListGroup) &&
+        Objects.equals(this.pickListSort, fulfillmentPlan.pickListSort) &&
+        Objects.equals(this.createPickSummary, fulfillmentPlan.createPickSummary) &&
+        Objects.equals(this.pickSummaryFormat, fulfillmentPlan.pickSummaryFormat) &&
+        Objects.equals(this.pickSummaryLayout, fulfillmentPlan.pickSummaryLayout) &&
+        Objects.equals(this.pickSummarySort, fulfillmentPlan.pickSummarySort) &&
+        Objects.equals(this.cartonizeOrders, fulfillmentPlan.cartonizeOrders) &&
+        Objects.equals(this.autoShipCasebreakCartons, fulfillmentPlan.autoShipCasebreakCartons) &&
+        Objects.equals(this.preGenerateParcelLabels, fulfillmentPlan.preGenerateParcelLabels) &&
+        Objects.equals(this.overridePackingSlipTemplateId, fulfillmentPlan.overridePackingSlipTemplateId) &&
+        Objects.equals(this.createPackingSlip, fulfillmentPlan.createPackingSlip) &&
+        Objects.equals(this.createOrderAssemblyGuide, fulfillmentPlan.createOrderAssemblyGuide);
   }
 
   @Override
@@ -494,7 +575,7 @@ public class FulfillmentPlan   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

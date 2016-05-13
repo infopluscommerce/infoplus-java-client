@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Work   {
   
   private Integer id = null;
@@ -27,26 +26,25 @@ public class Work   {
   private Integer priorityCode = null;
   private String status = null;
   private Integer userId = null;
+  private Integer lobId = null;
   private Integer workBatchId = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
   /**
    **/
+  public Work sourceWarehouseId(Integer sourceWarehouseId) {
+    this.sourceWarehouseId = sourceWarehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("sourceWarehouseId")
   public Integer getSourceWarehouseId() {
     return sourceWarehouseId;
@@ -58,8 +56,12 @@ public class Work   {
   
   /**
    **/
+  public Work sourceBuildingId(Integer sourceBuildingId) {
+    this.sourceBuildingId = sourceBuildingId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("sourceBuildingId")
   public Integer getSourceBuildingId() {
     return sourceBuildingId;
@@ -71,8 +73,12 @@ public class Work   {
   
   /**
    **/
+  public Work sourceLocation(String sourceLocation) {
+    this.sourceLocation = sourceLocation;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("sourceLocation")
   public String getSourceLocation() {
     return sourceLocation;
@@ -84,8 +90,12 @@ public class Work   {
   
   /**
    **/
+  public Work destinationWarehouseId(Integer destinationWarehouseId) {
+    this.destinationWarehouseId = destinationWarehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("destinationWarehouseId")
   public Integer getDestinationWarehouseId() {
     return destinationWarehouseId;
@@ -97,8 +107,12 @@ public class Work   {
   
   /**
    **/
+  public Work destinationBuildingId(Integer destinationBuildingId) {
+    this.destinationBuildingId = destinationBuildingId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("destinationBuildingId")
   public Integer getDestinationBuildingId() {
     return destinationBuildingId;
@@ -110,8 +124,12 @@ public class Work   {
   
   /**
    **/
+  public Work destinationLocation(String destinationLocation) {
+    this.destinationLocation = destinationLocation;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("destinationLocation")
   public String getDestinationLocation() {
     return destinationLocation;
@@ -123,8 +141,12 @@ public class Work   {
   
   /**
    **/
+  public Work type(String type) {
+    this.type = type;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("type")
   public String getType() {
     return type;
@@ -134,36 +156,28 @@ public class Work   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public Work priorityCode(Integer priorityCode) {
+    this.priorityCode = priorityCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("priorityCode")
   public Integer getPriorityCode() {
     return priorityCode;
@@ -175,8 +189,12 @@ public class Work   {
   
   /**
    **/
+  public Work status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -188,8 +206,12 @@ public class Work   {
   
   /**
    **/
+  public Work userId(Integer userId) {
+    this.userId = userId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("userId")
   public Integer getUserId() {
     return userId;
@@ -199,10 +221,21 @@ public class Work   {
   }
 
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("lobId")
+  public Integer getLobId() {
+    return lobId;
+  }
+
+  
   /**
    **/
+  public Work workBatchId(Integer workBatchId) {
+    this.workBatchId = workBatchId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("workBatchId")
   public Integer getWorkBatchId() {
     return workBatchId;
@@ -214,7 +247,7 @@ public class Work   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -222,25 +255,26 @@ public class Work   {
       return false;
     }
     Work work = (Work) o;
-    return Objects.equals(id, work.id) &&
-        Objects.equals(sourceWarehouseId, work.sourceWarehouseId) &&
-        Objects.equals(sourceBuildingId, work.sourceBuildingId) &&
-        Objects.equals(sourceLocation, work.sourceLocation) &&
-        Objects.equals(destinationWarehouseId, work.destinationWarehouseId) &&
-        Objects.equals(destinationBuildingId, work.destinationBuildingId) &&
-        Objects.equals(destinationLocation, work.destinationLocation) &&
-        Objects.equals(type, work.type) &&
-        Objects.equals(createDate, work.createDate) &&
-        Objects.equals(modifyDate, work.modifyDate) &&
-        Objects.equals(priorityCode, work.priorityCode) &&
-        Objects.equals(status, work.status) &&
-        Objects.equals(userId, work.userId) &&
-        Objects.equals(workBatchId, work.workBatchId);
+    return Objects.equals(this.id, work.id) &&
+        Objects.equals(this.sourceWarehouseId, work.sourceWarehouseId) &&
+        Objects.equals(this.sourceBuildingId, work.sourceBuildingId) &&
+        Objects.equals(this.sourceLocation, work.sourceLocation) &&
+        Objects.equals(this.destinationWarehouseId, work.destinationWarehouseId) &&
+        Objects.equals(this.destinationBuildingId, work.destinationBuildingId) &&
+        Objects.equals(this.destinationLocation, work.destinationLocation) &&
+        Objects.equals(this.type, work.type) &&
+        Objects.equals(this.createDate, work.createDate) &&
+        Objects.equals(this.modifyDate, work.modifyDate) &&
+        Objects.equals(this.priorityCode, work.priorityCode) &&
+        Objects.equals(this.status, work.status) &&
+        Objects.equals(this.userId, work.userId) &&
+        Objects.equals(this.lobId, work.lobId) &&
+        Objects.equals(this.workBatchId, work.workBatchId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, sourceWarehouseId, sourceBuildingId, sourceLocation, destinationWarehouseId, destinationBuildingId, destinationLocation, type, createDate, modifyDate, priorityCode, status, userId, workBatchId);
+    return Objects.hash(id, sourceWarehouseId, sourceBuildingId, sourceLocation, destinationWarehouseId, destinationBuildingId, destinationLocation, type, createDate, modifyDate, priorityCode, status, userId, lobId, workBatchId);
   }
 
   @Override
@@ -261,6 +295,7 @@ public class Work   {
     sb.append("    priorityCode: ").append(toIndentedString(priorityCode)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    workBatchId: ").append(toIndentedString(workBatchId)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -270,7 +305,7 @@ public class Work   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

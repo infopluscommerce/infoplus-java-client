@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ProductionLot   {
   
   private Integer id = null;
@@ -20,36 +19,28 @@ public class ProductionLot   {
   private String sku = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
   }
-  public void setLobId(Integer lobId) {
-    this.lobId = lobId;
-  }
 
   
   /**
    **/
+  public ProductionLot productionLot(String productionLot) {
+    this.productionLot = productionLot;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("productionLot")
   public String getProductionLot() {
     return productionLot;
@@ -61,8 +52,12 @@ public class ProductionLot   {
   
   /**
    **/
+  public ProductionLot quantity(Integer quantity) {
+    this.quantity = quantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("quantity")
   public Integer getQuantity() {
     return quantity;
@@ -74,8 +69,12 @@ public class ProductionLot   {
   
   /**
    **/
+  public ProductionLot sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
@@ -87,7 +86,7 @@ public class ProductionLot   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -95,11 +94,11 @@ public class ProductionLot   {
       return false;
     }
     ProductionLot productionLot = (ProductionLot) o;
-    return Objects.equals(id, productionLot.id) &&
-        Objects.equals(lobId, productionLot.lobId) &&
-        Objects.equals(productionLot, productionLot.productionLot) &&
-        Objects.equals(quantity, productionLot.quantity) &&
-        Objects.equals(sku, productionLot.sku);
+    return Objects.equals(this.id, productionLot.id) &&
+        Objects.equals(this.lobId, productionLot.lobId) &&
+        Objects.equals(this.productionLot, productionLot.productionLot) &&
+        Objects.equals(this.quantity, productionLot.quantity) &&
+        Objects.equals(this.sku, productionLot.sku);
   }
 
   @Override
@@ -125,7 +124,7 @@ public class ProductionLot   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

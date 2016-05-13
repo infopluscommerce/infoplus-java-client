@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ExternalShipment   {
   
   private Integer id = null;
@@ -33,49 +32,35 @@ public class ExternalShipment   {
   private String status = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public ExternalShipment orderId(Double orderId) {
+    this.orderId = orderId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderId")
   public Double getOrderId() {
     return orderId;
@@ -87,8 +72,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment carrierId(Integer carrierId) {
+    this.carrierId = carrierId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("carrierId")
   public Integer getCarrierId() {
     return carrierId;
@@ -100,8 +89,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment parcelAccountId(Integer parcelAccountId) {
+    this.parcelAccountId = parcelAccountId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("parcelAccountId")
   public Integer getParcelAccountId() {
     return parcelAccountId;
@@ -113,8 +106,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment thirdPartyParcelAccountId(Integer thirdPartyParcelAccountId) {
+    this.thirdPartyParcelAccountId = thirdPartyParcelAccountId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("thirdPartyParcelAccountId")
   public Integer getThirdPartyParcelAccountId() {
     return thirdPartyParcelAccountId;
@@ -126,8 +123,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment freight(Double freight) {
+    this.freight = freight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("freight")
   public Double getFreight() {
     return freight;
@@ -139,8 +140,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment trackingNo(String trackingNo) {
+    this.trackingNo = trackingNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("trackingNo")
   public String getTrackingNo() {
     return trackingNo;
@@ -152,8 +157,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment dim1In(Double dim1In) {
+    this.dim1In = dim1In;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim1In")
   public Double getDim1In() {
     return dim1In;
@@ -165,8 +174,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment dim2In(Double dim2In) {
+    this.dim2In = dim2In;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim2In")
   public Double getDim2In() {
     return dim2In;
@@ -178,8 +191,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment dim3In(Double dim3In) {
+    this.dim3In = dim3In;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim3In")
   public Double getDim3In() {
     return dim3In;
@@ -191,8 +208,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment weightLbs(Double weightLbs) {
+    this.weightLbs = weightLbs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
   public Double getWeightLbs() {
     return weightLbs;
@@ -204,8 +225,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment dimWeight(Double dimWeight) {
+    this.dimWeight = dimWeight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dimWeight")
   public Double getDimWeight() {
     return dimWeight;
@@ -217,8 +242,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment residential(Boolean residential) {
+    this.residential = residential;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("residential")
   public Boolean getResidential() {
     return residential;
@@ -230,8 +259,12 @@ public class ExternalShipment   {
   
   /**
    **/
+  public ExternalShipment zone(String zone) {
+    this.zone = zone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("zone")
   public String getZone() {
     return zone;
@@ -241,22 +274,16 @@ public class ExternalShipment   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -264,23 +291,23 @@ public class ExternalShipment   {
       return false;
     }
     ExternalShipment externalShipment = (ExternalShipment) o;
-    return Objects.equals(id, externalShipment.id) &&
-        Objects.equals(createDate, externalShipment.createDate) &&
-        Objects.equals(modifyDate, externalShipment.modifyDate) &&
-        Objects.equals(orderId, externalShipment.orderId) &&
-        Objects.equals(carrierId, externalShipment.carrierId) &&
-        Objects.equals(parcelAccountId, externalShipment.parcelAccountId) &&
-        Objects.equals(thirdPartyParcelAccountId, externalShipment.thirdPartyParcelAccountId) &&
-        Objects.equals(freight, externalShipment.freight) &&
-        Objects.equals(trackingNo, externalShipment.trackingNo) &&
-        Objects.equals(dim1In, externalShipment.dim1In) &&
-        Objects.equals(dim2In, externalShipment.dim2In) &&
-        Objects.equals(dim3In, externalShipment.dim3In) &&
-        Objects.equals(weightLbs, externalShipment.weightLbs) &&
-        Objects.equals(dimWeight, externalShipment.dimWeight) &&
-        Objects.equals(residential, externalShipment.residential) &&
-        Objects.equals(zone, externalShipment.zone) &&
-        Objects.equals(status, externalShipment.status);
+    return Objects.equals(this.id, externalShipment.id) &&
+        Objects.equals(this.createDate, externalShipment.createDate) &&
+        Objects.equals(this.modifyDate, externalShipment.modifyDate) &&
+        Objects.equals(this.orderId, externalShipment.orderId) &&
+        Objects.equals(this.carrierId, externalShipment.carrierId) &&
+        Objects.equals(this.parcelAccountId, externalShipment.parcelAccountId) &&
+        Objects.equals(this.thirdPartyParcelAccountId, externalShipment.thirdPartyParcelAccountId) &&
+        Objects.equals(this.freight, externalShipment.freight) &&
+        Objects.equals(this.trackingNo, externalShipment.trackingNo) &&
+        Objects.equals(this.dim1In, externalShipment.dim1In) &&
+        Objects.equals(this.dim2In, externalShipment.dim2In) &&
+        Objects.equals(this.dim3In, externalShipment.dim3In) &&
+        Objects.equals(this.weightLbs, externalShipment.weightLbs) &&
+        Objects.equals(this.dimWeight, externalShipment.dimWeight) &&
+        Objects.equals(this.residential, externalShipment.residential) &&
+        Objects.equals(this.zone, externalShipment.zone) &&
+        Objects.equals(this.status, externalShipment.status);
   }
 
   @Override
@@ -318,7 +345,7 @@ public class ExternalShipment   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

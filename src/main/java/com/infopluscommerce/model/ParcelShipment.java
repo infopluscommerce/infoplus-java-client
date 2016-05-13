@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ParcelShipment   {
   
   private Integer id = null;
@@ -47,8 +46,12 @@ public class ParcelShipment   {
   
   /**
    **/
+  public ParcelShipment id(Integer id) {
+    this.id = id;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
@@ -58,75 +61,49 @@ public class ParcelShipment   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipDate")
   public Date getShipDate() {
     return shipDate;
   }
-  public void setShipDate(Date shipDate) {
-    this.shipDate = shipDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("deliveredDate")
   public Date getDeliveredDate() {
     return deliveredDate;
   }
-  public void setDeliveredDate(Date deliveredDate) {
-    this.deliveredDate = deliveredDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("trackingNo")
   public String getTrackingNo() {
     return trackingNo;
   }
-  public void setTrackingNo(String trackingNo) {
-    this.trackingNo = trackingNo;
-  }
 
   
   /**
    **/
+  public ParcelShipment warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -136,36 +113,28 @@ public class ParcelShipment   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
   }
-  public void setLobId(Integer lobId) {
-    this.lobId = lobId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderNo")
   public Double getOrderNo() {
     return orderNo;
   }
-  public void setOrderNo(Double orderNo) {
-    this.orderNo = orderNo;
-  }
 
   
   /**
    **/
+  public ParcelShipment cartonNo(Integer cartonNo) {
+    this.cartonNo = cartonNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonNo")
   public Integer getCartonNo() {
     return cartonNo;
@@ -177,8 +146,12 @@ public class ParcelShipment   {
   
   /**
    **/
+  public ParcelShipment numberOfCartons(Integer numberOfCartons) {
+    this.numberOfCartons = numberOfCartons;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numberOfCartons")
   public Integer getNumberOfCartons() {
     return numberOfCartons;
@@ -188,23 +161,21 @@ public class ParcelShipment   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
   }
 
   
   /**
    **/
+  public ParcelShipment shipped(Boolean shipped) {
+    this.shipped = shipped;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipped")
   public Boolean getShipped() {
     return shipped;
@@ -216,8 +187,12 @@ public class ParcelShipment   {
   
   /**
    **/
+  public ParcelShipment carrierServiceId(Integer carrierServiceId) {
+    this.carrierServiceId = carrierServiceId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrierServiceId")
   public Integer getCarrierServiceId() {
     return carrierServiceId;
@@ -229,8 +204,12 @@ public class ParcelShipment   {
   
   /**
    **/
+  public ParcelShipment dim1In(Double dim1In) {
+    this.dim1In = dim1In;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim1In")
   public Double getDim1In() {
     return dim1In;
@@ -242,8 +221,12 @@ public class ParcelShipment   {
   
   /**
    **/
+  public ParcelShipment dim2In(Double dim2In) {
+    this.dim2In = dim2In;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim2In")
   public Double getDim2In() {
     return dim2In;
@@ -255,8 +238,12 @@ public class ParcelShipment   {
   
   /**
    **/
+  public ParcelShipment dim3In(Double dim3In) {
+    this.dim3In = dim3In;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim3In")
   public Double getDim3In() {
     return dim3In;
@@ -268,8 +255,12 @@ public class ParcelShipment   {
   
   /**
    **/
+  public ParcelShipment estimatedZone(String estimatedZone) {
+    this.estimatedZone = estimatedZone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("estimatedZone")
   public String getEstimatedZone() {
     return estimatedZone;
@@ -279,152 +270,86 @@ public class ParcelShipment   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("parcelAccountNo")
   public String getParcelAccountNo() {
     return parcelAccountNo;
   }
-  public void setParcelAccountNo(String parcelAccountNo) {
-    this.parcelAccountNo = parcelAccountNo;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("thirdPartyParcelAccountNo")
   public String getThirdPartyParcelAccountNo() {
     return thirdPartyParcelAccountNo;
   }
-  public void setThirdPartyParcelAccountNo(String thirdPartyParcelAccountNo) {
-    this.thirdPartyParcelAccountNo = thirdPartyParcelAccountNo;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("manifestId")
   public Integer getManifestId() {
     return manifestId;
   }
-  public void setManifestId(Integer manifestId) {
-    this.manifestId = manifestId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("residential")
   public Boolean getResidential() {
     return residential;
   }
-  public void setResidential(Boolean residential) {
-    this.residential = residential;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingOption")
   public String getBillingOption() {
     return billingOption;
   }
-  public void setBillingOption(String billingOption) {
-    this.billingOption = billingOption;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
   public Double getWeightLbs() {
     return weightLbs;
   }
-  public void setWeightLbs(Double weightLbs) {
-    this.weightLbs = weightLbs;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dimWeight")
   public Double getDimWeight() {
     return dimWeight;
   }
-  public void setDimWeight(Double dimWeight) {
-    this.dimWeight = dimWeight;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("licensePlateNumber")
   public String getLicensePlateNumber() {
     return licensePlateNumber;
   }
-  public void setLicensePlateNumber(String licensePlateNumber) {
-    this.licensePlateNumber = licensePlateNumber;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("chargedFreightAmount")
   public Double getChargedFreightAmount() {
     return chargedFreightAmount;
   }
-  public void setChargedFreightAmount(Double chargedFreightAmount) {
-    this.chargedFreightAmount = chargedFreightAmount;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("publishedFreightAmount")
   public Double getPublishedFreightAmount() {
     return publishedFreightAmount;
   }
-  public void setPublishedFreightAmount(Double publishedFreightAmount) {
-    this.publishedFreightAmount = publishedFreightAmount;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("retailFreightAmount")
   public Double getRetailFreightAmount() {
     return retailFreightAmount;
-  }
-  public void setRetailFreightAmount(Double retailFreightAmount) {
-    this.retailFreightAmount = retailFreightAmount;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -432,35 +357,35 @@ public class ParcelShipment   {
       return false;
     }
     ParcelShipment parcelShipment = (ParcelShipment) o;
-    return Objects.equals(id, parcelShipment.id) &&
-        Objects.equals(createDate, parcelShipment.createDate) &&
-        Objects.equals(modifyDate, parcelShipment.modifyDate) &&
-        Objects.equals(shipDate, parcelShipment.shipDate) &&
-        Objects.equals(deliveredDate, parcelShipment.deliveredDate) &&
-        Objects.equals(trackingNo, parcelShipment.trackingNo) &&
-        Objects.equals(warehouseId, parcelShipment.warehouseId) &&
-        Objects.equals(lobId, parcelShipment.lobId) &&
-        Objects.equals(orderNo, parcelShipment.orderNo) &&
-        Objects.equals(cartonNo, parcelShipment.cartonNo) &&
-        Objects.equals(numberOfCartons, parcelShipment.numberOfCartons) &&
-        Objects.equals(status, parcelShipment.status) &&
-        Objects.equals(shipped, parcelShipment.shipped) &&
-        Objects.equals(carrierServiceId, parcelShipment.carrierServiceId) &&
-        Objects.equals(dim1In, parcelShipment.dim1In) &&
-        Objects.equals(dim2In, parcelShipment.dim2In) &&
-        Objects.equals(dim3In, parcelShipment.dim3In) &&
-        Objects.equals(estimatedZone, parcelShipment.estimatedZone) &&
-        Objects.equals(parcelAccountNo, parcelShipment.parcelAccountNo) &&
-        Objects.equals(thirdPartyParcelAccountNo, parcelShipment.thirdPartyParcelAccountNo) &&
-        Objects.equals(manifestId, parcelShipment.manifestId) &&
-        Objects.equals(residential, parcelShipment.residential) &&
-        Objects.equals(billingOption, parcelShipment.billingOption) &&
-        Objects.equals(weightLbs, parcelShipment.weightLbs) &&
-        Objects.equals(dimWeight, parcelShipment.dimWeight) &&
-        Objects.equals(licensePlateNumber, parcelShipment.licensePlateNumber) &&
-        Objects.equals(chargedFreightAmount, parcelShipment.chargedFreightAmount) &&
-        Objects.equals(publishedFreightAmount, parcelShipment.publishedFreightAmount) &&
-        Objects.equals(retailFreightAmount, parcelShipment.retailFreightAmount);
+    return Objects.equals(this.id, parcelShipment.id) &&
+        Objects.equals(this.createDate, parcelShipment.createDate) &&
+        Objects.equals(this.modifyDate, parcelShipment.modifyDate) &&
+        Objects.equals(this.shipDate, parcelShipment.shipDate) &&
+        Objects.equals(this.deliveredDate, parcelShipment.deliveredDate) &&
+        Objects.equals(this.trackingNo, parcelShipment.trackingNo) &&
+        Objects.equals(this.warehouseId, parcelShipment.warehouseId) &&
+        Objects.equals(this.lobId, parcelShipment.lobId) &&
+        Objects.equals(this.orderNo, parcelShipment.orderNo) &&
+        Objects.equals(this.cartonNo, parcelShipment.cartonNo) &&
+        Objects.equals(this.numberOfCartons, parcelShipment.numberOfCartons) &&
+        Objects.equals(this.status, parcelShipment.status) &&
+        Objects.equals(this.shipped, parcelShipment.shipped) &&
+        Objects.equals(this.carrierServiceId, parcelShipment.carrierServiceId) &&
+        Objects.equals(this.dim1In, parcelShipment.dim1In) &&
+        Objects.equals(this.dim2In, parcelShipment.dim2In) &&
+        Objects.equals(this.dim3In, parcelShipment.dim3In) &&
+        Objects.equals(this.estimatedZone, parcelShipment.estimatedZone) &&
+        Objects.equals(this.parcelAccountNo, parcelShipment.parcelAccountNo) &&
+        Objects.equals(this.thirdPartyParcelAccountNo, parcelShipment.thirdPartyParcelAccountNo) &&
+        Objects.equals(this.manifestId, parcelShipment.manifestId) &&
+        Objects.equals(this.residential, parcelShipment.residential) &&
+        Objects.equals(this.billingOption, parcelShipment.billingOption) &&
+        Objects.equals(this.weightLbs, parcelShipment.weightLbs) &&
+        Objects.equals(this.dimWeight, parcelShipment.dimWeight) &&
+        Objects.equals(this.licensePlateNumber, parcelShipment.licensePlateNumber) &&
+        Objects.equals(this.chargedFreightAmount, parcelShipment.chargedFreightAmount) &&
+        Objects.equals(this.publishedFreightAmount, parcelShipment.publishedFreightAmount) &&
+        Objects.equals(this.retailFreightAmount, parcelShipment.retailFreightAmount);
   }
 
   @Override
@@ -510,7 +435,7 @@ public class ParcelShipment   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

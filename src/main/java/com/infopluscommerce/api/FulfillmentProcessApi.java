@@ -9,9 +9,12 @@ import com.infopluscommerce.Pair;
 
 import com.infopluscommerce.model.FulfillmentProcess;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class FulfillmentProcessApi {
   private ApiClient apiClient;
 
@@ -35,77 +38,79 @@ public class FulfillmentProcessApi {
   /**
    * Search fulfillmentProcesses by filter
    * Returns the list of fulfillmentProcesses that match the given filter.
-   * @param filter Query string, used to filter results.
-   * @param page Result page number.  Defaults to 1.
-   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250.
-   * @param sort Sort results by specified field.
+   * @param filter Query string, used to filter results. (optional)
+   * @param page Result page number.  Defaults to 1. (optional)
+   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250. (optional)
+   * @param sort Sort results by specified field. (optional)
    * @return List<FulfillmentProcess>
+   * @throws ApiException if fails to make API call
    */
   public List<FulfillmentProcess> getFulfillmentProcessByFilter(String filter, Integer page, Integer limit, String sort) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
     // create path and map variables
-    String path = "/v1.0/fulfillmentProcess/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v1.0/fulfillmentProcess/search".replaceAll("\\{format\\}","json");
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
-    
-
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
     
 
     
 
-    final String[] accepts = {
+    
+
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<List<FulfillmentProcess>> returnType = new GenericType<List<FulfillmentProcess>>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<List<FulfillmentProcess>> localVarReturnType = new GenericType<List<FulfillmentProcess>>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
   /**
    * Get a fulfillmentProcess by id
    * Returns the fulfillmentProcess identified by the specified id.
-   * @param fulfillmentProcessId Id of the fulfillmentProcess to be returned.
+   * @param fulfillmentProcessId Id of the fulfillmentProcess to be returned. (required)
    * @return FulfillmentProcess
+   * @throws ApiException if fails to make API call
    */
   public FulfillmentProcess getFulfillmentProcessById(Integer fulfillmentProcessId) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'fulfillmentProcessId' is set
-     if (fulfillmentProcessId == null) {
-        throw new ApiException(400, "Missing the required parameter 'fulfillmentProcessId' when calling getFulfillmentProcessById");
-     }
-     
+    // verify the required parameter 'fulfillmentProcessId' is set
+    if (fulfillmentProcessId == null) {
+      throw new ApiException(400, "Missing the required parameter 'fulfillmentProcessId' when calling getFulfillmentProcessById");
+    }
+    
     // create path and map variables
-    String path = "/v1.0/fulfillmentProcess/{fulfillmentProcessId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v1.0/fulfillmentProcess/{fulfillmentProcessId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "fulfillmentProcessId" + "\\}", apiClient.escapeString(fulfillmentProcessId.toString()));
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
 
@@ -113,21 +118,21 @@ public class FulfillmentProcessApi {
 
     
 
-    final String[] accepts = {
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<FulfillmentProcess> returnType = new GenericType<FulfillmentProcess>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<FulfillmentProcess> localVarReturnType = new GenericType<FulfillmentProcess>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   

@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ReplenishmentProcess   {
   
   private Integer id = null;
@@ -23,49 +22,35 @@ public class ReplenishmentProcess   {
   private Integer estimatedWork = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public ReplenishmentProcess warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -77,8 +62,12 @@ public class ReplenishmentProcess   {
   
   /**
    **/
+  public ReplenishmentProcess replenishmentPlanId(Integer replenishmentPlanId) {
+    this.replenishmentPlanId = replenishmentPlanId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("replenishmentPlanId")
   public Integer getReplenishmentPlanId() {
     return replenishmentPlanId;
@@ -90,8 +79,12 @@ public class ReplenishmentProcess   {
   
   /**
    **/
+  public ReplenishmentProcess status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -101,22 +94,16 @@ public class ReplenishmentProcess   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("estimatedWork")
   public Integer getEstimatedWork() {
     return estimatedWork;
-  }
-  public void setEstimatedWork(Integer estimatedWork) {
-    this.estimatedWork = estimatedWork;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -124,13 +111,13 @@ public class ReplenishmentProcess   {
       return false;
     }
     ReplenishmentProcess replenishmentProcess = (ReplenishmentProcess) o;
-    return Objects.equals(id, replenishmentProcess.id) &&
-        Objects.equals(createDate, replenishmentProcess.createDate) &&
-        Objects.equals(modifyDate, replenishmentProcess.modifyDate) &&
-        Objects.equals(warehouseId, replenishmentProcess.warehouseId) &&
-        Objects.equals(replenishmentPlanId, replenishmentProcess.replenishmentPlanId) &&
-        Objects.equals(status, replenishmentProcess.status) &&
-        Objects.equals(estimatedWork, replenishmentProcess.estimatedWork);
+    return Objects.equals(this.id, replenishmentProcess.id) &&
+        Objects.equals(this.createDate, replenishmentProcess.createDate) &&
+        Objects.equals(this.modifyDate, replenishmentProcess.modifyDate) &&
+        Objects.equals(this.warehouseId, replenishmentProcess.warehouseId) &&
+        Objects.equals(this.replenishmentPlanId, replenishmentProcess.replenishmentPlanId) &&
+        Objects.equals(this.status, replenishmentProcess.status) &&
+        Objects.equals(this.estimatedWork, replenishmentProcess.estimatedWork);
   }
 
   @Override
@@ -158,7 +145,7 @@ public class ReplenishmentProcess   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

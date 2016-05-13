@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class PickFaceAssignment   {
   
   private Integer id = null;
@@ -24,23 +23,21 @@ public class PickFaceAssignment   {
   private String sku = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public PickFaceAssignment warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -52,8 +49,12 @@ public class PickFaceAssignment   {
   
   /**
    **/
+  public PickFaceAssignment locationId(Integer locationId) {
+    this.locationId = locationId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("locationId")
   public Integer getLocationId() {
     return locationId;
@@ -65,8 +66,12 @@ public class PickFaceAssignment   {
   
   /**
    **/
+  public PickFaceAssignment replenishmentPoint(Integer replenishmentPoint) {
+    this.replenishmentPoint = replenishmentPoint;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("replenishmentPoint")
   public Integer getReplenishmentPoint() {
     return replenishmentPoint;
@@ -78,8 +83,12 @@ public class PickFaceAssignment   {
   
   /**
    **/
+  public PickFaceAssignment maxQuantity(Integer maxQuantity) {
+    this.maxQuantity = maxQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("maxQuantity")
   public Integer getMaxQuantity() {
     return maxQuantity;
@@ -89,36 +98,28 @@ public class PickFaceAssignment   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public PickFaceAssignment sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
@@ -130,7 +131,7 @@ public class PickFaceAssignment   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -138,14 +139,14 @@ public class PickFaceAssignment   {
       return false;
     }
     PickFaceAssignment pickFaceAssignment = (PickFaceAssignment) o;
-    return Objects.equals(id, pickFaceAssignment.id) &&
-        Objects.equals(warehouseId, pickFaceAssignment.warehouseId) &&
-        Objects.equals(locationId, pickFaceAssignment.locationId) &&
-        Objects.equals(replenishmentPoint, pickFaceAssignment.replenishmentPoint) &&
-        Objects.equals(maxQuantity, pickFaceAssignment.maxQuantity) &&
-        Objects.equals(createDate, pickFaceAssignment.createDate) &&
-        Objects.equals(modifyDate, pickFaceAssignment.modifyDate) &&
-        Objects.equals(sku, pickFaceAssignment.sku);
+    return Objects.equals(this.id, pickFaceAssignment.id) &&
+        Objects.equals(this.warehouseId, pickFaceAssignment.warehouseId) &&
+        Objects.equals(this.locationId, pickFaceAssignment.locationId) &&
+        Objects.equals(this.replenishmentPoint, pickFaceAssignment.replenishmentPoint) &&
+        Objects.equals(this.maxQuantity, pickFaceAssignment.maxQuantity) &&
+        Objects.equals(this.createDate, pickFaceAssignment.createDate) &&
+        Objects.equals(this.modifyDate, pickFaceAssignment.modifyDate) &&
+        Objects.equals(this.sku, pickFaceAssignment.sku);
   }
 
   @Override
@@ -174,7 +175,7 @@ public class PickFaceAssignment   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

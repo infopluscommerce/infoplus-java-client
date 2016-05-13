@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class BillingCode   {
   
   private Integer id = null;
@@ -21,53 +20,39 @@ public class BillingCode   {
   private Date date = null;
   private Integer userId = null;
   private Integer lobId = null;
-  private String billingCodeType = null;
+  private Integer billingCodeTypeId = null;
   private String note = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public BillingCode quantity(Integer quantity) {
+    this.quantity = quantity;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("quantity")
   public Integer getQuantity() {
     return quantity;
@@ -77,23 +62,21 @@ public class BillingCode   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("date")
   public Date getDate() {
     return date;
-  }
-  public void setDate(Date date) {
-    this.date = date;
   }
 
   
   /**
    **/
+  public BillingCode userId(Integer userId) {
+    this.userId = userId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("userId")
   public Integer getUserId() {
     return userId;
@@ -105,8 +88,12 @@ public class BillingCode   {
   
   /**
    **/
+  public BillingCode lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -118,21 +105,29 @@ public class BillingCode   {
   
   /**
    **/
-  
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty("billingCodeType")
-  public String getBillingCodeType() {
-    return billingCodeType;
+  public BillingCode billingCodeTypeId(Integer billingCodeTypeId) {
+    this.billingCodeTypeId = billingCodeTypeId;
+    return this;
   }
-  public void setBillingCodeType(String billingCodeType) {
-    this.billingCodeType = billingCodeType;
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("billingCodeTypeId")
+  public Integer getBillingCodeTypeId() {
+    return billingCodeTypeId;
+  }
+  public void setBillingCodeTypeId(Integer billingCodeTypeId) {
+    this.billingCodeTypeId = billingCodeTypeId;
   }
 
   
   /**
    **/
+  public BillingCode note(String note) {
+    this.note = note;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("note")
   public String getNote() {
     return note;
@@ -144,7 +139,7 @@ public class BillingCode   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -152,20 +147,20 @@ public class BillingCode   {
       return false;
     }
     BillingCode billingCode = (BillingCode) o;
-    return Objects.equals(id, billingCode.id) &&
-        Objects.equals(createDate, billingCode.createDate) &&
-        Objects.equals(modifyDate, billingCode.modifyDate) &&
-        Objects.equals(quantity, billingCode.quantity) &&
-        Objects.equals(date, billingCode.date) &&
-        Objects.equals(userId, billingCode.userId) &&
-        Objects.equals(lobId, billingCode.lobId) &&
-        Objects.equals(billingCodeType, billingCode.billingCodeType) &&
-        Objects.equals(note, billingCode.note);
+    return Objects.equals(this.id, billingCode.id) &&
+        Objects.equals(this.createDate, billingCode.createDate) &&
+        Objects.equals(this.modifyDate, billingCode.modifyDate) &&
+        Objects.equals(this.quantity, billingCode.quantity) &&
+        Objects.equals(this.date, billingCode.date) &&
+        Objects.equals(this.userId, billingCode.userId) &&
+        Objects.equals(this.lobId, billingCode.lobId) &&
+        Objects.equals(this.billingCodeTypeId, billingCode.billingCodeTypeId) &&
+        Objects.equals(this.note, billingCode.note);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, quantity, date, userId, lobId, billingCodeType, note);
+    return Objects.hash(id, createDate, modifyDate, quantity, date, userId, lobId, billingCodeTypeId, note);
   }
 
   @Override
@@ -180,7 +175,7 @@ public class BillingCode   {
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
-    sb.append("    billingCodeType: ").append(toIndentedString(billingCodeType)).append("\n");
+    sb.append("    billingCodeTypeId: ").append(toIndentedString(billingCodeTypeId)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -190,7 +185,7 @@ public class BillingCode   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

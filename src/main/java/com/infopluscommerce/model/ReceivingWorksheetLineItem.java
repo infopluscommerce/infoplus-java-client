@@ -2,17 +2,17 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.infopluscommerce.model.ReceivingWorksheetPutAwayPlan;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ReceivingWorksheetLineItem   {
   
   private String sku = null;
@@ -38,75 +38,49 @@ public class ReceivingWorksheetLineItem   {
   private Integer quantity = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
   }
-  public void setSku(String sku) {
-    this.sku = sku;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fullDescription")
   public String getFullDescription() {
     return fullDescription;
   }
-  public void setFullDescription(String fullDescription) {
-    this.fullDescription = fullDescription;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderedQty")
   public Integer getOrderedQty() {
     return orderedQty;
   }
-  public void setOrderedQty(Integer orderedQty) {
-    this.orderedQty = orderedQty;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("prevReceivedQty")
   public Integer getPrevReceivedQty() {
     return prevReceivedQty;
   }
-  public void setPrevReceivedQty(Integer prevReceivedQty) {
-    this.prevReceivedQty = prevReceivedQty;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unreceivedQty")
   public Integer getUnreceivedQty() {
     return unreceivedQty;
   }
-  public void setUnreceivedQty(Integer unreceivedQty) {
-    this.unreceivedQty = unreceivedQty;
-  }
 
   
   /**
    **/
+  public ReceivingWorksheetLineItem receivingQty(Integer receivingQty) {
+    this.receivingQty = receivingQty;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("receivingQty")
   public Integer getReceivingQty() {
     return receivingQty;
@@ -118,8 +92,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem unitCode(String unitCode) {
+    this.unitCode = unitCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("unitCode")
   public String getUnitCode() {
     return unitCode;
@@ -131,8 +109,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem wrapCode(String wrapCode) {
+    this.wrapCode = wrapCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("wrapCode")
   public String getWrapCode() {
     return wrapCode;
@@ -144,8 +126,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem unitsPerWrap(Integer unitsPerWrap) {
+    this.unitsPerWrap = unitsPerWrap;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitsPerWrap")
   public Integer getUnitsPerWrap() {
     return unitsPerWrap;
@@ -157,8 +143,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem unitsPerCase(Integer unitsPerCase) {
+    this.unitsPerCase = unitsPerCase;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitsPerCase")
   public Integer getUnitsPerCase() {
     return unitsPerCase;
@@ -170,8 +160,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem casesPerPallet(Integer casesPerPallet) {
+    this.casesPerPallet = casesPerPallet;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("casesPerPallet")
   public Integer getCasesPerPallet() {
     return casesPerPallet;
@@ -183,8 +177,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem weightPerWrap(Double weightPerWrap) {
+    this.weightPerWrap = weightPerWrap;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("weightPerWrap")
   public Double getWeightPerWrap() {
     return weightPerWrap;
@@ -196,8 +194,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem weightPerCase(Double weightPerCase) {
+    this.weightPerCase = weightPerCase;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightPerCase")
   public Double getWeightPerCase() {
     return weightPerCase;
@@ -209,8 +211,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem productionLot(String productionLot) {
+    this.productionLot = productionLot;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("productionLot")
   public String getProductionLot() {
     return productionLot;
@@ -222,8 +228,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem revisionDate(String revisionDate) {
+    this.revisionDate = revisionDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("revisionDate")
   public String getRevisionDate() {
     return revisionDate;
@@ -235,8 +245,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem origin(String origin) {
+    this.origin = origin;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("origin")
   public String getOrigin() {
     return origin;
@@ -248,8 +262,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem cartonLength(Double cartonLength) {
+    this.cartonLength = cartonLength;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonLength")
   public Double getCartonLength() {
     return cartonLength;
@@ -261,8 +279,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem cartonWidth(Double cartonWidth) {
+    this.cartonWidth = cartonWidth;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonWidth")
   public Double getCartonWidth() {
     return cartonWidth;
@@ -274,8 +296,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem cartonHeight(Double cartonHeight) {
+    this.cartonHeight = cartonHeight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonHeight")
   public Double getCartonHeight() {
     return cartonHeight;
@@ -287,8 +313,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem putAwayPlans(List<ReceivingWorksheetPutAwayPlan> putAwayPlans) {
+    this.putAwayPlans = putAwayPlans;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("putAwayPlans")
   public List<ReceivingWorksheetPutAwayPlan> getPutAwayPlans() {
     return putAwayPlans;
@@ -300,8 +330,12 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
+  public ReceivingWorksheetLineItem quantity(Integer quantity) {
+    this.quantity = quantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("quantity")
   public Integer getQuantity() {
     return quantity;
@@ -313,7 +347,7 @@ public class ReceivingWorksheetLineItem   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -321,27 +355,27 @@ public class ReceivingWorksheetLineItem   {
       return false;
     }
     ReceivingWorksheetLineItem receivingWorksheetLineItem = (ReceivingWorksheetLineItem) o;
-    return Objects.equals(sku, receivingWorksheetLineItem.sku) &&
-        Objects.equals(fullDescription, receivingWorksheetLineItem.fullDescription) &&
-        Objects.equals(orderedQty, receivingWorksheetLineItem.orderedQty) &&
-        Objects.equals(prevReceivedQty, receivingWorksheetLineItem.prevReceivedQty) &&
-        Objects.equals(unreceivedQty, receivingWorksheetLineItem.unreceivedQty) &&
-        Objects.equals(receivingQty, receivingWorksheetLineItem.receivingQty) &&
-        Objects.equals(unitCode, receivingWorksheetLineItem.unitCode) &&
-        Objects.equals(wrapCode, receivingWorksheetLineItem.wrapCode) &&
-        Objects.equals(unitsPerWrap, receivingWorksheetLineItem.unitsPerWrap) &&
-        Objects.equals(unitsPerCase, receivingWorksheetLineItem.unitsPerCase) &&
-        Objects.equals(casesPerPallet, receivingWorksheetLineItem.casesPerPallet) &&
-        Objects.equals(weightPerWrap, receivingWorksheetLineItem.weightPerWrap) &&
-        Objects.equals(weightPerCase, receivingWorksheetLineItem.weightPerCase) &&
-        Objects.equals(productionLot, receivingWorksheetLineItem.productionLot) &&
-        Objects.equals(revisionDate, receivingWorksheetLineItem.revisionDate) &&
-        Objects.equals(origin, receivingWorksheetLineItem.origin) &&
-        Objects.equals(cartonLength, receivingWorksheetLineItem.cartonLength) &&
-        Objects.equals(cartonWidth, receivingWorksheetLineItem.cartonWidth) &&
-        Objects.equals(cartonHeight, receivingWorksheetLineItem.cartonHeight) &&
-        Objects.equals(putAwayPlans, receivingWorksheetLineItem.putAwayPlans) &&
-        Objects.equals(quantity, receivingWorksheetLineItem.quantity);
+    return Objects.equals(this.sku, receivingWorksheetLineItem.sku) &&
+        Objects.equals(this.fullDescription, receivingWorksheetLineItem.fullDescription) &&
+        Objects.equals(this.orderedQty, receivingWorksheetLineItem.orderedQty) &&
+        Objects.equals(this.prevReceivedQty, receivingWorksheetLineItem.prevReceivedQty) &&
+        Objects.equals(this.unreceivedQty, receivingWorksheetLineItem.unreceivedQty) &&
+        Objects.equals(this.receivingQty, receivingWorksheetLineItem.receivingQty) &&
+        Objects.equals(this.unitCode, receivingWorksheetLineItem.unitCode) &&
+        Objects.equals(this.wrapCode, receivingWorksheetLineItem.wrapCode) &&
+        Objects.equals(this.unitsPerWrap, receivingWorksheetLineItem.unitsPerWrap) &&
+        Objects.equals(this.unitsPerCase, receivingWorksheetLineItem.unitsPerCase) &&
+        Objects.equals(this.casesPerPallet, receivingWorksheetLineItem.casesPerPallet) &&
+        Objects.equals(this.weightPerWrap, receivingWorksheetLineItem.weightPerWrap) &&
+        Objects.equals(this.weightPerCase, receivingWorksheetLineItem.weightPerCase) &&
+        Objects.equals(this.productionLot, receivingWorksheetLineItem.productionLot) &&
+        Objects.equals(this.revisionDate, receivingWorksheetLineItem.revisionDate) &&
+        Objects.equals(this.origin, receivingWorksheetLineItem.origin) &&
+        Objects.equals(this.cartonLength, receivingWorksheetLineItem.cartonLength) &&
+        Objects.equals(this.cartonWidth, receivingWorksheetLineItem.cartonWidth) &&
+        Objects.equals(this.cartonHeight, receivingWorksheetLineItem.cartonHeight) &&
+        Objects.equals(this.putAwayPlans, receivingWorksheetLineItem.putAwayPlans) &&
+        Objects.equals(this.quantity, receivingWorksheetLineItem.quantity);
   }
 
   @Override
@@ -383,7 +417,7 @@ public class ReceivingWorksheetLineItem   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

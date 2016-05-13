@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Warehouse   {
   
   private Integer id = null;
@@ -33,36 +32,28 @@ public class Warehouse   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("client")
   public Integer getClient() {
     return client;
   }
-  public void setClient(Integer client) {
-    this.client = client;
-  }
 
   
   /**
    **/
+  public Warehouse name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -74,8 +65,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse address(String address) {
+    this.address = address;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("address")
   public String getAddress() {
     return address;
@@ -87,8 +82,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse company(String company) {
+    this.company = company;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("company")
   public String getCompany() {
     return company;
@@ -100,8 +99,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse street1(String street1) {
+    this.street1 = street1;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("street1")
   public String getStreet1() {
     return street1;
@@ -113,8 +116,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse street2(String street2) {
+    this.street2 = street2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("street2")
   public String getStreet2() {
     return street2;
@@ -126,8 +133,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse street3(String street3) {
+    this.street3 = street3;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("street3")
   public String getStreet3() {
     return street3;
@@ -139,8 +150,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse city(String city) {
+    this.city = city;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("city")
   public String getCity() {
     return city;
@@ -152,8 +167,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse state(String state) {
+    this.state = state;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -165,8 +184,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse zip(String zip) {
+    this.zip = zip;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("zip")
   public String getZip() {
     return zip;
@@ -178,8 +201,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse country(String country) {
+    this.country = country;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("country")
   public String getCountry() {
     return country;
@@ -191,8 +218,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse phone(String phone) {
+    this.phone = phone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -204,8 +235,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse locationBarcodePrefix(String locationBarcodePrefix) {
+    this.locationBarcodePrefix = locationBarcodePrefix;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("locationBarcodePrefix")
   public String getLocationBarcodePrefix() {
     return locationBarcodePrefix;
@@ -217,8 +252,12 @@ public class Warehouse   {
   
   /**
    **/
+  public Warehouse lpnPrefix(String lpnPrefix) {
+    this.lpnPrefix = lpnPrefix;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lpnPrefix")
   public String getLpnPrefix() {
     return lpnPrefix;
@@ -228,35 +267,23 @@ public class Warehouse   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -264,23 +291,23 @@ public class Warehouse   {
       return false;
     }
     Warehouse warehouse = (Warehouse) o;
-    return Objects.equals(id, warehouse.id) &&
-        Objects.equals(client, warehouse.client) &&
-        Objects.equals(name, warehouse.name) &&
-        Objects.equals(address, warehouse.address) &&
-        Objects.equals(company, warehouse.company) &&
-        Objects.equals(street1, warehouse.street1) &&
-        Objects.equals(street2, warehouse.street2) &&
-        Objects.equals(street3, warehouse.street3) &&
-        Objects.equals(city, warehouse.city) &&
-        Objects.equals(state, warehouse.state) &&
-        Objects.equals(zip, warehouse.zip) &&
-        Objects.equals(country, warehouse.country) &&
-        Objects.equals(phone, warehouse.phone) &&
-        Objects.equals(locationBarcodePrefix, warehouse.locationBarcodePrefix) &&
-        Objects.equals(lpnPrefix, warehouse.lpnPrefix) &&
-        Objects.equals(createDate, warehouse.createDate) &&
-        Objects.equals(modifyDate, warehouse.modifyDate);
+    return Objects.equals(this.id, warehouse.id) &&
+        Objects.equals(this.client, warehouse.client) &&
+        Objects.equals(this.name, warehouse.name) &&
+        Objects.equals(this.address, warehouse.address) &&
+        Objects.equals(this.company, warehouse.company) &&
+        Objects.equals(this.street1, warehouse.street1) &&
+        Objects.equals(this.street2, warehouse.street2) &&
+        Objects.equals(this.street3, warehouse.street3) &&
+        Objects.equals(this.city, warehouse.city) &&
+        Objects.equals(this.state, warehouse.state) &&
+        Objects.equals(this.zip, warehouse.zip) &&
+        Objects.equals(this.country, warehouse.country) &&
+        Objects.equals(this.phone, warehouse.phone) &&
+        Objects.equals(this.locationBarcodePrefix, warehouse.locationBarcodePrefix) &&
+        Objects.equals(this.lpnPrefix, warehouse.lpnPrefix) &&
+        Objects.equals(this.createDate, warehouse.createDate) &&
+        Objects.equals(this.modifyDate, warehouse.modifyDate);
   }
 
   @Override
@@ -318,7 +345,7 @@ public class Warehouse   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class OrderLine   {
   
   private Integer id = null;
@@ -36,394 +35,280 @@ public class OrderLine   {
   private Double itemWeight = null;
   private Double weightPerWrap = null;
   private String sector = null;
-  private String accountCode = null;
-  private String lowStockContact = null;
-  private String majorGroup = null;
-  private String subGroup = null;
-  private String productionCode = null;
-  private String summaryCode = null;
+  private Integer itemAccountCodeId = null;
+  private Integer itemLegacyLowStockContactId = null;
+  private Integer itemMajorGroupId = null;
+  private Integer itemSubGroupId = null;
+  private Integer itemProductCodeId = null;
+  private Integer itemSummaryCodeId = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderNo")
   public Double getOrderNo() {
     return orderNo;
   }
-  public void setOrderNo(Double orderNo) {
-    this.orderNo = orderNo;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
   }
-  public void setLobId(Integer lobId) {
-    this.lobId = lobId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
   }
-  public void setSku(String sku) {
-    this.sku = sku;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("poNoId")
   public Integer getPoNoId() {
     return poNoId;
   }
-  public void setPoNoId(Integer poNoId) {
-    this.poNoId = poNoId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderedQty")
   public Integer getOrderedQty() {
     return orderedQty;
   }
-  public void setOrderedQty(Integer orderedQty) {
-    this.orderedQty = orderedQty;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("allowedQty")
   public Integer getAllowedQty() {
     return allowedQty;
   }
-  public void setAllowedQty(Integer allowedQty) {
-    this.allowedQty = allowedQty;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shippedQty")
   public Integer getShippedQty() {
     return shippedQty;
   }
-  public void setShippedQty(Integer shippedQty) {
-    this.shippedQty = shippedQty;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("backorderQty")
   public Integer getBackorderQty() {
     return backorderQty;
   }
-  public void setBackorderQty(Integer backorderQty) {
-    this.backorderQty = backorderQty;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("revDate")
   public String getRevDate() {
     return revDate;
   }
-  public void setRevDate(String revDate) {
-    this.revDate = revDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("chargeCode")
   public String getChargeCode() {
     return chargeCode;
   }
-  public void setChargeCode(String chargeCode) {
-    this.chargeCode = chargeCode;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("distributionCode")
   public String getDistributionCode() {
     return distributionCode;
   }
-  public void setDistributionCode(String distributionCode) {
-    this.distributionCode = distributionCode;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("upc")
   public String getUpc() {
     return upc;
   }
-  public void setUpc(String upc) {
-    this.upc = upc;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vendorSKU")
   public String getVendorSKU() {
     return vendorSKU;
   }
-  public void setVendorSKU(String vendorSKU) {
-    this.vendorSKU = vendorSKU;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderSourceSKU")
   public String getOrderSourceSKU() {
     return orderSourceSKU;
   }
-  public void setOrderSourceSKU(String orderSourceSKU) {
-    this.orderSourceSKU = orderSourceSKU;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitCost")
   public Double getUnitCost() {
     return unitCost;
   }
-  public void setUnitCost(Double unitCost) {
-    this.unitCost = unitCost;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitSell")
   public Double getUnitSell() {
     return unitSell;
   }
-  public void setUnitSell(Double unitSell) {
-    this.unitSell = unitSell;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extendedCost")
   public Double getExtendedCost() {
     return extendedCost;
   }
-  public void setExtendedCost(Double extendedCost) {
-    this.extendedCost = extendedCost;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extendedSell")
   public Double getExtendedSell() {
     return extendedSell;
   }
-  public void setExtendedSell(Double extendedSell) {
-    this.extendedSell = extendedSell;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ncExtendedSell")
   public Double getNcExtendedSell() {
     return ncExtendedSell;
   }
-  public void setNcExtendedSell(Double ncExtendedSell) {
-    this.ncExtendedSell = ncExtendedSell;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("itemWeight")
   public Double getItemWeight() {
     return itemWeight;
   }
-  public void setItemWeight(Double itemWeight) {
-    this.itemWeight = itemWeight;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightPerWrap")
   public Double getWeightPerWrap() {
     return weightPerWrap;
   }
-  public void setWeightPerWrap(Double weightPerWrap) {
-    this.weightPerWrap = weightPerWrap;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sector")
   public String getSector() {
     return sector;
   }
-  public void setSector(String sector) {
-    this.sector = sector;
+
+  
+  /**
+   **/
+  public OrderLine itemAccountCodeId(Integer itemAccountCodeId) {
+    this.itemAccountCodeId = itemAccountCodeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("itemAccountCodeId")
+  public Integer getItemAccountCodeId() {
+    return itemAccountCodeId;
+  }
+  public void setItemAccountCodeId(Integer itemAccountCodeId) {
+    this.itemAccountCodeId = itemAccountCodeId;
   }
 
   
   /**
    **/
-  
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty("accountCode")
-  public String getAccountCode() {
-    return accountCode;
+  public OrderLine itemLegacyLowStockContactId(Integer itemLegacyLowStockContactId) {
+    this.itemLegacyLowStockContactId = itemLegacyLowStockContactId;
+    return this;
   }
-  public void setAccountCode(String accountCode) {
-    this.accountCode = accountCode;
-  }
-
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty("lowStockContact")
-  public String getLowStockContact() {
-    return lowStockContact;
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("itemLegacyLowStockContactId")
+  public Integer getItemLegacyLowStockContactId() {
+    return itemLegacyLowStockContactId;
   }
-  public void setLowStockContact(String lowStockContact) {
-    this.lowStockContact = lowStockContact;
+  public void setItemLegacyLowStockContactId(Integer itemLegacyLowStockContactId) {
+    this.itemLegacyLowStockContactId = itemLegacyLowStockContactId;
   }
 
   
   /**
    **/
-  
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty("majorGroup")
-  public String getMajorGroup() {
-    return majorGroup;
+  public OrderLine itemMajorGroupId(Integer itemMajorGroupId) {
+    this.itemMajorGroupId = itemMajorGroupId;
+    return this;
   }
-  public void setMajorGroup(String majorGroup) {
-    this.majorGroup = majorGroup;
-  }
-
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty("subGroup")
-  public String getSubGroup() {
-    return subGroup;
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("itemMajorGroupId")
+  public Integer getItemMajorGroupId() {
+    return itemMajorGroupId;
   }
-  public void setSubGroup(String subGroup) {
-    this.subGroup = subGroup;
+  public void setItemMajorGroupId(Integer itemMajorGroupId) {
+    this.itemMajorGroupId = itemMajorGroupId;
   }
 
   
   /**
    **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("productionCode")
-  public String getProductionCode() {
-    return productionCode;
+  public OrderLine itemSubGroupId(Integer itemSubGroupId) {
+    this.itemSubGroupId = itemSubGroupId;
+    return this;
   }
-  public void setProductionCode(String productionCode) {
-    this.productionCode = productionCode;
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("itemSubGroupId")
+  public Integer getItemSubGroupId() {
+    return itemSubGroupId;
+  }
+  public void setItemSubGroupId(Integer itemSubGroupId) {
+    this.itemSubGroupId = itemSubGroupId;
   }
 
   
   /**
    **/
-  
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty("summaryCode")
-  public String getSummaryCode() {
-    return summaryCode;
+  public OrderLine itemProductCodeId(Integer itemProductCodeId) {
+    this.itemProductCodeId = itemProductCodeId;
+    return this;
   }
-  public void setSummaryCode(String summaryCode) {
-    this.summaryCode = summaryCode;
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("itemProductCodeId")
+  public Integer getItemProductCodeId() {
+    return itemProductCodeId;
+  }
+  public void setItemProductCodeId(Integer itemProductCodeId) {
+    this.itemProductCodeId = itemProductCodeId;
+  }
+
+  
+  /**
+   **/
+  public OrderLine itemSummaryCodeId(Integer itemSummaryCodeId) {
+    this.itemSummaryCodeId = itemSummaryCodeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("itemSummaryCodeId")
+  public Integer getItemSummaryCodeId() {
+    return itemSummaryCodeId;
+  }
+  public void setItemSummaryCodeId(Integer itemSummaryCodeId) {
+    this.itemSummaryCodeId = itemSummaryCodeId;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -431,40 +316,40 @@ public class OrderLine   {
       return false;
     }
     OrderLine orderLine = (OrderLine) o;
-    return Objects.equals(id, orderLine.id) &&
-        Objects.equals(orderNo, orderLine.orderNo) &&
-        Objects.equals(lobId, orderLine.lobId) &&
-        Objects.equals(sku, orderLine.sku) &&
-        Objects.equals(poNoId, orderLine.poNoId) &&
-        Objects.equals(orderedQty, orderLine.orderedQty) &&
-        Objects.equals(allowedQty, orderLine.allowedQty) &&
-        Objects.equals(shippedQty, orderLine.shippedQty) &&
-        Objects.equals(backorderQty, orderLine.backorderQty) &&
-        Objects.equals(revDate, orderLine.revDate) &&
-        Objects.equals(chargeCode, orderLine.chargeCode) &&
-        Objects.equals(distributionCode, orderLine.distributionCode) &&
-        Objects.equals(upc, orderLine.upc) &&
-        Objects.equals(vendorSKU, orderLine.vendorSKU) &&
-        Objects.equals(orderSourceSKU, orderLine.orderSourceSKU) &&
-        Objects.equals(unitCost, orderLine.unitCost) &&
-        Objects.equals(unitSell, orderLine.unitSell) &&
-        Objects.equals(extendedCost, orderLine.extendedCost) &&
-        Objects.equals(extendedSell, orderLine.extendedSell) &&
-        Objects.equals(ncExtendedSell, orderLine.ncExtendedSell) &&
-        Objects.equals(itemWeight, orderLine.itemWeight) &&
-        Objects.equals(weightPerWrap, orderLine.weightPerWrap) &&
-        Objects.equals(sector, orderLine.sector) &&
-        Objects.equals(accountCode, orderLine.accountCode) &&
-        Objects.equals(lowStockContact, orderLine.lowStockContact) &&
-        Objects.equals(majorGroup, orderLine.majorGroup) &&
-        Objects.equals(subGroup, orderLine.subGroup) &&
-        Objects.equals(productionCode, orderLine.productionCode) &&
-        Objects.equals(summaryCode, orderLine.summaryCode);
+    return Objects.equals(this.id, orderLine.id) &&
+        Objects.equals(this.orderNo, orderLine.orderNo) &&
+        Objects.equals(this.lobId, orderLine.lobId) &&
+        Objects.equals(this.sku, orderLine.sku) &&
+        Objects.equals(this.poNoId, orderLine.poNoId) &&
+        Objects.equals(this.orderedQty, orderLine.orderedQty) &&
+        Objects.equals(this.allowedQty, orderLine.allowedQty) &&
+        Objects.equals(this.shippedQty, orderLine.shippedQty) &&
+        Objects.equals(this.backorderQty, orderLine.backorderQty) &&
+        Objects.equals(this.revDate, orderLine.revDate) &&
+        Objects.equals(this.chargeCode, orderLine.chargeCode) &&
+        Objects.equals(this.distributionCode, orderLine.distributionCode) &&
+        Objects.equals(this.upc, orderLine.upc) &&
+        Objects.equals(this.vendorSKU, orderLine.vendorSKU) &&
+        Objects.equals(this.orderSourceSKU, orderLine.orderSourceSKU) &&
+        Objects.equals(this.unitCost, orderLine.unitCost) &&
+        Objects.equals(this.unitSell, orderLine.unitSell) &&
+        Objects.equals(this.extendedCost, orderLine.extendedCost) &&
+        Objects.equals(this.extendedSell, orderLine.extendedSell) &&
+        Objects.equals(this.ncExtendedSell, orderLine.ncExtendedSell) &&
+        Objects.equals(this.itemWeight, orderLine.itemWeight) &&
+        Objects.equals(this.weightPerWrap, orderLine.weightPerWrap) &&
+        Objects.equals(this.sector, orderLine.sector) &&
+        Objects.equals(this.itemAccountCodeId, orderLine.itemAccountCodeId) &&
+        Objects.equals(this.itemLegacyLowStockContactId, orderLine.itemLegacyLowStockContactId) &&
+        Objects.equals(this.itemMajorGroupId, orderLine.itemMajorGroupId) &&
+        Objects.equals(this.itemSubGroupId, orderLine.itemSubGroupId) &&
+        Objects.equals(this.itemProductCodeId, orderLine.itemProductCodeId) &&
+        Objects.equals(this.itemSummaryCodeId, orderLine.itemSummaryCodeId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, extendedCost, extendedSell, ncExtendedSell, itemWeight, weightPerWrap, sector, accountCode, lowStockContact, majorGroup, subGroup, productionCode, summaryCode);
+    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, extendedCost, extendedSell, ncExtendedSell, itemWeight, weightPerWrap, sector, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId);
   }
 
   @Override
@@ -495,12 +380,12 @@ public class OrderLine   {
     sb.append("    itemWeight: ").append(toIndentedString(itemWeight)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    sector: ").append(toIndentedString(sector)).append("\n");
-    sb.append("    accountCode: ").append(toIndentedString(accountCode)).append("\n");
-    sb.append("    lowStockContact: ").append(toIndentedString(lowStockContact)).append("\n");
-    sb.append("    majorGroup: ").append(toIndentedString(majorGroup)).append("\n");
-    sb.append("    subGroup: ").append(toIndentedString(subGroup)).append("\n");
-    sb.append("    productionCode: ").append(toIndentedString(productionCode)).append("\n");
-    sb.append("    summaryCode: ").append(toIndentedString(summaryCode)).append("\n");
+    sb.append("    itemAccountCodeId: ").append(toIndentedString(itemAccountCodeId)).append("\n");
+    sb.append("    itemLegacyLowStockContactId: ").append(toIndentedString(itemLegacyLowStockContactId)).append("\n");
+    sb.append("    itemMajorGroupId: ").append(toIndentedString(itemMajorGroupId)).append("\n");
+    sb.append("    itemSubGroupId: ").append(toIndentedString(itemSubGroupId)).append("\n");
+    sb.append("    itemProductCodeId: ").append(toIndentedString(itemProductCodeId)).append("\n");
+    sb.append("    itemSummaryCodeId: ").append(toIndentedString(itemSummaryCodeId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -509,7 +394,7 @@ public class OrderLine   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

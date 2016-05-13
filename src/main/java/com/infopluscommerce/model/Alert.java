@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Alert   {
   
   private Integer id = null;
@@ -26,139 +25,79 @@ public class Alert   {
   private Date acknowledgeDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("type")
   public String getType() {
     return type;
   }
-  public void setType(String type) {
-    this.type = type;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("level")
   public String getLevel() {
     return level;
   }
-  public void setLevel(String level) {
-    this.level = level;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("message")
   public String getMessage() {
     return message;
   }
-  public void setMessage(String message) {
-    this.message = message;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("link")
   public String getLink() {
     return link;
   }
-  public void setLink(String link) {
-    this.link = link;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("linkText")
   public String getLinkText() {
     return linkText;
   }
-  public void setLinkText(String linkText) {
-    this.linkText = linkText;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("expirationDate")
   public Date getExpirationDate() {
     return expirationDate;
   }
-  public void setExpirationDate(Date expirationDate) {
-    this.expirationDate = expirationDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("acknowledgeDate")
   public Date getAcknowledgeDate() {
     return acknowledgeDate;
-  }
-  public void setAcknowledgeDate(Date acknowledgeDate) {
-    this.acknowledgeDate = acknowledgeDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -166,16 +105,16 @@ public class Alert   {
       return false;
     }
     Alert alert = (Alert) o;
-    return Objects.equals(id, alert.id) &&
-        Objects.equals(type, alert.type) &&
-        Objects.equals(level, alert.level) &&
-        Objects.equals(message, alert.message) &&
-        Objects.equals(link, alert.link) &&
-        Objects.equals(linkText, alert.linkText) &&
-        Objects.equals(createDate, alert.createDate) &&
-        Objects.equals(modifyDate, alert.modifyDate) &&
-        Objects.equals(expirationDate, alert.expirationDate) &&
-        Objects.equals(acknowledgeDate, alert.acknowledgeDate);
+    return Objects.equals(this.id, alert.id) &&
+        Objects.equals(this.type, alert.type) &&
+        Objects.equals(this.level, alert.level) &&
+        Objects.equals(this.message, alert.message) &&
+        Objects.equals(this.link, alert.link) &&
+        Objects.equals(this.linkText, alert.linkText) &&
+        Objects.equals(this.createDate, alert.createDate) &&
+        Objects.equals(this.modifyDate, alert.modifyDate) &&
+        Objects.equals(this.expirationDate, alert.expirationDate) &&
+        Objects.equals(this.acknowledgeDate, alert.acknowledgeDate);
   }
 
   @Override
@@ -206,7 +145,7 @@ public class Alert   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,9 +9,12 @@ import com.infopluscommerce.Pair;
 
 import com.infopluscommerce.model.LoggedTime;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class LoggedTimeApi {
   private ApiClient apiClient;
 
@@ -35,77 +38,79 @@ public class LoggedTimeApi {
   /**
    * Search loggedTimes by filter
    * Returns the list of loggedTimes that match the given filter.
-   * @param filter Query string, used to filter results.
-   * @param page Result page number.  Defaults to 1.
-   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250.
-   * @param sort Sort results by specified field.
+   * @param filter Query string, used to filter results. (optional)
+   * @param page Result page number.  Defaults to 1. (optional)
+   * @param limit Maximum results per page.  Defaults to 20.  Max allowed value is 250. (optional)
+   * @param sort Sort results by specified field. (optional)
    * @return List<LoggedTime>
+   * @throws ApiException if fails to make API call
    */
   public List<LoggedTime> getLoggedTimeByFilter(String filter, Integer page, Integer limit, String sort) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
     // create path and map variables
-    String path = "/v1.0/loggedTime/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v1.0/loggedTime/search".replaceAll("\\{format\\}","json");
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter", filter));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
-    
-
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "sort", sort));
     
 
     
 
-    final String[] accepts = {
+    
+
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<List<LoggedTime>> returnType = new GenericType<List<LoggedTime>>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<List<LoggedTime>> localVarReturnType = new GenericType<List<LoggedTime>>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
   /**
    * Get a loggedTime by id
    * Returns the loggedTime identified by the specified id.
-   * @param loggedTimeId Id of the loggedTime to be returned.
+   * @param loggedTimeId Id of the loggedTime to be returned. (required)
    * @return LoggedTime
+   * @throws ApiException if fails to make API call
    */
   public LoggedTime getLoggedTimeById(Integer loggedTimeId) throws ApiException {
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'loggedTimeId' is set
-     if (loggedTimeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'loggedTimeId' when calling getLoggedTimeById");
-     }
-     
+    // verify the required parameter 'loggedTimeId' is set
+    if (loggedTimeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'loggedTimeId' when calling getLoggedTimeById");
+    }
+    
     // create path and map variables
-    String path = "/v1.0/loggedTime/{loggedTimeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v1.0/loggedTime/{loggedTimeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "loggedTimeId" + "\\}", apiClient.escapeString(loggedTimeId.toString()));
 
     // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     
 
@@ -113,21 +118,21 @@ public class LoggedTimeApi {
 
     
 
-    final String[] accepts = {
+    final String[] localVarAccepts = {
       "application/json"
     };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] contentTypes = {
+    final String[] localVarContentTypes = {
       
     };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] authNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] { "api_key" };
 
     
-    GenericType<LoggedTime> returnType = new GenericType<LoggedTime>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<LoggedTime> localVarReturnType = new GenericType<LoggedTime>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   

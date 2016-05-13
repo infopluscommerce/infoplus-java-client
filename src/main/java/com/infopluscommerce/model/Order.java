@@ -2,18 +2,18 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.infopluscommerce.model.OrderLine;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Order   {
   
   private Double orderNo = null;
@@ -105,23 +105,21 @@ public class Order   {
   private List<OrderLine> lineItems = new ArrayList<OrderLine>();
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderNo")
   public Double getOrderNo() {
     return orderNo;
-  }
-  public void setOrderNo(Double orderNo) {
-    this.orderNo = orderNo;
   }
 
   
   /**
    **/
+  public Order customerOrderNo(String customerOrderNo) {
+    this.customerOrderNo = customerOrderNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("customerOrderNo")
   public String getCustomerOrderNo() {
     return customerOrderNo;
@@ -133,8 +131,12 @@ public class Order   {
   
   /**
    **/
+  public Order lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -146,8 +148,12 @@ public class Order   {
   
   /**
    **/
+  public Order warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -159,8 +165,12 @@ public class Order   {
   
   /**
    **/
+  public Order orderDate(Date orderDate) {
+    this.orderDate = orderDate;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderDate")
   public Date getOrderDate() {
     return orderDate;
@@ -172,8 +182,12 @@ public class Order   {
   
   /**
    **/
+  public Order customerNo(String customerNo) {
+    this.customerNo = customerNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("customerNo")
   public String getCustomerNo() {
     return customerNo;
@@ -185,8 +199,12 @@ public class Order   {
   
   /**
    **/
+  public Order firstShipDate(Date firstShipDate) {
+    this.firstShipDate = firstShipDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("firstShipDate")
   public Date getFirstShipDate() {
     return firstShipDate;
@@ -198,8 +216,12 @@ public class Order   {
   
   /**
    **/
+  public Order lastShipDate(Date lastShipDate) {
+    this.lastShipDate = lastShipDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lastShipDate")
   public Date getLastShipDate() {
     return lastShipDate;
@@ -211,8 +233,12 @@ public class Order   {
   
   /**
    **/
+  public Order deliverOnDate(Date deliverOnDate) {
+    this.deliverOnDate = deliverOnDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("deliverOnDate")
   public Date getDeliverOnDate() {
     return deliverOnDate;
@@ -224,8 +250,12 @@ public class Order   {
   
   /**
    **/
+  public Order needByDate(Date needByDate) {
+    this.needByDate = needByDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("needByDate")
   public Date getNeedByDate() {
     return needByDate;
@@ -237,8 +267,12 @@ public class Order   {
   
   /**
    **/
+  public Order carrierId(Integer carrierId) {
+    this.carrierId = carrierId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrierId")
   public Integer getCarrierId() {
     return carrierId;
@@ -250,8 +284,12 @@ public class Order   {
   
   /**
    **/
+  public Order serviceTypeId(String serviceTypeId) {
+    this.serviceTypeId = serviceTypeId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("serviceTypeId")
   public String getServiceTypeId() {
     return serviceTypeId;
@@ -263,8 +301,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipVia(String shipVia) {
+    this.shipVia = shipVia;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipVia")
   public String getShipVia() {
     return shipVia;
@@ -276,8 +318,12 @@ public class Order   {
   
   /**
    **/
+  public Order mediaCode(String mediaCode) {
+    this.mediaCode = mediaCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("mediaCode")
   public String getMediaCode() {
     return mediaCode;
@@ -289,8 +335,12 @@ public class Order   {
   
   /**
    **/
+  public Order legacyRestrictionType(String legacyRestrictionType) {
+    this.legacyRestrictionType = legacyRestrictionType;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("legacyRestrictionType")
   public String getLegacyRestrictionType() {
     return legacyRestrictionType;
@@ -302,8 +352,12 @@ public class Order   {
   
   /**
    **/
+  public Order alcoholOrderType(String alcoholOrderType) {
+    this.alcoholOrderType = alcoholOrderType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("alcoholOrderType")
   public String getAlcoholOrderType() {
     return alcoholOrderType;
@@ -315,8 +369,12 @@ public class Order   {
   
   /**
    **/
+  public Order alternateUsage(String alternateUsage) {
+    this.alternateUsage = alternateUsage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("alternateUsage")
   public String getAlternateUsage() {
     return alternateUsage;
@@ -326,23 +384,21 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("authorizationAmount")
   public Double getAuthorizationAmount() {
     return authorizationAmount;
-  }
-  public void setAuthorizationAmount(Double authorizationAmount) {
-    this.authorizationAmount = authorizationAmount;
   }
 
   
   /**
    **/
+  public Order authorizedBy(String authorizedBy) {
+    this.authorizedBy = authorizedBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("authorizedBy")
   public String getAuthorizedBy() {
     return authorizedBy;
@@ -352,23 +408,21 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("balanceDue")
   public Double getBalanceDue() {
     return balanceDue;
-  }
-  public void setBalanceDue(Double balanceDue) {
-    this.balanceDue = balanceDue;
   }
 
   
   /**
    **/
+  public Order batchNo(String batchNo) {
+    this.batchNo = batchNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("batchNo")
   public String getBatchNo() {
     return batchNo;
@@ -380,8 +434,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToAttention(String billToAttention) {
+    this.billToAttention = billToAttention;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToAttention")
   public String getBillToAttention() {
     return billToAttention;
@@ -393,8 +451,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToCompany(String billToCompany) {
+    this.billToCompany = billToCompany;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToCompany")
   public String getBillToCompany() {
     return billToCompany;
@@ -406,8 +468,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToStreet(String billToStreet) {
+    this.billToStreet = billToStreet;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToStreet")
   public String getBillToStreet() {
     return billToStreet;
@@ -419,8 +485,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToStreet2(String billToStreet2) {
+    this.billToStreet2 = billToStreet2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToStreet2")
   public String getBillToStreet2() {
     return billToStreet2;
@@ -432,8 +502,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToStreet3(String billToStreet3) {
+    this.billToStreet3 = billToStreet3;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToStreet3")
   public String getBillToStreet3() {
     return billToStreet3;
@@ -445,8 +519,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToCity(String billToCity) {
+    this.billToCity = billToCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToCity")
   public String getBillToCity() {
     return billToCity;
@@ -458,8 +536,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToState(String billToState) {
+    this.billToState = billToState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToState")
   public String getBillToState() {
     return billToState;
@@ -471,8 +553,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToZip(String billToZip) {
+    this.billToZip = billToZip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToZip")
   public String getBillToZip() {
     return billToZip;
@@ -484,8 +570,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToCountry(String billToCountry) {
+    this.billToCountry = billToCountry;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToCountry")
   public String getBillToCountry() {
     return billToCountry;
@@ -497,8 +587,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToPhone(String billToPhone) {
+    this.billToPhone = billToPhone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToPhone")
   public String getBillToPhone() {
     return billToPhone;
@@ -510,8 +604,12 @@ public class Order   {
   
   /**
    **/
+  public Order billToEmail(String billToEmail) {
+    this.billToEmail = billToEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToEmail")
   public String getBillToEmail() {
     return billToEmail;
@@ -521,62 +619,42 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numberOfCartons")
   public Integer getNumberOfCartons() {
     return numberOfCartons;
   }
-  public void setNumberOfCartons(Integer numberOfCartons) {
-    this.numberOfCartons = numberOfCartons;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numberOfPallets")
   public Integer getNumberOfPallets() {
     return numberOfPallets;
   }
-  public void setNumberOfPallets(Integer numberOfPallets) {
-    this.numberOfPallets = numberOfPallets;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("completionStatus")
   public String getCompletionStatus() {
     return completionStatus;
   }
-  public void setCompletionStatus(String completionStatus) {
-    this.completionStatus = completionStatus;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("parcelAccountId")
   public Integer getParcelAccountId() {
     return parcelAccountId;
   }
-  public void setParcelAccountId(Integer parcelAccountId) {
-    this.parcelAccountId = parcelAccountId;
-  }
 
   
   /**
    **/
+  public Order costCenter(String costCenter) {
+    this.costCenter = costCenter;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("costCenter")
   public String getCostCenter() {
     return costCenter;
@@ -586,23 +664,21 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
-  }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
   }
 
   
   /**
    **/
+  public Order customerPONo(String customerPONo) {
+    this.customerPONo = customerPONo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("customerPONo")
   public String getCustomerPONo() {
     return customerPONo;
@@ -614,8 +690,12 @@ public class Order   {
   
   /**
    **/
+  public Order distributionChannel(String distributionChannel) {
+    this.distributionChannel = distributionChannel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("distributionChannel")
   public String getDistributionChannel() {
     return distributionChannel;
@@ -625,23 +705,21 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("distributionCharges")
   public Double getDistributionCharges() {
     return distributionCharges;
-  }
-  public void setDistributionCharges(Double distributionCharges) {
-    this.distributionCharges = distributionCharges;
   }
 
   
   /**
    **/
+  public Order division(Integer division) {
+    this.division = division;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("division")
   public Integer getDivision() {
     return division;
@@ -651,49 +729,35 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("enteredBy")
   public String getEnteredBy() {
     return enteredBy;
   }
-  public void setEnteredBy(String enteredBy) {
-    this.enteredBy = enteredBy;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("estimatedWeightLbs")
   public Double getEstimatedWeightLbs() {
     return estimatedWeightLbs;
   }
-  public void setEstimatedWeightLbs(Double estimatedWeightLbs) {
-    this.estimatedWeightLbs = estimatedWeightLbs;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("freight")
   public Double getFreight() {
     return freight;
   }
-  public void setFreight(Double freight) {
-    this.freight = freight;
-  }
 
   
   /**
    **/
+  public Order giftMessage(String giftMessage) {
+    this.giftMessage = giftMessage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("giftMessage")
   public String getGiftMessage() {
     return giftMessage;
@@ -703,23 +767,21 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("groupOrderId")
   public Double getGroupOrderId() {
     return groupOrderId;
-  }
-  public void setGroupOrderId(Double groupOrderId) {
-    this.groupOrderId = groupOrderId;
   }
 
   
   /**
    **/
+  public Order holdCode(String holdCode) {
+    this.holdCode = holdCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("holdCode")
   public String getHoldCode() {
     return holdCode;
@@ -729,88 +791,56 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("integrationPartnerId")
   public Integer getIntegrationPartnerId() {
     return integrationPartnerId;
   }
-  public void setIntegrationPartnerId(Integer integrationPartnerId) {
-    this.integrationPartnerId = integrationPartnerId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numberOfLineItems")
   public Integer getNumberOfLineItems() {
     return numberOfLineItems;
   }
-  public void setNumberOfLineItems(Integer numberOfLineItems) {
-    this.numberOfLineItems = numberOfLineItems;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("omsOrderId")
   public Integer getOmsOrderId() {
     return omsOrderId;
   }
-  public void setOmsOrderId(Integer omsOrderId) {
-    this.omsOrderId = omsOrderId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("omsOrderNo")
   public Integer getOmsOrderNo() {
     return omsOrderNo;
   }
-  public void setOmsOrderNo(Integer omsOrderNo) {
-    this.omsOrderNo = omsOrderNo;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderLoadProgramId")
   public Integer getOrderLoadProgramId() {
     return orderLoadProgramId;
   }
-  public void setOrderLoadProgramId(Integer orderLoadProgramId) {
-    this.orderLoadProgramId = orderLoadProgramId;
-  }
 
   
   /**
    **/
+  public Order orderMessage(String orderMessage) {
+    this.orderMessage = orderMessage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderMessage")
   public String getOrderMessage() {
     return orderMessage;
@@ -820,23 +850,21 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderReason")
   public Integer getOrderReason() {
     return orderReason;
-  }
-  public void setOrderReason(Integer orderReason) {
-    this.orderReason = orderReason;
   }
 
   
   /**
    **/
+  public Order orderSourceId(Integer orderSourceId) {
+    this.orderSourceId = orderSourceId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderSourceId")
   public Integer getOrderSourceId() {
     return orderSourceId;
@@ -848,8 +876,12 @@ public class Order   {
   
   /**
    **/
+  public Order packingSlipTemplateId(Integer packingSlipTemplateId) {
+    this.packingSlipTemplateId = packingSlipTemplateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("packingSlipTemplateId")
   public Integer getPackingSlipTemplateId() {
     return packingSlipTemplateId;
@@ -861,8 +893,12 @@ public class Order   {
   
   /**
    **/
+  public Order orderConfirmationEmailTemplateId(Integer orderConfirmationEmailTemplateId) {
+    this.orderConfirmationEmailTemplateId = orderConfirmationEmailTemplateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderConfirmationEmailTemplateId")
   public Integer getOrderConfirmationEmailTemplateId() {
     return orderConfirmationEmailTemplateId;
@@ -874,8 +910,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipmentConfirmationEmailTemplateId(Integer shipmentConfirmationEmailTemplateId) {
+    this.shipmentConfirmationEmailTemplateId = shipmentConfirmationEmailTemplateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipmentConfirmationEmailTemplateId")
   public Integer getShipmentConfirmationEmailTemplateId() {
     return shipmentConfirmationEmailTemplateId;
@@ -887,8 +927,12 @@ public class Order   {
   
   /**
    **/
+  public Order priceLevel(String priceLevel) {
+    this.priceLevel = priceLevel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("priceLevel")
   public String getPriceLevel() {
     return priceLevel;
@@ -900,8 +944,12 @@ public class Order   {
   
   /**
    **/
+  public Order priorityCode(Integer priorityCode) {
+    this.priorityCode = priorityCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("priorityCode")
   public Integer getPriorityCode() {
     return priorityCode;
@@ -911,36 +959,28 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fulfillmentProcessId")
   public Integer getFulfillmentProcessId() {
     return fulfillmentProcessId;
   }
-  public void setFulfillmentProcessId(Integer fulfillmentProcessId) {
-    this.fulfillmentProcessId = fulfillmentProcessId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipBy")
   public Date getShipBy() {
     return shipBy;
   }
-  public void setShipBy(Date shipBy) {
-    this.shipBy = shipBy;
-  }
 
   
   /**
    **/
+  public Order shipCode(String shipCode) {
+    this.shipCode = shipCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipCode")
   public String getShipCode() {
     return shipCode;
@@ -950,23 +990,21 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipDate")
   public Date getShipDate() {
     return shipDate;
-  }
-  public void setShipDate(Date shipDate) {
-    this.shipDate = shipDate;
   }
 
   
   /**
    **/
+  public Order shipToAttention(String shipToAttention) {
+    this.shipToAttention = shipToAttention;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToAttention")
   public String getShipToAttention() {
     return shipToAttention;
@@ -978,8 +1016,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToCompany(String shipToCompany) {
+    this.shipToCompany = shipToCompany;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToCompany")
   public String getShipToCompany() {
     return shipToCompany;
@@ -991,8 +1033,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToStreet(String shipToStreet) {
+    this.shipToStreet = shipToStreet;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToStreet")
   public String getShipToStreet() {
     return shipToStreet;
@@ -1004,8 +1050,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToStreet2(String shipToStreet2) {
+    this.shipToStreet2 = shipToStreet2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToStreet2")
   public String getShipToStreet2() {
     return shipToStreet2;
@@ -1017,8 +1067,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToStreet3(String shipToStreet3) {
+    this.shipToStreet3 = shipToStreet3;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToStreet3")
   public String getShipToStreet3() {
     return shipToStreet3;
@@ -1030,8 +1084,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToCity(String shipToCity) {
+    this.shipToCity = shipToCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToCity")
   public String getShipToCity() {
     return shipToCity;
@@ -1043,8 +1101,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToState(String shipToState) {
+    this.shipToState = shipToState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToState")
   public String getShipToState() {
     return shipToState;
@@ -1056,8 +1118,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToZip(String shipToZip) {
+    this.shipToZip = shipToZip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToZip")
   public String getShipToZip() {
     return shipToZip;
@@ -1069,8 +1135,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToCountry(String shipToCountry) {
+    this.shipToCountry = shipToCountry;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToCountry")
   public String getShipToCountry() {
     return shipToCountry;
@@ -1082,8 +1152,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToPhone(String shipToPhone) {
+    this.shipToPhone = shipToPhone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToPhone")
   public String getShipToPhone() {
     return shipToPhone;
@@ -1095,8 +1169,12 @@ public class Order   {
   
   /**
    **/
+  public Order shipToEmail(String shipToEmail) {
+    this.shipToEmail = shipToEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToEmail")
   public String getShipToEmail() {
     return shipToEmail;
@@ -1106,127 +1184,77 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shippingCharge")
   public Double getShippingCharge() {
     return shippingCharge;
   }
-  public void setShippingCharge(Double shippingCharge) {
-    this.shippingCharge = shippingCharge;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
   }
-  public void setStatus(String status) {
-    this.status = status;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("stopBackOrders")
   public String getStopBackOrders() {
     return stopBackOrders;
   }
-  public void setStopBackOrders(String stopBackOrders) {
-    this.stopBackOrders = stopBackOrders;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("subtotal")
   public Double getSubtotal() {
     return subtotal;
   }
-  public void setSubtotal(Double subtotal) {
-    this.subtotal = subtotal;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("tax")
   public Double getTax() {
     return tax;
   }
-  public void setTax(Double tax) {
-    this.tax = tax;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("total")
   public Double getTotal() {
     return total;
   }
-  public void setTotal(Double total) {
-    this.total = total;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalPaid")
   public Double getTotalPaid() {
     return totalPaid;
   }
-  public void setTotalPaid(Double totalPaid) {
-    this.totalPaid = totalPaid;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalQty")
   public Integer getTotalQty() {
     return totalQty;
   }
-  public void setTotalQty(Integer totalQty) {
-    this.totalQty = totalQty;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
   public Double getWeightLbs() {
     return weightLbs;
   }
-  public void setWeightLbs(Double weightLbs) {
-    this.weightLbs = weightLbs;
-  }
 
   
   /**
    **/
+  public Order lineItems(List<OrderLine> lineItems) {
+    this.lineItems = lineItems;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lineItems")
   public List<OrderLine> getLineItems() {
     return lineItems;
@@ -1238,7 +1266,7 @@ public class Order   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -1246,93 +1274,93 @@ public class Order   {
       return false;
     }
     Order order = (Order) o;
-    return Objects.equals(orderNo, order.orderNo) &&
-        Objects.equals(customerOrderNo, order.customerOrderNo) &&
-        Objects.equals(lobId, order.lobId) &&
-        Objects.equals(warehouseId, order.warehouseId) &&
-        Objects.equals(orderDate, order.orderDate) &&
-        Objects.equals(customerNo, order.customerNo) &&
-        Objects.equals(firstShipDate, order.firstShipDate) &&
-        Objects.equals(lastShipDate, order.lastShipDate) &&
-        Objects.equals(deliverOnDate, order.deliverOnDate) &&
-        Objects.equals(needByDate, order.needByDate) &&
-        Objects.equals(carrierId, order.carrierId) &&
-        Objects.equals(serviceTypeId, order.serviceTypeId) &&
-        Objects.equals(shipVia, order.shipVia) &&
-        Objects.equals(mediaCode, order.mediaCode) &&
-        Objects.equals(legacyRestrictionType, order.legacyRestrictionType) &&
-        Objects.equals(alcoholOrderType, order.alcoholOrderType) &&
-        Objects.equals(alternateUsage, order.alternateUsage) &&
-        Objects.equals(authorizationAmount, order.authorizationAmount) &&
-        Objects.equals(authorizedBy, order.authorizedBy) &&
-        Objects.equals(balanceDue, order.balanceDue) &&
-        Objects.equals(batchNo, order.batchNo) &&
-        Objects.equals(billToAttention, order.billToAttention) &&
-        Objects.equals(billToCompany, order.billToCompany) &&
-        Objects.equals(billToStreet, order.billToStreet) &&
-        Objects.equals(billToStreet2, order.billToStreet2) &&
-        Objects.equals(billToStreet3, order.billToStreet3) &&
-        Objects.equals(billToCity, order.billToCity) &&
-        Objects.equals(billToState, order.billToState) &&
-        Objects.equals(billToZip, order.billToZip) &&
-        Objects.equals(billToCountry, order.billToCountry) &&
-        Objects.equals(billToPhone, order.billToPhone) &&
-        Objects.equals(billToEmail, order.billToEmail) &&
-        Objects.equals(numberOfCartons, order.numberOfCartons) &&
-        Objects.equals(numberOfPallets, order.numberOfPallets) &&
-        Objects.equals(completionStatus, order.completionStatus) &&
-        Objects.equals(parcelAccountId, order.parcelAccountId) &&
-        Objects.equals(costCenter, order.costCenter) &&
-        Objects.equals(createDate, order.createDate) &&
-        Objects.equals(customerPONo, order.customerPONo) &&
-        Objects.equals(distributionChannel, order.distributionChannel) &&
-        Objects.equals(distributionCharges, order.distributionCharges) &&
-        Objects.equals(division, order.division) &&
-        Objects.equals(enteredBy, order.enteredBy) &&
-        Objects.equals(estimatedWeightLbs, order.estimatedWeightLbs) &&
-        Objects.equals(freight, order.freight) &&
-        Objects.equals(giftMessage, order.giftMessage) &&
-        Objects.equals(groupOrderId, order.groupOrderId) &&
-        Objects.equals(holdCode, order.holdCode) &&
-        Objects.equals(integrationPartnerId, order.integrationPartnerId) &&
-        Objects.equals(numberOfLineItems, order.numberOfLineItems) &&
-        Objects.equals(modifyDate, order.modifyDate) &&
-        Objects.equals(omsOrderId, order.omsOrderId) &&
-        Objects.equals(omsOrderNo, order.omsOrderNo) &&
-        Objects.equals(orderLoadProgramId, order.orderLoadProgramId) &&
-        Objects.equals(orderMessage, order.orderMessage) &&
-        Objects.equals(orderReason, order.orderReason) &&
-        Objects.equals(orderSourceId, order.orderSourceId) &&
-        Objects.equals(packingSlipTemplateId, order.packingSlipTemplateId) &&
-        Objects.equals(orderConfirmationEmailTemplateId, order.orderConfirmationEmailTemplateId) &&
-        Objects.equals(shipmentConfirmationEmailTemplateId, order.shipmentConfirmationEmailTemplateId) &&
-        Objects.equals(priceLevel, order.priceLevel) &&
-        Objects.equals(priorityCode, order.priorityCode) &&
-        Objects.equals(fulfillmentProcessId, order.fulfillmentProcessId) &&
-        Objects.equals(shipBy, order.shipBy) &&
-        Objects.equals(shipCode, order.shipCode) &&
-        Objects.equals(shipDate, order.shipDate) &&
-        Objects.equals(shipToAttention, order.shipToAttention) &&
-        Objects.equals(shipToCompany, order.shipToCompany) &&
-        Objects.equals(shipToStreet, order.shipToStreet) &&
-        Objects.equals(shipToStreet2, order.shipToStreet2) &&
-        Objects.equals(shipToStreet3, order.shipToStreet3) &&
-        Objects.equals(shipToCity, order.shipToCity) &&
-        Objects.equals(shipToState, order.shipToState) &&
-        Objects.equals(shipToZip, order.shipToZip) &&
-        Objects.equals(shipToCountry, order.shipToCountry) &&
-        Objects.equals(shipToPhone, order.shipToPhone) &&
-        Objects.equals(shipToEmail, order.shipToEmail) &&
-        Objects.equals(shippingCharge, order.shippingCharge) &&
-        Objects.equals(status, order.status) &&
-        Objects.equals(stopBackOrders, order.stopBackOrders) &&
-        Objects.equals(subtotal, order.subtotal) &&
-        Objects.equals(tax, order.tax) &&
-        Objects.equals(total, order.total) &&
-        Objects.equals(totalPaid, order.totalPaid) &&
-        Objects.equals(totalQty, order.totalQty) &&
-        Objects.equals(weightLbs, order.weightLbs) &&
-        Objects.equals(lineItems, order.lineItems);
+    return Objects.equals(this.orderNo, order.orderNo) &&
+        Objects.equals(this.customerOrderNo, order.customerOrderNo) &&
+        Objects.equals(this.lobId, order.lobId) &&
+        Objects.equals(this.warehouseId, order.warehouseId) &&
+        Objects.equals(this.orderDate, order.orderDate) &&
+        Objects.equals(this.customerNo, order.customerNo) &&
+        Objects.equals(this.firstShipDate, order.firstShipDate) &&
+        Objects.equals(this.lastShipDate, order.lastShipDate) &&
+        Objects.equals(this.deliverOnDate, order.deliverOnDate) &&
+        Objects.equals(this.needByDate, order.needByDate) &&
+        Objects.equals(this.carrierId, order.carrierId) &&
+        Objects.equals(this.serviceTypeId, order.serviceTypeId) &&
+        Objects.equals(this.shipVia, order.shipVia) &&
+        Objects.equals(this.mediaCode, order.mediaCode) &&
+        Objects.equals(this.legacyRestrictionType, order.legacyRestrictionType) &&
+        Objects.equals(this.alcoholOrderType, order.alcoholOrderType) &&
+        Objects.equals(this.alternateUsage, order.alternateUsage) &&
+        Objects.equals(this.authorizationAmount, order.authorizationAmount) &&
+        Objects.equals(this.authorizedBy, order.authorizedBy) &&
+        Objects.equals(this.balanceDue, order.balanceDue) &&
+        Objects.equals(this.batchNo, order.batchNo) &&
+        Objects.equals(this.billToAttention, order.billToAttention) &&
+        Objects.equals(this.billToCompany, order.billToCompany) &&
+        Objects.equals(this.billToStreet, order.billToStreet) &&
+        Objects.equals(this.billToStreet2, order.billToStreet2) &&
+        Objects.equals(this.billToStreet3, order.billToStreet3) &&
+        Objects.equals(this.billToCity, order.billToCity) &&
+        Objects.equals(this.billToState, order.billToState) &&
+        Objects.equals(this.billToZip, order.billToZip) &&
+        Objects.equals(this.billToCountry, order.billToCountry) &&
+        Objects.equals(this.billToPhone, order.billToPhone) &&
+        Objects.equals(this.billToEmail, order.billToEmail) &&
+        Objects.equals(this.numberOfCartons, order.numberOfCartons) &&
+        Objects.equals(this.numberOfPallets, order.numberOfPallets) &&
+        Objects.equals(this.completionStatus, order.completionStatus) &&
+        Objects.equals(this.parcelAccountId, order.parcelAccountId) &&
+        Objects.equals(this.costCenter, order.costCenter) &&
+        Objects.equals(this.createDate, order.createDate) &&
+        Objects.equals(this.customerPONo, order.customerPONo) &&
+        Objects.equals(this.distributionChannel, order.distributionChannel) &&
+        Objects.equals(this.distributionCharges, order.distributionCharges) &&
+        Objects.equals(this.division, order.division) &&
+        Objects.equals(this.enteredBy, order.enteredBy) &&
+        Objects.equals(this.estimatedWeightLbs, order.estimatedWeightLbs) &&
+        Objects.equals(this.freight, order.freight) &&
+        Objects.equals(this.giftMessage, order.giftMessage) &&
+        Objects.equals(this.groupOrderId, order.groupOrderId) &&
+        Objects.equals(this.holdCode, order.holdCode) &&
+        Objects.equals(this.integrationPartnerId, order.integrationPartnerId) &&
+        Objects.equals(this.numberOfLineItems, order.numberOfLineItems) &&
+        Objects.equals(this.modifyDate, order.modifyDate) &&
+        Objects.equals(this.omsOrderId, order.omsOrderId) &&
+        Objects.equals(this.omsOrderNo, order.omsOrderNo) &&
+        Objects.equals(this.orderLoadProgramId, order.orderLoadProgramId) &&
+        Objects.equals(this.orderMessage, order.orderMessage) &&
+        Objects.equals(this.orderReason, order.orderReason) &&
+        Objects.equals(this.orderSourceId, order.orderSourceId) &&
+        Objects.equals(this.packingSlipTemplateId, order.packingSlipTemplateId) &&
+        Objects.equals(this.orderConfirmationEmailTemplateId, order.orderConfirmationEmailTemplateId) &&
+        Objects.equals(this.shipmentConfirmationEmailTemplateId, order.shipmentConfirmationEmailTemplateId) &&
+        Objects.equals(this.priceLevel, order.priceLevel) &&
+        Objects.equals(this.priorityCode, order.priorityCode) &&
+        Objects.equals(this.fulfillmentProcessId, order.fulfillmentProcessId) &&
+        Objects.equals(this.shipBy, order.shipBy) &&
+        Objects.equals(this.shipCode, order.shipCode) &&
+        Objects.equals(this.shipDate, order.shipDate) &&
+        Objects.equals(this.shipToAttention, order.shipToAttention) &&
+        Objects.equals(this.shipToCompany, order.shipToCompany) &&
+        Objects.equals(this.shipToStreet, order.shipToStreet) &&
+        Objects.equals(this.shipToStreet2, order.shipToStreet2) &&
+        Objects.equals(this.shipToStreet3, order.shipToStreet3) &&
+        Objects.equals(this.shipToCity, order.shipToCity) &&
+        Objects.equals(this.shipToState, order.shipToState) &&
+        Objects.equals(this.shipToZip, order.shipToZip) &&
+        Objects.equals(this.shipToCountry, order.shipToCountry) &&
+        Objects.equals(this.shipToPhone, order.shipToPhone) &&
+        Objects.equals(this.shipToEmail, order.shipToEmail) &&
+        Objects.equals(this.shippingCharge, order.shippingCharge) &&
+        Objects.equals(this.status, order.status) &&
+        Objects.equals(this.stopBackOrders, order.stopBackOrders) &&
+        Objects.equals(this.subtotal, order.subtotal) &&
+        Objects.equals(this.tax, order.tax) &&
+        Objects.equals(this.total, order.total) &&
+        Objects.equals(this.totalPaid, order.totalPaid) &&
+        Objects.equals(this.totalQty, order.totalQty) &&
+        Objects.equals(this.weightLbs, order.weightLbs) &&
+        Objects.equals(this.lineItems, order.lineItems);
   }
 
   @Override
@@ -1440,7 +1468,7 @@ public class Order   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

@@ -2,18 +2,18 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.infopluscommerce.model.ItemReceipt;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Asn   {
   
   private Integer id = null;
@@ -63,49 +63,35 @@ public class Asn   {
   private String status = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public Asn lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -117,8 +103,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn poNo(String poNo) {
+    this.poNo = poNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("poNo")
   public String getPoNo() {
     return poNo;
@@ -130,8 +120,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn vendorId(Integer vendorId) {
+    this.vendorId = vendorId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("vendorId")
   public Integer getVendorId() {
     return vendorId;
@@ -143,8 +137,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -156,8 +154,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn orderDate(Date orderDate) {
+    this.orderDate = orderDate;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderDate")
   public Date getOrderDate() {
     return orderDate;
@@ -169,8 +171,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn type(String type) {
+    this.type = type;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("type")
   public String getType() {
     return type;
@@ -182,8 +188,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingName(String billingName) {
+    this.billingName = billingName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingName")
   public String getBillingName() {
     return billingName;
@@ -195,8 +205,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingAttention(String billingAttention) {
+    this.billingAttention = billingAttention;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingAttention")
   public String getBillingAttention() {
     return billingAttention;
@@ -208,8 +222,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingStreet1(String billingStreet1) {
+    this.billingStreet1 = billingStreet1;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingStreet1")
   public String getBillingStreet1() {
     return billingStreet1;
@@ -221,8 +239,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingStreet2(String billingStreet2) {
+    this.billingStreet2 = billingStreet2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingStreet2")
   public String getBillingStreet2() {
     return billingStreet2;
@@ -234,8 +256,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingCity(String billingCity) {
+    this.billingCity = billingCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingCity")
   public String getBillingCity() {
     return billingCity;
@@ -247,8 +273,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingState(String billingState) {
+    this.billingState = billingState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingState")
   public String getBillingState() {
     return billingState;
@@ -260,8 +290,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingZipCode(String billingZipCode) {
+    this.billingZipCode = billingZipCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingZipCode")
   public String getBillingZipCode() {
     return billingZipCode;
@@ -273,8 +307,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn billingPhone(String billingPhone) {
+    this.billingPhone = billingPhone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billingPhone")
   public String getBillingPhone() {
     return billingPhone;
@@ -286,8 +324,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToName(String shipToName) {
+    this.shipToName = shipToName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToName")
   public String getShipToName() {
     return shipToName;
@@ -299,8 +341,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToAddress(String shipToAddress) {
+    this.shipToAddress = shipToAddress;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToAddress")
   public String getShipToAddress() {
     return shipToAddress;
@@ -312,8 +358,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToStreet1(String shipToStreet1) {
+    this.shipToStreet1 = shipToStreet1;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToStreet1")
   public String getShipToStreet1() {
     return shipToStreet1;
@@ -325,8 +375,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToStreet2(String shipToStreet2) {
+    this.shipToStreet2 = shipToStreet2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToStreet2")
   public String getShipToStreet2() {
     return shipToStreet2;
@@ -338,8 +392,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToCity(String shipToCity) {
+    this.shipToCity = shipToCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToCity")
   public String getShipToCity() {
     return shipToCity;
@@ -351,8 +409,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToState(String shipToState) {
+    this.shipToState = shipToState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToState")
   public String getShipToState() {
     return shipToState;
@@ -364,8 +426,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToZipCode(String shipToZipCode) {
+    this.shipToZipCode = shipToZipCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToZipCode")
   public String getShipToZipCode() {
     return shipToZipCode;
@@ -377,8 +443,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn shipToPhone(String shipToPhone) {
+    this.shipToPhone = shipToPhone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToPhone")
   public String getShipToPhone() {
     return shipToPhone;
@@ -390,8 +460,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn corporateName(String corporateName) {
+    this.corporateName = corporateName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("corporateName")
   public String getCorporateName() {
     return corporateName;
@@ -403,8 +477,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn corporateAttention(String corporateAttention) {
+    this.corporateAttention = corporateAttention;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("corporateAttention")
   public String getCorporateAttention() {
     return corporateAttention;
@@ -416,8 +494,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn corporateStreet1(String corporateStreet1) {
+    this.corporateStreet1 = corporateStreet1;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("corporateStreet1")
   public String getCorporateStreet1() {
     return corporateStreet1;
@@ -429,8 +511,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn corporateStreet2(String corporateStreet2) {
+    this.corporateStreet2 = corporateStreet2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("corporateStreet2")
   public String getCorporateStreet2() {
     return corporateStreet2;
@@ -442,8 +528,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn corporateCity(String corporateCity) {
+    this.corporateCity = corporateCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("corporateCity")
   public String getCorporateCity() {
     return corporateCity;
@@ -455,8 +545,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn corporateState(String corporateState) {
+    this.corporateState = corporateState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("corporateState")
   public String getCorporateState() {
     return corporateState;
@@ -468,8 +562,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn corporateZipCode(String corporateZipCode) {
+    this.corporateZipCode = corporateZipCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("corporateZipCode")
   public String getCorporateZipCode() {
     return corporateZipCode;
@@ -481,8 +579,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn accountCode(String accountCode) {
+    this.accountCode = accountCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("accountCode")
   public String getAccountCode() {
     return accountCode;
@@ -494,8 +596,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn buyer(Integer buyer) {
+    this.buyer = buyer;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("buyer")
   public Integer getBuyer() {
     return buyer;
@@ -507,8 +613,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn carrier(Integer carrier) {
+    this.carrier = carrier;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrier")
   public Integer getCarrier() {
     return carrier;
@@ -520,8 +630,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn confTo(String confTo) {
+    this.confTo = confTo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("confTo")
   public String getConfTo() {
     return confTo;
@@ -533,8 +647,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn fob(String fob) {
+    this.fob = fob;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fob")
   public String getFob() {
     return fob;
@@ -544,23 +662,21 @@ public class Asn   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("printed")
   public String getPrinted() {
     return printed;
-  }
-  public void setPrinted(String printed) {
-    this.printed = printed;
   }
 
   
   /**
    **/
+  public Asn projectNo(Integer projectNo) {
+    this.projectNo = projectNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("projectNo")
   public Integer getProjectNo() {
     return projectNo;
@@ -572,8 +688,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn remarks(String remarks) {
+    this.remarks = remarks;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("remarks")
   public String getRemarks() {
     return remarks;
@@ -585,8 +705,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn requestBy(String requestBy) {
+    this.requestBy = requestBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("requestBy")
   public String getRequestBy() {
     return requestBy;
@@ -598,8 +722,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn terms(String terms) {
+    this.terms = terms;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("terms")
   public String getTerms() {
     return terms;
@@ -611,8 +739,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn usedBy(String usedBy) {
+    this.usedBy = usedBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("usedBy")
   public String getUsedBy() {
     return usedBy;
@@ -624,8 +756,12 @@ public class Asn   {
   
   /**
    **/
+  public Asn lineItems(List<ItemReceipt> lineItems) {
+    this.lineItems = lineItems;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lineItems")
   public List<ItemReceipt> getLineItems() {
     return lineItems;
@@ -635,22 +771,16 @@ public class Asn   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -658,51 +788,51 @@ public class Asn   {
       return false;
     }
     Asn asn = (Asn) o;
-    return Objects.equals(id, asn.id) &&
-        Objects.equals(createDate, asn.createDate) &&
-        Objects.equals(modifyDate, asn.modifyDate) &&
-        Objects.equals(lobId, asn.lobId) &&
-        Objects.equals(poNo, asn.poNo) &&
-        Objects.equals(vendorId, asn.vendorId) &&
-        Objects.equals(warehouseId, asn.warehouseId) &&
-        Objects.equals(orderDate, asn.orderDate) &&
-        Objects.equals(type, asn.type) &&
-        Objects.equals(billingName, asn.billingName) &&
-        Objects.equals(billingAttention, asn.billingAttention) &&
-        Objects.equals(billingStreet1, asn.billingStreet1) &&
-        Objects.equals(billingStreet2, asn.billingStreet2) &&
-        Objects.equals(billingCity, asn.billingCity) &&
-        Objects.equals(billingState, asn.billingState) &&
-        Objects.equals(billingZipCode, asn.billingZipCode) &&
-        Objects.equals(billingPhone, asn.billingPhone) &&
-        Objects.equals(shipToName, asn.shipToName) &&
-        Objects.equals(shipToAddress, asn.shipToAddress) &&
-        Objects.equals(shipToStreet1, asn.shipToStreet1) &&
-        Objects.equals(shipToStreet2, asn.shipToStreet2) &&
-        Objects.equals(shipToCity, asn.shipToCity) &&
-        Objects.equals(shipToState, asn.shipToState) &&
-        Objects.equals(shipToZipCode, asn.shipToZipCode) &&
-        Objects.equals(shipToPhone, asn.shipToPhone) &&
-        Objects.equals(corporateName, asn.corporateName) &&
-        Objects.equals(corporateAttention, asn.corporateAttention) &&
-        Objects.equals(corporateStreet1, asn.corporateStreet1) &&
-        Objects.equals(corporateStreet2, asn.corporateStreet2) &&
-        Objects.equals(corporateCity, asn.corporateCity) &&
-        Objects.equals(corporateState, asn.corporateState) &&
-        Objects.equals(corporateZipCode, asn.corporateZipCode) &&
-        Objects.equals(accountCode, asn.accountCode) &&
-        Objects.equals(buyer, asn.buyer) &&
-        Objects.equals(carrier, asn.carrier) &&
-        Objects.equals(confTo, asn.confTo) &&
-        Objects.equals(fob, asn.fob) &&
-        Objects.equals(printed, asn.printed) &&
-        Objects.equals(projectNo, asn.projectNo) &&
-        Objects.equals(remarks, asn.remarks) &&
-        Objects.equals(requestBy, asn.requestBy) &&
-        Objects.equals(terms, asn.terms) &&
-        Objects.equals(usedBy, asn.usedBy) &&
-        Objects.equals(lineItems, asn.lineItems) &&
-        Objects.equals(status, asn.status);
+    return Objects.equals(this.id, asn.id) &&
+        Objects.equals(this.createDate, asn.createDate) &&
+        Objects.equals(this.modifyDate, asn.modifyDate) &&
+        Objects.equals(this.lobId, asn.lobId) &&
+        Objects.equals(this.poNo, asn.poNo) &&
+        Objects.equals(this.vendorId, asn.vendorId) &&
+        Objects.equals(this.warehouseId, asn.warehouseId) &&
+        Objects.equals(this.orderDate, asn.orderDate) &&
+        Objects.equals(this.type, asn.type) &&
+        Objects.equals(this.billingName, asn.billingName) &&
+        Objects.equals(this.billingAttention, asn.billingAttention) &&
+        Objects.equals(this.billingStreet1, asn.billingStreet1) &&
+        Objects.equals(this.billingStreet2, asn.billingStreet2) &&
+        Objects.equals(this.billingCity, asn.billingCity) &&
+        Objects.equals(this.billingState, asn.billingState) &&
+        Objects.equals(this.billingZipCode, asn.billingZipCode) &&
+        Objects.equals(this.billingPhone, asn.billingPhone) &&
+        Objects.equals(this.shipToName, asn.shipToName) &&
+        Objects.equals(this.shipToAddress, asn.shipToAddress) &&
+        Objects.equals(this.shipToStreet1, asn.shipToStreet1) &&
+        Objects.equals(this.shipToStreet2, asn.shipToStreet2) &&
+        Objects.equals(this.shipToCity, asn.shipToCity) &&
+        Objects.equals(this.shipToState, asn.shipToState) &&
+        Objects.equals(this.shipToZipCode, asn.shipToZipCode) &&
+        Objects.equals(this.shipToPhone, asn.shipToPhone) &&
+        Objects.equals(this.corporateName, asn.corporateName) &&
+        Objects.equals(this.corporateAttention, asn.corporateAttention) &&
+        Objects.equals(this.corporateStreet1, asn.corporateStreet1) &&
+        Objects.equals(this.corporateStreet2, asn.corporateStreet2) &&
+        Objects.equals(this.corporateCity, asn.corporateCity) &&
+        Objects.equals(this.corporateState, asn.corporateState) &&
+        Objects.equals(this.corporateZipCode, asn.corporateZipCode) &&
+        Objects.equals(this.accountCode, asn.accountCode) &&
+        Objects.equals(this.buyer, asn.buyer) &&
+        Objects.equals(this.carrier, asn.carrier) &&
+        Objects.equals(this.confTo, asn.confTo) &&
+        Objects.equals(this.fob, asn.fob) &&
+        Objects.equals(this.printed, asn.printed) &&
+        Objects.equals(this.projectNo, asn.projectNo) &&
+        Objects.equals(this.remarks, asn.remarks) &&
+        Objects.equals(this.requestBy, asn.requestBy) &&
+        Objects.equals(this.terms, asn.terms) &&
+        Objects.equals(this.usedBy, asn.usedBy) &&
+        Objects.equals(this.lineItems, asn.lineItems) &&
+        Objects.equals(this.status, asn.status);
   }
 
   @Override
@@ -768,7 +898,7 @@ public class Asn   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

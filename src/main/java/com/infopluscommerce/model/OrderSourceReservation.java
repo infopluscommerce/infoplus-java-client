@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class OrderSourceReservation   {
   
   private Integer id = null;
@@ -22,23 +21,21 @@ public class OrderSourceReservation   {
   private String sku = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public OrderSourceReservation orderSourceId(Integer orderSourceId) {
+    this.orderSourceId = orderSourceId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderSourceId")
   public Integer getOrderSourceId() {
     return orderSourceId;
@@ -48,36 +45,28 @@ public class OrderSourceReservation   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public OrderSourceReservation reservedQuantity(Integer reservedQuantity) {
+    this.reservedQuantity = reservedQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("reservedQuantity")
   public Integer getReservedQuantity() {
     return reservedQuantity;
@@ -89,8 +78,12 @@ public class OrderSourceReservation   {
   
   /**
    **/
+  public OrderSourceReservation sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
@@ -102,7 +95,7 @@ public class OrderSourceReservation   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -110,12 +103,12 @@ public class OrderSourceReservation   {
       return false;
     }
     OrderSourceReservation orderSourceReservation = (OrderSourceReservation) o;
-    return Objects.equals(id, orderSourceReservation.id) &&
-        Objects.equals(orderSourceId, orderSourceReservation.orderSourceId) &&
-        Objects.equals(createDate, orderSourceReservation.createDate) &&
-        Objects.equals(modifyDate, orderSourceReservation.modifyDate) &&
-        Objects.equals(reservedQuantity, orderSourceReservation.reservedQuantity) &&
-        Objects.equals(sku, orderSourceReservation.sku);
+    return Objects.equals(this.id, orderSourceReservation.id) &&
+        Objects.equals(this.orderSourceId, orderSourceReservation.orderSourceId) &&
+        Objects.equals(this.createDate, orderSourceReservation.createDate) &&
+        Objects.equals(this.modifyDate, orderSourceReservation.modifyDate) &&
+        Objects.equals(this.reservedQuantity, orderSourceReservation.reservedQuantity) &&
+        Objects.equals(this.sku, orderSourceReservation.sku);
   }
 
   @Override
@@ -142,7 +135,7 @@ public class OrderSourceReservation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

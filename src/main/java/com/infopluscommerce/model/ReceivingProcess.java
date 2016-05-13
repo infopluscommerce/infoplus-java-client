@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ReceivingProcess   {
   
   private Integer id = null;
@@ -23,23 +22,21 @@ public class ReceivingProcess   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public ReceivingProcess warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -51,8 +48,12 @@ public class ReceivingProcess   {
   
   /**
    **/
+  public ReceivingProcess status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -64,8 +65,12 @@ public class ReceivingProcess   {
   
   /**
    **/
+  public ReceivingProcess workBatchId(Integer workBatchId) {
+    this.workBatchId = workBatchId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("workBatchId")
   public Integer getWorkBatchId() {
     return workBatchId;
@@ -77,8 +82,12 @@ public class ReceivingProcess   {
   
   /**
    **/
+  public ReceivingProcess receivingWorksheetId(Integer receivingWorksheetId) {
+    this.receivingWorksheetId = receivingWorksheetId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("receivingWorksheetId")
   public Integer getReceivingWorksheetId() {
     return receivingWorksheetId;
@@ -88,35 +97,23 @@ public class ReceivingProcess   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -124,13 +121,13 @@ public class ReceivingProcess   {
       return false;
     }
     ReceivingProcess receivingProcess = (ReceivingProcess) o;
-    return Objects.equals(id, receivingProcess.id) &&
-        Objects.equals(warehouseId, receivingProcess.warehouseId) &&
-        Objects.equals(status, receivingProcess.status) &&
-        Objects.equals(workBatchId, receivingProcess.workBatchId) &&
-        Objects.equals(receivingWorksheetId, receivingProcess.receivingWorksheetId) &&
-        Objects.equals(createDate, receivingProcess.createDate) &&
-        Objects.equals(modifyDate, receivingProcess.modifyDate);
+    return Objects.equals(this.id, receivingProcess.id) &&
+        Objects.equals(this.warehouseId, receivingProcess.warehouseId) &&
+        Objects.equals(this.status, receivingProcess.status) &&
+        Objects.equals(this.workBatchId, receivingProcess.workBatchId) &&
+        Objects.equals(this.receivingWorksheetId, receivingProcess.receivingWorksheetId) &&
+        Objects.equals(this.createDate, receivingProcess.createDate) &&
+        Objects.equals(this.modifyDate, receivingProcess.modifyDate);
   }
 
   @Override
@@ -158,7 +155,7 @@ public class ReceivingProcess   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

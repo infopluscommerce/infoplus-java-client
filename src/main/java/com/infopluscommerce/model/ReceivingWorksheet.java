@@ -2,18 +2,18 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.infopluscommerce.model.ReceivingWorksheetLineItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ReceivingWorksheet   {
   
   private Integer id = null;
@@ -35,23 +35,21 @@ public class ReceivingWorksheet   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public ReceivingWorksheet warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -63,8 +61,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet poNoId(Integer poNoId) {
+    this.poNoId = poNoId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("poNoId")
   public Integer getPoNoId() {
     return poNoId;
@@ -76,8 +78,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -89,8 +95,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet vendorId(Integer vendorId) {
+    this.vendorId = vendorId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vendorId")
   public Integer getVendorId() {
     return vendorId;
@@ -100,23 +110,21 @@ public class ReceivingWorksheet   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
   }
 
   
   /**
    **/
+  public ReceivingWorksheet serviceLevel(String serviceLevel) {
+    this.serviceLevel = serviceLevel;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("serviceLevel")
   public String getServiceLevel() {
     return serviceLevel;
@@ -128,8 +136,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet createdBy(Integer createdBy) {
+    this.createdBy = createdBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createdBy")
   public Integer getCreatedBy() {
     return createdBy;
@@ -141,8 +153,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet worksheetName(String worksheetName) {
+    this.worksheetName = worksheetName;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("worksheetName")
   public String getWorksheetName() {
     return worksheetName;
@@ -154,8 +170,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet carrier(String carrier) {
+    this.carrier = carrier;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrier")
   public String getCarrier() {
     return carrier;
@@ -167,8 +187,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet onTheDock(Boolean onTheDock) {
+    this.onTheDock = onTheDock;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("onTheDock")
   public Boolean getOnTheDock() {
     return onTheDock;
@@ -180,8 +204,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet autoCommit(Boolean autoCommit) {
+    this.autoCommit = autoCommit;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("autoCommit")
   public Boolean getAutoCommit() {
     return autoCommit;
@@ -193,8 +221,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet lineItems(List<ReceivingWorksheetLineItem> lineItems) {
+    this.lineItems = lineItems;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lineItems")
   public List<ReceivingWorksheetLineItem> getLineItems() {
     return lineItems;
@@ -206,8 +238,12 @@ public class ReceivingWorksheet   {
   
   /**
    **/
+  public ReceivingWorksheet notes(String notes) {
+    this.notes = notes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("notes")
   public String getNotes() {
     return notes;
@@ -217,48 +253,30 @@ public class ReceivingWorksheet   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("workBatchId")
   public Integer getWorkBatchId() {
     return workBatchId;
   }
-  public void setWorkBatchId(Integer workBatchId) {
-    this.workBatchId = workBatchId;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -266,23 +284,23 @@ public class ReceivingWorksheet   {
       return false;
     }
     ReceivingWorksheet receivingWorksheet = (ReceivingWorksheet) o;
-    return Objects.equals(id, receivingWorksheet.id) &&
-        Objects.equals(warehouseId, receivingWorksheet.warehouseId) &&
-        Objects.equals(poNoId, receivingWorksheet.poNoId) &&
-        Objects.equals(lobId, receivingWorksheet.lobId) &&
-        Objects.equals(vendorId, receivingWorksheet.vendorId) &&
-        Objects.equals(status, receivingWorksheet.status) &&
-        Objects.equals(serviceLevel, receivingWorksheet.serviceLevel) &&
-        Objects.equals(createdBy, receivingWorksheet.createdBy) &&
-        Objects.equals(worksheetName, receivingWorksheet.worksheetName) &&
-        Objects.equals(carrier, receivingWorksheet.carrier) &&
-        Objects.equals(onTheDock, receivingWorksheet.onTheDock) &&
-        Objects.equals(autoCommit, receivingWorksheet.autoCommit) &&
-        Objects.equals(lineItems, receivingWorksheet.lineItems) &&
-        Objects.equals(notes, receivingWorksheet.notes) &&
-        Objects.equals(workBatchId, receivingWorksheet.workBatchId) &&
-        Objects.equals(createDate, receivingWorksheet.createDate) &&
-        Objects.equals(modifyDate, receivingWorksheet.modifyDate);
+    return Objects.equals(this.id, receivingWorksheet.id) &&
+        Objects.equals(this.warehouseId, receivingWorksheet.warehouseId) &&
+        Objects.equals(this.poNoId, receivingWorksheet.poNoId) &&
+        Objects.equals(this.lobId, receivingWorksheet.lobId) &&
+        Objects.equals(this.vendorId, receivingWorksheet.vendorId) &&
+        Objects.equals(this.status, receivingWorksheet.status) &&
+        Objects.equals(this.serviceLevel, receivingWorksheet.serviceLevel) &&
+        Objects.equals(this.createdBy, receivingWorksheet.createdBy) &&
+        Objects.equals(this.worksheetName, receivingWorksheet.worksheetName) &&
+        Objects.equals(this.carrier, receivingWorksheet.carrier) &&
+        Objects.equals(this.onTheDock, receivingWorksheet.onTheDock) &&
+        Objects.equals(this.autoCommit, receivingWorksheet.autoCommit) &&
+        Objects.equals(this.lineItems, receivingWorksheet.lineItems) &&
+        Objects.equals(this.notes, receivingWorksheet.notes) &&
+        Objects.equals(this.workBatchId, receivingWorksheet.workBatchId) &&
+        Objects.equals(this.createDate, receivingWorksheet.createDate) &&
+        Objects.equals(this.modifyDate, receivingWorksheet.modifyDate);
   }
 
   @Override
@@ -320,7 +338,7 @@ public class ReceivingWorksheet   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

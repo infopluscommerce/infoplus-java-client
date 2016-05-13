@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class Location   {
   
   private Integer id = null;
@@ -35,23 +34,21 @@ public class Location   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public Location warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -63,8 +60,12 @@ public class Location   {
   
   /**
    **/
+  public Location buildingId(Integer buildingId) {
+    this.buildingId = buildingId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("buildingId")
   public Integer getBuildingId() {
     return buildingId;
@@ -76,8 +77,12 @@ public class Location   {
   
   /**
    **/
+  public Location zoneId(Integer zoneId) {
+    this.zoneId = zoneId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("zoneId")
   public Integer getZoneId() {
     return zoneId;
@@ -89,8 +94,12 @@ public class Location   {
   
   /**
    **/
+  public Location aisleId(Integer aisleId) {
+    this.aisleId = aisleId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("aisleId")
   public Integer getAisleId() {
     return aisleId;
@@ -102,8 +111,12 @@ public class Location   {
   
   /**
    **/
+  public Location billingTypeId(Integer billingTypeId) {
+    this.billingTypeId = billingTypeId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("billingTypeId")
   public Integer getBillingTypeId() {
     return billingTypeId;
@@ -115,8 +128,12 @@ public class Location   {
   
   /**
    **/
+  public Location behaviorType(String behaviorType) {
+    this.behaviorType = behaviorType;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("behaviorType")
   public String getBehaviorType() {
     return behaviorType;
@@ -128,8 +145,12 @@ public class Location   {
   
   /**
    **/
+  public Location footprintId(Integer footprintId) {
+    this.footprintId = footprintId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("footprintId")
   public Integer getFootprintId() {
     return footprintId;
@@ -141,8 +162,12 @@ public class Location   {
   
   /**
    **/
+  public Location addressSchemeId(Integer addressSchemeId) {
+    this.addressSchemeId = addressSchemeId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("addressSchemeId")
   public Integer getAddressSchemeId() {
     return addressSchemeId;
@@ -152,23 +177,21 @@ public class Location   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("origin")
   public Integer getOrigin() {
     return origin;
-  }
-  public void setOrigin(Integer origin) {
-    this.origin = origin;
   }
 
   
   /**
    **/
+  public Location address(String address) {
+    this.address = address;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("address")
   public String getAddress() {
     return address;
@@ -180,8 +203,12 @@ public class Location   {
   
   /**
    **/
+  public Location level(Integer level) {
+    this.level = level;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("level")
   public Integer getLevel() {
     return level;
@@ -193,8 +220,12 @@ public class Location   {
   
   /**
    **/
+  public Location bay(Integer bay) {
+    this.bay = bay;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bay")
   public Integer getBay() {
     return bay;
@@ -206,8 +237,12 @@ public class Location   {
   
   /**
    **/
+  public Location number(Integer number) {
+    this.number = number;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("number")
   public Integer getNumber() {
     return number;
@@ -219,8 +254,12 @@ public class Location   {
   
   /**
    **/
+  public Location online(Boolean online) {
+    this.online = online;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("online")
   public Boolean getOnline() {
     return online;
@@ -232,8 +271,12 @@ public class Location   {
   
   /**
    **/
+  public Location priorityCode(Integer priorityCode) {
+    this.priorityCode = priorityCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("priorityCode")
   public Integer getPriorityCode() {
     return priorityCode;
@@ -245,8 +288,12 @@ public class Location   {
   
   /**
    **/
+  public Location allowItemMixing(Boolean allowItemMixing) {
+    this.allowItemMixing = allowItemMixing;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("allowItemMixing")
   public Boolean getAllowItemMixing() {
     return allowItemMixing;
@@ -256,35 +303,23 @@ public class Location   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -292,25 +327,25 @@ public class Location   {
       return false;
     }
     Location location = (Location) o;
-    return Objects.equals(id, location.id) &&
-        Objects.equals(warehouseId, location.warehouseId) &&
-        Objects.equals(buildingId, location.buildingId) &&
-        Objects.equals(zoneId, location.zoneId) &&
-        Objects.equals(aisleId, location.aisleId) &&
-        Objects.equals(billingTypeId, location.billingTypeId) &&
-        Objects.equals(behaviorType, location.behaviorType) &&
-        Objects.equals(footprintId, location.footprintId) &&
-        Objects.equals(addressSchemeId, location.addressSchemeId) &&
-        Objects.equals(origin, location.origin) &&
-        Objects.equals(address, location.address) &&
-        Objects.equals(level, location.level) &&
-        Objects.equals(bay, location.bay) &&
-        Objects.equals(number, location.number) &&
-        Objects.equals(online, location.online) &&
-        Objects.equals(priorityCode, location.priorityCode) &&
-        Objects.equals(allowItemMixing, location.allowItemMixing) &&
-        Objects.equals(createDate, location.createDate) &&
-        Objects.equals(modifyDate, location.modifyDate);
+    return Objects.equals(this.id, location.id) &&
+        Objects.equals(this.warehouseId, location.warehouseId) &&
+        Objects.equals(this.buildingId, location.buildingId) &&
+        Objects.equals(this.zoneId, location.zoneId) &&
+        Objects.equals(this.aisleId, location.aisleId) &&
+        Objects.equals(this.billingTypeId, location.billingTypeId) &&
+        Objects.equals(this.behaviorType, location.behaviorType) &&
+        Objects.equals(this.footprintId, location.footprintId) &&
+        Objects.equals(this.addressSchemeId, location.addressSchemeId) &&
+        Objects.equals(this.origin, location.origin) &&
+        Objects.equals(this.address, location.address) &&
+        Objects.equals(this.level, location.level) &&
+        Objects.equals(this.bay, location.bay) &&
+        Objects.equals(this.number, location.number) &&
+        Objects.equals(this.online, location.online) &&
+        Objects.equals(this.priorityCode, location.priorityCode) &&
+        Objects.equals(this.allowItemMixing, location.allowItemMixing) &&
+        Objects.equals(this.createDate, location.createDate) &&
+        Objects.equals(this.modifyDate, location.modifyDate);
   }
 
   @Override
@@ -350,7 +385,7 @@ public class Location   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

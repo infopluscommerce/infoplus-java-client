@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ParcelAccount   {
   
   private Integer id = null;
@@ -24,49 +23,35 @@ public class ParcelAccount   {
   private String manifestPartnerId = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public ParcelAccount carrier(String carrier) {
+    this.carrier = carrier;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("carrier")
   public String getCarrier() {
     return carrier;
@@ -78,8 +63,12 @@ public class ParcelAccount   {
   
   /**
    **/
+  public ParcelAccount accountNo(String accountNo) {
+    this.accountNo = accountNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("accountNo")
   public String getAccountNo() {
     return accountNo;
@@ -89,23 +78,21 @@ public class ParcelAccount   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("client")
   public Integer getClient() {
     return client;
-  }
-  public void setClient(Integer client) {
-    this.client = client;
   }
 
   
   /**
    **/
+  public ParcelAccount name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -117,8 +104,12 @@ public class ParcelAccount   {
   
   /**
    **/
+  public ParcelAccount manifestPartnerId(String manifestPartnerId) {
+    this.manifestPartnerId = manifestPartnerId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("manifestPartnerId")
   public String getManifestPartnerId() {
     return manifestPartnerId;
@@ -130,7 +121,7 @@ public class ParcelAccount   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -138,14 +129,14 @@ public class ParcelAccount   {
       return false;
     }
     ParcelAccount parcelAccount = (ParcelAccount) o;
-    return Objects.equals(id, parcelAccount.id) &&
-        Objects.equals(createDate, parcelAccount.createDate) &&
-        Objects.equals(modifyDate, parcelAccount.modifyDate) &&
-        Objects.equals(carrier, parcelAccount.carrier) &&
-        Objects.equals(accountNo, parcelAccount.accountNo) &&
-        Objects.equals(client, parcelAccount.client) &&
-        Objects.equals(name, parcelAccount.name) &&
-        Objects.equals(manifestPartnerId, parcelAccount.manifestPartnerId);
+    return Objects.equals(this.id, parcelAccount.id) &&
+        Objects.equals(this.createDate, parcelAccount.createDate) &&
+        Objects.equals(this.modifyDate, parcelAccount.modifyDate) &&
+        Objects.equals(this.carrier, parcelAccount.carrier) &&
+        Objects.equals(this.accountNo, parcelAccount.accountNo) &&
+        Objects.equals(this.client, parcelAccount.client) &&
+        Objects.equals(this.name, parcelAccount.name) &&
+        Objects.equals(this.manifestPartnerId, parcelAccount.manifestPartnerId);
   }
 
   @Override
@@ -174,7 +165,7 @@ public class ParcelAccount   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

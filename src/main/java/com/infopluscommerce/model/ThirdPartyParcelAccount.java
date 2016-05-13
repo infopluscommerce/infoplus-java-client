@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ThirdPartyParcelAccount   {
   
   private Integer id = null;
@@ -34,23 +33,21 @@ public class ThirdPartyParcelAccount   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public ThirdPartyParcelAccount lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -62,8 +59,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount carrier(String carrier) {
+    this.carrier = carrier;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("carrier")
   public String getCarrier() {
     return carrier;
@@ -75,8 +76,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount accountNo(String accountNo) {
+    this.accountNo = accountNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("accountNo")
   public String getAccountNo() {
     return accountNo;
@@ -88,8 +93,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount accountName(String accountName) {
+    this.accountName = accountName;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("accountName")
   public String getAccountName() {
     return accountName;
@@ -101,8 +110,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount billingCompany(String billingCompany) {
+    this.billingCompany = billingCompany;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("billingCompany")
   public String getBillingCompany() {
     return billingCompany;
@@ -114,8 +127,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount attention(String attention) {
+    this.attention = attention;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("attention")
   public String getAttention() {
     return attention;
@@ -127,8 +144,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount street1(String street1) {
+    this.street1 = street1;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("street1")
   public String getStreet1() {
     return street1;
@@ -140,8 +161,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount street2(String street2) {
+    this.street2 = street2;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("street2")
   public String getStreet2() {
     return street2;
@@ -153,8 +178,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount street3(String street3) {
+    this.street3 = street3;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("street3")
   public String getStreet3() {
     return street3;
@@ -166,8 +195,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount city(String city) {
+    this.city = city;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("city")
   public String getCity() {
     return city;
@@ -179,8 +212,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount state(String state) {
+    this.state = state;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -192,8 +229,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount country(String country) {
+    this.country = country;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("country")
   public String getCountry() {
     return country;
@@ -205,8 +246,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount zipCode(String zipCode) {
+    this.zipCode = zipCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("zipCode")
   public String getZipCode() {
     return zipCode;
@@ -218,8 +263,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount phone(String phone) {
+    this.phone = phone;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -231,8 +280,12 @@ public class ThirdPartyParcelAccount   {
   
   /**
    **/
+  public ThirdPartyParcelAccount active(String active) {
+    this.active = active;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("active")
   public String getActive() {
     return active;
@@ -242,35 +295,23 @@ public class ThirdPartyParcelAccount   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -278,24 +319,24 @@ public class ThirdPartyParcelAccount   {
       return false;
     }
     ThirdPartyParcelAccount thirdPartyParcelAccount = (ThirdPartyParcelAccount) o;
-    return Objects.equals(id, thirdPartyParcelAccount.id) &&
-        Objects.equals(lobId, thirdPartyParcelAccount.lobId) &&
-        Objects.equals(carrier, thirdPartyParcelAccount.carrier) &&
-        Objects.equals(accountNo, thirdPartyParcelAccount.accountNo) &&
-        Objects.equals(accountName, thirdPartyParcelAccount.accountName) &&
-        Objects.equals(billingCompany, thirdPartyParcelAccount.billingCompany) &&
-        Objects.equals(attention, thirdPartyParcelAccount.attention) &&
-        Objects.equals(street1, thirdPartyParcelAccount.street1) &&
-        Objects.equals(street2, thirdPartyParcelAccount.street2) &&
-        Objects.equals(street3, thirdPartyParcelAccount.street3) &&
-        Objects.equals(city, thirdPartyParcelAccount.city) &&
-        Objects.equals(state, thirdPartyParcelAccount.state) &&
-        Objects.equals(country, thirdPartyParcelAccount.country) &&
-        Objects.equals(zipCode, thirdPartyParcelAccount.zipCode) &&
-        Objects.equals(phone, thirdPartyParcelAccount.phone) &&
-        Objects.equals(active, thirdPartyParcelAccount.active) &&
-        Objects.equals(createDate, thirdPartyParcelAccount.createDate) &&
-        Objects.equals(modifyDate, thirdPartyParcelAccount.modifyDate);
+    return Objects.equals(this.id, thirdPartyParcelAccount.id) &&
+        Objects.equals(this.lobId, thirdPartyParcelAccount.lobId) &&
+        Objects.equals(this.carrier, thirdPartyParcelAccount.carrier) &&
+        Objects.equals(this.accountNo, thirdPartyParcelAccount.accountNo) &&
+        Objects.equals(this.accountName, thirdPartyParcelAccount.accountName) &&
+        Objects.equals(this.billingCompany, thirdPartyParcelAccount.billingCompany) &&
+        Objects.equals(this.attention, thirdPartyParcelAccount.attention) &&
+        Objects.equals(this.street1, thirdPartyParcelAccount.street1) &&
+        Objects.equals(this.street2, thirdPartyParcelAccount.street2) &&
+        Objects.equals(this.street3, thirdPartyParcelAccount.street3) &&
+        Objects.equals(this.city, thirdPartyParcelAccount.city) &&
+        Objects.equals(this.state, thirdPartyParcelAccount.state) &&
+        Objects.equals(this.country, thirdPartyParcelAccount.country) &&
+        Objects.equals(this.zipCode, thirdPartyParcelAccount.zipCode) &&
+        Objects.equals(this.phone, thirdPartyParcelAccount.phone) &&
+        Objects.equals(this.active, thirdPartyParcelAccount.active) &&
+        Objects.equals(this.createDate, thirdPartyParcelAccount.createDate) &&
+        Objects.equals(this.modifyDate, thirdPartyParcelAccount.modifyDate);
   }
 
   @Override
@@ -334,7 +375,7 @@ public class ThirdPartyParcelAccount   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

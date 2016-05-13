@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class QuickReceipt   {
   
   private Integer id = null;
@@ -44,62 +43,42 @@ public class QuickReceipt   {
   private String sku = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createdBy")
   public Integer getCreatedBy() {
     return createdBy;
   }
-  public void setCreatedBy(Integer createdBy) {
-    this.createdBy = createdBy;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public QuickReceipt warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -111,8 +90,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -124,8 +107,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt locationId(Integer locationId) {
+    this.locationId = locationId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("locationId")
   public Integer getLocationId() {
     return locationId;
@@ -137,8 +124,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt quantity(Integer quantity) {
+    this.quantity = quantity;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("quantity")
   public Integer getQuantity() {
     return quantity;
@@ -150,8 +141,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt vendorId(Integer vendorId) {
+    this.vendorId = vendorId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vendorId")
   public Integer getVendorId() {
     return vendorId;
@@ -163,8 +158,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt carrier(String carrier) {
+    this.carrier = carrier;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrier")
   public String getCarrier() {
     return carrier;
@@ -174,23 +173,21 @@ public class QuickReceipt   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public String getStatus() {
     return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
   }
 
   
   /**
    **/
+  public QuickReceipt unitCode(String unitCode) {
+    this.unitCode = unitCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("unitCode")
   public String getUnitCode() {
     return unitCode;
@@ -202,8 +199,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt wrapCode(String wrapCode) {
+    this.wrapCode = wrapCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("wrapCode")
   public String getWrapCode() {
     return wrapCode;
@@ -215,8 +216,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt weightPerWrap(Double weightPerWrap) {
+    this.weightPerWrap = weightPerWrap;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("weightPerWrap")
   public Double getWeightPerWrap() {
     return weightPerWrap;
@@ -228,8 +233,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt unitsPerWrap(Integer unitsPerWrap) {
+    this.unitsPerWrap = unitsPerWrap;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("unitsPerWrap")
   public Integer getUnitsPerWrap() {
     return unitsPerWrap;
@@ -241,8 +250,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt unitsPerCase(Integer unitsPerCase) {
+    this.unitsPerCase = unitsPerCase;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitsPerCase")
   public Integer getUnitsPerCase() {
     return unitsPerCase;
@@ -254,8 +267,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt casesPerPallet(Integer casesPerPallet) {
+    this.casesPerPallet = casesPerPallet;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("casesPerPallet")
   public Integer getCasesPerPallet() {
     return casesPerPallet;
@@ -267,8 +284,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt caseWeight(Double caseWeight) {
+    this.caseWeight = caseWeight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("caseWeight")
   public Double getCaseWeight() {
     return caseWeight;
@@ -280,8 +301,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt productionLot(String productionLot) {
+    this.productionLot = productionLot;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("productionLot")
   public String getProductionLot() {
     return productionLot;
@@ -293,8 +318,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt revisionDate(String revisionDate) {
+    this.revisionDate = revisionDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("revisionDate")
   public String getRevisionDate() {
     return revisionDate;
@@ -306,8 +335,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt origin(String origin) {
+    this.origin = origin;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("origin")
   public String getOrigin() {
     return origin;
@@ -319,8 +352,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt cartonLength(Double cartonLength) {
+    this.cartonLength = cartonLength;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonLength")
   public Double getCartonLength() {
     return cartonLength;
@@ -332,8 +369,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt cartonWidth(Double cartonWidth) {
+    this.cartonWidth = cartonWidth;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonWidth")
   public Double getCartonWidth() {
     return cartonWidth;
@@ -345,8 +386,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt cartonHeight(Double cartonHeight) {
+    this.cartonHeight = cartonHeight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonHeight")
   public Double getCartonHeight() {
     return cartonHeight;
@@ -358,8 +403,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt cost(Double cost) {
+    this.cost = cost;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cost")
   public Double getCost() {
     return cost;
@@ -371,8 +420,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt sell(Double sell) {
+    this.sell = sell;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sell")
   public Double getSell() {
     return sell;
@@ -384,8 +437,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt pricingPer(String pricingPer) {
+    this.pricingPer = pricingPer;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pricingPer")
   public String getPricingPer() {
     return pricingPer;
@@ -397,8 +454,12 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
@@ -410,7 +471,7 @@ public class QuickReceipt   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -418,34 +479,34 @@ public class QuickReceipt   {
       return false;
     }
     QuickReceipt quickReceipt = (QuickReceipt) o;
-    return Objects.equals(id, quickReceipt.id) &&
-        Objects.equals(createdBy, quickReceipt.createdBy) &&
-        Objects.equals(createDate, quickReceipt.createDate) &&
-        Objects.equals(modifyDate, quickReceipt.modifyDate) &&
-        Objects.equals(warehouseId, quickReceipt.warehouseId) &&
-        Objects.equals(lobId, quickReceipt.lobId) &&
-        Objects.equals(locationId, quickReceipt.locationId) &&
-        Objects.equals(quantity, quickReceipt.quantity) &&
-        Objects.equals(vendorId, quickReceipt.vendorId) &&
-        Objects.equals(carrier, quickReceipt.carrier) &&
-        Objects.equals(status, quickReceipt.status) &&
-        Objects.equals(unitCode, quickReceipt.unitCode) &&
-        Objects.equals(wrapCode, quickReceipt.wrapCode) &&
-        Objects.equals(weightPerWrap, quickReceipt.weightPerWrap) &&
-        Objects.equals(unitsPerWrap, quickReceipt.unitsPerWrap) &&
-        Objects.equals(unitsPerCase, quickReceipt.unitsPerCase) &&
-        Objects.equals(casesPerPallet, quickReceipt.casesPerPallet) &&
-        Objects.equals(caseWeight, quickReceipt.caseWeight) &&
-        Objects.equals(productionLot, quickReceipt.productionLot) &&
-        Objects.equals(revisionDate, quickReceipt.revisionDate) &&
-        Objects.equals(origin, quickReceipt.origin) &&
-        Objects.equals(cartonLength, quickReceipt.cartonLength) &&
-        Objects.equals(cartonWidth, quickReceipt.cartonWidth) &&
-        Objects.equals(cartonHeight, quickReceipt.cartonHeight) &&
-        Objects.equals(cost, quickReceipt.cost) &&
-        Objects.equals(sell, quickReceipt.sell) &&
-        Objects.equals(pricingPer, quickReceipt.pricingPer) &&
-        Objects.equals(sku, quickReceipt.sku);
+    return Objects.equals(this.id, quickReceipt.id) &&
+        Objects.equals(this.createdBy, quickReceipt.createdBy) &&
+        Objects.equals(this.createDate, quickReceipt.createDate) &&
+        Objects.equals(this.modifyDate, quickReceipt.modifyDate) &&
+        Objects.equals(this.warehouseId, quickReceipt.warehouseId) &&
+        Objects.equals(this.lobId, quickReceipt.lobId) &&
+        Objects.equals(this.locationId, quickReceipt.locationId) &&
+        Objects.equals(this.quantity, quickReceipt.quantity) &&
+        Objects.equals(this.vendorId, quickReceipt.vendorId) &&
+        Objects.equals(this.carrier, quickReceipt.carrier) &&
+        Objects.equals(this.status, quickReceipt.status) &&
+        Objects.equals(this.unitCode, quickReceipt.unitCode) &&
+        Objects.equals(this.wrapCode, quickReceipt.wrapCode) &&
+        Objects.equals(this.weightPerWrap, quickReceipt.weightPerWrap) &&
+        Objects.equals(this.unitsPerWrap, quickReceipt.unitsPerWrap) &&
+        Objects.equals(this.unitsPerCase, quickReceipt.unitsPerCase) &&
+        Objects.equals(this.casesPerPallet, quickReceipt.casesPerPallet) &&
+        Objects.equals(this.caseWeight, quickReceipt.caseWeight) &&
+        Objects.equals(this.productionLot, quickReceipt.productionLot) &&
+        Objects.equals(this.revisionDate, quickReceipt.revisionDate) &&
+        Objects.equals(this.origin, quickReceipt.origin) &&
+        Objects.equals(this.cartonLength, quickReceipt.cartonLength) &&
+        Objects.equals(this.cartonWidth, quickReceipt.cartonWidth) &&
+        Objects.equals(this.cartonHeight, quickReceipt.cartonHeight) &&
+        Objects.equals(this.cost, quickReceipt.cost) &&
+        Objects.equals(this.sell, quickReceipt.sell) &&
+        Objects.equals(this.pricingPer, quickReceipt.pricingPer) &&
+        Objects.equals(this.sku, quickReceipt.sku);
   }
 
   @Override
@@ -494,7 +555,7 @@ public class QuickReceipt   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

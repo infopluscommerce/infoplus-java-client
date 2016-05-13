@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class LocationAddressScheme   {
   
   private Integer id = null;
@@ -34,36 +33,28 @@ public class LocationAddressScheme   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("clientId")
   public Integer getClientId() {
     return clientId;
   }
-  public void setClientId(Integer clientId) {
-    this.clientId = clientId;
-  }
 
   
   /**
    **/
+  public LocationAddressScheme name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -75,8 +66,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme formatString(String formatString) {
+    this.formatString = formatString;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("formatString")
   public String getFormatString() {
     return formatString;
@@ -88,8 +83,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme locationNamingScheme(String locationNamingScheme) {
+    this.locationNamingScheme = locationNamingScheme;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("locationNamingScheme")
   public String getLocationNamingScheme() {
     return locationNamingScheme;
@@ -101,8 +100,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme locationNumberZeroPadded(Boolean locationNumberZeroPadded) {
+    this.locationNumberZeroPadded = locationNumberZeroPadded;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("locationNumberZeroPadded")
   public Boolean getLocationNumberZeroPadded() {
     return locationNumberZeroPadded;
@@ -114,8 +117,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme locationNumberMinimumNumberOfDigits(Integer locationNumberMinimumNumberOfDigits) {
+    this.locationNumberMinimumNumberOfDigits = locationNumberMinimumNumberOfDigits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("locationNumberMinimumNumberOfDigits")
   public Integer getLocationNumberMinimumNumberOfDigits() {
     return locationNumberMinimumNumberOfDigits;
@@ -127,8 +134,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme levelNamingScheme(String levelNamingScheme) {
+    this.levelNamingScheme = levelNamingScheme;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("levelNamingScheme")
   public String getLevelNamingScheme() {
     return levelNamingScheme;
@@ -140,8 +151,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme levelNumberZeroPadded(Boolean levelNumberZeroPadded) {
+    this.levelNumberZeroPadded = levelNumberZeroPadded;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("levelNumberZeroPadded")
   public Boolean getLevelNumberZeroPadded() {
     return levelNumberZeroPadded;
@@ -153,8 +168,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme levelNumberMinimumNumberOfDigits(Integer levelNumberMinimumNumberOfDigits) {
+    this.levelNumberMinimumNumberOfDigits = levelNumberMinimumNumberOfDigits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("levelNumberMinimumNumberOfDigits")
   public Integer getLevelNumberMinimumNumberOfDigits() {
     return levelNumberMinimumNumberOfDigits;
@@ -166,8 +185,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme aisleNamingScheme(String aisleNamingScheme) {
+    this.aisleNamingScheme = aisleNamingScheme;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("aisleNamingScheme")
   public String getAisleNamingScheme() {
     return aisleNamingScheme;
@@ -179,8 +202,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme aisleNumberZeroPadded(Boolean aisleNumberZeroPadded) {
+    this.aisleNumberZeroPadded = aisleNumberZeroPadded;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("aisleNumberZeroPadded")
   public Boolean getAisleNumberZeroPadded() {
     return aisleNumberZeroPadded;
@@ -192,8 +219,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme aisleNumberMinimumNumberOfDigits(Integer aisleNumberMinimumNumberOfDigits) {
+    this.aisleNumberMinimumNumberOfDigits = aisleNumberMinimumNumberOfDigits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("aisleNumberMinimumNumberOfDigits")
   public Integer getAisleNumberMinimumNumberOfDigits() {
     return aisleNumberMinimumNumberOfDigits;
@@ -205,8 +236,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme bayNamingScheme(String bayNamingScheme) {
+    this.bayNamingScheme = bayNamingScheme;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bayNamingScheme")
   public String getBayNamingScheme() {
     return bayNamingScheme;
@@ -218,8 +253,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme bayNumberZeroPadded(Boolean bayNumberZeroPadded) {
+    this.bayNumberZeroPadded = bayNumberZeroPadded;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bayNumberZeroPadded")
   public Boolean getBayNumberZeroPadded() {
     return bayNumberZeroPadded;
@@ -231,8 +270,12 @@ public class LocationAddressScheme   {
   
   /**
    **/
+  public LocationAddressScheme bayNumberMinimumNumberOfDigits(Integer bayNumberMinimumNumberOfDigits) {
+    this.bayNumberMinimumNumberOfDigits = bayNumberMinimumNumberOfDigits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bayNumberMinimumNumberOfDigits")
   public Integer getBayNumberMinimumNumberOfDigits() {
     return bayNumberMinimumNumberOfDigits;
@@ -242,35 +285,23 @@ public class LocationAddressScheme   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -278,24 +309,24 @@ public class LocationAddressScheme   {
       return false;
     }
     LocationAddressScheme locationAddressScheme = (LocationAddressScheme) o;
-    return Objects.equals(id, locationAddressScheme.id) &&
-        Objects.equals(clientId, locationAddressScheme.clientId) &&
-        Objects.equals(name, locationAddressScheme.name) &&
-        Objects.equals(formatString, locationAddressScheme.formatString) &&
-        Objects.equals(locationNamingScheme, locationAddressScheme.locationNamingScheme) &&
-        Objects.equals(locationNumberZeroPadded, locationAddressScheme.locationNumberZeroPadded) &&
-        Objects.equals(locationNumberMinimumNumberOfDigits, locationAddressScheme.locationNumberMinimumNumberOfDigits) &&
-        Objects.equals(levelNamingScheme, locationAddressScheme.levelNamingScheme) &&
-        Objects.equals(levelNumberZeroPadded, locationAddressScheme.levelNumberZeroPadded) &&
-        Objects.equals(levelNumberMinimumNumberOfDigits, locationAddressScheme.levelNumberMinimumNumberOfDigits) &&
-        Objects.equals(aisleNamingScheme, locationAddressScheme.aisleNamingScheme) &&
-        Objects.equals(aisleNumberZeroPadded, locationAddressScheme.aisleNumberZeroPadded) &&
-        Objects.equals(aisleNumberMinimumNumberOfDigits, locationAddressScheme.aisleNumberMinimumNumberOfDigits) &&
-        Objects.equals(bayNamingScheme, locationAddressScheme.bayNamingScheme) &&
-        Objects.equals(bayNumberZeroPadded, locationAddressScheme.bayNumberZeroPadded) &&
-        Objects.equals(bayNumberMinimumNumberOfDigits, locationAddressScheme.bayNumberMinimumNumberOfDigits) &&
-        Objects.equals(createDate, locationAddressScheme.createDate) &&
-        Objects.equals(modifyDate, locationAddressScheme.modifyDate);
+    return Objects.equals(this.id, locationAddressScheme.id) &&
+        Objects.equals(this.clientId, locationAddressScheme.clientId) &&
+        Objects.equals(this.name, locationAddressScheme.name) &&
+        Objects.equals(this.formatString, locationAddressScheme.formatString) &&
+        Objects.equals(this.locationNamingScheme, locationAddressScheme.locationNamingScheme) &&
+        Objects.equals(this.locationNumberZeroPadded, locationAddressScheme.locationNumberZeroPadded) &&
+        Objects.equals(this.locationNumberMinimumNumberOfDigits, locationAddressScheme.locationNumberMinimumNumberOfDigits) &&
+        Objects.equals(this.levelNamingScheme, locationAddressScheme.levelNamingScheme) &&
+        Objects.equals(this.levelNumberZeroPadded, locationAddressScheme.levelNumberZeroPadded) &&
+        Objects.equals(this.levelNumberMinimumNumberOfDigits, locationAddressScheme.levelNumberMinimumNumberOfDigits) &&
+        Objects.equals(this.aisleNamingScheme, locationAddressScheme.aisleNamingScheme) &&
+        Objects.equals(this.aisleNumberZeroPadded, locationAddressScheme.aisleNumberZeroPadded) &&
+        Objects.equals(this.aisleNumberMinimumNumberOfDigits, locationAddressScheme.aisleNumberMinimumNumberOfDigits) &&
+        Objects.equals(this.bayNamingScheme, locationAddressScheme.bayNamingScheme) &&
+        Objects.equals(this.bayNumberZeroPadded, locationAddressScheme.bayNumberZeroPadded) &&
+        Objects.equals(this.bayNumberMinimumNumberOfDigits, locationAddressScheme.bayNumberMinimumNumberOfDigits) &&
+        Objects.equals(this.createDate, locationAddressScheme.createDate) &&
+        Objects.equals(this.modifyDate, locationAddressScheme.modifyDate);
   }
 
   @Override
@@ -334,7 +365,7 @@ public class LocationAddressScheme   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

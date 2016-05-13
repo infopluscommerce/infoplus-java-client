@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class BillOfLadingCarrierInfoLine   {
   
   private Integer seqNo = null;
@@ -27,8 +26,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine seqNo(Integer seqNo) {
+    this.seqNo = seqNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("seqNo")
   public Integer getSeqNo() {
     return seqNo;
@@ -40,8 +43,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine huQuantity(Integer huQuantity) {
+    this.huQuantity = huQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("huQuantity")
   public Integer getHuQuantity() {
     return huQuantity;
@@ -53,8 +60,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine huType(String huType) {
+    this.huType = huType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("huType")
   public String getHuType() {
     return huType;
@@ -66,8 +77,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine packageQuantity(Integer packageQuantity) {
+    this.packageQuantity = packageQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("packageQuantity")
   public Integer getPackageQuantity() {
     return packageQuantity;
@@ -79,8 +94,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine packageType(String packageType) {
+    this.packageType = packageType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("packageType")
   public String getPackageType() {
     return packageType;
@@ -92,8 +111,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine weight(Integer weight) {
+    this.weight = weight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weight")
   public Integer getWeight() {
     return weight;
@@ -105,8 +128,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine isHazardousMaterial(Boolean isHazardousMaterial) {
+    this.isHazardousMaterial = isHazardousMaterial;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isHazardousMaterial")
   public Boolean getIsHazardousMaterial() {
     return isHazardousMaterial;
@@ -118,8 +145,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine commodityDescription(String commodityDescription) {
+    this.commodityDescription = commodityDescription;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("commodityDescription")
   public String getCommodityDescription() {
     return commodityDescription;
@@ -131,8 +162,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine nfmcNo(String nfmcNo) {
+    this.nfmcNo = nfmcNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("nfmcNo")
   public String getNfmcNo() {
     return nfmcNo;
@@ -144,8 +179,12 @@ public class BillOfLadingCarrierInfoLine   {
   
   /**
    **/
+  public BillOfLadingCarrierInfoLine carrierClass(String carrierClass) {
+    this.carrierClass = carrierClass;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrierClass")
   public String getCarrierClass() {
     return carrierClass;
@@ -157,7 +196,7 @@ public class BillOfLadingCarrierInfoLine   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -165,16 +204,16 @@ public class BillOfLadingCarrierInfoLine   {
       return false;
     }
     BillOfLadingCarrierInfoLine billOfLadingCarrierInfoLine = (BillOfLadingCarrierInfoLine) o;
-    return Objects.equals(seqNo, billOfLadingCarrierInfoLine.seqNo) &&
-        Objects.equals(huQuantity, billOfLadingCarrierInfoLine.huQuantity) &&
-        Objects.equals(huType, billOfLadingCarrierInfoLine.huType) &&
-        Objects.equals(packageQuantity, billOfLadingCarrierInfoLine.packageQuantity) &&
-        Objects.equals(packageType, billOfLadingCarrierInfoLine.packageType) &&
-        Objects.equals(weight, billOfLadingCarrierInfoLine.weight) &&
-        Objects.equals(isHazardousMaterial, billOfLadingCarrierInfoLine.isHazardousMaterial) &&
-        Objects.equals(commodityDescription, billOfLadingCarrierInfoLine.commodityDescription) &&
-        Objects.equals(nfmcNo, billOfLadingCarrierInfoLine.nfmcNo) &&
-        Objects.equals(carrierClass, billOfLadingCarrierInfoLine.carrierClass);
+    return Objects.equals(this.seqNo, billOfLadingCarrierInfoLine.seqNo) &&
+        Objects.equals(this.huQuantity, billOfLadingCarrierInfoLine.huQuantity) &&
+        Objects.equals(this.huType, billOfLadingCarrierInfoLine.huType) &&
+        Objects.equals(this.packageQuantity, billOfLadingCarrierInfoLine.packageQuantity) &&
+        Objects.equals(this.packageType, billOfLadingCarrierInfoLine.packageType) &&
+        Objects.equals(this.weight, billOfLadingCarrierInfoLine.weight) &&
+        Objects.equals(this.isHazardousMaterial, billOfLadingCarrierInfoLine.isHazardousMaterial) &&
+        Objects.equals(this.commodityDescription, billOfLadingCarrierInfoLine.commodityDescription) &&
+        Objects.equals(this.nfmcNo, billOfLadingCarrierInfoLine.nfmcNo) &&
+        Objects.equals(this.carrierClass, billOfLadingCarrierInfoLine.carrierClass);
   }
 
   @Override
@@ -205,7 +244,7 @@ public class BillOfLadingCarrierInfoLine   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

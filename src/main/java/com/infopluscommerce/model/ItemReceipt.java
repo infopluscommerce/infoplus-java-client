@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class ItemReceipt   {
   
   private Integer id = null;
@@ -85,23 +84,21 @@ public class ItemReceipt   {
   private Integer asnLine = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public ItemReceipt poNo(String poNo) {
+    this.poNo = poNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("poNo")
   public String getPoNo() {
     return poNo;
@@ -113,8 +110,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -126,8 +127,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt legacyPoNo(String legacyPoNo) {
+    this.legacyPoNo = legacyPoNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("legacyPoNo")
   public String getLegacyPoNo() {
     return legacyPoNo;
@@ -139,8 +144,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt warehouseId(Integer warehouseId) {
+    this.warehouseId = warehouseId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
@@ -152,8 +161,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt orderDate(Date orderDate) {
+    this.orderDate = orderDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderDate")
   public Date getOrderDate() {
     return orderDate;
@@ -165,8 +178,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt factCost(Double factCost) {
+    this.factCost = factCost;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("factCost")
   public Double getFactCost() {
     return factCost;
@@ -178,8 +195,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt mlCost(Double mlCost) {
+    this.mlCost = mlCost;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mlCost")
   public Double getMlCost() {
     return mlCost;
@@ -191,8 +212,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
@@ -204,8 +229,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt orderQuantity(Integer orderQuantity) {
+    this.orderQuantity = orderQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderQuantity")
   public Integer getOrderQuantity() {
     return orderQuantity;
@@ -217,8 +246,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt requestedDeliveryDate(Date requestedDeliveryDate) {
+    this.requestedDeliveryDate = requestedDeliveryDate;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("requestedDeliveryDate")
   public Date getRequestedDeliveryDate() {
     return requestedDeliveryDate;
@@ -230,8 +263,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt unitCode(String unitCode) {
+    this.unitCode = unitCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("unitCode")
   public String getUnitCode() {
     return unitCode;
@@ -243,8 +280,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt wrapCode(String wrapCode) {
+    this.wrapCode = wrapCode;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("wrapCode")
   public String getWrapCode() {
     return wrapCode;
@@ -256,8 +297,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt unitsPerWrap(Integer unitsPerWrap) {
+    this.unitsPerWrap = unitsPerWrap;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("unitsPerWrap")
   public Integer getUnitsPerWrap() {
     return unitsPerWrap;
@@ -269,8 +314,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt cost(Double cost) {
+    this.cost = cost;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cost")
   public Double getCost() {
     return cost;
@@ -282,8 +331,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt sell(Double sell) {
+    this.sell = sell;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sell")
   public Double getSell() {
     return sell;
@@ -295,8 +348,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt pricingPer(String pricingPer) {
+    this.pricingPer = pricingPer;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pricingPer")
   public String getPricingPer() {
     return pricingPer;
@@ -308,8 +365,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt maxFreight(Double maxFreight) {
+    this.maxFreight = maxFreight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("maxFreight")
   public Double getMaxFreight() {
     return maxFreight;
@@ -321,8 +382,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt chargeFreight(String chargeFreight) {
+    this.chargeFreight = chargeFreight;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("chargeFreight")
   public String getChargeFreight() {
     return chargeFreight;
@@ -334,8 +399,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt maxOther(Double maxOther) {
+    this.maxOther = maxOther;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("maxOther")
   public Double getMaxOther() {
     return maxOther;
@@ -347,8 +416,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt distDate(Date distDate) {
+    this.distDate = distDate;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("distDate")
   public Date getDistDate() {
     return distDate;
@@ -360,8 +433,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt voidDate(Date voidDate) {
+    this.voidDate = voidDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("voidDate")
   public Date getVoidDate() {
     return voidDate;
@@ -373,8 +450,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt freezeAction(String freezeAction) {
+    this.freezeAction = freezeAction;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("freezeAction")
   public String getFreezeAction() {
     return freezeAction;
@@ -386,8 +467,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt revDate(String revDate) {
+    this.revDate = revDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("revDate")
   public String getRevDate() {
     return revDate;
@@ -399,8 +484,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt artBack(String artBack) {
+    this.artBack = artBack;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("artBack")
   public String getArtBack() {
     return artBack;
@@ -412,8 +501,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt origin(String origin) {
+    this.origin = origin;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("origin")
   public String getOrigin() {
     return origin;
@@ -425,8 +518,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt sample(Integer sample) {
+    this.sample = sample;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sample")
   public Integer getSample() {
     return sample;
@@ -438,8 +535,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt sampleTo(String sampleTo) {
+    this.sampleTo = sampleTo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sampleTo")
   public String getSampleTo() {
     return sampleTo;
@@ -451,8 +552,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt maxOvers(Integer maxOvers) {
+    this.maxOvers = maxOvers;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("maxOvers")
   public Integer getMaxOvers() {
     return maxOvers;
@@ -464,8 +569,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt maxUnders(Integer maxUnders) {
+    this.maxUnders = maxUnders;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("maxUnders")
   public Integer getMaxUnders() {
     return maxUnders;
@@ -477,8 +586,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt receivedSfp(Integer receivedSfp) {
+    this.receivedSfp = receivedSfp;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("receivedSfp")
   public Integer getReceivedSfp() {
     return receivedSfp;
@@ -490,8 +603,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt budgetCode(String budgetCode) {
+    this.budgetCode = budgetCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("budgetCode")
   public String getBudgetCode() {
     return budgetCode;
@@ -503,8 +620,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt accountingCode(String accountingCode) {
+    this.accountingCode = accountingCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("accountingCode")
   public String getAccountingCode() {
     return accountingCode;
@@ -516,8 +637,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt taxExempt(String taxExempt) {
+    this.taxExempt = taxExempt;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("taxExempt")
   public String getTaxExempt() {
     return taxExempt;
@@ -529,8 +654,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt capitalize(String capitalize) {
+    this.capitalize = capitalize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("capitalize")
   public String getCapitalize() {
     return capitalize;
@@ -542,8 +671,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt accrual(String accrual) {
+    this.accrual = accrual;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("accrual")
   public String getAccrual() {
     return accrual;
@@ -555,8 +688,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt oddQuantity(Integer oddQuantity) {
+    this.oddQuantity = oddQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("oddQuantity")
   public Integer getOddQuantity() {
     return oddQuantity;
@@ -568,8 +705,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt freightCost(Double freightCost) {
+    this.freightCost = freightCost;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("freightCost")
   public Double getFreightCost() {
     return freightCost;
@@ -581,8 +722,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt receivedDate(Date receivedDate) {
+    this.receivedDate = receivedDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("receivedDate")
   public Date getReceivedDate() {
     return receivedDate;
@@ -594,8 +739,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt receivedQuantity(Integer receivedQuantity) {
+    this.receivedQuantity = receivedQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("receivedQuantity")
   public Integer getReceivedQuantity() {
     return receivedQuantity;
@@ -607,8 +756,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt fromProd(Integer fromProd) {
+    this.fromProd = fromProd;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fromProd")
   public Integer getFromProd() {
     return fromProd;
@@ -620,8 +773,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt sfpComplete(String sfpComplete) {
+    this.sfpComplete = sfpComplete;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sfpComplete")
   public String getSfpComplete() {
     return sfpComplete;
@@ -633,8 +790,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt endQuantity(Integer endQuantity) {
+    this.endQuantity = endQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("endQuantity")
   public Integer getEndQuantity() {
     return endQuantity;
@@ -646,8 +807,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt endVal(Double endVal) {
+    this.endVal = endVal;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("endVal")
   public Double getEndVal() {
     return endVal;
@@ -659,8 +824,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt endFact(Double endFact) {
+    this.endFact = endFact;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("endFact")
   public Double getEndFact() {
     return endFact;
@@ -672,8 +841,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt interimQuantity(Integer interimQuantity) {
+    this.interimQuantity = interimQuantity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("interimQuantity")
   public Integer getInterimQuantity() {
     return interimQuantity;
@@ -685,8 +858,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt interimVal(Double interimVal) {
+    this.interimVal = interimVal;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("interimVal")
   public Double getInterimVal() {
     return interimVal;
@@ -698,8 +875,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt interimFact(Double interimFact) {
+    this.interimFact = interimFact;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("interimFact")
   public Double getInterimFact() {
     return interimFact;
@@ -711,8 +892,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt lastAct(Date lastAct) {
+    this.lastAct = lastAct;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lastAct")
   public Date getLastAct() {
     return lastAct;
@@ -724,8 +909,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt weightPerWrap(Double weightPerWrap) {
+    this.weightPerWrap = weightPerWrap;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightPerWrap")
   public Double getWeightPerWrap() {
     return weightPerWrap;
@@ -737,8 +926,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt norcs(String norcs) {
+    this.norcs = norcs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("norcs")
   public String getNorcs() {
     return norcs;
@@ -750,8 +943,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt vendorId(Integer vendorId) {
+    this.vendorId = vendorId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("vendorId")
   public Integer getVendorId() {
     return vendorId;
@@ -763,8 +960,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt bsVendor(Integer bsVendor) {
+    this.bsVendor = bsVendor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bsVendor")
   public Integer getBsVendor() {
     return bsVendor;
@@ -776,8 +977,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt mlVendor(Integer mlVendor) {
+    this.mlVendor = mlVendor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mlVendor")
   public Integer getMlVendor() {
     return mlVendor;
@@ -789,8 +994,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt receiptNo(Integer receiptNo) {
+    this.receiptNo = receiptNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("receiptNo")
   public Integer getReceiptNo() {
     return receiptNo;
@@ -802,8 +1011,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt paidFull(String paidFull) {
+    this.paidFull = paidFull;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("paidFull")
   public String getPaidFull() {
     return paidFull;
@@ -815,8 +1028,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt enteredBy(String enteredBy) {
+    this.enteredBy = enteredBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("enteredBy")
   public String getEnteredBy() {
     return enteredBy;
@@ -828,8 +1045,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt receivedBy(String receivedBy) {
+    this.receivedBy = receivedBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("receivedBy")
   public String getReceivedBy() {
     return receivedBy;
@@ -841,8 +1062,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt lineNo(Integer lineNo) {
+    this.lineNo = lineNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lineNo")
   public Integer getLineNo() {
     return lineNo;
@@ -854,8 +1079,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt prodLot(String prodLot) {
+    this.prodLot = prodLot;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("prodLot")
   public String getProdLot() {
     return prodLot;
@@ -867,8 +1096,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt unitsPerCase(Integer unitsPerCase) {
+    this.unitsPerCase = unitsPerCase;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitsPerCase")
   public Integer getUnitsPerCase() {
     return unitsPerCase;
@@ -880,8 +1113,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt caseWeight(Double caseWeight) {
+    this.caseWeight = caseWeight;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("caseWeight")
   public Double getCaseWeight() {
     return caseWeight;
@@ -893,8 +1130,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt height(Double height) {
+    this.height = height;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("height")
   public Double getHeight() {
     return height;
@@ -906,8 +1147,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt width(Double width) {
+    this.width = width;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("width")
   public Double getWidth() {
     return width;
@@ -919,8 +1164,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt length(Double length) {
+    this.length = length;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("length")
   public Double getLength() {
     return length;
@@ -932,8 +1181,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt dockTime(Date dockTime) {
+    this.dockTime = dockTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dockTime")
   public Date getDockTime() {
     return dockTime;
@@ -943,23 +1196,21 @@ public class ItemReceipt   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
   /**
    **/
+  public ItemReceipt impressions(Integer impressions) {
+    this.impressions = impressions;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("impressions")
   public Integer getImpressions() {
     return impressions;
@@ -971,8 +1222,12 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt asnLine(Integer asnLine) {
+    this.asnLine = asnLine;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("asnLine")
   public Integer getAsnLine() {
     return asnLine;
@@ -984,7 +1239,7 @@ public class ItemReceipt   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -992,75 +1247,75 @@ public class ItemReceipt   {
       return false;
     }
     ItemReceipt itemReceipt = (ItemReceipt) o;
-    return Objects.equals(id, itemReceipt.id) &&
-        Objects.equals(poNo, itemReceipt.poNo) &&
-        Objects.equals(lobId, itemReceipt.lobId) &&
-        Objects.equals(legacyPoNo, itemReceipt.legacyPoNo) &&
-        Objects.equals(warehouseId, itemReceipt.warehouseId) &&
-        Objects.equals(orderDate, itemReceipt.orderDate) &&
-        Objects.equals(factCost, itemReceipt.factCost) &&
-        Objects.equals(mlCost, itemReceipt.mlCost) &&
-        Objects.equals(sku, itemReceipt.sku) &&
-        Objects.equals(orderQuantity, itemReceipt.orderQuantity) &&
-        Objects.equals(requestedDeliveryDate, itemReceipt.requestedDeliveryDate) &&
-        Objects.equals(unitCode, itemReceipt.unitCode) &&
-        Objects.equals(wrapCode, itemReceipt.wrapCode) &&
-        Objects.equals(unitsPerWrap, itemReceipt.unitsPerWrap) &&
-        Objects.equals(cost, itemReceipt.cost) &&
-        Objects.equals(sell, itemReceipt.sell) &&
-        Objects.equals(pricingPer, itemReceipt.pricingPer) &&
-        Objects.equals(maxFreight, itemReceipt.maxFreight) &&
-        Objects.equals(chargeFreight, itemReceipt.chargeFreight) &&
-        Objects.equals(maxOther, itemReceipt.maxOther) &&
-        Objects.equals(distDate, itemReceipt.distDate) &&
-        Objects.equals(voidDate, itemReceipt.voidDate) &&
-        Objects.equals(freezeAction, itemReceipt.freezeAction) &&
-        Objects.equals(revDate, itemReceipt.revDate) &&
-        Objects.equals(artBack, itemReceipt.artBack) &&
-        Objects.equals(origin, itemReceipt.origin) &&
-        Objects.equals(sample, itemReceipt.sample) &&
-        Objects.equals(sampleTo, itemReceipt.sampleTo) &&
-        Objects.equals(maxOvers, itemReceipt.maxOvers) &&
-        Objects.equals(maxUnders, itemReceipt.maxUnders) &&
-        Objects.equals(receivedSfp, itemReceipt.receivedSfp) &&
-        Objects.equals(budgetCode, itemReceipt.budgetCode) &&
-        Objects.equals(accountingCode, itemReceipt.accountingCode) &&
-        Objects.equals(taxExempt, itemReceipt.taxExempt) &&
-        Objects.equals(capitalize, itemReceipt.capitalize) &&
-        Objects.equals(accrual, itemReceipt.accrual) &&
-        Objects.equals(oddQuantity, itemReceipt.oddQuantity) &&
-        Objects.equals(freightCost, itemReceipt.freightCost) &&
-        Objects.equals(receivedDate, itemReceipt.receivedDate) &&
-        Objects.equals(receivedQuantity, itemReceipt.receivedQuantity) &&
-        Objects.equals(fromProd, itemReceipt.fromProd) &&
-        Objects.equals(sfpComplete, itemReceipt.sfpComplete) &&
-        Objects.equals(endQuantity, itemReceipt.endQuantity) &&
-        Objects.equals(endVal, itemReceipt.endVal) &&
-        Objects.equals(endFact, itemReceipt.endFact) &&
-        Objects.equals(interimQuantity, itemReceipt.interimQuantity) &&
-        Objects.equals(interimVal, itemReceipt.interimVal) &&
-        Objects.equals(interimFact, itemReceipt.interimFact) &&
-        Objects.equals(lastAct, itemReceipt.lastAct) &&
-        Objects.equals(weightPerWrap, itemReceipt.weightPerWrap) &&
-        Objects.equals(norcs, itemReceipt.norcs) &&
-        Objects.equals(vendorId, itemReceipt.vendorId) &&
-        Objects.equals(bsVendor, itemReceipt.bsVendor) &&
-        Objects.equals(mlVendor, itemReceipt.mlVendor) &&
-        Objects.equals(receiptNo, itemReceipt.receiptNo) &&
-        Objects.equals(paidFull, itemReceipt.paidFull) &&
-        Objects.equals(enteredBy, itemReceipt.enteredBy) &&
-        Objects.equals(receivedBy, itemReceipt.receivedBy) &&
-        Objects.equals(lineNo, itemReceipt.lineNo) &&
-        Objects.equals(prodLot, itemReceipt.prodLot) &&
-        Objects.equals(unitsPerCase, itemReceipt.unitsPerCase) &&
-        Objects.equals(caseWeight, itemReceipt.caseWeight) &&
-        Objects.equals(height, itemReceipt.height) &&
-        Objects.equals(width, itemReceipt.width) &&
-        Objects.equals(length, itemReceipt.length) &&
-        Objects.equals(dockTime, itemReceipt.dockTime) &&
-        Objects.equals(modifyDate, itemReceipt.modifyDate) &&
-        Objects.equals(impressions, itemReceipt.impressions) &&
-        Objects.equals(asnLine, itemReceipt.asnLine);
+    return Objects.equals(this.id, itemReceipt.id) &&
+        Objects.equals(this.poNo, itemReceipt.poNo) &&
+        Objects.equals(this.lobId, itemReceipt.lobId) &&
+        Objects.equals(this.legacyPoNo, itemReceipt.legacyPoNo) &&
+        Objects.equals(this.warehouseId, itemReceipt.warehouseId) &&
+        Objects.equals(this.orderDate, itemReceipt.orderDate) &&
+        Objects.equals(this.factCost, itemReceipt.factCost) &&
+        Objects.equals(this.mlCost, itemReceipt.mlCost) &&
+        Objects.equals(this.sku, itemReceipt.sku) &&
+        Objects.equals(this.orderQuantity, itemReceipt.orderQuantity) &&
+        Objects.equals(this.requestedDeliveryDate, itemReceipt.requestedDeliveryDate) &&
+        Objects.equals(this.unitCode, itemReceipt.unitCode) &&
+        Objects.equals(this.wrapCode, itemReceipt.wrapCode) &&
+        Objects.equals(this.unitsPerWrap, itemReceipt.unitsPerWrap) &&
+        Objects.equals(this.cost, itemReceipt.cost) &&
+        Objects.equals(this.sell, itemReceipt.sell) &&
+        Objects.equals(this.pricingPer, itemReceipt.pricingPer) &&
+        Objects.equals(this.maxFreight, itemReceipt.maxFreight) &&
+        Objects.equals(this.chargeFreight, itemReceipt.chargeFreight) &&
+        Objects.equals(this.maxOther, itemReceipt.maxOther) &&
+        Objects.equals(this.distDate, itemReceipt.distDate) &&
+        Objects.equals(this.voidDate, itemReceipt.voidDate) &&
+        Objects.equals(this.freezeAction, itemReceipt.freezeAction) &&
+        Objects.equals(this.revDate, itemReceipt.revDate) &&
+        Objects.equals(this.artBack, itemReceipt.artBack) &&
+        Objects.equals(this.origin, itemReceipt.origin) &&
+        Objects.equals(this.sample, itemReceipt.sample) &&
+        Objects.equals(this.sampleTo, itemReceipt.sampleTo) &&
+        Objects.equals(this.maxOvers, itemReceipt.maxOvers) &&
+        Objects.equals(this.maxUnders, itemReceipt.maxUnders) &&
+        Objects.equals(this.receivedSfp, itemReceipt.receivedSfp) &&
+        Objects.equals(this.budgetCode, itemReceipt.budgetCode) &&
+        Objects.equals(this.accountingCode, itemReceipt.accountingCode) &&
+        Objects.equals(this.taxExempt, itemReceipt.taxExempt) &&
+        Objects.equals(this.capitalize, itemReceipt.capitalize) &&
+        Objects.equals(this.accrual, itemReceipt.accrual) &&
+        Objects.equals(this.oddQuantity, itemReceipt.oddQuantity) &&
+        Objects.equals(this.freightCost, itemReceipt.freightCost) &&
+        Objects.equals(this.receivedDate, itemReceipt.receivedDate) &&
+        Objects.equals(this.receivedQuantity, itemReceipt.receivedQuantity) &&
+        Objects.equals(this.fromProd, itemReceipt.fromProd) &&
+        Objects.equals(this.sfpComplete, itemReceipt.sfpComplete) &&
+        Objects.equals(this.endQuantity, itemReceipt.endQuantity) &&
+        Objects.equals(this.endVal, itemReceipt.endVal) &&
+        Objects.equals(this.endFact, itemReceipt.endFact) &&
+        Objects.equals(this.interimQuantity, itemReceipt.interimQuantity) &&
+        Objects.equals(this.interimVal, itemReceipt.interimVal) &&
+        Objects.equals(this.interimFact, itemReceipt.interimFact) &&
+        Objects.equals(this.lastAct, itemReceipt.lastAct) &&
+        Objects.equals(this.weightPerWrap, itemReceipt.weightPerWrap) &&
+        Objects.equals(this.norcs, itemReceipt.norcs) &&
+        Objects.equals(this.vendorId, itemReceipt.vendorId) &&
+        Objects.equals(this.bsVendor, itemReceipt.bsVendor) &&
+        Objects.equals(this.mlVendor, itemReceipt.mlVendor) &&
+        Objects.equals(this.receiptNo, itemReceipt.receiptNo) &&
+        Objects.equals(this.paidFull, itemReceipt.paidFull) &&
+        Objects.equals(this.enteredBy, itemReceipt.enteredBy) &&
+        Objects.equals(this.receivedBy, itemReceipt.receivedBy) &&
+        Objects.equals(this.lineNo, itemReceipt.lineNo) &&
+        Objects.equals(this.prodLot, itemReceipt.prodLot) &&
+        Objects.equals(this.unitsPerCase, itemReceipt.unitsPerCase) &&
+        Objects.equals(this.caseWeight, itemReceipt.caseWeight) &&
+        Objects.equals(this.height, itemReceipt.height) &&
+        Objects.equals(this.width, itemReceipt.width) &&
+        Objects.equals(this.length, itemReceipt.length) &&
+        Objects.equals(this.dockTime, itemReceipt.dockTime) &&
+        Objects.equals(this.modifyDate, itemReceipt.modifyDate) &&
+        Objects.equals(this.impressions, itemReceipt.impressions) &&
+        Objects.equals(this.asnLine, itemReceipt.asnLine);
   }
 
   @Override
@@ -1150,7 +1405,7 @@ public class ItemReceipt   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

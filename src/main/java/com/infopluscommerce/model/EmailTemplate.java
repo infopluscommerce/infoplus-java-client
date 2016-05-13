@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class EmailTemplate   {
   
   private Integer id = null;
@@ -25,23 +24,21 @@ public class EmailTemplate   {
   private Date modifyDate = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public EmailTemplate lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -53,8 +50,12 @@ public class EmailTemplate   {
   
   /**
    **/
+  public EmailTemplate subjectText(String subjectText) {
+    this.subjectText = subjectText;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("subjectText")
   public String getSubjectText() {
     return subjectText;
@@ -66,8 +67,12 @@ public class EmailTemplate   {
   
   /**
    **/
+  public EmailTemplate name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -79,8 +84,12 @@ public class EmailTemplate   {
   
   /**
    **/
+  public EmailTemplate fromName(String fromName) {
+    this.fromName = fromName;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("fromName")
   public String getFromName() {
     return fromName;
@@ -92,8 +101,12 @@ public class EmailTemplate   {
   
   /**
    **/
+  public EmailTemplate fromAddress(String fromAddress) {
+    this.fromAddress = fromAddress;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("fromAddress")
   public String getFromAddress() {
     return fromAddress;
@@ -105,8 +118,12 @@ public class EmailTemplate   {
   
   /**
    **/
+  public EmailTemplate emailTemplateType(String emailTemplateType) {
+    this.emailTemplateType = emailTemplateType;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("emailTemplateType")
   public String getEmailTemplateType() {
     return emailTemplateType;
@@ -116,35 +133,23 @@ public class EmailTemplate   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
-  }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
   }
 
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -152,15 +157,15 @@ public class EmailTemplate   {
       return false;
     }
     EmailTemplate emailTemplate = (EmailTemplate) o;
-    return Objects.equals(id, emailTemplate.id) &&
-        Objects.equals(lobId, emailTemplate.lobId) &&
-        Objects.equals(subjectText, emailTemplate.subjectText) &&
-        Objects.equals(name, emailTemplate.name) &&
-        Objects.equals(fromName, emailTemplate.fromName) &&
-        Objects.equals(fromAddress, emailTemplate.fromAddress) &&
-        Objects.equals(emailTemplateType, emailTemplate.emailTemplateType) &&
-        Objects.equals(createDate, emailTemplate.createDate) &&
-        Objects.equals(modifyDate, emailTemplate.modifyDate);
+    return Objects.equals(this.id, emailTemplate.id) &&
+        Objects.equals(this.lobId, emailTemplate.lobId) &&
+        Objects.equals(this.subjectText, emailTemplate.subjectText) &&
+        Objects.equals(this.name, emailTemplate.name) &&
+        Objects.equals(this.fromName, emailTemplate.fromName) &&
+        Objects.equals(this.fromAddress, emailTemplate.fromAddress) &&
+        Objects.equals(this.emailTemplateType, emailTemplate.emailTemplateType) &&
+        Objects.equals(this.createDate, emailTemplate.createDate) &&
+        Objects.equals(this.modifyDate, emailTemplate.modifyDate);
   }
 
   @Override
@@ -190,7 +195,7 @@ public class EmailTemplate   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

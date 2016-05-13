@@ -2,19 +2,19 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.infopluscommerce.model.BillOfLadingCarrierInfoLine;
 import com.infopluscommerce.model.BillOfLadingOrderInfoLine;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class BillOfLading   {
   
   private Integer id = null;
@@ -67,49 +67,35 @@ public class BillOfLading   {
   private List<BillOfLadingCarrierInfoLine> carrierInfoLines = new ArrayList<BillOfLadingCarrierInfoLine>();
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
   }
-  public void setId(Integer id) {
-    this.id = id;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public BillOfLading lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -121,8 +107,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading bolNo(String bolNo) {
+    this.bolNo = bolNo;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("bolNo")
   public String getBolNo() {
     return bolNo;
@@ -134,8 +124,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading bolDate(Date bolDate) {
+    this.bolDate = bolDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bolDate")
   public Date getBolDate() {
     return bolDate;
@@ -147,8 +141,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipFromName(String shipFromName) {
+    this.shipFromName = shipFromName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipFromName")
   public String getShipFromName() {
     return shipFromName;
@@ -160,8 +158,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipFromAddress(String shipFromAddress) {
+    this.shipFromAddress = shipFromAddress;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipFromAddress")
   public String getShipFromAddress() {
     return shipFromAddress;
@@ -173,8 +175,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipFromCity(String shipFromCity) {
+    this.shipFromCity = shipFromCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipFromCity")
   public String getShipFromCity() {
     return shipFromCity;
@@ -186,8 +192,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipFromState(String shipFromState) {
+    this.shipFromState = shipFromState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipFromState")
   public String getShipFromState() {
     return shipFromState;
@@ -199,8 +209,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipFromZip(String shipFromZip) {
+    this.shipFromZip = shipFromZip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipFromZip")
   public String getShipFromZip() {
     return shipFromZip;
@@ -212,8 +226,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading sid(String sid) {
+    this.sid = sid;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sid")
   public String getSid() {
     return sid;
@@ -225,8 +243,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading isShipFromFOB(Boolean isShipFromFOB) {
+    this.isShipFromFOB = isShipFromFOB;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isShipFromFOB")
   public Boolean getIsShipFromFOB() {
     return isShipFromFOB;
@@ -238,8 +260,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipToName(String shipToName) {
+    this.shipToName = shipToName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToName")
   public String getShipToName() {
     return shipToName;
@@ -251,8 +277,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipToAddress(String shipToAddress) {
+    this.shipToAddress = shipToAddress;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToAddress")
   public String getShipToAddress() {
     return shipToAddress;
@@ -264,8 +294,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipToCity(String shipToCity) {
+    this.shipToCity = shipToCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToCity")
   public String getShipToCity() {
     return shipToCity;
@@ -277,8 +311,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipToState(String shipToState) {
+    this.shipToState = shipToState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToState")
   public String getShipToState() {
     return shipToState;
@@ -290,8 +328,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipToZip(String shipToZip) {
+    this.shipToZip = shipToZip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToZip")
   public String getShipToZip() {
     return shipToZip;
@@ -303,8 +345,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipToLocationNo(String shipToLocationNo) {
+    this.shipToLocationNo = shipToLocationNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipToLocationNo")
   public String getShipToLocationNo() {
     return shipToLocationNo;
@@ -316,8 +362,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading cid(String cid) {
+    this.cid = cid;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cid")
   public String getCid() {
     return cid;
@@ -329,8 +379,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading isShipToFOB(Boolean isShipToFOB) {
+    this.isShipToFOB = isShipToFOB;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isShipToFOB")
   public Boolean getIsShipToFOB() {
     return isShipToFOB;
@@ -342,8 +396,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading billToName(String billToName) {
+    this.billToName = billToName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToName")
   public String getBillToName() {
     return billToName;
@@ -355,8 +413,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading billToAddress(String billToAddress) {
+    this.billToAddress = billToAddress;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToAddress")
   public String getBillToAddress() {
     return billToAddress;
@@ -368,8 +430,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading billToCity(String billToCity) {
+    this.billToCity = billToCity;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToCity")
   public String getBillToCity() {
     return billToCity;
@@ -381,8 +447,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading billToState(String billToState) {
+    this.billToState = billToState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToState")
   public String getBillToState() {
     return billToState;
@@ -394,8 +464,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading billToZip(String billToZip) {
+    this.billToZip = billToZip;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("billToZip")
   public String getBillToZip() {
     return billToZip;
@@ -407,8 +481,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading isTrailerLoadedByShipper(Boolean isTrailerLoadedByShipper) {
+    this.isTrailerLoadedByShipper = isTrailerLoadedByShipper;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isTrailerLoadedByShipper")
   public Boolean getIsTrailerLoadedByShipper() {
     return isTrailerLoadedByShipper;
@@ -420,8 +498,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading byDriver(Boolean byDriver) {
+    this.byDriver = byDriver;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("byDriver")
   public Boolean getByDriver() {
     return byDriver;
@@ -433,8 +515,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading codAmount(Double codAmount) {
+    this.codAmount = codAmount;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("codAmount")
   public Double getCodAmount() {
     return codAmount;
@@ -446,8 +532,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading feeTermsCollect(Boolean feeTermsCollect) {
+    this.feeTermsCollect = feeTermsCollect;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("feeTermsCollect")
   public Boolean getFeeTermsCollect() {
     return feeTermsCollect;
@@ -459,8 +549,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading feeTermsPrepaid(Boolean feeTermsPrepaid) {
+    this.feeTermsPrepaid = feeTermsPrepaid;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("feeTermsPrepaid")
   public Boolean getFeeTermsPrepaid() {
     return feeTermsPrepaid;
@@ -472,8 +566,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading customerCheckAcceptable(Boolean customerCheckAcceptable) {
+    this.customerCheckAcceptable = customerCheckAcceptable;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("customerCheckAcceptable")
   public Boolean getCustomerCheckAcceptable() {
     return customerCheckAcceptable;
@@ -485,8 +583,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading carrierName(String carrierName) {
+    this.carrierName = carrierName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrierName")
   public String getCarrierName() {
     return carrierName;
@@ -498,8 +600,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading trailerNo(String trailerNo) {
+    this.trailerNo = trailerNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("trailerNo")
   public String getTrailerNo() {
     return trailerNo;
@@ -511,8 +617,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading sealNo(String sealNo) {
+    this.sealNo = sealNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sealNo")
   public String getSealNo() {
     return sealNo;
@@ -524,8 +634,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading scac(String scac) {
+    this.scac = scac;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("scac")
   public String getScac() {
     return scac;
@@ -537,8 +651,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading proNo(String proNo) {
+    this.proNo = proNo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("proNo")
   public String getProNo() {
     return proNo;
@@ -550,8 +668,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading prepaid(Boolean prepaid) {
+    this.prepaid = prepaid;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("prepaid")
   public Boolean getPrepaid() {
     return prepaid;
@@ -563,8 +685,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading collect(Boolean collect) {
+    this.collect = collect;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("collect")
   public Boolean getCollect() {
     return collect;
@@ -576,8 +702,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading thirdParty(Boolean thirdParty) {
+    this.thirdParty = thirdParty;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("thirdParty")
   public Boolean getThirdParty() {
     return thirdParty;
@@ -589,8 +719,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading isThisAMasterBOL(Boolean isThisAMasterBOL) {
+    this.isThisAMasterBOL = isThisAMasterBOL;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isThisAMasterBOL")
   public Boolean getIsThisAMasterBOL() {
     return isThisAMasterBOL;
@@ -602,8 +736,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading masterBOLId(Integer masterBOLId) {
+    this.masterBOLId = masterBOLId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("masterBOLId")
   public Integer getMasterBOLId() {
     return masterBOLId;
@@ -615,8 +753,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading isFreightCountedByShipper(Boolean isFreightCountedByShipper) {
+    this.isFreightCountedByShipper = isFreightCountedByShipper;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isFreightCountedByShipper")
   public Boolean getIsFreightCountedByShipper() {
     return isFreightCountedByShipper;
@@ -628,8 +770,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading byDriverPallets(Boolean byDriverPallets) {
+    this.byDriverPallets = byDriverPallets;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("byDriverPallets")
   public Boolean getByDriverPallets() {
     return byDriverPallets;
@@ -641,8 +787,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading byDriverPieces(Boolean byDriverPieces) {
+    this.byDriverPieces = byDriverPieces;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("byDriverPieces")
   public Boolean getByDriverPieces() {
     return byDriverPieces;
@@ -654,8 +804,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading specialInstructions(String specialInstructions) {
+    this.specialInstructions = specialInstructions;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("specialInstructions")
   public String getSpecialInstructions() {
     return specialInstructions;
@@ -667,8 +821,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading orderInfoLines(List<BillOfLadingOrderInfoLine> orderInfoLines) {
+    this.orderInfoLines = orderInfoLines;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderInfoLines")
   public List<BillOfLadingOrderInfoLine> getOrderInfoLines() {
     return orderInfoLines;
@@ -680,8 +838,12 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading carrierInfoLines(List<BillOfLadingCarrierInfoLine> carrierInfoLines) {
+    this.carrierInfoLines = carrierInfoLines;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("carrierInfoLines")
   public List<BillOfLadingCarrierInfoLine> getCarrierInfoLines() {
     return carrierInfoLines;
@@ -693,7 +855,7 @@ public class BillOfLading   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -701,54 +863,54 @@ public class BillOfLading   {
       return false;
     }
     BillOfLading billOfLading = (BillOfLading) o;
-    return Objects.equals(id, billOfLading.id) &&
-        Objects.equals(createDate, billOfLading.createDate) &&
-        Objects.equals(modifyDate, billOfLading.modifyDate) &&
-        Objects.equals(lobId, billOfLading.lobId) &&
-        Objects.equals(bolNo, billOfLading.bolNo) &&
-        Objects.equals(bolDate, billOfLading.bolDate) &&
-        Objects.equals(shipFromName, billOfLading.shipFromName) &&
-        Objects.equals(shipFromAddress, billOfLading.shipFromAddress) &&
-        Objects.equals(shipFromCity, billOfLading.shipFromCity) &&
-        Objects.equals(shipFromState, billOfLading.shipFromState) &&
-        Objects.equals(shipFromZip, billOfLading.shipFromZip) &&
-        Objects.equals(sid, billOfLading.sid) &&
-        Objects.equals(isShipFromFOB, billOfLading.isShipFromFOB) &&
-        Objects.equals(shipToName, billOfLading.shipToName) &&
-        Objects.equals(shipToAddress, billOfLading.shipToAddress) &&
-        Objects.equals(shipToCity, billOfLading.shipToCity) &&
-        Objects.equals(shipToState, billOfLading.shipToState) &&
-        Objects.equals(shipToZip, billOfLading.shipToZip) &&
-        Objects.equals(shipToLocationNo, billOfLading.shipToLocationNo) &&
-        Objects.equals(cid, billOfLading.cid) &&
-        Objects.equals(isShipToFOB, billOfLading.isShipToFOB) &&
-        Objects.equals(billToName, billOfLading.billToName) &&
-        Objects.equals(billToAddress, billOfLading.billToAddress) &&
-        Objects.equals(billToCity, billOfLading.billToCity) &&
-        Objects.equals(billToState, billOfLading.billToState) &&
-        Objects.equals(billToZip, billOfLading.billToZip) &&
-        Objects.equals(isTrailerLoadedByShipper, billOfLading.isTrailerLoadedByShipper) &&
-        Objects.equals(byDriver, billOfLading.byDriver) &&
-        Objects.equals(codAmount, billOfLading.codAmount) &&
-        Objects.equals(feeTermsCollect, billOfLading.feeTermsCollect) &&
-        Objects.equals(feeTermsPrepaid, billOfLading.feeTermsPrepaid) &&
-        Objects.equals(customerCheckAcceptable, billOfLading.customerCheckAcceptable) &&
-        Objects.equals(carrierName, billOfLading.carrierName) &&
-        Objects.equals(trailerNo, billOfLading.trailerNo) &&
-        Objects.equals(sealNo, billOfLading.sealNo) &&
-        Objects.equals(scac, billOfLading.scac) &&
-        Objects.equals(proNo, billOfLading.proNo) &&
-        Objects.equals(prepaid, billOfLading.prepaid) &&
-        Objects.equals(collect, billOfLading.collect) &&
-        Objects.equals(thirdParty, billOfLading.thirdParty) &&
-        Objects.equals(isThisAMasterBOL, billOfLading.isThisAMasterBOL) &&
-        Objects.equals(masterBOLId, billOfLading.masterBOLId) &&
-        Objects.equals(isFreightCountedByShipper, billOfLading.isFreightCountedByShipper) &&
-        Objects.equals(byDriverPallets, billOfLading.byDriverPallets) &&
-        Objects.equals(byDriverPieces, billOfLading.byDriverPieces) &&
-        Objects.equals(specialInstructions, billOfLading.specialInstructions) &&
-        Objects.equals(orderInfoLines, billOfLading.orderInfoLines) &&
-        Objects.equals(carrierInfoLines, billOfLading.carrierInfoLines);
+    return Objects.equals(this.id, billOfLading.id) &&
+        Objects.equals(this.createDate, billOfLading.createDate) &&
+        Objects.equals(this.modifyDate, billOfLading.modifyDate) &&
+        Objects.equals(this.lobId, billOfLading.lobId) &&
+        Objects.equals(this.bolNo, billOfLading.bolNo) &&
+        Objects.equals(this.bolDate, billOfLading.bolDate) &&
+        Objects.equals(this.shipFromName, billOfLading.shipFromName) &&
+        Objects.equals(this.shipFromAddress, billOfLading.shipFromAddress) &&
+        Objects.equals(this.shipFromCity, billOfLading.shipFromCity) &&
+        Objects.equals(this.shipFromState, billOfLading.shipFromState) &&
+        Objects.equals(this.shipFromZip, billOfLading.shipFromZip) &&
+        Objects.equals(this.sid, billOfLading.sid) &&
+        Objects.equals(this.isShipFromFOB, billOfLading.isShipFromFOB) &&
+        Objects.equals(this.shipToName, billOfLading.shipToName) &&
+        Objects.equals(this.shipToAddress, billOfLading.shipToAddress) &&
+        Objects.equals(this.shipToCity, billOfLading.shipToCity) &&
+        Objects.equals(this.shipToState, billOfLading.shipToState) &&
+        Objects.equals(this.shipToZip, billOfLading.shipToZip) &&
+        Objects.equals(this.shipToLocationNo, billOfLading.shipToLocationNo) &&
+        Objects.equals(this.cid, billOfLading.cid) &&
+        Objects.equals(this.isShipToFOB, billOfLading.isShipToFOB) &&
+        Objects.equals(this.billToName, billOfLading.billToName) &&
+        Objects.equals(this.billToAddress, billOfLading.billToAddress) &&
+        Objects.equals(this.billToCity, billOfLading.billToCity) &&
+        Objects.equals(this.billToState, billOfLading.billToState) &&
+        Objects.equals(this.billToZip, billOfLading.billToZip) &&
+        Objects.equals(this.isTrailerLoadedByShipper, billOfLading.isTrailerLoadedByShipper) &&
+        Objects.equals(this.byDriver, billOfLading.byDriver) &&
+        Objects.equals(this.codAmount, billOfLading.codAmount) &&
+        Objects.equals(this.feeTermsCollect, billOfLading.feeTermsCollect) &&
+        Objects.equals(this.feeTermsPrepaid, billOfLading.feeTermsPrepaid) &&
+        Objects.equals(this.customerCheckAcceptable, billOfLading.customerCheckAcceptable) &&
+        Objects.equals(this.carrierName, billOfLading.carrierName) &&
+        Objects.equals(this.trailerNo, billOfLading.trailerNo) &&
+        Objects.equals(this.sealNo, billOfLading.sealNo) &&
+        Objects.equals(this.scac, billOfLading.scac) &&
+        Objects.equals(this.proNo, billOfLading.proNo) &&
+        Objects.equals(this.prepaid, billOfLading.prepaid) &&
+        Objects.equals(this.collect, billOfLading.collect) &&
+        Objects.equals(this.thirdParty, billOfLading.thirdParty) &&
+        Objects.equals(this.isThisAMasterBOL, billOfLading.isThisAMasterBOL) &&
+        Objects.equals(this.masterBOLId, billOfLading.masterBOLId) &&
+        Objects.equals(this.isFreightCountedByShipper, billOfLading.isFreightCountedByShipper) &&
+        Objects.equals(this.byDriverPallets, billOfLading.byDriverPallets) &&
+        Objects.equals(this.byDriverPieces, billOfLading.byDriverPieces) &&
+        Objects.equals(this.specialInstructions, billOfLading.specialInstructions) &&
+        Objects.equals(this.orderInfoLines, billOfLading.orderInfoLines) &&
+        Objects.equals(this.carrierInfoLines, billOfLading.carrierInfoLines);
   }
 
   @Override
@@ -817,7 +979,7 @@ public class BillOfLading   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

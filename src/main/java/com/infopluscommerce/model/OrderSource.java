@@ -2,7 +2,6 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-09T10:31:49.931-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
 public class OrderSource   {
   
   private Integer id = null;
@@ -28,23 +27,21 @@ public class OrderSource   {
   private Integer shipmentConfirmationEmailId = null;
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("id")
   public Integer getId() {
     return id;
-  }
-  public void setId(Integer id) {
-    this.id = id;
   }
 
   
   /**
    **/
+  public OrderSource lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
@@ -56,8 +53,12 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -67,36 +68,28 @@ public class OrderSource   {
   }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
     return createDate;
   }
-  public void setCreateDate(Date createDate) {
-    this.createDate = createDate;
-  }
 
   
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
   }
-  public void setModifyDate(Date modifyDate) {
-    this.modifyDate = modifyDate;
-  }
 
   
   /**
    **/
+  public OrderSource packingNotes(String packingNotes) {
+    this.packingNotes = packingNotes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("packingNotes")
   public String getPackingNotes() {
     return packingNotes;
@@ -108,8 +101,12 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource requireCartonizedASN(Boolean requireCartonizedASN) {
+    this.requireCartonizedASN = requireCartonizedASN;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("requireCartonizedASN")
   public Boolean getRequireCartonizedASN() {
     return requireCartonizedASN;
@@ -121,8 +118,12 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource requireGS1128Label(Boolean requireGS1128Label) {
+    this.requireGS1128Label = requireGS1128Label;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("requireGS1128Label")
   public Boolean getRequireGS1128Label() {
     return requireGS1128Label;
@@ -134,8 +135,12 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource shippingNotes(String shippingNotes) {
+    this.shippingNotes = shippingNotes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shippingNotes")
   public String getShippingNotes() {
     return shippingNotes;
@@ -147,8 +152,12 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource packingSlipId(Integer packingSlipId) {
+    this.packingSlipId = packingSlipId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("packingSlipId")
   public Integer getPackingSlipId() {
     return packingSlipId;
@@ -160,8 +169,12 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource orderConfirmationEmailId(Integer orderConfirmationEmailId) {
+    this.orderConfirmationEmailId = orderConfirmationEmailId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderConfirmationEmailId")
   public Integer getOrderConfirmationEmailId() {
     return orderConfirmationEmailId;
@@ -173,8 +186,12 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource shipmentConfirmationEmailId(Integer shipmentConfirmationEmailId) {
+    this.shipmentConfirmationEmailId = shipmentConfirmationEmailId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shipmentConfirmationEmailId")
   public Integer getShipmentConfirmationEmailId() {
     return shipmentConfirmationEmailId;
@@ -186,7 +203,7 @@ public class OrderSource   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -194,18 +211,18 @@ public class OrderSource   {
       return false;
     }
     OrderSource orderSource = (OrderSource) o;
-    return Objects.equals(id, orderSource.id) &&
-        Objects.equals(lobId, orderSource.lobId) &&
-        Objects.equals(name, orderSource.name) &&
-        Objects.equals(createDate, orderSource.createDate) &&
-        Objects.equals(modifyDate, orderSource.modifyDate) &&
-        Objects.equals(packingNotes, orderSource.packingNotes) &&
-        Objects.equals(requireCartonizedASN, orderSource.requireCartonizedASN) &&
-        Objects.equals(requireGS1128Label, orderSource.requireGS1128Label) &&
-        Objects.equals(shippingNotes, orderSource.shippingNotes) &&
-        Objects.equals(packingSlipId, orderSource.packingSlipId) &&
-        Objects.equals(orderConfirmationEmailId, orderSource.orderConfirmationEmailId) &&
-        Objects.equals(shipmentConfirmationEmailId, orderSource.shipmentConfirmationEmailId);
+    return Objects.equals(this.id, orderSource.id) &&
+        Objects.equals(this.lobId, orderSource.lobId) &&
+        Objects.equals(this.name, orderSource.name) &&
+        Objects.equals(this.createDate, orderSource.createDate) &&
+        Objects.equals(this.modifyDate, orderSource.modifyDate) &&
+        Objects.equals(this.packingNotes, orderSource.packingNotes) &&
+        Objects.equals(this.requireCartonizedASN, orderSource.requireCartonizedASN) &&
+        Objects.equals(this.requireGS1128Label, orderSource.requireGS1128Label) &&
+        Objects.equals(this.shippingNotes, orderSource.shippingNotes) &&
+        Objects.equals(this.packingSlipId, orderSource.packingSlipId) &&
+        Objects.equals(this.orderConfirmationEmailId, orderSource.orderConfirmationEmailId) &&
+        Objects.equals(this.shipmentConfirmationEmailId, orderSource.shipmentConfirmationEmailId);
   }
 
   @Override
@@ -238,7 +255,7 @@ public class OrderSource   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }
