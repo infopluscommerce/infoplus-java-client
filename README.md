@@ -65,7 +65,7 @@ In your code that uses the API, be sure to configure the `ApiClient` with a base
 
 ```
 ApiClient apiClient = new ApiClient();
-apiClient.setBasePath("https://<YOUR INFOPLUS DOMAIN>/infoplus-wms/api/v1.0");
+apiClient.setBasePath("https://<YOUR INFOPLUS DOMAIN>/infoplus-wms/api");
 apiClient.setApiKey("<YOUR API KEY>");
 
 Configuration.setDefaultApiClient(apiClient);
