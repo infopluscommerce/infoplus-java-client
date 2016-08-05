@@ -7,15 +7,16 @@ import com.infopluscommerce.ApiClient;
 import com.infopluscommerce.Configuration;
 import com.infopluscommerce.Pair;
 
-import com.infopluscommerce.model.ApiResponse;
 import com.infopluscommerce.model.Order;
+import com.infopluscommerce.model.ApiResponse;
+import java.math.BigDecimal;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class OrderApi {
   private ApiClient apiClient;
 
@@ -52,7 +53,7 @@ public class OrderApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/order".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/order".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -89,7 +90,7 @@ public class OrderApi {
    * @param orderId Id of the order to be deleted. (required)
    * @throws ApiException if fails to make API call
    */
-  public void deleteOrder(Double orderId) throws ApiException {
+  public void deleteOrder(BigDecimal orderId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'orderId' is set
@@ -98,7 +99,7 @@ public class OrderApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/order/{orderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/order/{orderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderId" + "\\}", apiClient.escapeString(orderId.toString()));
 
     // query params
@@ -143,7 +144,7 @@ public class OrderApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/order/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/order/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -189,7 +190,7 @@ public class OrderApi {
    * @return Order
    * @throws ApiException if fails to make API call
    */
-  public Order getOrderById(Double orderId) throws ApiException {
+  public Order getOrderById(BigDecimal orderId) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'orderId' is set
@@ -198,7 +199,7 @@ public class OrderApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/order/{orderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/order/{orderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderId" + "\\}", apiClient.escapeString(orderId.toString()));
 
     // query params
@@ -245,7 +246,52 @@ public class OrderApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/order".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/order".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Update an order custom fields
+   * Updates an existing order custom fields using the specified data.
+   * @param body Order to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateOrderCustomFields(Order body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateOrderCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/order/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

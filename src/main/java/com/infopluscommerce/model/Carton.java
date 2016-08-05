@@ -4,20 +4,25 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Carton   {
   
   private Integer id = null;
-  private Double orderNo = null;
+  private BigDecimal orderNo = null;
   private Integer cartonNo = null;
   private Integer cartonTypeId = null;
   private String cartonLPN = null;
-  private Double weightLbs = null;
+  private BigDecimal weightLbs = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -29,17 +34,17 @@ public class Carton   {
   
   /**
    **/
-  public Carton orderNo(Double orderNo) {
+  public Carton orderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderNo")
-  public Double getOrderNo() {
+  public BigDecimal getOrderNo() {
     return orderNo;
   }
-  public void setOrderNo(Double orderNo) {
+  public void setOrderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
   }
 
@@ -97,18 +102,35 @@ public class Carton   {
   
   /**
    **/
-  public Carton weightLbs(Double weightLbs) {
+  public Carton weightLbs(BigDecimal weightLbs) {
     this.weightLbs = weightLbs;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
-  public Double getWeightLbs() {
+  public BigDecimal getWeightLbs() {
     return weightLbs;
   }
-  public void setWeightLbs(Double weightLbs) {
+  public void setWeightLbs(BigDecimal weightLbs) {
     this.weightLbs = weightLbs;
+  }
+
+  
+  /**
+   **/
+  public Carton customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -127,12 +149,13 @@ public class Carton   {
         Objects.equals(this.cartonNo, carton.cartonNo) &&
         Objects.equals(this.cartonTypeId, carton.cartonTypeId) &&
         Objects.equals(this.cartonLPN, carton.cartonLPN) &&
-        Objects.equals(this.weightLbs, carton.weightLbs);
+        Objects.equals(this.weightLbs, carton.weightLbs) &&
+        Objects.equals(this.customFields, carton.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderNo, cartonNo, cartonTypeId, cartonLPN, weightLbs);
+    return Objects.hash(id, orderNo, cartonNo, cartonTypeId, cartonLPN, weightLbs, customFields);
   }
 
   @Override
@@ -146,6 +169,7 @@ public class Carton   {
     sb.append("    cartonTypeId: ").append(toIndentedString(cartonTypeId)).append("\n");
     sb.append("    cartonLPN: ").append(toIndentedString(cartonLPN)).append("\n");
     sb.append("    weightLbs: ").append(toIndentedString(weightLbs)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

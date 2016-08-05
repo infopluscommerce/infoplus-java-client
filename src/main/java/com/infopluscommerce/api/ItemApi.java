@@ -7,15 +7,15 @@ import com.infopluscommerce.ApiClient;
 import com.infopluscommerce.Configuration;
 import com.infopluscommerce.Pair;
 
-import com.infopluscommerce.model.ApiResponse;
 import com.infopluscommerce.model.Item;
+import com.infopluscommerce.model.ApiResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ItemApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ItemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/item".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/item".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -98,7 +98,7 @@ public class ItemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/item/{itemId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/item/{itemId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemId" + "\\}", apiClient.escapeString(itemId.toString()));
 
     // query params
@@ -151,7 +151,7 @@ public class ItemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/item/getBySKU".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/item/getBySKU".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -200,7 +200,7 @@ public class ItemApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/item/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/item/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -255,7 +255,7 @@ public class ItemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/item/{itemId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/item/{itemId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemId" + "\\}", apiClient.escapeString(itemId.toString()));
 
     // query params
@@ -302,7 +302,52 @@ public class ItemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/item".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/item".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Update an item custom fields
+   * Updates an existing item custom fields using the specified data.
+   * @param body Item to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateItemCustomFields(Item body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateItemCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/item/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

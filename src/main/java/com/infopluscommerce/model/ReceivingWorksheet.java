@@ -7,13 +7,15 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ReceivingWorksheet   {
   
   private Integer id = null;
@@ -23,6 +25,7 @@ public class ReceivingWorksheet   {
   private Integer vendorId = null;
   private String status = null;
   private String serviceLevel = null;
+  private Integer receivingProcessId = null;
   private Integer createdBy = null;
   private String worksheetName = null;
   private String carrier = null;
@@ -33,6 +36,7 @@ public class ReceivingWorksheet   {
   private Integer workBatchId = null;
   private Date createDate = null;
   private Date modifyDate = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -131,6 +135,23 @@ public class ReceivingWorksheet   {
   }
   public void setServiceLevel(String serviceLevel) {
     this.serviceLevel = serviceLevel;
+  }
+
+  
+  /**
+   **/
+  public ReceivingWorksheet receivingProcessId(Integer receivingProcessId) {
+    this.receivingProcessId = receivingProcessId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receivingProcessId")
+  public Integer getReceivingProcessId() {
+    return receivingProcessId;
+  }
+  public void setReceivingProcessId(Integer receivingProcessId) {
+    this.receivingProcessId = receivingProcessId;
   }
 
   
@@ -274,6 +295,23 @@ public class ReceivingWorksheet   {
   }
 
   
+  /**
+   **/
+  public ReceivingWorksheet customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -291,6 +329,7 @@ public class ReceivingWorksheet   {
         Objects.equals(this.vendorId, receivingWorksheet.vendorId) &&
         Objects.equals(this.status, receivingWorksheet.status) &&
         Objects.equals(this.serviceLevel, receivingWorksheet.serviceLevel) &&
+        Objects.equals(this.receivingProcessId, receivingWorksheet.receivingProcessId) &&
         Objects.equals(this.createdBy, receivingWorksheet.createdBy) &&
         Objects.equals(this.worksheetName, receivingWorksheet.worksheetName) &&
         Objects.equals(this.carrier, receivingWorksheet.carrier) &&
@@ -300,12 +339,13 @@ public class ReceivingWorksheet   {
         Objects.equals(this.notes, receivingWorksheet.notes) &&
         Objects.equals(this.workBatchId, receivingWorksheet.workBatchId) &&
         Objects.equals(this.createDate, receivingWorksheet.createDate) &&
-        Objects.equals(this.modifyDate, receivingWorksheet.modifyDate);
+        Objects.equals(this.modifyDate, receivingWorksheet.modifyDate) &&
+        Objects.equals(this.customFields, receivingWorksheet.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseId, poNoId, lobId, vendorId, status, serviceLevel, createdBy, worksheetName, carrier, onTheDock, autoCommit, lineItems, notes, workBatchId, createDate, modifyDate);
+    return Objects.hash(id, warehouseId, poNoId, lobId, vendorId, status, serviceLevel, receivingProcessId, createdBy, worksheetName, carrier, onTheDock, autoCommit, lineItems, notes, workBatchId, createDate, modifyDate, customFields);
   }
 
   @Override
@@ -320,6 +360,7 @@ public class ReceivingWorksheet   {
     sb.append("    vendorId: ").append(toIndentedString(vendorId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    serviceLevel: ").append(toIndentedString(serviceLevel)).append("\n");
+    sb.append("    receivingProcessId: ").append(toIndentedString(receivingProcessId)).append("\n");
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
     sb.append("    worksheetName: ").append(toIndentedString(worksheetName)).append("\n");
     sb.append("    carrier: ").append(toIndentedString(carrier)).append("\n");
@@ -330,6 +371,7 @@ public class ReceivingWorksheet   {
     sb.append("    workBatchId: ").append(toIndentedString(workBatchId)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

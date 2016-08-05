@@ -5,14 +5,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.infopluscommerce.model.ReceivingWorksheetPutAwayPlan;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ReceivingWorksheetLineItem   {
   
   private String sku = null;
@@ -26,16 +29,17 @@ public class ReceivingWorksheetLineItem   {
   private Integer unitsPerWrap = null;
   private Integer unitsPerCase = null;
   private Integer casesPerPallet = null;
-  private Double weightPerWrap = null;
-  private Double weightPerCase = null;
+  private BigDecimal weightPerWrap = null;
+  private BigDecimal weightPerCase = null;
   private String productionLot = null;
   private String revisionDate = null;
   private String origin = null;
-  private Double cartonLength = null;
-  private Double cartonWidth = null;
-  private Double cartonHeight = null;
+  private BigDecimal cartonLength = null;
+  private BigDecimal cartonWidth = null;
+  private BigDecimal cartonHeight = null;
   private List<ReceivingWorksheetPutAwayPlan> putAwayPlans = new ArrayList<ReceivingWorksheetPutAwayPlan>();
   private Integer quantity = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -177,34 +181,34 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
-  public ReceivingWorksheetLineItem weightPerWrap(Double weightPerWrap) {
+  public ReceivingWorksheetLineItem weightPerWrap(BigDecimal weightPerWrap) {
     this.weightPerWrap = weightPerWrap;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("weightPerWrap")
-  public Double getWeightPerWrap() {
+  public BigDecimal getWeightPerWrap() {
     return weightPerWrap;
   }
-  public void setWeightPerWrap(Double weightPerWrap) {
+  public void setWeightPerWrap(BigDecimal weightPerWrap) {
     this.weightPerWrap = weightPerWrap;
   }
 
   
   /**
    **/
-  public ReceivingWorksheetLineItem weightPerCase(Double weightPerCase) {
+  public ReceivingWorksheetLineItem weightPerCase(BigDecimal weightPerCase) {
     this.weightPerCase = weightPerCase;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightPerCase")
-  public Double getWeightPerCase() {
+  public BigDecimal getWeightPerCase() {
     return weightPerCase;
   }
-  public void setWeightPerCase(Double weightPerCase) {
+  public void setWeightPerCase(BigDecimal weightPerCase) {
     this.weightPerCase = weightPerCase;
   }
 
@@ -262,51 +266,51 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
-  public ReceivingWorksheetLineItem cartonLength(Double cartonLength) {
+  public ReceivingWorksheetLineItem cartonLength(BigDecimal cartonLength) {
     this.cartonLength = cartonLength;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonLength")
-  public Double getCartonLength() {
+  public BigDecimal getCartonLength() {
     return cartonLength;
   }
-  public void setCartonLength(Double cartonLength) {
+  public void setCartonLength(BigDecimal cartonLength) {
     this.cartonLength = cartonLength;
   }
 
   
   /**
    **/
-  public ReceivingWorksheetLineItem cartonWidth(Double cartonWidth) {
+  public ReceivingWorksheetLineItem cartonWidth(BigDecimal cartonWidth) {
     this.cartonWidth = cartonWidth;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonWidth")
-  public Double getCartonWidth() {
+  public BigDecimal getCartonWidth() {
     return cartonWidth;
   }
-  public void setCartonWidth(Double cartonWidth) {
+  public void setCartonWidth(BigDecimal cartonWidth) {
     this.cartonWidth = cartonWidth;
   }
 
   
   /**
    **/
-  public ReceivingWorksheetLineItem cartonHeight(Double cartonHeight) {
+  public ReceivingWorksheetLineItem cartonHeight(BigDecimal cartonHeight) {
     this.cartonHeight = cartonHeight;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartonHeight")
-  public Double getCartonHeight() {
+  public BigDecimal getCartonHeight() {
     return cartonHeight;
   }
-  public void setCartonHeight(Double cartonHeight) {
+  public void setCartonHeight(BigDecimal cartonHeight) {
     this.cartonHeight = cartonHeight;
   }
 
@@ -345,6 +349,23 @@ public class ReceivingWorksheetLineItem   {
   }
 
   
+  /**
+   **/
+  public ReceivingWorksheetLineItem customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -375,12 +396,13 @@ public class ReceivingWorksheetLineItem   {
         Objects.equals(this.cartonWidth, receivingWorksheetLineItem.cartonWidth) &&
         Objects.equals(this.cartonHeight, receivingWorksheetLineItem.cartonHeight) &&
         Objects.equals(this.putAwayPlans, receivingWorksheetLineItem.putAwayPlans) &&
-        Objects.equals(this.quantity, receivingWorksheetLineItem.quantity);
+        Objects.equals(this.quantity, receivingWorksheetLineItem.quantity) &&
+        Objects.equals(this.customFields, receivingWorksheetLineItem.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sku, fullDescription, orderedQty, prevReceivedQty, unreceivedQty, receivingQty, unitCode, wrapCode, unitsPerWrap, unitsPerCase, casesPerPallet, weightPerWrap, weightPerCase, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, putAwayPlans, quantity);
+    return Objects.hash(sku, fullDescription, orderedQty, prevReceivedQty, unreceivedQty, receivingQty, unitCode, wrapCode, unitsPerWrap, unitsPerCase, casesPerPallet, weightPerWrap, weightPerCase, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, putAwayPlans, quantity, customFields);
   }
 
   @Override
@@ -409,6 +431,7 @@ public class ReceivingWorksheetLineItem   {
     sb.append("    cartonHeight: ").append(toIndentedString(cartonHeight)).append("\n");
     sb.append("    putAwayPlans: ").append(toIndentedString(putAwayPlans)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

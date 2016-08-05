@@ -4,13 +4,17 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Item   {
   
   private Integer id = null;
@@ -39,7 +43,7 @@ public class Item   {
   private Integer criticalAmount = null;
   private Integer overallFixedReorderPoint = null;
   private Integer overallLeadTime = null;
-  private Double listPrice = null;
+  private BigDecimal listPrice = null;
   private String lotControlFlag = null;
   private Integer maxCycle = null;
   private Integer maxInterim = null;
@@ -56,7 +60,7 @@ public class Item   {
   private String serialCode = null;
   private String unitCode = null;
   private Integer unitsPerWrap = null;
-  private Double weightPerWrap = null;
+  private BigDecimal weightPerWrap = null;
   private Date voidDate = null;
   private String wrapCode = null;
   private String extrinsicText1 = null;
@@ -64,8 +68,8 @@ public class Item   {
   private String extrinsicText3 = null;
   private Integer extrinsicNumber1 = null;
   private Integer extrinsicNumber2 = null;
-  private Double extrinsicDecimal1 = null;
-  private Double extrinsicDecimal2 = null;
+  private BigDecimal extrinsicDecimal1 = null;
+  private BigDecimal extrinsicDecimal2 = null;
   private String casebreakEnabled = null;
   private Date modifyDate = null;
   private String forwardLotMixingRule = null;
@@ -73,7 +77,9 @@ public class Item   {
   private String forwardItemMixingRule = null;
   private String storageItemMixingRule = null;
   private String allocationRule = null;
+  private String barcodeField = null;
   private String hazmat = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -500,17 +506,17 @@ public class Item   {
   
   /**
    **/
-  public Item listPrice(Double listPrice) {
+  public Item listPrice(BigDecimal listPrice) {
     this.listPrice = listPrice;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("listPrice")
-  public Double getListPrice() {
+  public BigDecimal getListPrice() {
     return listPrice;
   }
-  public void setListPrice(Double listPrice) {
+  public void setListPrice(BigDecimal listPrice) {
     this.listPrice = listPrice;
   }
 
@@ -789,17 +795,17 @@ public class Item   {
   
   /**
    **/
-  public Item weightPerWrap(Double weightPerWrap) {
+  public Item weightPerWrap(BigDecimal weightPerWrap) {
     this.weightPerWrap = weightPerWrap;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightPerWrap")
-  public Double getWeightPerWrap() {
+  public BigDecimal getWeightPerWrap() {
     return weightPerWrap;
   }
-  public void setWeightPerWrap(Double weightPerWrap) {
+  public void setWeightPerWrap(BigDecimal weightPerWrap) {
     this.weightPerWrap = weightPerWrap;
   }
 
@@ -915,34 +921,34 @@ public class Item   {
   
   /**
    **/
-  public Item extrinsicDecimal1(Double extrinsicDecimal1) {
+  public Item extrinsicDecimal1(BigDecimal extrinsicDecimal1) {
     this.extrinsicDecimal1 = extrinsicDecimal1;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extrinsicDecimal1")
-  public Double getExtrinsicDecimal1() {
+  public BigDecimal getExtrinsicDecimal1() {
     return extrinsicDecimal1;
   }
-  public void setExtrinsicDecimal1(Double extrinsicDecimal1) {
+  public void setExtrinsicDecimal1(BigDecimal extrinsicDecimal1) {
     this.extrinsicDecimal1 = extrinsicDecimal1;
   }
 
   
   /**
    **/
-  public Item extrinsicDecimal2(Double extrinsicDecimal2) {
+  public Item extrinsicDecimal2(BigDecimal extrinsicDecimal2) {
     this.extrinsicDecimal2 = extrinsicDecimal2;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extrinsicDecimal2")
-  public Double getExtrinsicDecimal2() {
+  public BigDecimal getExtrinsicDecimal2() {
     return extrinsicDecimal2;
   }
-  public void setExtrinsicDecimal2(Double extrinsicDecimal2) {
+  public void setExtrinsicDecimal2(BigDecimal extrinsicDecimal2) {
     this.extrinsicDecimal2 = extrinsicDecimal2;
   }
 
@@ -1058,6 +1064,23 @@ public class Item   {
   
   /**
    **/
+  public Item barcodeField(String barcodeField) {
+    this.barcodeField = barcodeField;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("barcodeField")
+  public String getBarcodeField() {
+    return barcodeField;
+  }
+  public void setBarcodeField(String barcodeField) {
+    this.barcodeField = barcodeField;
+  }
+
+  
+  /**
+   **/
   public Item hazmat(String hazmat) {
     this.hazmat = hazmat;
     return this;
@@ -1070,6 +1093,23 @@ public class Item   {
   }
   public void setHazmat(String hazmat) {
     this.hazmat = hazmat;
+  }
+
+  
+  /**
+   **/
+  public Item customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -1143,12 +1183,14 @@ public class Item   {
         Objects.equals(this.forwardItemMixingRule, item.forwardItemMixingRule) &&
         Objects.equals(this.storageItemMixingRule, item.storageItemMixingRule) &&
         Objects.equals(this.allocationRule, item.allocationRule) &&
-        Objects.equals(this.hazmat, item.hazmat);
+        Objects.equals(this.barcodeField, item.barcodeField) &&
+        Objects.equals(this.hazmat, item.hazmat) &&
+        Objects.equals(this.customFields, item.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, listPrice, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, hazmat);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, listPrice, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, hazmat, customFields);
   }
 
   @Override
@@ -1216,7 +1258,9 @@ public class Item   {
     sb.append("    forwardItemMixingRule: ").append(toIndentedString(forwardItemMixingRule)).append("\n");
     sb.append("    storageItemMixingRule: ").append(toIndentedString(storageItemMixingRule)).append("\n");
     sb.append("    allocationRule: ").append(toIndentedString(allocationRule)).append("\n");
+    sb.append("    barcodeField: ").append(toIndentedString(barcodeField)).append("\n");
     sb.append("    hazmat: ").append(toIndentedString(hazmat)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Warehouse   {
   
   private Integer id = null;
@@ -30,6 +33,7 @@ public class Warehouse   {
   private String lpnPrefix = null;
   private Date createDate = null;
   private Date modifyDate = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -281,6 +285,23 @@ public class Warehouse   {
   }
 
   
+  /**
+   **/
+  public Warehouse customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -307,12 +328,13 @@ public class Warehouse   {
         Objects.equals(this.locationBarcodePrefix, warehouse.locationBarcodePrefix) &&
         Objects.equals(this.lpnPrefix, warehouse.lpnPrefix) &&
         Objects.equals(this.createDate, warehouse.createDate) &&
-        Objects.equals(this.modifyDate, warehouse.modifyDate);
+        Objects.equals(this.modifyDate, warehouse.modifyDate) &&
+        Objects.equals(this.customFields, warehouse.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, client, name, address, company, street1, street2, street3, city, state, zip, country, phone, locationBarcodePrefix, lpnPrefix, createDate, modifyDate);
+    return Objects.hash(id, client, name, address, company, street1, street2, street3, city, state, zip, country, phone, locationBarcodePrefix, lpnPrefix, createDate, modifyDate, customFields);
   }
 
   @Override
@@ -337,6 +359,7 @@ public class Warehouse   {
     sb.append("    lpnPrefix: ").append(toIndentedString(lpnPrefix)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

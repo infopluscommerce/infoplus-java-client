@@ -4,13 +4,17 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class InventoryAdjustment   {
   
   private Integer id = null;
@@ -24,8 +28,9 @@ public class InventoryAdjustment   {
   private String note = null;
   private String authorizedBy = null;
   private String printed = null;
-  private Double orderNo = null;
+  private BigDecimal orderNo = null;
   private String adjustmentCode = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   /**
@@ -217,17 +222,17 @@ public class InventoryAdjustment   {
   
   /**
    **/
-  public InventoryAdjustment orderNo(Double orderNo) {
+  public InventoryAdjustment orderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderNo")
-  public Double getOrderNo() {
+  public BigDecimal getOrderNo() {
     return orderNo;
   }
-  public void setOrderNo(Double orderNo) {
+  public void setOrderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
   }
 
@@ -246,6 +251,23 @@ public class InventoryAdjustment   {
   }
   public void setAdjustmentCode(String adjustmentCode) {
     this.adjustmentCode = adjustmentCode;
+  }
+
+  
+  /**
+   **/
+  public InventoryAdjustment customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -271,12 +293,13 @@ public class InventoryAdjustment   {
         Objects.equals(this.authorizedBy, inventoryAdjustment.authorizedBy) &&
         Objects.equals(this.printed, inventoryAdjustment.printed) &&
         Objects.equals(this.orderNo, inventoryAdjustment.orderNo) &&
-        Objects.equals(this.adjustmentCode, inventoryAdjustment.adjustmentCode);
+        Objects.equals(this.adjustmentCode, inventoryAdjustment.adjustmentCode) &&
+        Objects.equals(this.customFields, inventoryAdjustment.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lob, skuId, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode);
+    return Objects.hash(id, lob, skuId, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode, customFields);
   }
 
   @Override
@@ -297,6 +320,7 @@ public class InventoryAdjustment   {
     sb.append("    printed: ").append(toIndentedString(printed)).append("\n");
     sb.append("    orderNo: ").append(toIndentedString(orderNo)).append("\n");
     sb.append("    adjustmentCode: ").append(toIndentedString(adjustmentCode)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

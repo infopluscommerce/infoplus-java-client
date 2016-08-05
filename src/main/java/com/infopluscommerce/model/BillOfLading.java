@@ -6,15 +6,18 @@ import com.infopluscommerce.model.BillOfLadingCarrierInfoLine;
 import com.infopluscommerce.model.BillOfLadingOrderInfoLine;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class BillOfLading   {
   
   private Integer id = null;
@@ -45,7 +48,7 @@ public class BillOfLading   {
   private String billToZip = null;
   private Boolean isTrailerLoadedByShipper = false;
   private Boolean byDriver = false;
-  private Double codAmount = null;
+  private BigDecimal codAmount = null;
   private Boolean feeTermsCollect = false;
   private Boolean feeTermsPrepaid = false;
   private Boolean customerCheckAcceptable = false;
@@ -65,6 +68,7 @@ public class BillOfLading   {
   private String specialInstructions = null;
   private List<BillOfLadingOrderInfoLine> orderInfoLines = new ArrayList<BillOfLadingOrderInfoLine>();
   private List<BillOfLadingCarrierInfoLine> carrierInfoLines = new ArrayList<BillOfLadingCarrierInfoLine>();
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -515,17 +519,17 @@ public class BillOfLading   {
   
   /**
    **/
-  public BillOfLading codAmount(Double codAmount) {
+  public BillOfLading codAmount(BigDecimal codAmount) {
     this.codAmount = codAmount;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("codAmount")
-  public Double getCodAmount() {
+  public BigDecimal getCodAmount() {
     return codAmount;
   }
-  public void setCodAmount(Double codAmount) {
+  public void setCodAmount(BigDecimal codAmount) {
     this.codAmount = codAmount;
   }
 
@@ -853,6 +857,23 @@ public class BillOfLading   {
   }
 
   
+  /**
+   **/
+  public BillOfLading customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -910,12 +931,13 @@ public class BillOfLading   {
         Objects.equals(this.byDriverPieces, billOfLading.byDriverPieces) &&
         Objects.equals(this.specialInstructions, billOfLading.specialInstructions) &&
         Objects.equals(this.orderInfoLines, billOfLading.orderInfoLines) &&
-        Objects.equals(this.carrierInfoLines, billOfLading.carrierInfoLines);
+        Objects.equals(this.carrierInfoLines, billOfLading.carrierInfoLines) &&
+        Objects.equals(this.customFields, billOfLading.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, bolNo, bolDate, shipFromName, shipFromAddress, shipFromCity, shipFromState, shipFromZip, sid, isShipFromFOB, shipToName, shipToAddress, shipToCity, shipToState, shipToZip, shipToLocationNo, cid, isShipToFOB, billToName, billToAddress, billToCity, billToState, billToZip, isTrailerLoadedByShipper, byDriver, codAmount, feeTermsCollect, feeTermsPrepaid, customerCheckAcceptable, carrierName, trailerNo, sealNo, scac, proNo, prepaid, collect, thirdParty, isThisAMasterBOL, masterBOLId, isFreightCountedByShipper, byDriverPallets, byDriverPieces, specialInstructions, orderInfoLines, carrierInfoLines);
+    return Objects.hash(id, createDate, modifyDate, lobId, bolNo, bolDate, shipFromName, shipFromAddress, shipFromCity, shipFromState, shipFromZip, sid, isShipFromFOB, shipToName, shipToAddress, shipToCity, shipToState, shipToZip, shipToLocationNo, cid, isShipToFOB, billToName, billToAddress, billToCity, billToState, billToZip, isTrailerLoadedByShipper, byDriver, codAmount, feeTermsCollect, feeTermsPrepaid, customerCheckAcceptable, carrierName, trailerNo, sealNo, scac, proNo, prepaid, collect, thirdParty, isThisAMasterBOL, masterBOLId, isFreightCountedByShipper, byDriverPallets, byDriverPieces, specialInstructions, orderInfoLines, carrierInfoLines, customFields);
   }
 
   @Override
@@ -971,6 +993,7 @@ public class BillOfLading   {
     sb.append("    specialInstructions: ").append(toIndentedString(specialInstructions)).append("\n");
     sb.append("    orderInfoLines: ").append(toIndentedString(orderInfoLines)).append("\n");
     sb.append("    carrierInfoLines: ").append(toIndentedString(carrierInfoLines)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

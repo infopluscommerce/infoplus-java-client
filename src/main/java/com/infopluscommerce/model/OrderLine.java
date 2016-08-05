@@ -4,16 +4,20 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class OrderLine   {
   
   private Integer id = null;
-  private Double orderNo = null;
+  private BigDecimal orderNo = null;
   private Integer lobId = null;
   private String sku = null;
   private Integer poNoId = null;
@@ -27,13 +31,14 @@ public class OrderLine   {
   private String upc = null;
   private String vendorSKU = null;
   private String orderSourceSKU = null;
-  private Double unitCost = null;
-  private Double unitSell = null;
-  private Double extendedCost = null;
-  private Double extendedSell = null;
-  private Double ncExtendedSell = null;
-  private Double itemWeight = null;
-  private Double weightPerWrap = null;
+  private BigDecimal unitCost = null;
+  private BigDecimal unitSell = null;
+  private BigDecimal extendedCost = null;
+  private BigDecimal extendedSell = null;
+  private BigDecimal ncExtendedSell = null;
+  private BigDecimal itemWeight = null;
+  private String productionLot = null;
+  private BigDecimal weightPerWrap = null;
   private String sector = null;
   private Integer itemAccountCodeId = null;
   private Integer itemLegacyLowStockContactId = null;
@@ -41,6 +46,7 @@ public class OrderLine   {
   private Integer itemSubGroupId = null;
   private Integer itemProductCodeId = null;
   private Integer itemSummaryCodeId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -52,7 +58,7 @@ public class OrderLine   {
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderNo")
-  public Double getOrderNo() {
+  public BigDecimal getOrderNo() {
     return orderNo;
   }
 
@@ -150,49 +156,56 @@ public class OrderLine   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitCost")
-  public Double getUnitCost() {
+  public BigDecimal getUnitCost() {
     return unitCost;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("unitSell")
-  public Double getUnitSell() {
+  public BigDecimal getUnitSell() {
     return unitSell;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extendedCost")
-  public Double getExtendedCost() {
+  public BigDecimal getExtendedCost() {
     return extendedCost;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extendedSell")
-  public Double getExtendedSell() {
+  public BigDecimal getExtendedSell() {
     return extendedSell;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ncExtendedSell")
-  public Double getNcExtendedSell() {
+  public BigDecimal getNcExtendedSell() {
     return ncExtendedSell;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("itemWeight")
-  public Double getItemWeight() {
+  public BigDecimal getItemWeight() {
     return itemWeight;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("productionLot")
+  public String getProductionLot() {
+    return productionLot;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightPerWrap")
-  public Double getWeightPerWrap() {
+  public BigDecimal getWeightPerWrap() {
     return weightPerWrap;
   }
 
@@ -306,6 +319,23 @@ public class OrderLine   {
   }
 
   
+  /**
+   **/
+  public OrderLine customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -337,6 +367,7 @@ public class OrderLine   {
         Objects.equals(this.extendedSell, orderLine.extendedSell) &&
         Objects.equals(this.ncExtendedSell, orderLine.ncExtendedSell) &&
         Objects.equals(this.itemWeight, orderLine.itemWeight) &&
+        Objects.equals(this.productionLot, orderLine.productionLot) &&
         Objects.equals(this.weightPerWrap, orderLine.weightPerWrap) &&
         Objects.equals(this.sector, orderLine.sector) &&
         Objects.equals(this.itemAccountCodeId, orderLine.itemAccountCodeId) &&
@@ -344,12 +375,13 @@ public class OrderLine   {
         Objects.equals(this.itemMajorGroupId, orderLine.itemMajorGroupId) &&
         Objects.equals(this.itemSubGroupId, orderLine.itemSubGroupId) &&
         Objects.equals(this.itemProductCodeId, orderLine.itemProductCodeId) &&
-        Objects.equals(this.itemSummaryCodeId, orderLine.itemSummaryCodeId);
+        Objects.equals(this.itemSummaryCodeId, orderLine.itemSummaryCodeId) &&
+        Objects.equals(this.customFields, orderLine.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, extendedCost, extendedSell, ncExtendedSell, itemWeight, weightPerWrap, sector, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId);
+    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, extendedCost, extendedSell, ncExtendedSell, itemWeight, productionLot, weightPerWrap, sector, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, customFields);
   }
 
   @Override
@@ -378,6 +410,7 @@ public class OrderLine   {
     sb.append("    extendedSell: ").append(toIndentedString(extendedSell)).append("\n");
     sb.append("    ncExtendedSell: ").append(toIndentedString(ncExtendedSell)).append("\n");
     sb.append("    itemWeight: ").append(toIndentedString(itemWeight)).append("\n");
+    sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    sector: ").append(toIndentedString(sector)).append("\n");
     sb.append("    itemAccountCodeId: ").append(toIndentedString(itemAccountCodeId)).append("\n");
@@ -386,6 +419,7 @@ public class OrderLine   {
     sb.append("    itemSubGroupId: ").append(toIndentedString(itemSubGroupId)).append("\n");
     sb.append("    itemProductCodeId: ").append(toIndentedString(itemProductCodeId)).append("\n");
     sb.append("    itemSummaryCodeId: ").append(toIndentedString(itemSummaryCodeId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

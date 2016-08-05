@@ -7,15 +7,15 @@ import com.infopluscommerce.ApiClient;
 import com.infopluscommerce.Configuration;
 import com.infopluscommerce.Pair;
 
-import com.infopluscommerce.model.ThirdPartyParcelAccount;
 import com.infopluscommerce.model.ApiResponse;
+import com.infopluscommerce.model.ThirdPartyParcelAccount;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ThirdPartyParcelAccountApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ThirdPartyParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/thirdPartyParcelAccount".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/thirdPartyParcelAccount".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -98,7 +98,7 @@ public class ThirdPartyParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/thirdPartyParcelAccount/{thirdPartyParcelAccountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/thirdPartyParcelAccount/{thirdPartyParcelAccountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "thirdPartyParcelAccountId" + "\\}", apiClient.escapeString(thirdPartyParcelAccountId.toString()));
 
     // query params
@@ -143,7 +143,7 @@ public class ThirdPartyParcelAccountApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/thirdPartyParcelAccount/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/thirdPartyParcelAccount/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -198,7 +198,7 @@ public class ThirdPartyParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/thirdPartyParcelAccount/{thirdPartyParcelAccountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/thirdPartyParcelAccount/{thirdPartyParcelAccountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "thirdPartyParcelAccountId" + "\\}", apiClient.escapeString(thirdPartyParcelAccountId.toString()));
 
     // query params
@@ -245,7 +245,52 @@ public class ThirdPartyParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/thirdPartyParcelAccount".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/thirdPartyParcelAccount".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Update a thirdPartyParcelAccount custom fields
+   * Updates an existing thirdPartyParcelAccount custom fields using the specified data.
+   * @param body ThirdPartyParcelAccount to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateThirdPartyParcelAccountCustomFields(ThirdPartyParcelAccount body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateThirdPartyParcelAccountCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/thirdPartyParcelAccount/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class BillingCode   {
   
   private Integer id = null;
@@ -22,6 +25,7 @@ public class BillingCode   {
   private Integer lobId = null;
   private Integer billingCodeTypeId = null;
   private String note = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -137,6 +141,23 @@ public class BillingCode   {
   }
 
   
+  /**
+   **/
+  public BillingCode customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -155,12 +176,13 @@ public class BillingCode   {
         Objects.equals(this.userId, billingCode.userId) &&
         Objects.equals(this.lobId, billingCode.lobId) &&
         Objects.equals(this.billingCodeTypeId, billingCode.billingCodeTypeId) &&
-        Objects.equals(this.note, billingCode.note);
+        Objects.equals(this.note, billingCode.note) &&
+        Objects.equals(this.customFields, billingCode.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, quantity, date, userId, lobId, billingCodeTypeId, note);
+    return Objects.hash(id, createDate, modifyDate, quantity, date, userId, lobId, billingCodeTypeId, note, customFields);
   }
 
   @Override
@@ -177,6 +199,7 @@ public class BillingCode   {
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    billingCodeTypeId: ").append(toIndentedString(billingCodeTypeId)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

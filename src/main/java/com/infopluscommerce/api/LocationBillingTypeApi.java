@@ -7,15 +7,15 @@ import com.infopluscommerce.ApiClient;
 import com.infopluscommerce.Configuration;
 import com.infopluscommerce.Pair;
 
-import com.infopluscommerce.model.ApiResponse;
 import com.infopluscommerce.model.LocationBillingType;
+import com.infopluscommerce.model.ApiResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class LocationBillingTypeApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class LocationBillingTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/locationBillingType".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/locationBillingType".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -98,7 +98,7 @@ public class LocationBillingTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/locationBillingType/{locationBillingTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/locationBillingType/{locationBillingTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "locationBillingTypeId" + "\\}", apiClient.escapeString(locationBillingTypeId.toString()));
 
     // query params
@@ -143,7 +143,7 @@ public class LocationBillingTypeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/locationBillingType/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/locationBillingType/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -198,7 +198,7 @@ public class LocationBillingTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/locationBillingType/{locationBillingTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/locationBillingType/{locationBillingTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "locationBillingTypeId" + "\\}", apiClient.escapeString(locationBillingTypeId.toString()));
 
     // query params
@@ -245,7 +245,52 @@ public class LocationBillingTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/locationBillingType".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/locationBillingType".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Update a locationBillingType custom fields
+   * Updates an existing locationBillingType custom fields using the specified data.
+   * @param body LocationBillingType to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateLocationBillingTypeCustomFields(LocationBillingType body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateLocationBillingTypeCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/locationBillingType/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

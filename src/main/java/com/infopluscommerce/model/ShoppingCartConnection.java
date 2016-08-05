@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ShoppingCartConnection   {
   
   private Integer id = null;
@@ -33,6 +36,7 @@ public class ShoppingCartConnection   {
   private Boolean syncInventory = false;
   private Boolean syncTrackingData = false;
   private Date syncInventoryLevelsLastRunTime = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -315,6 +319,23 @@ public class ShoppingCartConnection   {
   }
 
   
+  /**
+   **/
+  public ShoppingCartConnection customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -344,12 +365,13 @@ public class ShoppingCartConnection   {
         Objects.equals(this.syncOrders, shoppingCartConnection.syncOrders) &&
         Objects.equals(this.syncInventory, shoppingCartConnection.syncInventory) &&
         Objects.equals(this.syncTrackingData, shoppingCartConnection.syncTrackingData) &&
-        Objects.equals(this.syncInventoryLevelsLastRunTime, shoppingCartConnection.syncInventoryLevelsLastRunTime);
+        Objects.equals(this.syncInventoryLevelsLastRunTime, shoppingCartConnection.syncInventoryLevelsLastRunTime) &&
+        Objects.equals(this.customFields, shoppingCartConnection.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, name, shoppingCartStoreURL, accessCode, accessToken, syncOrders, syncInventory, syncTrackingData, syncInventoryLevelsLastRunTime);
+    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, name, shoppingCartStoreURL, accessCode, accessToken, syncOrders, syncInventory, syncTrackingData, syncInventoryLevelsLastRunTime, customFields);
   }
 
   @Override
@@ -377,6 +399,7 @@ public class ShoppingCartConnection   {
     sb.append("    syncInventory: ").append(toIndentedString(syncInventory)).append("\n");
     sb.append("    syncTrackingData: ").append(toIndentedString(syncTrackingData)).append("\n");
     sb.append("    syncInventoryLevelsLastRunTime: ").append(toIndentedString(syncInventoryLevelsLastRunTime)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

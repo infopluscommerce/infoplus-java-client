@@ -4,18 +4,22 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ProductionLot   {
   
   private Integer id = null;
   private Integer lobId = null;
   private String productionLot = null;
   private Integer quantity = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
   
@@ -69,6 +73,23 @@ public class ProductionLot   {
   
   /**
    **/
+  public ProductionLot customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
+  /**
+   **/
   public ProductionLot sku(String sku) {
     this.sku = sku;
     return this;
@@ -98,12 +119,13 @@ public class ProductionLot   {
         Objects.equals(this.lobId, productionLot.lobId) &&
         Objects.equals(this.productionLot, productionLot.productionLot) &&
         Objects.equals(this.quantity, productionLot.quantity) &&
+        Objects.equals(this.customFields, productionLot.customFields) &&
         Objects.equals(this.sku, productionLot.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lobId, productionLot, quantity, sku);
+    return Objects.hash(id, lobId, productionLot, quantity, customFields, sku);
   }
 
   @Override
@@ -115,6 +137,7 @@ public class ProductionLot   {
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");
     return sb.toString();

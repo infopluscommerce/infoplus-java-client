@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Work   {
   
   private Integer id = null;
@@ -28,6 +31,7 @@ public class Work   {
   private Integer userId = null;
   private Integer lobId = null;
   private Integer workBatchId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -245,6 +249,23 @@ public class Work   {
   }
 
   
+  /**
+   **/
+  public Work customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -269,12 +290,13 @@ public class Work   {
         Objects.equals(this.status, work.status) &&
         Objects.equals(this.userId, work.userId) &&
         Objects.equals(this.lobId, work.lobId) &&
-        Objects.equals(this.workBatchId, work.workBatchId);
+        Objects.equals(this.workBatchId, work.workBatchId) &&
+        Objects.equals(this.customFields, work.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, sourceWarehouseId, sourceBuildingId, sourceLocation, destinationWarehouseId, destinationBuildingId, destinationLocation, type, createDate, modifyDate, priorityCode, status, userId, lobId, workBatchId);
+    return Objects.hash(id, sourceWarehouseId, sourceBuildingId, sourceLocation, destinationWarehouseId, destinationBuildingId, destinationLocation, type, createDate, modifyDate, priorityCode, status, userId, lobId, workBatchId, customFields);
   }
 
   @Override
@@ -297,6 +319,7 @@ public class Work   {
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    workBatchId: ").append(toIndentedString(workBatchId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Replenishment   {
   
   private Integer id = null;
@@ -20,6 +23,7 @@ public class Replenishment   {
   private Integer pickFaceAssignment = null;
   private Integer locationId = null;
   private Integer quantity = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
   
@@ -84,6 +88,23 @@ public class Replenishment   {
   
   /**
    **/
+  public Replenishment customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
+  /**
+   **/
   public Replenishment sku(String sku) {
     this.sku = sku;
     return this;
@@ -116,12 +137,13 @@ public class Replenishment   {
         Objects.equals(this.pickFaceAssignment, replenishment.pickFaceAssignment) &&
         Objects.equals(this.locationId, replenishment.locationId) &&
         Objects.equals(this.quantity, replenishment.quantity) &&
+        Objects.equals(this.customFields, replenishment.customFields) &&
         Objects.equals(this.sku, replenishment.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, replenishmentProcess, pickFaceAssignment, locationId, quantity, sku);
+    return Objects.hash(id, createDate, modifyDate, replenishmentProcess, pickFaceAssignment, locationId, quantity, customFields, sku);
   }
 
   @Override
@@ -136,6 +158,7 @@ public class Replenishment   {
     sb.append("    pickFaceAssignment: ").append(toIndentedString(pickFaceAssignment)).append("\n");
     sb.append("    locationId: ").append(toIndentedString(locationId)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");
     return sb.toString();

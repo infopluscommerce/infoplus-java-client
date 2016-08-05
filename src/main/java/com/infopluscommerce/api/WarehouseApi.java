@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class WarehouseApi {
   private ApiClient apiClient;
 
@@ -49,7 +49,7 @@ public class WarehouseApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/warehouse/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/warehouse/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -104,7 +104,7 @@ public class WarehouseApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/warehouse/{warehouseId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/warehouse/{warehouseId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "warehouseId" + "\\}", apiClient.escapeString(warehouseId.toString()));
 
     // query params
@@ -151,7 +151,52 @@ public class WarehouseApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/warehouse".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/warehouse".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Update a warehouse custom fields
+   * Updates an existing warehouse custom fields using the specified data.
+   * @param body Warehouse to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateWarehouseCustomFields(Warehouse body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateWarehouseCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/warehouse/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

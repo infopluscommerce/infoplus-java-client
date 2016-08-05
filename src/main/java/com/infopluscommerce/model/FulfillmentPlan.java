@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class FulfillmentPlan   {
   
   private Integer id = null;
@@ -35,12 +38,14 @@ public class FulfillmentPlan   {
   private String pickSummaryFormat = null;
   private String pickSummaryLayout = null;
   private String pickSummarySort = null;
+  private Integer pickScanSchemeId = null;
   private Boolean cartonizeOrders = false;
   private Boolean autoShipCasebreakCartons = false;
   private Boolean preGenerateParcelLabels = false;
   private Integer overridePackingSlipTemplateId = null;
   private Boolean createPackingSlip = false;
   private Boolean createOrderAssemblyGuide = false;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -389,6 +394,23 @@ public class FulfillmentPlan   {
   
   /**
    **/
+  public FulfillmentPlan pickScanSchemeId(Integer pickScanSchemeId) {
+    this.pickScanSchemeId = pickScanSchemeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("pickScanSchemeId")
+  public Integer getPickScanSchemeId() {
+    return pickScanSchemeId;
+  }
+  public void setPickScanSchemeId(Integer pickScanSchemeId) {
+    this.pickScanSchemeId = pickScanSchemeId;
+  }
+
+  
+  /**
+   **/
   public FulfillmentPlan cartonizeOrders(Boolean cartonizeOrders) {
     this.cartonizeOrders = cartonizeOrders;
     return this;
@@ -489,6 +511,23 @@ public class FulfillmentPlan   {
   }
 
   
+  /**
+   **/
+  public FulfillmentPlan customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -521,17 +560,19 @@ public class FulfillmentPlan   {
         Objects.equals(this.pickSummaryFormat, fulfillmentPlan.pickSummaryFormat) &&
         Objects.equals(this.pickSummaryLayout, fulfillmentPlan.pickSummaryLayout) &&
         Objects.equals(this.pickSummarySort, fulfillmentPlan.pickSummarySort) &&
+        Objects.equals(this.pickScanSchemeId, fulfillmentPlan.pickScanSchemeId) &&
         Objects.equals(this.cartonizeOrders, fulfillmentPlan.cartonizeOrders) &&
         Objects.equals(this.autoShipCasebreakCartons, fulfillmentPlan.autoShipCasebreakCartons) &&
         Objects.equals(this.preGenerateParcelLabels, fulfillmentPlan.preGenerateParcelLabels) &&
         Objects.equals(this.overridePackingSlipTemplateId, fulfillmentPlan.overridePackingSlipTemplateId) &&
         Objects.equals(this.createPackingSlip, fulfillmentPlan.createPackingSlip) &&
-        Objects.equals(this.createOrderAssemblyGuide, fulfillmentPlan.createOrderAssemblyGuide);
+        Objects.equals(this.createOrderAssemblyGuide, fulfillmentPlan.createOrderAssemblyGuide) &&
+        Objects.equals(this.customFields, fulfillmentPlan.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, orderSmartFilterId, locationSmartFilterId, maximumNumberOfOrders, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, cartonizeOrders, autoShipCasebreakCartons, preGenerateParcelLabels, overridePackingSlipTemplateId, createPackingSlip, createOrderAssemblyGuide);
+    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, orderSmartFilterId, locationSmartFilterId, maximumNumberOfOrders, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, pickScanSchemeId, cartonizeOrders, autoShipCasebreakCartons, preGenerateParcelLabels, overridePackingSlipTemplateId, createPackingSlip, createOrderAssemblyGuide, customFields);
   }
 
   @Override
@@ -561,12 +602,14 @@ public class FulfillmentPlan   {
     sb.append("    pickSummaryFormat: ").append(toIndentedString(pickSummaryFormat)).append("\n");
     sb.append("    pickSummaryLayout: ").append(toIndentedString(pickSummaryLayout)).append("\n");
     sb.append("    pickSummarySort: ").append(toIndentedString(pickSummarySort)).append("\n");
+    sb.append("    pickScanSchemeId: ").append(toIndentedString(pickScanSchemeId)).append("\n");
     sb.append("    cartonizeOrders: ").append(toIndentedString(cartonizeOrders)).append("\n");
     sb.append("    autoShipCasebreakCartons: ").append(toIndentedString(autoShipCasebreakCartons)).append("\n");
     sb.append("    preGenerateParcelLabels: ").append(toIndentedString(preGenerateParcelLabels)).append("\n");
     sb.append("    overridePackingSlipTemplateId: ").append(toIndentedString(overridePackingSlipTemplateId)).append("\n");
     sb.append("    createPackingSlip: ").append(toIndentedString(createPackingSlip)).append("\n");
     sb.append("    createOrderAssemblyGuide: ").append(toIndentedString(createOrderAssemblyGuide)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

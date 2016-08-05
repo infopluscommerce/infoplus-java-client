@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ItemLowStockCodeApi {
   private ApiClient apiClient;
 
@@ -48,7 +48,7 @@ public class ItemLowStockCodeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/itemLowStockCode/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/itemLowStockCode/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -101,7 +101,7 @@ public class ItemLowStockCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/itemLowStockCode/{itemLowStockCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/itemLowStockCode/{itemLowStockCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemLowStockCodeId" + "\\}", apiClient.escapeString(itemLowStockCodeId.toString()));
 
     // query params

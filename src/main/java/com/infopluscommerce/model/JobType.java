@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class JobType   {
   
   private Integer id = null;
@@ -21,6 +24,7 @@ public class JobType   {
   private String description = null;
   private String jobCode = null;
   private Boolean isActive = false;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -119,6 +123,23 @@ public class JobType   {
   }
 
   
+  /**
+   **/
+  public JobType customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -136,12 +157,13 @@ public class JobType   {
         Objects.equals(this.name, jobType.name) &&
         Objects.equals(this.description, jobType.description) &&
         Objects.equals(this.jobCode, jobType.jobCode) &&
-        Objects.equals(this.isActive, jobType.isActive);
+        Objects.equals(this.isActive, jobType.isActive) &&
+        Objects.equals(this.customFields, jobType.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, clientId, createDate, modifyDate, name, description, jobCode, isActive);
+    return Objects.hash(id, clientId, createDate, modifyDate, name, description, jobCode, isActive, customFields);
   }
 
   @Override
@@ -157,6 +179,7 @@ public class JobType   {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    jobCode: ").append(toIndentedString(jobCode)).append("\n");
     sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

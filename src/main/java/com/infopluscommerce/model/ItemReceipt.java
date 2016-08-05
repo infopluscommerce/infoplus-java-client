@@ -4,35 +4,39 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ItemReceipt   {
   
   private Integer id = null;
-  private String poNo = null;
+  private Integer poNoId = null;
   private Integer lobId = null;
   private String legacyPoNo = null;
   private Integer warehouseId = null;
   private Date orderDate = null;
-  private Double factCost = null;
-  private Double mlCost = null;
+  private BigDecimal factCost = null;
+  private BigDecimal mlCost = null;
   private String sku = null;
   private Integer orderQuantity = null;
   private Date requestedDeliveryDate = null;
   private String unitCode = null;
   private String wrapCode = null;
   private Integer unitsPerWrap = null;
-  private Double cost = null;
-  private Double sell = null;
+  private BigDecimal cost = null;
+  private BigDecimal sell = null;
   private String pricingPer = null;
-  private Double maxFreight = null;
+  private BigDecimal maxFreight = null;
   private String chargeFreight = null;
-  private Double maxOther = null;
+  private BigDecimal maxOther = null;
   private Date distDate = null;
   private Date voidDate = null;
   private String freezeAction = null;
@@ -50,19 +54,19 @@ public class ItemReceipt   {
   private String capitalize = null;
   private String accrual = null;
   private Integer oddQuantity = null;
-  private Double freightCost = null;
+  private BigDecimal freightCost = null;
   private Date receivedDate = null;
   private Integer receivedQuantity = null;
   private Integer fromProd = null;
   private String sfpComplete = null;
   private Integer endQuantity = null;
-  private Double endVal = null;
-  private Double endFact = null;
+  private BigDecimal endVal = null;
+  private BigDecimal endFact = null;
   private Integer interimQuantity = null;
-  private Double interimVal = null;
-  private Double interimFact = null;
+  private BigDecimal interimVal = null;
+  private BigDecimal interimFact = null;
   private Date lastAct = null;
-  private Double weightPerWrap = null;
+  private BigDecimal weightPerWrap = null;
   private String norcs = null;
   private Integer vendorId = null;
   private Integer bsVendor = null;
@@ -74,14 +78,15 @@ public class ItemReceipt   {
   private Integer lineNo = null;
   private String prodLot = null;
   private Integer unitsPerCase = null;
-  private Double caseWeight = null;
-  private Double height = null;
-  private Double width = null;
-  private Double length = null;
+  private BigDecimal caseWeight = null;
+  private BigDecimal height = null;
+  private BigDecimal width = null;
+  private BigDecimal length = null;
   private Date dockTime = null;
   private Date modifyDate = null;
   private Integer impressions = null;
   private Integer asnLine = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -93,18 +98,18 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt poNo(String poNo) {
-    this.poNo = poNo;
+  public ItemReceipt poNoId(Integer poNoId) {
+    this.poNoId = poNoId;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("poNo")
-  public String getPoNo() {
-    return poNo;
+  @JsonProperty("poNoId")
+  public Integer getPoNoId() {
+    return poNoId;
   }
-  public void setPoNo(String poNo) {
-    this.poNo = poNo;
+  public void setPoNoId(Integer poNoId) {
+    this.poNoId = poNoId;
   }
 
   
@@ -178,34 +183,34 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt factCost(Double factCost) {
+  public ItemReceipt factCost(BigDecimal factCost) {
     this.factCost = factCost;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("factCost")
-  public Double getFactCost() {
+  public BigDecimal getFactCost() {
     return factCost;
   }
-  public void setFactCost(Double factCost) {
+  public void setFactCost(BigDecimal factCost) {
     this.factCost = factCost;
   }
 
   
   /**
    **/
-  public ItemReceipt mlCost(Double mlCost) {
+  public ItemReceipt mlCost(BigDecimal mlCost) {
     this.mlCost = mlCost;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mlCost")
-  public Double getMlCost() {
+  public BigDecimal getMlCost() {
     return mlCost;
   }
-  public void setMlCost(Double mlCost) {
+  public void setMlCost(BigDecimal mlCost) {
     this.mlCost = mlCost;
   }
 
@@ -314,34 +319,34 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt cost(Double cost) {
+  public ItemReceipt cost(BigDecimal cost) {
     this.cost = cost;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cost")
-  public Double getCost() {
+  public BigDecimal getCost() {
     return cost;
   }
-  public void setCost(Double cost) {
+  public void setCost(BigDecimal cost) {
     this.cost = cost;
   }
 
   
   /**
    **/
-  public ItemReceipt sell(Double sell) {
+  public ItemReceipt sell(BigDecimal sell) {
     this.sell = sell;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sell")
-  public Double getSell() {
+  public BigDecimal getSell() {
     return sell;
   }
-  public void setSell(Double sell) {
+  public void setSell(BigDecimal sell) {
     this.sell = sell;
   }
 
@@ -365,17 +370,17 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt maxFreight(Double maxFreight) {
+  public ItemReceipt maxFreight(BigDecimal maxFreight) {
     this.maxFreight = maxFreight;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("maxFreight")
-  public Double getMaxFreight() {
+  public BigDecimal getMaxFreight() {
     return maxFreight;
   }
-  public void setMaxFreight(Double maxFreight) {
+  public void setMaxFreight(BigDecimal maxFreight) {
     this.maxFreight = maxFreight;
   }
 
@@ -399,17 +404,17 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt maxOther(Double maxOther) {
+  public ItemReceipt maxOther(BigDecimal maxOther) {
     this.maxOther = maxOther;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("maxOther")
-  public Double getMaxOther() {
+  public BigDecimal getMaxOther() {
     return maxOther;
   }
-  public void setMaxOther(Double maxOther) {
+  public void setMaxOther(BigDecimal maxOther) {
     this.maxOther = maxOther;
   }
 
@@ -455,7 +460,7 @@ public class ItemReceipt   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("freezeAction")
   public String getFreezeAction() {
     return freezeAction;
@@ -591,7 +596,7 @@ public class ItemReceipt   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("receivedSfp")
   public Integer getReceivedSfp() {
     return receivedSfp;
@@ -705,17 +710,17 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt freightCost(Double freightCost) {
+  public ItemReceipt freightCost(BigDecimal freightCost) {
     this.freightCost = freightCost;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("freightCost")
-  public Double getFreightCost() {
+  public BigDecimal getFreightCost() {
     return freightCost;
   }
-  public void setFreightCost(Double freightCost) {
+  public void setFreightCost(BigDecimal freightCost) {
     this.freightCost = freightCost;
   }
 
@@ -807,34 +812,34 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt endVal(Double endVal) {
+  public ItemReceipt endVal(BigDecimal endVal) {
     this.endVal = endVal;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("endVal")
-  public Double getEndVal() {
+  public BigDecimal getEndVal() {
     return endVal;
   }
-  public void setEndVal(Double endVal) {
+  public void setEndVal(BigDecimal endVal) {
     this.endVal = endVal;
   }
 
   
   /**
    **/
-  public ItemReceipt endFact(Double endFact) {
+  public ItemReceipt endFact(BigDecimal endFact) {
     this.endFact = endFact;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("endFact")
-  public Double getEndFact() {
+  public BigDecimal getEndFact() {
     return endFact;
   }
-  public void setEndFact(Double endFact) {
+  public void setEndFact(BigDecimal endFact) {
     this.endFact = endFact;
   }
 
@@ -858,34 +863,34 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt interimVal(Double interimVal) {
+  public ItemReceipt interimVal(BigDecimal interimVal) {
     this.interimVal = interimVal;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("interimVal")
-  public Double getInterimVal() {
+  public BigDecimal getInterimVal() {
     return interimVal;
   }
-  public void setInterimVal(Double interimVal) {
+  public void setInterimVal(BigDecimal interimVal) {
     this.interimVal = interimVal;
   }
 
   
   /**
    **/
-  public ItemReceipt interimFact(Double interimFact) {
+  public ItemReceipt interimFact(BigDecimal interimFact) {
     this.interimFact = interimFact;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("interimFact")
-  public Double getInterimFact() {
+  public BigDecimal getInterimFact() {
     return interimFact;
   }
-  public void setInterimFact(Double interimFact) {
+  public void setInterimFact(BigDecimal interimFact) {
     this.interimFact = interimFact;
   }
 
@@ -909,17 +914,17 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt weightPerWrap(Double weightPerWrap) {
+  public ItemReceipt weightPerWrap(BigDecimal weightPerWrap) {
     this.weightPerWrap = weightPerWrap;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightPerWrap")
-  public Double getWeightPerWrap() {
+  public BigDecimal getWeightPerWrap() {
     return weightPerWrap;
   }
-  public void setWeightPerWrap(Double weightPerWrap) {
+  public void setWeightPerWrap(BigDecimal weightPerWrap) {
     this.weightPerWrap = weightPerWrap;
   }
 
@@ -1113,68 +1118,68 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt caseWeight(Double caseWeight) {
+  public ItemReceipt caseWeight(BigDecimal caseWeight) {
     this.caseWeight = caseWeight;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("caseWeight")
-  public Double getCaseWeight() {
+  public BigDecimal getCaseWeight() {
     return caseWeight;
   }
-  public void setCaseWeight(Double caseWeight) {
+  public void setCaseWeight(BigDecimal caseWeight) {
     this.caseWeight = caseWeight;
   }
 
   
   /**
    **/
-  public ItemReceipt height(Double height) {
+  public ItemReceipt height(BigDecimal height) {
     this.height = height;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("height")
-  public Double getHeight() {
+  public BigDecimal getHeight() {
     return height;
   }
-  public void setHeight(Double height) {
+  public void setHeight(BigDecimal height) {
     this.height = height;
   }
 
   
   /**
    **/
-  public ItemReceipt width(Double width) {
+  public ItemReceipt width(BigDecimal width) {
     this.width = width;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("width")
-  public Double getWidth() {
+  public BigDecimal getWidth() {
     return width;
   }
-  public void setWidth(Double width) {
+  public void setWidth(BigDecimal width) {
     this.width = width;
   }
 
   
   /**
    **/
-  public ItemReceipt length(Double length) {
+  public ItemReceipt length(BigDecimal length) {
     this.length = length;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("length")
-  public Double getLength() {
+  public BigDecimal getLength() {
     return length;
   }
-  public void setLength(Double length) {
+  public void setLength(BigDecimal length) {
     this.length = length;
   }
 
@@ -1237,6 +1242,23 @@ public class ItemReceipt   {
   }
 
   
+  /**
+   **/
+  public ItemReceipt customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1248,7 +1270,7 @@ public class ItemReceipt   {
     }
     ItemReceipt itemReceipt = (ItemReceipt) o;
     return Objects.equals(this.id, itemReceipt.id) &&
-        Objects.equals(this.poNo, itemReceipt.poNo) &&
+        Objects.equals(this.poNoId, itemReceipt.poNoId) &&
         Objects.equals(this.lobId, itemReceipt.lobId) &&
         Objects.equals(this.legacyPoNo, itemReceipt.legacyPoNo) &&
         Objects.equals(this.warehouseId, itemReceipt.warehouseId) &&
@@ -1315,12 +1337,13 @@ public class ItemReceipt   {
         Objects.equals(this.dockTime, itemReceipt.dockTime) &&
         Objects.equals(this.modifyDate, itemReceipt.modifyDate) &&
         Objects.equals(this.impressions, itemReceipt.impressions) &&
-        Objects.equals(this.asnLine, itemReceipt.asnLine);
+        Objects.equals(this.asnLine, itemReceipt.asnLine) &&
+        Objects.equals(this.customFields, itemReceipt.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, poNo, lobId, legacyPoNo, warehouseId, orderDate, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sell, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, unitsPerCase, caseWeight, height, width, length, dockTime, modifyDate, impressions, asnLine);
+    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sell, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, unitsPerCase, caseWeight, height, width, length, dockTime, modifyDate, impressions, asnLine, customFields);
   }
 
   @Override
@@ -1329,7 +1352,7 @@ public class ItemReceipt   {
     sb.append("class ItemReceipt {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    poNo: ").append(toIndentedString(poNo)).append("\n");
+    sb.append("    poNoId: ").append(toIndentedString(poNoId)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    legacyPoNo: ").append(toIndentedString(legacyPoNo)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
@@ -1397,6 +1420,7 @@ public class ItemReceipt   {
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    impressions: ").append(toIndentedString(impressions)).append("\n");
     sb.append("    asnLine: ").append(toIndentedString(asnLine)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -55,7 +55,7 @@ After the client libarary is installed/deployed, you can use it in your Maven pr
 <dependency>
     <groupId>com.infopluscommerce</groupId>
     <artifactId>java-client</artifactId>
-    <version>1.0</version>
+    <version>beta</version>
     <scope>compile</scope>
 </dependency>
 

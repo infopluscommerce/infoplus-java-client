@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ParcelAccountApi {
   private ApiClient apiClient;
 
@@ -49,7 +49,7 @@ public class ParcelAccountApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/parcelAccount/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/parcelAccount/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -104,7 +104,7 @@ public class ParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/parcelAccount/{parcelAccountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/parcelAccount/{parcelAccountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()));
 
     // query params
@@ -133,6 +133,51 @@ public class ParcelAccountApi {
     
     GenericType<ParcelAccount> localVarReturnType = new GenericType<ParcelAccount>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Update a parcelAccount custom fields
+   * Updates an existing parcelAccount custom fields using the specified data.
+   * @param body ParcelAccount to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateParcelAccountCustomFields(ParcelAccount body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateParcelAccountCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/parcelAccount/customFields".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     
   }
   

@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class ThirdPartyParcelAccount   {
   
   private Integer id = null;
@@ -31,6 +34,7 @@ public class ThirdPartyParcelAccount   {
   private String active = null;
   private Date createDate = null;
   private Date modifyDate = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -309,6 +313,23 @@ public class ThirdPartyParcelAccount   {
   }
 
   
+  /**
+   **/
+  public ThirdPartyParcelAccount customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -336,12 +357,13 @@ public class ThirdPartyParcelAccount   {
         Objects.equals(this.phone, thirdPartyParcelAccount.phone) &&
         Objects.equals(this.active, thirdPartyParcelAccount.active) &&
         Objects.equals(this.createDate, thirdPartyParcelAccount.createDate) &&
-        Objects.equals(this.modifyDate, thirdPartyParcelAccount.modifyDate);
+        Objects.equals(this.modifyDate, thirdPartyParcelAccount.modifyDate) &&
+        Objects.equals(this.customFields, thirdPartyParcelAccount.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lobId, carrier, accountNo, accountName, billingCompany, attention, street1, street2, street3, city, state, country, zipCode, phone, active, createDate, modifyDate);
+    return Objects.hash(id, lobId, carrier, accountNo, accountName, billingCompany, attention, street1, street2, street3, city, state, country, zipCode, phone, active, createDate, modifyDate, customFields);
   }
 
   @Override
@@ -367,6 +389,7 @@ public class ThirdPartyParcelAccount   {
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

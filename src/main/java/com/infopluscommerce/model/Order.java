@@ -5,18 +5,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.infopluscommerce.model.OrderLine;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Order   {
   
-  private Double orderNo = null;
+  private BigDecimal orderNo = null;
   private String customerOrderNo = null;
   private Integer lobId = null;
   private Integer warehouseId = null;
@@ -33,9 +36,9 @@ public class Order   {
   private String legacyRestrictionType = null;
   private String alcoholOrderType = null;
   private String alternateUsage = null;
-  private Double authorizationAmount = null;
+  private BigDecimal authorizationAmount = null;
   private String authorizedBy = null;
-  private Double balanceDue = null;
+  private BigDecimal balanceDue = null;
   private String batchNo = null;
   private String billToAttention = null;
   private String billToCompany = null;
@@ -56,19 +59,19 @@ public class Order   {
   private Date createDate = null;
   private String customerPONo = null;
   private String distributionChannel = null;
-  private Double distributionCharges = null;
+  private BigDecimal distributionCharges = null;
   private Integer division = null;
   private String enteredBy = null;
-  private Double estimatedWeightLbs = null;
-  private Double freight = null;
+  private BigDecimal estimatedWeightLbs = null;
+  private BigDecimal freight = null;
   private String giftMessage = null;
-  private Double groupOrderId = null;
+  private BigDecimal groupOrderId = null;
   private String holdCode = null;
   private Integer integrationPartnerId = null;
   private Integer numberOfLineItems = null;
   private Date modifyDate = null;
-  private Integer omsOrderId = null;
   private Integer omsOrderNo = null;
+  private Integer omsCustomerId = null;
   private Integer orderLoadProgramId = null;
   private String orderMessage = null;
   private Integer orderReason = null;
@@ -93,21 +96,22 @@ public class Order   {
   private String shipToCountry = null;
   private String shipToPhone = null;
   private String shipToEmail = null;
-  private Double shippingCharge = null;
+  private BigDecimal shippingCharge = null;
   private String status = null;
   private String stopBackOrders = null;
-  private Double subtotal = null;
-  private Double tax = null;
-  private Double total = null;
-  private Double totalPaid = null;
+  private BigDecimal subtotal = null;
+  private BigDecimal tax = null;
+  private BigDecimal total = null;
+  private BigDecimal totalPaid = null;
   private Integer totalQty = null;
-  private Double weightLbs = null;
+  private BigDecimal weightLbs = null;
   private List<OrderLine> lineItems = new ArrayList<OrderLine>();
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderNo")
-  public Double getOrderNo() {
+  public BigDecimal getOrderNo() {
     return orderNo;
   }
 
@@ -386,7 +390,7 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("authorizationAmount")
-  public Double getAuthorizationAmount() {
+  public BigDecimal getAuthorizationAmount() {
     return authorizationAmount;
   }
 
@@ -410,7 +414,7 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("balanceDue")
-  public Double getBalanceDue() {
+  public BigDecimal getBalanceDue() {
     return balanceDue;
   }
 
@@ -707,7 +711,7 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("distributionCharges")
-  public Double getDistributionCharges() {
+  public BigDecimal getDistributionCharges() {
     return distributionCharges;
   }
 
@@ -738,14 +742,14 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("estimatedWeightLbs")
-  public Double getEstimatedWeightLbs() {
+  public BigDecimal getEstimatedWeightLbs() {
     return estimatedWeightLbs;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("freight")
-  public Double getFreight() {
+  public BigDecimal getFreight() {
     return freight;
   }
 
@@ -769,7 +773,7 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("groupOrderId")
-  public Double getGroupOrderId() {
+  public BigDecimal getGroupOrderId() {
     return groupOrderId;
   }
 
@@ -813,16 +817,16 @@ public class Order   {
 
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("omsOrderId")
-  public Integer getOmsOrderId() {
-    return omsOrderId;
+  @JsonProperty("omsOrderNo")
+  public Integer getOmsOrderNo() {
+    return omsOrderNo;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("omsOrderNo")
-  public Integer getOmsOrderNo() {
-    return omsOrderNo;
+  @JsonProperty("omsCustomerId")
+  public Integer getOmsCustomerId() {
+    return omsCustomerId;
   }
 
   
@@ -1186,7 +1190,7 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shippingCharge")
-  public Double getShippingCharge() {
+  public BigDecimal getShippingCharge() {
     return shippingCharge;
   }
 
@@ -1207,28 +1211,28 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("subtotal")
-  public Double getSubtotal() {
+  public BigDecimal getSubtotal() {
     return subtotal;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("tax")
-  public Double getTax() {
+  public BigDecimal getTax() {
     return tax;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("total")
-  public Double getTotal() {
+  public BigDecimal getTotal() {
     return total;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalPaid")
-  public Double getTotalPaid() {
+  public BigDecimal getTotalPaid() {
     return totalPaid;
   }
 
@@ -1242,7 +1246,7 @@ public class Order   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
-  public Double getWeightLbs() {
+  public BigDecimal getWeightLbs() {
     return weightLbs;
   }
 
@@ -1261,6 +1265,23 @@ public class Order   {
   }
   public void setLineItems(List<OrderLine> lineItems) {
     this.lineItems = lineItems;
+  }
+
+  
+  /**
+   **/
+  public Order customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -1325,8 +1346,8 @@ public class Order   {
         Objects.equals(this.integrationPartnerId, order.integrationPartnerId) &&
         Objects.equals(this.numberOfLineItems, order.numberOfLineItems) &&
         Objects.equals(this.modifyDate, order.modifyDate) &&
-        Objects.equals(this.omsOrderId, order.omsOrderId) &&
         Objects.equals(this.omsOrderNo, order.omsOrderNo) &&
+        Objects.equals(this.omsCustomerId, order.omsCustomerId) &&
         Objects.equals(this.orderLoadProgramId, order.orderLoadProgramId) &&
         Objects.equals(this.orderMessage, order.orderMessage) &&
         Objects.equals(this.orderReason, order.orderReason) &&
@@ -1360,12 +1381,13 @@ public class Order   {
         Objects.equals(this.totalPaid, order.totalPaid) &&
         Objects.equals(this.totalQty, order.totalQty) &&
         Objects.equals(this.weightLbs, order.weightLbs) &&
-        Objects.equals(this.lineItems, order.lineItems);
+        Objects.equals(this.lineItems, order.lineItems) &&
+        Objects.equals(this.customFields, order.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, estimatedWeightLbs, freight, giftMessage, groupOrderId, holdCode, integrationPartnerId, numberOfLineItems, modifyDate, omsOrderId, omsOrderNo, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalPaid, totalQty, weightLbs, lineItems);
+    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, estimatedWeightLbs, freight, giftMessage, groupOrderId, holdCode, integrationPartnerId, numberOfLineItems, modifyDate, omsOrderNo, omsCustomerId, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalPaid, totalQty, weightLbs, lineItems, customFields);
   }
 
   @Override
@@ -1424,8 +1446,8 @@ public class Order   {
     sb.append("    integrationPartnerId: ").append(toIndentedString(integrationPartnerId)).append("\n");
     sb.append("    numberOfLineItems: ").append(toIndentedString(numberOfLineItems)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
-    sb.append("    omsOrderId: ").append(toIndentedString(omsOrderId)).append("\n");
     sb.append("    omsOrderNo: ").append(toIndentedString(omsOrderNo)).append("\n");
+    sb.append("    omsCustomerId: ").append(toIndentedString(omsCustomerId)).append("\n");
     sb.append("    orderLoadProgramId: ").append(toIndentedString(orderLoadProgramId)).append("\n");
     sb.append("    orderMessage: ").append(toIndentedString(orderMessage)).append("\n");
     sb.append("    orderReason: ").append(toIndentedString(orderReason)).append("\n");
@@ -1460,6 +1482,7 @@ public class Order   {
     sb.append("    totalQty: ").append(toIndentedString(totalQty)).append("\n");
     sb.append("    weightLbs: ").append(toIndentedString(weightLbs)).append("\n");
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

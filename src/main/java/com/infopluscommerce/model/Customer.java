@@ -4,13 +4,17 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Customer   {
   
   private Integer id = null;
@@ -39,7 +43,7 @@ public class Customer   {
   private String area = null;
   private String customerType = null;
   private String massLevel = null;
-  private Double massFactor = null;
+  private BigDecimal massFactor = null;
   private String priceLevel = null;
   private Date openDate = null;
   private Date closeDate = null;
@@ -57,10 +61,11 @@ public class Customer   {
   private String extrinsicText3 = null;
   private Integer extrinsicNumber1 = null;
   private Integer extrinsicNumber2 = null;
-  private Double extrinsicDecimal1 = null;
-  private Double extrinsicDecimal2 = null;
+  private BigDecimal extrinsicDecimal1 = null;
+  private BigDecimal extrinsicDecimal2 = null;
   private Date modifyDate = null;
   private Integer omsCustomerId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -497,17 +502,17 @@ public class Customer   {
   
   /**
    **/
-  public Customer massFactor(Double massFactor) {
+  public Customer massFactor(BigDecimal massFactor) {
     this.massFactor = massFactor;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("massFactor")
-  public Double getMassFactor() {
+  public BigDecimal getMassFactor() {
     return massFactor;
   }
-  public void setMassFactor(Double massFactor) {
+  public void setMassFactor(BigDecimal massFactor) {
     this.massFactor = massFactor;
   }
 
@@ -793,34 +798,34 @@ public class Customer   {
   
   /**
    **/
-  public Customer extrinsicDecimal1(Double extrinsicDecimal1) {
+  public Customer extrinsicDecimal1(BigDecimal extrinsicDecimal1) {
     this.extrinsicDecimal1 = extrinsicDecimal1;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extrinsicDecimal1")
-  public Double getExtrinsicDecimal1() {
+  public BigDecimal getExtrinsicDecimal1() {
     return extrinsicDecimal1;
   }
-  public void setExtrinsicDecimal1(Double extrinsicDecimal1) {
+  public void setExtrinsicDecimal1(BigDecimal extrinsicDecimal1) {
     this.extrinsicDecimal1 = extrinsicDecimal1;
   }
 
   
   /**
    **/
-  public Customer extrinsicDecimal2(Double extrinsicDecimal2) {
+  public Customer extrinsicDecimal2(BigDecimal extrinsicDecimal2) {
     this.extrinsicDecimal2 = extrinsicDecimal2;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extrinsicDecimal2")
-  public Double getExtrinsicDecimal2() {
+  public BigDecimal getExtrinsicDecimal2() {
     return extrinsicDecimal2;
   }
-  public void setExtrinsicDecimal2(Double extrinsicDecimal2) {
+  public void setExtrinsicDecimal2(BigDecimal extrinsicDecimal2) {
     this.extrinsicDecimal2 = extrinsicDecimal2;
   }
 
@@ -846,6 +851,23 @@ public class Customer   {
   @JsonProperty("omsCustomerId")
   public Integer getOmsCustomerId() {
     return omsCustomerId;
+  }
+
+  
+  /**
+   **/
+  public Customer customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -906,12 +928,13 @@ public class Customer   {
         Objects.equals(this.extrinsicDecimal1, customer.extrinsicDecimal1) &&
         Objects.equals(this.extrinsicDecimal2, customer.extrinsicDecimal2) &&
         Objects.equals(this.modifyDate, customer.modifyDate) &&
-        Objects.equals(this.omsCustomerId, customer.omsCustomerId);
+        Objects.equals(this.omsCustomerId, customer.omsCustomerId) &&
+        Objects.equals(this.customFields, customer.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lobId, customerNo, name, attention, street, street2, street3Province, city, state, zipCode, country, phone, fax, email, bossBranch, packageCarrierId, truckCarrierId, weightBreak, sector, division, costCenter, county, area, customerType, massLevel, massFactor, priceLevel, openDate, closeDate, restrictionPercent, externalId, cycleDate, manager, alternateInventory, pin, faxGone, residential, csrBranch, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, modifyDate, omsCustomerId);
+    return Objects.hash(id, lobId, customerNo, name, attention, street, street2, street3Province, city, state, zipCode, country, phone, fax, email, bossBranch, packageCarrierId, truckCarrierId, weightBreak, sector, division, costCenter, county, area, customerType, massLevel, massFactor, priceLevel, openDate, closeDate, restrictionPercent, externalId, cycleDate, manager, alternateInventory, pin, faxGone, residential, csrBranch, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, modifyDate, omsCustomerId, customFields);
   }
 
   @Override
@@ -967,6 +990,7 @@ public class Customer   {
     sb.append("    extrinsicDecimal2: ").append(toIndentedString(extrinsicDecimal2)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    omsCustomerId: ").append(toIndentedString(omsCustomerId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

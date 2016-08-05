@@ -7,13 +7,15 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class Asn   {
   
   private Integer id = null;
@@ -61,6 +63,7 @@ public class Asn   {
   private String usedBy = null;
   private List<ItemReceipt> lineItems = new ArrayList<ItemReceipt>();
   private String status = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -778,6 +781,23 @@ public class Asn   {
   }
 
   
+  /**
+   **/
+  public Asn customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -832,12 +852,13 @@ public class Asn   {
         Objects.equals(this.terms, asn.terms) &&
         Objects.equals(this.usedBy, asn.usedBy) &&
         Objects.equals(this.lineItems, asn.lineItems) &&
-        Objects.equals(this.status, asn.status);
+        Objects.equals(this.status, asn.status) &&
+        Objects.equals(this.customFields, asn.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, poNo, vendorId, warehouseId, orderDate, type, billingName, billingAttention, billingStreet1, billingStreet2, billingCity, billingState, billingZipCode, billingPhone, shipToName, shipToAddress, shipToStreet1, shipToStreet2, shipToCity, shipToState, shipToZipCode, shipToPhone, corporateName, corporateAttention, corporateStreet1, corporateStreet2, corporateCity, corporateState, corporateZipCode, accountCode, buyer, carrier, confTo, fob, printed, projectNo, remarks, requestBy, terms, usedBy, lineItems, status);
+    return Objects.hash(id, createDate, modifyDate, lobId, poNo, vendorId, warehouseId, orderDate, type, billingName, billingAttention, billingStreet1, billingStreet2, billingCity, billingState, billingZipCode, billingPhone, shipToName, shipToAddress, shipToStreet1, shipToStreet2, shipToCity, shipToState, shipToZipCode, shipToPhone, corporateName, corporateAttention, corporateStreet1, corporateStreet2, corporateCity, corporateState, corporateZipCode, accountCode, buyer, carrier, confTo, fob, printed, projectNo, remarks, requestBy, terms, usedBy, lineItems, status, customFields);
   }
 
   @Override
@@ -890,6 +911,7 @@ public class Asn   {
     sb.append("    usedBy: ").append(toIndentedString(usedBy)).append("\n");
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

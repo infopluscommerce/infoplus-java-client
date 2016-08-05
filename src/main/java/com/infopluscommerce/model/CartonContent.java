@@ -4,18 +4,22 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class CartonContent   {
   
   private Integer id = null;
-  private Double groupOrderId = null;
-  private Double orderNo = null;
+  private BigDecimal groupOrderId = null;
+  private BigDecimal orderNo = null;
   private Integer cartonNoId = null;
   private Integer lineItemId = null;
   private String location = null;
@@ -25,6 +29,7 @@ public class CartonContent   {
   private String toteId = null;
   private String pickerId = null;
   private String status = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -36,34 +41,34 @@ public class CartonContent   {
   
   /**
    **/
-  public CartonContent groupOrderId(Double groupOrderId) {
+  public CartonContent groupOrderId(BigDecimal groupOrderId) {
     this.groupOrderId = groupOrderId;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("groupOrderId")
-  public Double getGroupOrderId() {
+  public BigDecimal getGroupOrderId() {
     return groupOrderId;
   }
-  public void setGroupOrderId(Double groupOrderId) {
+  public void setGroupOrderId(BigDecimal groupOrderId) {
     this.groupOrderId = groupOrderId;
   }
 
   
   /**
    **/
-  public CartonContent orderNo(Double orderNo) {
+  public CartonContent orderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderNo")
-  public Double getOrderNo() {
+  public BigDecimal getOrderNo() {
     return orderNo;
   }
-  public void setOrderNo(Double orderNo) {
+  public void setOrderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
   }
 
@@ -221,6 +226,23 @@ public class CartonContent   {
   }
 
   
+  /**
+   **/
+  public CartonContent customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -242,12 +264,13 @@ public class CartonContent   {
         Objects.equals(this.completed, cartonContent.completed) &&
         Objects.equals(this.toteId, cartonContent.toteId) &&
         Objects.equals(this.pickerId, cartonContent.pickerId) &&
-        Objects.equals(this.status, cartonContent.status);
+        Objects.equals(this.status, cartonContent.status) &&
+        Objects.equals(this.customFields, cartonContent.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, groupOrderId, orderNo, cartonNoId, lineItemId, location, quantity, quantityScanned, completed, toteId, pickerId, status);
+    return Objects.hash(id, groupOrderId, orderNo, cartonNoId, lineItemId, location, quantity, quantityScanned, completed, toteId, pickerId, status, customFields);
   }
 
   @Override
@@ -267,6 +290,7 @@ public class CartonContent   {
     sb.append("    toteId: ").append(toIndentedString(toteId)).append("\n");
     sb.append("    pickerId: ").append(toIndentedString(pickerId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

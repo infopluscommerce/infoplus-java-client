@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
 public class LoggedTime   {
   
   private Integer id = null;
@@ -26,6 +29,7 @@ public class LoggedTime   {
   private Integer warehouseId = null;
   private Integer loggedTimeTypeId = null;
   private Integer appId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -209,6 +213,23 @@ public class LoggedTime   {
   }
 
   
+  /**
+   **/
+  public LoggedTime customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -231,12 +252,13 @@ public class LoggedTime   {
         Objects.equals(this.lobId, loggedTime.lobId) &&
         Objects.equals(this.warehouseId, loggedTime.warehouseId) &&
         Objects.equals(this.loggedTimeTypeId, loggedTime.loggedTimeTypeId) &&
-        Objects.equals(this.appId, loggedTime.appId);
+        Objects.equals(this.appId, loggedTime.appId) &&
+        Objects.equals(this.customFields, loggedTime.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, start, end, duration, description, client, userId, lobId, warehouseId, loggedTimeTypeId, appId);
+    return Objects.hash(id, createDate, modifyDate, start, end, duration, description, client, userId, lobId, warehouseId, loggedTimeTypeId, appId, customFields);
   }
 
   @Override
@@ -257,6 +279,7 @@ public class LoggedTime   {
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
     sb.append("    loggedTimeTypeId: ").append(toIndentedString(loggedTimeTypeId)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
