@@ -5,18 +5,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class WarehouseDocumentType   {
   
   private Integer id = null;
   private String name = null;
   private Date createDate = null;
   private Date modifyDate = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -57,6 +61,23 @@ public class WarehouseDocumentType   {
   }
 
   
+  /**
+   **/
+  public WarehouseDocumentType customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,12 +91,13 @@ public class WarehouseDocumentType   {
     return Objects.equals(this.id, warehouseDocumentType.id) &&
         Objects.equals(this.name, warehouseDocumentType.name) &&
         Objects.equals(this.createDate, warehouseDocumentType.createDate) &&
-        Objects.equals(this.modifyDate, warehouseDocumentType.modifyDate);
+        Objects.equals(this.modifyDate, warehouseDocumentType.modifyDate) &&
+        Objects.equals(this.customFields, warehouseDocumentType.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, createDate, modifyDate);
+    return Objects.hash(id, name, createDate, modifyDate, customFields);
   }
 
   @Override
@@ -87,6 +109,7 @@ public class WarehouseDocumentType   {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

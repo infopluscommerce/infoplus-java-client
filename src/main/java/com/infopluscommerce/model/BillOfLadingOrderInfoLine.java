@@ -4,12 +4,15 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class BillOfLadingOrderInfoLine   {
   
   private String customerOrderNo = null;
@@ -17,6 +20,7 @@ public class BillOfLadingOrderInfoLine   {
   private Integer weight = null;
   private Boolean palletslip = false;
   private String additionalShipperInfo = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   /**
@@ -104,6 +108,23 @@ public class BillOfLadingOrderInfoLine   {
   }
 
   
+  /**
+   **/
+  public BillOfLadingOrderInfoLine customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -118,12 +139,13 @@ public class BillOfLadingOrderInfoLine   {
         Objects.equals(this.noPackages, billOfLadingOrderInfoLine.noPackages) &&
         Objects.equals(this.weight, billOfLadingOrderInfoLine.weight) &&
         Objects.equals(this.palletslip, billOfLadingOrderInfoLine.palletslip) &&
-        Objects.equals(this.additionalShipperInfo, billOfLadingOrderInfoLine.additionalShipperInfo);
+        Objects.equals(this.additionalShipperInfo, billOfLadingOrderInfoLine.additionalShipperInfo) &&
+        Objects.equals(this.customFields, billOfLadingOrderInfoLine.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(customerOrderNo, noPackages, weight, palletslip, additionalShipperInfo);
+    return Objects.hash(customerOrderNo, noPackages, weight, palletslip, additionalShipperInfo, customFields);
   }
 
   @Override
@@ -136,6 +158,7 @@ public class BillOfLadingOrderInfoLine   {
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
     sb.append("    palletslip: ").append(toIndentedString(palletslip)).append("\n");
     sb.append("    additionalShipperInfo: ").append(toIndentedString(additionalShipperInfo)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

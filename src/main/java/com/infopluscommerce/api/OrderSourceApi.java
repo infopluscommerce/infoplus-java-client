@@ -7,15 +7,15 @@ import com.infopluscommerce.ApiClient;
 import com.infopluscommerce.Configuration;
 import com.infopluscommerce.Pair;
 
-import com.infopluscommerce.model.ApiResponse;
 import com.infopluscommerce.model.OrderSource;
+import com.infopluscommerce.model.ApiResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class OrderSourceApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class OrderSourceApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/orderSource".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/orderSource".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,6 +84,112 @@ public class OrderSourceApi {
   }
   
   /**
+   * Add new audit for an orderSource
+   * Adds an audit to an existing orderSource.
+   * @param orderSourceId Id of the orderSource to add an audit to (required)
+   * @param orderSourceAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addOrderSourceAudit(Integer orderSourceId, String orderSourceAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'orderSourceId' is set
+    if (orderSourceId == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceId' when calling addOrderSourceAudit");
+    }
+    
+    // verify the required parameter 'orderSourceAudit' is set
+    if (orderSourceAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceAudit' when calling addOrderSourceAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/orderSource/{orderSourceId}/audit/{orderSourceAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "orderSourceId" + "\\}", apiClient.escapeString(orderSourceId.toString()))
+      .replaceAll("\\{" + "orderSourceAudit" + "\\}", apiClient.escapeString(orderSourceAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for an orderSource.
+   * Adds a tag to an existing orderSource.
+   * @param orderSourceId Id of the orderSource to add a tag to (required)
+   * @param orderSourceTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addOrderSourceTag(Integer orderSourceId, String orderSourceTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'orderSourceId' is set
+    if (orderSourceId == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceId' when calling addOrderSourceTag");
+    }
+    
+    // verify the required parameter 'orderSourceTag' is set
+    if (orderSourceTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceTag' when calling addOrderSourceTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/orderSource/{orderSourceId}/tag/{orderSourceTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "orderSourceId" + "\\}", apiClient.escapeString(orderSourceId.toString()))
+      .replaceAll("\\{" + "orderSourceTag" + "\\}", apiClient.escapeString(orderSourceTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete an orderSource
    * Deletes the orderSource identified by the specified id.
    * @param orderSourceId Id of the orderSource to be deleted. (required)
@@ -98,7 +204,7 @@ public class OrderSourceApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/orderSource/{orderSourceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/orderSource/{orderSourceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderSourceId" + "\\}", apiClient.escapeString(orderSourceId.toString()));
 
     // query params
@@ -130,6 +236,107 @@ public class OrderSourceApi {
   }
   
   /**
+   * Delete a tag for an orderSource.
+   * Deletes an existing orderSource tag using the specified data.
+   * @param orderSourceId Id of the orderSource to remove tag from (required)
+   * @param orderSourceTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteOrderSourceTag(Integer orderSourceId, String orderSourceTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'orderSourceId' is set
+    if (orderSourceId == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceId' when calling deleteOrderSourceTag");
+    }
+    
+    // verify the required parameter 'orderSourceTag' is set
+    if (orderSourceTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceTag' when calling deleteOrderSourceTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/orderSource/{orderSourceId}/tag/{orderSourceTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "orderSourceId" + "\\}", apiClient.escapeString(orderSourceId.toString()))
+      .replaceAll("\\{" + "orderSourceTag" + "\\}", apiClient.escapeString(orderSourceTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated an orderSource by id
+   * Returns a duplicated orderSource identified by the specified id.
+   * @param orderSourceId Id of the orderSource to be duplicated. (required)
+   * @return OrderSource
+   * @throws ApiException if fails to make API call
+   */
+  public OrderSource getDuplicateOrderSourceById(Integer orderSourceId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'orderSourceId' is set
+    if (orderSourceId == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceId' when calling getDuplicateOrderSourceById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/orderSource/duplicate/{orderSourceId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "orderSourceId" + "\\}", apiClient.escapeString(orderSourceId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<OrderSource> localVarReturnType = new GenericType<OrderSource>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
    * Search orderSources by filter
    * Returns the list of orderSources that match the given filter.
    * @param filter Query string, used to filter results. (optional)
@@ -143,7 +350,7 @@ public class OrderSourceApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/orderSource/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/orderSource/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -198,7 +405,7 @@ public class OrderSourceApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/orderSource/{orderSourceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/orderSource/{orderSourceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderSourceId" + "\\}", apiClient.escapeString(orderSourceId.toString()));
 
     // query params
@@ -231,6 +438,52 @@ public class OrderSourceApi {
   }
   
   /**
+   * Get the tags for an orderSource.
+   * Get all existing orderSource tags.
+   * @param orderSourceId Id of the orderSource to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getOrderSourceTags(Integer orderSourceId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'orderSourceId' is set
+    if (orderSourceId == null) {
+      throw new ApiException(400, "Missing the required parameter 'orderSourceId' when calling getOrderSourceTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/orderSource/{orderSourceId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "orderSourceId" + "\\}", apiClient.escapeString(orderSourceId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Update an orderSource
    * Updates an existing orderSource using the specified data.
    * @param body OrderSource to be updated. (required)
@@ -245,7 +498,52 @@ public class OrderSourceApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/orderSource".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/orderSource".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Update an orderSource custom fields
+   * Updates an existing orderSource custom fields using the specified data.
+   * @param body OrderSource to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateOrderSourceCustomFields(OrderSource body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateOrderSourceCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/orderSource/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

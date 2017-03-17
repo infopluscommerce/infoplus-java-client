@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class Alert   {
   
   private Integer id = null;
@@ -23,6 +26,7 @@ public class Alert   {
   private Date modifyDate = null;
   private Date expirationDate = null;
   private Date acknowledgeDate = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -95,6 +99,23 @@ public class Alert   {
   }
 
   
+  /**
+   **/
+  public Alert customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -114,12 +135,13 @@ public class Alert   {
         Objects.equals(this.createDate, alert.createDate) &&
         Objects.equals(this.modifyDate, alert.modifyDate) &&
         Objects.equals(this.expirationDate, alert.expirationDate) &&
-        Objects.equals(this.acknowledgeDate, alert.acknowledgeDate);
+        Objects.equals(this.acknowledgeDate, alert.acknowledgeDate) &&
+        Objects.equals(this.customFields, alert.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, level, message, link, linkText, createDate, modifyDate, expirationDate, acknowledgeDate);
+    return Objects.hash(id, type, level, message, link, linkText, createDate, modifyDate, expirationDate, acknowledgeDate, customFields);
   }
 
   @Override
@@ -137,6 +159,7 @@ public class Alert   {
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
     sb.append("    acknowledgeDate: ").append(toIndentedString(acknowledgeDate)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

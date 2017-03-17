@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class OverrideReturnAddress   {
   
   private Integer id = null;
@@ -28,6 +31,7 @@ public class OverrideReturnAddress   {
   private String zip = null;
   private String country = null;
   private String phone = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -255,6 +259,23 @@ public class OverrideReturnAddress   {
   }
 
   
+  /**
+   **/
+  public OverrideReturnAddress customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -279,12 +300,13 @@ public class OverrideReturnAddress   {
         Objects.equals(this.state, overrideReturnAddress.state) &&
         Objects.equals(this.zip, overrideReturnAddress.zip) &&
         Objects.equals(this.country, overrideReturnAddress.country) &&
-        Objects.equals(this.phone, overrideReturnAddress.phone);
+        Objects.equals(this.phone, overrideReturnAddress.phone) &&
+        Objects.equals(this.customFields, overrideReturnAddress.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, warehouseId, orderSourceId, name, attention, street, street2, city, state, zip, country, phone);
+    return Objects.hash(id, createDate, modifyDate, lobId, warehouseId, orderSourceId, name, attention, street, street2, city, state, zip, country, phone, customFields);
   }
 
   @Override
@@ -307,6 +329,7 @@ public class OverrideReturnAddress   {
     sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

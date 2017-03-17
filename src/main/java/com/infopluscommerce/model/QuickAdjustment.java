@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class QuickAdjustment   {
   
   private Integer id = null;
@@ -22,6 +25,8 @@ public class QuickAdjustment   {
   private Integer totalQuantity = null;
   private String message = null;
   private String status = null;
+  private String productIdTag = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
   
@@ -140,6 +145,40 @@ public class QuickAdjustment   {
   
   /**
    **/
+  public QuickAdjustment productIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("productIdTag")
+  public String getProductIdTag() {
+    return productIdTag;
+  }
+  public void setProductIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+  }
+
+  
+  /**
+   **/
+  public QuickAdjustment customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
+  /**
+   **/
   public QuickAdjustment sku(String sku) {
     this.sku = sku;
     return this;
@@ -174,12 +213,14 @@ public class QuickAdjustment   {
         Objects.equals(this.totalQuantity, quickAdjustment.totalQuantity) &&
         Objects.equals(this.message, quickAdjustment.message) &&
         Objects.equals(this.status, quickAdjustment.status) &&
+        Objects.equals(this.productIdTag, quickAdjustment.productIdTag) &&
+        Objects.equals(this.customFields, quickAdjustment.customFields) &&
         Objects.equals(this.sku, quickAdjustment.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, warehouseId, locationId, adjustmentCode, totalQuantity, message, status, sku);
+    return Objects.hash(id, createDate, modifyDate, warehouseId, locationId, adjustmentCode, totalQuantity, message, status, productIdTag, customFields, sku);
   }
 
   @Override
@@ -196,6 +237,8 @@ public class QuickAdjustment   {
     sb.append("    totalQuantity: ").append(toIndentedString(totalQuantity)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");
     return sb.toString();

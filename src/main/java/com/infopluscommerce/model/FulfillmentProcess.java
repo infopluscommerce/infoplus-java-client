@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class FulfillmentProcess   {
   
   private Integer id = null;
@@ -19,7 +22,8 @@ public class FulfillmentProcess   {
   private Integer processNo = null;
   private Integer workBatchId = null;
   private Integer warehouseId = null;
-  private Integer allocationPlanId = null;
+  private Integer fulfillmentPlanId = null;
+  private Integer pickScanSchemeId = null;
   private String status = null;
   private Integer orderSmartFilterId = null;
   private Integer locationSmartFilterId = null;
@@ -53,9 +57,14 @@ public class FulfillmentProcess   {
   private Date shipDate = null;
   private Boolean autoShipCasebreakCartons = false;
   private Boolean cartonizeOrders = false;
-  private Boolean createPackingSlip = false;
+  private String createPackingSlip = null;
   private Integer overridePackingSlipTemplateId = null;
   private Boolean createOrderAssemblyGuide = false;
+  private String createOrderInvoice = null;
+  private Integer overrideOrderInvoiceTemplateId = null;
+  private Boolean sendToExternalShippingSystem = false;
+  private Integer externalShippingSystemId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -112,18 +121,35 @@ public class FulfillmentProcess   {
   
   /**
    **/
-  public FulfillmentProcess allocationPlanId(Integer allocationPlanId) {
-    this.allocationPlanId = allocationPlanId;
+  public FulfillmentProcess fulfillmentPlanId(Integer fulfillmentPlanId) {
+    this.fulfillmentPlanId = fulfillmentPlanId;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("allocationPlanId")
-  public Integer getAllocationPlanId() {
-    return allocationPlanId;
+  @JsonProperty("fulfillmentPlanId")
+  public Integer getFulfillmentPlanId() {
+    return fulfillmentPlanId;
   }
-  public void setAllocationPlanId(Integer allocationPlanId) {
-    this.allocationPlanId = allocationPlanId;
+  public void setFulfillmentPlanId(Integer fulfillmentPlanId) {
+    this.fulfillmentPlanId = fulfillmentPlanId;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentProcess pickScanSchemeId(Integer pickScanSchemeId) {
+    this.pickScanSchemeId = pickScanSchemeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("pickScanSchemeId")
+  public Integer getPickScanSchemeId() {
+    return pickScanSchemeId;
+  }
+  public void setPickScanSchemeId(Integer pickScanSchemeId) {
+    this.pickScanSchemeId = pickScanSchemeId;
   }
 
   
@@ -650,17 +676,17 @@ public class FulfillmentProcess   {
   
   /**
    **/
-  public FulfillmentProcess createPackingSlip(Boolean createPackingSlip) {
+  public FulfillmentProcess createPackingSlip(String createPackingSlip) {
     this.createPackingSlip = createPackingSlip;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("createPackingSlip")
-  public Boolean getCreatePackingSlip() {
+  public String getCreatePackingSlip() {
     return createPackingSlip;
   }
-  public void setCreatePackingSlip(Boolean createPackingSlip) {
+  public void setCreatePackingSlip(String createPackingSlip) {
     this.createPackingSlip = createPackingSlip;
   }
 
@@ -699,6 +725,91 @@ public class FulfillmentProcess   {
   }
 
   
+  /**
+   **/
+  public FulfillmentProcess createOrderInvoice(String createOrderInvoice) {
+    this.createOrderInvoice = createOrderInvoice;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("createOrderInvoice")
+  public String getCreateOrderInvoice() {
+    return createOrderInvoice;
+  }
+  public void setCreateOrderInvoice(String createOrderInvoice) {
+    this.createOrderInvoice = createOrderInvoice;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentProcess overrideOrderInvoiceTemplateId(Integer overrideOrderInvoiceTemplateId) {
+    this.overrideOrderInvoiceTemplateId = overrideOrderInvoiceTemplateId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("overrideOrderInvoiceTemplateId")
+  public Integer getOverrideOrderInvoiceTemplateId() {
+    return overrideOrderInvoiceTemplateId;
+  }
+  public void setOverrideOrderInvoiceTemplateId(Integer overrideOrderInvoiceTemplateId) {
+    this.overrideOrderInvoiceTemplateId = overrideOrderInvoiceTemplateId;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentProcess sendToExternalShippingSystem(Boolean sendToExternalShippingSystem) {
+    this.sendToExternalShippingSystem = sendToExternalShippingSystem;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("sendToExternalShippingSystem")
+  public Boolean getSendToExternalShippingSystem() {
+    return sendToExternalShippingSystem;
+  }
+  public void setSendToExternalShippingSystem(Boolean sendToExternalShippingSystem) {
+    this.sendToExternalShippingSystem = sendToExternalShippingSystem;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentProcess externalShippingSystemId(Integer externalShippingSystemId) {
+    this.externalShippingSystemId = externalShippingSystemId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("externalShippingSystemId")
+  public Integer getExternalShippingSystemId() {
+    return externalShippingSystemId;
+  }
+  public void setExternalShippingSystemId(Integer externalShippingSystemId) {
+    this.externalShippingSystemId = externalShippingSystemId;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentProcess customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -715,7 +826,8 @@ public class FulfillmentProcess   {
         Objects.equals(this.processNo, fulfillmentProcess.processNo) &&
         Objects.equals(this.workBatchId, fulfillmentProcess.workBatchId) &&
         Objects.equals(this.warehouseId, fulfillmentProcess.warehouseId) &&
-        Objects.equals(this.allocationPlanId, fulfillmentProcess.allocationPlanId) &&
+        Objects.equals(this.fulfillmentPlanId, fulfillmentProcess.fulfillmentPlanId) &&
+        Objects.equals(this.pickScanSchemeId, fulfillmentProcess.pickScanSchemeId) &&
         Objects.equals(this.status, fulfillmentProcess.status) &&
         Objects.equals(this.orderSmartFilterId, fulfillmentProcess.orderSmartFilterId) &&
         Objects.equals(this.locationSmartFilterId, fulfillmentProcess.locationSmartFilterId) &&
@@ -751,12 +863,17 @@ public class FulfillmentProcess   {
         Objects.equals(this.cartonizeOrders, fulfillmentProcess.cartonizeOrders) &&
         Objects.equals(this.createPackingSlip, fulfillmentProcess.createPackingSlip) &&
         Objects.equals(this.overridePackingSlipTemplateId, fulfillmentProcess.overridePackingSlipTemplateId) &&
-        Objects.equals(this.createOrderAssemblyGuide, fulfillmentProcess.createOrderAssemblyGuide);
+        Objects.equals(this.createOrderAssemblyGuide, fulfillmentProcess.createOrderAssemblyGuide) &&
+        Objects.equals(this.createOrderInvoice, fulfillmentProcess.createOrderInvoice) &&
+        Objects.equals(this.overrideOrderInvoiceTemplateId, fulfillmentProcess.overrideOrderInvoiceTemplateId) &&
+        Objects.equals(this.sendToExternalShippingSystem, fulfillmentProcess.sendToExternalShippingSystem) &&
+        Objects.equals(this.externalShippingSystemId, fulfillmentProcess.externalShippingSystemId) &&
+        Objects.equals(this.customFields, fulfillmentProcess.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, allocationPlanId, status, orderSmartFilterId, locationSmartFilterId, orderLimit, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide);
+    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, orderLimit, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -770,7 +887,8 @@ public class FulfillmentProcess   {
     sb.append("    processNo: ").append(toIndentedString(processNo)).append("\n");
     sb.append("    workBatchId: ").append(toIndentedString(workBatchId)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
-    sb.append("    allocationPlanId: ").append(toIndentedString(allocationPlanId)).append("\n");
+    sb.append("    fulfillmentPlanId: ").append(toIndentedString(fulfillmentPlanId)).append("\n");
+    sb.append("    pickScanSchemeId: ").append(toIndentedString(pickScanSchemeId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    orderSmartFilterId: ").append(toIndentedString(orderSmartFilterId)).append("\n");
     sb.append("    locationSmartFilterId: ").append(toIndentedString(locationSmartFilterId)).append("\n");
@@ -807,6 +925,11 @@ public class FulfillmentProcess   {
     sb.append("    createPackingSlip: ").append(toIndentedString(createPackingSlip)).append("\n");
     sb.append("    overridePackingSlipTemplateId: ").append(toIndentedString(overridePackingSlipTemplateId)).append("\n");
     sb.append("    createOrderAssemblyGuide: ").append(toIndentedString(createOrderAssemblyGuide)).append("\n");
+    sb.append("    createOrderInvoice: ").append(toIndentedString(createOrderInvoice)).append("\n");
+    sb.append("    overrideOrderInvoiceTemplateId: ").append(toIndentedString(overrideOrderInvoiceTemplateId)).append("\n");
+    sb.append("    sendToExternalShippingSystem: ").append(toIndentedString(sendToExternalShippingSystem)).append("\n");
+    sb.append("    externalShippingSystemId: ").append(toIndentedString(externalShippingSystemId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

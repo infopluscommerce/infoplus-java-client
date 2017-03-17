@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class PickFaceAssignment   {
   
   private Integer id = null;
@@ -18,8 +21,10 @@ public class PickFaceAssignment   {
   private Integer locationId = null;
   private Integer replenishmentPoint = null;
   private Integer maxQuantity = null;
+  private Boolean active = false;
   private Date createDate = null;
   private Date modifyDate = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
   
@@ -98,6 +103,23 @@ public class PickFaceAssignment   {
   }
 
   
+  /**
+   **/
+  public PickFaceAssignment active(Boolean active) {
+    this.active = active;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("active")
+  public Boolean getActive() {
+    return active;
+  }
+  public void setActive(Boolean active) {
+    this.active = active;
+  }
+
+  
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createDate")
   public Date getCreateDate() {
@@ -109,6 +131,23 @@ public class PickFaceAssignment   {
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
+  }
+
+  
+  /**
+   **/
+  public PickFaceAssignment customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -144,14 +183,16 @@ public class PickFaceAssignment   {
         Objects.equals(this.locationId, pickFaceAssignment.locationId) &&
         Objects.equals(this.replenishmentPoint, pickFaceAssignment.replenishmentPoint) &&
         Objects.equals(this.maxQuantity, pickFaceAssignment.maxQuantity) &&
+        Objects.equals(this.active, pickFaceAssignment.active) &&
         Objects.equals(this.createDate, pickFaceAssignment.createDate) &&
         Objects.equals(this.modifyDate, pickFaceAssignment.modifyDate) &&
+        Objects.equals(this.customFields, pickFaceAssignment.customFields) &&
         Objects.equals(this.sku, pickFaceAssignment.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseId, locationId, replenishmentPoint, maxQuantity, createDate, modifyDate, sku);
+    return Objects.hash(id, warehouseId, locationId, replenishmentPoint, maxQuantity, active, createDate, modifyDate, customFields, sku);
   }
 
   @Override
@@ -164,8 +205,10 @@ public class PickFaceAssignment   {
     sb.append("    locationId: ").append(toIndentedString(locationId)).append("\n");
     sb.append("    replenishmentPoint: ").append(toIndentedString(replenishmentPoint)).append("\n");
     sb.append("    maxQuantity: ").append(toIndentedString(maxQuantity)).append("\n");
+    sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");
     return sb.toString();

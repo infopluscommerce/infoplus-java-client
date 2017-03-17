@@ -4,26 +4,32 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class CartonType   {
   
   private Integer id = null;
   private String abbreviation = null;
   private String name = null;
-  private Double lengthIn = null;
-  private Double widthIn = null;
-  private Double heightIn = null;
-  private Double innerLengthIn = null;
-  private Double innerWidthIn = null;
-  private Double innerHeightIn = null;
-  private Double weightLbs = null;
+  private BigDecimal lengthIn = null;
+  private BigDecimal widthIn = null;
+  private BigDecimal heightIn = null;
+  private BigDecimal innerLengthIn = null;
+  private BigDecimal innerWidthIn = null;
+  private BigDecimal innerHeightIn = null;
+  private BigDecimal weightLbs = null;
   private Integer lobId = null;
   private Boolean isActive = false;
+  private Integer predefinedPackageTypeId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -69,119 +75,119 @@ public class CartonType   {
   
   /**
    **/
-  public CartonType lengthIn(Double lengthIn) {
+  public CartonType lengthIn(BigDecimal lengthIn) {
     this.lengthIn = lengthIn;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lengthIn")
-  public Double getLengthIn() {
+  public BigDecimal getLengthIn() {
     return lengthIn;
   }
-  public void setLengthIn(Double lengthIn) {
+  public void setLengthIn(BigDecimal lengthIn) {
     this.lengthIn = lengthIn;
   }
 
   
   /**
    **/
-  public CartonType widthIn(Double widthIn) {
+  public CartonType widthIn(BigDecimal widthIn) {
     this.widthIn = widthIn;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("widthIn")
-  public Double getWidthIn() {
+  public BigDecimal getWidthIn() {
     return widthIn;
   }
-  public void setWidthIn(Double widthIn) {
+  public void setWidthIn(BigDecimal widthIn) {
     this.widthIn = widthIn;
   }
 
   
   /**
    **/
-  public CartonType heightIn(Double heightIn) {
+  public CartonType heightIn(BigDecimal heightIn) {
     this.heightIn = heightIn;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("heightIn")
-  public Double getHeightIn() {
+  public BigDecimal getHeightIn() {
     return heightIn;
   }
-  public void setHeightIn(Double heightIn) {
+  public void setHeightIn(BigDecimal heightIn) {
     this.heightIn = heightIn;
   }
 
   
   /**
    **/
-  public CartonType innerLengthIn(Double innerLengthIn) {
+  public CartonType innerLengthIn(BigDecimal innerLengthIn) {
     this.innerLengthIn = innerLengthIn;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("innerLengthIn")
-  public Double getInnerLengthIn() {
+  public BigDecimal getInnerLengthIn() {
     return innerLengthIn;
   }
-  public void setInnerLengthIn(Double innerLengthIn) {
+  public void setInnerLengthIn(BigDecimal innerLengthIn) {
     this.innerLengthIn = innerLengthIn;
   }
 
   
   /**
    **/
-  public CartonType innerWidthIn(Double innerWidthIn) {
+  public CartonType innerWidthIn(BigDecimal innerWidthIn) {
     this.innerWidthIn = innerWidthIn;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("innerWidthIn")
-  public Double getInnerWidthIn() {
+  public BigDecimal getInnerWidthIn() {
     return innerWidthIn;
   }
-  public void setInnerWidthIn(Double innerWidthIn) {
+  public void setInnerWidthIn(BigDecimal innerWidthIn) {
     this.innerWidthIn = innerWidthIn;
   }
 
   
   /**
    **/
-  public CartonType innerHeightIn(Double innerHeightIn) {
+  public CartonType innerHeightIn(BigDecimal innerHeightIn) {
     this.innerHeightIn = innerHeightIn;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("innerHeightIn")
-  public Double getInnerHeightIn() {
+  public BigDecimal getInnerHeightIn() {
     return innerHeightIn;
   }
-  public void setInnerHeightIn(Double innerHeightIn) {
+  public void setInnerHeightIn(BigDecimal innerHeightIn) {
     this.innerHeightIn = innerHeightIn;
   }
 
   
   /**
    **/
-  public CartonType weightLbs(Double weightLbs) {
+  public CartonType weightLbs(BigDecimal weightLbs) {
     this.weightLbs = weightLbs;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
-  public Double getWeightLbs() {
+  public BigDecimal getWeightLbs() {
     return weightLbs;
   }
-  public void setWeightLbs(Double weightLbs) {
+  public void setWeightLbs(BigDecimal weightLbs) {
     this.weightLbs = weightLbs;
   }
 
@@ -220,6 +226,40 @@ public class CartonType   {
   }
 
   
+  /**
+   **/
+  public CartonType predefinedPackageTypeId(Integer predefinedPackageTypeId) {
+    this.predefinedPackageTypeId = predefinedPackageTypeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("predefinedPackageTypeId")
+  public Integer getPredefinedPackageTypeId() {
+    return predefinedPackageTypeId;
+  }
+  public void setPredefinedPackageTypeId(Integer predefinedPackageTypeId) {
+    this.predefinedPackageTypeId = predefinedPackageTypeId;
+  }
+
+  
+  /**
+   **/
+  public CartonType customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +281,14 @@ public class CartonType   {
         Objects.equals(this.innerHeightIn, cartonType.innerHeightIn) &&
         Objects.equals(this.weightLbs, cartonType.weightLbs) &&
         Objects.equals(this.lobId, cartonType.lobId) &&
-        Objects.equals(this.isActive, cartonType.isActive);
+        Objects.equals(this.isActive, cartonType.isActive) &&
+        Objects.equals(this.predefinedPackageTypeId, cartonType.predefinedPackageTypeId) &&
+        Objects.equals(this.customFields, cartonType.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, abbreviation, name, lengthIn, widthIn, heightIn, innerLengthIn, innerWidthIn, innerHeightIn, weightLbs, lobId, isActive);
+    return Objects.hash(id, abbreviation, name, lengthIn, widthIn, heightIn, innerLengthIn, innerWidthIn, innerHeightIn, weightLbs, lobId, isActive, predefinedPackageTypeId, customFields);
   }
 
   @Override
@@ -266,6 +308,8 @@ public class CartonType   {
     sb.append("    weightLbs: ").append(toIndentedString(weightLbs)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
+    sb.append("    predefinedPackageTypeId: ").append(toIndentedString(predefinedPackageTypeId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -4,17 +4,21 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class InventoryAdjustment   {
   
   private Integer id = null;
-  private Integer lob = null;
+  private Integer lobId = null;
   private Integer skuId = null;
   private Integer poNoId = null;
   private Date adjustmentDate = null;
@@ -24,8 +28,9 @@ public class InventoryAdjustment   {
   private String note = null;
   private String authorizedBy = null;
   private String printed = null;
-  private Double orderNo = null;
+  private BigDecimal orderNo = null;
   private String adjustmentCode = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   /**
@@ -47,18 +52,18 @@ public class InventoryAdjustment   {
   
   /**
    **/
-  public InventoryAdjustment lob(Integer lob) {
-    this.lob = lob;
+  public InventoryAdjustment lobId(Integer lobId) {
+    this.lobId = lobId;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("lob")
-  public Integer getLob() {
-    return lob;
+  @JsonProperty("lobId")
+  public Integer getLobId() {
+    return lobId;
   }
-  public void setLob(Integer lob) {
-    this.lob = lob;
+  public void setLobId(Integer lobId) {
+    this.lobId = lobId;
   }
 
   
@@ -217,17 +222,17 @@ public class InventoryAdjustment   {
   
   /**
    **/
-  public InventoryAdjustment orderNo(Double orderNo) {
+  public InventoryAdjustment orderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderNo")
-  public Double getOrderNo() {
+  public BigDecimal getOrderNo() {
     return orderNo;
   }
-  public void setOrderNo(Double orderNo) {
+  public void setOrderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
   }
 
@@ -249,6 +254,23 @@ public class InventoryAdjustment   {
   }
 
   
+  /**
+   **/
+  public InventoryAdjustment customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -260,7 +282,7 @@ public class InventoryAdjustment   {
     }
     InventoryAdjustment inventoryAdjustment = (InventoryAdjustment) o;
     return Objects.equals(this.id, inventoryAdjustment.id) &&
-        Objects.equals(this.lob, inventoryAdjustment.lob) &&
+        Objects.equals(this.lobId, inventoryAdjustment.lobId) &&
         Objects.equals(this.skuId, inventoryAdjustment.skuId) &&
         Objects.equals(this.poNoId, inventoryAdjustment.poNoId) &&
         Objects.equals(this.adjustmentDate, inventoryAdjustment.adjustmentDate) &&
@@ -271,12 +293,13 @@ public class InventoryAdjustment   {
         Objects.equals(this.authorizedBy, inventoryAdjustment.authorizedBy) &&
         Objects.equals(this.printed, inventoryAdjustment.printed) &&
         Objects.equals(this.orderNo, inventoryAdjustment.orderNo) &&
-        Objects.equals(this.adjustmentCode, inventoryAdjustment.adjustmentCode);
+        Objects.equals(this.adjustmentCode, inventoryAdjustment.adjustmentCode) &&
+        Objects.equals(this.customFields, inventoryAdjustment.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lob, skuId, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode);
+    return Objects.hash(id, lobId, skuId, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode, customFields);
   }
 
   @Override
@@ -285,7 +308,7 @@ public class InventoryAdjustment   {
     sb.append("class InventoryAdjustment {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    lob: ").append(toIndentedString(lob)).append("\n");
+    sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    skuId: ").append(toIndentedString(skuId)).append("\n");
     sb.append("    poNoId: ").append(toIndentedString(poNoId)).append("\n");
     sb.append("    adjustmentDate: ").append(toIndentedString(adjustmentDate)).append("\n");
@@ -297,6 +320,7 @@ public class InventoryAdjustment   {
     sb.append("    printed: ").append(toIndentedString(printed)).append("\n");
     sb.append("    orderNo: ").append(toIndentedString(orderNo)).append("\n");
     sb.append("    adjustmentCode: ").append(toIndentedString(adjustmentCode)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -4,12 +4,15 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class BillOfLadingCarrierInfoLine   {
   
   private Integer seqNo = null;
@@ -22,6 +25,7 @@ public class BillOfLadingCarrierInfoLine   {
   private String commodityDescription = null;
   private String nfmcNo = null;
   private String carrierClass = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   /**
@@ -194,6 +198,23 @@ public class BillOfLadingCarrierInfoLine   {
   }
 
   
+  /**
+   **/
+  public BillOfLadingCarrierInfoLine customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -213,12 +234,13 @@ public class BillOfLadingCarrierInfoLine   {
         Objects.equals(this.isHazardousMaterial, billOfLadingCarrierInfoLine.isHazardousMaterial) &&
         Objects.equals(this.commodityDescription, billOfLadingCarrierInfoLine.commodityDescription) &&
         Objects.equals(this.nfmcNo, billOfLadingCarrierInfoLine.nfmcNo) &&
-        Objects.equals(this.carrierClass, billOfLadingCarrierInfoLine.carrierClass);
+        Objects.equals(this.carrierClass, billOfLadingCarrierInfoLine.carrierClass) &&
+        Objects.equals(this.customFields, billOfLadingCarrierInfoLine.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(seqNo, huQuantity, huType, packageQuantity, packageType, weight, isHazardousMaterial, commodityDescription, nfmcNo, carrierClass);
+    return Objects.hash(seqNo, huQuantity, huType, packageQuantity, packageType, weight, isHazardousMaterial, commodityDescription, nfmcNo, carrierClass, customFields);
   }
 
   @Override
@@ -236,6 +258,7 @@ public class BillOfLadingCarrierInfoLine   {
     sb.append("    commodityDescription: ").append(toIndentedString(commodityDescription)).append("\n");
     sb.append("    nfmcNo: ").append(toIndentedString(nfmcNo)).append("\n");
     sb.append("    carrierClass: ").append(toIndentedString(carrierClass)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

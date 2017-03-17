@@ -4,29 +4,96 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class ItemSummaryCode   {
   
-  private Integer id = null;
-  private String label = null;
+  private Integer lobId = null;
+  private Integer internalId = null;
+  private String id = null;
+  private String name = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
+  /**
+   **/
+  public ItemSummaryCode lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
+  
   @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("id")
-  public Integer getId() {
-    return id;
+  @JsonProperty("lobId")
+  public Integer getLobId() {
+    return lobId;
+  }
+  public void setLobId(Integer lobId) {
+    this.lobId = lobId;
   }
 
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("internalId")
+  public Integer getInternalId() {
+    return internalId;
+  }
+
+  
+  /**
+   **/
+  public ItemSummaryCode id(String id) {
+    this.id = id;
+    return this;
+  }
+  
   @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("label")
-  public String getLabel() {
-    return label;
+  @JsonProperty("id")
+  public String getId() {
+    return id;
+  }
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  
+  /**
+   **/
+  public ItemSummaryCode name(String name) {
+    this.name = name;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("name")
+  public String getName() {
+    return name;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  
+  /**
+   **/
+  public ItemSummaryCode customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -40,13 +107,16 @@ public class ItemSummaryCode   {
       return false;
     }
     ItemSummaryCode itemSummaryCode = (ItemSummaryCode) o;
-    return Objects.equals(this.id, itemSummaryCode.id) &&
-        Objects.equals(this.label, itemSummaryCode.label);
+    return Objects.equals(this.lobId, itemSummaryCode.lobId) &&
+        Objects.equals(this.internalId, itemSummaryCode.internalId) &&
+        Objects.equals(this.id, itemSummaryCode.id) &&
+        Objects.equals(this.name, itemSummaryCode.name) &&
+        Objects.equals(this.customFields, itemSummaryCode.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, label);
+    return Objects.hash(lobId, internalId, id, name, customFields);
   }
 
   @Override
@@ -54,8 +124,11 @@ public class ItemSummaryCode   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ItemSummaryCode {\n");
     
+    sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
+    sb.append("    internalId: ").append(toIndentedString(internalId)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

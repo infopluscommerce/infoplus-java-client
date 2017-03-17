@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class InventoryDetail   {
   
   private Integer id = null;
@@ -24,6 +27,7 @@ public class InventoryDetail   {
   private Date oldestReceiptDate = null;
   private Integer lobId = null;
   private String poNo = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
   
@@ -116,6 +120,23 @@ public class InventoryDetail   {
   
   /**
    **/
+  public InventoryDetail customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
+  /**
+   **/
   public InventoryDetail sku(String sku) {
     this.sku = sku;
     return this;
@@ -152,12 +173,13 @@ public class InventoryDetail   {
         Objects.equals(this.oldestReceiptDate, inventoryDetail.oldestReceiptDate) &&
         Objects.equals(this.lobId, inventoryDetail.lobId) &&
         Objects.equals(this.poNo, inventoryDetail.poNo) &&
+        Objects.equals(this.customFields, inventoryDetail.customFields) &&
         Objects.equals(this.sku, inventoryDetail.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseLocationId, quantity, distributionDate, unitsPerCase, unitsPerWrap, revisionDate, productionLot, oldestReceiptDate, lobId, poNo, sku);
+    return Objects.hash(id, warehouseLocationId, quantity, distributionDate, unitsPerCase, unitsPerWrap, revisionDate, productionLot, oldestReceiptDate, lobId, poNo, customFields, sku);
   }
 
   @Override
@@ -176,6 +198,7 @@ public class InventoryDetail   {
     sb.append("    oldestReceiptDate: ").append(toIndentedString(oldestReceiptDate)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    poNo: ").append(toIndentedString(poNo)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");
     return sb.toString();

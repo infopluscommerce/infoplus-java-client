@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class Vendor   {
   
   private Integer id = null;
@@ -55,6 +58,7 @@ public class Vendor   {
   private Date createDate = null;
   private Date modifyDate = null;
   private String inactive = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -761,6 +765,23 @@ public class Vendor   {
   }
 
   
+  /**
+   **/
+  public Vendor customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -812,12 +833,13 @@ public class Vendor   {
         Objects.equals(this.podEmail, vendor.podEmail) &&
         Objects.equals(this.createDate, vendor.createDate) &&
         Objects.equals(this.modifyDate, vendor.modifyDate) &&
-        Objects.equals(this.inactive, vendor.inactive);
+        Objects.equals(this.inactive, vendor.inactive) &&
+        Objects.equals(this.customFields, vendor.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, vendorNo, lobId, name, street, street2, city, state, country, zipCode, contact, phone, fax, externalId, terms, fob, shipVia, requestDays, actualDays, salesTaxCode, product1, product2, product3, product4, product5, product6, product7, product8, product9, podDays, chargeOut, arEmail, orderEmail, orderAttach, sendQuantityType, minority, sendOutside, podOrderSuffix, podEmail, createDate, modifyDate, inactive);
+    return Objects.hash(id, vendorNo, lobId, name, street, street2, city, state, country, zipCode, contact, phone, fax, externalId, terms, fob, shipVia, requestDays, actualDays, salesTaxCode, product1, product2, product3, product4, product5, product6, product7, product8, product9, podDays, chargeOut, arEmail, orderEmail, orderAttach, sendQuantityType, minority, sendOutside, podOrderSuffix, podEmail, createDate, modifyDate, inactive, customFields);
   }
 
   @Override
@@ -867,6 +889,7 @@ public class Vendor   {
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    inactive: ").append(toIndentedString(inactive)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class EmailTemplateApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class EmailTemplateApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/emailTemplate".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/emailTemplate".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,6 +84,112 @@ public class EmailTemplateApi {
   }
   
   /**
+   * Add new audit for an emailTemplate
+   * Adds an audit to an existing emailTemplate.
+   * @param emailTemplateId Id of the emailTemplate to add an audit to (required)
+   * @param emailTemplateAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addEmailTemplateAudit(Integer emailTemplateId, String emailTemplateAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'emailTemplateId' is set
+    if (emailTemplateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateId' when calling addEmailTemplateAudit");
+    }
+    
+    // verify the required parameter 'emailTemplateAudit' is set
+    if (emailTemplateAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateAudit' when calling addEmailTemplateAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/emailTemplate/{emailTemplateId}/audit/{emailTemplateAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "emailTemplateId" + "\\}", apiClient.escapeString(emailTemplateId.toString()))
+      .replaceAll("\\{" + "emailTemplateAudit" + "\\}", apiClient.escapeString(emailTemplateAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for an emailTemplate.
+   * Adds a tag to an existing emailTemplate.
+   * @param emailTemplateId Id of the emailTemplate to add a tag to (required)
+   * @param emailTemplateTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addEmailTemplateTag(Integer emailTemplateId, String emailTemplateTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'emailTemplateId' is set
+    if (emailTemplateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateId' when calling addEmailTemplateTag");
+    }
+    
+    // verify the required parameter 'emailTemplateTag' is set
+    if (emailTemplateTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateTag' when calling addEmailTemplateTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/emailTemplate/{emailTemplateId}/tag/{emailTemplateTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "emailTemplateId" + "\\}", apiClient.escapeString(emailTemplateId.toString()))
+      .replaceAll("\\{" + "emailTemplateTag" + "\\}", apiClient.escapeString(emailTemplateTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete an emailTemplate
    * Deletes the emailTemplate identified by the specified id.
    * @param emailTemplateId Id of the emailTemplate to be deleted. (required)
@@ -98,7 +204,7 @@ public class EmailTemplateApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/emailTemplate/{emailTemplateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/emailTemplate/{emailTemplateId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "emailTemplateId" + "\\}", apiClient.escapeString(emailTemplateId.toString()));
 
     // query params
@@ -130,6 +236,107 @@ public class EmailTemplateApi {
   }
   
   /**
+   * Delete a tag for an emailTemplate.
+   * Deletes an existing emailTemplate tag using the specified data.
+   * @param emailTemplateId Id of the emailTemplate to remove tag from (required)
+   * @param emailTemplateTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteEmailTemplateTag(Integer emailTemplateId, String emailTemplateTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'emailTemplateId' is set
+    if (emailTemplateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateId' when calling deleteEmailTemplateTag");
+    }
+    
+    // verify the required parameter 'emailTemplateTag' is set
+    if (emailTemplateTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateTag' when calling deleteEmailTemplateTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/emailTemplate/{emailTemplateId}/tag/{emailTemplateTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "emailTemplateId" + "\\}", apiClient.escapeString(emailTemplateId.toString()))
+      .replaceAll("\\{" + "emailTemplateTag" + "\\}", apiClient.escapeString(emailTemplateTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated an emailTemplate by id
+   * Returns a duplicated emailTemplate identified by the specified id.
+   * @param emailTemplateId Id of the emailTemplate to be duplicated. (required)
+   * @return EmailTemplate
+   * @throws ApiException if fails to make API call
+   */
+  public EmailTemplate getDuplicateEmailTemplateById(Integer emailTemplateId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'emailTemplateId' is set
+    if (emailTemplateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateId' when calling getDuplicateEmailTemplateById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/emailTemplate/duplicate/{emailTemplateId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "emailTemplateId" + "\\}", apiClient.escapeString(emailTemplateId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<EmailTemplate> localVarReturnType = new GenericType<EmailTemplate>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
    * Search emailTemplates by filter
    * Returns the list of emailTemplates that match the given filter.
    * @param filter Query string, used to filter results. (optional)
@@ -143,7 +350,7 @@ public class EmailTemplateApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/v1.0/emailTemplate/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/emailTemplate/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -198,7 +405,7 @@ public class EmailTemplateApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/emailTemplate/{emailTemplateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/beta/emailTemplate/{emailTemplateId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "emailTemplateId" + "\\}", apiClient.escapeString(emailTemplateId.toString()));
 
     // query params
@@ -231,6 +438,52 @@ public class EmailTemplateApi {
   }
   
   /**
+   * Get the tags for an emailTemplate.
+   * Get all existing emailTemplate tags.
+   * @param emailTemplateId Id of the emailTemplate to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getEmailTemplateTags(Integer emailTemplateId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'emailTemplateId' is set
+    if (emailTemplateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'emailTemplateId' when calling getEmailTemplateTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/emailTemplate/{emailTemplateId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "emailTemplateId" + "\\}", apiClient.escapeString(emailTemplateId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Update an emailTemplate
    * Updates an existing emailTemplate using the specified data.
    * @param body EmailTemplate to be updated. (required)
@@ -245,7 +498,52 @@ public class EmailTemplateApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v1.0/emailTemplate".replaceAll("\\{format\\}","json");
+    String localVarPath = "/beta/emailTemplate".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Update an emailTemplate custom fields
+   * Updates an existing emailTemplate custom fields using the specified data.
+   * @param body EmailTemplate to be updated. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateEmailTemplateCustomFields(EmailTemplate body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling updateEmailTemplateCustomFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/emailTemplate/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

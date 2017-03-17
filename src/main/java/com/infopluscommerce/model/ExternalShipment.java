@@ -4,32 +4,37 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class ExternalShipment   {
   
   private Integer id = null;
   private Date createDate = null;
   private Date modifyDate = null;
-  private Double orderId = null;
+  private BigDecimal orderId = null;
   private Integer carrierId = null;
   private Integer parcelAccountId = null;
   private Integer thirdPartyParcelAccountId = null;
-  private Double freight = null;
+  private BigDecimal freight = null;
   private String trackingNo = null;
-  private Double dim1In = null;
-  private Double dim2In = null;
-  private Double dim3In = null;
-  private Double weightLbs = null;
-  private Double dimWeight = null;
+  private BigDecimal dim1In = null;
+  private BigDecimal dim2In = null;
+  private BigDecimal dim3In = null;
+  private BigDecimal weightLbs = null;
+  private BigDecimal dimWeight = null;
   private Boolean residential = false;
   private String zone = null;
   private String status = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -55,17 +60,17 @@ public class ExternalShipment   {
   
   /**
    **/
-  public ExternalShipment orderId(Double orderId) {
+  public ExternalShipment orderId(BigDecimal orderId) {
     this.orderId = orderId;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("orderId")
-  public Double getOrderId() {
+  public BigDecimal getOrderId() {
     return orderId;
   }
-  public void setOrderId(Double orderId) {
+  public void setOrderId(BigDecimal orderId) {
     this.orderId = orderId;
   }
 
@@ -123,17 +128,17 @@ public class ExternalShipment   {
   
   /**
    **/
-  public ExternalShipment freight(Double freight) {
+  public ExternalShipment freight(BigDecimal freight) {
     this.freight = freight;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("freight")
-  public Double getFreight() {
+  public BigDecimal getFreight() {
     return freight;
   }
-  public void setFreight(Double freight) {
+  public void setFreight(BigDecimal freight) {
     this.freight = freight;
   }
 
@@ -157,85 +162,85 @@ public class ExternalShipment   {
   
   /**
    **/
-  public ExternalShipment dim1In(Double dim1In) {
+  public ExternalShipment dim1In(BigDecimal dim1In) {
     this.dim1In = dim1In;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim1In")
-  public Double getDim1In() {
+  public BigDecimal getDim1In() {
     return dim1In;
   }
-  public void setDim1In(Double dim1In) {
+  public void setDim1In(BigDecimal dim1In) {
     this.dim1In = dim1In;
   }
 
   
   /**
    **/
-  public ExternalShipment dim2In(Double dim2In) {
+  public ExternalShipment dim2In(BigDecimal dim2In) {
     this.dim2In = dim2In;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim2In")
-  public Double getDim2In() {
+  public BigDecimal getDim2In() {
     return dim2In;
   }
-  public void setDim2In(Double dim2In) {
+  public void setDim2In(BigDecimal dim2In) {
     this.dim2In = dim2In;
   }
 
   
   /**
    **/
-  public ExternalShipment dim3In(Double dim3In) {
+  public ExternalShipment dim3In(BigDecimal dim3In) {
     this.dim3In = dim3In;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim3In")
-  public Double getDim3In() {
+  public BigDecimal getDim3In() {
     return dim3In;
   }
-  public void setDim3In(Double dim3In) {
+  public void setDim3In(BigDecimal dim3In) {
     this.dim3In = dim3In;
   }
 
   
   /**
    **/
-  public ExternalShipment weightLbs(Double weightLbs) {
+  public ExternalShipment weightLbs(BigDecimal weightLbs) {
     this.weightLbs = weightLbs;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
-  public Double getWeightLbs() {
+  public BigDecimal getWeightLbs() {
     return weightLbs;
   }
-  public void setWeightLbs(Double weightLbs) {
+  public void setWeightLbs(BigDecimal weightLbs) {
     this.weightLbs = weightLbs;
   }
 
   
   /**
    **/
-  public ExternalShipment dimWeight(Double dimWeight) {
+  public ExternalShipment dimWeight(BigDecimal dimWeight) {
     this.dimWeight = dimWeight;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dimWeight")
-  public Double getDimWeight() {
+  public BigDecimal getDimWeight() {
     return dimWeight;
   }
-  public void setDimWeight(Double dimWeight) {
+  public void setDimWeight(BigDecimal dimWeight) {
     this.dimWeight = dimWeight;
   }
 
@@ -281,6 +286,23 @@ public class ExternalShipment   {
   }
 
   
+  /**
+   **/
+  public ExternalShipment customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -307,12 +329,13 @@ public class ExternalShipment   {
         Objects.equals(this.dimWeight, externalShipment.dimWeight) &&
         Objects.equals(this.residential, externalShipment.residential) &&
         Objects.equals(this.zone, externalShipment.zone) &&
-        Objects.equals(this.status, externalShipment.status);
+        Objects.equals(this.status, externalShipment.status) &&
+        Objects.equals(this.customFields, externalShipment.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, orderId, carrierId, parcelAccountId, thirdPartyParcelAccountId, freight, trackingNo, dim1In, dim2In, dim3In, weightLbs, dimWeight, residential, zone, status);
+    return Objects.hash(id, createDate, modifyDate, orderId, carrierId, parcelAccountId, thirdPartyParcelAccountId, freight, trackingNo, dim1In, dim2In, dim3In, weightLbs, dimWeight, residential, zone, status, customFields);
   }
 
   @Override
@@ -337,6 +360,7 @@ public class ExternalShipment   {
     sb.append("    residential: ").append(toIndentedString(residential)).append("\n");
     sb.append("    zone: ").append(toIndentedString(zone)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class ReplenishmentProcess   {
   
   private Integer id = null;
@@ -20,6 +23,8 @@ public class ReplenishmentProcess   {
   private Integer replenishmentPlanId = null;
   private String status = null;
   private Integer estimatedWork = null;
+  private Integer workBatchId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -101,6 +106,30 @@ public class ReplenishmentProcess   {
   }
 
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("workBatchId")
+  public Integer getWorkBatchId() {
+    return workBatchId;
+  }
+
+  
+  /**
+   **/
+  public ReplenishmentProcess customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -117,12 +146,14 @@ public class ReplenishmentProcess   {
         Objects.equals(this.warehouseId, replenishmentProcess.warehouseId) &&
         Objects.equals(this.replenishmentPlanId, replenishmentProcess.replenishmentPlanId) &&
         Objects.equals(this.status, replenishmentProcess.status) &&
-        Objects.equals(this.estimatedWork, replenishmentProcess.estimatedWork);
+        Objects.equals(this.estimatedWork, replenishmentProcess.estimatedWork) &&
+        Objects.equals(this.workBatchId, replenishmentProcess.workBatchId) &&
+        Objects.equals(this.customFields, replenishmentProcess.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, warehouseId, replenishmentPlanId, status, estimatedWork);
+    return Objects.hash(id, createDate, modifyDate, warehouseId, replenishmentPlanId, status, estimatedWork, workBatchId, customFields);
   }
 
   @Override
@@ -137,6 +168,8 @@ public class ReplenishmentProcess   {
     sb.append("    replenishmentPlanId: ").append(toIndentedString(replenishmentPlanId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    estimatedWork: ").append(toIndentedString(estimatedWork)).append("\n");
+    sb.append("    workBatchId: ").append(toIndentedString(workBatchId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

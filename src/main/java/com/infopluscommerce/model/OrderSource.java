@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class OrderSource   {
   
   private Integer id = null;
@@ -23,8 +26,10 @@ public class OrderSource   {
   private Boolean requireGS1128Label = false;
   private String shippingNotes = null;
   private Integer packingSlipId = null;
+  private Integer orderInvoiceId = null;
   private Integer orderConfirmationEmailId = null;
   private Integer shipmentConfirmationEmailId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -169,6 +174,23 @@ public class OrderSource   {
   
   /**
    **/
+  public OrderSource orderInvoiceId(Integer orderInvoiceId) {
+    this.orderInvoiceId = orderInvoiceId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orderInvoiceId")
+  public Integer getOrderInvoiceId() {
+    return orderInvoiceId;
+  }
+  public void setOrderInvoiceId(Integer orderInvoiceId) {
+    this.orderInvoiceId = orderInvoiceId;
+  }
+
+  
+  /**
+   **/
   public OrderSource orderConfirmationEmailId(Integer orderConfirmationEmailId) {
     this.orderConfirmationEmailId = orderConfirmationEmailId;
     return this;
@@ -201,6 +223,23 @@ public class OrderSource   {
   }
 
   
+  /**
+   **/
+  public OrderSource customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -221,13 +260,15 @@ public class OrderSource   {
         Objects.equals(this.requireGS1128Label, orderSource.requireGS1128Label) &&
         Objects.equals(this.shippingNotes, orderSource.shippingNotes) &&
         Objects.equals(this.packingSlipId, orderSource.packingSlipId) &&
+        Objects.equals(this.orderInvoiceId, orderSource.orderInvoiceId) &&
         Objects.equals(this.orderConfirmationEmailId, orderSource.orderConfirmationEmailId) &&
-        Objects.equals(this.shipmentConfirmationEmailId, orderSource.shipmentConfirmationEmailId);
+        Objects.equals(this.shipmentConfirmationEmailId, orderSource.shipmentConfirmationEmailId) &&
+        Objects.equals(this.customFields, orderSource.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lobId, name, createDate, modifyDate, packingNotes, requireCartonizedASN, requireGS1128Label, shippingNotes, packingSlipId, orderConfirmationEmailId, shipmentConfirmationEmailId);
+    return Objects.hash(id, lobId, name, createDate, modifyDate, packingNotes, requireCartonizedASN, requireGS1128Label, shippingNotes, packingSlipId, orderInvoiceId, orderConfirmationEmailId, shipmentConfirmationEmailId, customFields);
   }
 
   @Override
@@ -245,8 +286,10 @@ public class OrderSource   {
     sb.append("    requireGS1128Label: ").append(toIndentedString(requireGS1128Label)).append("\n");
     sb.append("    shippingNotes: ").append(toIndentedString(shippingNotes)).append("\n");
     sb.append("    packingSlipId: ").append(toIndentedString(packingSlipId)).append("\n");
+    sb.append("    orderInvoiceId: ").append(toIndentedString(orderInvoiceId)).append("\n");
     sb.append("    orderConfirmationEmailId: ").append(toIndentedString(orderConfirmationEmailId)).append("\n");
     sb.append("    shipmentConfirmationEmailId: ").append(toIndentedString(shipmentConfirmationEmailId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

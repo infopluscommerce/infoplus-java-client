@@ -4,15 +4,19 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class ReceivingWorksheetPutAwayPlan   {
   
   private Integer quantity = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   /**
@@ -32,6 +36,23 @@ public class ReceivingWorksheetPutAwayPlan   {
   }
 
   
+  /**
+   **/
+  public ReceivingWorksheetPutAwayPlan customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,12 +63,13 @@ public class ReceivingWorksheetPutAwayPlan   {
       return false;
     }
     ReceivingWorksheetPutAwayPlan receivingWorksheetPutAwayPlan = (ReceivingWorksheetPutAwayPlan) o;
-    return Objects.equals(this.quantity, receivingWorksheetPutAwayPlan.quantity);
+    return Objects.equals(this.quantity, receivingWorksheetPutAwayPlan.quantity) &&
+        Objects.equals(this.customFields, receivingWorksheetPutAwayPlan.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quantity);
+    return Objects.hash(quantity, customFields);
   }
 
   @Override
@@ -56,6 +78,7 @@ public class ReceivingWorksheetPutAwayPlan   {
     sb.append("class ReceivingWorksheetPutAwayPlan {\n");
     
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

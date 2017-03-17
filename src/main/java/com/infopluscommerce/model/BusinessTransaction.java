@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class BusinessTransaction   {
   
   private Integer id = null;
@@ -21,6 +24,7 @@ public class BusinessTransaction   {
   private Integer lobId = null;
   private String messageBody = null;
   private String status = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -79,6 +83,23 @@ public class BusinessTransaction   {
   }
 
   
+  /**
+   **/
+  public BusinessTransaction customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -96,12 +117,13 @@ public class BusinessTransaction   {
         Objects.equals(this.queueName, businessTransaction.queueName) &&
         Objects.equals(this.lobId, businessTransaction.lobId) &&
         Objects.equals(this.messageBody, businessTransaction.messageBody) &&
-        Objects.equals(this.status, businessTransaction.status);
+        Objects.equals(this.status, businessTransaction.status) &&
+        Objects.equals(this.customFields, businessTransaction.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, serverName, queueName, lobId, messageBody, status);
+    return Objects.hash(id, createDate, modifyDate, serverName, queueName, lobId, messageBody, status, customFields);
   }
 
   @Override
@@ -117,6 +139,7 @@ public class BusinessTransaction   {
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    messageBody: ").append(toIndentedString(messageBody)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

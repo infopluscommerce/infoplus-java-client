@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class ParcelAccount   {
   
   private Integer id = null;
@@ -21,6 +24,7 @@ public class ParcelAccount   {
   private Integer client = null;
   private String name = null;
   private String manifestPartnerId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   @ApiModelProperty(example = "null", value = "")
@@ -119,6 +123,23 @@ public class ParcelAccount   {
   }
 
   
+  /**
+   **/
+  public ParcelAccount customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -136,12 +157,13 @@ public class ParcelAccount   {
         Objects.equals(this.accountNo, parcelAccount.accountNo) &&
         Objects.equals(this.client, parcelAccount.client) &&
         Objects.equals(this.name, parcelAccount.name) &&
-        Objects.equals(this.manifestPartnerId, parcelAccount.manifestPartnerId);
+        Objects.equals(this.manifestPartnerId, parcelAccount.manifestPartnerId) &&
+        Objects.equals(this.customFields, parcelAccount.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, carrier, accountNo, client, name, manifestPartnerId);
+    return Objects.hash(id, createDate, modifyDate, carrier, accountNo, client, name, manifestPartnerId, customFields);
   }
 
   @Override
@@ -157,6 +179,7 @@ public class ParcelAccount   {
     sb.append("    client: ").append(toIndentedString(client)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    manifestPartnerId: ").append(toIndentedString(manifestPartnerId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

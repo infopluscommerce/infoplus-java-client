@@ -5,12 +5,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
 public class OrderSourceReservation   {
   
   private Integer id = null;
@@ -18,6 +21,7 @@ public class OrderSourceReservation   {
   private Date createDate = null;
   private Date modifyDate = null;
   private Integer reservedQuantity = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
   
@@ -78,6 +82,23 @@ public class OrderSourceReservation   {
   
   /**
    **/
+  public OrderSourceReservation customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+  }
+
+  
+  /**
+   **/
   public OrderSourceReservation sku(String sku) {
     this.sku = sku;
     return this;
@@ -108,12 +129,13 @@ public class OrderSourceReservation   {
         Objects.equals(this.createDate, orderSourceReservation.createDate) &&
         Objects.equals(this.modifyDate, orderSourceReservation.modifyDate) &&
         Objects.equals(this.reservedQuantity, orderSourceReservation.reservedQuantity) &&
+        Objects.equals(this.customFields, orderSourceReservation.customFields) &&
         Objects.equals(this.sku, orderSourceReservation.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderSourceId, createDate, modifyDate, reservedQuantity, sku);
+    return Objects.hash(id, orderSourceId, createDate, modifyDate, reservedQuantity, customFields, sku);
   }
 
   @Override
@@ -126,6 +148,7 @@ public class OrderSourceReservation   {
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    reservedQuantity: ").append(toIndentedString(reservedQuantity)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");
     return sb.toString();
