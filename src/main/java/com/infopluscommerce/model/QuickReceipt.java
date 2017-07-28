@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class QuickReceipt   {
   
   private Integer id = null;
@@ -46,6 +46,8 @@ public class QuickReceipt   {
   private String pricingPer = null;
   private Integer generatedItemReceiptId = null;
   private Integer generatedASNId = null;
+  private Date dockDate = null;
+  private String productIdTag = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
@@ -475,6 +477,40 @@ public class QuickReceipt   {
   
   /**
    **/
+  public QuickReceipt dockDate(Date dockDate) {
+    this.dockDate = dockDate;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("dockDate")
+  public Date getDockDate() {
+    return dockDate;
+  }
+  public void setDockDate(Date dockDate) {
+    this.dockDate = dockDate;
+  }
+
+  
+  /**
+   **/
+  public QuickReceipt productIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("productIdTag")
+  public String getProductIdTag() {
+    return productIdTag;
+  }
+  public void setProductIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+  }
+
+  
+  /**
+   **/
   public QuickReceipt customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -546,13 +582,15 @@ public class QuickReceipt   {
         Objects.equals(this.pricingPer, quickReceipt.pricingPer) &&
         Objects.equals(this.generatedItemReceiptId, quickReceipt.generatedItemReceiptId) &&
         Objects.equals(this.generatedASNId, quickReceipt.generatedASNId) &&
+        Objects.equals(this.dockDate, quickReceipt.dockDate) &&
+        Objects.equals(this.productIdTag, quickReceipt.productIdTag) &&
         Objects.equals(this.customFields, quickReceipt.customFields) &&
         Objects.equals(this.sku, quickReceipt.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createdBy, createDate, modifyDate, warehouseId, lobId, locationId, quantity, vendorId, carrier, status, unitCode, wrapCode, weightPerWrap, unitsPerWrap, unitsPerCase, casesPerPallet, caseWeight, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, cost, sell, pricingPer, generatedItemReceiptId, generatedASNId, customFields, sku);
+    return Objects.hash(id, createdBy, createDate, modifyDate, warehouseId, lobId, locationId, quantity, vendorId, carrier, status, unitCode, wrapCode, weightPerWrap, unitsPerWrap, unitsPerCase, casesPerPallet, caseWeight, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, cost, sell, pricingPer, generatedItemReceiptId, generatedASNId, dockDate, productIdTag, customFields, sku);
   }
 
   @Override
@@ -589,6 +627,8 @@ public class QuickReceipt   {
     sb.append("    pricingPer: ").append(toIndentedString(pricingPer)).append("\n");
     sb.append("    generatedItemReceiptId: ").append(toIndentedString(generatedItemReceiptId)).append("\n");
     sb.append("    generatedASNId: ").append(toIndentedString(generatedASNId)).append("\n");
+    sb.append("    dockDate: ").append(toIndentedString(dockDate)).append("\n");
+    sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");

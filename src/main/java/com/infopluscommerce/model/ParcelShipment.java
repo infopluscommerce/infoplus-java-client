@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-19T13:06:54.930-05:00")
 public class ParcelShipment   {
   
   private Integer id = null;
@@ -46,6 +46,7 @@ public class ParcelShipment   {
   private BigDecimal chargedFreightAmount = null;
   private BigDecimal publishedFreightAmount = null;
   private BigDecimal retailFreightAmount = null;
+  private Integer externalShippingSystemId = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -352,6 +353,13 @@ public class ParcelShipment   {
   }
 
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("externalShippingSystemId")
+  public Integer getExternalShippingSystemId() {
+    return externalShippingSystemId;
+  }
+
+  
   /**
    **/
   public ParcelShipment customFields(Map<String, Object> customFields) {
@@ -408,12 +416,13 @@ public class ParcelShipment   {
         Objects.equals(this.chargedFreightAmount, parcelShipment.chargedFreightAmount) &&
         Objects.equals(this.publishedFreightAmount, parcelShipment.publishedFreightAmount) &&
         Objects.equals(this.retailFreightAmount, parcelShipment.retailFreightAmount) &&
+        Objects.equals(this.externalShippingSystemId, parcelShipment.externalShippingSystemId) &&
         Objects.equals(this.customFields, parcelShipment.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, shipDate, deliveredDate, trackingNo, warehouseId, lobId, orderNo, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, customFields);
+    return Objects.hash(id, createDate, modifyDate, shipDate, deliveredDate, trackingNo, warehouseId, lobId, orderNo, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -450,6 +459,7 @@ public class ParcelShipment   {
     sb.append("    chargedFreightAmount: ").append(toIndentedString(chargedFreightAmount)).append("\n");
     sb.append("    publishedFreightAmount: ").append(toIndentedString(publishedFreightAmount)).append("\n");
     sb.append("    retailFreightAmount: ").append(toIndentedString(retailFreightAmount)).append("\n");
+    sb.append("    externalShippingSystemId: ").append(toIndentedString(externalShippingSystemId)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

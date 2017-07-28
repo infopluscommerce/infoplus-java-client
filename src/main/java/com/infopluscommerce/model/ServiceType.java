@@ -9,11 +9,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class ServiceType   {
   
   private String serviceType = null;
   private String label = null;
+  private String fullEntityClassName = null;
 
   
   @ApiModelProperty(example = "null", required = true, value = "")
@@ -30,6 +31,23 @@ public class ServiceType   {
   }
 
   
+  /**
+   **/
+  public ServiceType fullEntityClassName(String fullEntityClassName) {
+    this.fullEntityClassName = fullEntityClassName;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("fullEntityClassName")
+  public String getFullEntityClassName() {
+    return fullEntityClassName;
+  }
+  public void setFullEntityClassName(String fullEntityClassName) {
+    this.fullEntityClassName = fullEntityClassName;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,12 +59,13 @@ public class ServiceType   {
     }
     ServiceType serviceType = (ServiceType) o;
     return Objects.equals(this.serviceType, serviceType.serviceType) &&
-        Objects.equals(this.label, serviceType.label);
+        Objects.equals(this.label, serviceType.label) &&
+        Objects.equals(this.fullEntityClassName, serviceType.fullEntityClassName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serviceType, label);
+    return Objects.hash(serviceType, label, fullEntityClassName);
   }
 
   @Override
@@ -56,6 +75,7 @@ public class ServiceType   {
     
     sb.append("    serviceType: ").append(toIndentedString(serviceType)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    fullEntityClassName: ").append(toIndentedString(fullEntityClassName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class QuickAdjustment   {
   
   private Integer id = null;
@@ -25,6 +25,7 @@ public class QuickAdjustment   {
   private Integer totalQuantity = null;
   private String message = null;
   private String status = null;
+  private String productIdTag = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
   private String sku = null;
 
@@ -144,6 +145,23 @@ public class QuickAdjustment   {
   
   /**
    **/
+  public QuickAdjustment productIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("productIdTag")
+  public String getProductIdTag() {
+    return productIdTag;
+  }
+  public void setProductIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+  }
+
+  
+  /**
+   **/
   public QuickAdjustment customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -195,13 +213,14 @@ public class QuickAdjustment   {
         Objects.equals(this.totalQuantity, quickAdjustment.totalQuantity) &&
         Objects.equals(this.message, quickAdjustment.message) &&
         Objects.equals(this.status, quickAdjustment.status) &&
+        Objects.equals(this.productIdTag, quickAdjustment.productIdTag) &&
         Objects.equals(this.customFields, quickAdjustment.customFields) &&
         Objects.equals(this.sku, quickAdjustment.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, warehouseId, locationId, adjustmentCode, totalQuantity, message, status, customFields, sku);
+    return Objects.hash(id, createDate, modifyDate, warehouseId, locationId, adjustmentCode, totalQuantity, message, status, productIdTag, customFields, sku);
   }
 
   @Override
@@ -218,6 +237,7 @@ public class QuickAdjustment   {
     sb.append("    totalQuantity: ").append(toIndentedString(totalQuantity)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");

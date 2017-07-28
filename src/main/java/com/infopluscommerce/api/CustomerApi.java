@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class CustomerApi {
   private ApiClient apiClient;
 
@@ -84,6 +84,112 @@ public class CustomerApi {
   }
   
   /**
+   * Add new audit for a customer
+   * Adds an audit to an existing customer.
+   * @param customerId Id of the customer to add an audit to (required)
+   * @param customerAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addCustomerAudit(Integer customerId, String customerAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'customerId' is set
+    if (customerId == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerId' when calling addCustomerAudit");
+    }
+    
+    // verify the required parameter 'customerAudit' is set
+    if (customerAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerAudit' when calling addCustomerAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/customer/{customerId}/audit/{customerAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "customerId" + "\\}", apiClient.escapeString(customerId.toString()))
+      .replaceAll("\\{" + "customerAudit" + "\\}", apiClient.escapeString(customerAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for a customer.
+   * Adds a tag to an existing customer.
+   * @param customerId Id of the customer to add a tag to (required)
+   * @param customerTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addCustomerTag(Integer customerId, String customerTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'customerId' is set
+    if (customerId == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerId' when calling addCustomerTag");
+    }
+    
+    // verify the required parameter 'customerTag' is set
+    if (customerTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerTag' when calling addCustomerTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/customer/{customerId}/tag/{customerTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "customerId" + "\\}", apiClient.escapeString(customerId.toString()))
+      .replaceAll("\\{" + "customerTag" + "\\}", apiClient.escapeString(customerTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete a customer
    * Deletes the customer identified by the specified id.
    * @param customerId Id of the customer to be deleted. (required)
@@ -100,6 +206,59 @@ public class CustomerApi {
     // create path and map variables
     String localVarPath = "/beta/customer/{customerId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "customerId" + "\\}", apiClient.escapeString(customerId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Delete a tag for a customer.
+   * Deletes an existing customer tag using the specified data.
+   * @param customerId Id of the customer to remove tag from (required)
+   * @param customerTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteCustomerTag(Integer customerId, String customerTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'customerId' is set
+    if (customerId == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerId' when calling deleteCustomerTag");
+    }
+    
+    // verify the required parameter 'customerTag' is set
+    if (customerTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerTag' when calling deleteCustomerTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/customer/{customerId}/tag/{customerTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "customerId" + "\\}", apiClient.escapeString(customerId.toString()))
+      .replaceAll("\\{" + "customerTag" + "\\}", apiClient.escapeString(customerTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -256,6 +415,100 @@ public class CustomerApi {
     
     // create path and map variables
     String localVarPath = "/beta/customer/{customerId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "customerId" + "\\}", apiClient.escapeString(customerId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<Customer> localVarReturnType = new GenericType<Customer>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Get the tags for a customer.
+   * Get all existing customer tags.
+   * @param customerId Id of the customer to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getCustomerTags(Integer customerId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'customerId' is set
+    if (customerId == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerId' when calling getCustomerTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/customer/{customerId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "customerId" + "\\}", apiClient.escapeString(customerId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated a customer by id
+   * Returns a duplicated customer identified by the specified id.
+   * @param customerId Id of the customer to be duplicated. (required)
+   * @return Customer
+   * @throws ApiException if fails to make API call
+   */
+  public Customer getDuplicateCustomerById(Integer customerId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'customerId' is set
+    if (customerId == null) {
+      throw new ApiException(400, "Missing the required parameter 'customerId' when calling getDuplicateCustomerById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/customer/duplicate/{customerId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "customerId" + "\\}", apiClient.escapeString(customerId.toString()));
 
     // query params

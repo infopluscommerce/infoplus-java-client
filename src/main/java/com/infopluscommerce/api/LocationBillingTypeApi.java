@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class LocationBillingTypeApi {
   private ApiClient apiClient;
 
@@ -84,6 +84,112 @@ public class LocationBillingTypeApi {
   }
   
   /**
+   * Add new audit for a locationBillingType
+   * Adds an audit to an existing locationBillingType.
+   * @param locationBillingTypeId Id of the locationBillingType to add an audit to (required)
+   * @param locationBillingTypeAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addLocationBillingTypeAudit(Integer locationBillingTypeId, String locationBillingTypeAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'locationBillingTypeId' is set
+    if (locationBillingTypeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeId' when calling addLocationBillingTypeAudit");
+    }
+    
+    // verify the required parameter 'locationBillingTypeAudit' is set
+    if (locationBillingTypeAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeAudit' when calling addLocationBillingTypeAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/locationBillingType/{locationBillingTypeId}/audit/{locationBillingTypeAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "locationBillingTypeId" + "\\}", apiClient.escapeString(locationBillingTypeId.toString()))
+      .replaceAll("\\{" + "locationBillingTypeAudit" + "\\}", apiClient.escapeString(locationBillingTypeAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for a locationBillingType.
+   * Adds a tag to an existing locationBillingType.
+   * @param locationBillingTypeId Id of the locationBillingType to add a tag to (required)
+   * @param locationBillingTypeTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addLocationBillingTypeTag(Integer locationBillingTypeId, String locationBillingTypeTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'locationBillingTypeId' is set
+    if (locationBillingTypeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeId' when calling addLocationBillingTypeTag");
+    }
+    
+    // verify the required parameter 'locationBillingTypeTag' is set
+    if (locationBillingTypeTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeTag' when calling addLocationBillingTypeTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/locationBillingType/{locationBillingTypeId}/tag/{locationBillingTypeTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "locationBillingTypeId" + "\\}", apiClient.escapeString(locationBillingTypeId.toString()))
+      .replaceAll("\\{" + "locationBillingTypeTag" + "\\}", apiClient.escapeString(locationBillingTypeTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete a locationBillingType
    * Deletes the locationBillingType identified by the specified id.
    * @param locationBillingTypeId Id of the locationBillingType to be deleted. (required)
@@ -126,6 +232,107 @@ public class LocationBillingTypeApi {
 
     
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Delete a tag for a locationBillingType.
+   * Deletes an existing locationBillingType tag using the specified data.
+   * @param locationBillingTypeId Id of the locationBillingType to remove tag from (required)
+   * @param locationBillingTypeTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteLocationBillingTypeTag(Integer locationBillingTypeId, String locationBillingTypeTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'locationBillingTypeId' is set
+    if (locationBillingTypeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeId' when calling deleteLocationBillingTypeTag");
+    }
+    
+    // verify the required parameter 'locationBillingTypeTag' is set
+    if (locationBillingTypeTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeTag' when calling deleteLocationBillingTypeTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/locationBillingType/{locationBillingTypeId}/tag/{locationBillingTypeTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "locationBillingTypeId" + "\\}", apiClient.escapeString(locationBillingTypeId.toString()))
+      .replaceAll("\\{" + "locationBillingTypeTag" + "\\}", apiClient.escapeString(locationBillingTypeTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated a locationBillingType by id
+   * Returns a duplicated locationBillingType identified by the specified id.
+   * @param locationBillingTypeId Id of the locationBillingType to be duplicated. (required)
+   * @return LocationBillingType
+   * @throws ApiException if fails to make API call
+   */
+  public LocationBillingType getDuplicateLocationBillingTypeById(Integer locationBillingTypeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'locationBillingTypeId' is set
+    if (locationBillingTypeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeId' when calling getDuplicateLocationBillingTypeById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/locationBillingType/duplicate/{locationBillingTypeId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "locationBillingTypeId" + "\\}", apiClient.escapeString(locationBillingTypeId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<LocationBillingType> localVarReturnType = new GenericType<LocationBillingType>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
@@ -227,6 +434,52 @@ public class LocationBillingTypeApi {
     
     GenericType<LocationBillingType> localVarReturnType = new GenericType<LocationBillingType>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Get the tags for a locationBillingType.
+   * Get all existing locationBillingType tags.
+   * @param locationBillingTypeId Id of the locationBillingType to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getLocationBillingTypeTags(Integer locationBillingTypeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'locationBillingTypeId' is set
+    if (locationBillingTypeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'locationBillingTypeId' when calling getLocationBillingTypeTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/locationBillingType/{locationBillingTypeId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "locationBillingTypeId" + "\\}", apiClient.escapeString(locationBillingTypeId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     
   }
   

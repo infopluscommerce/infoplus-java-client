@@ -9,11 +9,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class IntegrationPartner   {
   
   private Integer id = null;
   private String label = null;
+  private String fullEntityClassName = null;
 
   
   @ApiModelProperty(example = "null", required = true, value = "")
@@ -30,6 +31,23 @@ public class IntegrationPartner   {
   }
 
   
+  /**
+   **/
+  public IntegrationPartner fullEntityClassName(String fullEntityClassName) {
+    this.fullEntityClassName = fullEntityClassName;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("fullEntityClassName")
+  public String getFullEntityClassName() {
+    return fullEntityClassName;
+  }
+  public void setFullEntityClassName(String fullEntityClassName) {
+    this.fullEntityClassName = fullEntityClassName;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,12 +59,13 @@ public class IntegrationPartner   {
     }
     IntegrationPartner integrationPartner = (IntegrationPartner) o;
     return Objects.equals(this.id, integrationPartner.id) &&
-        Objects.equals(this.label, integrationPartner.label);
+        Objects.equals(this.label, integrationPartner.label) &&
+        Objects.equals(this.fullEntityClassName, integrationPartner.fullEntityClassName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, label);
+    return Objects.hash(id, label, fullEntityClassName);
   }
 
   @Override
@@ -56,6 +75,7 @@ public class IntegrationPartner   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    fullEntityClassName: ").append(toIndentedString(fullEntityClassName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

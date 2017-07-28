@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class OrderLine   {
   
   private Integer id = null;
@@ -33,13 +33,16 @@ public class OrderLine   {
   private String orderSourceSKU = null;
   private BigDecimal unitCost = null;
   private BigDecimal unitSell = null;
+  private BigDecimal unitDiscount = null;
   private BigDecimal extendedCost = null;
   private BigDecimal extendedSell = null;
+  private BigDecimal extendedDiscount = null;
   private BigDecimal ncExtendedSell = null;
   private BigDecimal itemWeight = null;
   private String productionLot = null;
   private BigDecimal weightPerWrap = null;
   private String sector = null;
+  private String orderAssemblyInstructions = null;
   private Integer itemAccountCodeId = null;
   private Integer itemLegacyLowStockContactId = null;
   private Integer itemMajorGroupId = null;
@@ -169,6 +172,13 @@ public class OrderLine   {
 
   
   @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("unitDiscount")
+  public BigDecimal getUnitDiscount() {
+    return unitDiscount;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extendedCost")
   public BigDecimal getExtendedCost() {
     return extendedCost;
@@ -179,6 +189,13 @@ public class OrderLine   {
   @JsonProperty("extendedSell")
   public BigDecimal getExtendedSell() {
     return extendedSell;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("extendedDiscount")
+  public BigDecimal getExtendedDiscount() {
+    return extendedDiscount;
   }
 
   
@@ -214,6 +231,23 @@ public class OrderLine   {
   @JsonProperty("sector")
   public String getSector() {
     return sector;
+  }
+
+  
+  /**
+   **/
+  public OrderLine orderAssemblyInstructions(String orderAssemblyInstructions) {
+    this.orderAssemblyInstructions = orderAssemblyInstructions;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orderAssemblyInstructions")
+  public String getOrderAssemblyInstructions() {
+    return orderAssemblyInstructions;
+  }
+  public void setOrderAssemblyInstructions(String orderAssemblyInstructions) {
+    this.orderAssemblyInstructions = orderAssemblyInstructions;
   }
 
   
@@ -363,13 +397,16 @@ public class OrderLine   {
         Objects.equals(this.orderSourceSKU, orderLine.orderSourceSKU) &&
         Objects.equals(this.unitCost, orderLine.unitCost) &&
         Objects.equals(this.unitSell, orderLine.unitSell) &&
+        Objects.equals(this.unitDiscount, orderLine.unitDiscount) &&
         Objects.equals(this.extendedCost, orderLine.extendedCost) &&
         Objects.equals(this.extendedSell, orderLine.extendedSell) &&
+        Objects.equals(this.extendedDiscount, orderLine.extendedDiscount) &&
         Objects.equals(this.ncExtendedSell, orderLine.ncExtendedSell) &&
         Objects.equals(this.itemWeight, orderLine.itemWeight) &&
         Objects.equals(this.productionLot, orderLine.productionLot) &&
         Objects.equals(this.weightPerWrap, orderLine.weightPerWrap) &&
         Objects.equals(this.sector, orderLine.sector) &&
+        Objects.equals(this.orderAssemblyInstructions, orderLine.orderAssemblyInstructions) &&
         Objects.equals(this.itemAccountCodeId, orderLine.itemAccountCodeId) &&
         Objects.equals(this.itemLegacyLowStockContactId, orderLine.itemLegacyLowStockContactId) &&
         Objects.equals(this.itemMajorGroupId, orderLine.itemMajorGroupId) &&
@@ -381,7 +418,7 @@ public class OrderLine   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, extendedCost, extendedSell, ncExtendedSell, itemWeight, productionLot, weightPerWrap, sector, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, customFields);
+    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, unitDiscount, extendedCost, extendedSell, extendedDiscount, ncExtendedSell, itemWeight, productionLot, weightPerWrap, sector, orderAssemblyInstructions, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, customFields);
   }
 
   @Override
@@ -406,13 +443,16 @@ public class OrderLine   {
     sb.append("    orderSourceSKU: ").append(toIndentedString(orderSourceSKU)).append("\n");
     sb.append("    unitCost: ").append(toIndentedString(unitCost)).append("\n");
     sb.append("    unitSell: ").append(toIndentedString(unitSell)).append("\n");
+    sb.append("    unitDiscount: ").append(toIndentedString(unitDiscount)).append("\n");
     sb.append("    extendedCost: ").append(toIndentedString(extendedCost)).append("\n");
     sb.append("    extendedSell: ").append(toIndentedString(extendedSell)).append("\n");
+    sb.append("    extendedDiscount: ").append(toIndentedString(extendedDiscount)).append("\n");
     sb.append("    ncExtendedSell: ").append(toIndentedString(ncExtendedSell)).append("\n");
     sb.append("    itemWeight: ").append(toIndentedString(itemWeight)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    sector: ").append(toIndentedString(sector)).append("\n");
+    sb.append("    orderAssemblyInstructions: ").append(toIndentedString(orderAssemblyInstructions)).append("\n");
     sb.append("    itemAccountCodeId: ").append(toIndentedString(itemAccountCodeId)).append("\n");
     sb.append("    itemLegacyLowStockContactId: ").append(toIndentedString(itemLegacyLowStockContactId)).append("\n");
     sb.append("    itemMajorGroupId: ").append(toIndentedString(itemMajorGroupId)).append("\n");

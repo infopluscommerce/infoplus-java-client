@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.infopluscommerce.model.ItemReceipt;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -15,7 +16,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class Asn   {
   
   private Integer id = null;
@@ -63,6 +64,7 @@ public class Asn   {
   private String usedBy = null;
   private List<ItemReceipt> lineItems = new ArrayList<ItemReceipt>();
   private String status = null;
+  private BigDecimal transferOrderId = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -781,6 +783,13 @@ public class Asn   {
   }
 
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("transferOrderId")
+  public BigDecimal getTransferOrderId() {
+    return transferOrderId;
+  }
+
+  
   /**
    **/
   public Asn customFields(Map<String, Object> customFields) {
@@ -853,12 +862,13 @@ public class Asn   {
         Objects.equals(this.usedBy, asn.usedBy) &&
         Objects.equals(this.lineItems, asn.lineItems) &&
         Objects.equals(this.status, asn.status) &&
+        Objects.equals(this.transferOrderId, asn.transferOrderId) &&
         Objects.equals(this.customFields, asn.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, poNo, vendorId, warehouseId, orderDate, type, billingName, billingAttention, billingStreet1, billingStreet2, billingCity, billingState, billingZipCode, billingPhone, shipToName, shipToAddress, shipToStreet1, shipToStreet2, shipToCity, shipToState, shipToZipCode, shipToPhone, corporateName, corporateAttention, corporateStreet1, corporateStreet2, corporateCity, corporateState, corporateZipCode, accountCode, buyer, carrier, confTo, fob, printed, projectNo, remarks, requestBy, terms, usedBy, lineItems, status, customFields);
+    return Objects.hash(id, createDate, modifyDate, lobId, poNo, vendorId, warehouseId, orderDate, type, billingName, billingAttention, billingStreet1, billingStreet2, billingCity, billingState, billingZipCode, billingPhone, shipToName, shipToAddress, shipToStreet1, shipToStreet2, shipToCity, shipToState, shipToZipCode, shipToPhone, corporateName, corporateAttention, corporateStreet1, corporateStreet2, corporateCity, corporateState, corporateZipCode, accountCode, buyer, carrier, confTo, fob, printed, projectNo, remarks, requestBy, terms, usedBy, lineItems, status, transferOrderId, customFields);
   }
 
   @Override
@@ -911,6 +921,7 @@ public class Asn   {
     sb.append("    usedBy: ").append(toIndentedString(usedBy)).append("\n");
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    transferOrderId: ").append(toIndentedString(transferOrderId)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

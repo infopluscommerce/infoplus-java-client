@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class ItemReceipt   {
   
   private Integer id = null;
@@ -77,12 +77,13 @@ public class ItemReceipt   {
   private String receivedBy = null;
   private Integer lineNo = null;
   private String prodLot = null;
+  private String productIdTag = null;
   private Integer unitsPerCase = null;
   private BigDecimal caseWeight = null;
   private BigDecimal height = null;
   private BigDecimal width = null;
   private BigDecimal length = null;
-  private Date dockTime = null;
+  private Date dockDate = null;
   private Date modifyDate = null;
   private Integer impressions = null;
   private Integer asnLine = null;
@@ -96,37 +97,17 @@ public class ItemReceipt   {
   }
 
   
-  /**
-   **/
-  public ItemReceipt poNoId(Integer poNoId) {
-    this.poNoId = poNoId;
-    return this;
-  }
-  
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("poNoId")
   public Integer getPoNoId() {
     return poNoId;
   }
-  public void setPoNoId(Integer poNoId) {
-    this.poNoId = poNoId;
-  }
 
-  
-  /**
-   **/
-  public ItemReceipt lobId(Integer lobId) {
-    this.lobId = lobId;
-    return this;
-  }
   
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("lobId")
   public Integer getLobId() {
     return lobId;
-  }
-  public void setLobId(Integer lobId) {
-    this.lobId = lobId;
   }
 
   
@@ -147,20 +128,10 @@ public class ItemReceipt   {
   }
 
   
-  /**
-   **/
-  public ItemReceipt warehouseId(Integer warehouseId) {
-    this.warehouseId = warehouseId;
-    return this;
-  }
-  
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("warehouseId")
   public Integer getWarehouseId() {
     return warehouseId;
-  }
-  public void setWarehouseId(Integer warehouseId) {
-    this.warehouseId = warehouseId;
   }
 
   
@@ -215,20 +186,10 @@ public class ItemReceipt   {
   }
 
   
-  /**
-   **/
-  public ItemReceipt sku(String sku) {
-    this.sku = sku;
-    return this;
-  }
-  
   @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("sku")
   public String getSku() {
     return sku;
-  }
-  public void setSku(String sku) {
-    this.sku = sku;
   }
 
   
@@ -1101,6 +1062,23 @@ public class ItemReceipt   {
   
   /**
    **/
+  public ItemReceipt productIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("productIdTag")
+  public String getProductIdTag() {
+    return productIdTag;
+  }
+  public void setProductIdTag(String productIdTag) {
+    this.productIdTag = productIdTag;
+  }
+
+  
+  /**
+   **/
   public ItemReceipt unitsPerCase(Integer unitsPerCase) {
     this.unitsPerCase = unitsPerCase;
     return this;
@@ -1186,18 +1164,18 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt dockTime(Date dockTime) {
-    this.dockTime = dockTime;
+  public ItemReceipt dockDate(Date dockDate) {
+    this.dockDate = dockDate;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("dockTime")
-  public Date getDockTime() {
-    return dockTime;
+  @JsonProperty("dockDate")
+  public Date getDockDate() {
+    return dockDate;
   }
-  public void setDockTime(Date dockTime) {
-    this.dockTime = dockTime;
+  public void setDockDate(Date dockDate) {
+    this.dockDate = dockDate;
   }
 
   
@@ -1329,12 +1307,13 @@ public class ItemReceipt   {
         Objects.equals(this.receivedBy, itemReceipt.receivedBy) &&
         Objects.equals(this.lineNo, itemReceipt.lineNo) &&
         Objects.equals(this.prodLot, itemReceipt.prodLot) &&
+        Objects.equals(this.productIdTag, itemReceipt.productIdTag) &&
         Objects.equals(this.unitsPerCase, itemReceipt.unitsPerCase) &&
         Objects.equals(this.caseWeight, itemReceipt.caseWeight) &&
         Objects.equals(this.height, itemReceipt.height) &&
         Objects.equals(this.width, itemReceipt.width) &&
         Objects.equals(this.length, itemReceipt.length) &&
-        Objects.equals(this.dockTime, itemReceipt.dockTime) &&
+        Objects.equals(this.dockDate, itemReceipt.dockDate) &&
         Objects.equals(this.modifyDate, itemReceipt.modifyDate) &&
         Objects.equals(this.impressions, itemReceipt.impressions) &&
         Objects.equals(this.asnLine, itemReceipt.asnLine) &&
@@ -1343,7 +1322,7 @@ public class ItemReceipt   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sell, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, unitsPerCase, caseWeight, height, width, length, dockTime, modifyDate, impressions, asnLine, customFields);
+    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sell, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, modifyDate, impressions, asnLine, customFields);
   }
 
   @Override
@@ -1411,12 +1390,13 @@ public class ItemReceipt   {
     sb.append("    receivedBy: ").append(toIndentedString(receivedBy)).append("\n");
     sb.append("    lineNo: ").append(toIndentedString(lineNo)).append("\n");
     sb.append("    prodLot: ").append(toIndentedString(prodLot)).append("\n");
+    sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
     sb.append("    unitsPerCase: ").append(toIndentedString(unitsPerCase)).append("\n");
     sb.append("    caseWeight: ").append(toIndentedString(caseWeight)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    length: ").append(toIndentedString(length)).append("\n");
-    sb.append("    dockTime: ").append(toIndentedString(dockTime)).append("\n");
+    sb.append("    dockDate: ").append(toIndentedString(dockDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    impressions: ").append(toIndentedString(impressions)).append("\n");
     sb.append("    asnLine: ").append(toIndentedString(asnLine)).append("\n");

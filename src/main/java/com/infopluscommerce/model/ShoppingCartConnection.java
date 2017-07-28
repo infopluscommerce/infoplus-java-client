@@ -2,8 +2,10 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.infopluscommerce.model.Warehouse;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +15,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class ShoppingCartConnection   {
   
   private Integer id = null;
@@ -32,10 +34,18 @@ public class ShoppingCartConnection   {
   private String shoppingCartStoreURL = null;
   private String accessCode = null;
   private String accessToken = null;
+  private String username = null;
+  private String password = null;
+  private Integer defaultCarrierId = null;
+  private String orderShipmentLevel = null;
   private Boolean syncOrders = false;
   private Boolean syncInventory = false;
   private Boolean syncTrackingData = false;
+  private Boolean fulfillAllItems = false;
   private Date syncInventoryLevelsLastRunTime = null;
+  private Date syncOrdersLastRunTime = null;
+  private String inventoryLevelWarehouseControls = null;
+  private List<Warehouse> warehouseList = new ArrayList<Warehouse>();
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -234,7 +244,7 @@ public class ShoppingCartConnection   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("accessCode")
   public String getAccessCode() {
     return accessCode;
@@ -251,13 +261,81 @@ public class ShoppingCartConnection   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("accessToken")
   public String getAccessToken() {
     return accessToken;
   }
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
+  }
+
+  
+  /**
+   **/
+  public ShoppingCartConnection username(String username) {
+    this.username = username;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("username")
+  public String getUsername() {
+    return username;
+  }
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  
+  /**
+   **/
+  public ShoppingCartConnection password(String password) {
+    this.password = password;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("password")
+  public String getPassword() {
+    return password;
+  }
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  
+  /**
+   **/
+  public ShoppingCartConnection defaultCarrierId(Integer defaultCarrierId) {
+    this.defaultCarrierId = defaultCarrierId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("defaultCarrierId")
+  public Integer getDefaultCarrierId() {
+    return defaultCarrierId;
+  }
+  public void setDefaultCarrierId(Integer defaultCarrierId) {
+    this.defaultCarrierId = defaultCarrierId;
+  }
+
+  
+  /**
+   **/
+  public ShoppingCartConnection orderShipmentLevel(String orderShipmentLevel) {
+    this.orderShipmentLevel = orderShipmentLevel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("orderShipmentLevel")
+  public String getOrderShipmentLevel() {
+    return orderShipmentLevel;
+  }
+  public void setOrderShipmentLevel(String orderShipmentLevel) {
+    this.orderShipmentLevel = orderShipmentLevel;
   }
 
   
@@ -312,10 +390,68 @@ public class ShoppingCartConnection   {
   }
 
   
+  /**
+   **/
+  public ShoppingCartConnection fulfillAllItems(Boolean fulfillAllItems) {
+    this.fulfillAllItems = fulfillAllItems;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("fulfillAllItems")
+  public Boolean getFulfillAllItems() {
+    return fulfillAllItems;
+  }
+  public void setFulfillAllItems(Boolean fulfillAllItems) {
+    this.fulfillAllItems = fulfillAllItems;
+  }
+
+  
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("syncInventoryLevelsLastRunTime")
   public Date getSyncInventoryLevelsLastRunTime() {
     return syncInventoryLevelsLastRunTime;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("syncOrdersLastRunTime")
+  public Date getSyncOrdersLastRunTime() {
+    return syncOrdersLastRunTime;
+  }
+
+  
+  /**
+   **/
+  public ShoppingCartConnection inventoryLevelWarehouseControls(String inventoryLevelWarehouseControls) {
+    this.inventoryLevelWarehouseControls = inventoryLevelWarehouseControls;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("inventoryLevelWarehouseControls")
+  public String getInventoryLevelWarehouseControls() {
+    return inventoryLevelWarehouseControls;
+  }
+  public void setInventoryLevelWarehouseControls(String inventoryLevelWarehouseControls) {
+    this.inventoryLevelWarehouseControls = inventoryLevelWarehouseControls;
+  }
+
+  
+  /**
+   **/
+  public ShoppingCartConnection warehouseList(List<Warehouse> warehouseList) {
+    this.warehouseList = warehouseList;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("warehouseList")
+  public List<Warehouse> getWarehouseList() {
+    return warehouseList;
+  }
+  public void setWarehouseList(List<Warehouse> warehouseList) {
+    this.warehouseList = warehouseList;
   }
 
   
@@ -362,16 +498,24 @@ public class ShoppingCartConnection   {
         Objects.equals(this.shoppingCartStoreURL, shoppingCartConnection.shoppingCartStoreURL) &&
         Objects.equals(this.accessCode, shoppingCartConnection.accessCode) &&
         Objects.equals(this.accessToken, shoppingCartConnection.accessToken) &&
+        Objects.equals(this.username, shoppingCartConnection.username) &&
+        Objects.equals(this.password, shoppingCartConnection.password) &&
+        Objects.equals(this.defaultCarrierId, shoppingCartConnection.defaultCarrierId) &&
+        Objects.equals(this.orderShipmentLevel, shoppingCartConnection.orderShipmentLevel) &&
         Objects.equals(this.syncOrders, shoppingCartConnection.syncOrders) &&
         Objects.equals(this.syncInventory, shoppingCartConnection.syncInventory) &&
         Objects.equals(this.syncTrackingData, shoppingCartConnection.syncTrackingData) &&
+        Objects.equals(this.fulfillAllItems, shoppingCartConnection.fulfillAllItems) &&
         Objects.equals(this.syncInventoryLevelsLastRunTime, shoppingCartConnection.syncInventoryLevelsLastRunTime) &&
+        Objects.equals(this.syncOrdersLastRunTime, shoppingCartConnection.syncOrdersLastRunTime) &&
+        Objects.equals(this.inventoryLevelWarehouseControls, shoppingCartConnection.inventoryLevelWarehouseControls) &&
+        Objects.equals(this.warehouseList, shoppingCartConnection.warehouseList) &&
         Objects.equals(this.customFields, shoppingCartConnection.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, name, shoppingCartStoreURL, accessCode, accessToken, syncOrders, syncInventory, syncTrackingData, syncInventoryLevelsLastRunTime, customFields);
+    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, name, shoppingCartStoreURL, accessCode, accessToken, username, password, defaultCarrierId, orderShipmentLevel, syncOrders, syncInventory, syncTrackingData, fulfillAllItems, syncInventoryLevelsLastRunTime, syncOrdersLastRunTime, inventoryLevelWarehouseControls, warehouseList, customFields);
   }
 
   @Override
@@ -395,10 +539,18 @@ public class ShoppingCartConnection   {
     sb.append("    shoppingCartStoreURL: ").append(toIndentedString(shoppingCartStoreURL)).append("\n");
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
+    sb.append("    username: ").append(toIndentedString(username)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    defaultCarrierId: ").append(toIndentedString(defaultCarrierId)).append("\n");
+    sb.append("    orderShipmentLevel: ").append(toIndentedString(orderShipmentLevel)).append("\n");
     sb.append("    syncOrders: ").append(toIndentedString(syncOrders)).append("\n");
     sb.append("    syncInventory: ").append(toIndentedString(syncInventory)).append("\n");
     sb.append("    syncTrackingData: ").append(toIndentedString(syncTrackingData)).append("\n");
+    sb.append("    fulfillAllItems: ").append(toIndentedString(fulfillAllItems)).append("\n");
     sb.append("    syncInventoryLevelsLastRunTime: ").append(toIndentedString(syncInventoryLevelsLastRunTime)).append("\n");
+    sb.append("    syncOrdersLastRunTime: ").append(toIndentedString(syncOrdersLastRunTime)).append("\n");
+    sb.append("    inventoryLevelWarehouseControls: ").append(toIndentedString(inventoryLevelWarehouseControls)).append("\n");
+    sb.append("    warehouseList: ").append(toIndentedString(warehouseList)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class WorkApi {
   private ApiClient apiClient;
 
@@ -34,6 +34,213 @@ public class WorkApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * Add new audit for a work
+   * Adds an audit to an existing work.
+   * @param workId Id of the work to add an audit to (required)
+   * @param workAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addWorkAudit(Integer workId, String workAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'workId' is set
+    if (workId == null) {
+      throw new ApiException(400, "Missing the required parameter 'workId' when calling addWorkAudit");
+    }
+    
+    // verify the required parameter 'workAudit' is set
+    if (workAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'workAudit' when calling addWorkAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/work/{workId}/audit/{workAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "workId" + "\\}", apiClient.escapeString(workId.toString()))
+      .replaceAll("\\{" + "workAudit" + "\\}", apiClient.escapeString(workAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for a work.
+   * Adds a tag to an existing work.
+   * @param workId Id of the work to add a tag to (required)
+   * @param workTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addWorkTag(Integer workId, String workTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'workId' is set
+    if (workId == null) {
+      throw new ApiException(400, "Missing the required parameter 'workId' when calling addWorkTag");
+    }
+    
+    // verify the required parameter 'workTag' is set
+    if (workTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'workTag' when calling addWorkTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/work/{workId}/tag/{workTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "workId" + "\\}", apiClient.escapeString(workId.toString()))
+      .replaceAll("\\{" + "workTag" + "\\}", apiClient.escapeString(workTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Delete a tag for a work.
+   * Deletes an existing work tag using the specified data.
+   * @param workId Id of the work to remove tag from (required)
+   * @param workTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteWorkTag(Integer workId, String workTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'workId' is set
+    if (workId == null) {
+      throw new ApiException(400, "Missing the required parameter 'workId' when calling deleteWorkTag");
+    }
+    
+    // verify the required parameter 'workTag' is set
+    if (workTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'workTag' when calling deleteWorkTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/work/{workId}/tag/{workTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "workId" + "\\}", apiClient.escapeString(workId.toString()))
+      .replaceAll("\\{" + "workTag" + "\\}", apiClient.escapeString(workTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated a work by id
+   * Returns a duplicated work identified by the specified id.
+   * @param workId Id of the work to be duplicated. (required)
+   * @return Work
+   * @throws ApiException if fails to make API call
+   */
+  public Work getDuplicateWorkById(Integer workId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'workId' is set
+    if (workId == null) {
+      throw new ApiException(400, "Missing the required parameter 'workId' when calling getDuplicateWorkById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/work/duplicate/{workId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "workId" + "\\}", apiClient.escapeString(workId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<Work> localVarReturnType = new GenericType<Work>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
   
   /**
    * Search works by filter
@@ -133,6 +340,52 @@ public class WorkApi {
     
     GenericType<Work> localVarReturnType = new GenericType<Work>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Get the tags for a work.
+   * Get all existing work tags.
+   * @param workId Id of the work to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getWorkTags(Integer workId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'workId' is set
+    if (workId == null) {
+      throw new ApiException(400, "Missing the required parameter 'workId' when calling getWorkTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/work/{workId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "workId" + "\\}", apiClient.escapeString(workId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     
   }
   

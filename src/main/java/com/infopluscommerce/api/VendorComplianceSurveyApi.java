@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class VendorComplianceSurveyApi {
   private ApiClient apiClient;
 
@@ -84,6 +84,112 @@ public class VendorComplianceSurveyApi {
   }
   
   /**
+   * Add new audit for a vendorComplianceSurvey
+   * Adds an audit to an existing vendorComplianceSurvey.
+   * @param vendorComplianceSurveyId Id of the vendorComplianceSurvey to add an audit to (required)
+   * @param vendorComplianceSurveyAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addVendorComplianceSurveyAudit(Integer vendorComplianceSurveyId, String vendorComplianceSurveyAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'vendorComplianceSurveyId' is set
+    if (vendorComplianceSurveyId == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyId' when calling addVendorComplianceSurveyAudit");
+    }
+    
+    // verify the required parameter 'vendorComplianceSurveyAudit' is set
+    if (vendorComplianceSurveyAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyAudit' when calling addVendorComplianceSurveyAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/vendorComplianceSurvey/{vendorComplianceSurveyId}/audit/{vendorComplianceSurveyAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "vendorComplianceSurveyId" + "\\}", apiClient.escapeString(vendorComplianceSurveyId.toString()))
+      .replaceAll("\\{" + "vendorComplianceSurveyAudit" + "\\}", apiClient.escapeString(vendorComplianceSurveyAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for a vendorComplianceSurvey.
+   * Adds a tag to an existing vendorComplianceSurvey.
+   * @param vendorComplianceSurveyId Id of the vendorComplianceSurvey to add a tag to (required)
+   * @param vendorComplianceSurveyTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addVendorComplianceSurveyTag(Integer vendorComplianceSurveyId, String vendorComplianceSurveyTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'vendorComplianceSurveyId' is set
+    if (vendorComplianceSurveyId == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyId' when calling addVendorComplianceSurveyTag");
+    }
+    
+    // verify the required parameter 'vendorComplianceSurveyTag' is set
+    if (vendorComplianceSurveyTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyTag' when calling addVendorComplianceSurveyTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/vendorComplianceSurvey/{vendorComplianceSurveyId}/tag/{vendorComplianceSurveyTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "vendorComplianceSurveyId" + "\\}", apiClient.escapeString(vendorComplianceSurveyId.toString()))
+      .replaceAll("\\{" + "vendorComplianceSurveyTag" + "\\}", apiClient.escapeString(vendorComplianceSurveyTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete a vendorComplianceSurvey
    * Deletes the vendorComplianceSurvey identified by the specified id.
    * @param vendorComplianceSurveyId Id of the vendorComplianceSurvey to be deleted. (required)
@@ -126,6 +232,107 @@ public class VendorComplianceSurveyApi {
 
     
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Delete a tag for a vendorComplianceSurvey.
+   * Deletes an existing vendorComplianceSurvey tag using the specified data.
+   * @param vendorComplianceSurveyId Id of the vendorComplianceSurvey to remove tag from (required)
+   * @param vendorComplianceSurveyTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteVendorComplianceSurveyTag(Integer vendorComplianceSurveyId, String vendorComplianceSurveyTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'vendorComplianceSurveyId' is set
+    if (vendorComplianceSurveyId == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyId' when calling deleteVendorComplianceSurveyTag");
+    }
+    
+    // verify the required parameter 'vendorComplianceSurveyTag' is set
+    if (vendorComplianceSurveyTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyTag' when calling deleteVendorComplianceSurveyTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/vendorComplianceSurvey/{vendorComplianceSurveyId}/tag/{vendorComplianceSurveyTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "vendorComplianceSurveyId" + "\\}", apiClient.escapeString(vendorComplianceSurveyId.toString()))
+      .replaceAll("\\{" + "vendorComplianceSurveyTag" + "\\}", apiClient.escapeString(vendorComplianceSurveyTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated a vendorComplianceSurvey by id
+   * Returns a duplicated vendorComplianceSurvey identified by the specified id.
+   * @param vendorComplianceSurveyId Id of the vendorComplianceSurvey to be duplicated. (required)
+   * @return VendorComplianceSurvey
+   * @throws ApiException if fails to make API call
+   */
+  public VendorComplianceSurvey getDuplicateVendorComplianceSurveyById(Integer vendorComplianceSurveyId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'vendorComplianceSurveyId' is set
+    if (vendorComplianceSurveyId == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyId' when calling getDuplicateVendorComplianceSurveyById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/vendorComplianceSurvey/duplicate/{vendorComplianceSurveyId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "vendorComplianceSurveyId" + "\\}", apiClient.escapeString(vendorComplianceSurveyId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<VendorComplianceSurvey> localVarReturnType = new GenericType<VendorComplianceSurvey>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
@@ -227,6 +434,52 @@ public class VendorComplianceSurveyApi {
     
     GenericType<VendorComplianceSurvey> localVarReturnType = new GenericType<VendorComplianceSurvey>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Get the tags for a vendorComplianceSurvey.
+   * Get all existing vendorComplianceSurvey tags.
+   * @param vendorComplianceSurveyId Id of the vendorComplianceSurvey to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getVendorComplianceSurveyTags(Integer vendorComplianceSurveyId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'vendorComplianceSurveyId' is set
+    if (vendorComplianceSurveyId == null) {
+      throw new ApiException(400, "Missing the required parameter 'vendorComplianceSurveyId' when calling getVendorComplianceSurveyTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/vendorComplianceSurvey/{vendorComplianceSurveyId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "vendorComplianceSurveyId" + "\\}", apiClient.escapeString(vendorComplianceSurveyId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     
   }
   

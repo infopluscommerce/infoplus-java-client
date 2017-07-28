@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class ShoppingCartConnectionApi {
   private ApiClient apiClient;
 
@@ -84,6 +84,112 @@ public class ShoppingCartConnectionApi {
   }
   
   /**
+   * Add new audit for a shoppingCartConnection
+   * Adds an audit to an existing shoppingCartConnection.
+   * @param shoppingCartConnectionId Id of the shoppingCartConnection to add an audit to (required)
+   * @param shoppingCartConnectionAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addShoppingCartConnectionAudit(Integer shoppingCartConnectionId, String shoppingCartConnectionAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'shoppingCartConnectionId' is set
+    if (shoppingCartConnectionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling addShoppingCartConnectionAudit");
+    }
+    
+    // verify the required parameter 'shoppingCartConnectionAudit' is set
+    if (shoppingCartConnectionAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionAudit' when calling addShoppingCartConnectionAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/audit/{shoppingCartConnectionAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()))
+      .replaceAll("\\{" + "shoppingCartConnectionAudit" + "\\}", apiClient.escapeString(shoppingCartConnectionAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for a shoppingCartConnection.
+   * Adds a tag to an existing shoppingCartConnection.
+   * @param shoppingCartConnectionId Id of the shoppingCartConnection to add a tag to (required)
+   * @param shoppingCartConnectionTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addShoppingCartConnectionTag(Integer shoppingCartConnectionId, String shoppingCartConnectionTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'shoppingCartConnectionId' is set
+    if (shoppingCartConnectionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling addShoppingCartConnectionTag");
+    }
+    
+    // verify the required parameter 'shoppingCartConnectionTag' is set
+    if (shoppingCartConnectionTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionTag' when calling addShoppingCartConnectionTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/tag/{shoppingCartConnectionTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()))
+      .replaceAll("\\{" + "shoppingCartConnectionTag" + "\\}", apiClient.escapeString(shoppingCartConnectionTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete a shoppingCartConnection
    * Deletes the shoppingCartConnection identified by the specified id.
    * @param shoppingCartConnectionId Id of the shoppingCartConnection to be deleted. (required)
@@ -126,6 +232,107 @@ public class ShoppingCartConnectionApi {
 
     
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Delete a tag for a shoppingCartConnection.
+   * Deletes an existing shoppingCartConnection tag using the specified data.
+   * @param shoppingCartConnectionId Id of the shoppingCartConnection to remove tag from (required)
+   * @param shoppingCartConnectionTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteShoppingCartConnectionTag(Integer shoppingCartConnectionId, String shoppingCartConnectionTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'shoppingCartConnectionId' is set
+    if (shoppingCartConnectionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling deleteShoppingCartConnectionTag");
+    }
+    
+    // verify the required parameter 'shoppingCartConnectionTag' is set
+    if (shoppingCartConnectionTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionTag' when calling deleteShoppingCartConnectionTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/tag/{shoppingCartConnectionTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()))
+      .replaceAll("\\{" + "shoppingCartConnectionTag" + "\\}", apiClient.escapeString(shoppingCartConnectionTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated a shoppingCartConnection by id
+   * Returns a duplicated shoppingCartConnection identified by the specified id.
+   * @param shoppingCartConnectionId Id of the shoppingCartConnection to be duplicated. (required)
+   * @return ShoppingCartConnection
+   * @throws ApiException if fails to make API call
+   */
+  public ShoppingCartConnection getDuplicateShoppingCartConnectionById(Integer shoppingCartConnectionId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'shoppingCartConnectionId' is set
+    if (shoppingCartConnectionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling getDuplicateShoppingCartConnectionById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/shoppingCartConnection/duplicate/{shoppingCartConnectionId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<ShoppingCartConnection> localVarReturnType = new GenericType<ShoppingCartConnection>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
@@ -227,6 +434,52 @@ public class ShoppingCartConnectionApi {
     
     GenericType<ShoppingCartConnection> localVarReturnType = new GenericType<ShoppingCartConnection>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Get the tags for a shoppingCartConnection.
+   * Get all existing shoppingCartConnection tags.
+   * @param shoppingCartConnectionId Id of the shoppingCartConnection to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getShoppingCartConnectionTags(Integer shoppingCartConnectionId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'shoppingCartConnectionId' is set
+    if (shoppingCartConnectionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling getShoppingCartConnectionTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     
   }
   

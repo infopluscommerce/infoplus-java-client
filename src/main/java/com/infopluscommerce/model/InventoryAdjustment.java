@@ -14,12 +14,12 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class InventoryAdjustment   {
   
   private Integer id = null;
-  private Integer lob = null;
-  private Integer skuId = null;
+  private Integer lobId = null;
+  private String sku = null;
   private Integer poNoId = null;
   private Date adjustmentDate = null;
   private String adjustmentTime = null;
@@ -52,35 +52,35 @@ public class InventoryAdjustment   {
   
   /**
    **/
-  public InventoryAdjustment lob(Integer lob) {
-    this.lob = lob;
+  public InventoryAdjustment lobId(Integer lobId) {
+    this.lobId = lobId;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("lob")
-  public Integer getLob() {
-    return lob;
+  @JsonProperty("lobId")
+  public Integer getLobId() {
+    return lobId;
   }
-  public void setLob(Integer lob) {
-    this.lob = lob;
+  public void setLobId(Integer lobId) {
+    this.lobId = lobId;
   }
 
   
   /**
    **/
-  public InventoryAdjustment skuId(Integer skuId) {
-    this.skuId = skuId;
+  public InventoryAdjustment sku(String sku) {
+    this.sku = sku;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("skuId")
-  public Integer getSkuId() {
-    return skuId;
+  @JsonProperty("sku")
+  public String getSku() {
+    return sku;
   }
-  public void setSkuId(Integer skuId) {
-    this.skuId = skuId;
+  public void setSku(String sku) {
+    this.sku = sku;
   }
 
   
@@ -282,8 +282,8 @@ public class InventoryAdjustment   {
     }
     InventoryAdjustment inventoryAdjustment = (InventoryAdjustment) o;
     return Objects.equals(this.id, inventoryAdjustment.id) &&
-        Objects.equals(this.lob, inventoryAdjustment.lob) &&
-        Objects.equals(this.skuId, inventoryAdjustment.skuId) &&
+        Objects.equals(this.lobId, inventoryAdjustment.lobId) &&
+        Objects.equals(this.sku, inventoryAdjustment.sku) &&
         Objects.equals(this.poNoId, inventoryAdjustment.poNoId) &&
         Objects.equals(this.adjustmentDate, inventoryAdjustment.adjustmentDate) &&
         Objects.equals(this.adjustmentTime, inventoryAdjustment.adjustmentTime) &&
@@ -299,7 +299,7 @@ public class InventoryAdjustment   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lob, skuId, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode, customFields);
+    return Objects.hash(id, lobId, sku, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode, customFields);
   }
 
   @Override
@@ -308,8 +308,8 @@ public class InventoryAdjustment   {
     sb.append("class InventoryAdjustment {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    lob: ").append(toIndentedString(lob)).append("\n");
-    sb.append("    skuId: ").append(toIndentedString(skuId)).append("\n");
+    sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
+    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    poNoId: ").append(toIndentedString(poNoId)).append("\n");
     sb.append("    adjustmentDate: ").append(toIndentedString(adjustmentDate)).append("\n");
     sb.append("    adjustmentTime: ").append(toIndentedString(adjustmentTime)).append("\n");

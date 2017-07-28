@@ -12,7 +12,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class ProductionLot   {
   
   private Integer id = null;
@@ -44,7 +44,7 @@ public class ProductionLot   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("productionLot")
   public String getProductionLot() {
     return productionLot;
@@ -61,7 +61,7 @@ public class ProductionLot   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("quantity")
   public Integer getQuantity() {
     return quantity;

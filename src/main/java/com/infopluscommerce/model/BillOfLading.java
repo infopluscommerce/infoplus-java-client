@@ -17,35 +17,42 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class BillOfLading   {
   
   private Integer id = null;
   private Date createDate = null;
   private Date modifyDate = null;
   private Integer lobId = null;
+  private BigDecimal orderNo = null;
   private String bolNo = null;
   private Date bolDate = null;
   private String shipFromName = null;
+  private String shipFromAttention = null;
   private String shipFromAddress = null;
   private String shipFromCity = null;
   private String shipFromState = null;
   private String shipFromZip = null;
+  private String shipFromCountry = null;
   private String sid = null;
   private Boolean isShipFromFOB = false;
   private String shipToName = null;
+  private String shipToAttention = null;
   private String shipToAddress = null;
   private String shipToCity = null;
   private String shipToState = null;
   private String shipToZip = null;
+  private String shipToCountry = null;
   private String shipToLocationNo = null;
   private String cid = null;
   private Boolean isShipToFOB = false;
   private String billToName = null;
+  private String billToAttention = null;
   private String billToAddress = null;
   private String billToCity = null;
   private String billToState = null;
   private String billToZip = null;
+  private String billToCountry = null;
   private Boolean isTrailerLoadedByShipper = false;
   private Boolean byDriver = false;
   private BigDecimal codAmount = null;
@@ -111,6 +118,23 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading orderNo(BigDecimal orderNo) {
+    this.orderNo = orderNo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orderNo")
+  public BigDecimal getOrderNo() {
+    return orderNo;
+  }
+  public void setOrderNo(BigDecimal orderNo) {
+    this.orderNo = orderNo;
+  }
+
+  
+  /**
+   **/
   public BillOfLading bolNo(String bolNo) {
     this.bolNo = bolNo;
     return this;
@@ -157,6 +181,23 @@ public class BillOfLading   {
   }
   public void setShipFromName(String shipFromName) {
     this.shipFromName = shipFromName;
+  }
+
+  
+  /**
+   **/
+  public BillOfLading shipFromAttention(String shipFromAttention) {
+    this.shipFromAttention = shipFromAttention;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("shipFromAttention")
+  public String getShipFromAttention() {
+    return shipFromAttention;
+  }
+  public void setShipFromAttention(String shipFromAttention) {
+    this.shipFromAttention = shipFromAttention;
   }
 
   
@@ -230,6 +271,23 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipFromCountry(String shipFromCountry) {
+    this.shipFromCountry = shipFromCountry;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("shipFromCountry")
+  public String getShipFromCountry() {
+    return shipFromCountry;
+  }
+  public void setShipFromCountry(String shipFromCountry) {
+    this.shipFromCountry = shipFromCountry;
+  }
+
+  
+  /**
+   **/
   public BillOfLading sid(String sid) {
     this.sid = sid;
     return this;
@@ -276,6 +334,23 @@ public class BillOfLading   {
   }
   public void setShipToName(String shipToName) {
     this.shipToName = shipToName;
+  }
+
+  
+  /**
+   **/
+  public BillOfLading shipToAttention(String shipToAttention) {
+    this.shipToAttention = shipToAttention;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("shipToAttention")
+  public String getShipToAttention() {
+    return shipToAttention;
+  }
+  public void setShipToAttention(String shipToAttention) {
+    this.shipToAttention = shipToAttention;
   }
 
   
@@ -349,6 +424,23 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading shipToCountry(String shipToCountry) {
+    this.shipToCountry = shipToCountry;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("shipToCountry")
+  public String getShipToCountry() {
+    return shipToCountry;
+  }
+  public void setShipToCountry(String shipToCountry) {
+    this.shipToCountry = shipToCountry;
+  }
+
+  
+  /**
+   **/
   public BillOfLading shipToLocationNo(String shipToLocationNo) {
     this.shipToLocationNo = shipToLocationNo;
     return this;
@@ -417,6 +509,23 @@ public class BillOfLading   {
   
   /**
    **/
+  public BillOfLading billToAttention(String billToAttention) {
+    this.billToAttention = billToAttention;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("billToAttention")
+  public String getBillToAttention() {
+    return billToAttention;
+  }
+  public void setBillToAttention(String billToAttention) {
+    this.billToAttention = billToAttention;
+  }
+
+  
+  /**
+   **/
   public BillOfLading billToAddress(String billToAddress) {
     this.billToAddress = billToAddress;
     return this;
@@ -480,6 +589,23 @@ public class BillOfLading   {
   }
   public void setBillToZip(String billToZip) {
     this.billToZip = billToZip;
+  }
+
+  
+  /**
+   **/
+  public BillOfLading billToCountry(String billToCountry) {
+    this.billToCountry = billToCountry;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("billToCountry")
+  public String getBillToCountry() {
+    return billToCountry;
+  }
+  public void setBillToCountry(String billToCountry) {
+    this.billToCountry = billToCountry;
   }
 
   
@@ -888,28 +1014,35 @@ public class BillOfLading   {
         Objects.equals(this.createDate, billOfLading.createDate) &&
         Objects.equals(this.modifyDate, billOfLading.modifyDate) &&
         Objects.equals(this.lobId, billOfLading.lobId) &&
+        Objects.equals(this.orderNo, billOfLading.orderNo) &&
         Objects.equals(this.bolNo, billOfLading.bolNo) &&
         Objects.equals(this.bolDate, billOfLading.bolDate) &&
         Objects.equals(this.shipFromName, billOfLading.shipFromName) &&
+        Objects.equals(this.shipFromAttention, billOfLading.shipFromAttention) &&
         Objects.equals(this.shipFromAddress, billOfLading.shipFromAddress) &&
         Objects.equals(this.shipFromCity, billOfLading.shipFromCity) &&
         Objects.equals(this.shipFromState, billOfLading.shipFromState) &&
         Objects.equals(this.shipFromZip, billOfLading.shipFromZip) &&
+        Objects.equals(this.shipFromCountry, billOfLading.shipFromCountry) &&
         Objects.equals(this.sid, billOfLading.sid) &&
         Objects.equals(this.isShipFromFOB, billOfLading.isShipFromFOB) &&
         Objects.equals(this.shipToName, billOfLading.shipToName) &&
+        Objects.equals(this.shipToAttention, billOfLading.shipToAttention) &&
         Objects.equals(this.shipToAddress, billOfLading.shipToAddress) &&
         Objects.equals(this.shipToCity, billOfLading.shipToCity) &&
         Objects.equals(this.shipToState, billOfLading.shipToState) &&
         Objects.equals(this.shipToZip, billOfLading.shipToZip) &&
+        Objects.equals(this.shipToCountry, billOfLading.shipToCountry) &&
         Objects.equals(this.shipToLocationNo, billOfLading.shipToLocationNo) &&
         Objects.equals(this.cid, billOfLading.cid) &&
         Objects.equals(this.isShipToFOB, billOfLading.isShipToFOB) &&
         Objects.equals(this.billToName, billOfLading.billToName) &&
+        Objects.equals(this.billToAttention, billOfLading.billToAttention) &&
         Objects.equals(this.billToAddress, billOfLading.billToAddress) &&
         Objects.equals(this.billToCity, billOfLading.billToCity) &&
         Objects.equals(this.billToState, billOfLading.billToState) &&
         Objects.equals(this.billToZip, billOfLading.billToZip) &&
+        Objects.equals(this.billToCountry, billOfLading.billToCountry) &&
         Objects.equals(this.isTrailerLoadedByShipper, billOfLading.isTrailerLoadedByShipper) &&
         Objects.equals(this.byDriver, billOfLading.byDriver) &&
         Objects.equals(this.codAmount, billOfLading.codAmount) &&
@@ -937,7 +1070,7 @@ public class BillOfLading   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, bolNo, bolDate, shipFromName, shipFromAddress, shipFromCity, shipFromState, shipFromZip, sid, isShipFromFOB, shipToName, shipToAddress, shipToCity, shipToState, shipToZip, shipToLocationNo, cid, isShipToFOB, billToName, billToAddress, billToCity, billToState, billToZip, isTrailerLoadedByShipper, byDriver, codAmount, feeTermsCollect, feeTermsPrepaid, customerCheckAcceptable, carrierName, trailerNo, sealNo, scac, proNo, prepaid, collect, thirdParty, isThisAMasterBOL, masterBOLId, isFreightCountedByShipper, byDriverPallets, byDriverPieces, specialInstructions, orderInfoLines, carrierInfoLines, customFields);
+    return Objects.hash(id, createDate, modifyDate, lobId, orderNo, bolNo, bolDate, shipFromName, shipFromAttention, shipFromAddress, shipFromCity, shipFromState, shipFromZip, shipFromCountry, sid, isShipFromFOB, shipToName, shipToAttention, shipToAddress, shipToCity, shipToState, shipToZip, shipToCountry, shipToLocationNo, cid, isShipToFOB, billToName, billToAttention, billToAddress, billToCity, billToState, billToZip, billToCountry, isTrailerLoadedByShipper, byDriver, codAmount, feeTermsCollect, feeTermsPrepaid, customerCheckAcceptable, carrierName, trailerNo, sealNo, scac, proNo, prepaid, collect, thirdParty, isThisAMasterBOL, masterBOLId, isFreightCountedByShipper, byDriverPallets, byDriverPieces, specialInstructions, orderInfoLines, carrierInfoLines, customFields);
   }
 
   @Override
@@ -949,28 +1082,35 @@ public class BillOfLading   {
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
+    sb.append("    orderNo: ").append(toIndentedString(orderNo)).append("\n");
     sb.append("    bolNo: ").append(toIndentedString(bolNo)).append("\n");
     sb.append("    bolDate: ").append(toIndentedString(bolDate)).append("\n");
     sb.append("    shipFromName: ").append(toIndentedString(shipFromName)).append("\n");
+    sb.append("    shipFromAttention: ").append(toIndentedString(shipFromAttention)).append("\n");
     sb.append("    shipFromAddress: ").append(toIndentedString(shipFromAddress)).append("\n");
     sb.append("    shipFromCity: ").append(toIndentedString(shipFromCity)).append("\n");
     sb.append("    shipFromState: ").append(toIndentedString(shipFromState)).append("\n");
     sb.append("    shipFromZip: ").append(toIndentedString(shipFromZip)).append("\n");
+    sb.append("    shipFromCountry: ").append(toIndentedString(shipFromCountry)).append("\n");
     sb.append("    sid: ").append(toIndentedString(sid)).append("\n");
     sb.append("    isShipFromFOB: ").append(toIndentedString(isShipFromFOB)).append("\n");
     sb.append("    shipToName: ").append(toIndentedString(shipToName)).append("\n");
+    sb.append("    shipToAttention: ").append(toIndentedString(shipToAttention)).append("\n");
     sb.append("    shipToAddress: ").append(toIndentedString(shipToAddress)).append("\n");
     sb.append("    shipToCity: ").append(toIndentedString(shipToCity)).append("\n");
     sb.append("    shipToState: ").append(toIndentedString(shipToState)).append("\n");
     sb.append("    shipToZip: ").append(toIndentedString(shipToZip)).append("\n");
+    sb.append("    shipToCountry: ").append(toIndentedString(shipToCountry)).append("\n");
     sb.append("    shipToLocationNo: ").append(toIndentedString(shipToLocationNo)).append("\n");
     sb.append("    cid: ").append(toIndentedString(cid)).append("\n");
     sb.append("    isShipToFOB: ").append(toIndentedString(isShipToFOB)).append("\n");
     sb.append("    billToName: ").append(toIndentedString(billToName)).append("\n");
+    sb.append("    billToAttention: ").append(toIndentedString(billToAttention)).append("\n");
     sb.append("    billToAddress: ").append(toIndentedString(billToAddress)).append("\n");
     sb.append("    billToCity: ").append(toIndentedString(billToCity)).append("\n");
     sb.append("    billToState: ").append(toIndentedString(billToState)).append("\n");
     sb.append("    billToZip: ").append(toIndentedString(billToZip)).append("\n");
+    sb.append("    billToCountry: ").append(toIndentedString(billToCountry)).append("\n");
     sb.append("    isTrailerLoadedByShipper: ").append(toIndentedString(isTrailerLoadedByShipper)).append("\n");
     sb.append("    byDriver: ").append(toIndentedString(byDriver)).append("\n");
     sb.append("    codAmount: ").append(toIndentedString(codAmount)).append("\n");

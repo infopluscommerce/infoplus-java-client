@@ -14,13 +14,13 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class CartonContent   {
   
   private Integer id = null;
   private BigDecimal groupOrderId = null;
   private BigDecimal orderNo = null;
-  private Integer cartonNoId = null;
+  private Integer cartonId = null;
   private Integer lineItemId = null;
   private String location = null;
   private Integer quantity = null;
@@ -75,18 +75,18 @@ public class CartonContent   {
   
   /**
    **/
-  public CartonContent cartonNoId(Integer cartonNoId) {
-    this.cartonNoId = cartonNoId;
+  public CartonContent cartonId(Integer cartonId) {
+    this.cartonId = cartonId;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("cartonNoId")
-  public Integer getCartonNoId() {
-    return cartonNoId;
+  @JsonProperty("cartonId")
+  public Integer getCartonId() {
+    return cartonId;
   }
-  public void setCartonNoId(Integer cartonNoId) {
-    this.cartonNoId = cartonNoId;
+  public void setCartonId(Integer cartonId) {
+    this.cartonId = cartonId;
   }
 
   
@@ -256,7 +256,7 @@ public class CartonContent   {
     return Objects.equals(this.id, cartonContent.id) &&
         Objects.equals(this.groupOrderId, cartonContent.groupOrderId) &&
         Objects.equals(this.orderNo, cartonContent.orderNo) &&
-        Objects.equals(this.cartonNoId, cartonContent.cartonNoId) &&
+        Objects.equals(this.cartonId, cartonContent.cartonId) &&
         Objects.equals(this.lineItemId, cartonContent.lineItemId) &&
         Objects.equals(this.location, cartonContent.location) &&
         Objects.equals(this.quantity, cartonContent.quantity) &&
@@ -270,7 +270,7 @@ public class CartonContent   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, groupOrderId, orderNo, cartonNoId, lineItemId, location, quantity, quantityScanned, completed, toteId, pickerId, status, customFields);
+    return Objects.hash(id, groupOrderId, orderNo, cartonId, lineItemId, location, quantity, quantityScanned, completed, toteId, pickerId, status, customFields);
   }
 
   @Override
@@ -281,7 +281,7 @@ public class CartonContent   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    groupOrderId: ").append(toIndentedString(groupOrderId)).append("\n");
     sb.append("    orderNo: ").append(toIndentedString(orderNo)).append("\n");
-    sb.append("    cartonNoId: ").append(toIndentedString(cartonNoId)).append("\n");
+    sb.append("    cartonId: ").append(toIndentedString(cartonId)).append("\n");
     sb.append("    lineItemId: ").append(toIndentedString(lineItemId)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");

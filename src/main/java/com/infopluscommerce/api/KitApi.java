@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class KitApi {
   private ApiClient apiClient;
 
@@ -84,6 +84,112 @@ public class KitApi {
   }
   
   /**
+   * Add new audit for a kit
+   * Adds an audit to an existing kit.
+   * @param kitId Id of the kit to add an audit to (required)
+   * @param kitAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addKitAudit(Integer kitId, String kitAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'kitId' is set
+    if (kitId == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitId' when calling addKitAudit");
+    }
+    
+    // verify the required parameter 'kitAudit' is set
+    if (kitAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitAudit' when calling addKitAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/kit/{kitId}/audit/{kitAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "kitId" + "\\}", apiClient.escapeString(kitId.toString()))
+      .replaceAll("\\{" + "kitAudit" + "\\}", apiClient.escapeString(kitAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for a kit.
+   * Adds a tag to an existing kit.
+   * @param kitId Id of the kit to add a tag to (required)
+   * @param kitTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addKitTag(Integer kitId, String kitTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'kitId' is set
+    if (kitId == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitId' when calling addKitTag");
+    }
+    
+    // verify the required parameter 'kitTag' is set
+    if (kitTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitTag' when calling addKitTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/kit/{kitId}/tag/{kitTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "kitId" + "\\}", apiClient.escapeString(kitId.toString()))
+      .replaceAll("\\{" + "kitTag" + "\\}", apiClient.escapeString(kitTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete a kit
    * Deletes the kit identified by the specified id.
    * @param kitId Id of the kit to be deleted. (required)
@@ -126,6 +232,107 @@ public class KitApi {
 
     
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Delete a tag for a kit.
+   * Deletes an existing kit tag using the specified data.
+   * @param kitId Id of the kit to remove tag from (required)
+   * @param kitTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteKitTag(Integer kitId, String kitTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'kitId' is set
+    if (kitId == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitId' when calling deleteKitTag");
+    }
+    
+    // verify the required parameter 'kitTag' is set
+    if (kitTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitTag' when calling deleteKitTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/kit/{kitId}/tag/{kitTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "kitId" + "\\}", apiClient.escapeString(kitId.toString()))
+      .replaceAll("\\{" + "kitTag" + "\\}", apiClient.escapeString(kitTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated a kit by id
+   * Returns a duplicated kit identified by the specified id.
+   * @param kitId Id of the kit to be duplicated. (required)
+   * @return Kit
+   * @throws ApiException if fails to make API call
+   */
+  public Kit getDuplicateKitById(Integer kitId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'kitId' is set
+    if (kitId == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitId' when calling getDuplicateKitById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/kit/duplicate/{kitId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "kitId" + "\\}", apiClient.escapeString(kitId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<Kit> localVarReturnType = new GenericType<Kit>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
@@ -227,6 +434,52 @@ public class KitApi {
     
     GenericType<Kit> localVarReturnType = new GenericType<Kit>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Get the tags for a kit.
+   * Get all existing kit tags.
+   * @param kitId Id of the kit to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getKitTags(Integer kitId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'kitId' is set
+    if (kitId == null) {
+      throw new ApiException(400, "Missing the required parameter 'kitId' when calling getKitTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/kit/{kitId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "kitId" + "\\}", apiClient.escapeString(kitId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     
   }
   

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class SubstitutionApi {
   private ApiClient apiClient;
 
@@ -84,6 +84,112 @@ public class SubstitutionApi {
   }
   
   /**
+   * Add new audit for a substitution
+   * Adds an audit to an existing substitution.
+   * @param substitutionId Id of the substitution to add an audit to (required)
+   * @param substitutionAudit The audit to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addSubstitutionAudit(Integer substitutionId, String substitutionAudit) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'substitutionId' is set
+    if (substitutionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionId' when calling addSubstitutionAudit");
+    }
+    
+    // verify the required parameter 'substitutionAudit' is set
+    if (substitutionAudit == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionAudit' when calling addSubstitutionAudit");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/substitution/{substitutionId}/audit/{substitutionAudit}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "substitutionId" + "\\}", apiClient.escapeString(substitutionId.toString()))
+      .replaceAll("\\{" + "substitutionAudit" + "\\}", apiClient.escapeString(substitutionAudit.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Add new tags for a substitution.
+   * Adds a tag to an existing substitution.
+   * @param substitutionId Id of the substitution to add a tag to (required)
+   * @param substitutionTag The tag to add (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void addSubstitutionTag(Integer substitutionId, String substitutionTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'substitutionId' is set
+    if (substitutionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionId' when calling addSubstitutionTag");
+    }
+    
+    // verify the required parameter 'substitutionTag' is set
+    if (substitutionTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionTag' when calling addSubstitutionTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/substitution/{substitutionId}/tag/{substitutionTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "substitutionId" + "\\}", apiClient.escapeString(substitutionId.toString()))
+      .replaceAll("\\{" + "substitutionTag" + "\\}", apiClient.escapeString(substitutionTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
    * Delete a substitution
    * Deletes the substitution identified by the specified id.
    * @param substitutionId Id of the substitution to be deleted. (required)
@@ -126,6 +232,107 @@ public class SubstitutionApi {
 
     
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Delete a tag for a substitution.
+   * Deletes an existing substitution tag using the specified data.
+   * @param substitutionId Id of the substitution to remove tag from (required)
+   * @param substitutionTag The tag to delete (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteSubstitutionTag(Integer substitutionId, String substitutionTag) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'substitutionId' is set
+    if (substitutionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionId' when calling deleteSubstitutionTag");
+    }
+    
+    // verify the required parameter 'substitutionTag' is set
+    if (substitutionTag == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionTag' when calling deleteSubstitutionTag");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/substitution/{substitutionId}/tag/{substitutionTag}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "substitutionId" + "\\}", apiClient.escapeString(substitutionId.toString()))
+      .replaceAll("\\{" + "substitutionTag" + "\\}", apiClient.escapeString(substitutionTag.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Get a duplicated a substitution by id
+   * Returns a duplicated substitution identified by the specified id.
+   * @param substitutionId Id of the substitution to be duplicated. (required)
+   * @return Substitution
+   * @throws ApiException if fails to make API call
+   */
+  public Substitution getDuplicateSubstitutionById(Integer substitutionId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'substitutionId' is set
+    if (substitutionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionId' when calling getDuplicateSubstitutionById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/substitution/duplicate/{substitutionId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "substitutionId" + "\\}", apiClient.escapeString(substitutionId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<Substitution> localVarReturnType = new GenericType<Substitution>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
@@ -227,6 +434,52 @@ public class SubstitutionApi {
     
     GenericType<Substitution> localVarReturnType = new GenericType<Substitution>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    
+  }
+  
+  /**
+   * Get the tags for a substitution.
+   * Get all existing substitution tags.
+   * @param substitutionId Id of the substitution to get tags for (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getSubstitutionTags(Integer substitutionId) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'substitutionId' is set
+    if (substitutionId == null) {
+      throw new ApiException(400, "Missing the required parameter 'substitutionId' when calling getSubstitutionTags");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/substitution/{substitutionId}/tag".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "substitutionId" + "\\}", apiClient.escapeString(substitutionId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     
   }
   

@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class CartonType   {
   
   private Integer id = null;
@@ -28,6 +28,7 @@ public class CartonType   {
   private BigDecimal weightLbs = null;
   private Integer lobId = null;
   private Boolean isActive = false;
+  private Integer predefinedPackageTypeId = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -227,6 +228,23 @@ public class CartonType   {
   
   /**
    **/
+  public CartonType predefinedPackageTypeId(Integer predefinedPackageTypeId) {
+    this.predefinedPackageTypeId = predefinedPackageTypeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("predefinedPackageTypeId")
+  public Integer getPredefinedPackageTypeId() {
+    return predefinedPackageTypeId;
+  }
+  public void setPredefinedPackageTypeId(Integer predefinedPackageTypeId) {
+    this.predefinedPackageTypeId = predefinedPackageTypeId;
+  }
+
+  
+  /**
+   **/
   public CartonType customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -264,12 +282,13 @@ public class CartonType   {
         Objects.equals(this.weightLbs, cartonType.weightLbs) &&
         Objects.equals(this.lobId, cartonType.lobId) &&
         Objects.equals(this.isActive, cartonType.isActive) &&
+        Objects.equals(this.predefinedPackageTypeId, cartonType.predefinedPackageTypeId) &&
         Objects.equals(this.customFields, cartonType.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, abbreviation, name, lengthIn, widthIn, heightIn, innerLengthIn, innerWidthIn, innerHeightIn, weightLbs, lobId, isActive, customFields);
+    return Objects.hash(id, abbreviation, name, lengthIn, widthIn, heightIn, innerLengthIn, innerWidthIn, innerHeightIn, weightLbs, lobId, isActive, predefinedPackageTypeId, customFields);
   }
 
   @Override
@@ -289,6 +308,7 @@ public class CartonType   {
     sb.append("    weightLbs: ").append(toIndentedString(weightLbs)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
+    sb.append("    predefinedPackageTypeId: ").append(toIndentedString(predefinedPackageTypeId)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

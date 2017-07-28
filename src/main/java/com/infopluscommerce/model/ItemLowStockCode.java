@@ -4,29 +4,96 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
-public class ItemLowStockCode   {
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+public class ItemLowstockCode   {
   
-  private Integer id = null;
-  private String label = null;
+  private Integer lobId = null;
+  private Integer internalId = null;
+  private String id = null;
+  private String name = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
+  
+  /**
+   **/
+  public ItemLowstockCode lobId(Integer lobId) {
+    this.lobId = lobId;
+    return this;
+  }
   
   @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("id")
-  public Integer getId() {
-    return id;
+  @JsonProperty("lobId")
+  public Integer getLobId() {
+    return lobId;
+  }
+  public void setLobId(Integer lobId) {
+    this.lobId = lobId;
   }
 
   
-  @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("label")
-  public String getLabel() {
-    return label;
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("internalId")
+  public Integer getInternalId() {
+    return internalId;
+  }
+
+  
+  /**
+   **/
+  public ItemLowstockCode id(String id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("id")
+  public String getId() {
+    return id;
+  }
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  
+  /**
+   **/
+  public ItemLowstockCode name(String name) {
+    this.name = name;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("name")
+  public String getName() {
+    return name;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  
+  /**
+   **/
+  public ItemLowstockCode customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -39,23 +106,29 @@ public class ItemLowStockCode   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ItemLowStockCode itemLowStockCode = (ItemLowStockCode) o;
-    return Objects.equals(this.id, itemLowStockCode.id) &&
-        Objects.equals(this.label, itemLowStockCode.label);
+    ItemLowstockCode itemLowstockCode = (ItemLowstockCode) o;
+    return Objects.equals(this.lobId, itemLowstockCode.lobId) &&
+        Objects.equals(this.internalId, itemLowstockCode.internalId) &&
+        Objects.equals(this.id, itemLowstockCode.id) &&
+        Objects.equals(this.name, itemLowstockCode.name) &&
+        Objects.equals(this.customFields, itemLowstockCode.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, label);
+    return Objects.hash(lobId, internalId, id, name, customFields);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ItemLowStockCode {\n");
+    sb.append("class ItemLowstockCode {\n");
     
+    sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
+    sb.append("    internalId: ").append(toIndentedString(internalId)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

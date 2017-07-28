@@ -2,8 +2,10 @@ package com.infopluscommerce.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.infopluscommerce.model.KitComponent;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -13,12 +15,12 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class Kit   {
   
   private Integer lobId = null;
   private Integer id = null;
-  private Integer kitSKUId = null;
+  private String kitSKU = null;
   private String packagingType = null;
   private String other = null;
   private Integer numberOfComponents = null;
@@ -38,6 +40,7 @@ public class Kit   {
   private Integer maxInvQty = null;
   private String isKOD = null;
   private String kodType = null;
+  private List<KitComponent> kitComponentList = new ArrayList<KitComponent>();
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -67,18 +70,18 @@ public class Kit   {
   
   /**
    **/
-  public Kit kitSKUId(Integer kitSKUId) {
-    this.kitSKUId = kitSKUId;
+  public Kit kitSKU(String kitSKU) {
+    this.kitSKU = kitSKU;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "")
-  @JsonProperty("kitSKUId")
-  public Integer getKitSKUId() {
-    return kitSKUId;
+  @JsonProperty("kitSKU")
+  public String getKitSKU() {
+    return kitSKU;
   }
-  public void setKitSKUId(Integer kitSKUId) {
-    this.kitSKUId = kitSKUId;
+  public void setKitSKU(String kitSKU) {
+    this.kitSKU = kitSKU;
   }
 
   
@@ -397,6 +400,23 @@ public class Kit   {
   
   /**
    **/
+  public Kit kitComponentList(List<KitComponent> kitComponentList) {
+    this.kitComponentList = kitComponentList;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("kitComponentList")
+  public List<KitComponent> getKitComponentList() {
+    return kitComponentList;
+  }
+  public void setKitComponentList(List<KitComponent> kitComponentList) {
+    this.kitComponentList = kitComponentList;
+  }
+
+  
+  /**
+   **/
   public Kit customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -424,7 +444,7 @@ public class Kit   {
     Kit kit = (Kit) o;
     return Objects.equals(this.lobId, kit.lobId) &&
         Objects.equals(this.id, kit.id) &&
-        Objects.equals(this.kitSKUId, kit.kitSKUId) &&
+        Objects.equals(this.kitSKU, kit.kitSKU) &&
         Objects.equals(this.packagingType, kit.packagingType) &&
         Objects.equals(this.other, kit.other) &&
         Objects.equals(this.numberOfComponents, kit.numberOfComponents) &&
@@ -444,12 +464,13 @@ public class Kit   {
         Objects.equals(this.maxInvQty, kit.maxInvQty) &&
         Objects.equals(this.isKOD, kit.isKOD) &&
         Objects.equals(this.kodType, kit.kodType) &&
+        Objects.equals(this.kitComponentList, kit.kitComponentList) &&
         Objects.equals(this.customFields, kit.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(lobId, id, kitSKUId, packagingType, other, numberOfComponents, createDate, modifyDate, line1, line2, line3, line4, line5, line6, line7, line8, touches, minInvQty, midInvQty, maxInvQty, isKOD, kodType, customFields);
+    return Objects.hash(lobId, id, kitSKU, packagingType, other, numberOfComponents, createDate, modifyDate, line1, line2, line3, line4, line5, line6, line7, line8, touches, minInvQty, midInvQty, maxInvQty, isKOD, kodType, kitComponentList, customFields);
   }
 
   @Override
@@ -459,7 +480,7 @@ public class Kit   {
     
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    kitSKUId: ").append(toIndentedString(kitSKUId)).append("\n");
+    sb.append("    kitSKU: ").append(toIndentedString(kitSKU)).append("\n");
     sb.append("    packagingType: ").append(toIndentedString(packagingType)).append("\n");
     sb.append("    other: ").append(toIndentedString(other)).append("\n");
     sb.append("    numberOfComponents: ").append(toIndentedString(numberOfComponents)).append("\n");
@@ -479,6 +500,7 @@ public class Kit   {
     sb.append("    maxInvQty: ").append(toIndentedString(maxInvQty)).append("\n");
     sb.append("    isKOD: ").append(toIndentedString(isKOD)).append("\n");
     sb.append("    kodType: ").append(toIndentedString(kodType)).append("\n");
+    sb.append("    kitComponentList: ").append(toIndentedString(kitComponentList)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

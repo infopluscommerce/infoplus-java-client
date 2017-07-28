@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-08-04T22:56:01.104-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
 public class Item   {
   
   private Integer id = null;
@@ -78,7 +78,39 @@ public class Item   {
   private String storageItemMixingRule = null;
   private String allocationRule = null;
   private String barcodeField = null;
+  private String warehouseDisplayField = null;
+  private Integer productIdTagSchemeId = null;
   private String hazmat = null;
+  private Boolean isAlcohol = false;
+  private String alcoholType = null;
+  private BigDecimal alcoholContent = null;
+  private String alcoholContainer = null;
+  private String alcoholVintageYear = null;
+  private String alcoholCountry = null;
+  private String alcoholState = null;
+  private String alcoholRegion = null;
+  private String alcoholBrand = null;
+  private String alcoholUPCCode = null;
+  private String alcoholNAMBCACode = null;
+  private String alcoholUNIMERCCode = null;
+  private String alcoholSCCCode = null;
+  private BigDecimal length = null;
+  private BigDecimal width = null;
+  private BigDecimal height = null;
+  private Boolean topUp = false;
+  private Boolean shipSolo = false;
+  private Date inventoryUpdateTimestamp = null;
+  private Integer availableQuantity = null;
+  private Integer damagedQuantity = null;
+  private Integer inFulfillmentProcessQuantity = null;
+  private Integer onHandQuantity = null;
+  private Integer openOrderQuantity = null;
+  private Integer openPOQuantity = null;
+  private Integer orderableQuantity = null;
+  private Integer unallocatableQuantity = null;
+  private Integer unavailableQuantity = null;
+  private Integer overallDaysOnHand = null;
+  private String overallStockStatus = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -1081,6 +1113,40 @@ public class Item   {
   
   /**
    **/
+  public Item warehouseDisplayField(String warehouseDisplayField) {
+    this.warehouseDisplayField = warehouseDisplayField;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("warehouseDisplayField")
+  public String getWarehouseDisplayField() {
+    return warehouseDisplayField;
+  }
+  public void setWarehouseDisplayField(String warehouseDisplayField) {
+    this.warehouseDisplayField = warehouseDisplayField;
+  }
+
+  
+  /**
+   **/
+  public Item productIdTagSchemeId(Integer productIdTagSchemeId) {
+    this.productIdTagSchemeId = productIdTagSchemeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("productIdTagSchemeId")
+  public Integer getProductIdTagSchemeId() {
+    return productIdTagSchemeId;
+  }
+  public void setProductIdTagSchemeId(Integer productIdTagSchemeId) {
+    this.productIdTagSchemeId = productIdTagSchemeId;
+  }
+
+  
+  /**
+   **/
   public Item hazmat(String hazmat) {
     this.hazmat = hazmat;
     return this;
@@ -1093,6 +1159,396 @@ public class Item   {
   }
   public void setHazmat(String hazmat) {
     this.hazmat = hazmat;
+  }
+
+  
+  /**
+   **/
+  public Item isAlcohol(Boolean isAlcohol) {
+    this.isAlcohol = isAlcohol;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("isAlcohol")
+  public Boolean getIsAlcohol() {
+    return isAlcohol;
+  }
+  public void setIsAlcohol(Boolean isAlcohol) {
+    this.isAlcohol = isAlcohol;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholType(String alcoholType) {
+    this.alcoholType = alcoholType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholType")
+  public String getAlcoholType() {
+    return alcoholType;
+  }
+  public void setAlcoholType(String alcoholType) {
+    this.alcoholType = alcoholType;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholContent(BigDecimal alcoholContent) {
+    this.alcoholContent = alcoholContent;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholContent")
+  public BigDecimal getAlcoholContent() {
+    return alcoholContent;
+  }
+  public void setAlcoholContent(BigDecimal alcoholContent) {
+    this.alcoholContent = alcoholContent;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholContainer(String alcoholContainer) {
+    this.alcoholContainer = alcoholContainer;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholContainer")
+  public String getAlcoholContainer() {
+    return alcoholContainer;
+  }
+  public void setAlcoholContainer(String alcoholContainer) {
+    this.alcoholContainer = alcoholContainer;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholVintageYear(String alcoholVintageYear) {
+    this.alcoholVintageYear = alcoholVintageYear;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholVintageYear")
+  public String getAlcoholVintageYear() {
+    return alcoholVintageYear;
+  }
+  public void setAlcoholVintageYear(String alcoholVintageYear) {
+    this.alcoholVintageYear = alcoholVintageYear;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholCountry(String alcoholCountry) {
+    this.alcoholCountry = alcoholCountry;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholCountry")
+  public String getAlcoholCountry() {
+    return alcoholCountry;
+  }
+  public void setAlcoholCountry(String alcoholCountry) {
+    this.alcoholCountry = alcoholCountry;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholState(String alcoholState) {
+    this.alcoholState = alcoholState;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholState")
+  public String getAlcoholState() {
+    return alcoholState;
+  }
+  public void setAlcoholState(String alcoholState) {
+    this.alcoholState = alcoholState;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholRegion(String alcoholRegion) {
+    this.alcoholRegion = alcoholRegion;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholRegion")
+  public String getAlcoholRegion() {
+    return alcoholRegion;
+  }
+  public void setAlcoholRegion(String alcoholRegion) {
+    this.alcoholRegion = alcoholRegion;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholBrand(String alcoholBrand) {
+    this.alcoholBrand = alcoholBrand;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholBrand")
+  public String getAlcoholBrand() {
+    return alcoholBrand;
+  }
+  public void setAlcoholBrand(String alcoholBrand) {
+    this.alcoholBrand = alcoholBrand;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholUPCCode(String alcoholUPCCode) {
+    this.alcoholUPCCode = alcoholUPCCode;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholUPCCode")
+  public String getAlcoholUPCCode() {
+    return alcoholUPCCode;
+  }
+  public void setAlcoholUPCCode(String alcoholUPCCode) {
+    this.alcoholUPCCode = alcoholUPCCode;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholNAMBCACode(String alcoholNAMBCACode) {
+    this.alcoholNAMBCACode = alcoholNAMBCACode;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholNAMBCACode")
+  public String getAlcoholNAMBCACode() {
+    return alcoholNAMBCACode;
+  }
+  public void setAlcoholNAMBCACode(String alcoholNAMBCACode) {
+    this.alcoholNAMBCACode = alcoholNAMBCACode;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholUNIMERCCode(String alcoholUNIMERCCode) {
+    this.alcoholUNIMERCCode = alcoholUNIMERCCode;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholUNIMERCCode")
+  public String getAlcoholUNIMERCCode() {
+    return alcoholUNIMERCCode;
+  }
+  public void setAlcoholUNIMERCCode(String alcoholUNIMERCCode) {
+    this.alcoholUNIMERCCode = alcoholUNIMERCCode;
+  }
+
+  
+  /**
+   **/
+  public Item alcoholSCCCode(String alcoholSCCCode) {
+    this.alcoholSCCCode = alcoholSCCCode;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("alcoholSCCCode")
+  public String getAlcoholSCCCode() {
+    return alcoholSCCCode;
+  }
+  public void setAlcoholSCCCode(String alcoholSCCCode) {
+    this.alcoholSCCCode = alcoholSCCCode;
+  }
+
+  
+  /**
+   **/
+  public Item length(BigDecimal length) {
+    this.length = length;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("length")
+  public BigDecimal getLength() {
+    return length;
+  }
+  public void setLength(BigDecimal length) {
+    this.length = length;
+  }
+
+  
+  /**
+   **/
+  public Item width(BigDecimal width) {
+    this.width = width;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("width")
+  public BigDecimal getWidth() {
+    return width;
+  }
+  public void setWidth(BigDecimal width) {
+    this.width = width;
+  }
+
+  
+  /**
+   **/
+  public Item height(BigDecimal height) {
+    this.height = height;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("height")
+  public BigDecimal getHeight() {
+    return height;
+  }
+  public void setHeight(BigDecimal height) {
+    this.height = height;
+  }
+
+  
+  /**
+   **/
+  public Item topUp(Boolean topUp) {
+    this.topUp = topUp;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("topUp")
+  public Boolean getTopUp() {
+    return topUp;
+  }
+  public void setTopUp(Boolean topUp) {
+    this.topUp = topUp;
+  }
+
+  
+  /**
+   **/
+  public Item shipSolo(Boolean shipSolo) {
+    this.shipSolo = shipSolo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("shipSolo")
+  public Boolean getShipSolo() {
+    return shipSolo;
+  }
+  public void setShipSolo(Boolean shipSolo) {
+    this.shipSolo = shipSolo;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("inventoryUpdateTimestamp")
+  public Date getInventoryUpdateTimestamp() {
+    return inventoryUpdateTimestamp;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("availableQuantity")
+  public Integer getAvailableQuantity() {
+    return availableQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("damagedQuantity")
+  public Integer getDamagedQuantity() {
+    return damagedQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("inFulfillmentProcessQuantity")
+  public Integer getInFulfillmentProcessQuantity() {
+    return inFulfillmentProcessQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("onHandQuantity")
+  public Integer getOnHandQuantity() {
+    return onHandQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("openOrderQuantity")
+  public Integer getOpenOrderQuantity() {
+    return openOrderQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("openPOQuantity")
+  public Integer getOpenPOQuantity() {
+    return openPOQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orderableQuantity")
+  public Integer getOrderableQuantity() {
+    return orderableQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("unallocatableQuantity")
+  public Integer getUnallocatableQuantity() {
+    return unallocatableQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("unavailableQuantity")
+  public Integer getUnavailableQuantity() {
+    return unavailableQuantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("overallDaysOnHand")
+  public Integer getOverallDaysOnHand() {
+    return overallDaysOnHand;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("overallStockStatus")
+  public String getOverallStockStatus() {
+    return overallStockStatus;
   }
 
   
@@ -1184,13 +1640,45 @@ public class Item   {
         Objects.equals(this.storageItemMixingRule, item.storageItemMixingRule) &&
         Objects.equals(this.allocationRule, item.allocationRule) &&
         Objects.equals(this.barcodeField, item.barcodeField) &&
+        Objects.equals(this.warehouseDisplayField, item.warehouseDisplayField) &&
+        Objects.equals(this.productIdTagSchemeId, item.productIdTagSchemeId) &&
         Objects.equals(this.hazmat, item.hazmat) &&
+        Objects.equals(this.isAlcohol, item.isAlcohol) &&
+        Objects.equals(this.alcoholType, item.alcoholType) &&
+        Objects.equals(this.alcoholContent, item.alcoholContent) &&
+        Objects.equals(this.alcoholContainer, item.alcoholContainer) &&
+        Objects.equals(this.alcoholVintageYear, item.alcoholVintageYear) &&
+        Objects.equals(this.alcoholCountry, item.alcoholCountry) &&
+        Objects.equals(this.alcoholState, item.alcoholState) &&
+        Objects.equals(this.alcoholRegion, item.alcoholRegion) &&
+        Objects.equals(this.alcoholBrand, item.alcoholBrand) &&
+        Objects.equals(this.alcoholUPCCode, item.alcoholUPCCode) &&
+        Objects.equals(this.alcoholNAMBCACode, item.alcoholNAMBCACode) &&
+        Objects.equals(this.alcoholUNIMERCCode, item.alcoholUNIMERCCode) &&
+        Objects.equals(this.alcoholSCCCode, item.alcoholSCCCode) &&
+        Objects.equals(this.length, item.length) &&
+        Objects.equals(this.width, item.width) &&
+        Objects.equals(this.height, item.height) &&
+        Objects.equals(this.topUp, item.topUp) &&
+        Objects.equals(this.shipSolo, item.shipSolo) &&
+        Objects.equals(this.inventoryUpdateTimestamp, item.inventoryUpdateTimestamp) &&
+        Objects.equals(this.availableQuantity, item.availableQuantity) &&
+        Objects.equals(this.damagedQuantity, item.damagedQuantity) &&
+        Objects.equals(this.inFulfillmentProcessQuantity, item.inFulfillmentProcessQuantity) &&
+        Objects.equals(this.onHandQuantity, item.onHandQuantity) &&
+        Objects.equals(this.openOrderQuantity, item.openOrderQuantity) &&
+        Objects.equals(this.openPOQuantity, item.openPOQuantity) &&
+        Objects.equals(this.orderableQuantity, item.orderableQuantity) &&
+        Objects.equals(this.unallocatableQuantity, item.unallocatableQuantity) &&
+        Objects.equals(this.unavailableQuantity, item.unavailableQuantity) &&
+        Objects.equals(this.overallDaysOnHand, item.overallDaysOnHand) &&
+        Objects.equals(this.overallStockStatus, item.overallStockStatus) &&
         Objects.equals(this.customFields, item.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, listPrice, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, hazmat, customFields);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, listPrice, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
   }
 
   @Override
@@ -1259,7 +1747,39 @@ public class Item   {
     sb.append("    storageItemMixingRule: ").append(toIndentedString(storageItemMixingRule)).append("\n");
     sb.append("    allocationRule: ").append(toIndentedString(allocationRule)).append("\n");
     sb.append("    barcodeField: ").append(toIndentedString(barcodeField)).append("\n");
+    sb.append("    warehouseDisplayField: ").append(toIndentedString(warehouseDisplayField)).append("\n");
+    sb.append("    productIdTagSchemeId: ").append(toIndentedString(productIdTagSchemeId)).append("\n");
     sb.append("    hazmat: ").append(toIndentedString(hazmat)).append("\n");
+    sb.append("    isAlcohol: ").append(toIndentedString(isAlcohol)).append("\n");
+    sb.append("    alcoholType: ").append(toIndentedString(alcoholType)).append("\n");
+    sb.append("    alcoholContent: ").append(toIndentedString(alcoholContent)).append("\n");
+    sb.append("    alcoholContainer: ").append(toIndentedString(alcoholContainer)).append("\n");
+    sb.append("    alcoholVintageYear: ").append(toIndentedString(alcoholVintageYear)).append("\n");
+    sb.append("    alcoholCountry: ").append(toIndentedString(alcoholCountry)).append("\n");
+    sb.append("    alcoholState: ").append(toIndentedString(alcoholState)).append("\n");
+    sb.append("    alcoholRegion: ").append(toIndentedString(alcoholRegion)).append("\n");
+    sb.append("    alcoholBrand: ").append(toIndentedString(alcoholBrand)).append("\n");
+    sb.append("    alcoholUPCCode: ").append(toIndentedString(alcoholUPCCode)).append("\n");
+    sb.append("    alcoholNAMBCACode: ").append(toIndentedString(alcoholNAMBCACode)).append("\n");
+    sb.append("    alcoholUNIMERCCode: ").append(toIndentedString(alcoholUNIMERCCode)).append("\n");
+    sb.append("    alcoholSCCCode: ").append(toIndentedString(alcoholSCCCode)).append("\n");
+    sb.append("    length: ").append(toIndentedString(length)).append("\n");
+    sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    sb.append("    topUp: ").append(toIndentedString(topUp)).append("\n");
+    sb.append("    shipSolo: ").append(toIndentedString(shipSolo)).append("\n");
+    sb.append("    inventoryUpdateTimestamp: ").append(toIndentedString(inventoryUpdateTimestamp)).append("\n");
+    sb.append("    availableQuantity: ").append(toIndentedString(availableQuantity)).append("\n");
+    sb.append("    damagedQuantity: ").append(toIndentedString(damagedQuantity)).append("\n");
+    sb.append("    inFulfillmentProcessQuantity: ").append(toIndentedString(inFulfillmentProcessQuantity)).append("\n");
+    sb.append("    onHandQuantity: ").append(toIndentedString(onHandQuantity)).append("\n");
+    sb.append("    openOrderQuantity: ").append(toIndentedString(openOrderQuantity)).append("\n");
+    sb.append("    openPOQuantity: ").append(toIndentedString(openPOQuantity)).append("\n");
+    sb.append("    orderableQuantity: ").append(toIndentedString(orderableQuantity)).append("\n");
+    sb.append("    unallocatableQuantity: ").append(toIndentedString(unallocatableQuantity)).append("\n");
+    sb.append("    unavailableQuantity: ").append(toIndentedString(unavailableQuantity)).append("\n");
+    sb.append("    overallDaysOnHand: ").append(toIndentedString(overallDaysOnHand)).append("\n");
+    sb.append("    overallStockStatus: ").append(toIndentedString(overallStockStatus)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
