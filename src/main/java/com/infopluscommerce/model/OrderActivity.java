@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class OrderActivity   {
   
   private BigDecimal orderNo = null;
@@ -42,7 +42,8 @@ public class OrderActivity   {
   private Integer orderReason = null;
   private String customerOrderNo = null;
   private String priceLevel = null;
-  private Date entryTime = null;
+  private Date orderCreateDate = null;
+  private Date orderModifyDate = null;
   private Date shipBy = null;
   private String stopBackOrders = null;
   private Integer warehouseId = null;
@@ -118,6 +119,9 @@ public class OrderActivity   {
   private String leadPackageId = null;
   private Date deliveredDate = null;
   private Integer totalQty = null;
+  private Integer numberOfWraps = null;
+  private Integer numberOfCases = null;
+  private Integer numberOfTouches = null;
   private Integer estimatedNumberOfPicks = null;
   private Integer orderConfirmationEmailTemplateId = null;
   private Integer shipmentConfirmationEmailTemplateId = null;
@@ -494,9 +498,16 @@ public class OrderActivity   {
 
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("entryTime")
-  public Date getEntryTime() {
-    return entryTime;
+  @JsonProperty("orderCreateDate")
+  public Date getOrderCreateDate() {
+    return orderCreateDate;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orderModifyDate")
+  public Date getOrderModifyDate() {
+    return orderModifyDate;
   }
 
   
@@ -1576,6 +1587,27 @@ public class OrderActivity   {
 
   
   @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfWraps")
+  public Integer getNumberOfWraps() {
+    return numberOfWraps;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfCases")
+  public Integer getNumberOfCases() {
+    return numberOfCases;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfTouches")
+  public Integer getNumberOfTouches() {
+    return numberOfTouches;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("estimatedNumberOfPicks")
   public Integer getEstimatedNumberOfPicks() {
     return estimatedNumberOfPicks;
@@ -1726,7 +1758,8 @@ public class OrderActivity   {
         Objects.equals(this.orderReason, orderActivity.orderReason) &&
         Objects.equals(this.customerOrderNo, orderActivity.customerOrderNo) &&
         Objects.equals(this.priceLevel, orderActivity.priceLevel) &&
-        Objects.equals(this.entryTime, orderActivity.entryTime) &&
+        Objects.equals(this.orderCreateDate, orderActivity.orderCreateDate) &&
+        Objects.equals(this.orderModifyDate, orderActivity.orderModifyDate) &&
         Objects.equals(this.shipBy, orderActivity.shipBy) &&
         Objects.equals(this.stopBackOrders, orderActivity.stopBackOrders) &&
         Objects.equals(this.warehouseId, orderActivity.warehouseId) &&
@@ -1802,6 +1835,9 @@ public class OrderActivity   {
         Objects.equals(this.leadPackageId, orderActivity.leadPackageId) &&
         Objects.equals(this.deliveredDate, orderActivity.deliveredDate) &&
         Objects.equals(this.totalQty, orderActivity.totalQty) &&
+        Objects.equals(this.numberOfWraps, orderActivity.numberOfWraps) &&
+        Objects.equals(this.numberOfCases, orderActivity.numberOfCases) &&
+        Objects.equals(this.numberOfTouches, orderActivity.numberOfTouches) &&
         Objects.equals(this.estimatedNumberOfPicks, orderActivity.estimatedNumberOfPicks) &&
         Objects.equals(this.orderConfirmationEmailTemplateId, orderActivity.orderConfirmationEmailTemplateId) &&
         Objects.equals(this.shipmentConfirmationEmailTemplateId, orderActivity.shipmentConfirmationEmailTemplateId) &&
@@ -1814,7 +1850,7 @@ public class OrderActivity   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderNo, createDate, modifyDate, alternateUsage, groupOrderId, status, reqStatusName, fulfillmentProcessId, carrierId, carrierName, lobId, mediaCode, legacyRestrictionType, reqTypeName, serviceTypeId, serviceTypeName, alcoholOrderType, distributionChannel, distributionChannelName, priorityCode, orderDate, enteredBy, orderReason, customerOrderNo, priceLevel, entryTime, shipBy, stopBackOrders, warehouseId, orderSourceId, orderSourceName, integrationPartnerId, integrationPartnerName, orderLoadProgramId, orderLoadProgramName, omsOrderNo, omsCustomerId, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, shipDate, freight, weightLbs, estimatedWeightLbs, numberOfCartons, numberOfPallets, numberOfLineItems, completionStatus, holdCode, shipCode, orderMessage, division, costCenter, authorizedBy, batchNo, firstShipDate, lastShipDate, deliverOnDate, customerPONo, shipVia, needByDate, total, balanceDue, totalPaid, authorizationAmount, subtotal, taxOnFreight, tax, distributionCharges, shippingCharge, totalDiscount, parcelAccountId, packingSlipTemplateId, giftMessage, branchSector, branchArea, branchCustomerType, branchId, orderCode, leadPackageId, deliveredDate, totalQty, estimatedNumberOfPicks, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, externalShippingSystemId, shippingSystemName, orderInvoiceTemplateId, priceMode, customFields);
+    return Objects.hash(orderNo, createDate, modifyDate, alternateUsage, groupOrderId, status, reqStatusName, fulfillmentProcessId, carrierId, carrierName, lobId, mediaCode, legacyRestrictionType, reqTypeName, serviceTypeId, serviceTypeName, alcoholOrderType, distributionChannel, distributionChannelName, priorityCode, orderDate, enteredBy, orderReason, customerOrderNo, priceLevel, orderCreateDate, orderModifyDate, shipBy, stopBackOrders, warehouseId, orderSourceId, orderSourceName, integrationPartnerId, integrationPartnerName, orderLoadProgramId, orderLoadProgramName, omsOrderNo, omsCustomerId, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, shipDate, freight, weightLbs, estimatedWeightLbs, numberOfCartons, numberOfPallets, numberOfLineItems, completionStatus, holdCode, shipCode, orderMessage, division, costCenter, authorizedBy, batchNo, firstShipDate, lastShipDate, deliverOnDate, customerPONo, shipVia, needByDate, total, balanceDue, totalPaid, authorizationAmount, subtotal, taxOnFreight, tax, distributionCharges, shippingCharge, totalDiscount, parcelAccountId, packingSlipTemplateId, giftMessage, branchSector, branchArea, branchCustomerType, branchId, orderCode, leadPackageId, deliveredDate, totalQty, numberOfWraps, numberOfCases, numberOfTouches, estimatedNumberOfPicks, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, externalShippingSystemId, shippingSystemName, orderInvoiceTemplateId, priceMode, customFields);
   }
 
   @Override
@@ -1847,7 +1883,8 @@ public class OrderActivity   {
     sb.append("    orderReason: ").append(toIndentedString(orderReason)).append("\n");
     sb.append("    customerOrderNo: ").append(toIndentedString(customerOrderNo)).append("\n");
     sb.append("    priceLevel: ").append(toIndentedString(priceLevel)).append("\n");
-    sb.append("    entryTime: ").append(toIndentedString(entryTime)).append("\n");
+    sb.append("    orderCreateDate: ").append(toIndentedString(orderCreateDate)).append("\n");
+    sb.append("    orderModifyDate: ").append(toIndentedString(orderModifyDate)).append("\n");
     sb.append("    shipBy: ").append(toIndentedString(shipBy)).append("\n");
     sb.append("    stopBackOrders: ").append(toIndentedString(stopBackOrders)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
@@ -1923,6 +1960,9 @@ public class OrderActivity   {
     sb.append("    leadPackageId: ").append(toIndentedString(leadPackageId)).append("\n");
     sb.append("    deliveredDate: ").append(toIndentedString(deliveredDate)).append("\n");
     sb.append("    totalQty: ").append(toIndentedString(totalQty)).append("\n");
+    sb.append("    numberOfWraps: ").append(toIndentedString(numberOfWraps)).append("\n");
+    sb.append("    numberOfCases: ").append(toIndentedString(numberOfCases)).append("\n");
+    sb.append("    numberOfTouches: ").append(toIndentedString(numberOfTouches)).append("\n");
     sb.append("    estimatedNumberOfPicks: ").append(toIndentedString(estimatedNumberOfPicks)).append("\n");
     sb.append("    orderConfirmationEmailTemplateId: ").append(toIndentedString(orderConfirmationEmailTemplateId)).append("\n");
     sb.append("    shipmentConfirmationEmailTemplateId: ").append(toIndentedString(shipmentConfirmationEmailTemplateId)).append("\n");

@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class FulfillmentPlan   {
   
   private Integer id = null;
@@ -26,6 +26,7 @@ public class FulfillmentPlan   {
   private Integer orderSmartFilterId = null;
   private Integer locationSmartFilterId = null;
   private Integer maximumNumberOfOrders = null;
+  private String version = null;
   private Boolean createPickWork = false;
   private String pickingRule = null;
   private String layoutRule = null;
@@ -180,6 +181,23 @@ public class FulfillmentPlan   {
   }
   public void setMaximumNumberOfOrders(Integer maximumNumberOfOrders) {
     this.maximumNumberOfOrders = maximumNumberOfOrders;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentPlan version(String version) {
+    this.version = version;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("version")
+  public String getVersion() {
+    return version;
+  }
+  public void setVersion(String version) {
+    this.version = version;
   }
 
   
@@ -628,6 +646,7 @@ public class FulfillmentPlan   {
         Objects.equals(this.orderSmartFilterId, fulfillmentPlan.orderSmartFilterId) &&
         Objects.equals(this.locationSmartFilterId, fulfillmentPlan.locationSmartFilterId) &&
         Objects.equals(this.maximumNumberOfOrders, fulfillmentPlan.maximumNumberOfOrders) &&
+        Objects.equals(this.version, fulfillmentPlan.version) &&
         Objects.equals(this.createPickWork, fulfillmentPlan.createPickWork) &&
         Objects.equals(this.pickingRule, fulfillmentPlan.pickingRule) &&
         Objects.equals(this.layoutRule, fulfillmentPlan.layoutRule) &&
@@ -657,7 +676,7 @@ public class FulfillmentPlan   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, lastRunTime, orderSmartFilterId, locationSmartFilterId, maximumNumberOfOrders, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, pickScanSchemeId, cartonizeOrders, autoShipCasebreakCartons, preGenerateParcelLabels, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
+    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, lastRunTime, orderSmartFilterId, locationSmartFilterId, maximumNumberOfOrders, version, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, pickScanSchemeId, cartonizeOrders, autoShipCasebreakCartons, preGenerateParcelLabels, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -675,6 +694,7 @@ public class FulfillmentPlan   {
     sb.append("    orderSmartFilterId: ").append(toIndentedString(orderSmartFilterId)).append("\n");
     sb.append("    locationSmartFilterId: ").append(toIndentedString(locationSmartFilterId)).append("\n");
     sb.append("    maximumNumberOfOrders: ").append(toIndentedString(maximumNumberOfOrders)).append("\n");
+    sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    createPickWork: ").append(toIndentedString(createPickWork)).append("\n");
     sb.append("    pickingRule: ").append(toIndentedString(pickingRule)).append("\n");
     sb.append("    layoutRule: ").append(toIndentedString(layoutRule)).append("\n");

@@ -14,12 +14,13 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class CartonContent   {
   
   private Integer id = null;
   private BigDecimal groupOrderId = null;
   private BigDecimal orderNo = null;
+  private Integer cartonNo = null;
   private Integer cartonId = null;
   private Integer lineItemId = null;
   private String location = null;
@@ -70,6 +71,13 @@ public class CartonContent   {
   }
   public void setOrderNo(BigDecimal orderNo) {
     this.orderNo = orderNo;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("cartonNo")
+  public Integer getCartonNo() {
+    return cartonNo;
   }
 
   
@@ -256,6 +264,7 @@ public class CartonContent   {
     return Objects.equals(this.id, cartonContent.id) &&
         Objects.equals(this.groupOrderId, cartonContent.groupOrderId) &&
         Objects.equals(this.orderNo, cartonContent.orderNo) &&
+        Objects.equals(this.cartonNo, cartonContent.cartonNo) &&
         Objects.equals(this.cartonId, cartonContent.cartonId) &&
         Objects.equals(this.lineItemId, cartonContent.lineItemId) &&
         Objects.equals(this.location, cartonContent.location) &&
@@ -270,7 +279,7 @@ public class CartonContent   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, groupOrderId, orderNo, cartonId, lineItemId, location, quantity, quantityScanned, completed, toteId, pickerId, status, customFields);
+    return Objects.hash(id, groupOrderId, orderNo, cartonNo, cartonId, lineItemId, location, quantity, quantityScanned, completed, toteId, pickerId, status, customFields);
   }
 
   @Override
@@ -281,6 +290,7 @@ public class CartonContent   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    groupOrderId: ").append(toIndentedString(groupOrderId)).append("\n");
     sb.append("    orderNo: ").append(toIndentedString(orderNo)).append("\n");
+    sb.append("    cartonNo: ").append(toIndentedString(cartonNo)).append("\n");
     sb.append("    cartonId: ").append(toIndentedString(cartonId)).append("\n");
     sb.append("    lineItemId: ").append(toIndentedString(lineItemId)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");

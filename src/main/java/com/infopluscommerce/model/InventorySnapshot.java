@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class InventorySnapshot   {
   
   private Integer id = null;
@@ -25,6 +25,9 @@ public class InventorySnapshot   {
   private Boolean isMixedReceipts = false;
   private Integer quantity = null;
   private String address = null;
+  private Integer numberOfCases = null;
+  private BigDecimal inventoryValue = null;
+  private Integer inventoryAgeDays = null;
   private Integer warehouseId = null;
   private String warehouseName = null;
   private Integer warehouseZoneId = null;
@@ -52,7 +55,7 @@ public class InventorySnapshot   {
   private Integer warehouseLocationPriorityCode = null;
   private Boolean warehouseLocationAllowItemMixing = false;
   private Integer warehouseLocationCost = null;
-  private String controlNo = null;
+  private String sku = null;
   private String itemVendorSku = null;
   private String itemUpc = null;
   private Integer itemMajorGroup = null;
@@ -193,6 +196,57 @@ public class InventorySnapshot   {
   }
   public void setAddress(String address) {
     this.address = address;
+  }
+
+  
+  /**
+   **/
+  public InventorySnapshot numberOfCases(Integer numberOfCases) {
+    this.numberOfCases = numberOfCases;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfCases")
+  public Integer getNumberOfCases() {
+    return numberOfCases;
+  }
+  public void setNumberOfCases(Integer numberOfCases) {
+    this.numberOfCases = numberOfCases;
+  }
+
+  
+  /**
+   **/
+  public InventorySnapshot inventoryValue(BigDecimal inventoryValue) {
+    this.inventoryValue = inventoryValue;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("inventoryValue")
+  public BigDecimal getInventoryValue() {
+    return inventoryValue;
+  }
+  public void setInventoryValue(BigDecimal inventoryValue) {
+    this.inventoryValue = inventoryValue;
+  }
+
+  
+  /**
+   **/
+  public InventorySnapshot inventoryAgeDays(Integer inventoryAgeDays) {
+    this.inventoryAgeDays = inventoryAgeDays;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("inventoryAgeDays")
+  public Integer getInventoryAgeDays() {
+    return inventoryAgeDays;
+  }
+  public void setInventoryAgeDays(Integer inventoryAgeDays) {
+    this.inventoryAgeDays = inventoryAgeDays;
   }
 
   
@@ -657,18 +711,18 @@ public class InventorySnapshot   {
   
   /**
    **/
-  public InventorySnapshot controlNo(String controlNo) {
-    this.controlNo = controlNo;
+  public InventorySnapshot sku(String sku) {
+    this.sku = sku;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("controlNo")
-  public String getControlNo() {
-    return controlNo;
+  @JsonProperty("sku")
+  public String getSku() {
+    return sku;
   }
-  public void setControlNo(String controlNo) {
-    this.controlNo = controlNo;
+  public void setSku(String sku) {
+    this.sku = sku;
   }
 
   
@@ -1325,6 +1379,9 @@ public class InventorySnapshot   {
         Objects.equals(this.isMixedReceipts, inventorySnapshot.isMixedReceipts) &&
         Objects.equals(this.quantity, inventorySnapshot.quantity) &&
         Objects.equals(this.address, inventorySnapshot.address) &&
+        Objects.equals(this.numberOfCases, inventorySnapshot.numberOfCases) &&
+        Objects.equals(this.inventoryValue, inventorySnapshot.inventoryValue) &&
+        Objects.equals(this.inventoryAgeDays, inventorySnapshot.inventoryAgeDays) &&
         Objects.equals(this.warehouseId, inventorySnapshot.warehouseId) &&
         Objects.equals(this.warehouseName, inventorySnapshot.warehouseName) &&
         Objects.equals(this.warehouseZoneId, inventorySnapshot.warehouseZoneId) &&
@@ -1352,7 +1409,7 @@ public class InventorySnapshot   {
         Objects.equals(this.warehouseLocationPriorityCode, inventorySnapshot.warehouseLocationPriorityCode) &&
         Objects.equals(this.warehouseLocationAllowItemMixing, inventorySnapshot.warehouseLocationAllowItemMixing) &&
         Objects.equals(this.warehouseLocationCost, inventorySnapshot.warehouseLocationCost) &&
-        Objects.equals(this.controlNo, inventorySnapshot.controlNo) &&
+        Objects.equals(this.sku, inventorySnapshot.sku) &&
         Objects.equals(this.itemVendorSku, inventorySnapshot.itemVendorSku) &&
         Objects.equals(this.itemUpc, inventorySnapshot.itemUpc) &&
         Objects.equals(this.itemMajorGroup, inventorySnapshot.itemMajorGroup) &&
@@ -1402,7 +1459,7 @@ public class InventorySnapshot   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseLocationId, itemId, lobId, snapshotDate, isMixedReceipts, quantity, address, warehouseId, warehouseName, warehouseZoneId, warehouseZoneName, warehouseZoneAddress, warehouseBuildingId, warehouseBuildingName, warehouseAisleId, warehouseAisleAddress, warehouseLocationOriginId, warehouseLocationOriginName, warehouseLocationBillingTypeId, warehouseLocationBillingTypeName, warehouseLocationBehaviorTypeId, warehouseLocationBehaviorTypeName, warehouseLocationFootprintId, warehouseLocationFootprintName, warehouseLocationFootprintWidth, warehouseLocationFootprintHeight, warehouseLocationFootprintDepth, warehouseLocationLevel, warehouseLocationBay, warehouseLocationNumber, warehouseLocationOnline, warehouseLocationPriorityCode, warehouseLocationAllowItemMixing, warehouseLocationCost, controlNo, itemVendorSku, itemUpc, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptUnitsPerCase, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptCaseWeight, receiptProductIdTag, alcoholType, alcoholTypeName, alcoholContent, alcoholContainer, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountry, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
+    return Objects.hash(id, warehouseLocationId, itemId, lobId, snapshotDate, isMixedReceipts, quantity, address, numberOfCases, inventoryValue, inventoryAgeDays, warehouseId, warehouseName, warehouseZoneId, warehouseZoneName, warehouseZoneAddress, warehouseBuildingId, warehouseBuildingName, warehouseAisleId, warehouseAisleAddress, warehouseLocationOriginId, warehouseLocationOriginName, warehouseLocationBillingTypeId, warehouseLocationBillingTypeName, warehouseLocationBehaviorTypeId, warehouseLocationBehaviorTypeName, warehouseLocationFootprintId, warehouseLocationFootprintName, warehouseLocationFootprintWidth, warehouseLocationFootprintHeight, warehouseLocationFootprintDepth, warehouseLocationLevel, warehouseLocationBay, warehouseLocationNumber, warehouseLocationOnline, warehouseLocationPriorityCode, warehouseLocationAllowItemMixing, warehouseLocationCost, sku, itemVendorSku, itemUpc, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptUnitsPerCase, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptCaseWeight, receiptProductIdTag, alcoholType, alcoholTypeName, alcoholContent, alcoholContainer, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountry, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
   }
 
   @Override
@@ -1418,6 +1475,9 @@ public class InventorySnapshot   {
     sb.append("    isMixedReceipts: ").append(toIndentedString(isMixedReceipts)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
+    sb.append("    numberOfCases: ").append(toIndentedString(numberOfCases)).append("\n");
+    sb.append("    inventoryValue: ").append(toIndentedString(inventoryValue)).append("\n");
+    sb.append("    inventoryAgeDays: ").append(toIndentedString(inventoryAgeDays)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
     sb.append("    warehouseName: ").append(toIndentedString(warehouseName)).append("\n");
     sb.append("    warehouseZoneId: ").append(toIndentedString(warehouseZoneId)).append("\n");
@@ -1445,7 +1505,7 @@ public class InventorySnapshot   {
     sb.append("    warehouseLocationPriorityCode: ").append(toIndentedString(warehouseLocationPriorityCode)).append("\n");
     sb.append("    warehouseLocationAllowItemMixing: ").append(toIndentedString(warehouseLocationAllowItemMixing)).append("\n");
     sb.append("    warehouseLocationCost: ").append(toIndentedString(warehouseLocationCost)).append("\n");
-    sb.append("    controlNo: ").append(toIndentedString(controlNo)).append("\n");
+    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    itemVendorSku: ").append(toIndentedString(itemVendorSku)).append("\n");
     sb.append("    itemUpc: ").append(toIndentedString(itemUpc)).append("\n");
     sb.append("    itemMajorGroup: ").append(toIndentedString(itemMajorGroup)).append("\n");

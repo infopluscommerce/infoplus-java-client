@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class CartonActivity   {
   
   private Integer id = null;
@@ -47,6 +47,8 @@ public class CartonActivity   {
   private BigDecimal chargedFreightAmount = null;
   private BigDecimal publishedFreightAmount = null;
   private BigDecimal retailFreightAmount = null;
+  private Date cartonCreateDate = null;
+  private Date cartonModifyDate = null;
   private String alternateUsage = null;
   private BigDecimal groupOrderId = null;
   private String orderStatus = null;
@@ -69,6 +71,7 @@ public class CartonActivity   {
   private String customerOrderNo = null;
   private String priceLevel = null;
   private Date orderCreateDate = null;
+  private Date orderModifyDate = null;
   private Date shipBy = null;
   private String stopBackOrders = null;
   private Integer orderSourceId = null;
@@ -461,6 +464,20 @@ public class CartonActivity   {
   }
 
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("cartonCreateDate")
+  public Date getCartonCreateDate() {
+    return cartonCreateDate;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("cartonModifyDate")
+  public Date getCartonModifyDate() {
+    return cartonModifyDate;
+  }
+
+  
   /**
    **/
   public CartonActivity alternateUsage(String alternateUsage) {
@@ -772,6 +789,13 @@ public class CartonActivity   {
   @JsonProperty("orderCreateDate")
   public Date getOrderCreateDate() {
     return orderCreateDate;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("orderModifyDate")
+  public Date getOrderModifyDate() {
+    return orderModifyDate;
   }
 
   
@@ -1965,6 +1989,8 @@ public class CartonActivity   {
         Objects.equals(this.chargedFreightAmount, cartonActivity.chargedFreightAmount) &&
         Objects.equals(this.publishedFreightAmount, cartonActivity.publishedFreightAmount) &&
         Objects.equals(this.retailFreightAmount, cartonActivity.retailFreightAmount) &&
+        Objects.equals(this.cartonCreateDate, cartonActivity.cartonCreateDate) &&
+        Objects.equals(this.cartonModifyDate, cartonActivity.cartonModifyDate) &&
         Objects.equals(this.alternateUsage, cartonActivity.alternateUsage) &&
         Objects.equals(this.groupOrderId, cartonActivity.groupOrderId) &&
         Objects.equals(this.orderStatus, cartonActivity.orderStatus) &&
@@ -1987,6 +2013,7 @@ public class CartonActivity   {
         Objects.equals(this.customerOrderNo, cartonActivity.customerOrderNo) &&
         Objects.equals(this.priceLevel, cartonActivity.priceLevel) &&
         Objects.equals(this.orderCreateDate, cartonActivity.orderCreateDate) &&
+        Objects.equals(this.orderModifyDate, cartonActivity.orderModifyDate) &&
         Objects.equals(this.shipBy, cartonActivity.shipBy) &&
         Objects.equals(this.stopBackOrders, cartonActivity.stopBackOrders) &&
         Objects.equals(this.orderSourceId, cartonActivity.orderSourceId) &&
@@ -2071,7 +2098,7 @@ public class CartonActivity   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, orderNo, shipDate, deliveredDate, trackingNo, warehouseId, warehouseName, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, alternateUsage, groupOrderId, orderStatus, orderStatusName, fulfillmentProcessId, carrierId, carrierName, mediaCode, legacyRestrictionType, reqTypeName, serviceTypeId, serviceTypeName, alcoholOrderType, distributionChannel, distributionChannelName, priorityCode, orderDate, enteredBy, orderReason, customerOrderNo, priceLevel, orderCreateDate, shipBy, stopBackOrders, orderSourceId, orderSourceName, integrationPartnerId, integrationPartnerName, orderLoadProgramId, orderLoadProgramName, omsOrderNo, omsCustomerId, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, orderShipDate, freight, orderWeightLbs, orderEstimatedWeightLbs, numberOfPallets, numberOfLineItems, completionStatus, holdCode, shipCode, orderMessage, division, costCenter, authorizedBy, batchNo, firstShipDate, lastShipDate, deliverOnDate, customerPONo, shipVia, needByDate, total, balanceDue, totalPaid, authorizationAmount, subtotal, taxOnFreight, tax, distributionCharges, shippingCharge, totalDiscount, parcelAccountId, packingSlipTemplateId, giftMessage, branchSector, branchArea, branchCustomerType, branchId, orderCode, leadPackageId, totalQty, estimatedNumberOfPicks, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, externalShippingSystemId, shippingSystemName, orderInvoiceTemplateId, priceMode, customFields);
+    return Objects.hash(id, createDate, modifyDate, lobId, orderNo, shipDate, deliveredDate, trackingNo, warehouseId, warehouseName, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, cartonCreateDate, cartonModifyDate, alternateUsage, groupOrderId, orderStatus, orderStatusName, fulfillmentProcessId, carrierId, carrierName, mediaCode, legacyRestrictionType, reqTypeName, serviceTypeId, serviceTypeName, alcoholOrderType, distributionChannel, distributionChannelName, priorityCode, orderDate, enteredBy, orderReason, customerOrderNo, priceLevel, orderCreateDate, orderModifyDate, shipBy, stopBackOrders, orderSourceId, orderSourceName, integrationPartnerId, integrationPartnerName, orderLoadProgramId, orderLoadProgramName, omsOrderNo, omsCustomerId, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, orderShipDate, freight, orderWeightLbs, orderEstimatedWeightLbs, numberOfPallets, numberOfLineItems, completionStatus, holdCode, shipCode, orderMessage, division, costCenter, authorizedBy, batchNo, firstShipDate, lastShipDate, deliverOnDate, customerPONo, shipVia, needByDate, total, balanceDue, totalPaid, authorizationAmount, subtotal, taxOnFreight, tax, distributionCharges, shippingCharge, totalDiscount, parcelAccountId, packingSlipTemplateId, giftMessage, branchSector, branchArea, branchCustomerType, branchId, orderCode, leadPackageId, totalQty, estimatedNumberOfPicks, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, externalShippingSystemId, shippingSystemName, orderInvoiceTemplateId, priceMode, customFields);
   }
 
   @Override
@@ -2109,6 +2136,8 @@ public class CartonActivity   {
     sb.append("    chargedFreightAmount: ").append(toIndentedString(chargedFreightAmount)).append("\n");
     sb.append("    publishedFreightAmount: ").append(toIndentedString(publishedFreightAmount)).append("\n");
     sb.append("    retailFreightAmount: ").append(toIndentedString(retailFreightAmount)).append("\n");
+    sb.append("    cartonCreateDate: ").append(toIndentedString(cartonCreateDate)).append("\n");
+    sb.append("    cartonModifyDate: ").append(toIndentedString(cartonModifyDate)).append("\n");
     sb.append("    alternateUsage: ").append(toIndentedString(alternateUsage)).append("\n");
     sb.append("    groupOrderId: ").append(toIndentedString(groupOrderId)).append("\n");
     sb.append("    orderStatus: ").append(toIndentedString(orderStatus)).append("\n");
@@ -2131,6 +2160,7 @@ public class CartonActivity   {
     sb.append("    customerOrderNo: ").append(toIndentedString(customerOrderNo)).append("\n");
     sb.append("    priceLevel: ").append(toIndentedString(priceLevel)).append("\n");
     sb.append("    orderCreateDate: ").append(toIndentedString(orderCreateDate)).append("\n");
+    sb.append("    orderModifyDate: ").append(toIndentedString(orderModifyDate)).append("\n");
     sb.append("    shipBy: ").append(toIndentedString(shipBy)).append("\n");
     sb.append("    stopBackOrders: ").append(toIndentedString(stopBackOrders)).append("\n");
     sb.append("    orderSourceId: ").append(toIndentedString(orderSourceId)).append("\n");

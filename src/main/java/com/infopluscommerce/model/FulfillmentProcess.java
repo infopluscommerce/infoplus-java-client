@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class FulfillmentProcess   {
   
   private Integer id = null;
@@ -28,6 +28,7 @@ public class FulfillmentProcess   {
   private Integer orderSmartFilterId = null;
   private Integer locationSmartFilterId = null;
   private Integer orderLimit = null;
+  private String version = null;
   private Integer numberOfOrders = null;
   private Integer numberOfLines = null;
   private Integer numberOfSKUs = null;
@@ -208,6 +209,23 @@ public class FulfillmentProcess   {
   @JsonProperty("orderLimit")
   public Integer getOrderLimit() {
     return orderLimit;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentProcess version(String version) {
+    this.version = version;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("version")
+  public String getVersion() {
+    return version;
+  }
+  public void setVersion(String version) {
+    this.version = version;
   }
 
   
@@ -832,6 +850,7 @@ public class FulfillmentProcess   {
         Objects.equals(this.orderSmartFilterId, fulfillmentProcess.orderSmartFilterId) &&
         Objects.equals(this.locationSmartFilterId, fulfillmentProcess.locationSmartFilterId) &&
         Objects.equals(this.orderLimit, fulfillmentProcess.orderLimit) &&
+        Objects.equals(this.version, fulfillmentProcess.version) &&
         Objects.equals(this.numberOfOrders, fulfillmentProcess.numberOfOrders) &&
         Objects.equals(this.numberOfLines, fulfillmentProcess.numberOfLines) &&
         Objects.equals(this.numberOfSKUs, fulfillmentProcess.numberOfSKUs) &&
@@ -873,7 +892,7 @@ public class FulfillmentProcess   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, orderLimit, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
+    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, orderLimit, version, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -893,6 +912,7 @@ public class FulfillmentProcess   {
     sb.append("    orderSmartFilterId: ").append(toIndentedString(orderSmartFilterId)).append("\n");
     sb.append("    locationSmartFilterId: ").append(toIndentedString(locationSmartFilterId)).append("\n");
     sb.append("    orderLimit: ").append(toIndentedString(orderLimit)).append("\n");
+    sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    numberOfOrders: ").append(toIndentedString(numberOfOrders)).append("\n");
     sb.append("    numberOfLines: ").append(toIndentedString(numberOfLines)).append("\n");
     sb.append("    numberOfSKUs: ").append(toIndentedString(numberOfSKUs)).append("\n");

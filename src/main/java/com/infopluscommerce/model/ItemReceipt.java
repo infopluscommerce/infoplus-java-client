@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class ItemReceipt   {
   
   private Integer id = null;
@@ -23,6 +23,7 @@ public class ItemReceipt   {
   private String legacyPoNo = null;
   private Integer warehouseId = null;
   private Date orderDate = null;
+  private String fullDescription = null;
   private BigDecimal factCost = null;
   private BigDecimal mlCost = null;
   private String sku = null;
@@ -32,7 +33,7 @@ public class ItemReceipt   {
   private String wrapCode = null;
   private Integer unitsPerWrap = null;
   private BigDecimal cost = null;
-  private BigDecimal sell = null;
+  private BigDecimal sellPrice = null;
   private String pricingPer = null;
   private BigDecimal maxFreight = null;
   private String chargeFreight = null;
@@ -149,6 +150,23 @@ public class ItemReceipt   {
   }
   public void setOrderDate(Date orderDate) {
     this.orderDate = orderDate;
+  }
+
+  
+  /**
+   **/
+  public ItemReceipt fullDescription(String fullDescription) {
+    this.fullDescription = fullDescription;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("fullDescription")
+  public String getFullDescription() {
+    return fullDescription;
+  }
+  public void setFullDescription(String fullDescription) {
+    this.fullDescription = fullDescription;
   }
 
   
@@ -297,18 +315,18 @@ public class ItemReceipt   {
   
   /**
    **/
-  public ItemReceipt sell(BigDecimal sell) {
-    this.sell = sell;
+  public ItemReceipt sellPrice(BigDecimal sellPrice) {
+    this.sellPrice = sellPrice;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("sell")
-  public BigDecimal getSell() {
-    return sell;
+  @JsonProperty("sellPrice")
+  public BigDecimal getSellPrice() {
+    return sellPrice;
   }
-  public void setSell(BigDecimal sell) {
-    this.sell = sell;
+  public void setSellPrice(BigDecimal sellPrice) {
+    this.sellPrice = sellPrice;
   }
 
   
@@ -1253,6 +1271,7 @@ public class ItemReceipt   {
         Objects.equals(this.legacyPoNo, itemReceipt.legacyPoNo) &&
         Objects.equals(this.warehouseId, itemReceipt.warehouseId) &&
         Objects.equals(this.orderDate, itemReceipt.orderDate) &&
+        Objects.equals(this.fullDescription, itemReceipt.fullDescription) &&
         Objects.equals(this.factCost, itemReceipt.factCost) &&
         Objects.equals(this.mlCost, itemReceipt.mlCost) &&
         Objects.equals(this.sku, itemReceipt.sku) &&
@@ -1262,7 +1281,7 @@ public class ItemReceipt   {
         Objects.equals(this.wrapCode, itemReceipt.wrapCode) &&
         Objects.equals(this.unitsPerWrap, itemReceipt.unitsPerWrap) &&
         Objects.equals(this.cost, itemReceipt.cost) &&
-        Objects.equals(this.sell, itemReceipt.sell) &&
+        Objects.equals(this.sellPrice, itemReceipt.sellPrice) &&
         Objects.equals(this.pricingPer, itemReceipt.pricingPer) &&
         Objects.equals(this.maxFreight, itemReceipt.maxFreight) &&
         Objects.equals(this.chargeFreight, itemReceipt.chargeFreight) &&
@@ -1322,7 +1341,7 @@ public class ItemReceipt   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sell, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, modifyDate, impressions, asnLine, customFields);
+    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, fullDescription, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sellPrice, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, modifyDate, impressions, asnLine, customFields);
   }
 
   @Override
@@ -1336,6 +1355,7 @@ public class ItemReceipt   {
     sb.append("    legacyPoNo: ").append(toIndentedString(legacyPoNo)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
     sb.append("    orderDate: ").append(toIndentedString(orderDate)).append("\n");
+    sb.append("    fullDescription: ").append(toIndentedString(fullDescription)).append("\n");
     sb.append("    factCost: ").append(toIndentedString(factCost)).append("\n");
     sb.append("    mlCost: ").append(toIndentedString(mlCost)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
@@ -1345,7 +1365,7 @@ public class ItemReceipt   {
     sb.append("    wrapCode: ").append(toIndentedString(wrapCode)).append("\n");
     sb.append("    unitsPerWrap: ").append(toIndentedString(unitsPerWrap)).append("\n");
     sb.append("    cost: ").append(toIndentedString(cost)).append("\n");
-    sb.append("    sell: ").append(toIndentedString(sell)).append("\n");
+    sb.append("    sellPrice: ").append(toIndentedString(sellPrice)).append("\n");
     sb.append("    pricingPer: ").append(toIndentedString(pricingPer)).append("\n");
     sb.append("    maxFreight: ").append(toIndentedString(maxFreight)).append("\n");
     sb.append("    chargeFreight: ").append(toIndentedString(chargeFreight)).append("\n");

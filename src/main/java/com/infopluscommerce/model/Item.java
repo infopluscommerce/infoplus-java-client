@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class Item   {
   
   private Integer id = null;
@@ -43,7 +43,8 @@ public class Item   {
   private Integer criticalAmount = null;
   private Integer overallFixedReorderPoint = null;
   private Integer overallLeadTime = null;
-  private BigDecimal listPrice = null;
+  private BigDecimal sellPrice = null;
+  private String pricingPer = null;
   private String lotControlFlag = null;
   private Integer maxCycle = null;
   private Integer maxInterim = null;
@@ -71,6 +72,9 @@ public class Item   {
   private BigDecimal extrinsicDecimal1 = null;
   private BigDecimal extrinsicDecimal2 = null;
   private String casebreakEnabled = null;
+  private Integer vendorId = null;
+  private BigDecimal vendorPrice = null;
+  private String vendorPer = null;
   private Date modifyDate = null;
   private String forwardLotMixingRule = null;
   private String storageLotMixingRule = null;
@@ -538,18 +542,35 @@ public class Item   {
   
   /**
    **/
-  public Item listPrice(BigDecimal listPrice) {
-    this.listPrice = listPrice;
+  public Item sellPrice(BigDecimal sellPrice) {
+    this.sellPrice = sellPrice;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("listPrice")
-  public BigDecimal getListPrice() {
-    return listPrice;
+  @JsonProperty("sellPrice")
+  public BigDecimal getSellPrice() {
+    return sellPrice;
   }
-  public void setListPrice(BigDecimal listPrice) {
-    this.listPrice = listPrice;
+  public void setSellPrice(BigDecimal sellPrice) {
+    this.sellPrice = sellPrice;
+  }
+
+  
+  /**
+   **/
+  public Item pricingPer(String pricingPer) {
+    this.pricingPer = pricingPer;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("pricingPer")
+  public String getPricingPer() {
+    return pricingPer;
+  }
+  public void setPricingPer(String pricingPer) {
+    this.pricingPer = pricingPer;
   }
 
   
@@ -999,6 +1020,57 @@ public class Item   {
   }
   public void setCasebreakEnabled(String casebreakEnabled) {
     this.casebreakEnabled = casebreakEnabled;
+  }
+
+  
+  /**
+   **/
+  public Item vendorId(Integer vendorId) {
+    this.vendorId = vendorId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("vendorId")
+  public Integer getVendorId() {
+    return vendorId;
+  }
+  public void setVendorId(Integer vendorId) {
+    this.vendorId = vendorId;
+  }
+
+  
+  /**
+   **/
+  public Item vendorPrice(BigDecimal vendorPrice) {
+    this.vendorPrice = vendorPrice;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("vendorPrice")
+  public BigDecimal getVendorPrice() {
+    return vendorPrice;
+  }
+  public void setVendorPrice(BigDecimal vendorPrice) {
+    this.vendorPrice = vendorPrice;
+  }
+
+  
+  /**
+   **/
+  public Item vendorPer(String vendorPer) {
+    this.vendorPer = vendorPer;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("vendorPer")
+  public String getVendorPer() {
+    return vendorPer;
+  }
+  public void setVendorPer(String vendorPer) {
+    this.vendorPer = vendorPer;
   }
 
   
@@ -1605,7 +1677,8 @@ public class Item   {
         Objects.equals(this.criticalAmount, item.criticalAmount) &&
         Objects.equals(this.overallFixedReorderPoint, item.overallFixedReorderPoint) &&
         Objects.equals(this.overallLeadTime, item.overallLeadTime) &&
-        Objects.equals(this.listPrice, item.listPrice) &&
+        Objects.equals(this.sellPrice, item.sellPrice) &&
+        Objects.equals(this.pricingPer, item.pricingPer) &&
         Objects.equals(this.lotControlFlag, item.lotControlFlag) &&
         Objects.equals(this.maxCycle, item.maxCycle) &&
         Objects.equals(this.maxInterim, item.maxInterim) &&
@@ -1633,6 +1706,9 @@ public class Item   {
         Objects.equals(this.extrinsicDecimal1, item.extrinsicDecimal1) &&
         Objects.equals(this.extrinsicDecimal2, item.extrinsicDecimal2) &&
         Objects.equals(this.casebreakEnabled, item.casebreakEnabled) &&
+        Objects.equals(this.vendorId, item.vendorId) &&
+        Objects.equals(this.vendorPrice, item.vendorPrice) &&
+        Objects.equals(this.vendorPer, item.vendorPer) &&
         Objects.equals(this.modifyDate, item.modifyDate) &&
         Objects.equals(this.forwardLotMixingRule, item.forwardLotMixingRule) &&
         Objects.equals(this.storageLotMixingRule, item.storageLotMixingRule) &&
@@ -1678,7 +1754,7 @@ public class Item   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, listPrice, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
   }
 
   @Override
@@ -1712,7 +1788,8 @@ public class Item   {
     sb.append("    criticalAmount: ").append(toIndentedString(criticalAmount)).append("\n");
     sb.append("    overallFixedReorderPoint: ").append(toIndentedString(overallFixedReorderPoint)).append("\n");
     sb.append("    overallLeadTime: ").append(toIndentedString(overallLeadTime)).append("\n");
-    sb.append("    listPrice: ").append(toIndentedString(listPrice)).append("\n");
+    sb.append("    sellPrice: ").append(toIndentedString(sellPrice)).append("\n");
+    sb.append("    pricingPer: ").append(toIndentedString(pricingPer)).append("\n");
     sb.append("    lotControlFlag: ").append(toIndentedString(lotControlFlag)).append("\n");
     sb.append("    maxCycle: ").append(toIndentedString(maxCycle)).append("\n");
     sb.append("    maxInterim: ").append(toIndentedString(maxInterim)).append("\n");
@@ -1740,6 +1817,9 @@ public class Item   {
     sb.append("    extrinsicDecimal1: ").append(toIndentedString(extrinsicDecimal1)).append("\n");
     sb.append("    extrinsicDecimal2: ").append(toIndentedString(extrinsicDecimal2)).append("\n");
     sb.append("    casebreakEnabled: ").append(toIndentedString(casebreakEnabled)).append("\n");
+    sb.append("    vendorId: ").append(toIndentedString(vendorId)).append("\n");
+    sb.append("    vendorPrice: ").append(toIndentedString(vendorPrice)).append("\n");
+    sb.append("    vendorPer: ").append(toIndentedString(vendorPer)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    forwardLotMixingRule: ").append(toIndentedString(forwardLotMixingRule)).append("\n");
     sb.append("    storageLotMixingRule: ").append(toIndentedString(storageLotMixingRule)).append("\n");

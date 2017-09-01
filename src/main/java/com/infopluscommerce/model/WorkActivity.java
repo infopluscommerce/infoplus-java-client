@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class WorkActivity   {
   
   private Integer id = null;
@@ -90,6 +90,8 @@ public class WorkActivity   {
   private Integer destinationPriorityCode = null;
   private Integer destinationCost = null;
   private Boolean destinationAllowItemMixing = false;
+  private Date workCreateDate = null;
+  private Date workModifyDate = null;
   private Integer masterRef = null;
   private BigDecimal weightPerWrap = null;
   private String sku = null;
@@ -99,6 +101,10 @@ public class WorkActivity   {
   private String unitCode = null;
   private String wrapCode = null;
   private Integer unitsPerWrap = null;
+  private Integer quantity = null;
+  private Integer numberOfWraps = null;
+  private Integer numberOfCases = null;
+  private Integer pickTouches = null;
   private String classRestriction = null;
   private Integer maxCycle = null;
   private Integer maxInterim = null;
@@ -1268,6 +1274,20 @@ public class WorkActivity   {
 
   
   @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("workCreateDate")
+  public Date getWorkCreateDate() {
+    return workCreateDate;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("workModifyDate")
+  public Date getWorkModifyDate() {
+    return workModifyDate;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("masterRef")
   public Integer getMasterRef() {
     return masterRef;
@@ -1407,6 +1427,34 @@ public class WorkActivity   {
   }
   public void setUnitsPerWrap(Integer unitsPerWrap) {
     this.unitsPerWrap = unitsPerWrap;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("quantity")
+  public Integer getQuantity() {
+    return quantity;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfWraps")
+  public Integer getNumberOfWraps() {
+    return numberOfWraps;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfCases")
+  public Integer getNumberOfCases() {
+    return numberOfCases;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("pickTouches")
+  public Integer getPickTouches() {
+    return pickTouches;
   }
 
   
@@ -2428,6 +2476,8 @@ public class WorkActivity   {
         Objects.equals(this.destinationPriorityCode, workActivity.destinationPriorityCode) &&
         Objects.equals(this.destinationCost, workActivity.destinationCost) &&
         Objects.equals(this.destinationAllowItemMixing, workActivity.destinationAllowItemMixing) &&
+        Objects.equals(this.workCreateDate, workActivity.workCreateDate) &&
+        Objects.equals(this.workModifyDate, workActivity.workModifyDate) &&
         Objects.equals(this.masterRef, workActivity.masterRef) &&
         Objects.equals(this.weightPerWrap, workActivity.weightPerWrap) &&
         Objects.equals(this.sku, workActivity.sku) &&
@@ -2437,6 +2487,10 @@ public class WorkActivity   {
         Objects.equals(this.unitCode, workActivity.unitCode) &&
         Objects.equals(this.wrapCode, workActivity.wrapCode) &&
         Objects.equals(this.unitsPerWrap, workActivity.unitsPerWrap) &&
+        Objects.equals(this.quantity, workActivity.quantity) &&
+        Objects.equals(this.numberOfWraps, workActivity.numberOfWraps) &&
+        Objects.equals(this.numberOfCases, workActivity.numberOfCases) &&
+        Objects.equals(this.pickTouches, workActivity.pickTouches) &&
         Objects.equals(this.classRestriction, workActivity.classRestriction) &&
         Objects.equals(this.maxCycle, workActivity.maxCycle) &&
         Objects.equals(this.maxInterim, workActivity.maxInterim) &&
@@ -2506,7 +2560,7 @@ public class WorkActivity   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, importedRecordId, lobId, createDate, modifyDate, userId, email, type, typeName, status, statusName, workBatchId, workParentId, priorityCode, foreignId, sourceWarehouseId, sourceWarehouseName, sourceLocation, sourceBuildingId, sourceBuildingName, sourceZoneId, sourceZoneName, sourceAisleId, sourceAisleAddress, sourceOrigin, sourceOriginName, sourceBillingTypeId, sourceBillingTypeName, sourceBehaviorType, sourceBehaviorTypeName, sourceFootprintId, sourceFootprintName, sourceFootprintHeight, sourceFootprintWidth, sourceFootprintDepth, sourceAddressSchemeId, sourceAddressSchemeName, sourceLevel, sourceBay, sourceNumber, sourceOnline, sourcePriorityCode, sourceCost, sourceAllowItemMixing, destinationWarehouseId, destinationWarehouseName, destinationLocation, destinationBuildingId, destinationBuildingName, destinationZoneId, destinationZoneName, destinationAisleId, destinationAisleAddress, destinationOrigin, destinationOriginName, destinationBillingTypeId, destinationBillingTypeName, destinationBehaviorType, destinationBehaviorTypeName, destinationFootprintId, destinationFootprintName, destinationFootprintHeight, destinationFootprintWidth, destinationFootprintDepth, destinationAddressSchemeId, destinationAddressSchemeName, destinationLevel, destinationBay, destinationNumber, destinationOnline, destinationPriorityCode, destinationCost, destinationAllowItemMixing, masterRef, weightPerWrap, sku, numericSortOrder, itemDescription, additionalDescription, unitCode, wrapCode, unitsPerWrap, classRestriction, maxCycle, maxInterim, seasonalItem, secure, productType, itemStatus, overallLeadTime, overallFixedReorderPoint, qualityControlIndicator, lotControlFlag, productCodeFlag, chargeCode, podRevDate, podOrderSuffix, serialCode, assetCode, backorder, absoluteMax, accountCodeId, summaryCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, buyerId, vendorSKU, upc, packingSlipDescription, commodityCode, compCode, criticalAmount, listPrice, outsideVendor, pickNo, requiresProductionLot, sector, voidDate, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
+    return Objects.hash(id, importedRecordId, lobId, createDate, modifyDate, userId, email, type, typeName, status, statusName, workBatchId, workParentId, priorityCode, foreignId, sourceWarehouseId, sourceWarehouseName, sourceLocation, sourceBuildingId, sourceBuildingName, sourceZoneId, sourceZoneName, sourceAisleId, sourceAisleAddress, sourceOrigin, sourceOriginName, sourceBillingTypeId, sourceBillingTypeName, sourceBehaviorType, sourceBehaviorTypeName, sourceFootprintId, sourceFootprintName, sourceFootprintHeight, sourceFootprintWidth, sourceFootprintDepth, sourceAddressSchemeId, sourceAddressSchemeName, sourceLevel, sourceBay, sourceNumber, sourceOnline, sourcePriorityCode, sourceCost, sourceAllowItemMixing, destinationWarehouseId, destinationWarehouseName, destinationLocation, destinationBuildingId, destinationBuildingName, destinationZoneId, destinationZoneName, destinationAisleId, destinationAisleAddress, destinationOrigin, destinationOriginName, destinationBillingTypeId, destinationBillingTypeName, destinationBehaviorType, destinationBehaviorTypeName, destinationFootprintId, destinationFootprintName, destinationFootprintHeight, destinationFootprintWidth, destinationFootprintDepth, destinationAddressSchemeId, destinationAddressSchemeName, destinationLevel, destinationBay, destinationNumber, destinationOnline, destinationPriorityCode, destinationCost, destinationAllowItemMixing, workCreateDate, workModifyDate, masterRef, weightPerWrap, sku, numericSortOrder, itemDescription, additionalDescription, unitCode, wrapCode, unitsPerWrap, quantity, numberOfWraps, numberOfCases, pickTouches, classRestriction, maxCycle, maxInterim, seasonalItem, secure, productType, itemStatus, overallLeadTime, overallFixedReorderPoint, qualityControlIndicator, lotControlFlag, productCodeFlag, chargeCode, podRevDate, podOrderSuffix, serialCode, assetCode, backorder, absoluteMax, accountCodeId, summaryCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, buyerId, vendorSKU, upc, packingSlipDescription, commodityCode, compCode, criticalAmount, listPrice, outsideVendor, pickNo, requiresProductionLot, sector, voidDate, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
   }
 
   @Override
@@ -2587,6 +2641,8 @@ public class WorkActivity   {
     sb.append("    destinationPriorityCode: ").append(toIndentedString(destinationPriorityCode)).append("\n");
     sb.append("    destinationCost: ").append(toIndentedString(destinationCost)).append("\n");
     sb.append("    destinationAllowItemMixing: ").append(toIndentedString(destinationAllowItemMixing)).append("\n");
+    sb.append("    workCreateDate: ").append(toIndentedString(workCreateDate)).append("\n");
+    sb.append("    workModifyDate: ").append(toIndentedString(workModifyDate)).append("\n");
     sb.append("    masterRef: ").append(toIndentedString(masterRef)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
@@ -2596,6 +2652,10 @@ public class WorkActivity   {
     sb.append("    unitCode: ").append(toIndentedString(unitCode)).append("\n");
     sb.append("    wrapCode: ").append(toIndentedString(wrapCode)).append("\n");
     sb.append("    unitsPerWrap: ").append(toIndentedString(unitsPerWrap)).append("\n");
+    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    numberOfWraps: ").append(toIndentedString(numberOfWraps)).append("\n");
+    sb.append("    numberOfCases: ").append(toIndentedString(numberOfCases)).append("\n");
+    sb.append("    pickTouches: ").append(toIndentedString(pickTouches)).append("\n");
     sb.append("    classRestriction: ").append(toIndentedString(classRestriction)).append("\n");
     sb.append("    maxCycle: ").append(toIndentedString(maxCycle)).append("\n");
     sb.append("    maxInterim: ").append(toIndentedString(maxInterim)).append("\n");

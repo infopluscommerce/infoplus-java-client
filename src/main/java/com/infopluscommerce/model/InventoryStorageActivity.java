@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class InventoryStorageActivity   {
   
   private Integer id = null;
@@ -28,6 +28,9 @@ public class InventoryStorageActivity   {
   private Boolean isMixedReceipts = false;
   private Integer quantity = null;
   private String address = null;
+  private Integer numberOfCases = null;
+  private BigDecimal inventoryValue = null;
+  private Integer inventoryAgeDays = null;
   private Integer warehouseId = null;
   private String warehouseName = null;
   private Integer warehouseZoneId = null;
@@ -55,7 +58,7 @@ public class InventoryStorageActivity   {
   private Integer warehouseLocationPriorityCode = null;
   private Boolean warehouseLocationAllowItemMixing = false;
   private Integer warehouseLocationCost = null;
-  private String controlNo = null;
+  private String sku = null;
   private String itemVendorSku = null;
   private String itemUpc = null;
   private Integer itemMajorGroup = null;
@@ -217,6 +220,57 @@ public class InventoryStorageActivity   {
   }
   public void setAddress(String address) {
     this.address = address;
+  }
+
+  
+  /**
+   **/
+  public InventoryStorageActivity numberOfCases(Integer numberOfCases) {
+    this.numberOfCases = numberOfCases;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfCases")
+  public Integer getNumberOfCases() {
+    return numberOfCases;
+  }
+  public void setNumberOfCases(Integer numberOfCases) {
+    this.numberOfCases = numberOfCases;
+  }
+
+  
+  /**
+   **/
+  public InventoryStorageActivity inventoryValue(BigDecimal inventoryValue) {
+    this.inventoryValue = inventoryValue;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("inventoryValue")
+  public BigDecimal getInventoryValue() {
+    return inventoryValue;
+  }
+  public void setInventoryValue(BigDecimal inventoryValue) {
+    this.inventoryValue = inventoryValue;
+  }
+
+  
+  /**
+   **/
+  public InventoryStorageActivity inventoryAgeDays(Integer inventoryAgeDays) {
+    this.inventoryAgeDays = inventoryAgeDays;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("inventoryAgeDays")
+  public Integer getInventoryAgeDays() {
+    return inventoryAgeDays;
+  }
+  public void setInventoryAgeDays(Integer inventoryAgeDays) {
+    this.inventoryAgeDays = inventoryAgeDays;
   }
 
   
@@ -681,18 +735,18 @@ public class InventoryStorageActivity   {
   
   /**
    **/
-  public InventoryStorageActivity controlNo(String controlNo) {
-    this.controlNo = controlNo;
+  public InventoryStorageActivity sku(String sku) {
+    this.sku = sku;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("controlNo")
-  public String getControlNo() {
-    return controlNo;
+  @JsonProperty("sku")
+  public String getSku() {
+    return sku;
   }
-  public void setControlNo(String controlNo) {
-    this.controlNo = controlNo;
+  public void setSku(String sku) {
+    this.sku = sku;
   }
 
   
@@ -1322,6 +1376,9 @@ public class InventoryStorageActivity   {
         Objects.equals(this.isMixedReceipts, inventoryStorageActivity.isMixedReceipts) &&
         Objects.equals(this.quantity, inventoryStorageActivity.quantity) &&
         Objects.equals(this.address, inventoryStorageActivity.address) &&
+        Objects.equals(this.numberOfCases, inventoryStorageActivity.numberOfCases) &&
+        Objects.equals(this.inventoryValue, inventoryStorageActivity.inventoryValue) &&
+        Objects.equals(this.inventoryAgeDays, inventoryStorageActivity.inventoryAgeDays) &&
         Objects.equals(this.warehouseId, inventoryStorageActivity.warehouseId) &&
         Objects.equals(this.warehouseName, inventoryStorageActivity.warehouseName) &&
         Objects.equals(this.warehouseZoneId, inventoryStorageActivity.warehouseZoneId) &&
@@ -1349,7 +1406,7 @@ public class InventoryStorageActivity   {
         Objects.equals(this.warehouseLocationPriorityCode, inventoryStorageActivity.warehouseLocationPriorityCode) &&
         Objects.equals(this.warehouseLocationAllowItemMixing, inventoryStorageActivity.warehouseLocationAllowItemMixing) &&
         Objects.equals(this.warehouseLocationCost, inventoryStorageActivity.warehouseLocationCost) &&
-        Objects.equals(this.controlNo, inventoryStorageActivity.controlNo) &&
+        Objects.equals(this.sku, inventoryStorageActivity.sku) &&
         Objects.equals(this.itemVendorSku, inventoryStorageActivity.itemVendorSku) &&
         Objects.equals(this.itemUpc, inventoryStorageActivity.itemUpc) &&
         Objects.equals(this.itemMajorGroup, inventoryStorageActivity.itemMajorGroup) &&
@@ -1399,7 +1456,7 @@ public class InventoryStorageActivity   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, importedRecordId, createDate, modifyDate, warehouseLocationId, itemId, lobId, snapshotDate, isMixedReceipts, quantity, address, warehouseId, warehouseName, warehouseZoneId, warehouseZoneName, warehouseZoneAddress, warehouseBuildingId, warehouseBuildingName, warehouseAisleId, warehouseAisleAddress, warehouseLocationOriginId, warehouseLocationOriginName, warehouseLocationBillingTypeId, warehouseLocationBillingTypeName, warehouseLocationBehaviorTypeId, warehouseLocationBehaviorTypeName, warehouseLocationFootprintId, warehouseLocationFootprintName, warehouseLocationFootprintWidth, warehouseLocationFootprintHeight, warehouseLocationFootprintDepth, warehouseLocationLevel, warehouseLocationBay, warehouseLocationNumber, warehouseLocationOnline, warehouseLocationPriorityCode, warehouseLocationAllowItemMixing, warehouseLocationCost, controlNo, itemVendorSku, itemUpc, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptUnitsPerCase, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptCaseWeight, receiptProductIdTag, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
+    return Objects.hash(id, importedRecordId, createDate, modifyDate, warehouseLocationId, itemId, lobId, snapshotDate, isMixedReceipts, quantity, address, numberOfCases, inventoryValue, inventoryAgeDays, warehouseId, warehouseName, warehouseZoneId, warehouseZoneName, warehouseZoneAddress, warehouseBuildingId, warehouseBuildingName, warehouseAisleId, warehouseAisleAddress, warehouseLocationOriginId, warehouseLocationOriginName, warehouseLocationBillingTypeId, warehouseLocationBillingTypeName, warehouseLocationBehaviorTypeId, warehouseLocationBehaviorTypeName, warehouseLocationFootprintId, warehouseLocationFootprintName, warehouseLocationFootprintWidth, warehouseLocationFootprintHeight, warehouseLocationFootprintDepth, warehouseLocationLevel, warehouseLocationBay, warehouseLocationNumber, warehouseLocationOnline, warehouseLocationPriorityCode, warehouseLocationAllowItemMixing, warehouseLocationCost, sku, itemVendorSku, itemUpc, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptUnitsPerCase, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptCaseWeight, receiptProductIdTag, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
   }
 
   @Override
@@ -1418,6 +1475,9 @@ public class InventoryStorageActivity   {
     sb.append("    isMixedReceipts: ").append(toIndentedString(isMixedReceipts)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
+    sb.append("    numberOfCases: ").append(toIndentedString(numberOfCases)).append("\n");
+    sb.append("    inventoryValue: ").append(toIndentedString(inventoryValue)).append("\n");
+    sb.append("    inventoryAgeDays: ").append(toIndentedString(inventoryAgeDays)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
     sb.append("    warehouseName: ").append(toIndentedString(warehouseName)).append("\n");
     sb.append("    warehouseZoneId: ").append(toIndentedString(warehouseZoneId)).append("\n");
@@ -1445,7 +1505,7 @@ public class InventoryStorageActivity   {
     sb.append("    warehouseLocationPriorityCode: ").append(toIndentedString(warehouseLocationPriorityCode)).append("\n");
     sb.append("    warehouseLocationAllowItemMixing: ").append(toIndentedString(warehouseLocationAllowItemMixing)).append("\n");
     sb.append("    warehouseLocationCost: ").append(toIndentedString(warehouseLocationCost)).append("\n");
-    sb.append("    controlNo: ").append(toIndentedString(controlNo)).append("\n");
+    sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    itemVendorSku: ").append(toIndentedString(itemVendorSku)).append("\n");
     sb.append("    itemUpc: ").append(toIndentedString(itemUpc)).append("\n");
     sb.append("    itemMajorGroup: ").append(toIndentedString(itemMajorGroup)).append("\n");

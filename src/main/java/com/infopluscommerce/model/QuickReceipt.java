@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class QuickReceipt   {
   
   private Integer id = null;
@@ -42,7 +42,7 @@ public class QuickReceipt   {
   private BigDecimal cartonWidth = null;
   private BigDecimal cartonHeight = null;
   private BigDecimal cost = null;
-  private BigDecimal sell = null;
+  private BigDecimal sellPrice = null;
   private String pricingPer = null;
   private Integer generatedItemReceiptId = null;
   private Integer generatedASNId = null;
@@ -429,18 +429,18 @@ public class QuickReceipt   {
   
   /**
    **/
-  public QuickReceipt sell(BigDecimal sell) {
-    this.sell = sell;
+  public QuickReceipt sellPrice(BigDecimal sellPrice) {
+    this.sellPrice = sellPrice;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("sell")
-  public BigDecimal getSell() {
-    return sell;
+  @JsonProperty("sellPrice")
+  public BigDecimal getSellPrice() {
+    return sellPrice;
   }
-  public void setSell(BigDecimal sell) {
-    this.sell = sell;
+  public void setSellPrice(BigDecimal sellPrice) {
+    this.sellPrice = sellPrice;
   }
 
   
@@ -578,7 +578,7 @@ public class QuickReceipt   {
         Objects.equals(this.cartonWidth, quickReceipt.cartonWidth) &&
         Objects.equals(this.cartonHeight, quickReceipt.cartonHeight) &&
         Objects.equals(this.cost, quickReceipt.cost) &&
-        Objects.equals(this.sell, quickReceipt.sell) &&
+        Objects.equals(this.sellPrice, quickReceipt.sellPrice) &&
         Objects.equals(this.pricingPer, quickReceipt.pricingPer) &&
         Objects.equals(this.generatedItemReceiptId, quickReceipt.generatedItemReceiptId) &&
         Objects.equals(this.generatedASNId, quickReceipt.generatedASNId) &&
@@ -590,7 +590,7 @@ public class QuickReceipt   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createdBy, createDate, modifyDate, warehouseId, lobId, locationId, quantity, vendorId, carrier, status, unitCode, wrapCode, weightPerWrap, unitsPerWrap, unitsPerCase, casesPerPallet, caseWeight, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, cost, sell, pricingPer, generatedItemReceiptId, generatedASNId, dockDate, productIdTag, customFields, sku);
+    return Objects.hash(id, createdBy, createDate, modifyDate, warehouseId, lobId, locationId, quantity, vendorId, carrier, status, unitCode, wrapCode, weightPerWrap, unitsPerWrap, unitsPerCase, casesPerPallet, caseWeight, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, cost, sellPrice, pricingPer, generatedItemReceiptId, generatedASNId, dockDate, productIdTag, customFields, sku);
   }
 
   @Override
@@ -623,7 +623,7 @@ public class QuickReceipt   {
     sb.append("    cartonWidth: ").append(toIndentedString(cartonWidth)).append("\n");
     sb.append("    cartonHeight: ").append(toIndentedString(cartonHeight)).append("\n");
     sb.append("    cost: ").append(toIndentedString(cost)).append("\n");
-    sb.append("    sell: ").append(toIndentedString(sell)).append("\n");
+    sb.append("    sellPrice: ").append(toIndentedString(sellPrice)).append("\n");
     sb.append("    pricingPer: ").append(toIndentedString(pricingPer)).append("\n");
     sb.append("    generatedItemReceiptId: ").append(toIndentedString(generatedItemReceiptId)).append("\n");
     sb.append("    generatedASNId: ").append(toIndentedString(generatedASNId)).append("\n");

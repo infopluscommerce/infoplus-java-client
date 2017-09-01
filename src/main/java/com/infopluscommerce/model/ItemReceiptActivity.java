@@ -14,12 +14,14 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class ItemReceiptActivity   {
   
   private Integer id = null;
   private Date createDate = null;
   private Date modifyDate = null;
+  private Date receiptASNCreateDate = null;
+  private Date receiptModifyDate = null;
   private Integer itemReceiptId = null;
   private Integer lobId = null;
   private String poNo = null;
@@ -29,14 +31,20 @@ public class ItemReceiptActivity   {
   private String receiptRevisionDate = null;
   private String receiptProductionLot = null;
   private Date receiptReceiveDate = null;
+  private Integer receiptReceiveQuantity = null;
+  private Integer receiptNumberOfCases = null;
   private String receiptStatus = null;
   private String receiptStatusName = null;
   private Integer receiptUnitCode = null;
   private String receiptUnitCodeText = null;
   private Integer receiptWrapCode = null;
   private String receiptWrapCodeText = null;
+  private BigDecimal receiptWrapUnitWeight = null;
   private BigDecimal receiptCaseWeight = null;
   private String receiptProductIdTag = null;
+  private String receiptEnteredBy = null;
+  private String receiptReceivedBy = null;
+  private String receiptType = null;
   private Integer warehouseId = null;
   private String warehouseName = null;
   private Integer itemId = null;
@@ -131,6 +139,40 @@ public class ItemReceiptActivity   {
   }
   public void setModifyDate(Date modifyDate) {
     this.modifyDate = modifyDate;
+  }
+
+  
+  /**
+   **/
+  public ItemReceiptActivity receiptASNCreateDate(Date receiptASNCreateDate) {
+    this.receiptASNCreateDate = receiptASNCreateDate;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptASNCreateDate")
+  public Date getReceiptASNCreateDate() {
+    return receiptASNCreateDate;
+  }
+  public void setReceiptASNCreateDate(Date receiptASNCreateDate) {
+    this.receiptASNCreateDate = receiptASNCreateDate;
+  }
+
+  
+  /**
+   **/
+  public ItemReceiptActivity receiptModifyDate(Date receiptModifyDate) {
+    this.receiptModifyDate = receiptModifyDate;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptModifyDate")
+  public Date getReceiptModifyDate() {
+    return receiptModifyDate;
+  }
+  public void setReceiptModifyDate(Date receiptModifyDate) {
+    this.receiptModifyDate = receiptModifyDate;
   }
 
   
@@ -279,6 +321,40 @@ public class ItemReceiptActivity   {
   
   /**
    **/
+  public ItemReceiptActivity receiptReceiveQuantity(Integer receiptReceiveQuantity) {
+    this.receiptReceiveQuantity = receiptReceiveQuantity;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptReceiveQuantity")
+  public Integer getReceiptReceiveQuantity() {
+    return receiptReceiveQuantity;
+  }
+  public void setReceiptReceiveQuantity(Integer receiptReceiveQuantity) {
+    this.receiptReceiveQuantity = receiptReceiveQuantity;
+  }
+
+  
+  /**
+   **/
+  public ItemReceiptActivity receiptNumberOfCases(Integer receiptNumberOfCases) {
+    this.receiptNumberOfCases = receiptNumberOfCases;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptNumberOfCases")
+  public Integer getReceiptNumberOfCases() {
+    return receiptNumberOfCases;
+  }
+  public void setReceiptNumberOfCases(Integer receiptNumberOfCases) {
+    this.receiptNumberOfCases = receiptNumberOfCases;
+  }
+
+  
+  /**
+   **/
   public ItemReceiptActivity receiptStatus(String receiptStatus) {
     this.receiptStatus = receiptStatus;
     return this;
@@ -381,6 +457,23 @@ public class ItemReceiptActivity   {
   
   /**
    **/
+  public ItemReceiptActivity receiptWrapUnitWeight(BigDecimal receiptWrapUnitWeight) {
+    this.receiptWrapUnitWeight = receiptWrapUnitWeight;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptWrapUnitWeight")
+  public BigDecimal getReceiptWrapUnitWeight() {
+    return receiptWrapUnitWeight;
+  }
+  public void setReceiptWrapUnitWeight(BigDecimal receiptWrapUnitWeight) {
+    this.receiptWrapUnitWeight = receiptWrapUnitWeight;
+  }
+
+  
+  /**
+   **/
   public ItemReceiptActivity receiptCaseWeight(BigDecimal receiptCaseWeight) {
     this.receiptCaseWeight = receiptCaseWeight;
     return this;
@@ -410,6 +503,57 @@ public class ItemReceiptActivity   {
   }
   public void setReceiptProductIdTag(String receiptProductIdTag) {
     this.receiptProductIdTag = receiptProductIdTag;
+  }
+
+  
+  /**
+   **/
+  public ItemReceiptActivity receiptEnteredBy(String receiptEnteredBy) {
+    this.receiptEnteredBy = receiptEnteredBy;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptEnteredBy")
+  public String getReceiptEnteredBy() {
+    return receiptEnteredBy;
+  }
+  public void setReceiptEnteredBy(String receiptEnteredBy) {
+    this.receiptEnteredBy = receiptEnteredBy;
+  }
+
+  
+  /**
+   **/
+  public ItemReceiptActivity receiptReceivedBy(String receiptReceivedBy) {
+    this.receiptReceivedBy = receiptReceivedBy;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptReceivedBy")
+  public String getReceiptReceivedBy() {
+    return receiptReceivedBy;
+  }
+  public void setReceiptReceivedBy(String receiptReceivedBy) {
+    this.receiptReceivedBy = receiptReceivedBy;
+  }
+
+  
+  /**
+   **/
+  public ItemReceiptActivity receiptType(String receiptType) {
+    this.receiptType = receiptType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("receiptType")
+  public String getReceiptType() {
+    return receiptType;
+  }
+  public void setReceiptType(String receiptType) {
+    this.receiptType = receiptType;
   }
 
   
@@ -1184,6 +1328,8 @@ public class ItemReceiptActivity   {
     return Objects.equals(this.id, itemReceiptActivity.id) &&
         Objects.equals(this.createDate, itemReceiptActivity.createDate) &&
         Objects.equals(this.modifyDate, itemReceiptActivity.modifyDate) &&
+        Objects.equals(this.receiptASNCreateDate, itemReceiptActivity.receiptASNCreateDate) &&
+        Objects.equals(this.receiptModifyDate, itemReceiptActivity.receiptModifyDate) &&
         Objects.equals(this.itemReceiptId, itemReceiptActivity.itemReceiptId) &&
         Objects.equals(this.lobId, itemReceiptActivity.lobId) &&
         Objects.equals(this.poNo, itemReceiptActivity.poNo) &&
@@ -1193,14 +1339,20 @@ public class ItemReceiptActivity   {
         Objects.equals(this.receiptRevisionDate, itemReceiptActivity.receiptRevisionDate) &&
         Objects.equals(this.receiptProductionLot, itemReceiptActivity.receiptProductionLot) &&
         Objects.equals(this.receiptReceiveDate, itemReceiptActivity.receiptReceiveDate) &&
+        Objects.equals(this.receiptReceiveQuantity, itemReceiptActivity.receiptReceiveQuantity) &&
+        Objects.equals(this.receiptNumberOfCases, itemReceiptActivity.receiptNumberOfCases) &&
         Objects.equals(this.receiptStatus, itemReceiptActivity.receiptStatus) &&
         Objects.equals(this.receiptStatusName, itemReceiptActivity.receiptStatusName) &&
         Objects.equals(this.receiptUnitCode, itemReceiptActivity.receiptUnitCode) &&
         Objects.equals(this.receiptUnitCodeText, itemReceiptActivity.receiptUnitCodeText) &&
         Objects.equals(this.receiptWrapCode, itemReceiptActivity.receiptWrapCode) &&
         Objects.equals(this.receiptWrapCodeText, itemReceiptActivity.receiptWrapCodeText) &&
+        Objects.equals(this.receiptWrapUnitWeight, itemReceiptActivity.receiptWrapUnitWeight) &&
         Objects.equals(this.receiptCaseWeight, itemReceiptActivity.receiptCaseWeight) &&
         Objects.equals(this.receiptProductIdTag, itemReceiptActivity.receiptProductIdTag) &&
+        Objects.equals(this.receiptEnteredBy, itemReceiptActivity.receiptEnteredBy) &&
+        Objects.equals(this.receiptReceivedBy, itemReceiptActivity.receiptReceivedBy) &&
+        Objects.equals(this.receiptType, itemReceiptActivity.receiptType) &&
         Objects.equals(this.warehouseId, itemReceiptActivity.warehouseId) &&
         Objects.equals(this.warehouseName, itemReceiptActivity.warehouseName) &&
         Objects.equals(this.itemId, itemReceiptActivity.itemId) &&
@@ -1259,7 +1411,7 @@ public class ItemReceiptActivity   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, itemReceiptId, lobId, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptUnitsPerCase, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptCaseWeight, receiptProductIdTag, warehouseId, warehouseName, itemId, sku, itemVendorSku, itemUPC, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, vendorComplianceSurveyAnswer1, vendorComplianceSurveyAnswer2, vendorComplianceSurveyAnswer3, vendorComplianceSurveyAnswer4, vendorComplianceSurveyAnswer5, vendorComplianceSurveyAnswer6, vendorComplianceSurveyAnswer7, vendorComplianceSurveyAnswer8, vendorComplianceSurveyAnswer9, vendorComplianceSurveyAnswer10, vendorComplianceSurveyAnswer11, vendorComplianceSurveyAnswer12, vendorComplianceSurveyAnswer13, vendorComplianceSurveyAnswer14, vendorComplianceSurveyAnswer15, vendorComplianceSurveyAnswer16, vendorComplianceSurveyAnswer17, vendorComplianceSurveyAnswer18, vendorComplianceSurveyAnswer19, vendorComplianceSurveyAnswer20, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
+    return Objects.hash(id, createDate, modifyDate, receiptASNCreateDate, receiptModifyDate, itemReceiptId, lobId, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptUnitsPerCase, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptReceiveQuantity, receiptNumberOfCases, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptWrapUnitWeight, receiptCaseWeight, receiptProductIdTag, receiptEnteredBy, receiptReceivedBy, receiptType, warehouseId, warehouseName, itemId, sku, itemVendorSku, itemUPC, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, vendorComplianceSurveyAnswer1, vendorComplianceSurveyAnswer2, vendorComplianceSurveyAnswer3, vendorComplianceSurveyAnswer4, vendorComplianceSurveyAnswer5, vendorComplianceSurveyAnswer6, vendorComplianceSurveyAnswer7, vendorComplianceSurveyAnswer8, vendorComplianceSurveyAnswer9, vendorComplianceSurveyAnswer10, vendorComplianceSurveyAnswer11, vendorComplianceSurveyAnswer12, vendorComplianceSurveyAnswer13, vendorComplianceSurveyAnswer14, vendorComplianceSurveyAnswer15, vendorComplianceSurveyAnswer16, vendorComplianceSurveyAnswer17, vendorComplianceSurveyAnswer18, vendorComplianceSurveyAnswer19, vendorComplianceSurveyAnswer20, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
   }
 
   @Override
@@ -1270,6 +1422,8 @@ public class ItemReceiptActivity   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    receiptASNCreateDate: ").append(toIndentedString(receiptASNCreateDate)).append("\n");
+    sb.append("    receiptModifyDate: ").append(toIndentedString(receiptModifyDate)).append("\n");
     sb.append("    itemReceiptId: ").append(toIndentedString(itemReceiptId)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
     sb.append("    poNo: ").append(toIndentedString(poNo)).append("\n");
@@ -1279,14 +1433,20 @@ public class ItemReceiptActivity   {
     sb.append("    receiptRevisionDate: ").append(toIndentedString(receiptRevisionDate)).append("\n");
     sb.append("    receiptProductionLot: ").append(toIndentedString(receiptProductionLot)).append("\n");
     sb.append("    receiptReceiveDate: ").append(toIndentedString(receiptReceiveDate)).append("\n");
+    sb.append("    receiptReceiveQuantity: ").append(toIndentedString(receiptReceiveQuantity)).append("\n");
+    sb.append("    receiptNumberOfCases: ").append(toIndentedString(receiptNumberOfCases)).append("\n");
     sb.append("    receiptStatus: ").append(toIndentedString(receiptStatus)).append("\n");
     sb.append("    receiptStatusName: ").append(toIndentedString(receiptStatusName)).append("\n");
     sb.append("    receiptUnitCode: ").append(toIndentedString(receiptUnitCode)).append("\n");
     sb.append("    receiptUnitCodeText: ").append(toIndentedString(receiptUnitCodeText)).append("\n");
     sb.append("    receiptWrapCode: ").append(toIndentedString(receiptWrapCode)).append("\n");
     sb.append("    receiptWrapCodeText: ").append(toIndentedString(receiptWrapCodeText)).append("\n");
+    sb.append("    receiptWrapUnitWeight: ").append(toIndentedString(receiptWrapUnitWeight)).append("\n");
     sb.append("    receiptCaseWeight: ").append(toIndentedString(receiptCaseWeight)).append("\n");
     sb.append("    receiptProductIdTag: ").append(toIndentedString(receiptProductIdTag)).append("\n");
+    sb.append("    receiptEnteredBy: ").append(toIndentedString(receiptEnteredBy)).append("\n");
+    sb.append("    receiptReceivedBy: ").append(toIndentedString(receiptReceivedBy)).append("\n");
+    sb.append("    receiptType: ").append(toIndentedString(receiptType)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
     sb.append("    warehouseName: ").append(toIndentedString(warehouseName)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");

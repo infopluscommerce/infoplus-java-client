@@ -14,10 +14,11 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-27T16:22:36.682-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
 public class PerpetualInventoryLog   {
   
   private Integer id = null;
+  private Integer itemReceiptLocationId = null;
   private Integer itemReceiptId = null;
   private Integer skuId = null;
   private Integer asnId = null;
@@ -109,6 +110,13 @@ public class PerpetualInventoryLog   {
   @JsonProperty("id")
   public Integer getId() {
     return id;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("itemReceiptLocationId")
+  public Integer getItemReceiptLocationId() {
+    return itemReceiptLocationId;
   }
 
   
@@ -1388,6 +1396,7 @@ public class PerpetualInventoryLog   {
     }
     PerpetualInventoryLog perpetualInventoryLog = (PerpetualInventoryLog) o;
     return Objects.equals(this.id, perpetualInventoryLog.id) &&
+        Objects.equals(this.itemReceiptLocationId, perpetualInventoryLog.itemReceiptLocationId) &&
         Objects.equals(this.itemReceiptId, perpetualInventoryLog.itemReceiptId) &&
         Objects.equals(this.skuId, perpetualInventoryLog.skuId) &&
         Objects.equals(this.asnId, perpetualInventoryLog.asnId) &&
@@ -1477,7 +1486,7 @@ public class PerpetualInventoryLog   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, itemReceiptId, skuId, asnId, lobId, legacyPoNo, warehouseId, currentQuantity, address, warehouseLocationId, locationStatus, orderDate, receiptStatus, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sell, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, impressions, asnLine, updatedAt, itemForwardLotMixingRule, itemStorageLotMixingRule, itemForwardItemMixingRule, itemStorageItemMixingRule, itemAllocationRule, itemBarcodeField, itemWarehouseDisplayField, itemProductIdTagSchemeId, customFields);
+    return Objects.hash(id, itemReceiptLocationId, itemReceiptId, skuId, asnId, lobId, legacyPoNo, warehouseId, currentQuantity, address, warehouseLocationId, locationStatus, orderDate, receiptStatus, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sell, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, impressions, asnLine, updatedAt, itemForwardLotMixingRule, itemStorageLotMixingRule, itemForwardItemMixingRule, itemStorageItemMixingRule, itemAllocationRule, itemBarcodeField, itemWarehouseDisplayField, itemProductIdTagSchemeId, customFields);
   }
 
   @Override
@@ -1486,6 +1495,7 @@ public class PerpetualInventoryLog   {
     sb.append("class PerpetualInventoryLog {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    itemReceiptLocationId: ").append(toIndentedString(itemReceiptLocationId)).append("\n");
     sb.append("    itemReceiptId: ").append(toIndentedString(itemReceiptId)).append("\n");
     sb.append("    skuId: ").append(toIndentedString(skuId)).append("\n");
     sb.append("    asnId: ").append(toIndentedString(asnId)).append("\n");
