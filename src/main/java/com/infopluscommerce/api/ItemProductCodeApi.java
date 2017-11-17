@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ItemProductCodeApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ItemProductCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemProductCode".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemProductCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ItemProductCodeApi {
   }
   
   /**
-   * Add new audit for an itemProductCode
-   * Adds an audit to an existing itemProductCode.
-   * @param itemProductCodeId Id of the itemProductCode to add an audit to (required)
-   * @param itemProductCodeAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemProductCodeAudit(Integer itemProductCodeId, String itemProductCodeAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemProductCodeId' is set
-    if (itemProductCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemProductCodeId' when calling addItemProductCodeAudit");
-    }
-    
-    // verify the required parameter 'itemProductCodeAudit' is set
-    if (itemProductCodeAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemProductCodeAudit' when calling addItemProductCodeAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemProductCode/{itemProductCodeId}/audit/{itemProductCodeAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemProductCodeId" + "\\}", apiClient.escapeString(itemProductCodeId.toString()))
-      .replaceAll("\\{" + "itemProductCodeAudit" + "\\}", apiClient.escapeString(itemProductCodeAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an itemProductCode.
-   * Adds a tag to an existing itemProductCode.
-   * @param itemProductCodeId Id of the itemProductCode to add a tag to (required)
-   * @param itemProductCodeTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemProductCodeTag(Integer itemProductCodeId, String itemProductCodeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemProductCodeId' is set
-    if (itemProductCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemProductCodeId' when calling addItemProductCodeTag");
-    }
-    
-    // verify the required parameter 'itemProductCodeTag' is set
-    if (itemProductCodeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemProductCodeTag' when calling addItemProductCodeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemProductCode/{itemProductCodeId}/tag/{itemProductCodeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemProductCodeId" + "\\}", apiClient.escapeString(itemProductCodeId.toString()))
-      .replaceAll("\\{" + "itemProductCodeTag" + "\\}", apiClient.escapeString(itemProductCodeTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an itemProductCode
    * Deletes the itemProductCode identified by the specified id.
    * @param itemProductCodeId Id of the itemProductCode to be deleted. (required)
@@ -204,61 +98,8 @@ public class ItemProductCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemProductCode/{itemProductCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemProductCode/{itemProductCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemProductCodeId" + "\\}", apiClient.escapeString(itemProductCodeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an itemProductCode.
-   * Deletes an existing itemProductCode tag using the specified data.
-   * @param itemProductCodeId Id of the itemProductCode to remove tag from (required)
-   * @param itemProductCodeTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteItemProductCodeTag(Integer itemProductCodeId, String itemProductCodeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemProductCodeId' is set
-    if (itemProductCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemProductCodeId' when calling deleteItemProductCodeTag");
-    }
-    
-    // verify the required parameter 'itemProductCodeTag' is set
-    if (itemProductCodeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemProductCodeTag' when calling deleteItemProductCodeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemProductCode/{itemProductCodeId}/tag/{itemProductCodeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemProductCodeId" + "\\}", apiClient.escapeString(itemProductCodeId.toString()))
-      .replaceAll("\\{" + "itemProductCodeTag" + "\\}", apiClient.escapeString(itemProductCodeTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ItemProductCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemProductCode/duplicate/{itemProductCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemProductCode/duplicate/{itemProductCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemProductCodeId" + "\\}", apiClient.escapeString(itemProductCodeId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ItemProductCodeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/itemProductCode/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemProductCode/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ItemProductCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemProductCode/{itemProductCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemProductCode/{itemProductCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemProductCodeId" + "\\}", apiClient.escapeString(itemProductCodeId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ItemProductCodeApi {
   }
   
   /**
-   * Get the tags for an itemProductCode.
-   * Get all existing itemProductCode tags.
-   * @param itemProductCodeId Id of the itemProductCode to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getItemProductCodeTags(Integer itemProductCodeId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemProductCodeId' is set
-    if (itemProductCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemProductCodeId' when calling getItemProductCodeTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemProductCode/{itemProductCodeId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemProductCodeId" + "\\}", apiClient.escapeString(itemProductCodeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an itemProductCode
    * Updates an existing itemProductCode using the specified data.
    * @param body ItemProductCode to be updated. (required)
@@ -498,7 +293,7 @@ public class ItemProductCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemProductCode".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemProductCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

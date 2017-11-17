@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class AisleApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class AisleApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/aisle".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/aisle".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class AisleApi {
   }
   
   /**
-   * Add new audit for an aisle
-   * Adds an audit to an existing aisle.
-   * @param aisleId Id of the aisle to add an audit to (required)
-   * @param aisleAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addAisleAudit(Integer aisleId, String aisleAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'aisleId' is set
-    if (aisleId == null) {
-      throw new ApiException(400, "Missing the required parameter 'aisleId' when calling addAisleAudit");
-    }
-    
-    // verify the required parameter 'aisleAudit' is set
-    if (aisleAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'aisleAudit' when calling addAisleAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/aisle/{aisleId}/audit/{aisleAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "aisleId" + "\\}", apiClient.escapeString(aisleId.toString()))
-      .replaceAll("\\{" + "aisleAudit" + "\\}", apiClient.escapeString(aisleAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an aisle.
-   * Adds a tag to an existing aisle.
-   * @param aisleId Id of the aisle to add a tag to (required)
-   * @param aisleTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addAisleTag(Integer aisleId, String aisleTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'aisleId' is set
-    if (aisleId == null) {
-      throw new ApiException(400, "Missing the required parameter 'aisleId' when calling addAisleTag");
-    }
-    
-    // verify the required parameter 'aisleTag' is set
-    if (aisleTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'aisleTag' when calling addAisleTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/aisle/{aisleId}/tag/{aisleTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "aisleId" + "\\}", apiClient.escapeString(aisleId.toString()))
-      .replaceAll("\\{" + "aisleTag" + "\\}", apiClient.escapeString(aisleTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an aisle
    * Deletes the aisle identified by the specified id.
    * @param aisleId Id of the aisle to be deleted. (required)
@@ -204,61 +98,8 @@ public class AisleApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/aisle/{aisleId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/aisle/{aisleId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "aisleId" + "\\}", apiClient.escapeString(aisleId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an aisle.
-   * Deletes an existing aisle tag using the specified data.
-   * @param aisleId Id of the aisle to remove tag from (required)
-   * @param aisleTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteAisleTag(Integer aisleId, String aisleTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'aisleId' is set
-    if (aisleId == null) {
-      throw new ApiException(400, "Missing the required parameter 'aisleId' when calling deleteAisleTag");
-    }
-    
-    // verify the required parameter 'aisleTag' is set
-    if (aisleTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'aisleTag' when calling deleteAisleTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/aisle/{aisleId}/tag/{aisleTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "aisleId" + "\\}", apiClient.escapeString(aisleId.toString()))
-      .replaceAll("\\{" + "aisleTag" + "\\}", apiClient.escapeString(aisleTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -302,7 +143,7 @@ public class AisleApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/aisle/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/aisle/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -357,7 +198,7 @@ public class AisleApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/aisle/{aisleId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/aisle/{aisleId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "aisleId" + "\\}", apiClient.escapeString(aisleId.toString()));
 
     // query params
@@ -390,52 +231,6 @@ public class AisleApi {
   }
   
   /**
-   * Get the tags for an aisle.
-   * Get all existing aisle tags.
-   * @param aisleId Id of the aisle to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getAisleTags(Integer aisleId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'aisleId' is set
-    if (aisleId == null) {
-      throw new ApiException(400, "Missing the required parameter 'aisleId' when calling getAisleTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/aisle/{aisleId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "aisleId" + "\\}", apiClient.escapeString(aisleId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated an aisle by id
    * Returns a duplicated aisle identified by the specified id.
    * @param aisleId Id of the aisle to be duplicated. (required)
@@ -451,7 +246,7 @@ public class AisleApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/aisle/duplicate/{aisleId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/aisle/duplicate/{aisleId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "aisleId" + "\\}", apiClient.escapeString(aisleId.toString()));
 
     // query params
@@ -498,7 +293,7 @@ public class AisleApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/aisle".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/aisle".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class AisleApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/aisle/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/aisle/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class LocationAddressSchemeApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class LocationAddressSchemeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/locationAddressScheme".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class LocationAddressSchemeApi {
   }
   
   /**
-   * Add new audit for a locationAddressScheme
-   * Adds an audit to an existing locationAddressScheme.
-   * @param locationAddressSchemeId Id of the locationAddressScheme to add an audit to (required)
-   * @param locationAddressSchemeAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addLocationAddressSchemeAudit(Integer locationAddressSchemeId, String locationAddressSchemeAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'locationAddressSchemeId' is set
-    if (locationAddressSchemeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'locationAddressSchemeId' when calling addLocationAddressSchemeAudit");
-    }
-    
-    // verify the required parameter 'locationAddressSchemeAudit' is set
-    if (locationAddressSchemeAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'locationAddressSchemeAudit' when calling addLocationAddressSchemeAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/{locationAddressSchemeId}/audit/{locationAddressSchemeAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "locationAddressSchemeId" + "\\}", apiClient.escapeString(locationAddressSchemeId.toString()))
-      .replaceAll("\\{" + "locationAddressSchemeAudit" + "\\}", apiClient.escapeString(locationAddressSchemeAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a locationAddressScheme.
-   * Adds a tag to an existing locationAddressScheme.
-   * @param locationAddressSchemeId Id of the locationAddressScheme to add a tag to (required)
-   * @param locationAddressSchemeTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addLocationAddressSchemeTag(Integer locationAddressSchemeId, String locationAddressSchemeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'locationAddressSchemeId' is set
-    if (locationAddressSchemeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'locationAddressSchemeId' when calling addLocationAddressSchemeTag");
-    }
-    
-    // verify the required parameter 'locationAddressSchemeTag' is set
-    if (locationAddressSchemeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'locationAddressSchemeTag' when calling addLocationAddressSchemeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/{locationAddressSchemeId}/tag/{locationAddressSchemeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "locationAddressSchemeId" + "\\}", apiClient.escapeString(locationAddressSchemeId.toString()))
-      .replaceAll("\\{" + "locationAddressSchemeTag" + "\\}", apiClient.escapeString(locationAddressSchemeTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a locationAddressScheme
    * Deletes the locationAddressScheme identified by the specified id.
    * @param locationAddressSchemeId Id of the locationAddressScheme to be deleted. (required)
@@ -204,61 +98,8 @@ public class LocationAddressSchemeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/{locationAddressSchemeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/locationAddressScheme/{locationAddressSchemeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "locationAddressSchemeId" + "\\}", apiClient.escapeString(locationAddressSchemeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a locationAddressScheme.
-   * Deletes an existing locationAddressScheme tag using the specified data.
-   * @param locationAddressSchemeId Id of the locationAddressScheme to remove tag from (required)
-   * @param locationAddressSchemeTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteLocationAddressSchemeTag(Integer locationAddressSchemeId, String locationAddressSchemeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'locationAddressSchemeId' is set
-    if (locationAddressSchemeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'locationAddressSchemeId' when calling deleteLocationAddressSchemeTag");
-    }
-    
-    // verify the required parameter 'locationAddressSchemeTag' is set
-    if (locationAddressSchemeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'locationAddressSchemeTag' when calling deleteLocationAddressSchemeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/{locationAddressSchemeId}/tag/{locationAddressSchemeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "locationAddressSchemeId" + "\\}", apiClient.escapeString(locationAddressSchemeId.toString()))
-      .replaceAll("\\{" + "locationAddressSchemeTag" + "\\}", apiClient.escapeString(locationAddressSchemeTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class LocationAddressSchemeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/duplicate/{locationAddressSchemeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/locationAddressScheme/duplicate/{locationAddressSchemeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "locationAddressSchemeId" + "\\}", apiClient.escapeString(locationAddressSchemeId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class LocationAddressSchemeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/locationAddressScheme/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class LocationAddressSchemeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/{locationAddressSchemeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/locationAddressScheme/{locationAddressSchemeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "locationAddressSchemeId" + "\\}", apiClient.escapeString(locationAddressSchemeId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class LocationAddressSchemeApi {
   }
   
   /**
-   * Get the tags for a locationAddressScheme.
-   * Get all existing locationAddressScheme tags.
-   * @param locationAddressSchemeId Id of the locationAddressScheme to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getLocationAddressSchemeTags(Integer locationAddressSchemeId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'locationAddressSchemeId' is set
-    if (locationAddressSchemeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'locationAddressSchemeId' when calling getLocationAddressSchemeTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/{locationAddressSchemeId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "locationAddressSchemeId" + "\\}", apiClient.escapeString(locationAddressSchemeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a locationAddressScheme
    * Updates an existing locationAddressScheme using the specified data.
    * @param body LocationAddressScheme to be updated. (required)
@@ -498,7 +293,7 @@ public class LocationAddressSchemeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/locationAddressScheme".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class LocationAddressSchemeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/locationAddressScheme/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/locationAddressScheme/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

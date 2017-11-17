@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class WarehouseDocumentApi {
   private ApiClient apiClient;
 
@@ -36,165 +36,6 @@ public class WarehouseDocumentApi {
 
   
   /**
-   * Add new audit for a warehouseDocument
-   * Adds an audit to an existing warehouseDocument.
-   * @param warehouseDocumentId Id of the warehouseDocument to add an audit to (required)
-   * @param warehouseDocumentAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addWarehouseDocumentAudit(Integer warehouseDocumentId, String warehouseDocumentAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'warehouseDocumentId' is set
-    if (warehouseDocumentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'warehouseDocumentId' when calling addWarehouseDocumentAudit");
-    }
-    
-    // verify the required parameter 'warehouseDocumentAudit' is set
-    if (warehouseDocumentAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'warehouseDocumentAudit' when calling addWarehouseDocumentAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/{warehouseDocumentId}/audit/{warehouseDocumentAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "warehouseDocumentId" + "\\}", apiClient.escapeString(warehouseDocumentId.toString()))
-      .replaceAll("\\{" + "warehouseDocumentAudit" + "\\}", apiClient.escapeString(warehouseDocumentAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a warehouseDocument.
-   * Adds a tag to an existing warehouseDocument.
-   * @param warehouseDocumentId Id of the warehouseDocument to add a tag to (required)
-   * @param warehouseDocumentTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addWarehouseDocumentTag(Integer warehouseDocumentId, String warehouseDocumentTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'warehouseDocumentId' is set
-    if (warehouseDocumentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'warehouseDocumentId' when calling addWarehouseDocumentTag");
-    }
-    
-    // verify the required parameter 'warehouseDocumentTag' is set
-    if (warehouseDocumentTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'warehouseDocumentTag' when calling addWarehouseDocumentTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/{warehouseDocumentId}/tag/{warehouseDocumentTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "warehouseDocumentId" + "\\}", apiClient.escapeString(warehouseDocumentId.toString()))
-      .replaceAll("\\{" + "warehouseDocumentTag" + "\\}", apiClient.escapeString(warehouseDocumentTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a warehouseDocument.
-   * Deletes an existing warehouseDocument tag using the specified data.
-   * @param warehouseDocumentId Id of the warehouseDocument to remove tag from (required)
-   * @param warehouseDocumentTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteWarehouseDocumentTag(Integer warehouseDocumentId, String warehouseDocumentTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'warehouseDocumentId' is set
-    if (warehouseDocumentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'warehouseDocumentId' when calling deleteWarehouseDocumentTag");
-    }
-    
-    // verify the required parameter 'warehouseDocumentTag' is set
-    if (warehouseDocumentTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'warehouseDocumentTag' when calling deleteWarehouseDocumentTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/{warehouseDocumentId}/tag/{warehouseDocumentTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "warehouseDocumentId" + "\\}", apiClient.escapeString(warehouseDocumentId.toString()))
-      .replaceAll("\\{" + "warehouseDocumentTag" + "\\}", apiClient.escapeString(warehouseDocumentTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated a warehouseDocument by id
    * Returns a duplicated warehouseDocument identified by the specified id.
    * @param warehouseDocumentId Id of the warehouseDocument to be duplicated. (required)
@@ -210,7 +51,7 @@ public class WarehouseDocumentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/duplicate/{warehouseDocumentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/warehouseDocument/duplicate/{warehouseDocumentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "warehouseDocumentId" + "\\}", apiClient.escapeString(warehouseDocumentId.toString()));
 
     // query params
@@ -256,7 +97,7 @@ public class WarehouseDocumentApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/warehouseDocument/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -311,7 +152,7 @@ public class WarehouseDocumentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/{warehouseDocumentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/warehouseDocument/{warehouseDocumentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "warehouseDocumentId" + "\\}", apiClient.escapeString(warehouseDocumentId.toString()));
 
     // query params
@@ -344,52 +185,6 @@ public class WarehouseDocumentApi {
   }
   
   /**
-   * Get the tags for a warehouseDocument.
-   * Get all existing warehouseDocument tags.
-   * @param warehouseDocumentId Id of the warehouseDocument to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getWarehouseDocumentTags(Integer warehouseDocumentId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'warehouseDocumentId' is set
-    if (warehouseDocumentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'warehouseDocumentId' when calling getWarehouseDocumentTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/{warehouseDocumentId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "warehouseDocumentId" + "\\}", apiClient.escapeString(warehouseDocumentId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a warehouseDocument custom fields
    * Updates an existing warehouseDocument custom fields using the specified data.
    * @param body WarehouseDocument to be updated. (required)
@@ -404,7 +199,7 @@ public class WarehouseDocumentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/warehouseDocument/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/warehouseDocument/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

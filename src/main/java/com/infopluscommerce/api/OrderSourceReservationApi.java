@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class OrderSourceReservationApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class OrderSourceReservationApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/orderSourceReservation".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class OrderSourceReservationApi {
   }
   
   /**
-   * Add new audit for an orderSourceReservation
-   * Adds an audit to an existing orderSourceReservation.
-   * @param orderSourceReservationId Id of the orderSourceReservation to add an audit to (required)
-   * @param orderSourceReservationAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addOrderSourceReservationAudit(Integer orderSourceReservationId, String orderSourceReservationAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderSourceReservationId' is set
-    if (orderSourceReservationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderSourceReservationId' when calling addOrderSourceReservationAudit");
-    }
-    
-    // verify the required parameter 'orderSourceReservationAudit' is set
-    if (orderSourceReservationAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderSourceReservationAudit' when calling addOrderSourceReservationAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/{orderSourceReservationId}/audit/{orderSourceReservationAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderSourceReservationId" + "\\}", apiClient.escapeString(orderSourceReservationId.toString()))
-      .replaceAll("\\{" + "orderSourceReservationAudit" + "\\}", apiClient.escapeString(orderSourceReservationAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an orderSourceReservation.
-   * Adds a tag to an existing orderSourceReservation.
-   * @param orderSourceReservationId Id of the orderSourceReservation to add a tag to (required)
-   * @param orderSourceReservationTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addOrderSourceReservationTag(Integer orderSourceReservationId, String orderSourceReservationTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderSourceReservationId' is set
-    if (orderSourceReservationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderSourceReservationId' when calling addOrderSourceReservationTag");
-    }
-    
-    // verify the required parameter 'orderSourceReservationTag' is set
-    if (orderSourceReservationTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderSourceReservationTag' when calling addOrderSourceReservationTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/{orderSourceReservationId}/tag/{orderSourceReservationTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderSourceReservationId" + "\\}", apiClient.escapeString(orderSourceReservationId.toString()))
-      .replaceAll("\\{" + "orderSourceReservationTag" + "\\}", apiClient.escapeString(orderSourceReservationTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an orderSourceReservation
    * Deletes the orderSourceReservation identified by the specified id.
    * @param orderSourceReservationId Id of the orderSourceReservation to be deleted. (required)
@@ -204,61 +98,8 @@ public class OrderSourceReservationApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/{orderSourceReservationId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/orderSourceReservation/{orderSourceReservationId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderSourceReservationId" + "\\}", apiClient.escapeString(orderSourceReservationId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an orderSourceReservation.
-   * Deletes an existing orderSourceReservation tag using the specified data.
-   * @param orderSourceReservationId Id of the orderSourceReservation to remove tag from (required)
-   * @param orderSourceReservationTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteOrderSourceReservationTag(Integer orderSourceReservationId, String orderSourceReservationTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderSourceReservationId' is set
-    if (orderSourceReservationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderSourceReservationId' when calling deleteOrderSourceReservationTag");
-    }
-    
-    // verify the required parameter 'orderSourceReservationTag' is set
-    if (orderSourceReservationTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderSourceReservationTag' when calling deleteOrderSourceReservationTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/{orderSourceReservationId}/tag/{orderSourceReservationTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderSourceReservationId" + "\\}", apiClient.escapeString(orderSourceReservationId.toString()))
-      .replaceAll("\\{" + "orderSourceReservationTag" + "\\}", apiClient.escapeString(orderSourceReservationTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class OrderSourceReservationApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/duplicate/{orderSourceReservationId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/orderSourceReservation/duplicate/{orderSourceReservationId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderSourceReservationId" + "\\}", apiClient.escapeString(orderSourceReservationId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class OrderSourceReservationApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/orderSourceReservation/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class OrderSourceReservationApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/{orderSourceReservationId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/orderSourceReservation/{orderSourceReservationId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderSourceReservationId" + "\\}", apiClient.escapeString(orderSourceReservationId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class OrderSourceReservationApi {
   }
   
   /**
-   * Get the tags for an orderSourceReservation.
-   * Get all existing orderSourceReservation tags.
-   * @param orderSourceReservationId Id of the orderSourceReservation to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getOrderSourceReservationTags(Integer orderSourceReservationId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderSourceReservationId' is set
-    if (orderSourceReservationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderSourceReservationId' when calling getOrderSourceReservationTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/{orderSourceReservationId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderSourceReservationId" + "\\}", apiClient.escapeString(orderSourceReservationId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an orderSourceReservation
    * Updates an existing orderSourceReservation using the specified data.
    * @param body OrderSourceReservation to be updated. (required)
@@ -498,7 +293,7 @@ public class OrderSourceReservationApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/orderSourceReservation".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class OrderSourceReservationApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderSourceReservation/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/orderSourceReservation/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

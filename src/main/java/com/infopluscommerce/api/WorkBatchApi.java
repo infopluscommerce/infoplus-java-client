@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class WorkBatchApi {
   private ApiClient apiClient;
 
@@ -36,165 +36,6 @@ public class WorkBatchApi {
 
   
   /**
-   * Add new audit for a workBatch
-   * Adds an audit to an existing workBatch.
-   * @param workBatchId Id of the workBatch to add an audit to (required)
-   * @param workBatchAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addWorkBatchAudit(Integer workBatchId, String workBatchAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'workBatchId' is set
-    if (workBatchId == null) {
-      throw new ApiException(400, "Missing the required parameter 'workBatchId' when calling addWorkBatchAudit");
-    }
-    
-    // verify the required parameter 'workBatchAudit' is set
-    if (workBatchAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'workBatchAudit' when calling addWorkBatchAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/workBatch/{workBatchId}/audit/{workBatchAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "workBatchId" + "\\}", apiClient.escapeString(workBatchId.toString()))
-      .replaceAll("\\{" + "workBatchAudit" + "\\}", apiClient.escapeString(workBatchAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a workBatch.
-   * Adds a tag to an existing workBatch.
-   * @param workBatchId Id of the workBatch to add a tag to (required)
-   * @param workBatchTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addWorkBatchTag(Integer workBatchId, String workBatchTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'workBatchId' is set
-    if (workBatchId == null) {
-      throw new ApiException(400, "Missing the required parameter 'workBatchId' when calling addWorkBatchTag");
-    }
-    
-    // verify the required parameter 'workBatchTag' is set
-    if (workBatchTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'workBatchTag' when calling addWorkBatchTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/workBatch/{workBatchId}/tag/{workBatchTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "workBatchId" + "\\}", apiClient.escapeString(workBatchId.toString()))
-      .replaceAll("\\{" + "workBatchTag" + "\\}", apiClient.escapeString(workBatchTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a workBatch.
-   * Deletes an existing workBatch tag using the specified data.
-   * @param workBatchId Id of the workBatch to remove tag from (required)
-   * @param workBatchTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteWorkBatchTag(Integer workBatchId, String workBatchTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'workBatchId' is set
-    if (workBatchId == null) {
-      throw new ApiException(400, "Missing the required parameter 'workBatchId' when calling deleteWorkBatchTag");
-    }
-    
-    // verify the required parameter 'workBatchTag' is set
-    if (workBatchTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'workBatchTag' when calling deleteWorkBatchTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/workBatch/{workBatchId}/tag/{workBatchTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "workBatchId" + "\\}", apiClient.escapeString(workBatchId.toString()))
-      .replaceAll("\\{" + "workBatchTag" + "\\}", apiClient.escapeString(workBatchTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated a workBatch by id
    * Returns a duplicated workBatch identified by the specified id.
    * @param workBatchId Id of the workBatch to be duplicated. (required)
@@ -210,7 +51,7 @@ public class WorkBatchApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/workBatch/duplicate/{workBatchId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/workBatch/duplicate/{workBatchId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "workBatchId" + "\\}", apiClient.escapeString(workBatchId.toString()));
 
     // query params
@@ -256,7 +97,7 @@ public class WorkBatchApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/workBatch/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/workBatch/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -311,7 +152,7 @@ public class WorkBatchApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/workBatch/{workBatchId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/workBatch/{workBatchId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "workBatchId" + "\\}", apiClient.escapeString(workBatchId.toString()));
 
     // query params
@@ -344,52 +185,6 @@ public class WorkBatchApi {
   }
   
   /**
-   * Get the tags for a workBatch.
-   * Get all existing workBatch tags.
-   * @param workBatchId Id of the workBatch to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getWorkBatchTags(Integer workBatchId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'workBatchId' is set
-    if (workBatchId == null) {
-      throw new ApiException(400, "Missing the required parameter 'workBatchId' when calling getWorkBatchTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/workBatch/{workBatchId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "workBatchId" + "\\}", apiClient.escapeString(workBatchId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a workBatch custom fields
    * Updates an existing workBatch custom fields using the specified data.
    * @param body WorkBatch to be updated. (required)
@@ -404,7 +199,7 @@ public class WorkBatchApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/workBatch/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/workBatch/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

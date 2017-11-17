@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ItemCategoryApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ItemCategoryApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemCategory".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemCategory".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ItemCategoryApi {
   }
   
   /**
-   * Add new audit for an itemCategory
-   * Adds an audit to an existing itemCategory.
-   * @param itemCategoryId Id of the itemCategory to add an audit to (required)
-   * @param itemCategoryAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemCategoryAudit(Integer itemCategoryId, String itemCategoryAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemCategoryId' is set
-    if (itemCategoryId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemCategoryId' when calling addItemCategoryAudit");
-    }
-    
-    // verify the required parameter 'itemCategoryAudit' is set
-    if (itemCategoryAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemCategoryAudit' when calling addItemCategoryAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemCategory/{itemCategoryId}/audit/{itemCategoryAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemCategoryId" + "\\}", apiClient.escapeString(itemCategoryId.toString()))
-      .replaceAll("\\{" + "itemCategoryAudit" + "\\}", apiClient.escapeString(itemCategoryAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an itemCategory.
-   * Adds a tag to an existing itemCategory.
-   * @param itemCategoryId Id of the itemCategory to add a tag to (required)
-   * @param itemCategoryTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemCategoryTag(Integer itemCategoryId, String itemCategoryTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemCategoryId' is set
-    if (itemCategoryId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemCategoryId' when calling addItemCategoryTag");
-    }
-    
-    // verify the required parameter 'itemCategoryTag' is set
-    if (itemCategoryTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemCategoryTag' when calling addItemCategoryTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemCategory/{itemCategoryId}/tag/{itemCategoryTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemCategoryId" + "\\}", apiClient.escapeString(itemCategoryId.toString()))
-      .replaceAll("\\{" + "itemCategoryTag" + "\\}", apiClient.escapeString(itemCategoryTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an itemCategory
    * Deletes the itemCategory identified by the specified id.
    * @param itemCategoryId Id of the itemCategory to be deleted. (required)
@@ -204,61 +98,8 @@ public class ItemCategoryApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemCategory/{itemCategoryId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemCategory/{itemCategoryId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemCategoryId" + "\\}", apiClient.escapeString(itemCategoryId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an itemCategory.
-   * Deletes an existing itemCategory tag using the specified data.
-   * @param itemCategoryId Id of the itemCategory to remove tag from (required)
-   * @param itemCategoryTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteItemCategoryTag(Integer itemCategoryId, String itemCategoryTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemCategoryId' is set
-    if (itemCategoryId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemCategoryId' when calling deleteItemCategoryTag");
-    }
-    
-    // verify the required parameter 'itemCategoryTag' is set
-    if (itemCategoryTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemCategoryTag' when calling deleteItemCategoryTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemCategory/{itemCategoryId}/tag/{itemCategoryTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemCategoryId" + "\\}", apiClient.escapeString(itemCategoryId.toString()))
-      .replaceAll("\\{" + "itemCategoryTag" + "\\}", apiClient.escapeString(itemCategoryTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ItemCategoryApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemCategory/duplicate/{itemCategoryId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemCategory/duplicate/{itemCategoryId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemCategoryId" + "\\}", apiClient.escapeString(itemCategoryId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ItemCategoryApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/itemCategory/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemCategory/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ItemCategoryApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemCategory/{itemCategoryId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemCategory/{itemCategoryId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemCategoryId" + "\\}", apiClient.escapeString(itemCategoryId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ItemCategoryApi {
   }
   
   /**
-   * Get the tags for an itemCategory.
-   * Get all existing itemCategory tags.
-   * @param itemCategoryId Id of the itemCategory to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getItemCategoryTags(Integer itemCategoryId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemCategoryId' is set
-    if (itemCategoryId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemCategoryId' when calling getItemCategoryTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemCategory/{itemCategoryId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemCategoryId" + "\\}", apiClient.escapeString(itemCategoryId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an itemCategory
    * Updates an existing itemCategory using the specified data.
    * @param body ItemCategory to be updated. (required)
@@ -498,7 +293,7 @@ public class ItemCategoryApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemCategory".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemCategory".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

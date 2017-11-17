@@ -4,13 +4,17 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-05-13T15:40:30.367-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ParcelShipment   {
   
   private Integer id = null;
@@ -21,27 +25,29 @@ public class ParcelShipment   {
   private String trackingNo = null;
   private Integer warehouseId = null;
   private Integer lobId = null;
-  private Double orderNo = null;
+  private BigDecimal orderNo = null;
   private Integer cartonNo = null;
   private Integer numberOfCartons = null;
   private String status = null;
   private Boolean shipped = false;
   private Integer carrierServiceId = null;
-  private Double dim1In = null;
-  private Double dim2In = null;
-  private Double dim3In = null;
+  private BigDecimal dim1In = null;
+  private BigDecimal dim2In = null;
+  private BigDecimal dim3In = null;
   private String estimatedZone = null;
   private String parcelAccountNo = null;
   private String thirdPartyParcelAccountNo = null;
   private Integer manifestId = null;
   private Boolean residential = false;
   private String billingOption = null;
-  private Double weightLbs = null;
-  private Double dimWeight = null;
+  private BigDecimal weightLbs = null;
+  private BigDecimal dimWeight = null;
   private String licensePlateNumber = null;
-  private Double chargedFreightAmount = null;
-  private Double publishedFreightAmount = null;
-  private Double retailFreightAmount = null;
+  private BigDecimal chargedFreightAmount = null;
+  private BigDecimal publishedFreightAmount = null;
+  private BigDecimal retailFreightAmount = null;
+  private Integer externalShippingSystemId = null;
+  private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
   /**
@@ -122,7 +128,7 @@ public class ParcelShipment   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderNo")
-  public Double getOrderNo() {
+  public BigDecimal getOrderNo() {
     return orderNo;
   }
 
@@ -204,51 +210,51 @@ public class ParcelShipment   {
   
   /**
    **/
-  public ParcelShipment dim1In(Double dim1In) {
+  public ParcelShipment dim1In(BigDecimal dim1In) {
     this.dim1In = dim1In;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim1In")
-  public Double getDim1In() {
+  public BigDecimal getDim1In() {
     return dim1In;
   }
-  public void setDim1In(Double dim1In) {
+  public void setDim1In(BigDecimal dim1In) {
     this.dim1In = dim1In;
   }
 
   
   /**
    **/
-  public ParcelShipment dim2In(Double dim2In) {
+  public ParcelShipment dim2In(BigDecimal dim2In) {
     this.dim2In = dim2In;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim2In")
-  public Double getDim2In() {
+  public BigDecimal getDim2In() {
     return dim2In;
   }
-  public void setDim2In(Double dim2In) {
+  public void setDim2In(BigDecimal dim2In) {
     this.dim2In = dim2In;
   }
 
   
   /**
    **/
-  public ParcelShipment dim3In(Double dim3In) {
+  public ParcelShipment dim3In(BigDecimal dim3In) {
     this.dim3In = dim3In;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dim3In")
-  public Double getDim3In() {
+  public BigDecimal getDim3In() {
     return dim3In;
   }
-  public void setDim3In(Double dim3In) {
+  public void setDim3In(BigDecimal dim3In) {
     this.dim3In = dim3In;
   }
 
@@ -307,14 +313,14 @@ public class ParcelShipment   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("weightLbs")
-  public Double getWeightLbs() {
+  public BigDecimal getWeightLbs() {
     return weightLbs;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dimWeight")
-  public Double getDimWeight() {
+  public BigDecimal getDimWeight() {
     return dimWeight;
   }
 
@@ -328,22 +334,46 @@ public class ParcelShipment   {
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("chargedFreightAmount")
-  public Double getChargedFreightAmount() {
+  public BigDecimal getChargedFreightAmount() {
     return chargedFreightAmount;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("publishedFreightAmount")
-  public Double getPublishedFreightAmount() {
+  public BigDecimal getPublishedFreightAmount() {
     return publishedFreightAmount;
   }
 
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("retailFreightAmount")
-  public Double getRetailFreightAmount() {
+  public BigDecimal getRetailFreightAmount() {
     return retailFreightAmount;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("externalShippingSystemId")
+  public Integer getExternalShippingSystemId() {
+    return externalShippingSystemId;
+  }
+
+  
+  /**
+   **/
+  public ParcelShipment customFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public Map<String, Object> getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(Map<String, Object> customFields) {
+    this.customFields = customFields;
   }
 
   
@@ -385,12 +415,14 @@ public class ParcelShipment   {
         Objects.equals(this.licensePlateNumber, parcelShipment.licensePlateNumber) &&
         Objects.equals(this.chargedFreightAmount, parcelShipment.chargedFreightAmount) &&
         Objects.equals(this.publishedFreightAmount, parcelShipment.publishedFreightAmount) &&
-        Objects.equals(this.retailFreightAmount, parcelShipment.retailFreightAmount);
+        Objects.equals(this.retailFreightAmount, parcelShipment.retailFreightAmount) &&
+        Objects.equals(this.externalShippingSystemId, parcelShipment.externalShippingSystemId) &&
+        Objects.equals(this.customFields, parcelShipment.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, shipDate, deliveredDate, trackingNo, warehouseId, lobId, orderNo, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount);
+    return Objects.hash(id, createDate, modifyDate, shipDate, deliveredDate, trackingNo, warehouseId, lobId, orderNo, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -427,6 +459,8 @@ public class ParcelShipment   {
     sb.append("    chargedFreightAmount: ").append(toIndentedString(chargedFreightAmount)).append("\n");
     sb.append("    publishedFreightAmount: ").append(toIndentedString(publishedFreightAmount)).append("\n");
     sb.append("    retailFreightAmount: ").append(toIndentedString(retailFreightAmount)).append("\n");
+    sb.append("    externalShippingSystemId: ").append(toIndentedString(externalShippingSystemId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

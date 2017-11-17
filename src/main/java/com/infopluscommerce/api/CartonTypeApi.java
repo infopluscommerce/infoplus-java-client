@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class CartonTypeApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class CartonTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/cartonType".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/cartonType".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class CartonTypeApi {
   }
   
   /**
-   * Add new audit for a cartonType
-   * Adds an audit to an existing cartonType.
-   * @param cartonTypeId Id of the cartonType to add an audit to (required)
-   * @param cartonTypeAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addCartonTypeAudit(Integer cartonTypeId, String cartonTypeAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'cartonTypeId' is set
-    if (cartonTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'cartonTypeId' when calling addCartonTypeAudit");
-    }
-    
-    // verify the required parameter 'cartonTypeAudit' is set
-    if (cartonTypeAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'cartonTypeAudit' when calling addCartonTypeAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/cartonType/{cartonTypeId}/audit/{cartonTypeAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "cartonTypeId" + "\\}", apiClient.escapeString(cartonTypeId.toString()))
-      .replaceAll("\\{" + "cartonTypeAudit" + "\\}", apiClient.escapeString(cartonTypeAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a cartonType.
-   * Adds a tag to an existing cartonType.
-   * @param cartonTypeId Id of the cartonType to add a tag to (required)
-   * @param cartonTypeTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addCartonTypeTag(Integer cartonTypeId, String cartonTypeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'cartonTypeId' is set
-    if (cartonTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'cartonTypeId' when calling addCartonTypeTag");
-    }
-    
-    // verify the required parameter 'cartonTypeTag' is set
-    if (cartonTypeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'cartonTypeTag' when calling addCartonTypeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/cartonType/{cartonTypeId}/tag/{cartonTypeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "cartonTypeId" + "\\}", apiClient.escapeString(cartonTypeId.toString()))
-      .replaceAll("\\{" + "cartonTypeTag" + "\\}", apiClient.escapeString(cartonTypeTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a cartonType
    * Deletes the cartonType identified by the specified id.
    * @param cartonTypeId Id of the cartonType to be deleted. (required)
@@ -204,61 +98,8 @@ public class CartonTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/cartonType/{cartonTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/cartonType/{cartonTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "cartonTypeId" + "\\}", apiClient.escapeString(cartonTypeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a cartonType.
-   * Deletes an existing cartonType tag using the specified data.
-   * @param cartonTypeId Id of the cartonType to remove tag from (required)
-   * @param cartonTypeTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteCartonTypeTag(Integer cartonTypeId, String cartonTypeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'cartonTypeId' is set
-    if (cartonTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'cartonTypeId' when calling deleteCartonTypeTag");
-    }
-    
-    // verify the required parameter 'cartonTypeTag' is set
-    if (cartonTypeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'cartonTypeTag' when calling deleteCartonTypeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/cartonType/{cartonTypeId}/tag/{cartonTypeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "cartonTypeId" + "\\}", apiClient.escapeString(cartonTypeId.toString()))
-      .replaceAll("\\{" + "cartonTypeTag" + "\\}", apiClient.escapeString(cartonTypeTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -302,7 +143,7 @@ public class CartonTypeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/cartonType/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/cartonType/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -357,7 +198,7 @@ public class CartonTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/cartonType/{cartonTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/cartonType/{cartonTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "cartonTypeId" + "\\}", apiClient.escapeString(cartonTypeId.toString()));
 
     // query params
@@ -390,52 +231,6 @@ public class CartonTypeApi {
   }
   
   /**
-   * Get the tags for a cartonType.
-   * Get all existing cartonType tags.
-   * @param cartonTypeId Id of the cartonType to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getCartonTypeTags(Integer cartonTypeId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'cartonTypeId' is set
-    if (cartonTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'cartonTypeId' when calling getCartonTypeTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/cartonType/{cartonTypeId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "cartonTypeId" + "\\}", apiClient.escapeString(cartonTypeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated a cartonType by id
    * Returns a duplicated cartonType identified by the specified id.
    * @param cartonTypeId Id of the cartonType to be duplicated. (required)
@@ -451,7 +246,7 @@ public class CartonTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/cartonType/duplicate/{cartonTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/cartonType/duplicate/{cartonTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "cartonTypeId" + "\\}", apiClient.escapeString(cartonTypeId.toString()));
 
     // query params
@@ -498,7 +293,7 @@ public class CartonTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/cartonType".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/cartonType".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class CartonTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/cartonType/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/cartonType/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

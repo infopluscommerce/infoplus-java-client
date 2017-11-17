@@ -14,11 +14,11 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class InventoryAdjustment   {
   
   private Integer id = null;
-  private Integer lobId = null;
+  private Integer lob = null;
   private Integer skuId = null;
   private Integer poNoId = null;
   private Date adjustmentDate = null;
@@ -52,18 +52,18 @@ public class InventoryAdjustment   {
   
   /**
    **/
-  public InventoryAdjustment lobId(Integer lobId) {
-    this.lobId = lobId;
+  public InventoryAdjustment lob(Integer lob) {
+    this.lob = lob;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("lobId")
-  public Integer getLobId() {
-    return lobId;
+  @JsonProperty("lob")
+  public Integer getLob() {
+    return lob;
   }
-  public void setLobId(Integer lobId) {
-    this.lobId = lobId;
+  public void setLob(Integer lob) {
+    this.lob = lob;
   }
 
   
@@ -282,7 +282,7 @@ public class InventoryAdjustment   {
     }
     InventoryAdjustment inventoryAdjustment = (InventoryAdjustment) o;
     return Objects.equals(this.id, inventoryAdjustment.id) &&
-        Objects.equals(this.lobId, inventoryAdjustment.lobId) &&
+        Objects.equals(this.lob, inventoryAdjustment.lob) &&
         Objects.equals(this.skuId, inventoryAdjustment.skuId) &&
         Objects.equals(this.poNoId, inventoryAdjustment.poNoId) &&
         Objects.equals(this.adjustmentDate, inventoryAdjustment.adjustmentDate) &&
@@ -299,7 +299,7 @@ public class InventoryAdjustment   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lobId, skuId, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode, customFields);
+    return Objects.hash(id, lob, skuId, poNoId, adjustmentDate, adjustmentTime, location, qty, note, authorizedBy, printed, orderNo, adjustmentCode, customFields);
   }
 
   @Override
@@ -308,7 +308,7 @@ public class InventoryAdjustment   {
     sb.append("class InventoryAdjustment {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
+    sb.append("    lob: ").append(toIndentedString(lob)).append("\n");
     sb.append("    skuId: ").append(toIndentedString(skuId)).append("\n");
     sb.append("    poNoId: ").append(toIndentedString(poNoId)).append("\n");
     sb.append("    adjustmentDate: ").append(toIndentedString(adjustmentDate)).append("\n");

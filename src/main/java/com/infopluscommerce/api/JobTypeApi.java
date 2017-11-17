@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class JobTypeApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class JobTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/jobType".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/jobType".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class JobTypeApi {
   }
   
   /**
-   * Add new audit for a jobType
-   * Adds an audit to an existing jobType.
-   * @param jobTypeId Id of the jobType to add an audit to (required)
-   * @param jobTypeAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addJobTypeAudit(Integer jobTypeId, String jobTypeAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'jobTypeId' is set
-    if (jobTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'jobTypeId' when calling addJobTypeAudit");
-    }
-    
-    // verify the required parameter 'jobTypeAudit' is set
-    if (jobTypeAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'jobTypeAudit' when calling addJobTypeAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/jobType/{jobTypeId}/audit/{jobTypeAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "jobTypeId" + "\\}", apiClient.escapeString(jobTypeId.toString()))
-      .replaceAll("\\{" + "jobTypeAudit" + "\\}", apiClient.escapeString(jobTypeAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a jobType.
-   * Adds a tag to an existing jobType.
-   * @param jobTypeId Id of the jobType to add a tag to (required)
-   * @param jobTypeTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addJobTypeTag(Integer jobTypeId, String jobTypeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'jobTypeId' is set
-    if (jobTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'jobTypeId' when calling addJobTypeTag");
-    }
-    
-    // verify the required parameter 'jobTypeTag' is set
-    if (jobTypeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'jobTypeTag' when calling addJobTypeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/jobType/{jobTypeId}/tag/{jobTypeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "jobTypeId" + "\\}", apiClient.escapeString(jobTypeId.toString()))
-      .replaceAll("\\{" + "jobTypeTag" + "\\}", apiClient.escapeString(jobTypeTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a jobType
    * Deletes the jobType identified by the specified id.
    * @param jobTypeId Id of the jobType to be deleted. (required)
@@ -204,61 +98,8 @@ public class JobTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/jobType/{jobTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/jobType/{jobTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "jobTypeId" + "\\}", apiClient.escapeString(jobTypeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a jobType.
-   * Deletes an existing jobType tag using the specified data.
-   * @param jobTypeId Id of the jobType to remove tag from (required)
-   * @param jobTypeTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteJobTypeTag(Integer jobTypeId, String jobTypeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'jobTypeId' is set
-    if (jobTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'jobTypeId' when calling deleteJobTypeTag");
-    }
-    
-    // verify the required parameter 'jobTypeTag' is set
-    if (jobTypeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'jobTypeTag' when calling deleteJobTypeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/jobType/{jobTypeId}/tag/{jobTypeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "jobTypeId" + "\\}", apiClient.escapeString(jobTypeId.toString()))
-      .replaceAll("\\{" + "jobTypeTag" + "\\}", apiClient.escapeString(jobTypeTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class JobTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/jobType/duplicate/{jobTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/jobType/duplicate/{jobTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "jobTypeId" + "\\}", apiClient.escapeString(jobTypeId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class JobTypeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/jobType/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/jobType/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class JobTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/jobType/{jobTypeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/jobType/{jobTypeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "jobTypeId" + "\\}", apiClient.escapeString(jobTypeId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class JobTypeApi {
   }
   
   /**
-   * Get the tags for a jobType.
-   * Get all existing jobType tags.
-   * @param jobTypeId Id of the jobType to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getJobTypeTags(Integer jobTypeId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'jobTypeId' is set
-    if (jobTypeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'jobTypeId' when calling getJobTypeTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/jobType/{jobTypeId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "jobTypeId" + "\\}", apiClient.escapeString(jobTypeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a jobType
    * Updates an existing jobType using the specified data.
    * @param body JobType to be updated. (required)
@@ -498,7 +293,7 @@ public class JobTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/jobType".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/jobType".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class JobTypeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/jobType/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/jobType/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

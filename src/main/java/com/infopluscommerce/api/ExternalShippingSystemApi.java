@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ExternalShippingSystemApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ExternalShippingSystemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/externalShippingSystem".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ExternalShippingSystemApi {
   }
   
   /**
-   * Add new audit for an externalShippingSystem
-   * Adds an audit to an existing externalShippingSystem.
-   * @param externalShippingSystemId Id of the externalShippingSystem to add an audit to (required)
-   * @param externalShippingSystemAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addExternalShippingSystemAudit(Integer externalShippingSystemId, String externalShippingSystemAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'externalShippingSystemId' is set
-    if (externalShippingSystemId == null) {
-      throw new ApiException(400, "Missing the required parameter 'externalShippingSystemId' when calling addExternalShippingSystemAudit");
-    }
-    
-    // verify the required parameter 'externalShippingSystemAudit' is set
-    if (externalShippingSystemAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'externalShippingSystemAudit' when calling addExternalShippingSystemAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/{externalShippingSystemId}/audit/{externalShippingSystemAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "externalShippingSystemId" + "\\}", apiClient.escapeString(externalShippingSystemId.toString()))
-      .replaceAll("\\{" + "externalShippingSystemAudit" + "\\}", apiClient.escapeString(externalShippingSystemAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an externalShippingSystem.
-   * Adds a tag to an existing externalShippingSystem.
-   * @param externalShippingSystemId Id of the externalShippingSystem to add a tag to (required)
-   * @param externalShippingSystemTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addExternalShippingSystemTag(Integer externalShippingSystemId, String externalShippingSystemTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'externalShippingSystemId' is set
-    if (externalShippingSystemId == null) {
-      throw new ApiException(400, "Missing the required parameter 'externalShippingSystemId' when calling addExternalShippingSystemTag");
-    }
-    
-    // verify the required parameter 'externalShippingSystemTag' is set
-    if (externalShippingSystemTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'externalShippingSystemTag' when calling addExternalShippingSystemTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/{externalShippingSystemId}/tag/{externalShippingSystemTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "externalShippingSystemId" + "\\}", apiClient.escapeString(externalShippingSystemId.toString()))
-      .replaceAll("\\{" + "externalShippingSystemTag" + "\\}", apiClient.escapeString(externalShippingSystemTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an externalShippingSystem
    * Deletes the externalShippingSystem identified by the specified id.
    * @param externalShippingSystemId Id of the externalShippingSystem to be deleted. (required)
@@ -204,61 +98,8 @@ public class ExternalShippingSystemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/{externalShippingSystemId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/externalShippingSystem/{externalShippingSystemId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "externalShippingSystemId" + "\\}", apiClient.escapeString(externalShippingSystemId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an externalShippingSystem.
-   * Deletes an existing externalShippingSystem tag using the specified data.
-   * @param externalShippingSystemId Id of the externalShippingSystem to remove tag from (required)
-   * @param externalShippingSystemTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteExternalShippingSystemTag(Integer externalShippingSystemId, String externalShippingSystemTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'externalShippingSystemId' is set
-    if (externalShippingSystemId == null) {
-      throw new ApiException(400, "Missing the required parameter 'externalShippingSystemId' when calling deleteExternalShippingSystemTag");
-    }
-    
-    // verify the required parameter 'externalShippingSystemTag' is set
-    if (externalShippingSystemTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'externalShippingSystemTag' when calling deleteExternalShippingSystemTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/{externalShippingSystemId}/tag/{externalShippingSystemTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "externalShippingSystemId" + "\\}", apiClient.escapeString(externalShippingSystemId.toString()))
-      .replaceAll("\\{" + "externalShippingSystemTag" + "\\}", apiClient.escapeString(externalShippingSystemTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ExternalShippingSystemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/duplicate/{externalShippingSystemId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/externalShippingSystem/duplicate/{externalShippingSystemId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "externalShippingSystemId" + "\\}", apiClient.escapeString(externalShippingSystemId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ExternalShippingSystemApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/externalShippingSystem/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ExternalShippingSystemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/{externalShippingSystemId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/externalShippingSystem/{externalShippingSystemId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "externalShippingSystemId" + "\\}", apiClient.escapeString(externalShippingSystemId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ExternalShippingSystemApi {
   }
   
   /**
-   * Get the tags for an externalShippingSystem.
-   * Get all existing externalShippingSystem tags.
-   * @param externalShippingSystemId Id of the externalShippingSystem to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getExternalShippingSystemTags(Integer externalShippingSystemId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'externalShippingSystemId' is set
-    if (externalShippingSystemId == null) {
-      throw new ApiException(400, "Missing the required parameter 'externalShippingSystemId' when calling getExternalShippingSystemTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/{externalShippingSystemId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "externalShippingSystemId" + "\\}", apiClient.escapeString(externalShippingSystemId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an externalShippingSystem
    * Updates an existing externalShippingSystem using the specified data.
    * @param body ExternalShippingSystem to be updated. (required)
@@ -498,7 +293,7 @@ public class ExternalShippingSystemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/externalShippingSystem".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class ExternalShippingSystemApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/externalShippingSystem/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/externalShippingSystem/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

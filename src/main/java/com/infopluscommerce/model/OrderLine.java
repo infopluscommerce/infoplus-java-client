@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class OrderLine   {
   
   private Integer id = null;
@@ -33,10 +33,8 @@ public class OrderLine   {
   private String orderSourceSKU = null;
   private BigDecimal unitCost = null;
   private BigDecimal unitSell = null;
-  private BigDecimal unitDiscount = null;
   private BigDecimal extendedCost = null;
   private BigDecimal extendedSell = null;
-  private BigDecimal extendedDiscount = null;
   private BigDecimal ncExtendedSell = null;
   private BigDecimal itemWeight = null;
   private String productionLot = null;
@@ -171,13 +169,6 @@ public class OrderLine   {
 
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("unitDiscount")
-  public BigDecimal getUnitDiscount() {
-    return unitDiscount;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("extendedCost")
   public BigDecimal getExtendedCost() {
     return extendedCost;
@@ -188,13 +179,6 @@ public class OrderLine   {
   @JsonProperty("extendedSell")
   public BigDecimal getExtendedSell() {
     return extendedSell;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("extendedDiscount")
-  public BigDecimal getExtendedDiscount() {
-    return extendedDiscount;
   }
 
   
@@ -379,10 +363,8 @@ public class OrderLine   {
         Objects.equals(this.orderSourceSKU, orderLine.orderSourceSKU) &&
         Objects.equals(this.unitCost, orderLine.unitCost) &&
         Objects.equals(this.unitSell, orderLine.unitSell) &&
-        Objects.equals(this.unitDiscount, orderLine.unitDiscount) &&
         Objects.equals(this.extendedCost, orderLine.extendedCost) &&
         Objects.equals(this.extendedSell, orderLine.extendedSell) &&
-        Objects.equals(this.extendedDiscount, orderLine.extendedDiscount) &&
         Objects.equals(this.ncExtendedSell, orderLine.ncExtendedSell) &&
         Objects.equals(this.itemWeight, orderLine.itemWeight) &&
         Objects.equals(this.productionLot, orderLine.productionLot) &&
@@ -399,7 +381,7 @@ public class OrderLine   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, unitDiscount, extendedCost, extendedSell, extendedDiscount, ncExtendedSell, itemWeight, productionLot, weightPerWrap, sector, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, customFields);
+    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, extendedCost, extendedSell, ncExtendedSell, itemWeight, productionLot, weightPerWrap, sector, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, customFields);
   }
 
   @Override
@@ -424,10 +406,8 @@ public class OrderLine   {
     sb.append("    orderSourceSKU: ").append(toIndentedString(orderSourceSKU)).append("\n");
     sb.append("    unitCost: ").append(toIndentedString(unitCost)).append("\n");
     sb.append("    unitSell: ").append(toIndentedString(unitSell)).append("\n");
-    sb.append("    unitDiscount: ").append(toIndentedString(unitDiscount)).append("\n");
     sb.append("    extendedCost: ").append(toIndentedString(extendedCost)).append("\n");
     sb.append("    extendedSell: ").append(toIndentedString(extendedSell)).append("\n");
-    sb.append("    extendedDiscount: ").append(toIndentedString(extendedDiscount)).append("\n");
     sb.append("    ncExtendedSell: ").append(toIndentedString(ncExtendedSell)).append("\n");
     sb.append("    itemWeight: ").append(toIndentedString(itemWeight)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");

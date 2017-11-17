@@ -15,11 +15,10 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ReceivingWorksheetLineItem   {
   
   private String sku = null;
-  private String sku2 = null;
   private String fullDescription = null;
   private Integer orderedQty = null;
   private Integer prevReceivedQty = null;
@@ -33,7 +32,6 @@ public class ReceivingWorksheetLineItem   {
   private BigDecimal weightPerWrap = null;
   private BigDecimal weightPerCase = null;
   private String productionLot = null;
-  private String productIdTag = null;
   private String revisionDate = null;
   private String origin = null;
   private BigDecimal cartonLength = null;
@@ -48,13 +46,6 @@ public class ReceivingWorksheetLineItem   {
   @JsonProperty("sku")
   public String getSku() {
     return sku;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("sku2")
-  public String getSku2() {
-    return sku2;
   }
 
   
@@ -241,23 +232,6 @@ public class ReceivingWorksheetLineItem   {
   
   /**
    **/
-  public ReceivingWorksheetLineItem productIdTag(String productIdTag) {
-    this.productIdTag = productIdTag;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("productIdTag")
-  public String getProductIdTag() {
-    return productIdTag;
-  }
-  public void setProductIdTag(String productIdTag) {
-    this.productIdTag = productIdTag;
-  }
-
-  
-  /**
-   **/
   public ReceivingWorksheetLineItem revisionDate(String revisionDate) {
     this.revisionDate = revisionDate;
     return this;
@@ -403,7 +377,6 @@ public class ReceivingWorksheetLineItem   {
     }
     ReceivingWorksheetLineItem receivingWorksheetLineItem = (ReceivingWorksheetLineItem) o;
     return Objects.equals(this.sku, receivingWorksheetLineItem.sku) &&
-        Objects.equals(this.sku2, receivingWorksheetLineItem.sku2) &&
         Objects.equals(this.fullDescription, receivingWorksheetLineItem.fullDescription) &&
         Objects.equals(this.orderedQty, receivingWorksheetLineItem.orderedQty) &&
         Objects.equals(this.prevReceivedQty, receivingWorksheetLineItem.prevReceivedQty) &&
@@ -417,7 +390,6 @@ public class ReceivingWorksheetLineItem   {
         Objects.equals(this.weightPerWrap, receivingWorksheetLineItem.weightPerWrap) &&
         Objects.equals(this.weightPerCase, receivingWorksheetLineItem.weightPerCase) &&
         Objects.equals(this.productionLot, receivingWorksheetLineItem.productionLot) &&
-        Objects.equals(this.productIdTag, receivingWorksheetLineItem.productIdTag) &&
         Objects.equals(this.revisionDate, receivingWorksheetLineItem.revisionDate) &&
         Objects.equals(this.origin, receivingWorksheetLineItem.origin) &&
         Objects.equals(this.cartonLength, receivingWorksheetLineItem.cartonLength) &&
@@ -430,7 +402,7 @@ public class ReceivingWorksheetLineItem   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sku, sku2, fullDescription, orderedQty, prevReceivedQty, unreceivedQty, receivingQty, unitCode, wrapCode, unitsPerWrap, unitsPerCase, casesPerPallet, weightPerWrap, weightPerCase, productionLot, productIdTag, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, putAwayPlans, quantity, customFields);
+    return Objects.hash(sku, fullDescription, orderedQty, prevReceivedQty, unreceivedQty, receivingQty, unitCode, wrapCode, unitsPerWrap, unitsPerCase, casesPerPallet, weightPerWrap, weightPerCase, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, putAwayPlans, quantity, customFields);
   }
 
   @Override
@@ -439,7 +411,6 @@ public class ReceivingWorksheetLineItem   {
     sb.append("class ReceivingWorksheetLineItem {\n");
     
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
-    sb.append("    sku2: ").append(toIndentedString(sku2)).append("\n");
     sb.append("    fullDescription: ").append(toIndentedString(fullDescription)).append("\n");
     sb.append("    orderedQty: ").append(toIndentedString(orderedQty)).append("\n");
     sb.append("    prevReceivedQty: ").append(toIndentedString(prevReceivedQty)).append("\n");
@@ -453,7 +424,6 @@ public class ReceivingWorksheetLineItem   {
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    weightPerCase: ").append(toIndentedString(weightPerCase)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");
-    sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
     sb.append("    revisionDate: ").append(toIndentedString(revisionDate)).append("\n");
     sb.append("    origin: ").append(toIndentedString(origin)).append("\n");
     sb.append("    cartonLength: ").append(toIndentedString(cartonLength)).append("\n");

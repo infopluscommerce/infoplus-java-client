@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class VendorApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class VendorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/vendor".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/vendor".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class VendorApi {
   }
   
   /**
-   * Add new audit for a vendor
-   * Adds an audit to an existing vendor.
-   * @param vendorId Id of the vendor to add an audit to (required)
-   * @param vendorAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addVendorAudit(Integer vendorId, String vendorAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'vendorId' is set
-    if (vendorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'vendorId' when calling addVendorAudit");
-    }
-    
-    // verify the required parameter 'vendorAudit' is set
-    if (vendorAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'vendorAudit' when calling addVendorAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/vendor/{vendorId}/audit/{vendorAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "vendorId" + "\\}", apiClient.escapeString(vendorId.toString()))
-      .replaceAll("\\{" + "vendorAudit" + "\\}", apiClient.escapeString(vendorAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a vendor.
-   * Adds a tag to an existing vendor.
-   * @param vendorId Id of the vendor to add a tag to (required)
-   * @param vendorTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addVendorTag(Integer vendorId, String vendorTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'vendorId' is set
-    if (vendorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'vendorId' when calling addVendorTag");
-    }
-    
-    // verify the required parameter 'vendorTag' is set
-    if (vendorTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'vendorTag' when calling addVendorTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/vendor/{vendorId}/tag/{vendorTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "vendorId" + "\\}", apiClient.escapeString(vendorId.toString()))
-      .replaceAll("\\{" + "vendorTag" + "\\}", apiClient.escapeString(vendorTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a vendor
    * Deletes the vendor identified by the specified id.
    * @param vendorId Id of the vendor to be deleted. (required)
@@ -204,61 +98,8 @@ public class VendorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/vendor/{vendorId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/vendor/{vendorId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "vendorId" + "\\}", apiClient.escapeString(vendorId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a vendor.
-   * Deletes an existing vendor tag using the specified data.
-   * @param vendorId Id of the vendor to remove tag from (required)
-   * @param vendorTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteVendorTag(Integer vendorId, String vendorTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'vendorId' is set
-    if (vendorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'vendorId' when calling deleteVendorTag");
-    }
-    
-    // verify the required parameter 'vendorTag' is set
-    if (vendorTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'vendorTag' when calling deleteVendorTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/vendor/{vendorId}/tag/{vendorTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "vendorId" + "\\}", apiClient.escapeString(vendorId.toString()))
-      .replaceAll("\\{" + "vendorTag" + "\\}", apiClient.escapeString(vendorTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class VendorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/vendor/duplicate/{vendorId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/vendor/duplicate/{vendorId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "vendorId" + "\\}", apiClient.escapeString(vendorId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class VendorApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/vendor/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/vendor/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class VendorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/vendor/{vendorId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/vendor/{vendorId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "vendorId" + "\\}", apiClient.escapeString(vendorId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class VendorApi {
   }
   
   /**
-   * Get the tags for a vendor.
-   * Get all existing vendor tags.
-   * @param vendorId Id of the vendor to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getVendorTags(Integer vendorId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'vendorId' is set
-    if (vendorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'vendorId' when calling getVendorTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/vendor/{vendorId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "vendorId" + "\\}", apiClient.escapeString(vendorId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a vendor
    * Updates an existing vendor using the specified data.
    * @param body Vendor to be updated. (required)
@@ -498,7 +293,7 @@ public class VendorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/vendor".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/vendor".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class VendorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/vendor/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/vendor/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

@@ -18,7 +18,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class Order   {
   
   private BigDecimal orderNo = null;
@@ -58,7 +58,6 @@ public class Order   {
   private Integer numberOfPallets = null;
   private String completionStatus = null;
   private Integer parcelAccountId = null;
-  private Integer thirdPartyParcelAccountId = null;
   private String costCenter = null;
   private Date createDate = null;
   private String customerPONo = null;
@@ -73,7 +72,6 @@ public class Order   {
   private String holdCode = null;
   private Integer integrationPartnerId = null;
   private Integer numberOfLineItems = null;
-  private Integer estimatedNumberOfPicks = null;
   private Date modifyDate = null;
   private Integer omsOrderNo = null;
   private Integer omsCustomerId = null;
@@ -82,11 +80,9 @@ public class Order   {
   private Integer orderReason = null;
   private Integer orderSourceId = null;
   private Integer packingSlipTemplateId = null;
-  private Integer orderInvoiceTemplateId = null;
   private Integer orderConfirmationEmailTemplateId = null;
   private Integer shipmentConfirmationEmailTemplateId = null;
   private String priceLevel = null;
-  private String priceMode = null;
   private Integer priorityCode = null;
   private Integer fulfillmentProcessId = null;
   private Date shipBy = null;
@@ -680,23 +676,6 @@ public class Order   {
   
   /**
    **/
-  public Order thirdPartyParcelAccountId(Integer thirdPartyParcelAccountId) {
-    this.thirdPartyParcelAccountId = thirdPartyParcelAccountId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("thirdPartyParcelAccountId")
-  public Integer getThirdPartyParcelAccountId() {
-    return thirdPartyParcelAccountId;
-  }
-  public void setThirdPartyParcelAccountId(Integer thirdPartyParcelAccountId) {
-    this.thirdPartyParcelAccountId = thirdPartyParcelAccountId;
-  }
-
-  
-  /**
-   **/
   public Order costCenter(String costCenter) {
     this.costCenter = costCenter;
     return this;
@@ -854,13 +833,6 @@ public class Order   {
 
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("estimatedNumberOfPicks")
-  public Integer getEstimatedNumberOfPicks() {
-    return estimatedNumberOfPicks;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("modifyDate")
   public Date getModifyDate() {
     return modifyDate;
@@ -948,23 +920,6 @@ public class Order   {
   
   /**
    **/
-  public Order orderInvoiceTemplateId(Integer orderInvoiceTemplateId) {
-    this.orderInvoiceTemplateId = orderInvoiceTemplateId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("orderInvoiceTemplateId")
-  public Integer getOrderInvoiceTemplateId() {
-    return orderInvoiceTemplateId;
-  }
-  public void setOrderInvoiceTemplateId(Integer orderInvoiceTemplateId) {
-    this.orderInvoiceTemplateId = orderInvoiceTemplateId;
-  }
-
-  
-  /**
-   **/
   public Order orderConfirmationEmailTemplateId(Integer orderConfirmationEmailTemplateId) {
     this.orderConfirmationEmailTemplateId = orderConfirmationEmailTemplateId;
     return this;
@@ -1011,23 +966,6 @@ public class Order   {
   }
   public void setPriceLevel(String priceLevel) {
     this.priceLevel = priceLevel;
-  }
-
-  
-  /**
-   **/
-  public Order priceMode(String priceMode) {
-    this.priceMode = priceMode;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("priceMode")
-  public String getPriceMode() {
-    return priceMode;
-  }
-  public void setPriceMode(String priceMode) {
-    this.priceMode = priceMode;
   }
 
   
@@ -1273,20 +1211,10 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  public Order shippingCharge(BigDecimal shippingCharge) {
-    this.shippingCharge = shippingCharge;
-    return this;
-  }
-  
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("shippingCharge")
   public BigDecimal getShippingCharge() {
     return shippingCharge;
-  }
-  public void setShippingCharge(BigDecimal shippingCharge) {
-    this.shippingCharge = shippingCharge;
   }
 
   
@@ -1304,54 +1232,24 @@ public class Order   {
   }
 
   
-  /**
-   **/
-  public Order subtotal(BigDecimal subtotal) {
-    this.subtotal = subtotal;
-    return this;
-  }
-  
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("subtotal")
   public BigDecimal getSubtotal() {
     return subtotal;
   }
-  public void setSubtotal(BigDecimal subtotal) {
-    this.subtotal = subtotal;
-  }
 
-  
-  /**
-   **/
-  public Order tax(BigDecimal tax) {
-    this.tax = tax;
-    return this;
-  }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("tax")
   public BigDecimal getTax() {
     return tax;
   }
-  public void setTax(BigDecimal tax) {
-    this.tax = tax;
-  }
 
-  
-  /**
-   **/
-  public Order total(BigDecimal total) {
-    this.total = total;
-    return this;
-  }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("total")
   public BigDecimal getTotal() {
     return total;
-  }
-  public void setTotal(BigDecimal total) {
-    this.total = total;
   }
 
   
@@ -1498,7 +1396,6 @@ public class Order   {
         Objects.equals(this.numberOfPallets, order.numberOfPallets) &&
         Objects.equals(this.completionStatus, order.completionStatus) &&
         Objects.equals(this.parcelAccountId, order.parcelAccountId) &&
-        Objects.equals(this.thirdPartyParcelAccountId, order.thirdPartyParcelAccountId) &&
         Objects.equals(this.costCenter, order.costCenter) &&
         Objects.equals(this.createDate, order.createDate) &&
         Objects.equals(this.customerPONo, order.customerPONo) &&
@@ -1513,7 +1410,6 @@ public class Order   {
         Objects.equals(this.holdCode, order.holdCode) &&
         Objects.equals(this.integrationPartnerId, order.integrationPartnerId) &&
         Objects.equals(this.numberOfLineItems, order.numberOfLineItems) &&
-        Objects.equals(this.estimatedNumberOfPicks, order.estimatedNumberOfPicks) &&
         Objects.equals(this.modifyDate, order.modifyDate) &&
         Objects.equals(this.omsOrderNo, order.omsOrderNo) &&
         Objects.equals(this.omsCustomerId, order.omsCustomerId) &&
@@ -1522,11 +1418,9 @@ public class Order   {
         Objects.equals(this.orderReason, order.orderReason) &&
         Objects.equals(this.orderSourceId, order.orderSourceId) &&
         Objects.equals(this.packingSlipTemplateId, order.packingSlipTemplateId) &&
-        Objects.equals(this.orderInvoiceTemplateId, order.orderInvoiceTemplateId) &&
         Objects.equals(this.orderConfirmationEmailTemplateId, order.orderConfirmationEmailTemplateId) &&
         Objects.equals(this.shipmentConfirmationEmailTemplateId, order.shipmentConfirmationEmailTemplateId) &&
         Objects.equals(this.priceLevel, order.priceLevel) &&
-        Objects.equals(this.priceMode, order.priceMode) &&
         Objects.equals(this.priorityCode, order.priorityCode) &&
         Objects.equals(this.fulfillmentProcessId, order.fulfillmentProcessId) &&
         Objects.equals(this.shipBy, order.shipBy) &&
@@ -1561,7 +1455,7 @@ public class Order   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, useOrderNoRoot, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, thirdPartyParcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, estimatedWeightLbs, freight, giftMessage, groupOrderId, holdCode, integrationPartnerId, numberOfLineItems, estimatedNumberOfPicks, modifyDate, omsOrderNo, omsCustomerId, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderInvoiceTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priceMode, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalPaid, totalQty, weightLbs, lineItems, extraOrderData, extraLineItemData, externalShippingSystemId, customFields);
+    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, useOrderNoRoot, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, estimatedWeightLbs, freight, giftMessage, groupOrderId, holdCode, integrationPartnerId, numberOfLineItems, modifyDate, omsOrderNo, omsCustomerId, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalPaid, totalQty, weightLbs, lineItems, extraOrderData, extraLineItemData, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -1606,7 +1500,6 @@ public class Order   {
     sb.append("    numberOfPallets: ").append(toIndentedString(numberOfPallets)).append("\n");
     sb.append("    completionStatus: ").append(toIndentedString(completionStatus)).append("\n");
     sb.append("    parcelAccountId: ").append(toIndentedString(parcelAccountId)).append("\n");
-    sb.append("    thirdPartyParcelAccountId: ").append(toIndentedString(thirdPartyParcelAccountId)).append("\n");
     sb.append("    costCenter: ").append(toIndentedString(costCenter)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    customerPONo: ").append(toIndentedString(customerPONo)).append("\n");
@@ -1621,7 +1514,6 @@ public class Order   {
     sb.append("    holdCode: ").append(toIndentedString(holdCode)).append("\n");
     sb.append("    integrationPartnerId: ").append(toIndentedString(integrationPartnerId)).append("\n");
     sb.append("    numberOfLineItems: ").append(toIndentedString(numberOfLineItems)).append("\n");
-    sb.append("    estimatedNumberOfPicks: ").append(toIndentedString(estimatedNumberOfPicks)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    omsOrderNo: ").append(toIndentedString(omsOrderNo)).append("\n");
     sb.append("    omsCustomerId: ").append(toIndentedString(omsCustomerId)).append("\n");
@@ -1630,11 +1522,9 @@ public class Order   {
     sb.append("    orderReason: ").append(toIndentedString(orderReason)).append("\n");
     sb.append("    orderSourceId: ").append(toIndentedString(orderSourceId)).append("\n");
     sb.append("    packingSlipTemplateId: ").append(toIndentedString(packingSlipTemplateId)).append("\n");
-    sb.append("    orderInvoiceTemplateId: ").append(toIndentedString(orderInvoiceTemplateId)).append("\n");
     sb.append("    orderConfirmationEmailTemplateId: ").append(toIndentedString(orderConfirmationEmailTemplateId)).append("\n");
     sb.append("    shipmentConfirmationEmailTemplateId: ").append(toIndentedString(shipmentConfirmationEmailTemplateId)).append("\n");
     sb.append("    priceLevel: ").append(toIndentedString(priceLevel)).append("\n");
-    sb.append("    priceMode: ").append(toIndentedString(priceMode)).append("\n");
     sb.append("    priorityCode: ").append(toIndentedString(priorityCode)).append("\n");
     sb.append("    fulfillmentProcessId: ").append(toIndentedString(fulfillmentProcessId)).append("\n");
     sb.append("    shipBy: ").append(toIndentedString(shipBy)).append("\n");

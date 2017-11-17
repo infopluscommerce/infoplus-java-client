@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ReceivingProcessApi {
   private ApiClient apiClient;
 
@@ -36,112 +36,6 @@ public class ReceivingProcessApi {
 
   
   /**
-   * Add new audit for a receivingProcess
-   * Adds an audit to an existing receivingProcess.
-   * @param receivingProcessId Id of the receivingProcess to add an audit to (required)
-   * @param receivingProcessAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addReceivingProcessAudit(Integer receivingProcessId, String receivingProcessAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'receivingProcessId' is set
-    if (receivingProcessId == null) {
-      throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling addReceivingProcessAudit");
-    }
-    
-    // verify the required parameter 'receivingProcessAudit' is set
-    if (receivingProcessAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'receivingProcessAudit' when calling addReceivingProcessAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/receivingProcess/{receivingProcessId}/audit/{receivingProcessAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()))
-      .replaceAll("\\{" + "receivingProcessAudit" + "\\}", apiClient.escapeString(receivingProcessAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a receivingProcess.
-   * Adds a tag to an existing receivingProcess.
-   * @param receivingProcessId Id of the receivingProcess to add a tag to (required)
-   * @param receivingProcessTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addReceivingProcessTag(Integer receivingProcessId, String receivingProcessTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'receivingProcessId' is set
-    if (receivingProcessId == null) {
-      throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling addReceivingProcessTag");
-    }
-    
-    // verify the required parameter 'receivingProcessTag' is set
-    if (receivingProcessTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'receivingProcessTag' when calling addReceivingProcessTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/receivingProcess/{receivingProcessId}/tag/{receivingProcessTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()))
-      .replaceAll("\\{" + "receivingProcessTag" + "\\}", apiClient.escapeString(receivingProcessTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a receivingProcess
    * Deletes the receivingProcess identified by the specified id.
    * @param receivingProcessId Id of the receivingProcess to be deleted. (required)
@@ -156,61 +50,8 @@ public class ReceivingProcessApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a receivingProcess.
-   * Deletes an existing receivingProcess tag using the specified data.
-   * @param receivingProcessId Id of the receivingProcess to remove tag from (required)
-   * @param receivingProcessTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteReceivingProcessTag(Integer receivingProcessId, String receivingProcessTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'receivingProcessId' is set
-    if (receivingProcessId == null) {
-      throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling deleteReceivingProcessTag");
-    }
-    
-    // verify the required parameter 'receivingProcessTag' is set
-    if (receivingProcessTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'receivingProcessTag' when calling deleteReceivingProcessTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/receivingProcess/{receivingProcessId}/tag/{receivingProcessTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()))
-      .replaceAll("\\{" + "receivingProcessTag" + "\\}", apiClient.escapeString(receivingProcessTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -256,7 +97,7 @@ public class ReceivingProcessApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/receivingProcess/duplicate/{receivingProcessId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/receivingProcess/duplicate/{receivingProcessId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()));
 
     // query params
@@ -302,7 +143,7 @@ public class ReceivingProcessApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/receivingProcess/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/receivingProcess/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -357,7 +198,7 @@ public class ReceivingProcessApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/receivingProcess/{receivingProcessId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()));
 
     // query params
@@ -390,52 +231,6 @@ public class ReceivingProcessApi {
   }
   
   /**
-   * Get the tags for a receivingProcess.
-   * Get all existing receivingProcess tags.
-   * @param receivingProcessId Id of the receivingProcess to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getReceivingProcessTags(Integer receivingProcessId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'receivingProcessId' is set
-    if (receivingProcessId == null) {
-      throw new ApiException(400, "Missing the required parameter 'receivingProcessId' when calling getReceivingProcessTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/receivingProcess/{receivingProcessId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "receivingProcessId" + "\\}", apiClient.escapeString(receivingProcessId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a receivingProcess custom fields
    * Updates an existing receivingProcess custom fields using the specified data.
    * @param body ReceivingProcess to be updated. (required)
@@ -450,7 +245,7 @@ public class ReceivingProcessApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/receivingProcess/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/receivingProcess/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

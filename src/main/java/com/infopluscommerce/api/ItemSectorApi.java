@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ItemSectorApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ItemSectorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSector".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemSector".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ItemSectorApi {
   }
   
   /**
-   * Add new audit for an itemSector
-   * Adds an audit to an existing itemSector.
-   * @param itemSectorId Id of the itemSector to add an audit to (required)
-   * @param itemSectorAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemSectorAudit(Integer itemSectorId, String itemSectorAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSectorId' is set
-    if (itemSectorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSectorId' when calling addItemSectorAudit");
-    }
-    
-    // verify the required parameter 'itemSectorAudit' is set
-    if (itemSectorAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSectorAudit' when calling addItemSectorAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSector/{itemSectorId}/audit/{itemSectorAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSectorId" + "\\}", apiClient.escapeString(itemSectorId.toString()))
-      .replaceAll("\\{" + "itemSectorAudit" + "\\}", apiClient.escapeString(itemSectorAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an itemSector.
-   * Adds a tag to an existing itemSector.
-   * @param itemSectorId Id of the itemSector to add a tag to (required)
-   * @param itemSectorTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemSectorTag(Integer itemSectorId, String itemSectorTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSectorId' is set
-    if (itemSectorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSectorId' when calling addItemSectorTag");
-    }
-    
-    // verify the required parameter 'itemSectorTag' is set
-    if (itemSectorTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSectorTag' when calling addItemSectorTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSector/{itemSectorId}/tag/{itemSectorTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSectorId" + "\\}", apiClient.escapeString(itemSectorId.toString()))
-      .replaceAll("\\{" + "itemSectorTag" + "\\}", apiClient.escapeString(itemSectorTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an itemSector
    * Deletes the itemSector identified by the specified id.
    * @param itemSectorId Id of the itemSector to be deleted. (required)
@@ -204,61 +98,8 @@ public class ItemSectorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSector/{itemSectorId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemSector/{itemSectorId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemSectorId" + "\\}", apiClient.escapeString(itemSectorId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an itemSector.
-   * Deletes an existing itemSector tag using the specified data.
-   * @param itemSectorId Id of the itemSector to remove tag from (required)
-   * @param itemSectorTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteItemSectorTag(Integer itemSectorId, String itemSectorTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSectorId' is set
-    if (itemSectorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSectorId' when calling deleteItemSectorTag");
-    }
-    
-    // verify the required parameter 'itemSectorTag' is set
-    if (itemSectorTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSectorTag' when calling deleteItemSectorTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSector/{itemSectorId}/tag/{itemSectorTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSectorId" + "\\}", apiClient.escapeString(itemSectorId.toString()))
-      .replaceAll("\\{" + "itemSectorTag" + "\\}", apiClient.escapeString(itemSectorTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ItemSectorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSector/duplicate/{itemSectorId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemSector/duplicate/{itemSectorId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemSectorId" + "\\}", apiClient.escapeString(itemSectorId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ItemSectorApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/itemSector/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemSector/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ItemSectorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSector/{itemSectorId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemSector/{itemSectorId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemSectorId" + "\\}", apiClient.escapeString(itemSectorId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ItemSectorApi {
   }
   
   /**
-   * Get the tags for an itemSector.
-   * Get all existing itemSector tags.
-   * @param itemSectorId Id of the itemSector to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getItemSectorTags(Integer itemSectorId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSectorId' is set
-    if (itemSectorId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSectorId' when calling getItemSectorTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSector/{itemSectorId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSectorId" + "\\}", apiClient.escapeString(itemSectorId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an itemSector
    * Updates an existing itemSector using the specified data.
    * @param body ItemSector to be updated. (required)
@@ -498,7 +293,7 @@ public class ItemSectorApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSector".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemSector".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

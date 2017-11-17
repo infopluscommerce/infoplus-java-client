@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class FulfillmentPlanApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class FulfillmentPlanApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/fulfillmentPlan".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class FulfillmentPlanApi {
   }
   
   /**
-   * Add new audit for a fulfillmentPlan
-   * Adds an audit to an existing fulfillmentPlan.
-   * @param fulfillmentPlanId Id of the fulfillmentPlan to add an audit to (required)
-   * @param fulfillmentPlanAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addFulfillmentPlanAudit(Integer fulfillmentPlanId, String fulfillmentPlanAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'fulfillmentPlanId' is set
-    if (fulfillmentPlanId == null) {
-      throw new ApiException(400, "Missing the required parameter 'fulfillmentPlanId' when calling addFulfillmentPlanAudit");
-    }
-    
-    // verify the required parameter 'fulfillmentPlanAudit' is set
-    if (fulfillmentPlanAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'fulfillmentPlanAudit' when calling addFulfillmentPlanAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/{fulfillmentPlanId}/audit/{fulfillmentPlanAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "fulfillmentPlanId" + "\\}", apiClient.escapeString(fulfillmentPlanId.toString()))
-      .replaceAll("\\{" + "fulfillmentPlanAudit" + "\\}", apiClient.escapeString(fulfillmentPlanAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a fulfillmentPlan.
-   * Adds a tag to an existing fulfillmentPlan.
-   * @param fulfillmentPlanId Id of the fulfillmentPlan to add a tag to (required)
-   * @param fulfillmentPlanTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addFulfillmentPlanTag(Integer fulfillmentPlanId, String fulfillmentPlanTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'fulfillmentPlanId' is set
-    if (fulfillmentPlanId == null) {
-      throw new ApiException(400, "Missing the required parameter 'fulfillmentPlanId' when calling addFulfillmentPlanTag");
-    }
-    
-    // verify the required parameter 'fulfillmentPlanTag' is set
-    if (fulfillmentPlanTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'fulfillmentPlanTag' when calling addFulfillmentPlanTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/{fulfillmentPlanId}/tag/{fulfillmentPlanTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "fulfillmentPlanId" + "\\}", apiClient.escapeString(fulfillmentPlanId.toString()))
-      .replaceAll("\\{" + "fulfillmentPlanTag" + "\\}", apiClient.escapeString(fulfillmentPlanTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a fulfillmentPlan
    * Deletes the fulfillmentPlan identified by the specified id.
    * @param fulfillmentPlanId Id of the fulfillmentPlan to be deleted. (required)
@@ -204,61 +98,8 @@ public class FulfillmentPlanApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/{fulfillmentPlanId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/fulfillmentPlan/{fulfillmentPlanId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "fulfillmentPlanId" + "\\}", apiClient.escapeString(fulfillmentPlanId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a fulfillmentPlan.
-   * Deletes an existing fulfillmentPlan tag using the specified data.
-   * @param fulfillmentPlanId Id of the fulfillmentPlan to remove tag from (required)
-   * @param fulfillmentPlanTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteFulfillmentPlanTag(Integer fulfillmentPlanId, String fulfillmentPlanTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'fulfillmentPlanId' is set
-    if (fulfillmentPlanId == null) {
-      throw new ApiException(400, "Missing the required parameter 'fulfillmentPlanId' when calling deleteFulfillmentPlanTag");
-    }
-    
-    // verify the required parameter 'fulfillmentPlanTag' is set
-    if (fulfillmentPlanTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'fulfillmentPlanTag' when calling deleteFulfillmentPlanTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/{fulfillmentPlanId}/tag/{fulfillmentPlanTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "fulfillmentPlanId" + "\\}", apiClient.escapeString(fulfillmentPlanId.toString()))
-      .replaceAll("\\{" + "fulfillmentPlanTag" + "\\}", apiClient.escapeString(fulfillmentPlanTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class FulfillmentPlanApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/duplicate/{fulfillmentPlanId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/fulfillmentPlan/duplicate/{fulfillmentPlanId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "fulfillmentPlanId" + "\\}", apiClient.escapeString(fulfillmentPlanId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class FulfillmentPlanApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/fulfillmentPlan/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class FulfillmentPlanApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/{fulfillmentPlanId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/fulfillmentPlan/{fulfillmentPlanId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "fulfillmentPlanId" + "\\}", apiClient.escapeString(fulfillmentPlanId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class FulfillmentPlanApi {
   }
   
   /**
-   * Get the tags for a fulfillmentPlan.
-   * Get all existing fulfillmentPlan tags.
-   * @param fulfillmentPlanId Id of the fulfillmentPlan to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getFulfillmentPlanTags(Integer fulfillmentPlanId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'fulfillmentPlanId' is set
-    if (fulfillmentPlanId == null) {
-      throw new ApiException(400, "Missing the required parameter 'fulfillmentPlanId' when calling getFulfillmentPlanTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/{fulfillmentPlanId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "fulfillmentPlanId" + "\\}", apiClient.escapeString(fulfillmentPlanId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a fulfillmentPlan
    * Updates an existing fulfillmentPlan using the specified data.
    * @param body FulfillmentPlan to be updated. (required)
@@ -498,7 +293,7 @@ public class FulfillmentPlanApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/fulfillmentPlan".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class FulfillmentPlanApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/fulfillmentPlan/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/fulfillmentPlan/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

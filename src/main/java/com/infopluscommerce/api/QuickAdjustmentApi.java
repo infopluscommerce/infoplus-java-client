@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class QuickAdjustmentApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class QuickAdjustmentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/quickAdjustment".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/quickAdjustment".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class QuickAdjustmentApi {
   }
   
   /**
-   * Add new audit for a quickAdjustment
-   * Adds an audit to an existing quickAdjustment.
-   * @param quickAdjustmentId Id of the quickAdjustment to add an audit to (required)
-   * @param quickAdjustmentAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addQuickAdjustmentAudit(Integer quickAdjustmentId, String quickAdjustmentAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'quickAdjustmentId' is set
-    if (quickAdjustmentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'quickAdjustmentId' when calling addQuickAdjustmentAudit");
-    }
-    
-    // verify the required parameter 'quickAdjustmentAudit' is set
-    if (quickAdjustmentAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'quickAdjustmentAudit' when calling addQuickAdjustmentAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/{quickAdjustmentId}/audit/{quickAdjustmentAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "quickAdjustmentId" + "\\}", apiClient.escapeString(quickAdjustmentId.toString()))
-      .replaceAll("\\{" + "quickAdjustmentAudit" + "\\}", apiClient.escapeString(quickAdjustmentAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a quickAdjustment.
-   * Adds a tag to an existing quickAdjustment.
-   * @param quickAdjustmentId Id of the quickAdjustment to add a tag to (required)
-   * @param quickAdjustmentTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addQuickAdjustmentTag(Integer quickAdjustmentId, String quickAdjustmentTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'quickAdjustmentId' is set
-    if (quickAdjustmentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'quickAdjustmentId' when calling addQuickAdjustmentTag");
-    }
-    
-    // verify the required parameter 'quickAdjustmentTag' is set
-    if (quickAdjustmentTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'quickAdjustmentTag' when calling addQuickAdjustmentTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/{quickAdjustmentId}/tag/{quickAdjustmentTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "quickAdjustmentId" + "\\}", apiClient.escapeString(quickAdjustmentId.toString()))
-      .replaceAll("\\{" + "quickAdjustmentTag" + "\\}", apiClient.escapeString(quickAdjustmentTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a quickAdjustment
    * Deletes the quickAdjustment identified by the specified id.
    * @param quickAdjustmentId Id of the quickAdjustment to be deleted. (required)
@@ -204,61 +98,8 @@ public class QuickAdjustmentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/{quickAdjustmentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/quickAdjustment/{quickAdjustmentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "quickAdjustmentId" + "\\}", apiClient.escapeString(quickAdjustmentId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a quickAdjustment.
-   * Deletes an existing quickAdjustment tag using the specified data.
-   * @param quickAdjustmentId Id of the quickAdjustment to remove tag from (required)
-   * @param quickAdjustmentTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteQuickAdjustmentTag(Integer quickAdjustmentId, String quickAdjustmentTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'quickAdjustmentId' is set
-    if (quickAdjustmentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'quickAdjustmentId' when calling deleteQuickAdjustmentTag");
-    }
-    
-    // verify the required parameter 'quickAdjustmentTag' is set
-    if (quickAdjustmentTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'quickAdjustmentTag' when calling deleteQuickAdjustmentTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/{quickAdjustmentId}/tag/{quickAdjustmentTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "quickAdjustmentId" + "\\}", apiClient.escapeString(quickAdjustmentId.toString()))
-      .replaceAll("\\{" + "quickAdjustmentTag" + "\\}", apiClient.escapeString(quickAdjustmentTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class QuickAdjustmentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/duplicate/{quickAdjustmentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/quickAdjustment/duplicate/{quickAdjustmentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "quickAdjustmentId" + "\\}", apiClient.escapeString(quickAdjustmentId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class QuickAdjustmentApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/quickAdjustment/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class QuickAdjustmentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/{quickAdjustmentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/quickAdjustment/{quickAdjustmentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "quickAdjustmentId" + "\\}", apiClient.escapeString(quickAdjustmentId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class QuickAdjustmentApi {
   }
   
   /**
-   * Get the tags for a quickAdjustment.
-   * Get all existing quickAdjustment tags.
-   * @param quickAdjustmentId Id of the quickAdjustment to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getQuickAdjustmentTags(Integer quickAdjustmentId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'quickAdjustmentId' is set
-    if (quickAdjustmentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'quickAdjustmentId' when calling getQuickAdjustmentTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/{quickAdjustmentId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "quickAdjustmentId" + "\\}", apiClient.escapeString(quickAdjustmentId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a quickAdjustment
    * Updates an existing quickAdjustment using the specified data.
    * @param body QuickAdjustment to be updated. (required)
@@ -498,7 +293,7 @@ public class QuickAdjustmentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/quickAdjustment".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/quickAdjustment".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class QuickAdjustmentApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/quickAdjustment/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/quickAdjustment/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

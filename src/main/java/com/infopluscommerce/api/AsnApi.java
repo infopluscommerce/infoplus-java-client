@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class AsnApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class AsnApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/asn".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/asn".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class AsnApi {
   }
   
   /**
-   * Add new audit for an asn
-   * Adds an audit to an existing asn.
-   * @param asnId Id of the asn to add an audit to (required)
-   * @param asnAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addAsnAudit(Integer asnId, String asnAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'asnId' is set
-    if (asnId == null) {
-      throw new ApiException(400, "Missing the required parameter 'asnId' when calling addAsnAudit");
-    }
-    
-    // verify the required parameter 'asnAudit' is set
-    if (asnAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'asnAudit' when calling addAsnAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/asn/{asnId}/audit/{asnAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "asnId" + "\\}", apiClient.escapeString(asnId.toString()))
-      .replaceAll("\\{" + "asnAudit" + "\\}", apiClient.escapeString(asnAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an asn.
-   * Adds a tag to an existing asn.
-   * @param asnId Id of the asn to add a tag to (required)
-   * @param asnTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addAsnTag(Integer asnId, String asnTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'asnId' is set
-    if (asnId == null) {
-      throw new ApiException(400, "Missing the required parameter 'asnId' when calling addAsnTag");
-    }
-    
-    // verify the required parameter 'asnTag' is set
-    if (asnTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'asnTag' when calling addAsnTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/asn/{asnId}/tag/{asnTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "asnId" + "\\}", apiClient.escapeString(asnId.toString()))
-      .replaceAll("\\{" + "asnTag" + "\\}", apiClient.escapeString(asnTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an asn
    * Deletes the asn identified by the specified id.
    * @param asnId Id of the asn to be deleted. (required)
@@ -204,61 +98,8 @@ public class AsnApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/asn/{asnId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/asn/{asnId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "asnId" + "\\}", apiClient.escapeString(asnId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an asn.
-   * Deletes an existing asn tag using the specified data.
-   * @param asnId Id of the asn to remove tag from (required)
-   * @param asnTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteAsnTag(Integer asnId, String asnTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'asnId' is set
-    if (asnId == null) {
-      throw new ApiException(400, "Missing the required parameter 'asnId' when calling deleteAsnTag");
-    }
-    
-    // verify the required parameter 'asnTag' is set
-    if (asnTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'asnTag' when calling deleteAsnTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/asn/{asnId}/tag/{asnTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "asnId" + "\\}", apiClient.escapeString(asnId.toString()))
-      .replaceAll("\\{" + "asnTag" + "\\}", apiClient.escapeString(asnTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -302,7 +143,7 @@ public class AsnApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/asn/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/asn/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -357,7 +198,7 @@ public class AsnApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/asn/{asnId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/asn/{asnId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "asnId" + "\\}", apiClient.escapeString(asnId.toString()));
 
     // query params
@@ -390,52 +231,6 @@ public class AsnApi {
   }
   
   /**
-   * Get the tags for an asn.
-   * Get all existing asn tags.
-   * @param asnId Id of the asn to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getAsnTags(Integer asnId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'asnId' is set
-    if (asnId == null) {
-      throw new ApiException(400, "Missing the required parameter 'asnId' when calling getAsnTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/asn/{asnId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "asnId" + "\\}", apiClient.escapeString(asnId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated an asn by id
    * Returns a duplicated asn identified by the specified id.
    * @param asnId Id of the asn to be duplicated. (required)
@@ -451,7 +246,7 @@ public class AsnApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/asn/duplicate/{asnId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/asn/duplicate/{asnId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "asnId" + "\\}", apiClient.escapeString(asnId.toString()));
 
     // query params
@@ -498,7 +293,7 @@ public class AsnApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/asn".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/asn".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class AsnApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/asn/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/asn/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

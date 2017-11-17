@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ItemSummaryCodeApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ItemSummaryCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemSummaryCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ItemSummaryCodeApi {
   }
   
   /**
-   * Add new audit for an itemSummaryCode
-   * Adds an audit to an existing itemSummaryCode.
-   * @param itemSummaryCodeId Id of the itemSummaryCode to add an audit to (required)
-   * @param itemSummaryCodeAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemSummaryCodeAudit(Integer itemSummaryCodeId, String itemSummaryCodeAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSummaryCodeId' is set
-    if (itemSummaryCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSummaryCodeId' when calling addItemSummaryCodeAudit");
-    }
-    
-    // verify the required parameter 'itemSummaryCodeAudit' is set
-    if (itemSummaryCodeAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSummaryCodeAudit' when calling addItemSummaryCodeAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/{itemSummaryCodeId}/audit/{itemSummaryCodeAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSummaryCodeId" + "\\}", apiClient.escapeString(itemSummaryCodeId.toString()))
-      .replaceAll("\\{" + "itemSummaryCodeAudit" + "\\}", apiClient.escapeString(itemSummaryCodeAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an itemSummaryCode.
-   * Adds a tag to an existing itemSummaryCode.
-   * @param itemSummaryCodeId Id of the itemSummaryCode to add a tag to (required)
-   * @param itemSummaryCodeTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemSummaryCodeTag(Integer itemSummaryCodeId, String itemSummaryCodeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSummaryCodeId' is set
-    if (itemSummaryCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSummaryCodeId' when calling addItemSummaryCodeTag");
-    }
-    
-    // verify the required parameter 'itemSummaryCodeTag' is set
-    if (itemSummaryCodeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSummaryCodeTag' when calling addItemSummaryCodeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/{itemSummaryCodeId}/tag/{itemSummaryCodeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSummaryCodeId" + "\\}", apiClient.escapeString(itemSummaryCodeId.toString()))
-      .replaceAll("\\{" + "itemSummaryCodeTag" + "\\}", apiClient.escapeString(itemSummaryCodeTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an itemSummaryCode
    * Deletes the itemSummaryCode identified by the specified id.
    * @param itemSummaryCodeId Id of the itemSummaryCode to be deleted. (required)
@@ -204,61 +98,8 @@ public class ItemSummaryCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/{itemSummaryCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemSummaryCode/{itemSummaryCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemSummaryCodeId" + "\\}", apiClient.escapeString(itemSummaryCodeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an itemSummaryCode.
-   * Deletes an existing itemSummaryCode tag using the specified data.
-   * @param itemSummaryCodeId Id of the itemSummaryCode to remove tag from (required)
-   * @param itemSummaryCodeTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteItemSummaryCodeTag(Integer itemSummaryCodeId, String itemSummaryCodeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSummaryCodeId' is set
-    if (itemSummaryCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSummaryCodeId' when calling deleteItemSummaryCodeTag");
-    }
-    
-    // verify the required parameter 'itemSummaryCodeTag' is set
-    if (itemSummaryCodeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSummaryCodeTag' when calling deleteItemSummaryCodeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/{itemSummaryCodeId}/tag/{itemSummaryCodeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSummaryCodeId" + "\\}", apiClient.escapeString(itemSummaryCodeId.toString()))
-      .replaceAll("\\{" + "itemSummaryCodeTag" + "\\}", apiClient.escapeString(itemSummaryCodeTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ItemSummaryCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/duplicate/{itemSummaryCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemSummaryCode/duplicate/{itemSummaryCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemSummaryCodeId" + "\\}", apiClient.escapeString(itemSummaryCodeId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ItemSummaryCodeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemSummaryCode/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ItemSummaryCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/{itemSummaryCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemSummaryCode/{itemSummaryCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemSummaryCodeId" + "\\}", apiClient.escapeString(itemSummaryCodeId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ItemSummaryCodeApi {
   }
   
   /**
-   * Get the tags for an itemSummaryCode.
-   * Get all existing itemSummaryCode tags.
-   * @param itemSummaryCodeId Id of the itemSummaryCode to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getItemSummaryCodeTags(Integer itemSummaryCodeId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemSummaryCodeId' is set
-    if (itemSummaryCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemSummaryCodeId' when calling getItemSummaryCodeTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode/{itemSummaryCodeId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemSummaryCodeId" + "\\}", apiClient.escapeString(itemSummaryCodeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an itemSummaryCode
    * Updates an existing itemSummaryCode using the specified data.
    * @param body ItemSummaryCode to be updated. (required)
@@ -498,7 +293,7 @@ public class ItemSummaryCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemSummaryCode".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemSummaryCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

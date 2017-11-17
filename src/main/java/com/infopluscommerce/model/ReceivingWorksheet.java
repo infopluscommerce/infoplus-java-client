@@ -15,7 +15,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ReceivingWorksheet   {
   
   private Integer id = null;
@@ -26,7 +26,6 @@ public class ReceivingWorksheet   {
   private String status = null;
   private String serviceLevel = null;
   private Integer receivingProcessId = null;
-  private Date dockDate = null;
   private Integer createdBy = null;
   private String worksheetName = null;
   private String carrier = null;
@@ -153,23 +152,6 @@ public class ReceivingWorksheet   {
   }
   public void setReceivingProcessId(Integer receivingProcessId) {
     this.receivingProcessId = receivingProcessId;
-  }
-
-  
-  /**
-   **/
-  public ReceivingWorksheet dockDate(Date dockDate) {
-    this.dockDate = dockDate;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("dockDate")
-  public Date getDockDate() {
-    return dockDate;
-  }
-  public void setDockDate(Date dockDate) {
-    this.dockDate = dockDate;
   }
 
   
@@ -348,7 +330,6 @@ public class ReceivingWorksheet   {
         Objects.equals(this.status, receivingWorksheet.status) &&
         Objects.equals(this.serviceLevel, receivingWorksheet.serviceLevel) &&
         Objects.equals(this.receivingProcessId, receivingWorksheet.receivingProcessId) &&
-        Objects.equals(this.dockDate, receivingWorksheet.dockDate) &&
         Objects.equals(this.createdBy, receivingWorksheet.createdBy) &&
         Objects.equals(this.worksheetName, receivingWorksheet.worksheetName) &&
         Objects.equals(this.carrier, receivingWorksheet.carrier) &&
@@ -364,7 +345,7 @@ public class ReceivingWorksheet   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseId, poNoId, lobId, vendorId, status, serviceLevel, receivingProcessId, dockDate, createdBy, worksheetName, carrier, onTheDock, autoCommit, lineItems, notes, workBatchId, createDate, modifyDate, customFields);
+    return Objects.hash(id, warehouseId, poNoId, lobId, vendorId, status, serviceLevel, receivingProcessId, createdBy, worksheetName, carrier, onTheDock, autoCommit, lineItems, notes, workBatchId, createDate, modifyDate, customFields);
   }
 
   @Override
@@ -380,7 +361,6 @@ public class ReceivingWorksheet   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    serviceLevel: ").append(toIndentedString(serviceLevel)).append("\n");
     sb.append("    receivingProcessId: ").append(toIndentedString(receivingProcessId)).append("\n");
-    sb.append("    dockDate: ").append(toIndentedString(dockDate)).append("\n");
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
     sb.append("    worksheetName: ").append(toIndentedString(worksheetName)).append("\n");
     sb.append("    carrier: ").append(toIndentedString(carrier)).append("\n");

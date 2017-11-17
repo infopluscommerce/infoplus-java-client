@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ItemBuyerApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ItemBuyerApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemBuyer".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemBuyer".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ItemBuyerApi {
   }
   
   /**
-   * Add new audit for an itemBuyer
-   * Adds an audit to an existing itemBuyer.
-   * @param itemBuyerId Id of the itemBuyer to add an audit to (required)
-   * @param itemBuyerAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemBuyerAudit(Integer itemBuyerId, String itemBuyerAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemBuyerId' is set
-    if (itemBuyerId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemBuyerId' when calling addItemBuyerAudit");
-    }
-    
-    // verify the required parameter 'itemBuyerAudit' is set
-    if (itemBuyerAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemBuyerAudit' when calling addItemBuyerAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemBuyer/{itemBuyerId}/audit/{itemBuyerAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemBuyerId" + "\\}", apiClient.escapeString(itemBuyerId.toString()))
-      .replaceAll("\\{" + "itemBuyerAudit" + "\\}", apiClient.escapeString(itemBuyerAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an itemBuyer.
-   * Adds a tag to an existing itemBuyer.
-   * @param itemBuyerId Id of the itemBuyer to add a tag to (required)
-   * @param itemBuyerTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addItemBuyerTag(Integer itemBuyerId, String itemBuyerTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemBuyerId' is set
-    if (itemBuyerId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemBuyerId' when calling addItemBuyerTag");
-    }
-    
-    // verify the required parameter 'itemBuyerTag' is set
-    if (itemBuyerTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemBuyerTag' when calling addItemBuyerTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemBuyer/{itemBuyerId}/tag/{itemBuyerTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemBuyerId" + "\\}", apiClient.escapeString(itemBuyerId.toString()))
-      .replaceAll("\\{" + "itemBuyerTag" + "\\}", apiClient.escapeString(itemBuyerTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete an itemBuyer
    * Deletes the itemBuyer identified by the specified id.
    * @param itemBuyerId Id of the itemBuyer to be deleted. (required)
@@ -204,61 +98,8 @@ public class ItemBuyerApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemBuyer/{itemBuyerId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemBuyer/{itemBuyerId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemBuyerId" + "\\}", apiClient.escapeString(itemBuyerId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an itemBuyer.
-   * Deletes an existing itemBuyer tag using the specified data.
-   * @param itemBuyerId Id of the itemBuyer to remove tag from (required)
-   * @param itemBuyerTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteItemBuyerTag(Integer itemBuyerId, String itemBuyerTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemBuyerId' is set
-    if (itemBuyerId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemBuyerId' when calling deleteItemBuyerTag");
-    }
-    
-    // verify the required parameter 'itemBuyerTag' is set
-    if (itemBuyerTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemBuyerTag' when calling deleteItemBuyerTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemBuyer/{itemBuyerId}/tag/{itemBuyerTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemBuyerId" + "\\}", apiClient.escapeString(itemBuyerId.toString()))
-      .replaceAll("\\{" + "itemBuyerTag" + "\\}", apiClient.escapeString(itemBuyerTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ItemBuyerApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemBuyer/duplicate/{itemBuyerId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemBuyer/duplicate/{itemBuyerId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemBuyerId" + "\\}", apiClient.escapeString(itemBuyerId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ItemBuyerApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/itemBuyer/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemBuyer/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ItemBuyerApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemBuyer/{itemBuyerId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/itemBuyer/{itemBuyerId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "itemBuyerId" + "\\}", apiClient.escapeString(itemBuyerId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ItemBuyerApi {
   }
   
   /**
-   * Get the tags for an itemBuyer.
-   * Get all existing itemBuyer tags.
-   * @param itemBuyerId Id of the itemBuyer to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getItemBuyerTags(Integer itemBuyerId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'itemBuyerId' is set
-    if (itemBuyerId == null) {
-      throw new ApiException(400, "Missing the required parameter 'itemBuyerId' when calling getItemBuyerTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/itemBuyer/{itemBuyerId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "itemBuyerId" + "\\}", apiClient.escapeString(itemBuyerId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an itemBuyer
    * Updates an existing itemBuyer using the specified data.
    * @param body ItemBuyer to be updated. (required)
@@ -498,7 +293,7 @@ public class ItemBuyerApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/itemBuyer".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/itemBuyer".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class OrderLineApi {
   private ApiClient apiClient;
 
@@ -36,165 +36,6 @@ public class OrderLineApi {
 
   
   /**
-   * Add new audit for an orderLine
-   * Adds an audit to an existing orderLine.
-   * @param orderLineId Id of the orderLine to add an audit to (required)
-   * @param orderLineAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addOrderLineAudit(Integer orderLineId, String orderLineAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderLineId' is set
-    if (orderLineId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderLineId' when calling addOrderLineAudit");
-    }
-    
-    // verify the required parameter 'orderLineAudit' is set
-    if (orderLineAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderLineAudit' when calling addOrderLineAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderLine/{orderLineId}/audit/{orderLineAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderLineId" + "\\}", apiClient.escapeString(orderLineId.toString()))
-      .replaceAll("\\{" + "orderLineAudit" + "\\}", apiClient.escapeString(orderLineAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for an orderLine.
-   * Adds a tag to an existing orderLine.
-   * @param orderLineId Id of the orderLine to add a tag to (required)
-   * @param orderLineTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addOrderLineTag(Integer orderLineId, String orderLineTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderLineId' is set
-    if (orderLineId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderLineId' when calling addOrderLineTag");
-    }
-    
-    // verify the required parameter 'orderLineTag' is set
-    if (orderLineTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderLineTag' when calling addOrderLineTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderLine/{orderLineId}/tag/{orderLineTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderLineId" + "\\}", apiClient.escapeString(orderLineId.toString()))
-      .replaceAll("\\{" + "orderLineTag" + "\\}", apiClient.escapeString(orderLineTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for an orderLine.
-   * Deletes an existing orderLine tag using the specified data.
-   * @param orderLineId Id of the orderLine to remove tag from (required)
-   * @param orderLineTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteOrderLineTag(Integer orderLineId, String orderLineTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderLineId' is set
-    if (orderLineId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderLineId' when calling deleteOrderLineTag");
-    }
-    
-    // verify the required parameter 'orderLineTag' is set
-    if (orderLineTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderLineTag' when calling deleteOrderLineTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderLine/{orderLineId}/tag/{orderLineTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderLineId" + "\\}", apiClient.escapeString(orderLineId.toString()))
-      .replaceAll("\\{" + "orderLineTag" + "\\}", apiClient.escapeString(orderLineTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated an orderLine by id
    * Returns a duplicated orderLine identified by the specified id.
    * @param orderLineId Id of the orderLine to be duplicated. (required)
@@ -210,7 +51,7 @@ public class OrderLineApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderLine/duplicate/{orderLineId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/orderLine/duplicate/{orderLineId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderLineId" + "\\}", apiClient.escapeString(orderLineId.toString()));
 
     // query params
@@ -256,7 +97,7 @@ public class OrderLineApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/orderLine/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/orderLine/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -311,7 +152,7 @@ public class OrderLineApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderLine/{orderLineId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/orderLine/{orderLineId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "orderLineId" + "\\}", apiClient.escapeString(orderLineId.toString()));
 
     // query params
@@ -344,52 +185,6 @@ public class OrderLineApi {
   }
   
   /**
-   * Get the tags for an orderLine.
-   * Get all existing orderLine tags.
-   * @param orderLineId Id of the orderLine to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getOrderLineTags(Integer orderLineId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'orderLineId' is set
-    if (orderLineId == null) {
-      throw new ApiException(400, "Missing the required parameter 'orderLineId' when calling getOrderLineTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/orderLine/{orderLineId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "orderLineId" + "\\}", apiClient.escapeString(orderLineId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update an orderLine custom fields
    * Updates an existing orderLine custom fields using the specified data.
    * @param body OrderLine to be updated. (required)
@@ -404,7 +199,7 @@ public class OrderLineApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/orderLine/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/orderLine/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

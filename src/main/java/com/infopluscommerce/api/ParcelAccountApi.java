@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ParcelAccountApi {
   private ApiClient apiClient;
 
@@ -36,165 +36,6 @@ public class ParcelAccountApi {
 
   
   /**
-   * Add new audit for a parcelAccount
-   * Adds an audit to an existing parcelAccount.
-   * @param parcelAccountId Id of the parcelAccount to add an audit to (required)
-   * @param parcelAccountAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addParcelAccountAudit(Integer parcelAccountId, String parcelAccountAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'parcelAccountId' is set
-    if (parcelAccountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'parcelAccountId' when calling addParcelAccountAudit");
-    }
-    
-    // verify the required parameter 'parcelAccountAudit' is set
-    if (parcelAccountAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'parcelAccountAudit' when calling addParcelAccountAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/parcelAccount/{parcelAccountId}/audit/{parcelAccountAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()))
-      .replaceAll("\\{" + "parcelAccountAudit" + "\\}", apiClient.escapeString(parcelAccountAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a parcelAccount.
-   * Adds a tag to an existing parcelAccount.
-   * @param parcelAccountId Id of the parcelAccount to add a tag to (required)
-   * @param parcelAccountTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addParcelAccountTag(Integer parcelAccountId, String parcelAccountTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'parcelAccountId' is set
-    if (parcelAccountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'parcelAccountId' when calling addParcelAccountTag");
-    }
-    
-    // verify the required parameter 'parcelAccountTag' is set
-    if (parcelAccountTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'parcelAccountTag' when calling addParcelAccountTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/parcelAccount/{parcelAccountId}/tag/{parcelAccountTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()))
-      .replaceAll("\\{" + "parcelAccountTag" + "\\}", apiClient.escapeString(parcelAccountTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a parcelAccount.
-   * Deletes an existing parcelAccount tag using the specified data.
-   * @param parcelAccountId Id of the parcelAccount to remove tag from (required)
-   * @param parcelAccountTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteParcelAccountTag(Integer parcelAccountId, String parcelAccountTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'parcelAccountId' is set
-    if (parcelAccountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'parcelAccountId' when calling deleteParcelAccountTag");
-    }
-    
-    // verify the required parameter 'parcelAccountTag' is set
-    if (parcelAccountTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'parcelAccountTag' when calling deleteParcelAccountTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/parcelAccount/{parcelAccountId}/tag/{parcelAccountTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()))
-      .replaceAll("\\{" + "parcelAccountTag" + "\\}", apiClient.escapeString(parcelAccountTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated a parcelAccount by id
    * Returns a duplicated parcelAccount identified by the specified id.
    * @param parcelAccountId Id of the parcelAccount to be duplicated. (required)
@@ -210,7 +51,7 @@ public class ParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/parcelAccount/duplicate/{parcelAccountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/parcelAccount/duplicate/{parcelAccountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()));
 
     // query params
@@ -256,7 +97,7 @@ public class ParcelAccountApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/parcelAccount/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/parcelAccount/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -311,7 +152,7 @@ public class ParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/parcelAccount/{parcelAccountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/parcelAccount/{parcelAccountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()));
 
     // query params
@@ -344,52 +185,6 @@ public class ParcelAccountApi {
   }
   
   /**
-   * Get the tags for a parcelAccount.
-   * Get all existing parcelAccount tags.
-   * @param parcelAccountId Id of the parcelAccount to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getParcelAccountTags(Integer parcelAccountId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'parcelAccountId' is set
-    if (parcelAccountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'parcelAccountId' when calling getParcelAccountTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/parcelAccount/{parcelAccountId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "parcelAccountId" + "\\}", apiClient.escapeString(parcelAccountId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a parcelAccount custom fields
    * Updates an existing parcelAccount custom fields using the specified data.
    * @param body ParcelAccount to be updated. (required)
@@ -404,7 +199,7 @@ public class ParcelAccountApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/parcelAccount/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/parcelAccount/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

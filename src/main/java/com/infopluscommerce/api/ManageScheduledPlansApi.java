@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ManageScheduledPlansApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ManageScheduledPlansApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/manageScheduledPlans".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ManageScheduledPlansApi {
   }
   
   /**
-   * Add new audit for a manageScheduledPlans
-   * Adds an audit to an existing manageScheduledPlans.
-   * @param manageScheduledPlansId Id of the manageScheduledPlans to add an audit to (required)
-   * @param manageScheduledPlansAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addManageScheduledPlansAudit(Integer manageScheduledPlansId, String manageScheduledPlansAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'manageScheduledPlansId' is set
-    if (manageScheduledPlansId == null) {
-      throw new ApiException(400, "Missing the required parameter 'manageScheduledPlansId' when calling addManageScheduledPlansAudit");
-    }
-    
-    // verify the required parameter 'manageScheduledPlansAudit' is set
-    if (manageScheduledPlansAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'manageScheduledPlansAudit' when calling addManageScheduledPlansAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/{manageScheduledPlansId}/audit/{manageScheduledPlansAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "manageScheduledPlansId" + "\\}", apiClient.escapeString(manageScheduledPlansId.toString()))
-      .replaceAll("\\{" + "manageScheduledPlansAudit" + "\\}", apiClient.escapeString(manageScheduledPlansAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a manageScheduledPlans.
-   * Adds a tag to an existing manageScheduledPlans.
-   * @param manageScheduledPlansId Id of the manageScheduledPlans to add a tag to (required)
-   * @param manageScheduledPlansTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addManageScheduledPlansTag(Integer manageScheduledPlansId, String manageScheduledPlansTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'manageScheduledPlansId' is set
-    if (manageScheduledPlansId == null) {
-      throw new ApiException(400, "Missing the required parameter 'manageScheduledPlansId' when calling addManageScheduledPlansTag");
-    }
-    
-    // verify the required parameter 'manageScheduledPlansTag' is set
-    if (manageScheduledPlansTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'manageScheduledPlansTag' when calling addManageScheduledPlansTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/{manageScheduledPlansId}/tag/{manageScheduledPlansTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "manageScheduledPlansId" + "\\}", apiClient.escapeString(manageScheduledPlansId.toString()))
-      .replaceAll("\\{" + "manageScheduledPlansTag" + "\\}", apiClient.escapeString(manageScheduledPlansTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a manageScheduledPlans
    * Deletes the manageScheduledPlans identified by the specified id.
    * @param manageScheduledPlansId Id of the manageScheduledPlans to be deleted. (required)
@@ -204,61 +98,8 @@ public class ManageScheduledPlansApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/{manageScheduledPlansId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/manageScheduledPlans/{manageScheduledPlansId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "manageScheduledPlansId" + "\\}", apiClient.escapeString(manageScheduledPlansId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a manageScheduledPlans.
-   * Deletes an existing manageScheduledPlans tag using the specified data.
-   * @param manageScheduledPlansId Id of the manageScheduledPlans to remove tag from (required)
-   * @param manageScheduledPlansTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteManageScheduledPlansTag(Integer manageScheduledPlansId, String manageScheduledPlansTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'manageScheduledPlansId' is set
-    if (manageScheduledPlansId == null) {
-      throw new ApiException(400, "Missing the required parameter 'manageScheduledPlansId' when calling deleteManageScheduledPlansTag");
-    }
-    
-    // verify the required parameter 'manageScheduledPlansTag' is set
-    if (manageScheduledPlansTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'manageScheduledPlansTag' when calling deleteManageScheduledPlansTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/{manageScheduledPlansId}/tag/{manageScheduledPlansTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "manageScheduledPlansId" + "\\}", apiClient.escapeString(manageScheduledPlansId.toString()))
-      .replaceAll("\\{" + "manageScheduledPlansTag" + "\\}", apiClient.escapeString(manageScheduledPlansTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ManageScheduledPlansApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/duplicate/{manageScheduledPlansId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/manageScheduledPlans/duplicate/{manageScheduledPlansId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "manageScheduledPlansId" + "\\}", apiClient.escapeString(manageScheduledPlansId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ManageScheduledPlansApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/manageScheduledPlans/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ManageScheduledPlansApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/{manageScheduledPlansId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/manageScheduledPlans/{manageScheduledPlansId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "manageScheduledPlansId" + "\\}", apiClient.escapeString(manageScheduledPlansId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ManageScheduledPlansApi {
   }
   
   /**
-   * Get the tags for a manageScheduledPlans.
-   * Get all existing manageScheduledPlans tags.
-   * @param manageScheduledPlansId Id of the manageScheduledPlans to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getManageScheduledPlansTags(Integer manageScheduledPlansId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'manageScheduledPlansId' is set
-    if (manageScheduledPlansId == null) {
-      throw new ApiException(400, "Missing the required parameter 'manageScheduledPlansId' when calling getManageScheduledPlansTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans/{manageScheduledPlansId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "manageScheduledPlansId" + "\\}", apiClient.escapeString(manageScheduledPlansId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a manageScheduledPlans
    * Updates an existing manageScheduledPlans using the specified data.
    * @param body ManageScheduledPlans to be updated. (required)
@@ -498,7 +293,7 @@ public class ManageScheduledPlansApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/manageScheduledPlans".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/manageScheduledPlans".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

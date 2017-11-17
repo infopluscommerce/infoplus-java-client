@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class Location   {
   
   private Integer id = null;
@@ -32,7 +32,6 @@ public class Location   {
   private Integer number = null;
   private Boolean online = false;
   private Integer priorityCode = null;
-  private Integer cost = null;
   private Boolean allowItemMixing = false;
   private Date createDate = null;
   private Date modifyDate = null;
@@ -293,23 +292,6 @@ public class Location   {
   
   /**
    **/
-  public Location cost(Integer cost) {
-    this.cost = cost;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("cost")
-  public Integer getCost() {
-    return cost;
-  }
-  public void setCost(Integer cost) {
-    this.cost = cost;
-  }
-
-  
-  /**
-   **/
   public Location allowItemMixing(Boolean allowItemMixing) {
     this.allowItemMixing = allowItemMixing;
     return this;
@@ -382,7 +364,6 @@ public class Location   {
         Objects.equals(this.number, location.number) &&
         Objects.equals(this.online, location.online) &&
         Objects.equals(this.priorityCode, location.priorityCode) &&
-        Objects.equals(this.cost, location.cost) &&
         Objects.equals(this.allowItemMixing, location.allowItemMixing) &&
         Objects.equals(this.createDate, location.createDate) &&
         Objects.equals(this.modifyDate, location.modifyDate) &&
@@ -391,7 +372,7 @@ public class Location   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseId, buildingId, zoneId, aisleId, billingTypeId, behaviorType, footprintId, addressSchemeId, origin, address, level, bay, number, online, priorityCode, cost, allowItemMixing, createDate, modifyDate, customFields);
+    return Objects.hash(id, warehouseId, buildingId, zoneId, aisleId, billingTypeId, behaviorType, footprintId, addressSchemeId, origin, address, level, bay, number, online, priorityCode, allowItemMixing, createDate, modifyDate, customFields);
   }
 
   @Override
@@ -415,7 +396,6 @@ public class Location   {
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("    online: ").append(toIndentedString(online)).append("\n");
     sb.append("    priorityCode: ").append(toIndentedString(priorityCode)).append("\n");
-    sb.append("    cost: ").append(toIndentedString(cost)).append("\n");
     sb.append("    allowItemMixing: ").append(toIndentedString(allowItemMixing)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");

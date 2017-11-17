@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class ShoppingCartConnectionApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class ShoppingCartConnectionApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/shoppingCartConnection".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class ShoppingCartConnectionApi {
   }
   
   /**
-   * Add new audit for a shoppingCartConnection
-   * Adds an audit to an existing shoppingCartConnection.
-   * @param shoppingCartConnectionId Id of the shoppingCartConnection to add an audit to (required)
-   * @param shoppingCartConnectionAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addShoppingCartConnectionAudit(Integer shoppingCartConnectionId, String shoppingCartConnectionAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'shoppingCartConnectionId' is set
-    if (shoppingCartConnectionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling addShoppingCartConnectionAudit");
-    }
-    
-    // verify the required parameter 'shoppingCartConnectionAudit' is set
-    if (shoppingCartConnectionAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionAudit' when calling addShoppingCartConnectionAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/audit/{shoppingCartConnectionAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()))
-      .replaceAll("\\{" + "shoppingCartConnectionAudit" + "\\}", apiClient.escapeString(shoppingCartConnectionAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a shoppingCartConnection.
-   * Adds a tag to an existing shoppingCartConnection.
-   * @param shoppingCartConnectionId Id of the shoppingCartConnection to add a tag to (required)
-   * @param shoppingCartConnectionTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addShoppingCartConnectionTag(Integer shoppingCartConnectionId, String shoppingCartConnectionTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'shoppingCartConnectionId' is set
-    if (shoppingCartConnectionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling addShoppingCartConnectionTag");
-    }
-    
-    // verify the required parameter 'shoppingCartConnectionTag' is set
-    if (shoppingCartConnectionTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionTag' when calling addShoppingCartConnectionTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/tag/{shoppingCartConnectionTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()))
-      .replaceAll("\\{" + "shoppingCartConnectionTag" + "\\}", apiClient.escapeString(shoppingCartConnectionTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a shoppingCartConnection
    * Deletes the shoppingCartConnection identified by the specified id.
    * @param shoppingCartConnectionId Id of the shoppingCartConnection to be deleted. (required)
@@ -204,61 +98,8 @@ public class ShoppingCartConnectionApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/shoppingCartConnection/{shoppingCartConnectionId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a shoppingCartConnection.
-   * Deletes an existing shoppingCartConnection tag using the specified data.
-   * @param shoppingCartConnectionId Id of the shoppingCartConnection to remove tag from (required)
-   * @param shoppingCartConnectionTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteShoppingCartConnectionTag(Integer shoppingCartConnectionId, String shoppingCartConnectionTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'shoppingCartConnectionId' is set
-    if (shoppingCartConnectionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling deleteShoppingCartConnectionTag");
-    }
-    
-    // verify the required parameter 'shoppingCartConnectionTag' is set
-    if (shoppingCartConnectionTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionTag' when calling deleteShoppingCartConnectionTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/tag/{shoppingCartConnectionTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()))
-      .replaceAll("\\{" + "shoppingCartConnectionTag" + "\\}", apiClient.escapeString(shoppingCartConnectionTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -304,7 +145,7 @@ public class ShoppingCartConnectionApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/duplicate/{shoppingCartConnectionId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/shoppingCartConnection/duplicate/{shoppingCartConnectionId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()));
 
     // query params
@@ -350,7 +191,7 @@ public class ShoppingCartConnectionApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/shoppingCartConnection/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -405,7 +246,7 @@ public class ShoppingCartConnectionApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/shoppingCartConnection/{shoppingCartConnectionId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()));
 
     // query params
@@ -438,52 +279,6 @@ public class ShoppingCartConnectionApi {
   }
   
   /**
-   * Get the tags for a shoppingCartConnection.
-   * Get all existing shoppingCartConnection tags.
-   * @param shoppingCartConnectionId Id of the shoppingCartConnection to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getShoppingCartConnectionTags(Integer shoppingCartConnectionId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'shoppingCartConnectionId' is set
-    if (shoppingCartConnectionId == null) {
-      throw new ApiException(400, "Missing the required parameter 'shoppingCartConnectionId' when calling getShoppingCartConnectionTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/{shoppingCartConnectionId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "shoppingCartConnectionId" + "\\}", apiClient.escapeString(shoppingCartConnectionId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Update a shoppingCartConnection
    * Updates an existing shoppingCartConnection using the specified data.
    * @param body ShoppingCartConnection to be updated. (required)
@@ -498,7 +293,7 @@ public class ShoppingCartConnectionApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/shoppingCartConnection".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class ShoppingCartConnectionApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/shoppingCartConnection/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/shoppingCartConnection/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

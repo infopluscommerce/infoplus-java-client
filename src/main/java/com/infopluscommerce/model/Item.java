@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class Item   {
   
   private Integer id = null;
@@ -78,8 +78,6 @@ public class Item   {
   private String storageItemMixingRule = null;
   private String allocationRule = null;
   private String barcodeField = null;
-  private String warehouseDisplayField = null;
-  private Integer productIdTagSchemeId = null;
   private String hazmat = null;
   private Boolean isAlcohol = false;
   private String alcoholType = null;
@@ -99,17 +97,6 @@ public class Item   {
   private BigDecimal height = null;
   private Boolean topUp = false;
   private Boolean shipSolo = false;
-  private Integer availableQuantity = null;
-  private Integer damagedQuantity = null;
-  private Integer inFulfillmentProcessQuantity = null;
-  private Integer onHandQuantity = null;
-  private Integer openOrderQuantity = null;
-  private Integer openPOQuantity = null;
-  private Integer orderableQuantity = null;
-  private Integer unallocatableQuantity = null;
-  private Integer unavailableQuantity = null;
-  private Integer overallDaysOnHand = null;
-  private String overallStockStatus = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -1112,40 +1099,6 @@ public class Item   {
   
   /**
    **/
-  public Item warehouseDisplayField(String warehouseDisplayField) {
-    this.warehouseDisplayField = warehouseDisplayField;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("warehouseDisplayField")
-  public String getWarehouseDisplayField() {
-    return warehouseDisplayField;
-  }
-  public void setWarehouseDisplayField(String warehouseDisplayField) {
-    this.warehouseDisplayField = warehouseDisplayField;
-  }
-
-  
-  /**
-   **/
-  public Item productIdTagSchemeId(Integer productIdTagSchemeId) {
-    this.productIdTagSchemeId = productIdTagSchemeId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("productIdTagSchemeId")
-  public Integer getProductIdTagSchemeId() {
-    return productIdTagSchemeId;
-  }
-  public void setProductIdTagSchemeId(Integer productIdTagSchemeId) {
-    this.productIdTagSchemeId = productIdTagSchemeId;
-  }
-
-  
-  /**
-   **/
   public Item hazmat(String hazmat) {
     this.hazmat = hazmat;
     return this;
@@ -1467,83 +1420,6 @@ public class Item   {
   }
 
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("availableQuantity")
-  public Integer getAvailableQuantity() {
-    return availableQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("damagedQuantity")
-  public Integer getDamagedQuantity() {
-    return damagedQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("inFulfillmentProcessQuantity")
-  public Integer getInFulfillmentProcessQuantity() {
-    return inFulfillmentProcessQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("onHandQuantity")
-  public Integer getOnHandQuantity() {
-    return onHandQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("openOrderQuantity")
-  public Integer getOpenOrderQuantity() {
-    return openOrderQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("openPOQuantity")
-  public Integer getOpenPOQuantity() {
-    return openPOQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("orderableQuantity")
-  public Integer getOrderableQuantity() {
-    return orderableQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("unallocatableQuantity")
-  public Integer getUnallocatableQuantity() {
-    return unallocatableQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("unavailableQuantity")
-  public Integer getUnavailableQuantity() {
-    return unavailableQuantity;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("overallDaysOnHand")
-  public Integer getOverallDaysOnHand() {
-    return overallDaysOnHand;
-  }
-
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("overallStockStatus")
-  public String getOverallStockStatus() {
-    return overallStockStatus;
-  }
-
-  
   /**
    **/
   public Item customFields(Map<String, Object> customFields) {
@@ -1632,8 +1508,6 @@ public class Item   {
         Objects.equals(this.storageItemMixingRule, item.storageItemMixingRule) &&
         Objects.equals(this.allocationRule, item.allocationRule) &&
         Objects.equals(this.barcodeField, item.barcodeField) &&
-        Objects.equals(this.warehouseDisplayField, item.warehouseDisplayField) &&
-        Objects.equals(this.productIdTagSchemeId, item.productIdTagSchemeId) &&
         Objects.equals(this.hazmat, item.hazmat) &&
         Objects.equals(this.isAlcohol, item.isAlcohol) &&
         Objects.equals(this.alcoholType, item.alcoholType) &&
@@ -1653,23 +1527,12 @@ public class Item   {
         Objects.equals(this.height, item.height) &&
         Objects.equals(this.topUp, item.topUp) &&
         Objects.equals(this.shipSolo, item.shipSolo) &&
-        Objects.equals(this.availableQuantity, item.availableQuantity) &&
-        Objects.equals(this.damagedQuantity, item.damagedQuantity) &&
-        Objects.equals(this.inFulfillmentProcessQuantity, item.inFulfillmentProcessQuantity) &&
-        Objects.equals(this.onHandQuantity, item.onHandQuantity) &&
-        Objects.equals(this.openOrderQuantity, item.openOrderQuantity) &&
-        Objects.equals(this.openPOQuantity, item.openPOQuantity) &&
-        Objects.equals(this.orderableQuantity, item.orderableQuantity) &&
-        Objects.equals(this.unallocatableQuantity, item.unallocatableQuantity) &&
-        Objects.equals(this.unavailableQuantity, item.unavailableQuantity) &&
-        Objects.equals(this.overallDaysOnHand, item.overallDaysOnHand) &&
-        Objects.equals(this.overallStockStatus, item.overallStockStatus) &&
         Objects.equals(this.customFields, item.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, listPrice, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, listPrice, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, customFields);
   }
 
   @Override
@@ -1738,8 +1601,6 @@ public class Item   {
     sb.append("    storageItemMixingRule: ").append(toIndentedString(storageItemMixingRule)).append("\n");
     sb.append("    allocationRule: ").append(toIndentedString(allocationRule)).append("\n");
     sb.append("    barcodeField: ").append(toIndentedString(barcodeField)).append("\n");
-    sb.append("    warehouseDisplayField: ").append(toIndentedString(warehouseDisplayField)).append("\n");
-    sb.append("    productIdTagSchemeId: ").append(toIndentedString(productIdTagSchemeId)).append("\n");
     sb.append("    hazmat: ").append(toIndentedString(hazmat)).append("\n");
     sb.append("    isAlcohol: ").append(toIndentedString(isAlcohol)).append("\n");
     sb.append("    alcoholType: ").append(toIndentedString(alcoholType)).append("\n");
@@ -1759,17 +1620,6 @@ public class Item   {
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    topUp: ").append(toIndentedString(topUp)).append("\n");
     sb.append("    shipSolo: ").append(toIndentedString(shipSolo)).append("\n");
-    sb.append("    availableQuantity: ").append(toIndentedString(availableQuantity)).append("\n");
-    sb.append("    damagedQuantity: ").append(toIndentedString(damagedQuantity)).append("\n");
-    sb.append("    inFulfillmentProcessQuantity: ").append(toIndentedString(inFulfillmentProcessQuantity)).append("\n");
-    sb.append("    onHandQuantity: ").append(toIndentedString(onHandQuantity)).append("\n");
-    sb.append("    openOrderQuantity: ").append(toIndentedString(openOrderQuantity)).append("\n");
-    sb.append("    openPOQuantity: ").append(toIndentedString(openPOQuantity)).append("\n");
-    sb.append("    orderableQuantity: ").append(toIndentedString(orderableQuantity)).append("\n");
-    sb.append("    unallocatableQuantity: ").append(toIndentedString(unallocatableQuantity)).append("\n");
-    sb.append("    unavailableQuantity: ").append(toIndentedString(unavailableQuantity)).append("\n");
-    sb.append("    overallDaysOnHand: ").append(toIndentedString(overallDaysOnHand)).append("\n");
-    sb.append("    overallStockStatus: ").append(toIndentedString(overallStockStatus)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

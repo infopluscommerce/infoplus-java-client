@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-16T11:59:53.552-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:31:34.297-06:00")
 public class BillingCodeApi {
   private ApiClient apiClient;
 
@@ -52,7 +52,7 @@ public class BillingCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/billingCode".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/billingCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -84,112 +84,6 @@ public class BillingCodeApi {
   }
   
   /**
-   * Add new audit for a billingCode
-   * Adds an audit to an existing billingCode.
-   * @param billingCodeId Id of the billingCode to add an audit to (required)
-   * @param billingCodeAudit The audit to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addBillingCodeAudit(Integer billingCodeId, String billingCodeAudit) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'billingCodeId' is set
-    if (billingCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'billingCodeId' when calling addBillingCodeAudit");
-    }
-    
-    // verify the required parameter 'billingCodeAudit' is set
-    if (billingCodeAudit == null) {
-      throw new ApiException(400, "Missing the required parameter 'billingCodeAudit' when calling addBillingCodeAudit");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/billingCode/{billingCodeId}/audit/{billingCodeAudit}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "billingCodeId" + "\\}", apiClient.escapeString(billingCodeId.toString()))
-      .replaceAll("\\{" + "billingCodeAudit" + "\\}", apiClient.escapeString(billingCodeAudit.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Add new tags for a billingCode.
-   * Adds a tag to an existing billingCode.
-   * @param billingCodeId Id of the billingCode to add a tag to (required)
-   * @param billingCodeTag The tag to add (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void addBillingCodeTag(Integer billingCodeId, String billingCodeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'billingCodeId' is set
-    if (billingCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'billingCodeId' when calling addBillingCodeTag");
-    }
-    
-    // verify the required parameter 'billingCodeTag' is set
-    if (billingCodeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'billingCodeTag' when calling addBillingCodeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/billingCode/{billingCodeId}/tag/{billingCodeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "billingCodeId" + "\\}", apiClient.escapeString(billingCodeId.toString()))
-      .replaceAll("\\{" + "billingCodeTag" + "\\}", apiClient.escapeString(billingCodeTag.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Delete a billingCode
    * Deletes the billingCode identified by the specified id.
    * @param billingCodeId Id of the billingCode to be deleted. (required)
@@ -204,61 +98,8 @@ public class BillingCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/billingCode/{billingCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/billingCode/{billingCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "billingCodeId" + "\\}", apiClient.escapeString(billingCodeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
-   * Delete a tag for a billingCode.
-   * Deletes an existing billingCode tag using the specified data.
-   * @param billingCodeId Id of the billingCode to remove tag from (required)
-   * @param billingCodeTag The tag to delete (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteBillingCodeTag(Integer billingCodeId, String billingCodeTag) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'billingCodeId' is set
-    if (billingCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'billingCodeId' when calling deleteBillingCodeTag");
-    }
-    
-    // verify the required parameter 'billingCodeTag' is set
-    if (billingCodeTag == null) {
-      throw new ApiException(400, "Missing the required parameter 'billingCodeTag' when calling deleteBillingCodeTag");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/billingCode/{billingCodeId}/tag/{billingCodeTag}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "billingCodeId" + "\\}", apiClient.escapeString(billingCodeId.toString()))
-      .replaceAll("\\{" + "billingCodeTag" + "\\}", apiClient.escapeString(billingCodeTag.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -302,7 +143,7 @@ public class BillingCodeApi {
     Object localVarPostBody = null;
     
     // create path and map variables
-    String localVarPath = "/beta/billingCode/search".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/billingCode/search".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -357,7 +198,7 @@ public class BillingCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/billingCode/{billingCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/billingCode/{billingCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "billingCodeId" + "\\}", apiClient.escapeString(billingCodeId.toString()));
 
     // query params
@@ -390,52 +231,6 @@ public class BillingCodeApi {
   }
   
   /**
-   * Get the tags for a billingCode.
-   * Get all existing billingCode tags.
-   * @param billingCodeId Id of the billingCode to get tags for (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getBillingCodeTags(Integer billingCodeId) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'billingCodeId' is set
-    if (billingCodeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'billingCodeId' when calling getBillingCodeTags");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/beta/billingCode/{billingCodeId}/tag".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "billingCodeId" + "\\}", apiClient.escapeString(billingCodeId.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "api_key" };
-
-    
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-    
-  }
-  
-  /**
    * Get a duplicated a billingCode by id
    * Returns a duplicated billingCode identified by the specified id.
    * @param billingCodeId Id of the billingCode to be duplicated. (required)
@@ -451,7 +246,7 @@ public class BillingCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/billingCode/duplicate/{billingCodeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.0/billingCode/duplicate/{billingCodeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "billingCodeId" + "\\}", apiClient.escapeString(billingCodeId.toString()));
 
     // query params
@@ -498,7 +293,7 @@ public class BillingCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/billingCode".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/billingCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -543,7 +338,7 @@ public class BillingCodeApi {
     }
     
     // create path and map variables
-    String localVarPath = "/beta/billingCode/customFields".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.0/billingCode/customFields".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
