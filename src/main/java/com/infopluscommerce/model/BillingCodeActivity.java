@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class BillingCodeActivity   {
   
   private Integer id = null;
@@ -28,6 +28,9 @@ public class BillingCodeActivity   {
   private Integer billingCodeTypeId = null;
   private String billingCodeTypeName = null;
   private String note = null;
+  private String recordTypeName = null;
+  private Integer recordTypeId = null;
+  private String recordId = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -187,6 +190,57 @@ public class BillingCodeActivity   {
   
   /**
    **/
+  public BillingCodeActivity recordTypeName(String recordTypeName) {
+    this.recordTypeName = recordTypeName;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("recordTypeName")
+  public String getRecordTypeName() {
+    return recordTypeName;
+  }
+  public void setRecordTypeName(String recordTypeName) {
+    this.recordTypeName = recordTypeName;
+  }
+
+  
+  /**
+   **/
+  public BillingCodeActivity recordTypeId(Integer recordTypeId) {
+    this.recordTypeId = recordTypeId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("recordTypeId")
+  public Integer getRecordTypeId() {
+    return recordTypeId;
+  }
+  public void setRecordTypeId(Integer recordTypeId) {
+    this.recordTypeId = recordTypeId;
+  }
+
+  
+  /**
+   **/
+  public BillingCodeActivity recordId(String recordId) {
+    this.recordId = recordId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("recordId")
+  public String getRecordId() {
+    return recordId;
+  }
+  public void setRecordId(String recordId) {
+    this.recordId = recordId;
+  }
+
+  
+  /**
+   **/
   public BillingCodeActivity customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -224,12 +278,15 @@ public class BillingCodeActivity   {
         Objects.equals(this.billingCodeTypeId, billingCodeActivity.billingCodeTypeId) &&
         Objects.equals(this.billingCodeTypeName, billingCodeActivity.billingCodeTypeName) &&
         Objects.equals(this.note, billingCodeActivity.note) &&
+        Objects.equals(this.recordTypeName, billingCodeActivity.recordTypeName) &&
+        Objects.equals(this.recordTypeId, billingCodeActivity.recordTypeId) &&
+        Objects.equals(this.recordId, billingCodeActivity.recordId) &&
         Objects.equals(this.customFields, billingCodeActivity.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, importedId, createDate, modifyDate, date, quantity, lobId, userId, email, billingCodeTypeId, billingCodeTypeName, note, customFields);
+    return Objects.hash(id, importedId, createDate, modifyDate, date, quantity, lobId, userId, email, billingCodeTypeId, billingCodeTypeName, note, recordTypeName, recordTypeId, recordId, customFields);
   }
 
   @Override
@@ -249,6 +306,9 @@ public class BillingCodeActivity   {
     sb.append("    billingCodeTypeId: ").append(toIndentedString(billingCodeTypeId)).append("\n");
     sb.append("    billingCodeTypeName: ").append(toIndentedString(billingCodeTypeName)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    recordTypeName: ").append(toIndentedString(recordTypeName)).append("\n");
+    sb.append("    recordTypeId: ").append(toIndentedString(recordTypeId)).append("\n");
+    sb.append("    recordId: ").append(toIndentedString(recordId)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

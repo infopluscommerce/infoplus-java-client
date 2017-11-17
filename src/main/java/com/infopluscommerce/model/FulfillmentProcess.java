@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class FulfillmentProcess   {
   
   private Integer id = null;
@@ -27,8 +27,10 @@ public class FulfillmentProcess   {
   private String status = null;
   private Integer orderSmartFilterId = null;
   private Integer locationSmartFilterId = null;
-  private Integer orderLimit = null;
+  private Integer maxOrders = null;
+  private Integer batchSize = null;
   private String version = null;
+  private Integer fulfillmentProcessGroup = null;
   private Integer numberOfOrders = null;
   private Integer numberOfLines = null;
   private Integer numberOfSKUs = null;
@@ -206,9 +208,16 @@ public class FulfillmentProcess   {
 
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("orderLimit")
-  public Integer getOrderLimit() {
-    return orderLimit;
+  @JsonProperty("maxOrders")
+  public Integer getMaxOrders() {
+    return maxOrders;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("batchSize")
+  public Integer getBatchSize() {
+    return batchSize;
   }
 
   
@@ -226,6 +235,13 @@ public class FulfillmentProcess   {
   }
   public void setVersion(String version) {
     this.version = version;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("fulfillmentProcessGroup")
+  public Integer getFulfillmentProcessGroup() {
+    return fulfillmentProcessGroup;
   }
 
   
@@ -849,8 +865,10 @@ public class FulfillmentProcess   {
         Objects.equals(this.status, fulfillmentProcess.status) &&
         Objects.equals(this.orderSmartFilterId, fulfillmentProcess.orderSmartFilterId) &&
         Objects.equals(this.locationSmartFilterId, fulfillmentProcess.locationSmartFilterId) &&
-        Objects.equals(this.orderLimit, fulfillmentProcess.orderLimit) &&
+        Objects.equals(this.maxOrders, fulfillmentProcess.maxOrders) &&
+        Objects.equals(this.batchSize, fulfillmentProcess.batchSize) &&
         Objects.equals(this.version, fulfillmentProcess.version) &&
+        Objects.equals(this.fulfillmentProcessGroup, fulfillmentProcess.fulfillmentProcessGroup) &&
         Objects.equals(this.numberOfOrders, fulfillmentProcess.numberOfOrders) &&
         Objects.equals(this.numberOfLines, fulfillmentProcess.numberOfLines) &&
         Objects.equals(this.numberOfSKUs, fulfillmentProcess.numberOfSKUs) &&
@@ -892,7 +910,7 @@ public class FulfillmentProcess   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, orderLimit, version, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
+    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, maxOrders, batchSize, version, fulfillmentProcessGroup, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -911,8 +929,10 @@ public class FulfillmentProcess   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    orderSmartFilterId: ").append(toIndentedString(orderSmartFilterId)).append("\n");
     sb.append("    locationSmartFilterId: ").append(toIndentedString(locationSmartFilterId)).append("\n");
-    sb.append("    orderLimit: ").append(toIndentedString(orderLimit)).append("\n");
+    sb.append("    maxOrders: ").append(toIndentedString(maxOrders)).append("\n");
+    sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    fulfillmentProcessGroup: ").append(toIndentedString(fulfillmentProcessGroup)).append("\n");
     sb.append("    numberOfOrders: ").append(toIndentedString(numberOfOrders)).append("\n");
     sb.append("    numberOfLines: ").append(toIndentedString(numberOfLines)).append("\n");
     sb.append("    numberOfSKUs: ").append(toIndentedString(numberOfSKUs)).append("\n");

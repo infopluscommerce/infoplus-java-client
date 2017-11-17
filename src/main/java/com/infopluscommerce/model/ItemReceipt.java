@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class ItemReceipt   {
   
   private Integer id = null;
@@ -88,6 +88,8 @@ public class ItemReceipt   {
   private Date modifyDate = null;
   private Integer impressions = null;
   private Integer asnLine = null;
+  private String upc = null;
+  private String vendorSKU = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -1238,6 +1240,20 @@ public class ItemReceipt   {
   }
 
   
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("upc")
+  public String getUpc() {
+    return upc;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("vendorSKU")
+  public String getVendorSKU() {
+    return vendorSKU;
+  }
+
+  
   /**
    **/
   public ItemReceipt customFields(Map<String, Object> customFields) {
@@ -1336,12 +1352,14 @@ public class ItemReceipt   {
         Objects.equals(this.modifyDate, itemReceipt.modifyDate) &&
         Objects.equals(this.impressions, itemReceipt.impressions) &&
         Objects.equals(this.asnLine, itemReceipt.asnLine) &&
+        Objects.equals(this.upc, itemReceipt.upc) &&
+        Objects.equals(this.vendorSKU, itemReceipt.vendorSKU) &&
         Objects.equals(this.customFields, itemReceipt.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, fullDescription, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sellPrice, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, modifyDate, impressions, asnLine, customFields);
+    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, fullDescription, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sellPrice, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, modifyDate, impressions, asnLine, upc, vendorSKU, customFields);
   }
 
   @Override
@@ -1420,6 +1438,8 @@ public class ItemReceipt   {
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    impressions: ").append(toIndentedString(impressions)).append("\n");
     sb.append("    asnLine: ").append(toIndentedString(asnLine)).append("\n");
+    sb.append("    upc: ").append(toIndentedString(upc)).append("\n");
+    sb.append("    vendorSKU: ").append(toIndentedString(vendorSKU)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

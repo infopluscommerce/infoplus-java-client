@@ -13,7 +13,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class FulfillmentPlan   {
   
   private Integer id = null;
@@ -25,7 +25,8 @@ public class FulfillmentPlan   {
   private Date lastRunTime = null;
   private Integer orderSmartFilterId = null;
   private Integer locationSmartFilterId = null;
-  private Integer maximumNumberOfOrders = null;
+  private Integer maxOrders = null;
+  private Integer batchSize = null;
   private String version = null;
   private Boolean createPickWork = false;
   private String pickingRule = null;
@@ -169,18 +170,35 @@ public class FulfillmentPlan   {
   
   /**
    **/
-  public FulfillmentPlan maximumNumberOfOrders(Integer maximumNumberOfOrders) {
-    this.maximumNumberOfOrders = maximumNumberOfOrders;
+  public FulfillmentPlan maxOrders(Integer maxOrders) {
+    this.maxOrders = maxOrders;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("maximumNumberOfOrders")
-  public Integer getMaximumNumberOfOrders() {
-    return maximumNumberOfOrders;
+  @JsonProperty("maxOrders")
+  public Integer getMaxOrders() {
+    return maxOrders;
   }
-  public void setMaximumNumberOfOrders(Integer maximumNumberOfOrders) {
-    this.maximumNumberOfOrders = maximumNumberOfOrders;
+  public void setMaxOrders(Integer maxOrders) {
+    this.maxOrders = maxOrders;
+  }
+
+  
+  /**
+   **/
+  public FulfillmentPlan batchSize(Integer batchSize) {
+    this.batchSize = batchSize;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("batchSize")
+  public Integer getBatchSize() {
+    return batchSize;
+  }
+  public void setBatchSize(Integer batchSize) {
+    this.batchSize = batchSize;
   }
 
   
@@ -645,7 +663,8 @@ public class FulfillmentPlan   {
         Objects.equals(this.lastRunTime, fulfillmentPlan.lastRunTime) &&
         Objects.equals(this.orderSmartFilterId, fulfillmentPlan.orderSmartFilterId) &&
         Objects.equals(this.locationSmartFilterId, fulfillmentPlan.locationSmartFilterId) &&
-        Objects.equals(this.maximumNumberOfOrders, fulfillmentPlan.maximumNumberOfOrders) &&
+        Objects.equals(this.maxOrders, fulfillmentPlan.maxOrders) &&
+        Objects.equals(this.batchSize, fulfillmentPlan.batchSize) &&
         Objects.equals(this.version, fulfillmentPlan.version) &&
         Objects.equals(this.createPickWork, fulfillmentPlan.createPickWork) &&
         Objects.equals(this.pickingRule, fulfillmentPlan.pickingRule) &&
@@ -676,7 +695,7 @@ public class FulfillmentPlan   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, lastRunTime, orderSmartFilterId, locationSmartFilterId, maximumNumberOfOrders, version, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, pickScanSchemeId, cartonizeOrders, autoShipCasebreakCartons, preGenerateParcelLabels, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
+    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, lastRunTime, orderSmartFilterId, locationSmartFilterId, maxOrders, batchSize, version, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, pickScanSchemeId, cartonizeOrders, autoShipCasebreakCartons, preGenerateParcelLabels, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
   @Override
@@ -693,7 +712,8 @@ public class FulfillmentPlan   {
     sb.append("    lastRunTime: ").append(toIndentedString(lastRunTime)).append("\n");
     sb.append("    orderSmartFilterId: ").append(toIndentedString(orderSmartFilterId)).append("\n");
     sb.append("    locationSmartFilterId: ").append(toIndentedString(locationSmartFilterId)).append("\n");
-    sb.append("    maximumNumberOfOrders: ").append(toIndentedString(maximumNumberOfOrders)).append("\n");
+    sb.append("    maxOrders: ").append(toIndentedString(maxOrders)).append("\n");
+    sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    createPickWork: ").append(toIndentedString(createPickWork)).append("\n");
     sb.append("    pickingRule: ").append(toIndentedString(pickingRule)).append("\n");

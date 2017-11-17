@@ -10,13 +10,17 @@ import com.infopluscommerce.Pair;
 import com.infopluscommerce.model.Order;
 import com.infopluscommerce.model.ApiResponse;
 import java.math.BigDecimal;
+import com.infopluscommerce.model.ApplyOrderWarehouseFulfillmentPlanInput;
+import com.infopluscommerce.model.ApplyOrderWarehouseFulfillmentPlanOutput;
+import com.infopluscommerce.model.GetOrderWarehouseFulfillmentDataInput;
+import com.infopluscommerce.model.GetOrderWarehouseFulfillmentDataOutput;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class OrderApi {
   private ApiClient apiClient;
 
@@ -187,6 +191,53 @@ public class OrderApi {
 
     
     apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Run the Apply Order Warehouse Fulfillment Plan method.
+   * 
+   * @param body Input data for Apply Order Warehouse Fulfillment Plan process. (required)
+   * @return ApplyOrderWarehouseFulfillmentPlanOutput
+   * @throws ApiException if fails to make API call
+   */
+  public ApplyOrderWarehouseFulfillmentPlanOutput applyOrderWarehouseFulfillmentPlan(ApplyOrderWarehouseFulfillmentPlanInput body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling applyOrderWarehouseFulfillmentPlan");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/order/applyOrderWarehouseFulfillmentPlan".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<ApplyOrderWarehouseFulfillmentPlanOutput> localVarReturnType = new GenericType<ApplyOrderWarehouseFulfillmentPlanOutput>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   
@@ -481,6 +532,53 @@ public class OrderApi {
 
     
     apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    
+  }
+  
+  /**
+   * Run the Get Order Warehouse Fulfillment Plan method.
+   * 
+   * @param body Input data for Get Order Warehouse Fulfillment Plan process. (required)
+   * @return GetOrderWarehouseFulfillmentDataOutput
+   * @throws ApiException if fails to make API call
+   */
+  public GetOrderWarehouseFulfillmentDataOutput getOrderWarehouseFulfillmentData(GetOrderWarehouseFulfillmentDataInput body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'body' is set
+    if (body == null) {
+      throw new ApiException(400, "Missing the required parameter 'body' when calling getOrderWarehouseFulfillmentData");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/beta/order/getOrderWarehouseFulfillmentData".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "api_key" };
+
+    
+    GenericType<GetOrderWarehouseFulfillmentDataOutput> localVarReturnType = new GenericType<GetOrderWarehouseFulfillmentDataOutput>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     
   }
   

@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class Item   {
   
   private Integer id = null;
@@ -76,6 +76,7 @@ public class Item   {
   private BigDecimal vendorPrice = null;
   private String vendorPer = null;
   private Date modifyDate = null;
+  private String behaviorType = null;
   private String forwardLotMixingRule = null;
   private String storageLotMixingRule = null;
   private String forwardItemMixingRule = null;
@@ -1083,6 +1084,23 @@ public class Item   {
   
   /**
    **/
+  public Item behaviorType(String behaviorType) {
+    this.behaviorType = behaviorType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("behaviorType")
+  public String getBehaviorType() {
+    return behaviorType;
+  }
+  public void setBehaviorType(String behaviorType) {
+    this.behaviorType = behaviorType;
+  }
+
+  
+  /**
+   **/
   public Item forwardLotMixingRule(String forwardLotMixingRule) {
     this.forwardLotMixingRule = forwardLotMixingRule;
     return this;
@@ -1710,6 +1728,7 @@ public class Item   {
         Objects.equals(this.vendorPrice, item.vendorPrice) &&
         Objects.equals(this.vendorPer, item.vendorPer) &&
         Objects.equals(this.modifyDate, item.modifyDate) &&
+        Objects.equals(this.behaviorType, item.behaviorType) &&
         Objects.equals(this.forwardLotMixingRule, item.forwardLotMixingRule) &&
         Objects.equals(this.storageLotMixingRule, item.storageLotMixingRule) &&
         Objects.equals(this.forwardItemMixingRule, item.forwardItemMixingRule) &&
@@ -1754,7 +1773,7 @@ public class Item   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, behaviorType, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
   }
 
   @Override
@@ -1821,6 +1840,7 @@ public class Item   {
     sb.append("    vendorPrice: ").append(toIndentedString(vendorPrice)).append("\n");
     sb.append("    vendorPer: ").append(toIndentedString(vendorPer)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    behaviorType: ").append(toIndentedString(behaviorType)).append("\n");
     sb.append("    forwardLotMixingRule: ").append(toIndentedString(forwardLotMixingRule)).append("\n");
     sb.append("    storageLotMixingRule: ").append(toIndentedString(storageLotMixingRule)).append("\n");
     sb.append("    forwardItemMixingRule: ").append(toIndentedString(forwardItemMixingRule)).append("\n");

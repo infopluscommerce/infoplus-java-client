@@ -14,7 +14,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class Shipment   {
   
   private Integer id = null;
@@ -37,6 +37,7 @@ public class Shipment   {
   private String estimatedZone = null;
   private String parcelAccountNo = null;
   private String thirdPartyParcelAccountNo = null;
+  private String shipmentID = null;
   private Integer manifestId = null;
   private Boolean residential = false;
   private String billingOption = null;
@@ -48,6 +49,7 @@ public class Shipment   {
   private BigDecimal retailFreightAmount = null;
   private Integer externalShippingSystemId = null;
   private String shipmentType = null;
+  private String carrierCompany = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -292,6 +294,13 @@ public class Shipment   {
 
   
   @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("shipmentID")
+  public String getShipmentID() {
+    return shipmentID;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("manifestId")
   public Integer getManifestId() {
     return manifestId;
@@ -370,6 +379,23 @@ public class Shipment   {
   
   /**
    **/
+  public Shipment carrierCompany(String carrierCompany) {
+    this.carrierCompany = carrierCompany;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("carrierCompany")
+  public String getCarrierCompany() {
+    return carrierCompany;
+  }
+  public void setCarrierCompany(String carrierCompany) {
+    this.carrierCompany = carrierCompany;
+  }
+
+  
+  /**
+   **/
   public Shipment customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -415,6 +441,7 @@ public class Shipment   {
         Objects.equals(this.estimatedZone, shipment.estimatedZone) &&
         Objects.equals(this.parcelAccountNo, shipment.parcelAccountNo) &&
         Objects.equals(this.thirdPartyParcelAccountNo, shipment.thirdPartyParcelAccountNo) &&
+        Objects.equals(this.shipmentID, shipment.shipmentID) &&
         Objects.equals(this.manifestId, shipment.manifestId) &&
         Objects.equals(this.residential, shipment.residential) &&
         Objects.equals(this.billingOption, shipment.billingOption) &&
@@ -426,12 +453,13 @@ public class Shipment   {
         Objects.equals(this.retailFreightAmount, shipment.retailFreightAmount) &&
         Objects.equals(this.externalShippingSystemId, shipment.externalShippingSystemId) &&
         Objects.equals(this.shipmentType, shipment.shipmentType) &&
+        Objects.equals(this.carrierCompany, shipment.carrierCompany) &&
         Objects.equals(this.customFields, shipment.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, shipDate, deliveredDate, trackingNo, warehouseId, lobId, orderNo, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, externalShippingSystemId, shipmentType, customFields);
+    return Objects.hash(id, createDate, modifyDate, shipDate, deliveredDate, trackingNo, warehouseId, lobId, orderNo, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, shipmentID, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, externalShippingSystemId, shipmentType, carrierCompany, customFields);
   }
 
   @Override
@@ -459,6 +487,7 @@ public class Shipment   {
     sb.append("    estimatedZone: ").append(toIndentedString(estimatedZone)).append("\n");
     sb.append("    parcelAccountNo: ").append(toIndentedString(parcelAccountNo)).append("\n");
     sb.append("    thirdPartyParcelAccountNo: ").append(toIndentedString(thirdPartyParcelAccountNo)).append("\n");
+    sb.append("    shipmentID: ").append(toIndentedString(shipmentID)).append("\n");
     sb.append("    manifestId: ").append(toIndentedString(manifestId)).append("\n");
     sb.append("    residential: ").append(toIndentedString(residential)).append("\n");
     sb.append("    billingOption: ").append(toIndentedString(billingOption)).append("\n");
@@ -470,6 +499,7 @@ public class Shipment   {
     sb.append("    retailFreightAmount: ").append(toIndentedString(retailFreightAmount)).append("\n");
     sb.append("    externalShippingSystemId: ").append(toIndentedString(externalShippingSystemId)).append("\n");
     sb.append("    shipmentType: ").append(toIndentedString(shipmentType)).append("\n");
+    sb.append("    carrierCompany: ").append(toIndentedString(carrierCompany)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

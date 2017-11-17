@@ -13,17 +13,17 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class BillingCodeType   {
   
   private Integer id = null;
   private Integer clientId = null;
-  private Date createDate = null;
-  private Date modifyDate = null;
+  private String billingCode = null;
   private String name = null;
   private String description = null;
-  private String billingCode = null;
   private Boolean isActive = false;
+  private Date createDate = null;
+  private Date modifyDate = null;
   private Map<String, Object> customFields = new HashMap<String, Object>();
 
   
@@ -41,17 +41,20 @@ public class BillingCodeType   {
   }
 
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("createDate")
-  public Date getCreateDate() {
-    return createDate;
+  /**
+   **/
+  public BillingCodeType billingCode(String billingCode) {
+    this.billingCode = billingCode;
+    return this;
   }
-
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("modifyDate")
-  public Date getModifyDate() {
-    return modifyDate;
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("billingCode")
+  public String getBillingCode() {
+    return billingCode;
+  }
+  public void setBillingCode(String billingCode) {
+    this.billingCode = billingCode;
   }
 
   
@@ -91,23 +94,6 @@ public class BillingCodeType   {
   
   /**
    **/
-  public BillingCodeType billingCode(String billingCode) {
-    this.billingCode = billingCode;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("billingCode")
-  public String getBillingCode() {
-    return billingCode;
-  }
-  public void setBillingCode(String billingCode) {
-    this.billingCode = billingCode;
-  }
-
-  
-  /**
-   **/
   public BillingCodeType isActive(Boolean isActive) {
     this.isActive = isActive;
     return this;
@@ -120,6 +106,20 @@ public class BillingCodeType   {
   }
   public void setIsActive(Boolean isActive) {
     this.isActive = isActive;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("createDate")
+  public Date getCreateDate() {
+    return createDate;
+  }
+
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("modifyDate")
+  public Date getModifyDate() {
+    return modifyDate;
   }
 
   
@@ -152,18 +152,18 @@ public class BillingCodeType   {
     BillingCodeType billingCodeType = (BillingCodeType) o;
     return Objects.equals(this.id, billingCodeType.id) &&
         Objects.equals(this.clientId, billingCodeType.clientId) &&
-        Objects.equals(this.createDate, billingCodeType.createDate) &&
-        Objects.equals(this.modifyDate, billingCodeType.modifyDate) &&
+        Objects.equals(this.billingCode, billingCodeType.billingCode) &&
         Objects.equals(this.name, billingCodeType.name) &&
         Objects.equals(this.description, billingCodeType.description) &&
-        Objects.equals(this.billingCode, billingCodeType.billingCode) &&
         Objects.equals(this.isActive, billingCodeType.isActive) &&
+        Objects.equals(this.createDate, billingCodeType.createDate) &&
+        Objects.equals(this.modifyDate, billingCodeType.modifyDate) &&
         Objects.equals(this.customFields, billingCodeType.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, clientId, createDate, modifyDate, name, description, billingCode, isActive, customFields);
+    return Objects.hash(id, clientId, billingCode, name, description, isActive, createDate, modifyDate, customFields);
   }
 
   @Override
@@ -173,12 +173,12 @@ public class BillingCodeType   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
-    sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
-    sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
+    sb.append("    billingCode: ").append(toIndentedString(billingCode)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    billingCode: ").append(toIndentedString(billingCode)).append("\n");
     sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
+    sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
+    sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

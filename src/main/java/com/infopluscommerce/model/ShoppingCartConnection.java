@@ -15,7 +15,7 @@ import java.util.Map;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-31T16:32:12.628-05:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-16T21:25:15.480-06:00")
 public class ShoppingCartConnection   {
   
   private Integer id = null;
@@ -30,6 +30,7 @@ public class ShoppingCartConnection   {
   private Integer itemFilterId = null;
   private String infoplusSKUFieldToMap = null;
   private String shoppingCartSKUFieldToMap = null;
+  private Integer scriptId = null;
   private String name = null;
   private String shoppingCartStoreURL = null;
   private String accessCode = null;
@@ -38,6 +39,7 @@ public class ShoppingCartConnection   {
   private String password = null;
   private Integer defaultCarrierId = null;
   private String orderShipmentLevel = null;
+  private Boolean createInvoices = false;
   private Boolean syncOrders = false;
   private Boolean syncInventory = false;
   private Boolean syncTrackingData = false;
@@ -205,6 +207,23 @@ public class ShoppingCartConnection   {
   
   /**
    **/
+  public ShoppingCartConnection scriptId(Integer scriptId) {
+    this.scriptId = scriptId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("scriptId")
+  public Integer getScriptId() {
+    return scriptId;
+  }
+  public void setScriptId(Integer scriptId) {
+    this.scriptId = scriptId;
+  }
+
+  
+  /**
+   **/
   public ShoppingCartConnection name(String name) {
     this.name = name;
     return this;
@@ -336,6 +355,23 @@ public class ShoppingCartConnection   {
   }
   public void setOrderShipmentLevel(String orderShipmentLevel) {
     this.orderShipmentLevel = orderShipmentLevel;
+  }
+
+  
+  /**
+   **/
+  public ShoppingCartConnection createInvoices(Boolean createInvoices) {
+    this.createInvoices = createInvoices;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("createInvoices")
+  public Boolean getCreateInvoices() {
+    return createInvoices;
+  }
+  public void setCreateInvoices(Boolean createInvoices) {
+    this.createInvoices = createInvoices;
   }
 
   
@@ -494,6 +530,7 @@ public class ShoppingCartConnection   {
         Objects.equals(this.itemFilterId, shoppingCartConnection.itemFilterId) &&
         Objects.equals(this.infoplusSKUFieldToMap, shoppingCartConnection.infoplusSKUFieldToMap) &&
         Objects.equals(this.shoppingCartSKUFieldToMap, shoppingCartConnection.shoppingCartSKUFieldToMap) &&
+        Objects.equals(this.scriptId, shoppingCartConnection.scriptId) &&
         Objects.equals(this.name, shoppingCartConnection.name) &&
         Objects.equals(this.shoppingCartStoreURL, shoppingCartConnection.shoppingCartStoreURL) &&
         Objects.equals(this.accessCode, shoppingCartConnection.accessCode) &&
@@ -502,6 +539,7 @@ public class ShoppingCartConnection   {
         Objects.equals(this.password, shoppingCartConnection.password) &&
         Objects.equals(this.defaultCarrierId, shoppingCartConnection.defaultCarrierId) &&
         Objects.equals(this.orderShipmentLevel, shoppingCartConnection.orderShipmentLevel) &&
+        Objects.equals(this.createInvoices, shoppingCartConnection.createInvoices) &&
         Objects.equals(this.syncOrders, shoppingCartConnection.syncOrders) &&
         Objects.equals(this.syncInventory, shoppingCartConnection.syncInventory) &&
         Objects.equals(this.syncTrackingData, shoppingCartConnection.syncTrackingData) &&
@@ -515,7 +553,7 @@ public class ShoppingCartConnection   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, name, shoppingCartStoreURL, accessCode, accessToken, username, password, defaultCarrierId, orderShipmentLevel, syncOrders, syncInventory, syncTrackingData, fulfillAllItems, syncInventoryLevelsLastRunTime, syncOrdersLastRunTime, inventoryLevelWarehouseControls, warehouseList, customFields);
+    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, scriptId, name, shoppingCartStoreURL, accessCode, accessToken, username, password, defaultCarrierId, orderShipmentLevel, createInvoices, syncOrders, syncInventory, syncTrackingData, fulfillAllItems, syncInventoryLevelsLastRunTime, syncOrdersLastRunTime, inventoryLevelWarehouseControls, warehouseList, customFields);
   }
 
   @Override
@@ -535,6 +573,7 @@ public class ShoppingCartConnection   {
     sb.append("    itemFilterId: ").append(toIndentedString(itemFilterId)).append("\n");
     sb.append("    infoplusSKUFieldToMap: ").append(toIndentedString(infoplusSKUFieldToMap)).append("\n");
     sb.append("    shoppingCartSKUFieldToMap: ").append(toIndentedString(shoppingCartSKUFieldToMap)).append("\n");
+    sb.append("    scriptId: ").append(toIndentedString(scriptId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    shoppingCartStoreURL: ").append(toIndentedString(shoppingCartStoreURL)).append("\n");
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
@@ -543,6 +582,7 @@ public class ShoppingCartConnection   {
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    defaultCarrierId: ").append(toIndentedString(defaultCarrierId)).append("\n");
     sb.append("    orderShipmentLevel: ").append(toIndentedString(orderShipmentLevel)).append("\n");
+    sb.append("    createInvoices: ").append(toIndentedString(createInvoices)).append("\n");
     sb.append("    syncOrders: ").append(toIndentedString(syncOrders)).append("\n");
     sb.append("    syncInventory: ").append(toIndentedString(syncInventory)).append("\n");
     sb.append("    syncTrackingData: ").append(toIndentedString(syncTrackingData)).append("\n");
