@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Order
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class Order {
   @SerializedName("orderNo")
   private BigDecimal orderNo = null;
@@ -321,6 +321,15 @@ public class Order {
 
   @SerializedName("orderAssemblyInstructions")
   private String orderAssemblyInstructions = null;
+
+  @SerializedName("parcelLabelRef1")
+  private String parcelLabelRef1 = null;
+
+  @SerializedName("parcelLabelRef2")
+  private String parcelLabelRef2 = null;
+
+  @SerializedName("parcelLabelRef3")
+  private String parcelLabelRef3 = null;
 
   @SerializedName("lineItems")
   private List<OrderLine> lineItems = new ArrayList<OrderLine>();
@@ -1768,6 +1777,60 @@ public class Order {
     this.orderAssemblyInstructions = orderAssemblyInstructions;
   }
 
+  public Order parcelLabelRef1(String parcelLabelRef1) {
+    this.parcelLabelRef1 = parcelLabelRef1;
+    return this;
+  }
+
+   /**
+   * Get parcelLabelRef1
+   * @return parcelLabelRef1
+  **/
+  @ApiModelProperty(value = "")
+  public String getParcelLabelRef1() {
+    return parcelLabelRef1;
+  }
+
+  public void setParcelLabelRef1(String parcelLabelRef1) {
+    this.parcelLabelRef1 = parcelLabelRef1;
+  }
+
+  public Order parcelLabelRef2(String parcelLabelRef2) {
+    this.parcelLabelRef2 = parcelLabelRef2;
+    return this;
+  }
+
+   /**
+   * Get parcelLabelRef2
+   * @return parcelLabelRef2
+  **/
+  @ApiModelProperty(value = "")
+  public String getParcelLabelRef2() {
+    return parcelLabelRef2;
+  }
+
+  public void setParcelLabelRef2(String parcelLabelRef2) {
+    this.parcelLabelRef2 = parcelLabelRef2;
+  }
+
+  public Order parcelLabelRef3(String parcelLabelRef3) {
+    this.parcelLabelRef3 = parcelLabelRef3;
+    return this;
+  }
+
+   /**
+   * Get parcelLabelRef3
+   * @return parcelLabelRef3
+  **/
+  @ApiModelProperty(value = "")
+  public String getParcelLabelRef3() {
+    return parcelLabelRef3;
+  }
+
+  public void setParcelLabelRef3(String parcelLabelRef3) {
+    this.parcelLabelRef3 = parcelLabelRef3;
+  }
+
   public Order lineItems(List<OrderLine> lineItems) {
     this.lineItems = lineItems;
     return this;
@@ -1983,6 +2046,9 @@ public class Order {
         Objects.equals(this.totalQty, order.totalQty) &&
         Objects.equals(this.weightLbs, order.weightLbs) &&
         Objects.equals(this.orderAssemblyInstructions, order.orderAssemblyInstructions) &&
+        Objects.equals(this.parcelLabelRef1, order.parcelLabelRef1) &&
+        Objects.equals(this.parcelLabelRef2, order.parcelLabelRef2) &&
+        Objects.equals(this.parcelLabelRef3, order.parcelLabelRef3) &&
         Objects.equals(this.lineItems, order.lineItems) &&
         Objects.equals(this.extraOrderData, order.extraOrderData) &&
         Objects.equals(this.extraLineItemData, order.extraLineItemData) &&
@@ -1992,7 +2058,7 @@ public class Order {
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, useOrderNoRoot, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, thirdPartyParcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, preAllocationEstimatedWeight, estimatedWeightLbs, freight, giftMessage, groupOrderId, parentKODOrderId, holdCode, integrationPartnerId, numberOfLineItems, estimatedNumberOfPicks, modifyDate, omsOrderNo, omsCustomerId, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderInvoiceTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priceMode, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalDiscount, totalPaid, totalQty, weightLbs, orderAssemblyInstructions, lineItems, extraOrderData, extraLineItemData, externalShippingSystemId, customFields);
+    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, useOrderNoRoot, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, thirdPartyParcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, preAllocationEstimatedWeight, estimatedWeightLbs, freight, giftMessage, groupOrderId, parentKODOrderId, holdCode, integrationPartnerId, numberOfLineItems, estimatedNumberOfPicks, modifyDate, omsOrderNo, omsCustomerId, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderInvoiceTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priceMode, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalDiscount, totalPaid, totalQty, weightLbs, orderAssemblyInstructions, parcelLabelRef1, parcelLabelRef2, parcelLabelRef3, lineItems, extraOrderData, extraLineItemData, externalShippingSystemId, customFields);
   }
 
 
@@ -2096,6 +2162,9 @@ public class Order {
     sb.append("    totalQty: ").append(toIndentedString(totalQty)).append("\n");
     sb.append("    weightLbs: ").append(toIndentedString(weightLbs)).append("\n");
     sb.append("    orderAssemblyInstructions: ").append(toIndentedString(orderAssemblyInstructions)).append("\n");
+    sb.append("    parcelLabelRef1: ").append(toIndentedString(parcelLabelRef1)).append("\n");
+    sb.append("    parcelLabelRef2: ").append(toIndentedString(parcelLabelRef2)).append("\n");
+    sb.append("    parcelLabelRef3: ").append(toIndentedString(parcelLabelRef3)).append("\n");
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
     sb.append("    extraOrderData: ").append(toIndentedString(extraOrderData)).append("\n");
     sb.append("    extraLineItemData: ").append(toIndentedString(extraLineItemData)).append("\n");

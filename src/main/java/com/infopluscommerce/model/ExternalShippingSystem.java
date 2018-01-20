@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * ExternalShippingSystem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class ExternalShippingSystem {
   @SerializedName("id")
   private Integer id = null;
@@ -40,6 +40,9 @@ public class ExternalShippingSystem {
 
   @SerializedName("systemType")
   private String systemType = null;
+
+  @SerializedName("scriptId")
+  private Integer scriptId = null;
 
   @SerializedName("apiKey")
   private String apiKey = null;
@@ -99,6 +102,24 @@ public class ExternalShippingSystem {
 
   public void setSystemType(String systemType) {
     this.systemType = systemType;
+  }
+
+  public ExternalShippingSystem scriptId(Integer scriptId) {
+    this.scriptId = scriptId;
+    return this;
+  }
+
+   /**
+   * Get scriptId
+   * @return scriptId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getScriptId() {
+    return scriptId;
+  }
+
+  public void setScriptId(Integer scriptId) {
+    this.scriptId = scriptId;
   }
 
   public ExternalShippingSystem apiKey(String apiKey) {
@@ -194,6 +215,7 @@ public class ExternalShippingSystem {
     return Objects.equals(this.id, externalShippingSystem.id) &&
         Objects.equals(this.name, externalShippingSystem.name) &&
         Objects.equals(this.systemType, externalShippingSystem.systemType) &&
+        Objects.equals(this.scriptId, externalShippingSystem.scriptId) &&
         Objects.equals(this.apiKey, externalShippingSystem.apiKey) &&
         Objects.equals(this.apiSecret, externalShippingSystem.apiSecret) &&
         Objects.equals(this.createDate, externalShippingSystem.createDate) &&
@@ -203,7 +225,7 @@ public class ExternalShippingSystem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, systemType, apiKey, apiSecret, createDate, modifyDate, customFields);
+    return Objects.hash(id, name, systemType, scriptId, apiKey, apiSecret, createDate, modifyDate, customFields);
   }
 
 
@@ -215,6 +237,7 @@ public class ExternalShippingSystem {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    systemType: ").append(toIndentedString(systemType)).append("\n");
+    sb.append("    scriptId: ").append(toIndentedString(scriptId)).append("\n");
     sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("    apiSecret: ").append(toIndentedString(apiSecret)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");

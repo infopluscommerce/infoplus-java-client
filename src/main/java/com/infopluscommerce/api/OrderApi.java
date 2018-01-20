@@ -34,6 +34,8 @@ import com.infopluscommerce.model.GetOrderWarehouseFulfillmentDataInput;
 import com.infopluscommerce.model.GetOrderWarehouseFulfillmentDataOutput;
 import com.infopluscommerce.model.ModelApiResponse;
 import com.infopluscommerce.model.Order;
+import com.infopluscommerce.model.ProcessOutputAPIModel;
+import com.infopluscommerce.model.RunFulfillmentPlanInputAPIModel;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -1431,6 +1433,128 @@ public class OrderApi {
 
         com.squareup.okhttp.Call call = getOrderWarehouseFulfillmentDataValidateBeforeCall(body, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<GetOrderWarehouseFulfillmentDataOutput>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for runFulfillmentPlan
+     * @param body Input data for RunFulfillmentPlan process. (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call runFulfillmentPlanCall(RunFulfillmentPlanInputAPIModel body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/beta/order/runFulfillmentPlan";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "api_key" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call runFulfillmentPlanValidateBeforeCall(RunFulfillmentPlanInputAPIModel body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling runFulfillmentPlan(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = runFulfillmentPlanCall(body, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Run the RunFulfillmentPlan process.
+     * 
+     * @param body Input data for RunFulfillmentPlan process. (required)
+     * @return List&lt;ProcessOutputAPIModel&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public List<ProcessOutputAPIModel> runFulfillmentPlan(RunFulfillmentPlanInputAPIModel body) throws ApiException {
+        ApiResponse<List<ProcessOutputAPIModel>> resp = runFulfillmentPlanWithHttpInfo(body);
+        return resp.getData();
+    }
+
+    /**
+     * Run the RunFulfillmentPlan process.
+     * 
+     * @param body Input data for RunFulfillmentPlan process. (required)
+     * @return ApiResponse&lt;List&lt;ProcessOutputAPIModel&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<List<ProcessOutputAPIModel>> runFulfillmentPlanWithHttpInfo(RunFulfillmentPlanInputAPIModel body) throws ApiException {
+        com.squareup.okhttp.Call call = runFulfillmentPlanValidateBeforeCall(body, null, null);
+        Type localVarReturnType = new TypeToken<List<ProcessOutputAPIModel>>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Run the RunFulfillmentPlan process. (asynchronously)
+     * 
+     * @param body Input data for RunFulfillmentPlan process. (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call runFulfillmentPlanAsync(RunFulfillmentPlanInputAPIModel body, final ApiCallback<List<ProcessOutputAPIModel>> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = runFulfillmentPlanValidateBeforeCall(body, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<List<ProcessOutputAPIModel>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

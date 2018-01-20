@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  |  [optional]
 **name** | **String** |  | 
 **systemType** | **String** |  | 
+**scriptId** | **Integer** |  |  [optional]
 **apiKey** | **String** |  | 
 **apiSecret** | **String** |  | 
 **createDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

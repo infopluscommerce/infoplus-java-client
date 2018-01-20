@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **billingRuleId** | **Integer** |  | 
 **priceLevelMode** | **String** |  | 
 **scriptId** | **Integer** |  |  [optional]
+**priceLevelList** | [**List&lt;InvoiceTemplateLinePriceLevel&gt;**](InvoiceTemplateLinePriceLevel.md) |  |  [optional]
 **customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 
 

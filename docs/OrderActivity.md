@@ -96,6 +96,7 @@ Name | Type | Description | Notes
 **shippingCharge** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **totalDiscount** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **parcelAccountId** | **Integer** |  |  [optional]
+**thirdPartyParcelAccountId** | **Integer** |  |  [optional]
 **packingSlipTemplateId** | **Integer** |  |  [optional]
 **giftMessage** | **String** |  |  [optional]
 **branchSector** | **String** |  |  [optional]

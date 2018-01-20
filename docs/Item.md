@@ -63,6 +63,8 @@ Name | Type | Description | Notes
 **vendorPrice** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **vendorPer** | **String** |  |  [optional]
 **modifyDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**primaryImage** | **String** |  |  [optional]
+**pickImage** | **String** |  |  [optional]
 **behaviorType** | **String** |  |  [optional]
 **forwardLotMixingRule** | **String** |  | 
 **storageLotMixingRule** | **String** |  | 

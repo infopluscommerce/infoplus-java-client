@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * OrderLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class OrderLine {
   @SerializedName("id")
   private Integer id = null;
@@ -161,6 +161,11 @@ public class OrderLine {
     return lobId;
   }
 
+  public OrderLine sku(String sku) {
+    this.sku = sku;
+    return this;
+  }
+
    /**
    * Get sku
    * @return sku
@@ -168,6 +173,10 @@ public class OrderLine {
   @ApiModelProperty(required = true, value = "")
   public String getSku() {
     return sku;
+  }
+
+  public void setSku(String sku) {
+    this.sku = sku;
   }
 
    /**
@@ -179,6 +188,11 @@ public class OrderLine {
     return poNoId;
   }
 
+  public OrderLine orderedQty(Integer orderedQty) {
+    this.orderedQty = orderedQty;
+    return this;
+  }
+
    /**
    * Get orderedQty
    * @return orderedQty
@@ -186,6 +200,10 @@ public class OrderLine {
   @ApiModelProperty(value = "")
   public Integer getOrderedQty() {
     return orderedQty;
+  }
+
+  public void setOrderedQty(Integer orderedQty) {
+    this.orderedQty = orderedQty;
   }
 
    /**

@@ -19,9 +19,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.infopluscommerce.model.InvoiceTemplateLinePriceLevel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CustomerInvoiceTemplateLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class CustomerInvoiceTemplateLine {
   @SerializedName("id")
   private Integer id = null;
@@ -76,6 +78,9 @@ public class CustomerInvoiceTemplateLine {
 
   @SerializedName("scriptId")
   private Integer scriptId = null;
+
+  @SerializedName("priceLevelList")
+  private List<InvoiceTemplateLinePriceLevel> priceLevelList = null;
 
   @SerializedName("customFields")
   private Map<String, Object> customFields = null;
@@ -323,6 +328,32 @@ public class CustomerInvoiceTemplateLine {
     this.scriptId = scriptId;
   }
 
+  public CustomerInvoiceTemplateLine priceLevelList(List<InvoiceTemplateLinePriceLevel> priceLevelList) {
+    this.priceLevelList = priceLevelList;
+    return this;
+  }
+
+  public CustomerInvoiceTemplateLine addPriceLevelListItem(InvoiceTemplateLinePriceLevel priceLevelListItem) {
+    if (this.priceLevelList == null) {
+      this.priceLevelList = new ArrayList<InvoiceTemplateLinePriceLevel>();
+    }
+    this.priceLevelList.add(priceLevelListItem);
+    return this;
+  }
+
+   /**
+   * Get priceLevelList
+   * @return priceLevelList
+  **/
+  @ApiModelProperty(value = "")
+  public List<InvoiceTemplateLinePriceLevel> getPriceLevelList() {
+    return priceLevelList;
+  }
+
+  public void setPriceLevelList(List<InvoiceTemplateLinePriceLevel> priceLevelList) {
+    this.priceLevelList = priceLevelList;
+  }
+
   public CustomerInvoiceTemplateLine customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -374,12 +405,13 @@ public class CustomerInvoiceTemplateLine {
         Objects.equals(this.billingRuleId, customerInvoiceTemplateLine.billingRuleId) &&
         Objects.equals(this.priceLevelMode, customerInvoiceTemplateLine.priceLevelMode) &&
         Objects.equals(this.scriptId, customerInvoiceTemplateLine.scriptId) &&
+        Objects.equals(this.priceLevelList, customerInvoiceTemplateLine.priceLevelList) &&
         Objects.equals(this.customFields, customerInvoiceTemplateLine.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, description, seqNo, accountCode, active, includeIfZero, department, itemCode, invoiceTemplateId, billingRuleId, priceLevelMode, scriptId, customFields);
+    return Objects.hash(id, createDate, modifyDate, lobId, description, seqNo, accountCode, active, includeIfZero, department, itemCode, invoiceTemplateId, billingRuleId, priceLevelMode, scriptId, priceLevelList, customFields);
   }
 
 
@@ -403,6 +435,7 @@ public class CustomerInvoiceTemplateLine {
     sb.append("    billingRuleId: ").append(toIndentedString(billingRuleId)).append("\n");
     sb.append("    priceLevelMode: ").append(toIndentedString(priceLevelMode)).append("\n");
     sb.append("    scriptId: ").append(toIndentedString(scriptId)).append("\n");
+    sb.append("    priceLevelList: ").append(toIndentedString(priceLevelList)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

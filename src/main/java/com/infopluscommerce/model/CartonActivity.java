@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * CartonActivity
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class CartonActivity {
   @SerializedName("id")
   private Integer id = null;
@@ -386,6 +386,9 @@ public class CartonActivity {
 
   @SerializedName("parcelAccountId")
   private Integer parcelAccountId = null;
+
+  @SerializedName("thirdPartyParcelAccountId")
+  private Integer thirdPartyParcelAccountId = null;
 
   @SerializedName("packingSlipTemplateId")
   private Integer packingSlipTemplateId = null;
@@ -2139,6 +2142,24 @@ public class CartonActivity {
     return parcelAccountId;
   }
 
+  public CartonActivity thirdPartyParcelAccountId(Integer thirdPartyParcelAccountId) {
+    this.thirdPartyParcelAccountId = thirdPartyParcelAccountId;
+    return this;
+  }
+
+   /**
+   * Get thirdPartyParcelAccountId
+   * @return thirdPartyParcelAccountId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getThirdPartyParcelAccountId() {
+    return thirdPartyParcelAccountId;
+  }
+
+  public void setThirdPartyParcelAccountId(Integer thirdPartyParcelAccountId) {
+    this.thirdPartyParcelAccountId = thirdPartyParcelAccountId;
+  }
+
   public CartonActivity packingSlipTemplateId(Integer packingSlipTemplateId) {
     this.packingSlipTemplateId = packingSlipTemplateId;
     return this;
@@ -2554,6 +2575,7 @@ public class CartonActivity {
         Objects.equals(this.shippingCharge, cartonActivity.shippingCharge) &&
         Objects.equals(this.totalDiscount, cartonActivity.totalDiscount) &&
         Objects.equals(this.parcelAccountId, cartonActivity.parcelAccountId) &&
+        Objects.equals(this.thirdPartyParcelAccountId, cartonActivity.thirdPartyParcelAccountId) &&
         Objects.equals(this.packingSlipTemplateId, cartonActivity.packingSlipTemplateId) &&
         Objects.equals(this.giftMessage, cartonActivity.giftMessage) &&
         Objects.equals(this.branchSector, cartonActivity.branchSector) &&
@@ -2575,7 +2597,7 @@ public class CartonActivity {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, lobId, orderNo, shipDate, deliveredDate, trackingNo, warehouseId, warehouseName, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, cartonCreateDate, cartonModifyDate, alternateUsage, groupOrderId, orderStatus, orderStatusName, fulfillmentProcessId, carrierId, carrierName, mediaCode, legacyRestrictionType, reqTypeName, serviceTypeId, serviceTypeName, alcoholOrderType, distributionChannel, distributionChannelName, priorityCode, orderDate, enteredBy, orderReason, customerOrderNo, priceLevel, orderCreateDate, orderModifyDate, shipBy, stopBackOrders, orderSourceId, orderSourceName, integrationPartnerId, integrationPartnerName, orderLoadProgramId, orderLoadProgramName, omsOrderNo, omsCustomerId, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, orderShipDate, freight, orderWeightLbs, orderEstimatedWeightLbs, numberOfPallets, numberOfLineItems, completionStatus, holdCode, shipCode, orderMessage, division, costCenter, authorizedBy, batchNo, firstShipDate, lastShipDate, deliverOnDate, customerPONo, shipVia, needByDate, total, balanceDue, totalPaid, authorizationAmount, subtotal, taxOnFreight, tax, distributionCharges, shippingCharge, totalDiscount, parcelAccountId, packingSlipTemplateId, giftMessage, branchSector, branchArea, branchCustomerType, branchId, orderCode, leadPackageId, totalQty, estimatedNumberOfPicks, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, externalShippingSystemId, shippingSystemName, orderInvoiceTemplateId, priceMode, customFields);
+    return Objects.hash(id, createDate, modifyDate, lobId, orderNo, shipDate, deliveredDate, trackingNo, warehouseId, warehouseName, cartonNo, numberOfCartons, status, shipped, carrierServiceId, dim1In, dim2In, dim3In, estimatedZone, parcelAccountNo, thirdPartyParcelAccountNo, manifestId, residential, billingOption, weightLbs, dimWeight, licensePlateNumber, chargedFreightAmount, publishedFreightAmount, retailFreightAmount, cartonCreateDate, cartonModifyDate, alternateUsage, groupOrderId, orderStatus, orderStatusName, fulfillmentProcessId, carrierId, carrierName, mediaCode, legacyRestrictionType, reqTypeName, serviceTypeId, serviceTypeName, alcoholOrderType, distributionChannel, distributionChannelName, priorityCode, orderDate, enteredBy, orderReason, customerOrderNo, priceLevel, orderCreateDate, orderModifyDate, shipBy, stopBackOrders, orderSourceId, orderSourceName, integrationPartnerId, integrationPartnerName, orderLoadProgramId, orderLoadProgramName, omsOrderNo, omsCustomerId, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, orderShipDate, freight, orderWeightLbs, orderEstimatedWeightLbs, numberOfPallets, numberOfLineItems, completionStatus, holdCode, shipCode, orderMessage, division, costCenter, authorizedBy, batchNo, firstShipDate, lastShipDate, deliverOnDate, customerPONo, shipVia, needByDate, total, balanceDue, totalPaid, authorizationAmount, subtotal, taxOnFreight, tax, distributionCharges, shippingCharge, totalDiscount, parcelAccountId, thirdPartyParcelAccountId, packingSlipTemplateId, giftMessage, branchSector, branchArea, branchCustomerType, branchId, orderCode, leadPackageId, totalQty, estimatedNumberOfPicks, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, externalShippingSystemId, shippingSystemName, orderInvoiceTemplateId, priceMode, customFields);
   }
 
 
@@ -2702,6 +2724,7 @@ public class CartonActivity {
     sb.append("    shippingCharge: ").append(toIndentedString(shippingCharge)).append("\n");
     sb.append("    totalDiscount: ").append(toIndentedString(totalDiscount)).append("\n");
     sb.append("    parcelAccountId: ").append(toIndentedString(parcelAccountId)).append("\n");
+    sb.append("    thirdPartyParcelAccountId: ").append(toIndentedString(thirdPartyParcelAccountId)).append("\n");
     sb.append("    packingSlipTemplateId: ").append(toIndentedString(packingSlipTemplateId)).append("\n");
     sb.append("    giftMessage: ").append(toIndentedString(giftMessage)).append("\n");
     sb.append("    branchSector: ").append(toIndentedString(branchSector)).append("\n");

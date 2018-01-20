@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * EmailTemplate
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class EmailTemplate {
   @SerializedName("id")
   private Integer id = null;
@@ -38,8 +38,8 @@ public class EmailTemplate {
   @SerializedName("lobId")
   private Integer lobId = null;
 
-  @SerializedName("subjectText")
-  private String subjectText = null;
+  @SerializedName("subject")
+  private String subject = null;
 
   @SerializedName("name")
   private String name = null;
@@ -50,8 +50,29 @@ public class EmailTemplate {
   @SerializedName("fromAddress")
   private String fromAddress = null;
 
+  @SerializedName("toName")
+  private String toName = null;
+
+  @SerializedName("toAddress")
+  private String toAddress = null;
+
+  @SerializedName("ccAddress")
+  private String ccAddress = null;
+
+  @SerializedName("bccAddress")
+  private String bccAddress = null;
+
   @SerializedName("emailTemplateType")
   private String emailTemplateType = null;
+
+  @SerializedName("recordType")
+  private String recordType = null;
+
+  @SerializedName("apiVersion")
+  private String apiVersion = null;
+
+  @SerializedName("scriptId")
+  private Integer scriptId = null;
 
   @SerializedName("createDate")
   private OffsetDateTime createDate = null;
@@ -89,22 +110,22 @@ public class EmailTemplate {
     this.lobId = lobId;
   }
 
-  public EmailTemplate subjectText(String subjectText) {
-    this.subjectText = subjectText;
+  public EmailTemplate subject(String subject) {
+    this.subject = subject;
     return this;
   }
 
    /**
-   * Get subjectText
-   * @return subjectText
+   * Get subject
+   * @return subject
   **/
-  @ApiModelProperty(value = "")
-  public String getSubjectText() {
-    return subjectText;
+  @ApiModelProperty(required = true, value = "")
+  public String getSubject() {
+    return subject;
   }
 
-  public void setSubjectText(String subjectText) {
-    this.subjectText = subjectText;
+  public void setSubject(String subject) {
+    this.subject = subject;
   }
 
   public EmailTemplate name(String name) {
@@ -161,6 +182,78 @@ public class EmailTemplate {
     this.fromAddress = fromAddress;
   }
 
+  public EmailTemplate toName(String toName) {
+    this.toName = toName;
+    return this;
+  }
+
+   /**
+   * Get toName
+   * @return toName
+  **/
+  @ApiModelProperty(value = "")
+  public String getToName() {
+    return toName;
+  }
+
+  public void setToName(String toName) {
+    this.toName = toName;
+  }
+
+  public EmailTemplate toAddress(String toAddress) {
+    this.toAddress = toAddress;
+    return this;
+  }
+
+   /**
+   * Get toAddress
+   * @return toAddress
+  **/
+  @ApiModelProperty(value = "")
+  public String getToAddress() {
+    return toAddress;
+  }
+
+  public void setToAddress(String toAddress) {
+    this.toAddress = toAddress;
+  }
+
+  public EmailTemplate ccAddress(String ccAddress) {
+    this.ccAddress = ccAddress;
+    return this;
+  }
+
+   /**
+   * Get ccAddress
+   * @return ccAddress
+  **/
+  @ApiModelProperty(value = "")
+  public String getCcAddress() {
+    return ccAddress;
+  }
+
+  public void setCcAddress(String ccAddress) {
+    this.ccAddress = ccAddress;
+  }
+
+  public EmailTemplate bccAddress(String bccAddress) {
+    this.bccAddress = bccAddress;
+    return this;
+  }
+
+   /**
+   * Get bccAddress
+   * @return bccAddress
+  **/
+  @ApiModelProperty(value = "")
+  public String getBccAddress() {
+    return bccAddress;
+  }
+
+  public void setBccAddress(String bccAddress) {
+    this.bccAddress = bccAddress;
+  }
+
   public EmailTemplate emailTemplateType(String emailTemplateType) {
     this.emailTemplateType = emailTemplateType;
     return this;
@@ -177,6 +270,60 @@ public class EmailTemplate {
 
   public void setEmailTemplateType(String emailTemplateType) {
     this.emailTemplateType = emailTemplateType;
+  }
+
+  public EmailTemplate recordType(String recordType) {
+    this.recordType = recordType;
+    return this;
+  }
+
+   /**
+   * Get recordType
+   * @return recordType
+  **/
+  @ApiModelProperty(value = "")
+  public String getRecordType() {
+    return recordType;
+  }
+
+  public void setRecordType(String recordType) {
+    this.recordType = recordType;
+  }
+
+  public EmailTemplate apiVersion(String apiVersion) {
+    this.apiVersion = apiVersion;
+    return this;
+  }
+
+   /**
+   * Get apiVersion
+   * @return apiVersion
+  **/
+  @ApiModelProperty(value = "")
+  public String getApiVersion() {
+    return apiVersion;
+  }
+
+  public void setApiVersion(String apiVersion) {
+    this.apiVersion = apiVersion;
+  }
+
+  public EmailTemplate scriptId(Integer scriptId) {
+    this.scriptId = scriptId;
+    return this;
+  }
+
+   /**
+   * Get scriptId
+   * @return scriptId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getScriptId() {
+    return scriptId;
+  }
+
+  public void setScriptId(Integer scriptId) {
+    this.scriptId = scriptId;
   }
 
    /**
@@ -235,11 +382,18 @@ public class EmailTemplate {
     EmailTemplate emailTemplate = (EmailTemplate) o;
     return Objects.equals(this.id, emailTemplate.id) &&
         Objects.equals(this.lobId, emailTemplate.lobId) &&
-        Objects.equals(this.subjectText, emailTemplate.subjectText) &&
+        Objects.equals(this.subject, emailTemplate.subject) &&
         Objects.equals(this.name, emailTemplate.name) &&
         Objects.equals(this.fromName, emailTemplate.fromName) &&
         Objects.equals(this.fromAddress, emailTemplate.fromAddress) &&
+        Objects.equals(this.toName, emailTemplate.toName) &&
+        Objects.equals(this.toAddress, emailTemplate.toAddress) &&
+        Objects.equals(this.ccAddress, emailTemplate.ccAddress) &&
+        Objects.equals(this.bccAddress, emailTemplate.bccAddress) &&
         Objects.equals(this.emailTemplateType, emailTemplate.emailTemplateType) &&
+        Objects.equals(this.recordType, emailTemplate.recordType) &&
+        Objects.equals(this.apiVersion, emailTemplate.apiVersion) &&
+        Objects.equals(this.scriptId, emailTemplate.scriptId) &&
         Objects.equals(this.createDate, emailTemplate.createDate) &&
         Objects.equals(this.modifyDate, emailTemplate.modifyDate) &&
         Objects.equals(this.customFields, emailTemplate.customFields);
@@ -247,7 +401,7 @@ public class EmailTemplate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lobId, subjectText, name, fromName, fromAddress, emailTemplateType, createDate, modifyDate, customFields);
+    return Objects.hash(id, lobId, subject, name, fromName, fromAddress, toName, toAddress, ccAddress, bccAddress, emailTemplateType, recordType, apiVersion, scriptId, createDate, modifyDate, customFields);
   }
 
 
@@ -258,11 +412,18 @@ public class EmailTemplate {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    lobId: ").append(toIndentedString(lobId)).append("\n");
-    sb.append("    subjectText: ").append(toIndentedString(subjectText)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    fromName: ").append(toIndentedString(fromName)).append("\n");
     sb.append("    fromAddress: ").append(toIndentedString(fromAddress)).append("\n");
+    sb.append("    toName: ").append(toIndentedString(toName)).append("\n");
+    sb.append("    toAddress: ").append(toIndentedString(toAddress)).append("\n");
+    sb.append("    ccAddress: ").append(toIndentedString(ccAddress)).append("\n");
+    sb.append("    bccAddress: ").append(toIndentedString(bccAddress)).append("\n");
     sb.append("    emailTemplateType: ").append(toIndentedString(emailTemplateType)).append("\n");
+    sb.append("    recordType: ").append(toIndentedString(recordType)).append("\n");
+    sb.append("    apiVersion: ").append(toIndentedString(apiVersion)).append("\n");
+    sb.append("    scriptId: ").append(toIndentedString(scriptId)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");

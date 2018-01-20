@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Asn
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class Asn {
   @SerializedName("id")
   private Integer id = null;

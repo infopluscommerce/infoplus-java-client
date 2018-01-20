@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**getOrderById**](OrderApi.md#getOrderById) | **GET** /beta/order/{orderId} | Get an order by id
 [**getOrderTags**](OrderApi.md#getOrderTags) | **GET** /beta/order/{orderId}/tag | Get the tags for an order.
 [**getOrderWarehouseFulfillmentData**](OrderApi.md#getOrderWarehouseFulfillmentData) | **POST** /beta/order/getOrderWarehouseFulfillmentData | Run the Get Order Warehouse Fulfillment Plan method.
+[**runFulfillmentPlan**](OrderApi.md#runFulfillmentPlan) | **POST** /beta/order/runFulfillmentPlan | Run the RunFulfillmentPlan process.
 [**updateOrder**](OrderApi.md#updateOrder) | **PUT** /beta/order | Update an order
 [**updateOrderCustomFields**](OrderApi.md#updateOrderCustomFields) | **PUT** /beta/order/customFields | Update an order custom fields
 
@@ -621,6 +622,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetOrderWarehouseFulfillmentDataOutput**](GetOrderWarehouseFulfillmentDataOutput.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="runFulfillmentPlan"></a>
+# **runFulfillmentPlan**
+> List&lt;ProcessOutputAPIModel&gt; runFulfillmentPlan(body)
+
+Run the RunFulfillmentPlan process.
+
+
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.OrderApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+OrderApi apiInstance = new OrderApi();
+RunFulfillmentPlanInputAPIModel body = new RunFulfillmentPlanInputAPIModel(); // RunFulfillmentPlanInputAPIModel | Input data for RunFulfillmentPlan process.
+try {
+    List<ProcessOutputAPIModel> result = apiInstance.runFulfillmentPlan(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OrderApi#runFulfillmentPlan");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RunFulfillmentPlanInputAPIModel**](RunFulfillmentPlanInputAPIModel.md)| Input data for RunFulfillmentPlan process. |
+
+### Return type
+
+[**List&lt;ProcessOutputAPIModel&gt;**](ProcessOutputAPIModel.md)
 
 ### Authorization
 

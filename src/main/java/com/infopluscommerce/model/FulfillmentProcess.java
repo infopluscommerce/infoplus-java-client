@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * FulfillmentProcess
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class FulfillmentProcess {
   @SerializedName("id")
   private Integer id = null;
@@ -76,6 +76,9 @@ public class FulfillmentProcess {
 
   @SerializedName("fulfillmentProcessGroup")
   private Integer fulfillmentProcessGroup = null;
+
+  @SerializedName("isMassDistribution")
+  private Boolean isMassDistribution = false;
 
   @SerializedName("numberOfOrders")
   private Integer numberOfOrders = null;
@@ -160,6 +163,9 @@ public class FulfillmentProcess {
 
   @SerializedName("autoShipCasebreakCartons")
   private Boolean autoShipCasebreakCartons = false;
+
+  @SerializedName("autoShipOrders")
+  private Boolean autoShipOrders = false;
 
   @SerializedName("cartonizeOrders")
   private Boolean cartonizeOrders = false;
@@ -384,6 +390,24 @@ public class FulfillmentProcess {
   @ApiModelProperty(value = "")
   public Integer getFulfillmentProcessGroup() {
     return fulfillmentProcessGroup;
+  }
+
+  public FulfillmentProcess isMassDistribution(Boolean isMassDistribution) {
+    this.isMassDistribution = isMassDistribution;
+    return this;
+  }
+
+   /**
+   * Get isMassDistribution
+   * @return isMassDistribution
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsMassDistribution() {
+    return isMassDistribution;
+  }
+
+  public void setIsMassDistribution(Boolean isMassDistribution) {
+    this.isMassDistribution = isMassDistribution;
   }
 
    /**
@@ -863,6 +887,24 @@ public class FulfillmentProcess {
     this.autoShipCasebreakCartons = autoShipCasebreakCartons;
   }
 
+  public FulfillmentProcess autoShipOrders(Boolean autoShipOrders) {
+    this.autoShipOrders = autoShipOrders;
+    return this;
+  }
+
+   /**
+   * Get autoShipOrders
+   * @return autoShipOrders
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isAutoShipOrders() {
+    return autoShipOrders;
+  }
+
+  public void setAutoShipOrders(Boolean autoShipOrders) {
+    this.autoShipOrders = autoShipOrders;
+  }
+
   public FulfillmentProcess cartonizeOrders(Boolean cartonizeOrders) {
     this.cartonizeOrders = cartonizeOrders;
     return this;
@@ -1058,6 +1100,7 @@ public class FulfillmentProcess {
         Objects.equals(this.batchSize, fulfillmentProcess.batchSize) &&
         Objects.equals(this.version, fulfillmentProcess.version) &&
         Objects.equals(this.fulfillmentProcessGroup, fulfillmentProcess.fulfillmentProcessGroup) &&
+        Objects.equals(this.isMassDistribution, fulfillmentProcess.isMassDistribution) &&
         Objects.equals(this.numberOfOrders, fulfillmentProcess.numberOfOrders) &&
         Objects.equals(this.numberOfLines, fulfillmentProcess.numberOfLines) &&
         Objects.equals(this.numberOfSKUs, fulfillmentProcess.numberOfSKUs) &&
@@ -1086,6 +1129,7 @@ public class FulfillmentProcess {
         Objects.equals(this.preGenerateParcelLabels, fulfillmentProcess.preGenerateParcelLabels) &&
         Objects.equals(this.shipDate, fulfillmentProcess.shipDate) &&
         Objects.equals(this.autoShipCasebreakCartons, fulfillmentProcess.autoShipCasebreakCartons) &&
+        Objects.equals(this.autoShipOrders, fulfillmentProcess.autoShipOrders) &&
         Objects.equals(this.cartonizeOrders, fulfillmentProcess.cartonizeOrders) &&
         Objects.equals(this.createPackingSlip, fulfillmentProcess.createPackingSlip) &&
         Objects.equals(this.overridePackingSlipTemplateId, fulfillmentProcess.overridePackingSlipTemplateId) &&
@@ -1099,7 +1143,7 @@ public class FulfillmentProcess {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, maxOrders, batchSize, version, fulfillmentProcessGroup, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
+    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, maxOrders, batchSize, version, fulfillmentProcessGroup, isMassDistribution, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, autoShipOrders, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
 
@@ -1123,6 +1167,7 @@ public class FulfillmentProcess {
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    fulfillmentProcessGroup: ").append(toIndentedString(fulfillmentProcessGroup)).append("\n");
+    sb.append("    isMassDistribution: ").append(toIndentedString(isMassDistribution)).append("\n");
     sb.append("    numberOfOrders: ").append(toIndentedString(numberOfOrders)).append("\n");
     sb.append("    numberOfLines: ").append(toIndentedString(numberOfLines)).append("\n");
     sb.append("    numberOfSKUs: ").append(toIndentedString(numberOfSKUs)).append("\n");
@@ -1151,6 +1196,7 @@ public class FulfillmentProcess {
     sb.append("    preGenerateParcelLabels: ").append(toIndentedString(preGenerateParcelLabels)).append("\n");
     sb.append("    shipDate: ").append(toIndentedString(shipDate)).append("\n");
     sb.append("    autoShipCasebreakCartons: ").append(toIndentedString(autoShipCasebreakCartons)).append("\n");
+    sb.append("    autoShipOrders: ").append(toIndentedString(autoShipOrders)).append("\n");
     sb.append("    cartonizeOrders: ").append(toIndentedString(cartonizeOrders)).append("\n");
     sb.append("    createPackingSlip: ").append(toIndentedString(createPackingSlip)).append("\n");
     sb.append("    overridePackingSlipTemplateId: ").append(toIndentedString(overridePackingSlipTemplateId)).append("\n");

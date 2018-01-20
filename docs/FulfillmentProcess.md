@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **batchSize** | **Integer** |  |  [optional]
 **version** | **String** |  |  [optional]
 **fulfillmentProcessGroup** | **Integer** |  |  [optional]
+**isMassDistribution** | **Boolean** |  |  [optional]
 **numberOfOrders** | **Integer** |  |  [optional]
 **numberOfLines** | **Integer** |  |  [optional]
 **numberOfSKUs** | **Integer** |  |  [optional]
@@ -47,6 +48,7 @@ Name | Type | Description | Notes
 **preGenerateParcelLabels** | **Boolean** |  |  [optional]
 **shipDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **autoShipCasebreakCartons** | **Boolean** |  |  [optional]
+**autoShipOrders** | **Boolean** |  |  [optional]
 **cartonizeOrders** | **Boolean** |  |  [optional]
 **createPackingSlip** | **String** |  | 
 **overridePackingSlipTemplateId** | **Integer** |  |  [optional]

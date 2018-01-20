@@ -28,13 +28,16 @@ import java.util.List;
 /**
  * ProcessOutputAPIModel
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T10:00:59.624-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
 public class ProcessOutputAPIModel {
   @SerializedName("id")
   private Object id = null;
 
   @SerializedName("status")
   private String status = null;
+
+  @SerializedName("entity")
+  private Object entity = null;
 
   @SerializedName("messageList")
   private List<String> messageList = null;
@@ -75,6 +78,24 @@ public class ProcessOutputAPIModel {
     this.status = status;
   }
 
+  public ProcessOutputAPIModel entity(Object entity) {
+    this.entity = entity;
+    return this;
+  }
+
+   /**
+   * Get entity
+   * @return entity
+  **/
+  @ApiModelProperty(value = "")
+  public Object getEntity() {
+    return entity;
+  }
+
+  public void setEntity(Object entity) {
+    this.entity = entity;
+  }
+
   public ProcessOutputAPIModel messageList(List<String> messageList) {
     this.messageList = messageList;
     return this;
@@ -113,12 +134,13 @@ public class ProcessOutputAPIModel {
     ProcessOutputAPIModel processOutputAPIModel = (ProcessOutputAPIModel) o;
     return Objects.equals(this.id, processOutputAPIModel.id) &&
         Objects.equals(this.status, processOutputAPIModel.status) &&
+        Objects.equals(this.entity, processOutputAPIModel.entity) &&
         Objects.equals(this.messageList, processOutputAPIModel.messageList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, status, messageList);
+    return Objects.hash(id, status, entity, messageList);
   }
 
 
@@ -129,6 +151,7 @@ public class ProcessOutputAPIModel {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    entity: ").append(toIndentedString(entity)).append("\n");
     sb.append("    messageList: ").append(toIndentedString(messageList)).append("\n");
     sb.append("}");
     return sb.toString();
