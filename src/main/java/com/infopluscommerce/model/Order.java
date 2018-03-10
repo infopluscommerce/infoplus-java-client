@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Order
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:43:11.935-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:46:11.573-06:00")
 public class Order {
   @SerializedName("orderNo")
   private BigDecimal orderNo = null;
