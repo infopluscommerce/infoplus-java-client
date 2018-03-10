@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**applyOrderWarehouseFulfillmentPlan**](OrderApi.md#applyOrderWarehouseFulfillmentPlan) | **POST** /beta/order/applyOrderWarehouseFulfillmentPlan | Run the Apply Order Warehouse Fulfillment Plan method.
 [**deleteOrder**](OrderApi.md#deleteOrder) | **DELETE** /beta/order/{orderId} | Delete an order
 [**deleteOrderTag**](OrderApi.md#deleteOrderTag) | **DELETE** /beta/order/{orderId}/tag/{orderTag} | Delete a tag for an order.
+[**editFulfillmentChannel**](OrderApi.md#editFulfillmentChannel) | **POST** /beta/order/editFulfillmentChannel | Run the EditLineItemFulfillmentStrategy process.
+[**editLineItems**](OrderApi.md#editLineItems) | **POST** /beta/order/editLineItems | Run the ReqManualSubstitution process.
 [**getDuplicateOrderById**](OrderApi.md#getDuplicateOrderById) | **GET** /beta/order/duplicate/{orderId} | Get a duplicated an order by id
 [**getOrderByFilter**](OrderApi.md#getOrderByFilter) | **GET** /beta/order/search | Search orders by filter
 [**getOrderById**](OrderApi.md#getOrderById) | **GET** /beta/order/{orderId} | Get an order by id
@@ -342,6 +344,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="editFulfillmentChannel"></a>
+# **editFulfillmentChannel**
+> List&lt;ProcessOutputAPIModel&gt; editFulfillmentChannel(body)
+
+Run the EditLineItemFulfillmentStrategy process.
+
+
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.OrderApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+OrderApi apiInstance = new OrderApi();
+EditLineItemFulfillmentStrategyInputAPIModel body = new EditLineItemFulfillmentStrategyInputAPIModel(); // EditLineItemFulfillmentStrategyInputAPIModel | Input data for EditLineItemFulfillmentStrategy process.
+try {
+    List<ProcessOutputAPIModel> result = apiInstance.editFulfillmentChannel(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OrderApi#editFulfillmentChannel");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**EditLineItemFulfillmentStrategyInputAPIModel**](EditLineItemFulfillmentStrategyInputAPIModel.md)| Input data for EditLineItemFulfillmentStrategy process. |
+
+### Return type
+
+[**List&lt;ProcessOutputAPIModel&gt;**](ProcessOutputAPIModel.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="editLineItems"></a>
+# **editLineItems**
+> List&lt;ProcessOutputAPIModel&gt; editLineItems(body)
+
+Run the ReqManualSubstitution process.
+
+
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.OrderApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+OrderApi apiInstance = new OrderApi();
+ReqManualSubstitutionInputAPIModel body = new ReqManualSubstitutionInputAPIModel(); // ReqManualSubstitutionInputAPIModel | Input data for ReqManualSubstitution process.
+try {
+    List<ProcessOutputAPIModel> result = apiInstance.editLineItems(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling OrderApi#editLineItems");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ReqManualSubstitutionInputAPIModel**](ReqManualSubstitutionInputAPIModel.md)| Input data for ReqManualSubstitution process. |
+
+### Return type
+
+[**List&lt;ProcessOutputAPIModel&gt;**](ProcessOutputAPIModel.md)
 
 ### Authorization
 

@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * QuickReceipt
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class QuickReceipt {
   @SerializedName("id")
   private Integer id = null;
@@ -78,11 +78,14 @@ public class QuickReceipt {
   @SerializedName("unitsPerWrap")
   private Integer unitsPerWrap = null;
 
+  @SerializedName("quantityPerInnerPack")
+  private Integer quantityPerInnerPack = null;
+
   @SerializedName("unitsPerCase")
   private Integer unitsPerCase = null;
 
-  @SerializedName("casesPerPallet")
-  private Integer casesPerPallet = null;
+  @SerializedName("quantityPerPallet")
+  private Integer quantityPerPallet = null;
 
   @SerializedName("caseWeight")
   private BigDecimal caseWeight = null;
@@ -125,6 +128,9 @@ public class QuickReceipt {
 
   @SerializedName("productIdTag")
   private String productIdTag = null;
+
+  @SerializedName("expirationDate")
+  private OffsetDateTime expirationDate = null;
 
   @SerializedName("customFields")
   private Map<String, Object> customFields = null;
@@ -285,22 +291,13 @@ public class QuickReceipt {
     return status;
   }
 
-  public QuickReceipt unitCode(String unitCode) {
-    this.unitCode = unitCode;
-    return this;
-  }
-
    /**
    * Get unitCode
    * @return unitCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getUnitCode() {
     return unitCode;
-  }
-
-  public void setUnitCode(String unitCode) {
-    this.unitCode = unitCode;
   }
 
   public QuickReceipt wrapCode(String wrapCode) {
@@ -312,7 +309,7 @@ public class QuickReceipt {
    * Get wrapCode
    * @return wrapCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getWrapCode() {
     return wrapCode;
   }
@@ -348,13 +345,31 @@ public class QuickReceipt {
    * Get unitsPerWrap
    * @return unitsPerWrap
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public Integer getUnitsPerWrap() {
     return unitsPerWrap;
   }
 
   public void setUnitsPerWrap(Integer unitsPerWrap) {
     this.unitsPerWrap = unitsPerWrap;
+  }
+
+  public QuickReceipt quantityPerInnerPack(Integer quantityPerInnerPack) {
+    this.quantityPerInnerPack = quantityPerInnerPack;
+    return this;
+  }
+
+   /**
+   * Get quantityPerInnerPack
+   * @return quantityPerInnerPack
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getQuantityPerInnerPack() {
+    return quantityPerInnerPack;
+  }
+
+  public void setQuantityPerInnerPack(Integer quantityPerInnerPack) {
+    this.quantityPerInnerPack = quantityPerInnerPack;
   }
 
   public QuickReceipt unitsPerCase(Integer unitsPerCase) {
@@ -375,22 +390,22 @@ public class QuickReceipt {
     this.unitsPerCase = unitsPerCase;
   }
 
-  public QuickReceipt casesPerPallet(Integer casesPerPallet) {
-    this.casesPerPallet = casesPerPallet;
+  public QuickReceipt quantityPerPallet(Integer quantityPerPallet) {
+    this.quantityPerPallet = quantityPerPallet;
     return this;
   }
 
    /**
-   * Get casesPerPallet
-   * @return casesPerPallet
+   * Get quantityPerPallet
+   * @return quantityPerPallet
   **/
   @ApiModelProperty(value = "")
-  public Integer getCasesPerPallet() {
-    return casesPerPallet;
+  public Integer getQuantityPerPallet() {
+    return quantityPerPallet;
   }
 
-  public void setCasesPerPallet(Integer casesPerPallet) {
-    this.casesPerPallet = casesPerPallet;
+  public void setQuantityPerPallet(Integer quantityPerPallet) {
+    this.quantityPerPallet = quantityPerPallet;
   }
 
   public QuickReceipt caseWeight(BigDecimal caseWeight) {
@@ -627,6 +642,24 @@ public class QuickReceipt {
     this.productIdTag = productIdTag;
   }
 
+  public QuickReceipt expirationDate(OffsetDateTime expirationDate) {
+    this.expirationDate = expirationDate;
+    return this;
+  }
+
+   /**
+   * Get expirationDate
+   * @return expirationDate
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getExpirationDate() {
+    return expirationDate;
+  }
+
+  public void setExpirationDate(OffsetDateTime expirationDate) {
+    this.expirationDate = expirationDate;
+  }
+
   public QuickReceipt customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -696,8 +729,9 @@ public class QuickReceipt {
         Objects.equals(this.wrapCode, quickReceipt.wrapCode) &&
         Objects.equals(this.weightPerWrap, quickReceipt.weightPerWrap) &&
         Objects.equals(this.unitsPerWrap, quickReceipt.unitsPerWrap) &&
+        Objects.equals(this.quantityPerInnerPack, quickReceipt.quantityPerInnerPack) &&
         Objects.equals(this.unitsPerCase, quickReceipt.unitsPerCase) &&
-        Objects.equals(this.casesPerPallet, quickReceipt.casesPerPallet) &&
+        Objects.equals(this.quantityPerPallet, quickReceipt.quantityPerPallet) &&
         Objects.equals(this.caseWeight, quickReceipt.caseWeight) &&
         Objects.equals(this.productionLot, quickReceipt.productionLot) &&
         Objects.equals(this.revisionDate, quickReceipt.revisionDate) &&
@@ -712,13 +746,14 @@ public class QuickReceipt {
         Objects.equals(this.generatedASNId, quickReceipt.generatedASNId) &&
         Objects.equals(this.dockDate, quickReceipt.dockDate) &&
         Objects.equals(this.productIdTag, quickReceipt.productIdTag) &&
+        Objects.equals(this.expirationDate, quickReceipt.expirationDate) &&
         Objects.equals(this.customFields, quickReceipt.customFields) &&
         Objects.equals(this.sku, quickReceipt.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createdBy, createDate, modifyDate, warehouseId, lobId, locationId, quantity, vendorId, carrier, status, unitCode, wrapCode, weightPerWrap, unitsPerWrap, unitsPerCase, casesPerPallet, caseWeight, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, cost, sellPrice, pricingPer, generatedItemReceiptId, generatedASNId, dockDate, productIdTag, customFields, sku);
+    return Objects.hash(id, createdBy, createDate, modifyDate, warehouseId, lobId, locationId, quantity, vendorId, carrier, status, unitCode, wrapCode, weightPerWrap, unitsPerWrap, quantityPerInnerPack, unitsPerCase, quantityPerPallet, caseWeight, productionLot, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, cost, sellPrice, pricingPer, generatedItemReceiptId, generatedASNId, dockDate, productIdTag, expirationDate, customFields, sku);
   }
 
 
@@ -742,8 +777,9 @@ public class QuickReceipt {
     sb.append("    wrapCode: ").append(toIndentedString(wrapCode)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    unitsPerWrap: ").append(toIndentedString(unitsPerWrap)).append("\n");
+    sb.append("    quantityPerInnerPack: ").append(toIndentedString(quantityPerInnerPack)).append("\n");
     sb.append("    unitsPerCase: ").append(toIndentedString(unitsPerCase)).append("\n");
-    sb.append("    casesPerPallet: ").append(toIndentedString(casesPerPallet)).append("\n");
+    sb.append("    quantityPerPallet: ").append(toIndentedString(quantityPerPallet)).append("\n");
     sb.append("    caseWeight: ").append(toIndentedString(caseWeight)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");
     sb.append("    revisionDate: ").append(toIndentedString(revisionDate)).append("\n");
@@ -758,6 +794,7 @@ public class QuickReceipt {
     sb.append("    generatedASNId: ").append(toIndentedString(generatedASNId)).append("\n");
     sb.append("    dockDate: ").append(toIndentedString(dockDate)).append("\n");
     sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
+    sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");

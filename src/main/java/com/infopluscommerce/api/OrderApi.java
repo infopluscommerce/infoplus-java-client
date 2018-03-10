@@ -30,11 +30,13 @@ import java.io.IOException;
 import com.infopluscommerce.model.ApplyOrderWarehouseFulfillmentPlanInput;
 import com.infopluscommerce.model.ApplyOrderWarehouseFulfillmentPlanOutput;
 import java.math.BigDecimal;
+import com.infopluscommerce.model.EditLineItemFulfillmentStrategyInputAPIModel;
 import com.infopluscommerce.model.GetOrderWarehouseFulfillmentDataInput;
 import com.infopluscommerce.model.GetOrderWarehouseFulfillmentDataOutput;
 import com.infopluscommerce.model.ModelApiResponse;
 import com.infopluscommerce.model.Order;
 import com.infopluscommerce.model.ProcessOutputAPIModel;
+import com.infopluscommerce.model.ReqManualSubstitutionInputAPIModel;
 import com.infopluscommerce.model.RunFulfillmentPlanInputAPIModel;
 
 import java.lang.reflect.Type;
@@ -810,6 +812,250 @@ public class OrderApi {
 
         com.squareup.okhttp.Call call = deleteOrderTagValidateBeforeCall(orderId, orderTag, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for editFulfillmentChannel
+     * @param body Input data for EditLineItemFulfillmentStrategy process. (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call editFulfillmentChannelCall(EditLineItemFulfillmentStrategyInputAPIModel body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/beta/order/editFulfillmentChannel";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "api_key" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call editFulfillmentChannelValidateBeforeCall(EditLineItemFulfillmentStrategyInputAPIModel body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling editFulfillmentChannel(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = editFulfillmentChannelCall(body, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Run the EditLineItemFulfillmentStrategy process.
+     * 
+     * @param body Input data for EditLineItemFulfillmentStrategy process. (required)
+     * @return List&lt;ProcessOutputAPIModel&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public List<ProcessOutputAPIModel> editFulfillmentChannel(EditLineItemFulfillmentStrategyInputAPIModel body) throws ApiException {
+        ApiResponse<List<ProcessOutputAPIModel>> resp = editFulfillmentChannelWithHttpInfo(body);
+        return resp.getData();
+    }
+
+    /**
+     * Run the EditLineItemFulfillmentStrategy process.
+     * 
+     * @param body Input data for EditLineItemFulfillmentStrategy process. (required)
+     * @return ApiResponse&lt;List&lt;ProcessOutputAPIModel&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<List<ProcessOutputAPIModel>> editFulfillmentChannelWithHttpInfo(EditLineItemFulfillmentStrategyInputAPIModel body) throws ApiException {
+        com.squareup.okhttp.Call call = editFulfillmentChannelValidateBeforeCall(body, null, null);
+        Type localVarReturnType = new TypeToken<List<ProcessOutputAPIModel>>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Run the EditLineItemFulfillmentStrategy process. (asynchronously)
+     * 
+     * @param body Input data for EditLineItemFulfillmentStrategy process. (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call editFulfillmentChannelAsync(EditLineItemFulfillmentStrategyInputAPIModel body, final ApiCallback<List<ProcessOutputAPIModel>> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = editFulfillmentChannelValidateBeforeCall(body, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<List<ProcessOutputAPIModel>>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for editLineItems
+     * @param body Input data for ReqManualSubstitution process. (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call editLineItemsCall(ReqManualSubstitutionInputAPIModel body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/beta/order/editLineItems";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "api_key" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call editLineItemsValidateBeforeCall(ReqManualSubstitutionInputAPIModel body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling editLineItems(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = editLineItemsCall(body, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Run the ReqManualSubstitution process.
+     * 
+     * @param body Input data for ReqManualSubstitution process. (required)
+     * @return List&lt;ProcessOutputAPIModel&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public List<ProcessOutputAPIModel> editLineItems(ReqManualSubstitutionInputAPIModel body) throws ApiException {
+        ApiResponse<List<ProcessOutputAPIModel>> resp = editLineItemsWithHttpInfo(body);
+        return resp.getData();
+    }
+
+    /**
+     * Run the ReqManualSubstitution process.
+     * 
+     * @param body Input data for ReqManualSubstitution process. (required)
+     * @return ApiResponse&lt;List&lt;ProcessOutputAPIModel&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<List<ProcessOutputAPIModel>> editLineItemsWithHttpInfo(ReqManualSubstitutionInputAPIModel body) throws ApiException {
+        com.squareup.okhttp.Call call = editLineItemsValidateBeforeCall(body, null, null);
+        Type localVarReturnType = new TypeToken<List<ProcessOutputAPIModel>>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Run the ReqManualSubstitution process. (asynchronously)
+     * 
+     * @param body Input data for ReqManualSubstitution process. (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call editLineItemsAsync(ReqManualSubstitutionInputAPIModel body, final ApiCallback<List<ProcessOutputAPIModel>> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = editLineItemsValidateBeforeCall(body, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<List<ProcessOutputAPIModel>>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**

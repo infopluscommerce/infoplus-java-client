@@ -26,11 +26,12 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * OrderLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class OrderLine {
   @SerializedName("id")
   private Integer id = null;
@@ -104,6 +105,9 @@ public class OrderLine {
   @SerializedName("productionLot")
   private String productionLot = null;
 
+  @SerializedName("expirationDate")
+  private OffsetDateTime expirationDate = null;
+
   @SerializedName("weightPerWrap")
   private BigDecimal weightPerWrap = null;
 
@@ -130,6 +134,9 @@ public class OrderLine {
 
   @SerializedName("itemSummaryCodeId")
   private Integer itemSummaryCodeId = null;
+
+  @SerializedName("fulfillmentChannel")
+  private String fulfillmentChannel = null;
 
   @SerializedName("customFields")
   private Map<String, Object> customFields = null;
@@ -369,6 +376,15 @@ public class OrderLine {
   }
 
    /**
+   * Get expirationDate
+   * @return expirationDate
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getExpirationDate() {
+    return expirationDate;
+  }
+
+   /**
    * Get weightPerWrap
    * @return weightPerWrap
   **/
@@ -512,6 +528,24 @@ public class OrderLine {
     this.itemSummaryCodeId = itemSummaryCodeId;
   }
 
+  public OrderLine fulfillmentChannel(String fulfillmentChannel) {
+    this.fulfillmentChannel = fulfillmentChannel;
+    return this;
+  }
+
+   /**
+   * Get fulfillmentChannel
+   * @return fulfillmentChannel
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public String getFulfillmentChannel() {
+    return fulfillmentChannel;
+  }
+
+  public void setFulfillmentChannel(String fulfillmentChannel) {
+    this.fulfillmentChannel = fulfillmentChannel;
+  }
+
   public OrderLine customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -572,6 +606,7 @@ public class OrderLine {
         Objects.equals(this.ncExtendedSell, orderLine.ncExtendedSell) &&
         Objects.equals(this.itemWeight, orderLine.itemWeight) &&
         Objects.equals(this.productionLot, orderLine.productionLot) &&
+        Objects.equals(this.expirationDate, orderLine.expirationDate) &&
         Objects.equals(this.weightPerWrap, orderLine.weightPerWrap) &&
         Objects.equals(this.sector, orderLine.sector) &&
         Objects.equals(this.orderAssemblyInstructions, orderLine.orderAssemblyInstructions) &&
@@ -581,12 +616,13 @@ public class OrderLine {
         Objects.equals(this.itemSubGroupId, orderLine.itemSubGroupId) &&
         Objects.equals(this.itemProductCodeId, orderLine.itemProductCodeId) &&
         Objects.equals(this.itemSummaryCodeId, orderLine.itemSummaryCodeId) &&
+        Objects.equals(this.fulfillmentChannel, orderLine.fulfillmentChannel) &&
         Objects.equals(this.customFields, orderLine.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, unitDiscount, extendedCost, extendedSell, extendedDiscount, ncExtendedSell, itemWeight, productionLot, weightPerWrap, sector, orderAssemblyInstructions, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, customFields);
+    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, unitDiscount, extendedCost, extendedSell, extendedDiscount, ncExtendedSell, itemWeight, productionLot, expirationDate, weightPerWrap, sector, orderAssemblyInstructions, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, fulfillmentChannel, customFields);
   }
 
 
@@ -619,6 +655,7 @@ public class OrderLine {
     sb.append("    ncExtendedSell: ").append(toIndentedString(ncExtendedSell)).append("\n");
     sb.append("    itemWeight: ").append(toIndentedString(itemWeight)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");
+    sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    sector: ").append(toIndentedString(sector)).append("\n");
     sb.append("    orderAssemblyInstructions: ").append(toIndentedString(orderAssemblyInstructions)).append("\n");
@@ -628,6 +665,7 @@ public class OrderLine {
     sb.append("    itemSubGroupId: ").append(toIndentedString(itemSubGroupId)).append("\n");
     sb.append("    itemProductCodeId: ").append(toIndentedString(itemProductCodeId)).append("\n");
     sb.append("    itemSummaryCodeId: ").append(toIndentedString(itemSummaryCodeId)).append("\n");
+    sb.append("    fulfillmentChannel: ").append(toIndentedString(fulfillmentChannel)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

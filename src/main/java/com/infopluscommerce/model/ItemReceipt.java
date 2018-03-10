@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * ItemReceipt
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class ItemReceipt {
   @SerializedName("id")
   private Integer id = null;
@@ -107,6 +107,9 @@ public class ItemReceipt {
 
   @SerializedName("revDate")
   private String revDate = null;
+
+  @SerializedName("expirationDate")
+  private OffsetDateTime expirationDate = null;
 
   @SerializedName("artBack")
   private String artBack = null;
@@ -219,8 +222,14 @@ public class ItemReceipt {
   @SerializedName("productIdTag")
   private String productIdTag = null;
 
+  @SerializedName("unitsPerInnerPack")
+  private Integer unitsPerInnerPack = null;
+
   @SerializedName("unitsPerCase")
   private Integer unitsPerCase = null;
+
+  @SerializedName("unitsPerPallet")
+  private Integer unitsPerPallet = null;
 
   @SerializedName("caseWeight")
   private BigDecimal caseWeight = null;
@@ -658,6 +667,24 @@ public class ItemReceipt {
 
   public void setRevDate(String revDate) {
     this.revDate = revDate;
+  }
+
+  public ItemReceipt expirationDate(OffsetDateTime expirationDate) {
+    this.expirationDate = expirationDate;
+    return this;
+  }
+
+   /**
+   * Get expirationDate
+   * @return expirationDate
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getExpirationDate() {
+    return expirationDate;
+  }
+
+  public void setExpirationDate(OffsetDateTime expirationDate) {
+    this.expirationDate = expirationDate;
   }
 
   public ItemReceipt artBack(String artBack) {
@@ -1326,6 +1353,24 @@ public class ItemReceipt {
     this.productIdTag = productIdTag;
   }
 
+  public ItemReceipt unitsPerInnerPack(Integer unitsPerInnerPack) {
+    this.unitsPerInnerPack = unitsPerInnerPack;
+    return this;
+  }
+
+   /**
+   * Get unitsPerInnerPack
+   * @return unitsPerInnerPack
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnitsPerInnerPack() {
+    return unitsPerInnerPack;
+  }
+
+  public void setUnitsPerInnerPack(Integer unitsPerInnerPack) {
+    this.unitsPerInnerPack = unitsPerInnerPack;
+  }
+
   public ItemReceipt unitsPerCase(Integer unitsPerCase) {
     this.unitsPerCase = unitsPerCase;
     return this;
@@ -1342,6 +1387,24 @@ public class ItemReceipt {
 
   public void setUnitsPerCase(Integer unitsPerCase) {
     this.unitsPerCase = unitsPerCase;
+  }
+
+  public ItemReceipt unitsPerPallet(Integer unitsPerPallet) {
+    this.unitsPerPallet = unitsPerPallet;
+    return this;
+  }
+
+   /**
+   * Get unitsPerPallet
+   * @return unitsPerPallet
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnitsPerPallet() {
+    return unitsPerPallet;
+  }
+
+  public void setUnitsPerPallet(Integer unitsPerPallet) {
+    this.unitsPerPallet = unitsPerPallet;
   }
 
   public ItemReceipt caseWeight(BigDecimal caseWeight) {
@@ -1558,6 +1621,7 @@ public class ItemReceipt {
         Objects.equals(this.voidDate, itemReceipt.voidDate) &&
         Objects.equals(this.freezeAction, itemReceipt.freezeAction) &&
         Objects.equals(this.revDate, itemReceipt.revDate) &&
+        Objects.equals(this.expirationDate, itemReceipt.expirationDate) &&
         Objects.equals(this.artBack, itemReceipt.artBack) &&
         Objects.equals(this.origin, itemReceipt.origin) &&
         Objects.equals(this.sample, itemReceipt.sample) &&
@@ -1595,7 +1659,9 @@ public class ItemReceipt {
         Objects.equals(this.lineNo, itemReceipt.lineNo) &&
         Objects.equals(this.prodLot, itemReceipt.prodLot) &&
         Objects.equals(this.productIdTag, itemReceipt.productIdTag) &&
+        Objects.equals(this.unitsPerInnerPack, itemReceipt.unitsPerInnerPack) &&
         Objects.equals(this.unitsPerCase, itemReceipt.unitsPerCase) &&
+        Objects.equals(this.unitsPerPallet, itemReceipt.unitsPerPallet) &&
         Objects.equals(this.caseWeight, itemReceipt.caseWeight) &&
         Objects.equals(this.height, itemReceipt.height) &&
         Objects.equals(this.width, itemReceipt.width) &&
@@ -1611,7 +1677,7 @@ public class ItemReceipt {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, fullDescription, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sellPrice, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerCase, caseWeight, height, width, length, dockDate, modifyDate, impressions, asnLine, upc, vendorSKU, customFields);
+    return Objects.hash(id, poNoId, lobId, legacyPoNo, warehouseId, orderDate, fullDescription, factCost, mlCost, sku, orderQuantity, requestedDeliveryDate, unitCode, wrapCode, unitsPerWrap, cost, sellPrice, pricingPer, maxFreight, chargeFreight, maxOther, distDate, voidDate, freezeAction, revDate, expirationDate, artBack, origin, sample, sampleTo, maxOvers, maxUnders, receivedSfp, budgetCode, accountingCode, taxExempt, capitalize, accrual, oddQuantity, freightCost, receivedDate, receivedQuantity, fromProd, sfpComplete, endQuantity, endVal, endFact, interimQuantity, interimVal, interimFact, lastAct, weightPerWrap, norcs, vendorId, bsVendor, mlVendor, receiptNo, paidFull, enteredBy, receivedBy, lineNo, prodLot, productIdTag, unitsPerInnerPack, unitsPerCase, unitsPerPallet, caseWeight, height, width, length, dockDate, modifyDate, impressions, asnLine, upc, vendorSKU, customFields);
   }
 
 
@@ -1645,6 +1711,7 @@ public class ItemReceipt {
     sb.append("    voidDate: ").append(toIndentedString(voidDate)).append("\n");
     sb.append("    freezeAction: ").append(toIndentedString(freezeAction)).append("\n");
     sb.append("    revDate: ").append(toIndentedString(revDate)).append("\n");
+    sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
     sb.append("    artBack: ").append(toIndentedString(artBack)).append("\n");
     sb.append("    origin: ").append(toIndentedString(origin)).append("\n");
     sb.append("    sample: ").append(toIndentedString(sample)).append("\n");
@@ -1682,7 +1749,9 @@ public class ItemReceipt {
     sb.append("    lineNo: ").append(toIndentedString(lineNo)).append("\n");
     sb.append("    prodLot: ").append(toIndentedString(prodLot)).append("\n");
     sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
+    sb.append("    unitsPerInnerPack: ").append(toIndentedString(unitsPerInnerPack)).append("\n");
     sb.append("    unitsPerCase: ").append(toIndentedString(unitsPerCase)).append("\n");
+    sb.append("    unitsPerPallet: ").append(toIndentedString(unitsPerPallet)).append("\n");
     sb.append("    caseWeight: ").append(toIndentedString(caseWeight)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");

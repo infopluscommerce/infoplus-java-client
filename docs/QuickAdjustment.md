@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **warehouseId** | **Integer** |  | 
 **locationId** | **Integer** |  | 
 **adjustmentCode** | **String** |  | 
-**totalQuantity** | **Integer** |  | 
+**totalQuantity** | **Integer** |  |  [optional]
+**changeQuantity** | **Integer** |  |  [optional]
 **message** | **String** |  |  [optional]
 **status** | **String** |  |  [optional]
 **productIdTag** | **String** |  |  [optional]

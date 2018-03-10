@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * JobType
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class JobType {
   @SerializedName("id")
   private Integer id = null;
@@ -140,7 +140,7 @@ public class JobType {
    * Get jobCode
    * @return jobCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public String getJobCode() {
     return jobCode;
   }

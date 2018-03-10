@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **modifyDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **name** | **String** |  | 
 **description** | **String** |  |  [optional]
-**jobCode** | **String** |  |  [optional]
+**jobCode** | **String** |  | 
 **isActive** | **Boolean** |  |  [optional]
 **customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 

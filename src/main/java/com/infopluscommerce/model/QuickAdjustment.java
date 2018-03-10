@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * QuickAdjustment
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class QuickAdjustment {
   @SerializedName("id")
   private Integer id = null;
@@ -52,6 +52,9 @@ public class QuickAdjustment {
 
   @SerializedName("totalQuantity")
   private Integer totalQuantity = null;
+
+  @SerializedName("changeQuantity")
+  private Integer changeQuantity = null;
 
   @SerializedName("message")
   private String message = null;
@@ -158,13 +161,31 @@ public class QuickAdjustment {
    * Get totalQuantity
    * @return totalQuantity
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public Integer getTotalQuantity() {
     return totalQuantity;
   }
 
   public void setTotalQuantity(Integer totalQuantity) {
     this.totalQuantity = totalQuantity;
+  }
+
+  public QuickAdjustment changeQuantity(Integer changeQuantity) {
+    this.changeQuantity = changeQuantity;
+    return this;
+  }
+
+   /**
+   * Get changeQuantity
+   * @return changeQuantity
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getChangeQuantity() {
+    return changeQuantity;
+  }
+
+  public void setChangeQuantity(Integer changeQuantity) {
+    this.changeQuantity = changeQuantity;
   }
 
   public QuickAdjustment message(String message) {
@@ -273,6 +294,7 @@ public class QuickAdjustment {
         Objects.equals(this.locationId, quickAdjustment.locationId) &&
         Objects.equals(this.adjustmentCode, quickAdjustment.adjustmentCode) &&
         Objects.equals(this.totalQuantity, quickAdjustment.totalQuantity) &&
+        Objects.equals(this.changeQuantity, quickAdjustment.changeQuantity) &&
         Objects.equals(this.message, quickAdjustment.message) &&
         Objects.equals(this.status, quickAdjustment.status) &&
         Objects.equals(this.productIdTag, quickAdjustment.productIdTag) &&
@@ -282,7 +304,7 @@ public class QuickAdjustment {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, warehouseId, locationId, adjustmentCode, totalQuantity, message, status, productIdTag, customFields, sku);
+    return Objects.hash(id, createDate, modifyDate, warehouseId, locationId, adjustmentCode, totalQuantity, changeQuantity, message, status, productIdTag, customFields, sku);
   }
 
 
@@ -298,6 +320,7 @@ public class QuickAdjustment {
     sb.append("    locationId: ").append(toIndentedString(locationId)).append("\n");
     sb.append("    adjustmentCode: ").append(toIndentedString(adjustmentCode)).append("\n");
     sb.append("    totalQuantity: ").append(toIndentedString(totalQuantity)).append("\n");
+    sb.append("    changeQuantity: ").append(toIndentedString(changeQuantity)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");

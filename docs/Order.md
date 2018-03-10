@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **customerOrderNo** | **String** |  |  [optional]
 **lobId** | **Integer** |  | 
 **warehouseId** | **Integer** |  | 
-**orderDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**orderDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **customerNo** | **String** |  |  [optional]
 **useOrderNoRoot** | **Integer** |  |  [optional]
 **firstShipDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **carrierId** | **Integer** |  |  [optional]
 **serviceTypeId** | **String** |  |  [optional]
 **shipVia** | **String** |  |  [optional]
-**mediaCode** | **String** |  | 
-**legacyRestrictionType** | **String** |  | 
+**mediaCode** | **String** |  |  [optional]
+**legacyRestrictionType** | **String** |  |  [optional]
 **alcoholOrderType** | **String** |  |  [optional]
 **alternateUsage** | **String** |  |  [optional]
 **authorizationAmount** | [**BigDecimal**](BigDecimal.md) |  |  [optional]

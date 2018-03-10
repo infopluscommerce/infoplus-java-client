@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Order
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class Order {
   @SerializedName("orderNo")
   private BigDecimal orderNo = null;
@@ -418,7 +418,7 @@ public class Order {
    * Get orderDate
    * @return orderDate
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public OffsetDateTime getOrderDate() {
     return orderDate;
   }
@@ -598,7 +598,7 @@ public class Order {
    * Get mediaCode
    * @return mediaCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getMediaCode() {
     return mediaCode;
   }
@@ -616,7 +616,7 @@ public class Order {
    * Get legacyRestrictionType
    * @return legacyRestrictionType
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getLegacyRestrictionType() {
     return legacyRestrictionType;
   }

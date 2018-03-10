@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **ncExtendedSell** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **itemWeight** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **productionLot** | **String** |  |  [optional]
+**expirationDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **weightPerWrap** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **sector** | **String** |  |  [optional]
 **orderAssemblyInstructions** | **String** |  |  [optional]
@@ -37,6 +38,7 @@ Name | Type | Description | Notes
 **itemSubGroupId** | **Integer** |  | 
 **itemProductCodeId** | **Integer** |  |  [optional]
 **itemSummaryCodeId** | **Integer** |  | 
+**fulfillmentChannel** | **String** |  | 
 **customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 
 

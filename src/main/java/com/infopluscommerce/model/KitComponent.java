@@ -29,8 +29,11 @@ import java.util.Map;
 /**
  * KitComponent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class KitComponent {
+  @SerializedName("invno")
+  private String invno = null;
+
   @SerializedName("sku")
   private String sku = null;
 
@@ -48,6 +51,24 @@ public class KitComponent {
 
   @SerializedName("customFields")
   private Map<String, Object> customFields = null;
+
+  public KitComponent invno(String invno) {
+    this.invno = invno;
+    return this;
+  }
+
+   /**
+   * Get invno
+   * @return invno
+  **/
+  @ApiModelProperty(value = "")
+  public String getInvno() {
+    return invno;
+  }
+
+  public void setInvno(String invno) {
+    this.invno = invno;
+  }
 
   public KitComponent sku(String sku) {
     this.sku = sku;
@@ -175,7 +196,8 @@ public class KitComponent {
       return false;
     }
     KitComponent kitComponent = (KitComponent) o;
-    return Objects.equals(this.sku, kitComponent.sku) &&
+    return Objects.equals(this.invno, kitComponent.invno) &&
+        Objects.equals(this.sku, kitComponent.sku) &&
         Objects.equals(this.quantity, kitComponent.quantity) &&
         Objects.equals(this.instructions, kitComponent.instructions) &&
         Objects.equals(this.additionalServices, kitComponent.additionalServices) &&
@@ -185,7 +207,7 @@ public class KitComponent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sku, quantity, instructions, additionalServices, critical, customFields);
+    return Objects.hash(invno, sku, quantity, instructions, additionalServices, critical, customFields);
   }
 
 
@@ -194,6 +216,7 @@ public class KitComponent {
     StringBuilder sb = new StringBuilder();
     sb.append("class KitComponent {\n");
     
+    sb.append("    invno: ").append(toIndentedString(invno)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    instructions: ").append(toIndentedString(instructions)).append("\n");

@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Item
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class Item {
   @SerializedName("id")
   private Integer id = null;
@@ -129,8 +129,8 @@ public class Item {
   @SerializedName("numericSortOrder")
   private Integer numericSortOrder = null;
 
-  @SerializedName("outsideVendor")
-  private Integer outsideVendor = null;
+  @SerializedName("outsideVendorId")
+  private Integer outsideVendorId = null;
 
   @SerializedName("pickNo")
   private String pickNo = null;
@@ -167,6 +167,15 @@ public class Item {
 
   @SerializedName("weightPerWrap")
   private BigDecimal weightPerWrap = null;
+
+  @SerializedName("quantityPerInnerPack")
+  private Integer quantityPerInnerPack = null;
+
+  @SerializedName("quantityPerCase")
+  private Integer quantityPerCase = null;
+
+  @SerializedName("quantityPerPallet")
+  private Integer quantityPerPallet = null;
 
   @SerializedName("voidDate")
   private OffsetDateTime voidDate = null;
@@ -242,6 +251,9 @@ public class Item {
 
   @SerializedName("productIdTagSchemeId")
   private Integer productIdTagSchemeId = null;
+
+  @SerializedName("itemSerialSchemeId")
+  private Integer itemSerialSchemeId = null;
 
   @SerializedName("hazmat")
   private String hazmat = null;
@@ -897,22 +909,22 @@ public class Item {
     this.numericSortOrder = numericSortOrder;
   }
 
-  public Item outsideVendor(Integer outsideVendor) {
-    this.outsideVendor = outsideVendor;
+  public Item outsideVendorId(Integer outsideVendorId) {
+    this.outsideVendorId = outsideVendorId;
     return this;
   }
 
    /**
-   * Get outsideVendor
-   * @return outsideVendor
+   * Get outsideVendorId
+   * @return outsideVendorId
   **/
   @ApiModelProperty(value = "")
-  public Integer getOutsideVendor() {
-    return outsideVendor;
+  public Integer getOutsideVendorId() {
+    return outsideVendorId;
   }
 
-  public void setOutsideVendor(Integer outsideVendor) {
-    this.outsideVendor = outsideVendor;
+  public void setOutsideVendorId(Integer outsideVendorId) {
+    this.outsideVendorId = outsideVendorId;
   }
 
   public Item pickNo(String pickNo) {
@@ -1068,7 +1080,7 @@ public class Item {
    * Get serialCode
    * @return serialCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getSerialCode() {
     return serialCode;
   }
@@ -1104,7 +1116,7 @@ public class Item {
    * Get unitsPerWrap
    * @return unitsPerWrap
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public Integer getUnitsPerWrap() {
     return unitsPerWrap;
   }
@@ -1131,6 +1143,60 @@ public class Item {
     this.weightPerWrap = weightPerWrap;
   }
 
+  public Item quantityPerInnerPack(Integer quantityPerInnerPack) {
+    this.quantityPerInnerPack = quantityPerInnerPack;
+    return this;
+  }
+
+   /**
+   * Get quantityPerInnerPack
+   * @return quantityPerInnerPack
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getQuantityPerInnerPack() {
+    return quantityPerInnerPack;
+  }
+
+  public void setQuantityPerInnerPack(Integer quantityPerInnerPack) {
+    this.quantityPerInnerPack = quantityPerInnerPack;
+  }
+
+  public Item quantityPerCase(Integer quantityPerCase) {
+    this.quantityPerCase = quantityPerCase;
+    return this;
+  }
+
+   /**
+   * Get quantityPerCase
+   * @return quantityPerCase
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getQuantityPerCase() {
+    return quantityPerCase;
+  }
+
+  public void setQuantityPerCase(Integer quantityPerCase) {
+    this.quantityPerCase = quantityPerCase;
+  }
+
+  public Item quantityPerPallet(Integer quantityPerPallet) {
+    this.quantityPerPallet = quantityPerPallet;
+    return this;
+  }
+
+   /**
+   * Get quantityPerPallet
+   * @return quantityPerPallet
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getQuantityPerPallet() {
+    return quantityPerPallet;
+  }
+
+  public void setQuantityPerPallet(Integer quantityPerPallet) {
+    this.quantityPerPallet = quantityPerPallet;
+  }
+
    /**
    * Get voidDate
    * @return voidDate
@@ -1149,7 +1215,7 @@ public class Item {
    * Get wrapCode
    * @return wrapCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getWrapCode() {
     return wrapCode;
   }
@@ -1543,6 +1609,24 @@ public class Item {
 
   public void setProductIdTagSchemeId(Integer productIdTagSchemeId) {
     this.productIdTagSchemeId = productIdTagSchemeId;
+  }
+
+  public Item itemSerialSchemeId(Integer itemSerialSchemeId) {
+    this.itemSerialSchemeId = itemSerialSchemeId;
+    return this;
+  }
+
+   /**
+   * Get itemSerialSchemeId
+   * @return itemSerialSchemeId
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getItemSerialSchemeId() {
+    return itemSerialSchemeId;
+  }
+
+  public void setItemSerialSchemeId(Integer itemSerialSchemeId) {
+    this.itemSerialSchemeId = itemSerialSchemeId;
   }
 
   public Item hazmat(String hazmat) {
@@ -2063,7 +2147,7 @@ public class Item {
         Objects.equals(this.maxCycle, item.maxCycle) &&
         Objects.equals(this.maxInterim, item.maxInterim) &&
         Objects.equals(this.numericSortOrder, item.numericSortOrder) &&
-        Objects.equals(this.outsideVendor, item.outsideVendor) &&
+        Objects.equals(this.outsideVendorId, item.outsideVendorId) &&
         Objects.equals(this.pickNo, item.pickNo) &&
         Objects.equals(this.podOrderSuffix, item.podOrderSuffix) &&
         Objects.equals(this.podRevDate, item.podRevDate) &&
@@ -2076,6 +2160,9 @@ public class Item {
         Objects.equals(this.unitCode, item.unitCode) &&
         Objects.equals(this.unitsPerWrap, item.unitsPerWrap) &&
         Objects.equals(this.weightPerWrap, item.weightPerWrap) &&
+        Objects.equals(this.quantityPerInnerPack, item.quantityPerInnerPack) &&
+        Objects.equals(this.quantityPerCase, item.quantityPerCase) &&
+        Objects.equals(this.quantityPerPallet, item.quantityPerPallet) &&
         Objects.equals(this.voidDate, item.voidDate) &&
         Objects.equals(this.wrapCode, item.wrapCode) &&
         Objects.equals(this.extrinsicText1, item.extrinsicText1) &&
@@ -2101,6 +2188,7 @@ public class Item {
         Objects.equals(this.barcodeField, item.barcodeField) &&
         Objects.equals(this.warehouseDisplayField, item.warehouseDisplayField) &&
         Objects.equals(this.productIdTagSchemeId, item.productIdTagSchemeId) &&
+        Objects.equals(this.itemSerialSchemeId, item.itemSerialSchemeId) &&
         Objects.equals(this.hazmat, item.hazmat) &&
         Objects.equals(this.isAlcohol, item.isAlcohol) &&
         Objects.equals(this.alcoholType, item.alcoholType) &&
@@ -2137,7 +2225,7 @@ public class Item {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendor, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, primaryImage, pickImage, behaviorType, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendorId, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, quantityPerInnerPack, quantityPerCase, quantityPerPallet, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, primaryImage, pickImage, behaviorType, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, itemSerialSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
   }
 
 
@@ -2178,7 +2266,7 @@ public class Item {
     sb.append("    maxCycle: ").append(toIndentedString(maxCycle)).append("\n");
     sb.append("    maxInterim: ").append(toIndentedString(maxInterim)).append("\n");
     sb.append("    numericSortOrder: ").append(toIndentedString(numericSortOrder)).append("\n");
-    sb.append("    outsideVendor: ").append(toIndentedString(outsideVendor)).append("\n");
+    sb.append("    outsideVendorId: ").append(toIndentedString(outsideVendorId)).append("\n");
     sb.append("    pickNo: ").append(toIndentedString(pickNo)).append("\n");
     sb.append("    podOrderSuffix: ").append(toIndentedString(podOrderSuffix)).append("\n");
     sb.append("    podRevDate: ").append(toIndentedString(podRevDate)).append("\n");
@@ -2191,6 +2279,9 @@ public class Item {
     sb.append("    unitCode: ").append(toIndentedString(unitCode)).append("\n");
     sb.append("    unitsPerWrap: ").append(toIndentedString(unitsPerWrap)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
+    sb.append("    quantityPerInnerPack: ").append(toIndentedString(quantityPerInnerPack)).append("\n");
+    sb.append("    quantityPerCase: ").append(toIndentedString(quantityPerCase)).append("\n");
+    sb.append("    quantityPerPallet: ").append(toIndentedString(quantityPerPallet)).append("\n");
     sb.append("    voidDate: ").append(toIndentedString(voidDate)).append("\n");
     sb.append("    wrapCode: ").append(toIndentedString(wrapCode)).append("\n");
     sb.append("    extrinsicText1: ").append(toIndentedString(extrinsicText1)).append("\n");
@@ -2216,6 +2307,7 @@ public class Item {
     sb.append("    barcodeField: ").append(toIndentedString(barcodeField)).append("\n");
     sb.append("    warehouseDisplayField: ").append(toIndentedString(warehouseDisplayField)).append("\n");
     sb.append("    productIdTagSchemeId: ").append(toIndentedString(productIdTagSchemeId)).append("\n");
+    sb.append("    itemSerialSchemeId: ").append(toIndentedString(itemSerialSchemeId)).append("\n");
     sb.append("    hazmat: ").append(toIndentedString(hazmat)).append("\n");
     sb.append("    isAlcohol: ").append(toIndentedString(isAlcohol)).append("\n");
     sb.append("    alcoholType: ").append(toIndentedString(alcoholType)).append("\n");

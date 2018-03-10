@@ -15,12 +15,13 @@ Name | Type | Description | Notes
 **vendorId** | **Integer** |  |  [optional]
 **carrier** | **String** |  |  [optional]
 **status** | **String** |  |  [optional]
-**unitCode** | **String** |  | 
-**wrapCode** | **String** |  | 
+**unitCode** | **String** |  |  [optional]
+**wrapCode** | **String** |  |  [optional]
 **weightPerWrap** | [**BigDecimal**](BigDecimal.md) |  | 
-**unitsPerWrap** | **Integer** |  | 
+**unitsPerWrap** | **Integer** |  |  [optional]
+**quantityPerInnerPack** | **Integer** |  |  [optional]
 **unitsPerCase** | **Integer** |  |  [optional]
-**casesPerPallet** | **Integer** |  |  [optional]
+**quantityPerPallet** | **Integer** |  |  [optional]
 **caseWeight** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **productionLot** | **String** |  |  [optional]
 **revisionDate** | **String** |  |  [optional]
@@ -35,6 +36,7 @@ Name | Type | Description | Notes
 **generatedASNId** | **Integer** |  |  [optional]
 **dockDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **productIdTag** | **String** |  |  [optional]
+**expirationDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 **sku** | **String** |  |  [optional]
 

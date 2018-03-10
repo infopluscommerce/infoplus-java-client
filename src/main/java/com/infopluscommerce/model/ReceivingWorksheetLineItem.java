@@ -28,11 +28,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * ReceivingWorksheetLineItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class ReceivingWorksheetLineItem {
   @SerializedName("sku")
   private String sku = null;
@@ -67,8 +68,11 @@ public class ReceivingWorksheetLineItem {
   @SerializedName("unitsPerCase")
   private Integer unitsPerCase = null;
 
-  @SerializedName("casesPerPallet")
-  private Integer casesPerPallet = null;
+  @SerializedName("quantityPerInnerPack")
+  private Integer quantityPerInnerPack = null;
+
+  @SerializedName("quantityPerPallet")
+  private Integer quantityPerPallet = null;
 
   @SerializedName("weightPerWrap")
   private BigDecimal weightPerWrap = null;
@@ -84,6 +88,9 @@ public class ReceivingWorksheetLineItem {
 
   @SerializedName("revisionDate")
   private String revisionDate = null;
+
+  @SerializedName("expirationDate")
+  private OffsetDateTime expirationDate = null;
 
   @SerializedName("origin")
   private String origin = null;
@@ -178,22 +185,13 @@ public class ReceivingWorksheetLineItem {
     this.receivingQty = receivingQty;
   }
 
-  public ReceivingWorksheetLineItem unitCode(String unitCode) {
-    this.unitCode = unitCode;
-    return this;
-  }
-
    /**
    * Get unitCode
    * @return unitCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getUnitCode() {
     return unitCode;
-  }
-
-  public void setUnitCode(String unitCode) {
-    this.unitCode = unitCode;
   }
 
   public ReceivingWorksheetLineItem wrapCode(String wrapCode) {
@@ -205,7 +203,7 @@ public class ReceivingWorksheetLineItem {
    * Get wrapCode
    * @return wrapCode
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getWrapCode() {
     return wrapCode;
   }
@@ -250,22 +248,40 @@ public class ReceivingWorksheetLineItem {
     this.unitsPerCase = unitsPerCase;
   }
 
-  public ReceivingWorksheetLineItem casesPerPallet(Integer casesPerPallet) {
-    this.casesPerPallet = casesPerPallet;
+  public ReceivingWorksheetLineItem quantityPerInnerPack(Integer quantityPerInnerPack) {
+    this.quantityPerInnerPack = quantityPerInnerPack;
     return this;
   }
 
    /**
-   * Get casesPerPallet
-   * @return casesPerPallet
+   * Get quantityPerInnerPack
+   * @return quantityPerInnerPack
   **/
   @ApiModelProperty(value = "")
-  public Integer getCasesPerPallet() {
-    return casesPerPallet;
+  public Integer getQuantityPerInnerPack() {
+    return quantityPerInnerPack;
   }
 
-  public void setCasesPerPallet(Integer casesPerPallet) {
-    this.casesPerPallet = casesPerPallet;
+  public void setQuantityPerInnerPack(Integer quantityPerInnerPack) {
+    this.quantityPerInnerPack = quantityPerInnerPack;
+  }
+
+  public ReceivingWorksheetLineItem quantityPerPallet(Integer quantityPerPallet) {
+    this.quantityPerPallet = quantityPerPallet;
+    return this;
+  }
+
+   /**
+   * Get quantityPerPallet
+   * @return quantityPerPallet
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getQuantityPerPallet() {
+    return quantityPerPallet;
+  }
+
+  public void setQuantityPerPallet(Integer quantityPerPallet) {
+    this.quantityPerPallet = quantityPerPallet;
   }
 
   public ReceivingWorksheetLineItem weightPerWrap(BigDecimal weightPerWrap) {
@@ -356,6 +372,24 @@ public class ReceivingWorksheetLineItem {
 
   public void setRevisionDate(String revisionDate) {
     this.revisionDate = revisionDate;
+  }
+
+  public ReceivingWorksheetLineItem expirationDate(OffsetDateTime expirationDate) {
+    this.expirationDate = expirationDate;
+    return this;
+  }
+
+   /**
+   * Get expirationDate
+   * @return expirationDate
+  **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getExpirationDate() {
+    return expirationDate;
+  }
+
+  public void setExpirationDate(OffsetDateTime expirationDate) {
+    this.expirationDate = expirationDate;
   }
 
   public ReceivingWorksheetLineItem origin(String origin) {
@@ -521,12 +555,14 @@ public class ReceivingWorksheetLineItem {
         Objects.equals(this.wrapCode, receivingWorksheetLineItem.wrapCode) &&
         Objects.equals(this.unitsPerWrap, receivingWorksheetLineItem.unitsPerWrap) &&
         Objects.equals(this.unitsPerCase, receivingWorksheetLineItem.unitsPerCase) &&
-        Objects.equals(this.casesPerPallet, receivingWorksheetLineItem.casesPerPallet) &&
+        Objects.equals(this.quantityPerInnerPack, receivingWorksheetLineItem.quantityPerInnerPack) &&
+        Objects.equals(this.quantityPerPallet, receivingWorksheetLineItem.quantityPerPallet) &&
         Objects.equals(this.weightPerWrap, receivingWorksheetLineItem.weightPerWrap) &&
         Objects.equals(this.weightPerCase, receivingWorksheetLineItem.weightPerCase) &&
         Objects.equals(this.productionLot, receivingWorksheetLineItem.productionLot) &&
         Objects.equals(this.productIdTag, receivingWorksheetLineItem.productIdTag) &&
         Objects.equals(this.revisionDate, receivingWorksheetLineItem.revisionDate) &&
+        Objects.equals(this.expirationDate, receivingWorksheetLineItem.expirationDate) &&
         Objects.equals(this.origin, receivingWorksheetLineItem.origin) &&
         Objects.equals(this.cartonLength, receivingWorksheetLineItem.cartonLength) &&
         Objects.equals(this.cartonWidth, receivingWorksheetLineItem.cartonWidth) &&
@@ -538,7 +574,7 @@ public class ReceivingWorksheetLineItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sku, sku2, fullDescription, orderedQty, prevReceivedQty, unreceivedQty, receivingQty, unitCode, wrapCode, unitsPerWrap, unitsPerCase, casesPerPallet, weightPerWrap, weightPerCase, productionLot, productIdTag, revisionDate, origin, cartonLength, cartonWidth, cartonHeight, putAwayPlans, quantity, customFields);
+    return Objects.hash(sku, sku2, fullDescription, orderedQty, prevReceivedQty, unreceivedQty, receivingQty, unitCode, wrapCode, unitsPerWrap, unitsPerCase, quantityPerInnerPack, quantityPerPallet, weightPerWrap, weightPerCase, productionLot, productIdTag, revisionDate, expirationDate, origin, cartonLength, cartonWidth, cartonHeight, putAwayPlans, quantity, customFields);
   }
 
 
@@ -558,12 +594,14 @@ public class ReceivingWorksheetLineItem {
     sb.append("    wrapCode: ").append(toIndentedString(wrapCode)).append("\n");
     sb.append("    unitsPerWrap: ").append(toIndentedString(unitsPerWrap)).append("\n");
     sb.append("    unitsPerCase: ").append(toIndentedString(unitsPerCase)).append("\n");
-    sb.append("    casesPerPallet: ").append(toIndentedString(casesPerPallet)).append("\n");
+    sb.append("    quantityPerInnerPack: ").append(toIndentedString(quantityPerInnerPack)).append("\n");
+    sb.append("    quantityPerPallet: ").append(toIndentedString(quantityPerPallet)).append("\n");
     sb.append("    weightPerWrap: ").append(toIndentedString(weightPerWrap)).append("\n");
     sb.append("    weightPerCase: ").append(toIndentedString(weightPerCase)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");
     sb.append("    productIdTag: ").append(toIndentedString(productIdTag)).append("\n");
     sb.append("    revisionDate: ").append(toIndentedString(revisionDate)).append("\n");
+    sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
     sb.append("    origin: ").append(toIndentedString(origin)).append("\n");
     sb.append("    cartonLength: ").append(toIndentedString(cartonLength)).append("\n");
     sb.append("    cartonWidth: ").append(toIndentedString(cartonWidth)).append("\n");

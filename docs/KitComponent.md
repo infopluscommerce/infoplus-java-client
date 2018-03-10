@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**invno** | **String** |  |  [optional]
 **sku** | **String** |  | 
 **quantity** | **Integer** |  | 
 **instructions** | **String** |  |  [optional]

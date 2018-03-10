@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * InvoiceWorksheetLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-19T18:17:24.078-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:18:50.138-06:00")
 public class InvoiceWorksheetLine {
   @SerializedName("id")
   private Integer id = null;
