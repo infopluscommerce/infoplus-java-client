@@ -18,7 +18,7 @@ import com.infopluscommerce.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:21:00.319-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:43:11.935-06:00")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

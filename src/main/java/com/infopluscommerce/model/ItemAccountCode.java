@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * ItemAccountCode
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:21:00.319-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T09:43:11.935-06:00")
 public class ItemAccountCode {
   @SerializedName("lobId")
   private Integer lobId = null;
