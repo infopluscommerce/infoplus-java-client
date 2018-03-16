@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * ReceivingWorksheet
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T10:09:46.841-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
 public class ReceivingWorksheet {
   @SerializedName("id")
   private Integer id = null;

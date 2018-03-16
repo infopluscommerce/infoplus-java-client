@@ -8,7 +8,12 @@ Name | Type | Description | Notes
 **warehouseLocationId** | **Integer** |  | 
 **quantity** | **Integer** |  |  [optional]
 **distributionDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**unitsPerCase** | **Integer** |  |  [optional]
+**quantityPerInnerPack** | **Integer** |  |  [optional]
+**quantityPerCase** | **Integer** |  |  [optional]
+**quantityPerPallet** | **Integer** |  |  [optional]
+**estimatedInnerPacks** | **Integer** |  |  [optional]
+**estimatedCases** | **Integer** |  |  [optional]
+**estimatedPallets** | **Integer** |  |  [optional]
 **unitsPerWrap** | **Integer** |  |  [optional]
 **revisionDate** | **String** |  |  [optional]
 **productionLot** | **String** |  |  [optional]

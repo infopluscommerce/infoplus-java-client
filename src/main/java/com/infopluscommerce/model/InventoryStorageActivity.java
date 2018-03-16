@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * InventoryStorageActivity
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T10:09:46.841-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
 public class InventoryStorageActivity {
   @SerializedName("id")
   private Integer id = null;
@@ -66,8 +66,14 @@ public class InventoryStorageActivity {
   @SerializedName("address")
   private String address = null;
 
-  @SerializedName("numberOfCases")
-  private Integer numberOfCases = null;
+  @SerializedName("estimatedInnerPacks")
+  private Integer estimatedInnerPacks = null;
+
+  @SerializedName("estimatedCases")
+  private Integer estimatedCases = null;
+
+  @SerializedName("estimatedPallets")
+  private Integer estimatedPallets = null;
 
   @SerializedName("inventoryValue")
   private BigDecimal inventoryValue = null;
@@ -207,8 +213,14 @@ public class InventoryStorageActivity {
   @SerializedName("receiptUnitsPerWrap")
   private Integer receiptUnitsPerWrap = null;
 
-  @SerializedName("receiptUnitsPerCase")
-  private Integer receiptUnitsPerCase = null;
+  @SerializedName("receiptQuantityPerInnerPack")
+  private Integer receiptQuantityPerInnerPack = null;
+
+  @SerializedName("receiptQuantityPerCase")
+  private Integer receiptQuantityPerCase = null;
+
+  @SerializedName("receiptQuantityPerPallet")
+  private Integer receiptQuantityPerPallet = null;
 
   @SerializedName("receiptRevisionDate")
   private String receiptRevisionDate = null;
@@ -429,22 +441,58 @@ public class InventoryStorageActivity {
     this.address = address;
   }
 
-  public InventoryStorageActivity numberOfCases(Integer numberOfCases) {
-    this.numberOfCases = numberOfCases;
+  public InventoryStorageActivity estimatedInnerPacks(Integer estimatedInnerPacks) {
+    this.estimatedInnerPacks = estimatedInnerPacks;
     return this;
   }
 
    /**
-   * Get numberOfCases
-   * @return numberOfCases
+   * Get estimatedInnerPacks
+   * @return estimatedInnerPacks
   **/
   @ApiModelProperty(value = "")
-  public Integer getNumberOfCases() {
-    return numberOfCases;
+  public Integer getEstimatedInnerPacks() {
+    return estimatedInnerPacks;
   }
 
-  public void setNumberOfCases(Integer numberOfCases) {
-    this.numberOfCases = numberOfCases;
+  public void setEstimatedInnerPacks(Integer estimatedInnerPacks) {
+    this.estimatedInnerPacks = estimatedInnerPacks;
+  }
+
+  public InventoryStorageActivity estimatedCases(Integer estimatedCases) {
+    this.estimatedCases = estimatedCases;
+    return this;
+  }
+
+   /**
+   * Get estimatedCases
+   * @return estimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedCases() {
+    return estimatedCases;
+  }
+
+  public void setEstimatedCases(Integer estimatedCases) {
+    this.estimatedCases = estimatedCases;
+  }
+
+  public InventoryStorageActivity estimatedPallets(Integer estimatedPallets) {
+    this.estimatedPallets = estimatedPallets;
+    return this;
+  }
+
+   /**
+   * Get estimatedPallets
+   * @return estimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedPallets() {
+    return estimatedPallets;
+  }
+
+  public void setEstimatedPallets(Integer estimatedPallets) {
+    this.estimatedPallets = estimatedPallets;
   }
 
   public InventoryStorageActivity inventoryValue(BigDecimal inventoryValue) {
@@ -1275,22 +1323,58 @@ public class InventoryStorageActivity {
     this.receiptUnitsPerWrap = receiptUnitsPerWrap;
   }
 
-  public InventoryStorageActivity receiptUnitsPerCase(Integer receiptUnitsPerCase) {
-    this.receiptUnitsPerCase = receiptUnitsPerCase;
+  public InventoryStorageActivity receiptQuantityPerInnerPack(Integer receiptQuantityPerInnerPack) {
+    this.receiptQuantityPerInnerPack = receiptQuantityPerInnerPack;
     return this;
   }
 
    /**
-   * Get receiptUnitsPerCase
-   * @return receiptUnitsPerCase
+   * Get receiptQuantityPerInnerPack
+   * @return receiptQuantityPerInnerPack
   **/
   @ApiModelProperty(value = "")
-  public Integer getReceiptUnitsPerCase() {
-    return receiptUnitsPerCase;
+  public Integer getReceiptQuantityPerInnerPack() {
+    return receiptQuantityPerInnerPack;
   }
 
-  public void setReceiptUnitsPerCase(Integer receiptUnitsPerCase) {
-    this.receiptUnitsPerCase = receiptUnitsPerCase;
+  public void setReceiptQuantityPerInnerPack(Integer receiptQuantityPerInnerPack) {
+    this.receiptQuantityPerInnerPack = receiptQuantityPerInnerPack;
+  }
+
+  public InventoryStorageActivity receiptQuantityPerCase(Integer receiptQuantityPerCase) {
+    this.receiptQuantityPerCase = receiptQuantityPerCase;
+    return this;
+  }
+
+   /**
+   * Get receiptQuantityPerCase
+   * @return receiptQuantityPerCase
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getReceiptQuantityPerCase() {
+    return receiptQuantityPerCase;
+  }
+
+  public void setReceiptQuantityPerCase(Integer receiptQuantityPerCase) {
+    this.receiptQuantityPerCase = receiptQuantityPerCase;
+  }
+
+  public InventoryStorageActivity receiptQuantityPerPallet(Integer receiptQuantityPerPallet) {
+    this.receiptQuantityPerPallet = receiptQuantityPerPallet;
+    return this;
+  }
+
+   /**
+   * Get receiptQuantityPerPallet
+   * @return receiptQuantityPerPallet
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getReceiptQuantityPerPallet() {
+    return receiptQuantityPerPallet;
+  }
+
+  public void setReceiptQuantityPerPallet(Integer receiptQuantityPerPallet) {
+    this.receiptQuantityPerPallet = receiptQuantityPerPallet;
   }
 
   public InventoryStorageActivity receiptRevisionDate(String receiptRevisionDate) {
@@ -1682,7 +1766,9 @@ public class InventoryStorageActivity {
         Objects.equals(this.isMixedReceipts, inventoryStorageActivity.isMixedReceipts) &&
         Objects.equals(this.quantity, inventoryStorageActivity.quantity) &&
         Objects.equals(this.address, inventoryStorageActivity.address) &&
-        Objects.equals(this.numberOfCases, inventoryStorageActivity.numberOfCases) &&
+        Objects.equals(this.estimatedInnerPacks, inventoryStorageActivity.estimatedInnerPacks) &&
+        Objects.equals(this.estimatedCases, inventoryStorageActivity.estimatedCases) &&
+        Objects.equals(this.estimatedPallets, inventoryStorageActivity.estimatedPallets) &&
         Objects.equals(this.inventoryValue, inventoryStorageActivity.inventoryValue) &&
         Objects.equals(this.inventoryAgeDays, inventoryStorageActivity.inventoryAgeDays) &&
         Objects.equals(this.warehouseId, inventoryStorageActivity.warehouseId) &&
@@ -1729,7 +1815,9 @@ public class InventoryStorageActivity {
         Objects.equals(this.poNo, inventoryStorageActivity.poNo) &&
         Objects.equals(this.receiptDistributionDate, inventoryStorageActivity.receiptDistributionDate) &&
         Objects.equals(this.receiptUnitsPerWrap, inventoryStorageActivity.receiptUnitsPerWrap) &&
-        Objects.equals(this.receiptUnitsPerCase, inventoryStorageActivity.receiptUnitsPerCase) &&
+        Objects.equals(this.receiptQuantityPerInnerPack, inventoryStorageActivity.receiptQuantityPerInnerPack) &&
+        Objects.equals(this.receiptQuantityPerCase, inventoryStorageActivity.receiptQuantityPerCase) &&
+        Objects.equals(this.receiptQuantityPerPallet, inventoryStorageActivity.receiptQuantityPerPallet) &&
         Objects.equals(this.receiptRevisionDate, inventoryStorageActivity.receiptRevisionDate) &&
         Objects.equals(this.receiptProductionLot, inventoryStorageActivity.receiptProductionLot) &&
         Objects.equals(this.receiptReceiveDate, inventoryStorageActivity.receiptReceiveDate) &&
@@ -1762,7 +1850,7 @@ public class InventoryStorageActivity {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, importedRecordId, createDate, modifyDate, warehouseLocationId, itemId, lobId, snapshotDate, isMixedReceipts, quantity, address, numberOfCases, inventoryValue, inventoryAgeDays, warehouseId, warehouseName, warehouseZoneId, warehouseZoneName, warehouseZoneAddress, warehouseBuildingId, warehouseBuildingName, warehouseAisleId, warehouseAisleAddress, warehouseLocationOriginId, warehouseLocationOriginName, warehouseLocationBillingTypeId, warehouseLocationBillingTypeName, warehouseLocationBehaviorTypeId, warehouseLocationBehaviorTypeName, warehouseLocationFootprintId, warehouseLocationFootprintName, warehouseLocationFootprintWidth, warehouseLocationFootprintHeight, warehouseLocationFootprintDepth, warehouseLocationLevel, warehouseLocationBay, warehouseLocationNumber, warehouseLocationOnline, warehouseLocationPriorityCode, warehouseLocationAllowItemMixing, warehouseLocationCost, sku, itemVendorSku, itemUpc, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptUnitsPerCase, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptCaseWeight, receiptProductIdTag, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
+    return Objects.hash(id, importedRecordId, createDate, modifyDate, warehouseLocationId, itemId, lobId, snapshotDate, isMixedReceipts, quantity, address, estimatedInnerPacks, estimatedCases, estimatedPallets, inventoryValue, inventoryAgeDays, warehouseId, warehouseName, warehouseZoneId, warehouseZoneName, warehouseZoneAddress, warehouseBuildingId, warehouseBuildingName, warehouseAisleId, warehouseAisleAddress, warehouseLocationOriginId, warehouseLocationOriginName, warehouseLocationBillingTypeId, warehouseLocationBillingTypeName, warehouseLocationBehaviorTypeId, warehouseLocationBehaviorTypeName, warehouseLocationFootprintId, warehouseLocationFootprintName, warehouseLocationFootprintWidth, warehouseLocationFootprintHeight, warehouseLocationFootprintDepth, warehouseLocationLevel, warehouseLocationBay, warehouseLocationNumber, warehouseLocationOnline, warehouseLocationPriorityCode, warehouseLocationAllowItemMixing, warehouseLocationCost, sku, itemVendorSku, itemUpc, itemMajorGroup, itemMajorGroupName, itemSubGroup, itemSubGroupName, itemProductCode, itemProductCodeName, itemAccountCode, itemAccountCodeName, itemSummaryCode, itemSummaryCodeName, itemSector, poNo, receiptDistributionDate, receiptUnitsPerWrap, receiptQuantityPerInnerPack, receiptQuantityPerCase, receiptQuantityPerPallet, receiptRevisionDate, receiptProductionLot, receiptReceiveDate, receiptStatus, receiptStatusName, receiptUnitCode, receiptUnitCodeText, receiptWrapCode, receiptWrapCodeText, receiptCaseWeight, receiptProductIdTag, alcoholTypeId, alcoholTypeName, alcoholContent, alcoholContainerId, alcoholContainerName, alcoholContainerVolume, alcoholVintageYear, alcoholCountryId, alcoholCountryName, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNABCACode, alcoholUNIMERCCode, alcoholSCCCode, customFields);
   }
 
 
@@ -1782,7 +1870,9 @@ public class InventoryStorageActivity {
     sb.append("    isMixedReceipts: ").append(toIndentedString(isMixedReceipts)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
-    sb.append("    numberOfCases: ").append(toIndentedString(numberOfCases)).append("\n");
+    sb.append("    estimatedInnerPacks: ").append(toIndentedString(estimatedInnerPacks)).append("\n");
+    sb.append("    estimatedCases: ").append(toIndentedString(estimatedCases)).append("\n");
+    sb.append("    estimatedPallets: ").append(toIndentedString(estimatedPallets)).append("\n");
     sb.append("    inventoryValue: ").append(toIndentedString(inventoryValue)).append("\n");
     sb.append("    inventoryAgeDays: ").append(toIndentedString(inventoryAgeDays)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
@@ -1829,7 +1919,9 @@ public class InventoryStorageActivity {
     sb.append("    poNo: ").append(toIndentedString(poNo)).append("\n");
     sb.append("    receiptDistributionDate: ").append(toIndentedString(receiptDistributionDate)).append("\n");
     sb.append("    receiptUnitsPerWrap: ").append(toIndentedString(receiptUnitsPerWrap)).append("\n");
-    sb.append("    receiptUnitsPerCase: ").append(toIndentedString(receiptUnitsPerCase)).append("\n");
+    sb.append("    receiptQuantityPerInnerPack: ").append(toIndentedString(receiptQuantityPerInnerPack)).append("\n");
+    sb.append("    receiptQuantityPerCase: ").append(toIndentedString(receiptQuantityPerCase)).append("\n");
+    sb.append("    receiptQuantityPerPallet: ").append(toIndentedString(receiptQuantityPerPallet)).append("\n");
     sb.append("    receiptRevisionDate: ").append(toIndentedString(receiptRevisionDate)).append("\n");
     sb.append("    receiptProductionLot: ").append(toIndentedString(receiptProductionLot)).append("\n");
     sb.append("    receiptReceiveDate: ").append(toIndentedString(receiptReceiveDate)).append("\n");

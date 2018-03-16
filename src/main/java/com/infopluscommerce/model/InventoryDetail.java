@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * InventoryDetail
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T10:09:46.841-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
 public class InventoryDetail {
   @SerializedName("id")
   private Integer id = null;
@@ -44,8 +44,23 @@ public class InventoryDetail {
   @SerializedName("distributionDate")
   private OffsetDateTime distributionDate = null;
 
-  @SerializedName("unitsPerCase")
-  private Integer unitsPerCase = null;
+  @SerializedName("quantityPerInnerPack")
+  private Integer quantityPerInnerPack = null;
+
+  @SerializedName("quantityPerCase")
+  private Integer quantityPerCase = null;
+
+  @SerializedName("quantityPerPallet")
+  private Integer quantityPerPallet = null;
+
+  @SerializedName("estimatedInnerPacks")
+  private Integer estimatedInnerPacks = null;
+
+  @SerializedName("estimatedCases")
+  private Integer estimatedCases = null;
+
+  @SerializedName("estimatedPallets")
+  private Integer estimatedPallets = null;
 
   @SerializedName("unitsPerWrap")
   private Integer unitsPerWrap = null;
@@ -117,12 +132,57 @@ public class InventoryDetail {
   }
 
    /**
-   * Get unitsPerCase
-   * @return unitsPerCase
+   * Get quantityPerInnerPack
+   * @return quantityPerInnerPack
   **/
   @ApiModelProperty(value = "")
-  public Integer getUnitsPerCase() {
-    return unitsPerCase;
+  public Integer getQuantityPerInnerPack() {
+    return quantityPerInnerPack;
+  }
+
+   /**
+   * Get quantityPerCase
+   * @return quantityPerCase
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getQuantityPerCase() {
+    return quantityPerCase;
+  }
+
+   /**
+   * Get quantityPerPallet
+   * @return quantityPerPallet
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getQuantityPerPallet() {
+    return quantityPerPallet;
+  }
+
+   /**
+   * Get estimatedInnerPacks
+   * @return estimatedInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedInnerPacks() {
+    return estimatedInnerPacks;
+  }
+
+   /**
+   * Get estimatedCases
+   * @return estimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedCases() {
+    return estimatedCases;
+  }
+
+   /**
+   * Get estimatedPallets
+   * @return estimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedPallets() {
+    return estimatedPallets;
   }
 
    /**
@@ -237,7 +297,12 @@ public class InventoryDetail {
         Objects.equals(this.warehouseLocationId, inventoryDetail.warehouseLocationId) &&
         Objects.equals(this.quantity, inventoryDetail.quantity) &&
         Objects.equals(this.distributionDate, inventoryDetail.distributionDate) &&
-        Objects.equals(this.unitsPerCase, inventoryDetail.unitsPerCase) &&
+        Objects.equals(this.quantityPerInnerPack, inventoryDetail.quantityPerInnerPack) &&
+        Objects.equals(this.quantityPerCase, inventoryDetail.quantityPerCase) &&
+        Objects.equals(this.quantityPerPallet, inventoryDetail.quantityPerPallet) &&
+        Objects.equals(this.estimatedInnerPacks, inventoryDetail.estimatedInnerPacks) &&
+        Objects.equals(this.estimatedCases, inventoryDetail.estimatedCases) &&
+        Objects.equals(this.estimatedPallets, inventoryDetail.estimatedPallets) &&
         Objects.equals(this.unitsPerWrap, inventoryDetail.unitsPerWrap) &&
         Objects.equals(this.revisionDate, inventoryDetail.revisionDate) &&
         Objects.equals(this.productionLot, inventoryDetail.productionLot) &&
@@ -250,7 +315,7 @@ public class InventoryDetail {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseLocationId, quantity, distributionDate, unitsPerCase, unitsPerWrap, revisionDate, productionLot, oldestReceiptDate, lobId, poNo, customFields, sku);
+    return Objects.hash(id, warehouseLocationId, quantity, distributionDate, quantityPerInnerPack, quantityPerCase, quantityPerPallet, estimatedInnerPacks, estimatedCases, estimatedPallets, unitsPerWrap, revisionDate, productionLot, oldestReceiptDate, lobId, poNo, customFields, sku);
   }
 
 
@@ -263,7 +328,12 @@ public class InventoryDetail {
     sb.append("    warehouseLocationId: ").append(toIndentedString(warehouseLocationId)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    distributionDate: ").append(toIndentedString(distributionDate)).append("\n");
-    sb.append("    unitsPerCase: ").append(toIndentedString(unitsPerCase)).append("\n");
+    sb.append("    quantityPerInnerPack: ").append(toIndentedString(quantityPerInnerPack)).append("\n");
+    sb.append("    quantityPerCase: ").append(toIndentedString(quantityPerCase)).append("\n");
+    sb.append("    quantityPerPallet: ").append(toIndentedString(quantityPerPallet)).append("\n");
+    sb.append("    estimatedInnerPacks: ").append(toIndentedString(estimatedInnerPacks)).append("\n");
+    sb.append("    estimatedCases: ").append(toIndentedString(estimatedCases)).append("\n");
+    sb.append("    estimatedPallets: ").append(toIndentedString(estimatedPallets)).append("\n");
     sb.append("    unitsPerWrap: ").append(toIndentedString(unitsPerWrap)).append("\n");
     sb.append("    revisionDate: ").append(toIndentedString(revisionDate)).append("\n");
     sb.append("    productionLot: ").append(toIndentedString(productionLot)).append("\n");

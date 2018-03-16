@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * BillingCodeActivity
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T10:09:46.841-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
 public class BillingCodeActivity {
   @SerializedName("id")
   private Integer id = null;
@@ -48,7 +49,7 @@ public class BillingCodeActivity {
   private OffsetDateTime date = null;
 
   @SerializedName("quantity")
-  private Integer quantity = null;
+  private BigDecimal quantity = null;
 
   @SerializedName("lobId")
   private Integer lobId = null;
@@ -125,7 +126,7 @@ public class BillingCodeActivity {
     return date;
   }
 
-  public BillingCodeActivity quantity(Integer quantity) {
+  public BillingCodeActivity quantity(BigDecimal quantity) {
     this.quantity = quantity;
     return this;
   }
@@ -135,11 +136,11 @@ public class BillingCodeActivity {
    * @return quantity
   **/
   @ApiModelProperty(required = true, value = "")
-  public Integer getQuantity() {
+  public BigDecimal getQuantity() {
     return quantity;
   }
 
-  public void setQuantity(Integer quantity) {
+  public void setQuantity(BigDecimal quantity) {
     this.quantity = quantity;
   }
 

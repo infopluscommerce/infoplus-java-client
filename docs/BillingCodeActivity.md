@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **createDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **modifyDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **date** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**quantity** | **Integer** |  | 
+**quantity** | [**BigDecimal**](BigDecimal.md) |  | 
 **lobId** | **Integer** |  | 
 **userId** | **Integer** |  | 
 **email** | **String** |  |  [optional]

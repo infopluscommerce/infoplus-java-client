@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Item
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-10T10:09:46.841-06:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
 public class Item {
   @SerializedName("id")
   private Integer id = null;
@@ -347,6 +347,60 @@ public class Item {
 
   @SerializedName("overallStockStatus")
   private String overallStockStatus = null;
+
+  @SerializedName("estimatedPallets")
+  private Integer estimatedPallets = null;
+
+  @SerializedName("estimatedCases")
+  private Integer estimatedCases = null;
+
+  @SerializedName("estimatedInnerPacks")
+  private Integer estimatedInnerPacks = null;
+
+  @SerializedName("w1EstimatedPallets")
+  private Integer w1EstimatedPallets = null;
+
+  @SerializedName("w1EstimatedCases")
+  private Integer w1EstimatedCases = null;
+
+  @SerializedName("w1EstimatedInnerPacks")
+  private Integer w1EstimatedInnerPacks = null;
+
+  @SerializedName("w2EstimatedPallets")
+  private Integer w2EstimatedPallets = null;
+
+  @SerializedName("w2EstimatedCases")
+  private Integer w2EstimatedCases = null;
+
+  @SerializedName("w2EstimatedInnerPacks")
+  private Integer w2EstimatedInnerPacks = null;
+
+  @SerializedName("w3EstimatedPallets")
+  private Integer w3EstimatedPallets = null;
+
+  @SerializedName("w3EstimatedCases")
+  private Integer w3EstimatedCases = null;
+
+  @SerializedName("w3EstimatedInnerPacks")
+  private Integer w3EstimatedInnerPacks = null;
+
+  @SerializedName("w4EstimatedPallets")
+  private Integer w4EstimatedPallets = null;
+
+  @SerializedName("w4EstimatedCases")
+  private Integer w4EstimatedCases = null;
+
+  @SerializedName("w4EstimatedInnerPacks")
+  private Integer w4EstimatedInnerPacks = null;
+
+  @SerializedName("w5EstimatedPallets")
+  private Integer w5EstimatedPallets = null;
+
+  @SerializedName("w5EstimatedCases")
+  private Integer w5EstimatedCases = null;
+
+  @SerializedName("w5EstimatedInnerPacks")
+  private Integer w5EstimatedInnerPacks = null;
 
   @SerializedName("customFields")
   private Map<String, Object> customFields = null;
@@ -2079,6 +2133,168 @@ public class Item {
     return overallStockStatus;
   }
 
+   /**
+   * Get estimatedPallets
+   * @return estimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedPallets() {
+    return estimatedPallets;
+  }
+
+   /**
+   * Get estimatedCases
+   * @return estimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedCases() {
+    return estimatedCases;
+  }
+
+   /**
+   * Get estimatedInnerPacks
+   * @return estimatedInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getEstimatedInnerPacks() {
+    return estimatedInnerPacks;
+  }
+
+   /**
+   * Get w1EstimatedPallets
+   * @return w1EstimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW1EstimatedPallets() {
+    return w1EstimatedPallets;
+  }
+
+   /**
+   * Get w1EstimatedCases
+   * @return w1EstimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW1EstimatedCases() {
+    return w1EstimatedCases;
+  }
+
+   /**
+   * Get w1EstimatedInnerPacks
+   * @return w1EstimatedInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW1EstimatedInnerPacks() {
+    return w1EstimatedInnerPacks;
+  }
+
+   /**
+   * Get w2EstimatedPallets
+   * @return w2EstimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW2EstimatedPallets() {
+    return w2EstimatedPallets;
+  }
+
+   /**
+   * Get w2EstimatedCases
+   * @return w2EstimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW2EstimatedCases() {
+    return w2EstimatedCases;
+  }
+
+   /**
+   * Get w2EstimatedInnerPacks
+   * @return w2EstimatedInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW2EstimatedInnerPacks() {
+    return w2EstimatedInnerPacks;
+  }
+
+   /**
+   * Get w3EstimatedPallets
+   * @return w3EstimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW3EstimatedPallets() {
+    return w3EstimatedPallets;
+  }
+
+   /**
+   * Get w3EstimatedCases
+   * @return w3EstimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW3EstimatedCases() {
+    return w3EstimatedCases;
+  }
+
+   /**
+   * Get w3EstimatedInnerPacks
+   * @return w3EstimatedInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW3EstimatedInnerPacks() {
+    return w3EstimatedInnerPacks;
+  }
+
+   /**
+   * Get w4EstimatedPallets
+   * @return w4EstimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW4EstimatedPallets() {
+    return w4EstimatedPallets;
+  }
+
+   /**
+   * Get w4EstimatedCases
+   * @return w4EstimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW4EstimatedCases() {
+    return w4EstimatedCases;
+  }
+
+   /**
+   * Get w4EstimatedInnerPacks
+   * @return w4EstimatedInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW4EstimatedInnerPacks() {
+    return w4EstimatedInnerPacks;
+  }
+
+   /**
+   * Get w5EstimatedPallets
+   * @return w5EstimatedPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW5EstimatedPallets() {
+    return w5EstimatedPallets;
+  }
+
+   /**
+   * Get w5EstimatedCases
+   * @return w5EstimatedCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW5EstimatedCases() {
+    return w5EstimatedCases;
+  }
+
+   /**
+   * Get w5EstimatedInnerPacks
+   * @return w5EstimatedInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getW5EstimatedInnerPacks() {
+    return w5EstimatedInnerPacks;
+  }
+
   public Item customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -2220,12 +2436,30 @@ public class Item {
         Objects.equals(this.unavailableQuantity, item.unavailableQuantity) &&
         Objects.equals(this.overallDaysOnHand, item.overallDaysOnHand) &&
         Objects.equals(this.overallStockStatus, item.overallStockStatus) &&
+        Objects.equals(this.estimatedPallets, item.estimatedPallets) &&
+        Objects.equals(this.estimatedCases, item.estimatedCases) &&
+        Objects.equals(this.estimatedInnerPacks, item.estimatedInnerPacks) &&
+        Objects.equals(this.w1EstimatedPallets, item.w1EstimatedPallets) &&
+        Objects.equals(this.w1EstimatedCases, item.w1EstimatedCases) &&
+        Objects.equals(this.w1EstimatedInnerPacks, item.w1EstimatedInnerPacks) &&
+        Objects.equals(this.w2EstimatedPallets, item.w2EstimatedPallets) &&
+        Objects.equals(this.w2EstimatedCases, item.w2EstimatedCases) &&
+        Objects.equals(this.w2EstimatedInnerPacks, item.w2EstimatedInnerPacks) &&
+        Objects.equals(this.w3EstimatedPallets, item.w3EstimatedPallets) &&
+        Objects.equals(this.w3EstimatedCases, item.w3EstimatedCases) &&
+        Objects.equals(this.w3EstimatedInnerPacks, item.w3EstimatedInnerPacks) &&
+        Objects.equals(this.w4EstimatedPallets, item.w4EstimatedPallets) &&
+        Objects.equals(this.w4EstimatedCases, item.w4EstimatedCases) &&
+        Objects.equals(this.w4EstimatedInnerPacks, item.w4EstimatedInnerPacks) &&
+        Objects.equals(this.w5EstimatedPallets, item.w5EstimatedPallets) &&
+        Objects.equals(this.w5EstimatedCases, item.w5EstimatedCases) &&
+        Objects.equals(this.w5EstimatedInnerPacks, item.w5EstimatedInnerPacks) &&
         Objects.equals(this.customFields, item.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendorId, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, quantityPerInnerPack, quantityPerCase, quantityPerPallet, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, primaryImage, pickImage, behaviorType, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, itemSerialSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, customFields);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendorId, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, quantityPerInnerPack, quantityPerCase, quantityPerPallet, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, primaryImage, pickImage, behaviorType, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, itemSerialSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, estimatedPallets, estimatedCases, estimatedInnerPacks, w1EstimatedPallets, w1EstimatedCases, w1EstimatedInnerPacks, w2EstimatedPallets, w2EstimatedCases, w2EstimatedInnerPacks, w3EstimatedPallets, w3EstimatedCases, w3EstimatedInnerPacks, w4EstimatedPallets, w4EstimatedCases, w4EstimatedInnerPacks, w5EstimatedPallets, w5EstimatedCases, w5EstimatedInnerPacks, customFields);
   }
 
 
@@ -2339,6 +2573,24 @@ public class Item {
     sb.append("    unavailableQuantity: ").append(toIndentedString(unavailableQuantity)).append("\n");
     sb.append("    overallDaysOnHand: ").append(toIndentedString(overallDaysOnHand)).append("\n");
     sb.append("    overallStockStatus: ").append(toIndentedString(overallStockStatus)).append("\n");
+    sb.append("    estimatedPallets: ").append(toIndentedString(estimatedPallets)).append("\n");
+    sb.append("    estimatedCases: ").append(toIndentedString(estimatedCases)).append("\n");
+    sb.append("    estimatedInnerPacks: ").append(toIndentedString(estimatedInnerPacks)).append("\n");
+    sb.append("    w1EstimatedPallets: ").append(toIndentedString(w1EstimatedPallets)).append("\n");
+    sb.append("    w1EstimatedCases: ").append(toIndentedString(w1EstimatedCases)).append("\n");
+    sb.append("    w1EstimatedInnerPacks: ").append(toIndentedString(w1EstimatedInnerPacks)).append("\n");
+    sb.append("    w2EstimatedPallets: ").append(toIndentedString(w2EstimatedPallets)).append("\n");
+    sb.append("    w2EstimatedCases: ").append(toIndentedString(w2EstimatedCases)).append("\n");
+    sb.append("    w2EstimatedInnerPacks: ").append(toIndentedString(w2EstimatedInnerPacks)).append("\n");
+    sb.append("    w3EstimatedPallets: ").append(toIndentedString(w3EstimatedPallets)).append("\n");
+    sb.append("    w3EstimatedCases: ").append(toIndentedString(w3EstimatedCases)).append("\n");
+    sb.append("    w3EstimatedInnerPacks: ").append(toIndentedString(w3EstimatedInnerPacks)).append("\n");
+    sb.append("    w4EstimatedPallets: ").append(toIndentedString(w4EstimatedPallets)).append("\n");
+    sb.append("    w4EstimatedCases: ").append(toIndentedString(w4EstimatedCases)).append("\n");
+    sb.append("    w4EstimatedInnerPacks: ").append(toIndentedString(w4EstimatedInnerPacks)).append("\n");
+    sb.append("    w5EstimatedPallets: ").append(toIndentedString(w5EstimatedPallets)).append("\n");
+    sb.append("    w5EstimatedCases: ").append(toIndentedString(w5EstimatedCases)).append("\n");
+    sb.append("    w5EstimatedInnerPacks: ").append(toIndentedString(w5EstimatedInnerPacks)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

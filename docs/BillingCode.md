@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  |  [optional]
 **createDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **modifyDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**quantity** | **Integer** |  | 
+**quantity** | [**BigDecimal**](BigDecimal.md) |  | 
 **date** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **userId** | **Integer** |  | 
 **lobId** | **Integer** |  |  [optional]
