@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * ProductionLot
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
 public class ProductionLot {
   @SerializedName("id")
   private Integer id = null;

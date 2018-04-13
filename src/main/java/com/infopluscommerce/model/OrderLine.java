@@ -19,10 +19,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.infopluscommerce.model.DynamicKitComponentLine;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * OrderLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
 public class OrderLine {
   @SerializedName("id")
   private Integer id = null;
@@ -137,6 +139,9 @@ public class OrderLine {
 
   @SerializedName("fulfillmentChannel")
   private String fulfillmentChannel = null;
+
+  @SerializedName("dynamicKitComponentList")
+  private List<DynamicKitComponentLine> dynamicKitComponentList = null;
 
   @SerializedName("customFields")
   private Map<String, Object> customFields = null;
@@ -546,6 +551,32 @@ public class OrderLine {
     this.fulfillmentChannel = fulfillmentChannel;
   }
 
+  public OrderLine dynamicKitComponentList(List<DynamicKitComponentLine> dynamicKitComponentList) {
+    this.dynamicKitComponentList = dynamicKitComponentList;
+    return this;
+  }
+
+  public OrderLine addDynamicKitComponentListItem(DynamicKitComponentLine dynamicKitComponentListItem) {
+    if (this.dynamicKitComponentList == null) {
+      this.dynamicKitComponentList = new ArrayList<DynamicKitComponentLine>();
+    }
+    this.dynamicKitComponentList.add(dynamicKitComponentListItem);
+    return this;
+  }
+
+   /**
+   * Get dynamicKitComponentList
+   * @return dynamicKitComponentList
+  **/
+  @ApiModelProperty(value = "")
+  public List<DynamicKitComponentLine> getDynamicKitComponentList() {
+    return dynamicKitComponentList;
+  }
+
+  public void setDynamicKitComponentList(List<DynamicKitComponentLine> dynamicKitComponentList) {
+    this.dynamicKitComponentList = dynamicKitComponentList;
+  }
+
   public OrderLine customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -617,12 +648,13 @@ public class OrderLine {
         Objects.equals(this.itemProductCodeId, orderLine.itemProductCodeId) &&
         Objects.equals(this.itemSummaryCodeId, orderLine.itemSummaryCodeId) &&
         Objects.equals(this.fulfillmentChannel, orderLine.fulfillmentChannel) &&
+        Objects.equals(this.dynamicKitComponentList, orderLine.dynamicKitComponentList) &&
         Objects.equals(this.customFields, orderLine.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, unitDiscount, extendedCost, extendedSell, extendedDiscount, ncExtendedSell, itemWeight, productionLot, expirationDate, weightPerWrap, sector, orderAssemblyInstructions, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, fulfillmentChannel, customFields);
+    return Objects.hash(id, orderNo, lobId, sku, poNoId, orderedQty, allowedQty, shippedQty, backorderQty, revDate, chargeCode, distributionCode, upc, vendorSKU, orderSourceSKU, unitCost, unitSell, unitDiscount, extendedCost, extendedSell, extendedDiscount, ncExtendedSell, itemWeight, productionLot, expirationDate, weightPerWrap, sector, orderAssemblyInstructions, itemAccountCodeId, itemLegacyLowStockContactId, itemMajorGroupId, itemSubGroupId, itemProductCodeId, itemSummaryCodeId, fulfillmentChannel, dynamicKitComponentList, customFields);
   }
 
 
@@ -666,6 +698,7 @@ public class OrderLine {
     sb.append("    itemProductCodeId: ").append(toIndentedString(itemProductCodeId)).append("\n");
     sb.append("    itemSummaryCodeId: ").append(toIndentedString(itemSummaryCodeId)).append("\n");
     sb.append("    fulfillmentChannel: ").append(toIndentedString(fulfillmentChannel)).append("\n");
+    sb.append("    dynamicKitComponentList: ").append(toIndentedString(dynamicKitComponentList)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

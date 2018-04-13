@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **itemProductCodeId** | **Integer** |  |  [optional]
 **itemSummaryCodeId** | **Integer** |  | 
 **fulfillmentChannel** | **String** |  | 
+**dynamicKitComponentList** | [**List&lt;DynamicKitComponentLine&gt;**](DynamicKitComponentLine.md) |  |  [optional]
 **customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 
 

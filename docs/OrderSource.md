@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **modifyDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **packingNotes** | **String** |  |  [optional]
 **requireCartonizedASN** | **Boolean** |  |  [optional]
+**usesReservations** | **Boolean** |  |  [optional]
 **requireGS1128Label** | **Boolean** |  |  [optional]
 **shippingNotes** | **String** |  |  [optional]
 **packingSlipId** | **Integer** |  |  [optional]

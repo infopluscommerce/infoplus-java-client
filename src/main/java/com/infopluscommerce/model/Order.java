@@ -35,7 +35,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Order
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
 public class Order {
   @SerializedName("orderNo")
   private BigDecimal orderNo = null;
@@ -57,6 +57,9 @@ public class Order {
 
   @SerializedName("useOrderNoRoot")
   private Integer useOrderNoRoot = null;
+
+  @SerializedName("shippingMethod")
+  private String shippingMethod = null;
 
   @SerializedName("firstShipDate")
   private OffsetDateTime firstShipDate = null;
@@ -461,6 +464,24 @@ public class Order {
 
   public void setUseOrderNoRoot(Integer useOrderNoRoot) {
     this.useOrderNoRoot = useOrderNoRoot;
+  }
+
+  public Order shippingMethod(String shippingMethod) {
+    this.shippingMethod = shippingMethod;
+    return this;
+  }
+
+   /**
+   * Get shippingMethod
+   * @return shippingMethod
+  **/
+  @ApiModelProperty(value = "")
+  public String getShippingMethod() {
+    return shippingMethod;
+  }
+
+  public void setShippingMethod(String shippingMethod) {
+    this.shippingMethod = shippingMethod;
   }
 
   public Order firstShipDate(OffsetDateTime firstShipDate) {
@@ -1958,6 +1979,7 @@ public class Order {
         Objects.equals(this.orderDate, order.orderDate) &&
         Objects.equals(this.customerNo, order.customerNo) &&
         Objects.equals(this.useOrderNoRoot, order.useOrderNoRoot) &&
+        Objects.equals(this.shippingMethod, order.shippingMethod) &&
         Objects.equals(this.firstShipDate, order.firstShipDate) &&
         Objects.equals(this.lastShipDate, order.lastShipDate) &&
         Objects.equals(this.deliverOnDate, order.deliverOnDate) &&
@@ -2058,7 +2080,7 @@ public class Order {
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, useOrderNoRoot, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, thirdPartyParcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, preAllocationEstimatedWeight, estimatedWeightLbs, freight, giftMessage, groupOrderId, parentKODOrderId, holdCode, integrationPartnerId, numberOfLineItems, estimatedNumberOfPicks, modifyDate, omsOrderNo, omsCustomerId, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderInvoiceTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priceMode, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalDiscount, totalPaid, totalQty, weightLbs, orderAssemblyInstructions, parcelLabelRef1, parcelLabelRef2, parcelLabelRef3, lineItems, extraOrderData, extraLineItemData, externalShippingSystemId, customFields);
+    return Objects.hash(orderNo, customerOrderNo, lobId, warehouseId, orderDate, customerNo, useOrderNoRoot, shippingMethod, firstShipDate, lastShipDate, deliverOnDate, needByDate, carrierId, serviceTypeId, shipVia, mediaCode, legacyRestrictionType, alcoholOrderType, alternateUsage, authorizationAmount, authorizedBy, balanceDue, batchNo, billToAttention, billToCompany, billToStreet, billToStreet2, billToStreet3, billToCity, billToState, billToZip, billToCountry, billToPhone, billToEmail, numberOfCartons, numberOfPallets, completionStatus, parcelAccountId, thirdPartyParcelAccountId, costCenter, createDate, customerPONo, distributionChannel, distributionCharges, division, enteredBy, preAllocationEstimatedWeight, estimatedWeightLbs, freight, giftMessage, groupOrderId, parentKODOrderId, holdCode, integrationPartnerId, numberOfLineItems, estimatedNumberOfPicks, modifyDate, omsOrderNo, omsCustomerId, orderLoadProgramId, orderMessage, orderReason, orderSourceId, packingSlipTemplateId, orderInvoiceTemplateId, orderConfirmationEmailTemplateId, shipmentConfirmationEmailTemplateId, priceLevel, priceMode, priorityCode, fulfillmentProcessId, shipBy, shipCode, shipDate, shipToAttention, shipToCompany, shipToStreet, shipToStreet2, shipToStreet3, shipToCity, shipToState, shipToZip, shipToCountry, shipToPhone, shipToEmail, shippingCharge, status, stopBackOrders, subtotal, tax, total, totalDiscount, totalPaid, totalQty, weightLbs, orderAssemblyInstructions, parcelLabelRef1, parcelLabelRef2, parcelLabelRef3, lineItems, extraOrderData, extraLineItemData, externalShippingSystemId, customFields);
   }
 
 
@@ -2074,6 +2096,7 @@ public class Order {
     sb.append("    orderDate: ").append(toIndentedString(orderDate)).append("\n");
     sb.append("    customerNo: ").append(toIndentedString(customerNo)).append("\n");
     sb.append("    useOrderNoRoot: ").append(toIndentedString(useOrderNoRoot)).append("\n");
+    sb.append("    shippingMethod: ").append(toIndentedString(shippingMethod)).append("\n");
     sb.append("    firstShipDate: ").append(toIndentedString(firstShipDate)).append("\n");
     sb.append("    lastShipDate: ").append(toIndentedString(lastShipDate)).append("\n");
     sb.append("    deliverOnDate: ").append(toIndentedString(deliverOnDate)).append("\n");

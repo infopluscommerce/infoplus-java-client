@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * OrderSource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-16T11:28:10.774-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
 public class OrderSource {
   @SerializedName("id")
   private Integer id = null;
@@ -52,6 +52,9 @@ public class OrderSource {
 
   @SerializedName("requireCartonizedASN")
   private Boolean requireCartonizedASN = false;
+
+  @SerializedName("usesReservations")
+  private Boolean usesReservations = false;
 
   @SerializedName("requireGS1128Label")
   private Boolean requireGS1128Label = false;
@@ -171,6 +174,24 @@ public class OrderSource {
 
   public void setRequireCartonizedASN(Boolean requireCartonizedASN) {
     this.requireCartonizedASN = requireCartonizedASN;
+  }
+
+  public OrderSource usesReservations(Boolean usesReservations) {
+    this.usesReservations = usesReservations;
+    return this;
+  }
+
+   /**
+   * Get usesReservations
+   * @return usesReservations
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isUsesReservations() {
+    return usesReservations;
+  }
+
+  public void setUsesReservations(Boolean usesReservations) {
+    this.usesReservations = usesReservations;
   }
 
   public OrderSource requireGS1128Label(Boolean requireGS1128Label) {
@@ -324,6 +345,7 @@ public class OrderSource {
         Objects.equals(this.modifyDate, orderSource.modifyDate) &&
         Objects.equals(this.packingNotes, orderSource.packingNotes) &&
         Objects.equals(this.requireCartonizedASN, orderSource.requireCartonizedASN) &&
+        Objects.equals(this.usesReservations, orderSource.usesReservations) &&
         Objects.equals(this.requireGS1128Label, orderSource.requireGS1128Label) &&
         Objects.equals(this.shippingNotes, orderSource.shippingNotes) &&
         Objects.equals(this.packingSlipId, orderSource.packingSlipId) &&
@@ -335,7 +357,7 @@ public class OrderSource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, lobId, name, createDate, modifyDate, packingNotes, requireCartonizedASN, requireGS1128Label, shippingNotes, packingSlipId, orderInvoiceId, orderConfirmationEmailId, shipmentConfirmationEmailId, customFields);
+    return Objects.hash(id, lobId, name, createDate, modifyDate, packingNotes, requireCartonizedASN, usesReservations, requireGS1128Label, shippingNotes, packingSlipId, orderInvoiceId, orderConfirmationEmailId, shipmentConfirmationEmailId, customFields);
   }
 
 
@@ -351,6 +373,7 @@ public class OrderSource {
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    packingNotes: ").append(toIndentedString(packingNotes)).append("\n");
     sb.append("    requireCartonizedASN: ").append(toIndentedString(requireCartonizedASN)).append("\n");
+    sb.append("    usesReservations: ").append(toIndentedString(usesReservations)).append("\n");
     sb.append("    requireGS1128Label: ").append(toIndentedString(requireGS1128Label)).append("\n");
     sb.append("    shippingNotes: ").append(toIndentedString(shippingNotes)).append("\n");
     sb.append("    packingSlipId: ").append(toIndentedString(packingSlipId)).append("\n");

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **orderDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **customerNo** | **String** |  |  [optional]
 **useOrderNoRoot** | **Integer** |  |  [optional]
+**shippingMethod** | **String** |  |  [optional]
 **firstShipDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **lastShipDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **deliverOnDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
