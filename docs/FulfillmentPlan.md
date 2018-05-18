@@ -10,11 +10,13 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  |  [optional]
 **warehouseId** | **Integer** |  | 
+**priorityCode** | **Integer** |  |  [optional]
 **lastRunTime** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **orderSmartFilterId** | **Integer** |  | 
 **locationSmartFilterId** | **Integer** |  |  [optional]
 **maxOrders** | **Integer** |  |  [optional]
-**batchSize** | **Integer** |  |  [optional]
+**batchSizeMax** | **Integer** |  |  [optional]
+**batchSizeMin** | **Integer** |  |  [optional]
 **version** | **String** |  |  [optional]
 **isMassDistribution** | **Boolean** |  |  [optional]
 **createPickWork** | **Boolean** |  | 

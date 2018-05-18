@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getWorkBatchByFilter**](WorkBatchApi.md#getWorkBatchByFilter) | **GET** /beta/workBatch/search | Search workBatchs by filter
 [**getWorkBatchById**](WorkBatchApi.md#getWorkBatchById) | **GET** /beta/workBatch/{workBatchId} | Get a workBatch by id
 [**getWorkBatchTags**](WorkBatchApi.md#getWorkBatchTags) | **GET** /beta/workBatch/{workBatchId}/tag | Get the tags for a workBatch.
+[**updateWorkBatch**](WorkBatchApi.md#updateWorkBatch) | **PUT** /beta/workBatch | Update a workBatch
 [**updateWorkBatchCustomFields**](WorkBatchApi.md#updateWorkBatchCustomFields) | **PUT** /beta/workBatch/customFields | Update a workBatch custom fields
 
 
@@ -405,6 +406,60 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="updateWorkBatch"></a>
+# **updateWorkBatch**
+> updateWorkBatch(body)
+
+Update a workBatch
+
+Updates an existing workBatch using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.WorkBatchApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+WorkBatchApi apiInstance = new WorkBatchApi();
+WorkBatch body = new WorkBatch(); // WorkBatch | WorkBatch to be updated.
+try {
+    apiInstance.updateWorkBatch(body);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WorkBatchApi#updateWorkBatch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**WorkBatch**](WorkBatch.md)| WorkBatch to be updated. |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="updateWorkBatchCustomFields"></a>

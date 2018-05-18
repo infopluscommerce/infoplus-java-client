@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **syncOrdersLastRunTime** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **inventoryLevelWarehouseControls** | **String** |  | 
 **warehouseList** | [**List&lt;Warehouse&gt;**](Warehouse.md) |  |  [optional]
+**inventoryLevelStoreControls** | **String** |  | 
+**storeList** | [**List&lt;Store&gt;**](Store.md) |  |  [optional]
 **customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 
 

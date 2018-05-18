@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * FulfillmentPlan
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
 public class FulfillmentPlan {
   @SerializedName("id")
   private Integer id = null;
@@ -50,6 +50,9 @@ public class FulfillmentPlan {
   @SerializedName("warehouseId")
   private Integer warehouseId = null;
 
+  @SerializedName("priorityCode")
+  private Integer priorityCode = null;
+
   @SerializedName("lastRunTime")
   private OffsetDateTime lastRunTime = null;
 
@@ -62,8 +65,11 @@ public class FulfillmentPlan {
   @SerializedName("maxOrders")
   private Integer maxOrders = null;
 
-  @SerializedName("batchSize")
-  private Integer batchSize = null;
+  @SerializedName("batchSizeMax")
+  private Integer batchSizeMax = null;
+
+  @SerializedName("batchSizeMin")
+  private Integer batchSizeMin = null;
 
   @SerializedName("version")
   private String version = null;
@@ -230,6 +236,24 @@ public class FulfillmentPlan {
     this.warehouseId = warehouseId;
   }
 
+  public FulfillmentPlan priorityCode(Integer priorityCode) {
+    this.priorityCode = priorityCode;
+    return this;
+  }
+
+   /**
+   * Get priorityCode
+   * @return priorityCode
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getPriorityCode() {
+    return priorityCode;
+  }
+
+  public void setPriorityCode(Integer priorityCode) {
+    this.priorityCode = priorityCode;
+  }
+
    /**
    * Get lastRunTime
    * @return lastRunTime
@@ -293,22 +317,40 @@ public class FulfillmentPlan {
     this.maxOrders = maxOrders;
   }
 
-  public FulfillmentPlan batchSize(Integer batchSize) {
-    this.batchSize = batchSize;
+  public FulfillmentPlan batchSizeMax(Integer batchSizeMax) {
+    this.batchSizeMax = batchSizeMax;
     return this;
   }
 
    /**
-   * Get batchSize
-   * @return batchSize
+   * Get batchSizeMax
+   * @return batchSizeMax
   **/
   @ApiModelProperty(value = "")
-  public Integer getBatchSize() {
-    return batchSize;
+  public Integer getBatchSizeMax() {
+    return batchSizeMax;
   }
 
-  public void setBatchSize(Integer batchSize) {
-    this.batchSize = batchSize;
+  public void setBatchSizeMax(Integer batchSizeMax) {
+    this.batchSizeMax = batchSizeMax;
+  }
+
+  public FulfillmentPlan batchSizeMin(Integer batchSizeMin) {
+    this.batchSizeMin = batchSizeMin;
+    return this;
+  }
+
+   /**
+   * Get batchSizeMin
+   * @return batchSizeMin
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getBatchSizeMin() {
+    return batchSizeMin;
+  }
+
+  public void setBatchSizeMin(Integer batchSizeMin) {
+    this.batchSizeMin = batchSizeMin;
   }
 
   public FulfillmentPlan version(String version) {
@@ -839,11 +881,13 @@ public class FulfillmentPlan {
         Objects.equals(this.name, fulfillmentPlan.name) &&
         Objects.equals(this.description, fulfillmentPlan.description) &&
         Objects.equals(this.warehouseId, fulfillmentPlan.warehouseId) &&
+        Objects.equals(this.priorityCode, fulfillmentPlan.priorityCode) &&
         Objects.equals(this.lastRunTime, fulfillmentPlan.lastRunTime) &&
         Objects.equals(this.orderSmartFilterId, fulfillmentPlan.orderSmartFilterId) &&
         Objects.equals(this.locationSmartFilterId, fulfillmentPlan.locationSmartFilterId) &&
         Objects.equals(this.maxOrders, fulfillmentPlan.maxOrders) &&
-        Objects.equals(this.batchSize, fulfillmentPlan.batchSize) &&
+        Objects.equals(this.batchSizeMax, fulfillmentPlan.batchSizeMax) &&
+        Objects.equals(this.batchSizeMin, fulfillmentPlan.batchSizeMin) &&
         Objects.equals(this.version, fulfillmentPlan.version) &&
         Objects.equals(this.isMassDistribution, fulfillmentPlan.isMassDistribution) &&
         Objects.equals(this.createPickWork, fulfillmentPlan.createPickWork) &&
@@ -876,7 +920,7 @@ public class FulfillmentPlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, lastRunTime, orderSmartFilterId, locationSmartFilterId, maxOrders, batchSize, version, isMassDistribution, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, pickScanSchemeId, cartonizeOrders, autoShipCasebreakCartons, autoShipOrders, preGenerateParcelLabels, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
+    return Objects.hash(id, createDate, modifyDate, name, description, warehouseId, priorityCode, lastRunTime, orderSmartFilterId, locationSmartFilterId, maxOrders, batchSizeMax, batchSizeMin, version, isMassDistribution, createPickWork, pickingRule, layoutRule, pickSortRule, createPickList, pickListFormat, pickListLayout, pickListGroup, pickListSort, createPickSummary, pickSummaryFormat, pickSummaryLayout, pickSummarySort, pickScanSchemeId, cartonizeOrders, autoShipCasebreakCartons, autoShipOrders, preGenerateParcelLabels, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
 
@@ -891,11 +935,13 @@ public class FulfillmentPlan {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
+    sb.append("    priorityCode: ").append(toIndentedString(priorityCode)).append("\n");
     sb.append("    lastRunTime: ").append(toIndentedString(lastRunTime)).append("\n");
     sb.append("    orderSmartFilterId: ").append(toIndentedString(orderSmartFilterId)).append("\n");
     sb.append("    locationSmartFilterId: ").append(toIndentedString(locationSmartFilterId)).append("\n");
     sb.append("    maxOrders: ").append(toIndentedString(maxOrders)).append("\n");
-    sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
+    sb.append("    batchSizeMax: ").append(toIndentedString(batchSizeMax)).append("\n");
+    sb.append("    batchSizeMin: ").append(toIndentedString(batchSizeMin)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    isMassDistribution: ").append(toIndentedString(isMassDistribution)).append("\n");
     sb.append("    createPickWork: ").append(toIndentedString(createPickWork)).append("\n");

@@ -30,13 +30,16 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * WorkBatch
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
 public class WorkBatch {
   @SerializedName("id")
   private Integer id = null;
 
   @SerializedName("warehouseId")
   private Integer warehouseId = null;
+
+  @SerializedName("batchPriorityCode")
+  private Integer batchPriorityCode = null;
 
   @SerializedName("createDate")
   private OffsetDateTime createDate = null;
@@ -56,11 +59,6 @@ public class WorkBatch {
     return id;
   }
 
-  public WorkBatch warehouseId(Integer warehouseId) {
-    this.warehouseId = warehouseId;
-    return this;
-  }
-
    /**
    * Get warehouseId
    * @return warehouseId
@@ -70,8 +68,22 @@ public class WorkBatch {
     return warehouseId;
   }
 
-  public void setWarehouseId(Integer warehouseId) {
-    this.warehouseId = warehouseId;
+  public WorkBatch batchPriorityCode(Integer batchPriorityCode) {
+    this.batchPriorityCode = batchPriorityCode;
+    return this;
+  }
+
+   /**
+   * Get batchPriorityCode
+   * @return batchPriorityCode
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getBatchPriorityCode() {
+    return batchPriorityCode;
+  }
+
+  public void setBatchPriorityCode(Integer batchPriorityCode) {
+    this.batchPriorityCode = batchPriorityCode;
   }
 
    /**
@@ -130,6 +142,7 @@ public class WorkBatch {
     WorkBatch workBatch = (WorkBatch) o;
     return Objects.equals(this.id, workBatch.id) &&
         Objects.equals(this.warehouseId, workBatch.warehouseId) &&
+        Objects.equals(this.batchPriorityCode, workBatch.batchPriorityCode) &&
         Objects.equals(this.createDate, workBatch.createDate) &&
         Objects.equals(this.modifyDate, workBatch.modifyDate) &&
         Objects.equals(this.customFields, workBatch.customFields);
@@ -137,7 +150,7 @@ public class WorkBatch {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, warehouseId, createDate, modifyDate, customFields);
+    return Objects.hash(id, warehouseId, batchPriorityCode, createDate, modifyDate, customFields);
   }
 
 
@@ -148,6 +161,7 @@ public class WorkBatch {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    warehouseId: ").append(toIndentedString(warehouseId)).append("\n");
+    sb.append("    batchPriorityCode: ").append(toIndentedString(batchPriorityCode)).append("\n");
     sb.append("    createDate: ").append(toIndentedString(createDate)).append("\n");
     sb.append("    modifyDate: ").append(toIndentedString(modifyDate)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");

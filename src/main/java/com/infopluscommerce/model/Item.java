@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Item
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
 public class Item {
   @SerializedName("id")
   private Integer id = null;
@@ -341,6 +341,87 @@ public class Item {
 
   @SerializedName("unavailableQuantity")
   private Integer unavailableQuantity = null;
+
+  @SerializedName("availableQuantityInnerPacks")
+  private Integer availableQuantityInnerPacks = null;
+
+  @SerializedName("damagedQuantityInnerPacks")
+  private Integer damagedQuantityInnerPacks = null;
+
+  @SerializedName("inFulfillmentProcessQuantityInnerPacks")
+  private Integer inFulfillmentProcessQuantityInnerPacks = null;
+
+  @SerializedName("onHandQuantityInnerPacks")
+  private Integer onHandQuantityInnerPacks = null;
+
+  @SerializedName("openOrderQuantityInnerPacks")
+  private Integer openOrderQuantityInnerPacks = null;
+
+  @SerializedName("openPOQuantityInnerPacks")
+  private Integer openPOQuantityInnerPacks = null;
+
+  @SerializedName("orderableQuantityInnerPacks")
+  private Integer orderableQuantityInnerPacks = null;
+
+  @SerializedName("unallocatableQuantityInnerPacks")
+  private Integer unallocatableQuantityInnerPacks = null;
+
+  @SerializedName("unavailableQuantityInnerPacks")
+  private Integer unavailableQuantityInnerPacks = null;
+
+  @SerializedName("availableQuantityCases")
+  private Integer availableQuantityCases = null;
+
+  @SerializedName("damagedQuantityCases")
+  private Integer damagedQuantityCases = null;
+
+  @SerializedName("inFulfillmentProcessQuantityCases")
+  private Integer inFulfillmentProcessQuantityCases = null;
+
+  @SerializedName("onHandQuantityCases")
+  private Integer onHandQuantityCases = null;
+
+  @SerializedName("openOrderQuantityCases")
+  private Integer openOrderQuantityCases = null;
+
+  @SerializedName("openPOQuantityCases")
+  private Integer openPOQuantityCases = null;
+
+  @SerializedName("orderableQuantityCases")
+  private Integer orderableQuantityCases = null;
+
+  @SerializedName("unallocatableQuantityCases")
+  private Integer unallocatableQuantityCases = null;
+
+  @SerializedName("unavailableQuantityCases")
+  private Integer unavailableQuantityCases = null;
+
+  @SerializedName("availableQuantityPallets")
+  private Integer availableQuantityPallets = null;
+
+  @SerializedName("damagedQuantityPallets")
+  private Integer damagedQuantityPallets = null;
+
+  @SerializedName("inFulfillmentProcessQuantityPallets")
+  private Integer inFulfillmentProcessQuantityPallets = null;
+
+  @SerializedName("onHandQuantityPallets")
+  private Integer onHandQuantityPallets = null;
+
+  @SerializedName("openOrderQuantityPallets")
+  private Integer openOrderQuantityPallets = null;
+
+  @SerializedName("openPOQuantityPallets")
+  private Integer openPOQuantityPallets = null;
+
+  @SerializedName("orderableQuantityPallets")
+  private Integer orderableQuantityPallets = null;
+
+  @SerializedName("unallocatableQuantityPallets")
+  private Integer unallocatableQuantityPallets = null;
+
+  @SerializedName("unavailableQuantityPallets")
+  private Integer unavailableQuantityPallets = null;
 
   @SerializedName("overallDaysOnHand")
   private Integer overallDaysOnHand = null;
@@ -2116,6 +2197,249 @@ public class Item {
   }
 
    /**
+   * Get availableQuantityInnerPacks
+   * @return availableQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getAvailableQuantityInnerPacks() {
+    return availableQuantityInnerPacks;
+  }
+
+   /**
+   * Get damagedQuantityInnerPacks
+   * @return damagedQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getDamagedQuantityInnerPacks() {
+    return damagedQuantityInnerPacks;
+  }
+
+   /**
+   * Get inFulfillmentProcessQuantityInnerPacks
+   * @return inFulfillmentProcessQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getInFulfillmentProcessQuantityInnerPacks() {
+    return inFulfillmentProcessQuantityInnerPacks;
+  }
+
+   /**
+   * Get onHandQuantityInnerPacks
+   * @return onHandQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOnHandQuantityInnerPacks() {
+    return onHandQuantityInnerPacks;
+  }
+
+   /**
+   * Get openOrderQuantityInnerPacks
+   * @return openOrderQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOpenOrderQuantityInnerPacks() {
+    return openOrderQuantityInnerPacks;
+  }
+
+   /**
+   * Get openPOQuantityInnerPacks
+   * @return openPOQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOpenPOQuantityInnerPacks() {
+    return openPOQuantityInnerPacks;
+  }
+
+   /**
+   * Get orderableQuantityInnerPacks
+   * @return orderableQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOrderableQuantityInnerPacks() {
+    return orderableQuantityInnerPacks;
+  }
+
+   /**
+   * Get unallocatableQuantityInnerPacks
+   * @return unallocatableQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnallocatableQuantityInnerPacks() {
+    return unallocatableQuantityInnerPacks;
+  }
+
+   /**
+   * Get unavailableQuantityInnerPacks
+   * @return unavailableQuantityInnerPacks
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnavailableQuantityInnerPacks() {
+    return unavailableQuantityInnerPacks;
+  }
+
+   /**
+   * Get availableQuantityCases
+   * @return availableQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getAvailableQuantityCases() {
+    return availableQuantityCases;
+  }
+
+   /**
+   * Get damagedQuantityCases
+   * @return damagedQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getDamagedQuantityCases() {
+    return damagedQuantityCases;
+  }
+
+   /**
+   * Get inFulfillmentProcessQuantityCases
+   * @return inFulfillmentProcessQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getInFulfillmentProcessQuantityCases() {
+    return inFulfillmentProcessQuantityCases;
+  }
+
+   /**
+   * Get onHandQuantityCases
+   * @return onHandQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOnHandQuantityCases() {
+    return onHandQuantityCases;
+  }
+
+   /**
+   * Get openOrderQuantityCases
+   * @return openOrderQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOpenOrderQuantityCases() {
+    return openOrderQuantityCases;
+  }
+
+   /**
+   * Get openPOQuantityCases
+   * @return openPOQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOpenPOQuantityCases() {
+    return openPOQuantityCases;
+  }
+
+   /**
+   * Get orderableQuantityCases
+   * @return orderableQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOrderableQuantityCases() {
+    return orderableQuantityCases;
+  }
+
+   /**
+   * Get unallocatableQuantityCases
+   * @return unallocatableQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnallocatableQuantityCases() {
+    return unallocatableQuantityCases;
+  }
+
+   /**
+   * Get unavailableQuantityCases
+   * @return unavailableQuantityCases
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnavailableQuantityCases() {
+    return unavailableQuantityCases;
+  }
+
+   /**
+   * Get availableQuantityPallets
+   * @return availableQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getAvailableQuantityPallets() {
+    return availableQuantityPallets;
+  }
+
+   /**
+   * Get damagedQuantityPallets
+   * @return damagedQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getDamagedQuantityPallets() {
+    return damagedQuantityPallets;
+  }
+
+   /**
+   * Get inFulfillmentProcessQuantityPallets
+   * @return inFulfillmentProcessQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getInFulfillmentProcessQuantityPallets() {
+    return inFulfillmentProcessQuantityPallets;
+  }
+
+   /**
+   * Get onHandQuantityPallets
+   * @return onHandQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOnHandQuantityPallets() {
+    return onHandQuantityPallets;
+  }
+
+   /**
+   * Get openOrderQuantityPallets
+   * @return openOrderQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOpenOrderQuantityPallets() {
+    return openOrderQuantityPallets;
+  }
+
+   /**
+   * Get openPOQuantityPallets
+   * @return openPOQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOpenPOQuantityPallets() {
+    return openPOQuantityPallets;
+  }
+
+   /**
+   * Get orderableQuantityPallets
+   * @return orderableQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getOrderableQuantityPallets() {
+    return orderableQuantityPallets;
+  }
+
+   /**
+   * Get unallocatableQuantityPallets
+   * @return unallocatableQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnallocatableQuantityPallets() {
+    return unallocatableQuantityPallets;
+  }
+
+   /**
+   * Get unavailableQuantityPallets
+   * @return unavailableQuantityPallets
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getUnavailableQuantityPallets() {
+    return unavailableQuantityPallets;
+  }
+
+   /**
    * Get overallDaysOnHand
    * @return overallDaysOnHand
   **/
@@ -2434,6 +2758,33 @@ public class Item {
         Objects.equals(this.orderableQuantity, item.orderableQuantity) &&
         Objects.equals(this.unallocatableQuantity, item.unallocatableQuantity) &&
         Objects.equals(this.unavailableQuantity, item.unavailableQuantity) &&
+        Objects.equals(this.availableQuantityInnerPacks, item.availableQuantityInnerPacks) &&
+        Objects.equals(this.damagedQuantityInnerPacks, item.damagedQuantityInnerPacks) &&
+        Objects.equals(this.inFulfillmentProcessQuantityInnerPacks, item.inFulfillmentProcessQuantityInnerPacks) &&
+        Objects.equals(this.onHandQuantityInnerPacks, item.onHandQuantityInnerPacks) &&
+        Objects.equals(this.openOrderQuantityInnerPacks, item.openOrderQuantityInnerPacks) &&
+        Objects.equals(this.openPOQuantityInnerPacks, item.openPOQuantityInnerPacks) &&
+        Objects.equals(this.orderableQuantityInnerPacks, item.orderableQuantityInnerPacks) &&
+        Objects.equals(this.unallocatableQuantityInnerPacks, item.unallocatableQuantityInnerPacks) &&
+        Objects.equals(this.unavailableQuantityInnerPacks, item.unavailableQuantityInnerPacks) &&
+        Objects.equals(this.availableQuantityCases, item.availableQuantityCases) &&
+        Objects.equals(this.damagedQuantityCases, item.damagedQuantityCases) &&
+        Objects.equals(this.inFulfillmentProcessQuantityCases, item.inFulfillmentProcessQuantityCases) &&
+        Objects.equals(this.onHandQuantityCases, item.onHandQuantityCases) &&
+        Objects.equals(this.openOrderQuantityCases, item.openOrderQuantityCases) &&
+        Objects.equals(this.openPOQuantityCases, item.openPOQuantityCases) &&
+        Objects.equals(this.orderableQuantityCases, item.orderableQuantityCases) &&
+        Objects.equals(this.unallocatableQuantityCases, item.unallocatableQuantityCases) &&
+        Objects.equals(this.unavailableQuantityCases, item.unavailableQuantityCases) &&
+        Objects.equals(this.availableQuantityPallets, item.availableQuantityPallets) &&
+        Objects.equals(this.damagedQuantityPallets, item.damagedQuantityPallets) &&
+        Objects.equals(this.inFulfillmentProcessQuantityPallets, item.inFulfillmentProcessQuantityPallets) &&
+        Objects.equals(this.onHandQuantityPallets, item.onHandQuantityPallets) &&
+        Objects.equals(this.openOrderQuantityPallets, item.openOrderQuantityPallets) &&
+        Objects.equals(this.openPOQuantityPallets, item.openPOQuantityPallets) &&
+        Objects.equals(this.orderableQuantityPallets, item.orderableQuantityPallets) &&
+        Objects.equals(this.unallocatableQuantityPallets, item.unallocatableQuantityPallets) &&
+        Objects.equals(this.unavailableQuantityPallets, item.unavailableQuantityPallets) &&
         Objects.equals(this.overallDaysOnHand, item.overallDaysOnHand) &&
         Objects.equals(this.overallStockStatus, item.overallStockStatus) &&
         Objects.equals(this.estimatedPallets, item.estimatedPallets) &&
@@ -2459,7 +2810,7 @@ public class Item {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendorId, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, quantityPerInnerPack, quantityPerCase, quantityPerPallet, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, primaryImage, pickImage, behaviorType, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, itemSerialSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, overallDaysOnHand, overallStockStatus, estimatedPallets, estimatedCases, estimatedInnerPacks, w1EstimatedPallets, w1EstimatedCases, w1EstimatedInnerPacks, w2EstimatedPallets, w2EstimatedCases, w2EstimatedInnerPacks, w3EstimatedPallets, w3EstimatedCases, w3EstimatedInnerPacks, w4EstimatedPallets, w4EstimatedCases, w4EstimatedInnerPacks, w5EstimatedPallets, w5EstimatedCases, w5EstimatedInnerPacks, customFields);
+    return Objects.hash(id, accountCodeId, lowStockContactId, legacyLowLevelContactId, lowStockCodeId, majorGroupId, subGroupId, productCodeId, summaryCodeId, buyerId, lobId, sku, vendorSKU, upc, itemDescription, packingSlipDescription, absoluteMax, additionalDescription, backorder, chargeCode, commodityCode, compCode, createDate, criticalAmount, overallFixedReorderPoint, overallLeadTime, sellPrice, pricingPer, lotControlFlag, maxCycle, maxInterim, numericSortOrder, outsideVendorId, pickNo, podOrderSuffix, podRevDate, status, seasonalItem, requiresProductionLot, sector, secure, serialCode, unitCode, unitsPerWrap, weightPerWrap, quantityPerInnerPack, quantityPerCase, quantityPerPallet, voidDate, wrapCode, extrinsicText1, extrinsicText2, extrinsicText3, extrinsicNumber1, extrinsicNumber2, extrinsicDecimal1, extrinsicDecimal2, casebreakEnabled, vendorId, vendorPrice, vendorPer, modifyDate, primaryImage, pickImage, behaviorType, forwardLotMixingRule, storageLotMixingRule, forwardItemMixingRule, storageItemMixingRule, allocationRule, barcodeField, warehouseDisplayField, productIdTagSchemeId, itemSerialSchemeId, hazmat, isAlcohol, alcoholType, alcoholContent, alcoholContainer, alcoholVintageYear, alcoholCountry, alcoholState, alcoholRegion, alcoholBrand, alcoholUPCCode, alcoholNAMBCACode, alcoholUNIMERCCode, alcoholSCCCode, length, width, height, topUp, shipSolo, inventoryUpdateTimestamp, availableQuantity, damagedQuantity, inFulfillmentProcessQuantity, onHandQuantity, openOrderQuantity, openPOQuantity, orderableQuantity, unallocatableQuantity, unavailableQuantity, availableQuantityInnerPacks, damagedQuantityInnerPacks, inFulfillmentProcessQuantityInnerPacks, onHandQuantityInnerPacks, openOrderQuantityInnerPacks, openPOQuantityInnerPacks, orderableQuantityInnerPacks, unallocatableQuantityInnerPacks, unavailableQuantityInnerPacks, availableQuantityCases, damagedQuantityCases, inFulfillmentProcessQuantityCases, onHandQuantityCases, openOrderQuantityCases, openPOQuantityCases, orderableQuantityCases, unallocatableQuantityCases, unavailableQuantityCases, availableQuantityPallets, damagedQuantityPallets, inFulfillmentProcessQuantityPallets, onHandQuantityPallets, openOrderQuantityPallets, openPOQuantityPallets, orderableQuantityPallets, unallocatableQuantityPallets, unavailableQuantityPallets, overallDaysOnHand, overallStockStatus, estimatedPallets, estimatedCases, estimatedInnerPacks, w1EstimatedPallets, w1EstimatedCases, w1EstimatedInnerPacks, w2EstimatedPallets, w2EstimatedCases, w2EstimatedInnerPacks, w3EstimatedPallets, w3EstimatedCases, w3EstimatedInnerPacks, w4EstimatedPallets, w4EstimatedCases, w4EstimatedInnerPacks, w5EstimatedPallets, w5EstimatedCases, w5EstimatedInnerPacks, customFields);
   }
 
 
@@ -2571,6 +2922,33 @@ public class Item {
     sb.append("    orderableQuantity: ").append(toIndentedString(orderableQuantity)).append("\n");
     sb.append("    unallocatableQuantity: ").append(toIndentedString(unallocatableQuantity)).append("\n");
     sb.append("    unavailableQuantity: ").append(toIndentedString(unavailableQuantity)).append("\n");
+    sb.append("    availableQuantityInnerPacks: ").append(toIndentedString(availableQuantityInnerPacks)).append("\n");
+    sb.append("    damagedQuantityInnerPacks: ").append(toIndentedString(damagedQuantityInnerPacks)).append("\n");
+    sb.append("    inFulfillmentProcessQuantityInnerPacks: ").append(toIndentedString(inFulfillmentProcessQuantityInnerPacks)).append("\n");
+    sb.append("    onHandQuantityInnerPacks: ").append(toIndentedString(onHandQuantityInnerPacks)).append("\n");
+    sb.append("    openOrderQuantityInnerPacks: ").append(toIndentedString(openOrderQuantityInnerPacks)).append("\n");
+    sb.append("    openPOQuantityInnerPacks: ").append(toIndentedString(openPOQuantityInnerPacks)).append("\n");
+    sb.append("    orderableQuantityInnerPacks: ").append(toIndentedString(orderableQuantityInnerPacks)).append("\n");
+    sb.append("    unallocatableQuantityInnerPacks: ").append(toIndentedString(unallocatableQuantityInnerPacks)).append("\n");
+    sb.append("    unavailableQuantityInnerPacks: ").append(toIndentedString(unavailableQuantityInnerPacks)).append("\n");
+    sb.append("    availableQuantityCases: ").append(toIndentedString(availableQuantityCases)).append("\n");
+    sb.append("    damagedQuantityCases: ").append(toIndentedString(damagedQuantityCases)).append("\n");
+    sb.append("    inFulfillmentProcessQuantityCases: ").append(toIndentedString(inFulfillmentProcessQuantityCases)).append("\n");
+    sb.append("    onHandQuantityCases: ").append(toIndentedString(onHandQuantityCases)).append("\n");
+    sb.append("    openOrderQuantityCases: ").append(toIndentedString(openOrderQuantityCases)).append("\n");
+    sb.append("    openPOQuantityCases: ").append(toIndentedString(openPOQuantityCases)).append("\n");
+    sb.append("    orderableQuantityCases: ").append(toIndentedString(orderableQuantityCases)).append("\n");
+    sb.append("    unallocatableQuantityCases: ").append(toIndentedString(unallocatableQuantityCases)).append("\n");
+    sb.append("    unavailableQuantityCases: ").append(toIndentedString(unavailableQuantityCases)).append("\n");
+    sb.append("    availableQuantityPallets: ").append(toIndentedString(availableQuantityPallets)).append("\n");
+    sb.append("    damagedQuantityPallets: ").append(toIndentedString(damagedQuantityPallets)).append("\n");
+    sb.append("    inFulfillmentProcessQuantityPallets: ").append(toIndentedString(inFulfillmentProcessQuantityPallets)).append("\n");
+    sb.append("    onHandQuantityPallets: ").append(toIndentedString(onHandQuantityPallets)).append("\n");
+    sb.append("    openOrderQuantityPallets: ").append(toIndentedString(openOrderQuantityPallets)).append("\n");
+    sb.append("    openPOQuantityPallets: ").append(toIndentedString(openPOQuantityPallets)).append("\n");
+    sb.append("    orderableQuantityPallets: ").append(toIndentedString(orderableQuantityPallets)).append("\n");
+    sb.append("    unallocatableQuantityPallets: ").append(toIndentedString(unallocatableQuantityPallets)).append("\n");
+    sb.append("    unavailableQuantityPallets: ").append(toIndentedString(unavailableQuantityPallets)).append("\n");
     sb.append("    overallDaysOnHand: ").append(toIndentedString(overallDaysOnHand)).append("\n");
     sb.append("    overallStockStatus: ").append(toIndentedString(overallStockStatus)).append("\n");
     sb.append("    estimatedPallets: ").append(toIndentedString(estimatedPallets)).append("\n");

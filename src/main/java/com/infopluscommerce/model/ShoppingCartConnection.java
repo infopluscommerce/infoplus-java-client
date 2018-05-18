@@ -19,6 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.infopluscommerce.model.Store;
 import com.infopluscommerce.model.Warehouse;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -32,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * ShoppingCartConnection
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
 public class ShoppingCartConnection {
   @SerializedName("id")
   private Integer id = null;
@@ -123,6 +124,12 @@ public class ShoppingCartConnection {
 
   @SerializedName("warehouseList")
   private List<Warehouse> warehouseList = null;
+
+  @SerializedName("inventoryLevelStoreControls")
+  private String inventoryLevelStoreControls = null;
+
+  @SerializedName("storeList")
+  private List<Store> storeList = null;
 
   @SerializedName("customFields")
   private Map<String, Object> customFields = null;
@@ -612,6 +619,50 @@ public class ShoppingCartConnection {
     this.warehouseList = warehouseList;
   }
 
+  public ShoppingCartConnection inventoryLevelStoreControls(String inventoryLevelStoreControls) {
+    this.inventoryLevelStoreControls = inventoryLevelStoreControls;
+    return this;
+  }
+
+   /**
+   * Get inventoryLevelStoreControls
+   * @return inventoryLevelStoreControls
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public String getInventoryLevelStoreControls() {
+    return inventoryLevelStoreControls;
+  }
+
+  public void setInventoryLevelStoreControls(String inventoryLevelStoreControls) {
+    this.inventoryLevelStoreControls = inventoryLevelStoreControls;
+  }
+
+  public ShoppingCartConnection storeList(List<Store> storeList) {
+    this.storeList = storeList;
+    return this;
+  }
+
+  public ShoppingCartConnection addStoreListItem(Store storeListItem) {
+    if (this.storeList == null) {
+      this.storeList = new ArrayList<Store>();
+    }
+    this.storeList.add(storeListItem);
+    return this;
+  }
+
+   /**
+   * Get storeList
+   * @return storeList
+  **/
+  @ApiModelProperty(value = "")
+  public List<Store> getStoreList() {
+    return storeList;
+  }
+
+  public void setStoreList(List<Store> storeList) {
+    this.storeList = storeList;
+  }
+
   public ShoppingCartConnection customFields(Map<String, Object> customFields) {
     this.customFields = customFields;
     return this;
@@ -678,12 +729,14 @@ public class ShoppingCartConnection {
         Objects.equals(this.syncOrdersLastRunTime, shoppingCartConnection.syncOrdersLastRunTime) &&
         Objects.equals(this.inventoryLevelWarehouseControls, shoppingCartConnection.inventoryLevelWarehouseControls) &&
         Objects.equals(this.warehouseList, shoppingCartConnection.warehouseList) &&
+        Objects.equals(this.inventoryLevelStoreControls, shoppingCartConnection.inventoryLevelStoreControls) &&
+        Objects.equals(this.storeList, shoppingCartConnection.storeList) &&
         Objects.equals(this.customFields, shoppingCartConnection.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, scriptId, name, shoppingCartStoreURL, accessCode, accessToken, username, password, defaultCarrierId, orderShipmentLevel, createInvoices, syncOrders, syncInventory, syncTrackingData, fulfillAllItems, syncInventoryLevelsLastRunTime, syncOrdersLastRunTime, inventoryLevelWarehouseControls, warehouseList, customFields);
+    return Objects.hash(id, createDate, modifyDate, clientId, nonce, lobId, orderSourceId, integrationPartnerId, connectionType, itemFilterId, infoplusSKUFieldToMap, shoppingCartSKUFieldToMap, scriptId, name, shoppingCartStoreURL, accessCode, accessToken, username, password, defaultCarrierId, orderShipmentLevel, createInvoices, syncOrders, syncInventory, syncTrackingData, fulfillAllItems, syncInventoryLevelsLastRunTime, syncOrdersLastRunTime, inventoryLevelWarehouseControls, warehouseList, inventoryLevelStoreControls, storeList, customFields);
   }
 
 
@@ -722,6 +775,8 @@ public class ShoppingCartConnection {
     sb.append("    syncOrdersLastRunTime: ").append(toIndentedString(syncOrdersLastRunTime)).append("\n");
     sb.append("    inventoryLevelWarehouseControls: ").append(toIndentedString(inventoryLevelWarehouseControls)).append("\n");
     sb.append("    warehouseList: ").append(toIndentedString(warehouseList)).append("\n");
+    sb.append("    inventoryLevelStoreControls: ").append(toIndentedString(inventoryLevelStoreControls)).append("\n");
+    sb.append("    storeList: ").append(toIndentedString(storeList)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

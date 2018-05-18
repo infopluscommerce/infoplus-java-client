@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **extendedCharge** | [**BigDecimal**](BigDecimal.md) |  |  [optional]
 **backupFile** | **Integer** |  |  [optional]
 **backupFileUrl** | **String** |  |  [optional]
-**invoiceWorksheetId** | **Integer** |  |  [optional]
+**invoiceWorksheetId** | **Integer** |  | 
 **invoiceTemplateLineId** | **Integer** |  |  [optional]
 **customFields** | **Map&lt;String, Object&gt;** |  |  [optional]
 

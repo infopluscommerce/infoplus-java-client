@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * InvoiceWorksheetLine
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
 public class InvoiceWorksheetLine {
   @SerializedName("id")
   private Integer id = null;
@@ -318,7 +318,7 @@ public class InvoiceWorksheetLine {
    * Get invoiceWorksheetId
    * @return invoiceWorksheetId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "")
   public Integer getInvoiceWorksheetId() {
     return invoiceWorksheetId;
   }

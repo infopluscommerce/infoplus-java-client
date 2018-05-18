@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * ExecuteQuickAdjustmentInputAPIModel
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
 public class ExecuteQuickAdjustmentInputAPIModel {
   @SerializedName("idList")
   private List<Integer> idList = null;

@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * FulfillmentProcess
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-04-13T11:01:29.332-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
 public class FulfillmentProcess {
   @SerializedName("id")
   private Integer id = null;
@@ -68,8 +68,11 @@ public class FulfillmentProcess {
   @SerializedName("maxOrders")
   private Integer maxOrders = null;
 
-  @SerializedName("batchSize")
-  private Integer batchSize = null;
+  @SerializedName("batchMaxSize")
+  private Integer batchMaxSize = null;
+
+  @SerializedName("batchMinSize")
+  private Integer batchMinSize = null;
 
   @SerializedName("version")
   private String version = null;
@@ -79,6 +82,9 @@ public class FulfillmentProcess {
 
   @SerializedName("isMassDistribution")
   private Boolean isMassDistribution = false;
+
+  @SerializedName("priorityCode")
+  private Integer priorityCode = null;
 
   @SerializedName("numberOfOrders")
   private Integer numberOfOrders = null;
@@ -357,12 +363,21 @@ public class FulfillmentProcess {
   }
 
    /**
-   * Get batchSize
-   * @return batchSize
+   * Get batchMaxSize
+   * @return batchMaxSize
   **/
   @ApiModelProperty(value = "")
-  public Integer getBatchSize() {
-    return batchSize;
+  public Integer getBatchMaxSize() {
+    return batchMaxSize;
+  }
+
+   /**
+   * Get batchMinSize
+   * @return batchMinSize
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getBatchMinSize() {
+    return batchMinSize;
   }
 
   public FulfillmentProcess version(String version) {
@@ -408,6 +423,24 @@ public class FulfillmentProcess {
 
   public void setIsMassDistribution(Boolean isMassDistribution) {
     this.isMassDistribution = isMassDistribution;
+  }
+
+  public FulfillmentProcess priorityCode(Integer priorityCode) {
+    this.priorityCode = priorityCode;
+    return this;
+  }
+
+   /**
+   * Get priorityCode
+   * @return priorityCode
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getPriorityCode() {
+    return priorityCode;
+  }
+
+  public void setPriorityCode(Integer priorityCode) {
+    this.priorityCode = priorityCode;
   }
 
    /**
@@ -1097,10 +1130,12 @@ public class FulfillmentProcess {
         Objects.equals(this.orderSmartFilterId, fulfillmentProcess.orderSmartFilterId) &&
         Objects.equals(this.locationSmartFilterId, fulfillmentProcess.locationSmartFilterId) &&
         Objects.equals(this.maxOrders, fulfillmentProcess.maxOrders) &&
-        Objects.equals(this.batchSize, fulfillmentProcess.batchSize) &&
+        Objects.equals(this.batchMaxSize, fulfillmentProcess.batchMaxSize) &&
+        Objects.equals(this.batchMinSize, fulfillmentProcess.batchMinSize) &&
         Objects.equals(this.version, fulfillmentProcess.version) &&
         Objects.equals(this.fulfillmentProcessGroup, fulfillmentProcess.fulfillmentProcessGroup) &&
         Objects.equals(this.isMassDistribution, fulfillmentProcess.isMassDistribution) &&
+        Objects.equals(this.priorityCode, fulfillmentProcess.priorityCode) &&
         Objects.equals(this.numberOfOrders, fulfillmentProcess.numberOfOrders) &&
         Objects.equals(this.numberOfLines, fulfillmentProcess.numberOfLines) &&
         Objects.equals(this.numberOfSKUs, fulfillmentProcess.numberOfSKUs) &&
@@ -1143,7 +1178,7 @@ public class FulfillmentProcess {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, maxOrders, batchSize, version, fulfillmentProcessGroup, isMassDistribution, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, autoShipOrders, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
+    return Objects.hash(id, createDate, modifyDate, processNo, workBatchId, warehouseId, fulfillmentPlanId, pickScanSchemeId, status, orderSmartFilterId, locationSmartFilterId, maxOrders, batchMaxSize, batchMinSize, version, fulfillmentProcessGroup, isMassDistribution, priorityCode, numberOfOrders, numberOfLines, numberOfSKUs, completedPicks, totalPicks, shippedCasebreaks, totalCasebreaksToShip, shippedOrders, totalOrdersToShip, completedToDo, totalToDo, createPickWork, pickingRule, layoutRule, pickSortRule, firstPickPosition, pickListFormat, pickListLayout, pickListGroup, pickListSort, pickSummaryFormat, pickSummaryLayout, pickSummarySort, createPickSummary, createPickList, preGenerateParcelLabels, shipDate, autoShipCasebreakCartons, autoShipOrders, cartonizeOrders, createPackingSlip, overridePackingSlipTemplateId, createOrderAssemblyGuide, createOrderInvoice, overrideOrderInvoiceTemplateId, sendToExternalShippingSystem, externalShippingSystemId, customFields);
   }
 
 
@@ -1164,10 +1199,12 @@ public class FulfillmentProcess {
     sb.append("    orderSmartFilterId: ").append(toIndentedString(orderSmartFilterId)).append("\n");
     sb.append("    locationSmartFilterId: ").append(toIndentedString(locationSmartFilterId)).append("\n");
     sb.append("    maxOrders: ").append(toIndentedString(maxOrders)).append("\n");
-    sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
+    sb.append("    batchMaxSize: ").append(toIndentedString(batchMaxSize)).append("\n");
+    sb.append("    batchMinSize: ").append(toIndentedString(batchMinSize)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    fulfillmentProcessGroup: ").append(toIndentedString(fulfillmentProcessGroup)).append("\n");
     sb.append("    isMassDistribution: ").append(toIndentedString(isMassDistribution)).append("\n");
+    sb.append("    priorityCode: ").append(toIndentedString(priorityCode)).append("\n");
     sb.append("    numberOfOrders: ").append(toIndentedString(numberOfOrders)).append("\n");
     sb.append("    numberOfLines: ").append(toIndentedString(numberOfLines)).append("\n");
     sb.append("    numberOfSKUs: ").append(toIndentedString(numberOfSKUs)).append("\n");
