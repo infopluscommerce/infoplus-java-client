@@ -13,7 +13,7 @@
 
 package com.infopluscommerce;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T11:14:53.718-05:00")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

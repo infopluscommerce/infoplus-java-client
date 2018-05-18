@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ApplyOrderWarehouseFulfillmentPlanInput
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T10:42:48.989-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-05-18T11:14:53.718-05:00")
 public class ApplyOrderWarehouseFulfillmentPlanInput {
   @SerializedName("orderNo")
   private String orderNo = null;
