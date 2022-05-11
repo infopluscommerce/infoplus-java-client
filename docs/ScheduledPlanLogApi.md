@@ -1,0 +1,634 @@
+# ScheduledPlanLogApi
+
+All URIs are relative to *https://kingsrook.localhost-testsubdomain1.infopluswms.com:8443/infoplus-wms/api*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**addScheduledPlanLogAudit**](ScheduledPlanLogApi.md#addScheduledPlanLogAudit) | **PUT** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/audit/{scheduledPlanLogAudit} | Add new audit for a scheduledPlanLog
+[**addScheduledPlanLogFile**](ScheduledPlanLogApi.md#addScheduledPlanLogFile) | **POST** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/file/{fileName} | Attach a file to a scheduledPlanLog
+[**addScheduledPlanLogFileByURL**](ScheduledPlanLogApi.md#addScheduledPlanLogFileByURL) | **POST** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/file | Attach a file to a scheduledPlanLog by URL.
+[**addScheduledPlanLogTag**](ScheduledPlanLogApi.md#addScheduledPlanLogTag) | **PUT** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/tag/{scheduledPlanLogTag} | Add new tags for a scheduledPlanLog.
+[**deleteScheduledPlanLogFile**](ScheduledPlanLogApi.md#deleteScheduledPlanLogFile) | **DELETE** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/file/{fileId} | Delete a file for a scheduledPlanLog.
+[**deleteScheduledPlanLogTag**](ScheduledPlanLogApi.md#deleteScheduledPlanLogTag) | **DELETE** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/tag/{scheduledPlanLogTag} | Delete a tag for a scheduledPlanLog.
+[**getDuplicateScheduledPlanLogById**](ScheduledPlanLogApi.md#getDuplicateScheduledPlanLogById) | **GET** /v3.0/scheduledPlanLog/duplicate/{scheduledPlanLogId} | Get a duplicated a scheduledPlanLog by id
+[**getScheduledPlanLogByFilter**](ScheduledPlanLogApi.md#getScheduledPlanLogByFilter) | **GET** /v3.0/scheduledPlanLog/search | Search scheduledPlanLogs by filter
+[**getScheduledPlanLogById**](ScheduledPlanLogApi.md#getScheduledPlanLogById) | **GET** /v3.0/scheduledPlanLog/{scheduledPlanLogId} | Get a scheduledPlanLog by id
+[**getScheduledPlanLogFiles**](ScheduledPlanLogApi.md#getScheduledPlanLogFiles) | **GET** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/file | Get the files for a scheduledPlanLog.
+[**getScheduledPlanLogTags**](ScheduledPlanLogApi.md#getScheduledPlanLogTags) | **GET** /v3.0/scheduledPlanLog/{scheduledPlanLogId}/tag | Get the tags for a scheduledPlanLog.
+
+
+<a name="addScheduledPlanLogAudit"></a>
+# **addScheduledPlanLogAudit**
+> addScheduledPlanLogAudit(scheduledPlanLogId, scheduledPlanLogAudit)
+
+Add new audit for a scheduledPlanLog
+
+Adds an audit to an existing scheduledPlanLog.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to add an audit to
+String scheduledPlanLogAudit = "scheduledPlanLogAudit_example"; // String | The audit to add
+try {
+    apiInstance.addScheduledPlanLogAudit(scheduledPlanLogId, scheduledPlanLogAudit);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#addScheduledPlanLogAudit");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to add an audit to |
+ **scheduledPlanLogAudit** | **String**| The audit to add |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="addScheduledPlanLogFile"></a>
+# **addScheduledPlanLogFile**
+> addScheduledPlanLogFile(scheduledPlanLogId, fileName)
+
+Attach a file to a scheduledPlanLog
+
+Adds a file to an existing scheduledPlanLog.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to add a file to
+String fileName = "fileName_example"; // String | Name of file
+try {
+    apiInstance.addScheduledPlanLogFile(scheduledPlanLogId, fileName);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#addScheduledPlanLogFile");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to add a file to |
+ **fileName** | **String**| Name of file |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="addScheduledPlanLogFileByURL"></a>
+# **addScheduledPlanLogFileByURL**
+> addScheduledPlanLogFileByURL(body, scheduledPlanLogId)
+
+Attach a file to a scheduledPlanLog by URL.
+
+Adds a file to an existing scheduledPlanLog by URL.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+RecordFile body = new RecordFile(); // RecordFile | The url and optionly fileName to be used.
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to add an file to
+try {
+    apiInstance.addScheduledPlanLogFileByURL(body, scheduledPlanLogId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#addScheduledPlanLogFileByURL");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RecordFile**](RecordFile.md)| The url and optionly fileName to be used. |
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to add an file to |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="addScheduledPlanLogTag"></a>
+# **addScheduledPlanLogTag**
+> addScheduledPlanLogTag(scheduledPlanLogId, scheduledPlanLogTag)
+
+Add new tags for a scheduledPlanLog.
+
+Adds a tag to an existing scheduledPlanLog.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to add a tag to
+String scheduledPlanLogTag = "scheduledPlanLogTag_example"; // String | The tag to add
+try {
+    apiInstance.addScheduledPlanLogTag(scheduledPlanLogId, scheduledPlanLogTag);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#addScheduledPlanLogTag");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to add a tag to |
+ **scheduledPlanLogTag** | **String**| The tag to add |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="deleteScheduledPlanLogFile"></a>
+# **deleteScheduledPlanLogFile**
+> deleteScheduledPlanLogFile(scheduledPlanLogId, fileId)
+
+Delete a file for a scheduledPlanLog.
+
+Deletes an existing scheduledPlanLog file using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to remove file from
+Integer fileId = 56; // Integer | Id of the file to delete
+try {
+    apiInstance.deleteScheduledPlanLogFile(scheduledPlanLogId, fileId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#deleteScheduledPlanLogFile");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to remove file from |
+ **fileId** | **Integer**| Id of the file to delete |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="deleteScheduledPlanLogTag"></a>
+# **deleteScheduledPlanLogTag**
+> deleteScheduledPlanLogTag(scheduledPlanLogId, scheduledPlanLogTag)
+
+Delete a tag for a scheduledPlanLog.
+
+Deletes an existing scheduledPlanLog tag using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to remove tag from
+String scheduledPlanLogTag = "scheduledPlanLogTag_example"; // String | The tag to delete
+try {
+    apiInstance.deleteScheduledPlanLogTag(scheduledPlanLogId, scheduledPlanLogTag);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#deleteScheduledPlanLogTag");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to remove tag from |
+ **scheduledPlanLogTag** | **String**| The tag to delete |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getDuplicateScheduledPlanLogById"></a>
+# **getDuplicateScheduledPlanLogById**
+> ScheduledPlanLog getDuplicateScheduledPlanLogById(scheduledPlanLogId)
+
+Get a duplicated a scheduledPlanLog by id
+
+Returns a duplicated scheduledPlanLog identified by the specified id.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to be duplicated.
+try {
+    ScheduledPlanLog result = apiInstance.getDuplicateScheduledPlanLogById(scheduledPlanLogId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#getDuplicateScheduledPlanLogById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to be duplicated. |
+
+### Return type
+
+[**ScheduledPlanLog**](ScheduledPlanLog.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getScheduledPlanLogByFilter"></a>
+# **getScheduledPlanLogByFilter**
+> List&lt;ScheduledPlanLog&gt; getScheduledPlanLogByFilter(filter, page, limit, sort)
+
+Search scheduledPlanLogs by filter
+
+Returns the list of scheduledPlanLogs that match the given filter.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+String filter = "filter_example"; // String | Query string, used to filter results.
+Integer page = 56; // Integer | Result page number.  Defaults to 1.
+Integer limit = 56; // Integer | Maximum results per page.  Defaults to 20.  Max allowed value is 250.
+String sort = "sort_example"; // String | Sort results by specified field.
+try {
+    List<ScheduledPlanLog> result = apiInstance.getScheduledPlanLogByFilter(filter, page, limit, sort);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#getScheduledPlanLogByFilter");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Query string, used to filter results. | [optional]
+ **page** | **Integer**| Result page number.  Defaults to 1. | [optional]
+ **limit** | **Integer**| Maximum results per page.  Defaults to 20.  Max allowed value is 250. | [optional]
+ **sort** | **String**| Sort results by specified field. | [optional]
+
+### Return type
+
+[**List&lt;ScheduledPlanLog&gt;**](ScheduledPlanLog.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getScheduledPlanLogById"></a>
+# **getScheduledPlanLogById**
+> ScheduledPlanLog getScheduledPlanLogById(scheduledPlanLogId)
+
+Get a scheduledPlanLog by id
+
+Returns the scheduledPlanLog identified by the specified id.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to be returned.
+try {
+    ScheduledPlanLog result = apiInstance.getScheduledPlanLogById(scheduledPlanLogId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#getScheduledPlanLogById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to be returned. |
+
+### Return type
+
+[**ScheduledPlanLog**](ScheduledPlanLog.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getScheduledPlanLogFiles"></a>
+# **getScheduledPlanLogFiles**
+> getScheduledPlanLogFiles(scheduledPlanLogId)
+
+Get the files for a scheduledPlanLog.
+
+Get all existing scheduledPlanLog files.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to get files for
+try {
+    apiInstance.getScheduledPlanLogFiles(scheduledPlanLogId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#getScheduledPlanLogFiles");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to get files for |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getScheduledPlanLogTags"></a>
+# **getScheduledPlanLogTags**
+> getScheduledPlanLogTags(scheduledPlanLogId)
+
+Get the tags for a scheduledPlanLog.
+
+Get all existing scheduledPlanLog tags.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.ScheduledPlanLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+ScheduledPlanLogApi apiInstance = new ScheduledPlanLogApi();
+Integer scheduledPlanLogId = 56; // Integer | Id of the scheduledPlanLog to get tags for
+try {
+    apiInstance.getScheduledPlanLogTags(scheduledPlanLogId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ScheduledPlanLogApi#getScheduledPlanLogTags");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **scheduledPlanLogId** | **Integer**| Id of the scheduledPlanLog to get tags for |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+

@@ -1,0 +1,855 @@
+# SubstitutionApi
+
+All URIs are relative to *https://kingsrook.localhost-testsubdomain1.infopluswms.com:8443/infoplus-wms/api*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**addSubstitution**](SubstitutionApi.md#addSubstitution) | **POST** /v3.0/substitution | Create a substitution
+[**addSubstitutionAudit**](SubstitutionApi.md#addSubstitutionAudit) | **PUT** /v3.0/substitution/{substitutionId}/audit/{substitutionAudit} | Add new audit for a substitution
+[**addSubstitutionFile**](SubstitutionApi.md#addSubstitutionFile) | **POST** /v3.0/substitution/{substitutionId}/file/{fileName} | Attach a file to a substitution
+[**addSubstitutionFileByURL**](SubstitutionApi.md#addSubstitutionFileByURL) | **POST** /v3.0/substitution/{substitutionId}/file | Attach a file to a substitution by URL.
+[**addSubstitutionTag**](SubstitutionApi.md#addSubstitutionTag) | **PUT** /v3.0/substitution/{substitutionId}/tag/{substitutionTag} | Add new tags for a substitution.
+[**deleteSubstitution**](SubstitutionApi.md#deleteSubstitution) | **DELETE** /v3.0/substitution/{substitutionId} | Delete a substitution
+[**deleteSubstitutionFile**](SubstitutionApi.md#deleteSubstitutionFile) | **DELETE** /v3.0/substitution/{substitutionId}/file/{fileId} | Delete a file for a substitution.
+[**deleteSubstitutionTag**](SubstitutionApi.md#deleteSubstitutionTag) | **DELETE** /v3.0/substitution/{substitutionId}/tag/{substitutionTag} | Delete a tag for a substitution.
+[**getDuplicateSubstitutionById**](SubstitutionApi.md#getDuplicateSubstitutionById) | **GET** /v3.0/substitution/duplicate/{substitutionId} | Get a duplicated a substitution by id
+[**getSubstitutionByFilter**](SubstitutionApi.md#getSubstitutionByFilter) | **GET** /v3.0/substitution/search | Search substitutions by filter
+[**getSubstitutionById**](SubstitutionApi.md#getSubstitutionById) | **GET** /v3.0/substitution/{substitutionId} | Get a substitution by id
+[**getSubstitutionFiles**](SubstitutionApi.md#getSubstitutionFiles) | **GET** /v3.0/substitution/{substitutionId}/file | Get the files for a substitution.
+[**getSubstitutionTags**](SubstitutionApi.md#getSubstitutionTags) | **GET** /v3.0/substitution/{substitutionId}/tag | Get the tags for a substitution.
+[**updateSubstitution**](SubstitutionApi.md#updateSubstitution) | **PUT** /v3.0/substitution | Update a substitution
+[**updateSubstitutionCustomFields**](SubstitutionApi.md#updateSubstitutionCustomFields) | **PUT** /v3.0/substitution/customFields | Update a substitution custom fields
+
+
+<a name="addSubstitution"></a>
+# **addSubstitution**
+> Substitution addSubstitution(body)
+
+Create a substitution
+
+Inserts a new substitution using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Substitution body = new Substitution(); // Substitution | Substitution to be inserted.
+try {
+    Substitution result = apiInstance.addSubstitution(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#addSubstitution");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Substitution**](Substitution.md)| Substitution to be inserted. |
+
+### Return type
+
+[**Substitution**](Substitution.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="addSubstitutionAudit"></a>
+# **addSubstitutionAudit**
+> addSubstitutionAudit(substitutionId, substitutionAudit)
+
+Add new audit for a substitution
+
+Adds an audit to an existing substitution.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to add an audit to
+String substitutionAudit = "substitutionAudit_example"; // String | The audit to add
+try {
+    apiInstance.addSubstitutionAudit(substitutionId, substitutionAudit);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#addSubstitutionAudit");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to add an audit to |
+ **substitutionAudit** | **String**| The audit to add |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="addSubstitutionFile"></a>
+# **addSubstitutionFile**
+> addSubstitutionFile(substitutionId, fileName)
+
+Attach a file to a substitution
+
+Adds a file to an existing substitution.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to add a file to
+String fileName = "fileName_example"; // String | Name of file
+try {
+    apiInstance.addSubstitutionFile(substitutionId, fileName);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#addSubstitutionFile");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to add a file to |
+ **fileName** | **String**| Name of file |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="addSubstitutionFileByURL"></a>
+# **addSubstitutionFileByURL**
+> addSubstitutionFileByURL(body, substitutionId)
+
+Attach a file to a substitution by URL.
+
+Adds a file to an existing substitution by URL.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+RecordFile body = new RecordFile(); // RecordFile | The url and optionly fileName to be used.
+Integer substitutionId = 56; // Integer | Id of the substitution to add an file to
+try {
+    apiInstance.addSubstitutionFileByURL(body, substitutionId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#addSubstitutionFileByURL");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RecordFile**](RecordFile.md)| The url and optionly fileName to be used. |
+ **substitutionId** | **Integer**| Id of the substitution to add an file to |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="addSubstitutionTag"></a>
+# **addSubstitutionTag**
+> addSubstitutionTag(substitutionId, substitutionTag)
+
+Add new tags for a substitution.
+
+Adds a tag to an existing substitution.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to add a tag to
+String substitutionTag = "substitutionTag_example"; // String | The tag to add
+try {
+    apiInstance.addSubstitutionTag(substitutionId, substitutionTag);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#addSubstitutionTag");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to add a tag to |
+ **substitutionTag** | **String**| The tag to add |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="deleteSubstitution"></a>
+# **deleteSubstitution**
+> deleteSubstitution(substitutionId)
+
+Delete a substitution
+
+Deletes the substitution identified by the specified id.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to be deleted.
+try {
+    apiInstance.deleteSubstitution(substitutionId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#deleteSubstitution");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to be deleted. |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="deleteSubstitutionFile"></a>
+# **deleteSubstitutionFile**
+> deleteSubstitutionFile(substitutionId, fileId)
+
+Delete a file for a substitution.
+
+Deletes an existing substitution file using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to remove file from
+Integer fileId = 56; // Integer | Id of the file to delete
+try {
+    apiInstance.deleteSubstitutionFile(substitutionId, fileId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#deleteSubstitutionFile");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to remove file from |
+ **fileId** | **Integer**| Id of the file to delete |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="deleteSubstitutionTag"></a>
+# **deleteSubstitutionTag**
+> deleteSubstitutionTag(substitutionId, substitutionTag)
+
+Delete a tag for a substitution.
+
+Deletes an existing substitution tag using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to remove tag from
+String substitutionTag = "substitutionTag_example"; // String | The tag to delete
+try {
+    apiInstance.deleteSubstitutionTag(substitutionId, substitutionTag);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#deleteSubstitutionTag");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to remove tag from |
+ **substitutionTag** | **String**| The tag to delete |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getDuplicateSubstitutionById"></a>
+# **getDuplicateSubstitutionById**
+> Substitution getDuplicateSubstitutionById(substitutionId)
+
+Get a duplicated a substitution by id
+
+Returns a duplicated substitution identified by the specified id.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to be duplicated.
+try {
+    Substitution result = apiInstance.getDuplicateSubstitutionById(substitutionId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#getDuplicateSubstitutionById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to be duplicated. |
+
+### Return type
+
+[**Substitution**](Substitution.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getSubstitutionByFilter"></a>
+# **getSubstitutionByFilter**
+> List&lt;Substitution&gt; getSubstitutionByFilter(filter, page, limit, sort)
+
+Search substitutions by filter
+
+Returns the list of substitutions that match the given filter.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+String filter = "filter_example"; // String | Query string, used to filter results.
+Integer page = 56; // Integer | Result page number.  Defaults to 1.
+Integer limit = 56; // Integer | Maximum results per page.  Defaults to 20.  Max allowed value is 250.
+String sort = "sort_example"; // String | Sort results by specified field.
+try {
+    List<Substitution> result = apiInstance.getSubstitutionByFilter(filter, page, limit, sort);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#getSubstitutionByFilter");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | **String**| Query string, used to filter results. | [optional]
+ **page** | **Integer**| Result page number.  Defaults to 1. | [optional]
+ **limit** | **Integer**| Maximum results per page.  Defaults to 20.  Max allowed value is 250. | [optional]
+ **sort** | **String**| Sort results by specified field. | [optional]
+
+### Return type
+
+[**List&lt;Substitution&gt;**](Substitution.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getSubstitutionById"></a>
+# **getSubstitutionById**
+> Substitution getSubstitutionById(substitutionId)
+
+Get a substitution by id
+
+Returns the substitution identified by the specified id.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to be returned.
+try {
+    Substitution result = apiInstance.getSubstitutionById(substitutionId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#getSubstitutionById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to be returned. |
+
+### Return type
+
+[**Substitution**](Substitution.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getSubstitutionFiles"></a>
+# **getSubstitutionFiles**
+> getSubstitutionFiles(substitutionId)
+
+Get the files for a substitution.
+
+Get all existing substitution files.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to get files for
+try {
+    apiInstance.getSubstitutionFiles(substitutionId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#getSubstitutionFiles");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to get files for |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getSubstitutionTags"></a>
+# **getSubstitutionTags**
+> getSubstitutionTags(substitutionId)
+
+Get the tags for a substitution.
+
+Get all existing substitution tags.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Integer substitutionId = 56; // Integer | Id of the substitution to get tags for
+try {
+    apiInstance.getSubstitutionTags(substitutionId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#getSubstitutionTags");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **substitutionId** | **Integer**| Id of the substitution to get tags for |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="updateSubstitution"></a>
+# **updateSubstitution**
+> updateSubstitution(body)
+
+Update a substitution
+
+Updates an existing substitution using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Substitution body = new Substitution(); // Substitution | Substitution to be updated.
+try {
+    apiInstance.updateSubstitution(body);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#updateSubstitution");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Substitution**](Substitution.md)| Substitution to be updated. |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="updateSubstitutionCustomFields"></a>
+# **updateSubstitutionCustomFields**
+> updateSubstitutionCustomFields(body)
+
+Update a substitution custom fields
+
+Updates an existing substitution custom fields using the specified data.
+
+### Example
+```java
+// Import classes:
+//import com.infopluscommerce.ApiClient;
+//import com.infopluscommerce.ApiException;
+//import com.infopluscommerce.Configuration;
+//import com.infopluscommerce.auth.*;
+//import com.infopluscommerce.api.SubstitutionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: api_key
+ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+api_key.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.setApiKeyPrefix("Token");
+
+SubstitutionApi apiInstance = new SubstitutionApi();
+Substitution body = new Substitution(); // Substitution | Substitution to be updated.
+try {
+    apiInstance.updateSubstitutionCustomFields(body);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SubstitutionApi#updateSubstitutionCustomFields");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Substitution**](Substitution.md)| Substitution to be updated. |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
